@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asambleas en el CPC</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<svg style="display: none;">
+  <defs>
+    <path id="logoCpc" d="M5501.4 2636.6c70.7 0 123.2 23.5 168 64.4 3.6 3.4 4.5 8.9 1 12.3l-11.2 11.8c-4 4.2-7.6 3.5-11.8-.6a215.7 215.7 0 0 0-146-56.8c-121 0-215.9 99-215.9 218.7a216 216 0 0 0 216 217.2c59.5 0 104.4-23.5 145.9-58.2 4.2-3.3 8.4-3.3 11.1-1.3l11.8 11.7c3.6 2.9 3.6 8.3 0 11.9a239.7 239.7 0 0 1-168.9 67.1 248.2 248.2 0 0 1-250.3-248.4c0-138.4 112-249.8 250.3-249.8zm281.3 15.9c0-5 4-9 8.8-9h277.6c4.8 0 9 4 9 9v11.7c0 5-4.2 9-9 9h-253.4v191h219.5c4.7 0 9 4.2 9 9v11.7c0 4.9-4.3 9-9 9h-219.5v204.8h253.4c4.8 0 9 4.2 9 9.1v11c0 5-4.2 9-9 9h-277.6a9 9 0 0 1-8.8-9v-466.3zm414-7c0-5.4 4.7-9 10.3-9h11.8l332.2 432.6h.5v-416.7c0-4.8 4.2-9 9-9h14c4.7 0 8.8 4.2 8.8 9v473.4c0 6.2-5.5 9-11 9h-9.1c-.6 0-6-2.1-334.7-436.6h-.7v420.7c0 4.7-4.2 8.9-9 8.9h-13.3a9 9 0 0 1-8.8-9v-473.3zm607 27.8h-132c-7.1 0-9.2-4.3-9.2-10.4v-10.3c0-5.7 4.2-9 9.1-9H6969c5.7 0 9 4 9 9v11.7c0 4.7-3.3 9-9 9h-132.8v445.6c0 4.8-4.1 8.9-11.2 8.9h-12.4a9 9 0 0 1-9-9v-445.5zm253.4-20.8c0-5 3.4-9 8.9-9h171.7c84.4 0 154.3 63.6 154.3 148 0 69.9-48.4 126-114.3 144.7l101.2 179.2c3.5 5.5 2 12.4-5 12.4h-21.4c-4.9 0-7.5-2.1-9.7-6.2l-100.3-181.3c-9 .7-16.6.7-25.6.7h-127.4v177.8c0 4.9-4 9-11 9H7066a9 9 0 0 1-8.9-9v-466.3zm179 259.4c66.6 0 122.7-51.8 122.7-120.4 0-65.7-56.1-116.2-123.2-116.2h-145.4v236.6h146zm485.4-275.3a248.7 248.7 0 0 1 249.7 249.8c0 139-110.6 248.4-249.7 248.4a247.2 247.2 0 0 1-249.2-248.4 248.8 248.8 0 0 1 249.2-249.8zm0 467.7c121 0 219.3-96.9 219.3-218a219 219 0 1 0-438 0c0 121.1 97.7 218 218.7 218zm-2436 378.9c0-4.8 4.2-9 9-9h148.8c85.7 0 156.4 69.9 156.4 155a157 157 0 0 1-155.7 157h-126v163.2c0 5-4 9-11.1 9h-12.4a9 9 0 0 1-9-9v-466.2zm156.4 271.2c68 0 125.3-56 125.3-126 0-67.7-57.3-121.7-126-121.7H5318v247.7h124zm254.9-271.2c0-4.8 3.3-9 9-9h171.6c84.4 0 154.2 63.7 154.2 148 0 70-48.4 126-114.1 144.7l101 179.2c3.5 5.5 2.1 12.4-4.8 12.4h-21.3c-5.1 0-7.8-2-9.9-6.2L5882.2 3771c-9 .7-16.7.7-25.5.7h-127.4v177.8c0 5-4.1 9-11.1 9h-12.4c-5 0-9-4-9-9v-466.3zm179.1 259.5a121 121 0 0 0 122.6-120.5c0-65.7-56.1-116-123.1-116H5730v236.5h146zm485.3-275.4c139 0 249.7 111.3 249.7 249.7a247.2 247.2 0 0 1-249.7 248.5A247.1 247.1 0 0 1 6112 3717a248.6 248.6 0 0 1 249-249.7zm0 467.7c121 0 219.4-96.8 219.4-218 0-121-98.4-219.3-219.4-219.3s-218.7 98.2-218.7 219.3c0 121.2 97.6 218 218.7 218zm290.3-451.8c-3-5.5-.9-9 5.5-9h18.7c4 0 7 2.8 7.6 5l186.8 429.4h1.3l189-429.5c.7-2.1 3.5-5 7.6-5h18c6.2 0 8.9 4.3 6.2 9.8l-212.4 475.3c-1.4 3.5-4.3 6.3-8.5 6.3h-3.3c-4.1 0-7-4.2-7.7-6.3l-208.8-476zm519.8 0c0-4.8 4.1-9 9-9h15.2c4.8 0 8.9 4.2 8.9 9v466.3c0 5.6-4.8 9-9.6 9h-14.6a9 9 0 0 1-8.9-9v-466.3zm180-7c0-5.5 4.7-8.8 10.4-8.8h11.8l332.2 432.4h.5V3483c0-4.7 4.3-9 9-9h14c4.8 0 8.9 4.2 8.9 9v473.4c0 6.3-5.5 9-11 9h-9.2c-.5 0-6-2.1-334.7-436.6h-.7v420.7c0 4.8-4.3 9-9 9h-13.2a9 9 0 0 1-9-9v-473.3zm749.7-8.9c70.6 0 123 23.5 168 64.3 3.5 3.4 4.3 9 .8 12.4l-11.1 11.8c-4 4.3-7.6 3.5-11.8-.5a215.9 215.9 0 0 0-146-56.9c-121 0-215.9 99-215.9 218.6a216 216 0 0 0 216 217.3c59.5 0 104.4-23.5 145.9-58.1 4.2-3.4 8.4-3.4 11.1-1.3l11.8 11.7c3.5 2.8 3.5 8.3 0 11.8a239.8 239.8 0 0 1-168.9 67.1 248.2 248.2 0 0 1-250.4-248.5c0-138.3 112-249.7 250.4-249.7zm281.1 15.9c0-4.8 4.1-9 9-9h15.2c4.8 0 9 4.2 9 9v466.3c0 5.6-4.9 9-9.6 9H8391a9 9 0 0 1-8.9-9v-466.3zm110.9 467 213-481.5c1.3-2.8 4.8-5 8.3-5h2.1c3.4 0 7 .8 8.9 5l211.1 481.5c1.4 4.2 1.4 8.3-6.3 8.3h-17.9a11 11 0 0 1-9.7-6.2l-56-127.4h-264.3l-55.5 127.4a11 11 0 0 1-9.6 6.2h-19.4c-4.8 0-6.9-2.7-4.8-8.3zm341.8-152.3-118.4-278.8h-1.4L8594.7 3798h240.1zm179.3-314.7c0-4.8 4.1-9 8.9-9h15.4c4 0 8.1 4.2 8.1 9v446.3h220.8c8.3 0 9 4.2 9 9v12.4c0 5-4 7.6-9 7.6H9023a9 9 0 0 1-8.9-9v-466.3zm488.7 0c0-4.8 4.2-9 8.4-9H9658c134.2 0 243.5 108.6 243.5 241.5a242.8 242.8 0 0 1-243.5 242.8h-146.7c-4.2 0-8.4-4.1-8.4-9v-466.3zm149.5 445.6c121.1 0 214.5-92 214.5-213 0-119.9-93.4-212-214.5-212h-117v425h117zm361.4-445.6c0-4.8 4.2-9 9-9h277.5c4.8 0 9 4.2 9 9v11.7c0 4.9-4.2 9-9 9H10047v191h219.4c4.8 0 8.9 4.2 8.9 9v11.8c0 5-4 9-8.9 9H10047v204.8h253.3c4.8 0 9 4.2 9 9v11c0 5-4.2 9-9 9h-277.5a9 9 0 0 1-9-9v-466.3zM5489.6 4298c70 0 120.5 22 167.5 64.3 6.2 5.6 6.2 14 .7 19.4l-42 43.5c-5.1 5.6-11.9 5.6-17.5 0a164.3 164.3 0 0 0-106.4-40.8c-88.7 0-154.4 74.2-154.4 161.3 0 86.6 66.4 159.9 155 159.9 41.5 0 76.8-16 105.8-39.6 5.6-4.8 13-4 17.5 0l42.7 44.4c5.5 4.8 4.1 13.8-.7 18.7a238 238 0 0 1-168.2 67.2 248.2 248.2 0 0 1-249.7-248.6 249.3 249.3 0 0 1 249.7-249.7zm470.8 0a248.7 248.7 0 0 1 249.1 249.7 247.6 247.6 0 0 1-249.1 248.6 247 247 0 0 1-248.4-248.6 248 248 0 0 1 248.4-249.7zm0 408.2c87.1 0 159.2-71.3 159.2-158.5 0-87.1-72-159.8-159.2-159.8a160 160 0 0 0-158.5 159.8 159 159 0 0 0 158.5 158.5zm340-395.8c0-6.9 6.2-12.3 13.1-12.3h17.3l287.9 305.6h.7V4318a13 13 0 0 1 13-13h63.8c7 0 13 6.1 13 13v465.8c0 6.9-6 12.3-13 12.3h-16.7l-289.1-317.5h-.7v297.6c0 6.7-5.5 13-13.3 13h-62.9c-6.9 0-13-6.3-13-13v-465.8zm472.2 12.5c-4.3-8.9 1.4-18 11.7-18h70.6c6.2 0 10.3 4.2 11.7 7.6l132.9 297.6h4.7l133-297.7c1.5-3.3 5.5-7.4 11.7-7.4h70.7c10.3 0 15.7 9 11.7 17.9l-214.5 465.7c-2 4.1-5.7 7.6-11.9 7.6h-6.7c-6.4 0-9.9-3.5-11.8-7.6l-213.9-465.7zm521.9-4.9a13 13 0 0 1 13.2-13h281.5c7.6 0 13.3 6.1 13.3 13v56.8c0 6.9-5.7 13.2-13.3 13.2h-204.8v113.4h171c6.8 0 13.1 6.2 13.1 13.1v57.4c0 7.6-6.3 13.2-13 13.2h-171v121.1h204.7c7.6 0 13.3 6.2 13.3 13.1v56.7c0 7-5.7 13.3-13.3 13.3h-281.5c-7.7 0-13.2-6.4-13.2-13.3v-458zm407.1-7.6c0-6.9 6.2-12.3 13.1-12.3h17.3l287.9 305.6h.7V4318a13 13 0 0 1 13-13h63.8c6.8 0 13 6.1 13 13v465.8c0 6.9-6.2 12.3-13 12.3h-16.7l-289.1-317.5h-.8v297.6a13 13 0 0 1-13.2 13h-62.9c-6.9 0-13-6.3-13-13v-465.8zm749.5-12.4c70 0 120.4 22 167.5 64.3 6.2 5.6 6.2 14 .7 19.4l-42 43.5c-5.1 5.6-11.9 5.6-17.5 0a164.6 164.6 0 0 0-106.5-40.8c-88.6 0-154.3 74.2-154.3 161.3 0 86.6 66.4 159.9 155 159.9 41.3 0 76.6-16 105.8-39.6 5.6-4.8 13-4 17.5 0l42.7 44.4c5.5 4.8 4.1 13.8-.7 18.7a238 238 0 0 1-168.1 67.2 248 248 0 0 1-249.8-248.6 249.2 249.2 0 0 1 249.8-249.7zm259.1 20c0-6.9 6.2-13 13.1-13h64.5c6.9 0 13 6.1 13 13v458c0 7-6.1 13.3-13 13.3h-64.5c-6.9 0-13-6.3-13-13.2v-458zm430.4-20a248.9 248.9 0 0 1 249.3 249.7c0 138.5-111 248.6-249.3 248.6a247 247 0 0 1-248.4-248.6 248 248 0 0 1 248.4-249.7zm0 408.2c87.2 0 159.2-71.3 159.2-158.5 0-87.1-72-159.8-159.2-159.8a160 160 0 0 0-158.4 159.8c0 87.2 71.2 158.5 158.4 158.5zm340.1-395.8c0-6.9 6.1-12.3 13.2-12.3h17.2l288 305.6h.6V4318a13 13 0 0 1 13-13h63.7c7 0 13.1 6.1 13.1 13v465.8c0 6.9-6.1 12.3-13 12.3h-16.7l-289.2-317.5h-.7v297.6c0 6.7-5.5 13-13.1 13h-63c-7 0-13.1-6.3-13.1-13v-465.8zm535 7.6a13 13 0 0 1 13.3-13h281.4c7.7 0 13.3 6.1 13.3 13v56.8c0 6.9-5.6 13.2-13.3 13.2h-204.7v113.4h171c6.7 0 13 6.2 13 13.1v57.4c0 7.6-6.3 13.2-13 13.2h-171v121.1h204.7c7.7 0 13.3 6.2 13.3 13.1v56.7c0 7-5.6 13.3-13.3 13.3H10029c-7.8 0-13.3-6.4-13.3-13.3v-458zm378.7 403.5 25-43a16 16 0 0 1 23.6-4.7c3.4 2 59.4 42.7 104.4 42.7 36 0 63-23.5 63-53.2 0-35.3-30-59.5-87.9-83-65.1-26.3-130.2-67.8-130.2-149.5 0-61.5 45.8-132.8 155.8-132.8 70.5 0 124.6 36 138.4 46.4 6.9 4 9 15.9 4 22.8l-26.3 39.4c-5.4 8.3-15.7 13.8-24.1 8.3-5.6-3.5-58.2-38-96.2-38-39.4 0-60.8 26.2-60.8 48.4 0 32.6 25.6 54.7 81.6 77.4 67.2 27 144.6 67.2 144.6 156.4 0 71.3-61.5 137.1-159.2 137.1-87.3 0-138.3-40.8-152.3-54-6.2-6.2-9.6-9.6-3.3-20.7zM0 0v4796.3h1581.8v-2072c0-36.8 33.3-70 70.2-70h173.6c36.9 0 62.8 33.2 77.6 73.6l44.2 121.6s170-232 495-232c417.3 0 731.2 349.8 731.2 773.3 0 519.2-339.7 773.4-735 773.4-125.4 0-262.1-44.2-306.5-70v702h2664V0H0zm1490.5 3854.8c-136.7 206.2-328.8 309.4-594.7 309.4-421 0-793.9-331.5-793.9-773.4 0-434.5 376.7-773.3 797.7-773.3 232.7 0 413.6 95.8 553.9 265 26 33.3 14.9 73.8-18.3 103.2l-221.7 210c-18.5 18.3-62.8 11-81.2-7.4-51.7-55.3-129.3-95.8-214.3-95.8-162.4 0-295.4 136.3-295.4 298.3 0 165.8 125.5 298.3 288 298.3 129.2 0 192.1-55.3 251.1-114.2 26-25.8 59.2-33 81.4-14.7l221.5 191.5c33.2 29.4 51.7 66.3 26 103.1zm3191.6 0c-136.7 206.2-328.8 309.4-594.6 309.4-421 0-794-331.5-794-773.4 0-434.5 376.6-773.3 797.6-773.3 232.8 0 413.8 95.8 554 265 25.8 33.3 14.8 73.8-18.4 103.2l-221.7 210c-18.4 18.3-62.7 11-81-7.4-51.8-55.3-129.3-95.8-214.3-95.8-162.4 0-295.5 136.3-295.5 298.3 0 165.8 125.5 298.3 288 298.3 129.3 0 192.2-55.3 251.1-114.2 26-25.8 59.3-33 81.4-14.7l221.5 191.5c33.2 29.4 51.8 66.3 25.9 103.1zm-2313.6-165.7c169.8 0 299-128.9 299-294.7 0-169.3-129.2-302-299-302-169.9 0-295.3 132.7-295.3 302 0 165.8 125.4 294.7 295.3 294.7z"/>
+  </defs>
+</svg>
+
+<!-- 🔝 Fixed Top Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top small-navbar border-bottom border-opacity-50">
+  <div class="container">
+    <span class="navbar-brand">Asambleas en el
+    <svg viewBox="0 0 10709 4796" height="32" fill="white"><use href="#logoCpc" /></svg>
+    </span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item"><a class="nav-link" href="#inicio"><i class="material-symbols-outlined">home</i><span>Inicio</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#transporte"><i class="material-symbols-outlined">pin_drop</i><span>Transporte</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#auditorios"><i class="material-symbols-outlined">airline_seat_recline_normal</i><span>Auditorio</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#alimentos"><i class="material-symbols-outlined">fastfood</i><span>Alimentos</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#alojamiento"><i class="material-symbols-outlined">hotel</i><span>Alojamiento</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#otros"><i class="material-symbols-outlined">info</i><span>Otros</span></a></li>
+        <li class="nav-item">
+          <!-- <button id="darkModeToggle" class="btn btn-sm btn-link nav-link p-0">
+            <i class="material-symbols-outlined">dark_mode</i>
+          </button> -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔻 Fullscreen Scroll Snap Sections -->
+<main class="snap-container">
+
+<!-- 🔻 Sections (same as before) -->
+  <section id="inicio" class="section-inicio snap-section">
+    <div class="container pt-5">
+      <h1 class="mb-4">Asambleas en el Centro Provincial de Convenciones de Paraná</h1>
+      <p class="mb-5">En septiembre se celebrará la serie de asambleas regionales <strong>"Adoración pura"</strong> en el Centro Provincial de Convenciones de Paraná. Este sitio tiene información importante para los asistentes.</p>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+    <div class="col">
+      <a href="#transporte" class="text-decoration-none">
+        <div class="card h-80 d-flex flex-row align-items-stretch card-transporte">
+  <div class="d-flex px-3 border-end card-icon">
+    <i class="material-symbols-outlined fs-1">pin_drop</i>
+  </div>
+  <div class="card-content flex-grow-1">
+    <h5 class="card-title mb-2">¿Cómo llego?</h5>
+    <p class="card-text">Recomendaciones para transporte y estacionamiento.</p>
+  </div>
+        </div>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#auditorios" class="text-decoration-none">
+        <div class="card h-80 d-flex flex-row align-items-stretch card-auditorios">
+          <div class="d-flex px-3 border-end card-icon">
+            <i class="material-symbols-outlined fs-1">airline_seat_recline_normal</i>
+          </div>
+          <div class="card-content flex-grow-1">
+            <h5 class="card-title mb-2">¿Dónde me ubico?</h5>
+            <p class="card-text">Auditorios y plano del predio.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#alimentos" class="text-decoration-none text-dark">
+        <div class="card h-80 d-flex flex-row align-items-stretch card-alimentos">
+          <div class="d-flex px-3 border-end card-icon">
+            <i class="material-symbols-outlined fs-1">fastfood</i>
+          </div>
+          <div class="card-content flex-grow-1">
+            <h5 class="card-title mb-2">¿Dónde puedo comer?</h5>
+            <p class="card-text">Opciones para comer en los intermedios.</p>
+          </div>
+
+        </div>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#alojamiento" class="text-decoration-none text-dark">
+        <div class="card h-80 d-flex flex-row align-items-stretch card-alojamiento">
+          <div class="d-flex px-3 border-end card-icon">
+            <i class="material-symbols-outlined fs-1">hotel</i>
+          </div>
+          <div class="card-content flex-grow-1">
+            <h5 class="card-title mb-2">¿Dónde puedo alojarme?</h5>
+            <p class="card-text">Alojamientos disponibles y cómo ofrecer alojamiento.</p>
+          </div>
+
+        </div>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#otros" class="text-decoration-none text-dark">
+        <div class="card h-80 d-flex flex-row align-items-stretch card-otros">
+          <div class="d-flex px-3 border-end card-icon">
+            <i class="material-symbols-outlined fs-1">info</i>
+          </div>
+          <div class="card-content flex-grow-1">
+            <h5 class="card-title mb-2">¿Qué más debo tener en cuenta?</h5>
+            <p class="card-text">Otra información importante para los asistentes.</p>
+          </div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- 🧾 Inicio Subsections -->
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+    <div class="col">
+      <div class="card card-static h-100">
+        <div class="card-body">
+          <h5 class="card-title"><i class="material-symbols-outlined me-2">location_city</i>Centro Provincial de Convenciones</h5>
+          <p class="card-text">Descripción del lugar y fotografías del predio.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card card-static h-100">
+        <div class="card-body">
+          <h5 class="card-title"><i class="material-symbols-outlined me-2">video_library</i>Más información</h5>
+          <ul class="mb-0">
+            <li>Video: Anuncios para asambleas en el CPC</li>
+            <li>Video: Instrucciones de emergencia en el CPC</li>
+            <li>JW.ORG: Recordatorios para la asamblea regional</li>
+            <li>JW.ORG: Asamblea regional <strong>Adoración pura</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="transporte" class="section-transporte snap-section">
+    <i class="section-icon material-symbols-outlined">pin_drop</i>
+    <div class="container pt-5">
+       
+      <header class="section-header"><h2>¿Cómo llego?</h2></header>
+<p>El predio se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por todos los medios de transporte.</p>
+<p><button class="btn btn-sm btn-primary" onclick="abrirMapa('-31.721610,-60.52522,Centro+Provincial+de+Convenciones')" role="button" target="_blank"><i class="material-symbols-outlined">pin_drop</i> Ver en el mapa</button></p>
+    
+<div class="accordion" id="transporteAccordion">
+  <!-- Auto Particular -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingAuto">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuto" aria-expanded="false" aria-controls="collapseAuto">
+        <i class="material-symbols-outlined me-2">directions_car</i> Auto particular
+      </button>
+    </h2>
+    <div id="collapseAuto" class="accordion-collapse collapse" aria-labelledby="headingAuto" data-bs-parent="#transporteAccordion">
+      <div class="accordion-body">
+        
+          <h5>Estacionamiento</h5>
+          <ul>
+            <li>En los alrededores del CPC hay abundantes lugares para estacionar en la calle. Sin embargo, generalmente hay cuidacoches.</li>
+            <li>Tambien hay disponibles cocheras pagas.<br> <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#estacionamientoModal">
+  Ver cocheras en la zona del CPC
+</button></li>
+        </ul>
+          
+          <h5>Recomendaciones</h5>
+          <p>El parque es muy concurrido los fines de semana.</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Ómnibus interurbano -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingInterurbano">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterurbano" aria-expanded="false" aria-controls="collapseInterurbano">
+        <i class="material-symbols-outlined me-2">directions_bus</i> Ómnibus interurbano
+      </button>
+    </h2>
+    <div id="collapseInterurbano" class="accordion-collapse collapse" aria-labelledby="headingInterurbano" data-bs-parent="#transporteAccordion">
+      <div class="accordion-body">
+        <ul>
+          <li>Terminal de ómnibus</li>
+          <li>Transporte al CPC</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Colectivo urbano -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingUrbano">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUrbano" aria-expanded="false" aria-controls="collapseUrbano">
+        <i class="material-symbols-outlined me-2">directions_bus</i> Colectivo urbano
+      </button>
+    </h2>
+    <div id="collapseUrbano" class="accordion-collapse collapse" aria-labelledby="headingUrbano" data-bs-parent="#transporteAccordion">
+      <div class="accordion-body">
+        <ul>
+          <li>Líneas que llegan al CPC</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Taxis y Apps -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTaxi">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTaxi" aria-expanded="false" aria-controls="collapseTaxi">
+        <i class="material-symbols-outlined me-2">local_taxi</i> Taxis, remises y apps
+      </button>
+    </h2>
+    <div id="collapseTaxi" class="accordion-collapse collapse" aria-labelledby="headingTaxi" data-bs-parent="#transporteAccordion">
+      <div class="accordion-body">
+        <p>Información sobre servicios disponibles.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transportes contratados -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingShuttle">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShuttle" aria-expanded="false" aria-controls="collapseShuttle">
+        <i class="material-symbols-outlined me-2">airport_shuttle</i> Transportes contratados
+      </button>
+    </h2>
+    <div id="collapseShuttle" class="accordion-collapse collapse" aria-labelledby="headingShuttle" data-bs-parent="#transporteAccordion">
+      <div class="accordion-body">
+        <ul>
+          <li>Parada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+  <section id="auditorios" class="section-auditorios snap-section"><i class="section-icon material-symbols-outlined">airline_seat_recline_normal</i>
+    <div class="container pt-5">
+      <h2> ¿Dónde me ubico?</h2>
+
+  <h3>Auditorios</h3>
+  <div class="card-group mb-3" style="max-width: 40rem;"">
+  <div class="card">
+    <img src="placeholder.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Auditorio principal</h5>
+      <p class="card-text">Para el público en general. Se accede mediante las escaleras a la izquierda de la entrada.</p>
+          </div>
+  </div>
+  <div class="card">
+    <img src="placeholder.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Auditorio auxiliar</h5>
+      <p class="card-text">Para personas mayores, con dificultades y padres con niños pequeños. Se accede por el pasillo de la derecha de la entrada.  </p>
+      
+    </div>
+  </div>
+</div>
+    <ul>
+    <li>Principal: Público general</li>
+    <li>Auxiliar: Personas mayores, con dificultades y padres con niños pequeños</li>
+  </ul>
+  <p>Plano del predio</p>
+  </div>
+</section>
+
+ <section id="alimentos" class="section-alimentos snap-section"><i class="section-icon material-symbols-outlined">fastfood</i>
+    <div class="container pt-5">
+      <h2> ¿Dónde puedo comer?</h2>
+
+    <ul>
+      <li>Lugares disponibles para comer</li>
+      <li>No se puede comer en auditorios</li>
+      <li>Dónde guardar alimentos:
+        <ul>
+          <li>En los autos</li>
+          <li>Servicio de guarda</li>
+        </ul>
+      </li>
+    </ul>
+
+<div class="scrolling-cards-wrapper position-relative my-4">
+  <button class="scroll-btn scroll-left" aria-label="Scroll left">
+    <i class="material-symbols-outlined">chevron_left</i>
+  </button>
+
+
+<div class="scrolling-cards-container">
+  <div class="card-group flex-nowrap gap-1 px-4">
+    <div class="card card-alimentos" style="min-width: 16rem;">
+      <img src="placeholder.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">1. Poner los alimentos en una bolsa</h5>
+        <p class="card-text">Llévelos en una bolsa de tela o friselina.</p>
+      </div>
+    </div>
+    <div class="card card-alimentos" style="min-width: 16rem;">
+      <img src="placeholder.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">2. Llevarla al puesto de guarda</h5>
+        <p class="card-text">Hay un puesto de guarda de alimentos en cada piso del predio.</p>
+      </div>
+    </div>
+    <div class="card card-alimentos" style="min-width: 16rem;">
+      <img src="placeholder.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">3. Conservar el ticket</h5>
+        <p class="card-text">Le servirá para retirar su bolsa en el intermedio.</p>
+      </div>
+    </div>
+    <div class="card card-alimentos" style="min-width: 16rem;">
+      <img src="placeholder.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">4. Retirar la bolsa en el intermedio</h5>
+        <p class="card-text">Áreas silenciosas para descanso.</p>
+      </div>
+    </div>
+    <div class="card card-alimentos" style="min-width: 16rem;">
+      <img src="placeholder.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">5. Volver a guardarla</h5>
+        <p class="card-text">Si desea, puede voler a guardar su bolsa hasta que termine el programa.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <button class="scroll-btn scroll-right" aria-label="Scroll right">
+    <i class="material-symbols-outlined">chevron_right</i>
+  </button>
+</div>
+
+  </div>
+</section>
+
+  <section id="alojamiento" class="section-alojamiento snap-section"><i class="section-icon material-symbols-outlined">hotel</i>
+    <div class="container pt-5">
+      <h2> ¿Dónde puedo alojarme?</h2>
+      
+  <ul>
+    <li>Hoteles</li>
+    <li>Solicitar alojamiento</li>
+    <li>Ofrecer alojamiento</li>
+  </ul>
+    </div>
+</section>
+
+
+  <section id="otros" class="section-otros snap-section"><i class="section-icon material-symbols-outlined">info</i>
+    <div class="container pt-5">
+      <h2> ¿Qué más debo tener en cuenta?</h2>
+
+    <ul>
+      <li>Horarios</li>
+      <li>Bautismo</li>
+      <li>Climatización</li>
+      <li>Cuidado de niños</li>
+      <li>Precauciones al circular</li>
+      <li>Recomendaciones al regresar</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+
+</footer>
+
+<!-- 🪟 Modal -->
+<div class="modal fade" id="estacionamientoModal" tabindex="-1" aria-labelledby="estacionamientoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="estacionamientoModalLabel">Estacionamientos cercanos al CPC</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table id="tabla-estacionamientos" class="table table-striped table-sm align-middle mb-0">
+            <thead>
+              <tr>
+                <th>Lugar</th>
+                <th>Distancia</th>
+                <th>Precio</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- JS fills this -->
+            </tbody>
+          </table>
+        </div>
+        <div class="text-center mt-3" id="tabla-loading">
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Cargando datos...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 Bootstrap + tooltip init -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
