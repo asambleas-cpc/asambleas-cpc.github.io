@@ -394,3 +394,18 @@ body:not(.js-enabled) .snap-section > * {
   font-size: 1.8rem;
   pointer-events: none;
 }
+
+body::before {
+  content: "BORRADOR - NO COMPARTIR";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 4rem;
+  color: rgba(200, 0, 0, 0.3);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 9999;
+  user-select: none;
+  font-weight: bold;
+}
