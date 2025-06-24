@@ -176,8 +176,8 @@
 
 .navbar {
   background-color: rgba(8, 8, 8, 0.4); /* semi-transparent white */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* subtle separation */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);  /* soft shadow */
   position: fixed;
