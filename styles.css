@@ -10,7 +10,7 @@
 
 :root {
   /* Variant modifiers */
-  --bg-lighten: 40%;           /* How much lighter the pastel background is */
+  --bg-lighten: 85%;           /* How much lighter the pastel background is */
   --icon-faint-sat-mult: 0.3;  /* Saturation multiplier for faint icon */
   --icon-faint-lighten: 60%;   /* Lightness increase for faint icon */
 
@@ -25,37 +25,37 @@
   /* Colors for each section */
 
   /* Inicio */
-  --inicio-bg: hsl(var(--inicio-h), var(--inicio-s), calc(var(--inicio-l) + var(--bg-lighten)));
+  --inicio-bg: hsl(var(--inicio-h), var(--inicio-s), 95%);
   --inicio-comp: hsl(calc((var(--inicio-h) + 180) % 360), var(--inicio-s), var(--inicio-l));
   --inicio-icon-faint: hsl(var(--inicio-h), calc(var(--inicio-s) * var(--icon-faint-sat-mult)), calc(var(--inicio-l) + var(--icon-faint-lighten)));
   --inicio-color: hsl(var(--inicio-h), var(--inicio-s), var(--inicio-l));
 
   /* Transporte */
-  --transporte-bg: hsl(var(--transporte-h), var(--transporte-s), calc(var(--transporte-l) + var(--bg-lighten)));
+  --transporte-bg: hsl(var(--transporte-h), var(--transporte-s), var(--bg-lighten));
   --transporte-comp: hsl(calc((var(--transporte-h) + 180) % 360), var(--transporte-s), var(--transporte-l));
   --transporte-icon-faint: hsl(var(--transporte-h), calc(var(--transporte-s) * var(--icon-faint-sat-mult)), calc(var(--transporte-l) + var(--icon-faint-lighten)));
   --transporte-color: hsl(var(--transporte-h), var(--transporte-s), var(--transporte-l));
 
   /* Auditorios */
-  --auditorios-bg: hsl(var(--auditorios-h), var(--auditorios-s), calc(var(--auditorios-l) + var(--bg-lighten)));
+  --auditorios-bg: hsl(var(--auditorios-h), var(--auditorios-s), var(--bg-lighten));
   --auditorios-comp: hsl(calc((var(--auditorios-h) + 180) % 360), var(--auditorios-s), var(--auditorios-l));
   --auditorios-icon-faint: hsl(var(--auditorios-h), calc(var(--auditorios-s) * var(--icon-faint-sat-mult)), calc(var(--auditorios-l) + var(--icon-faint-lighten)));
   --auditorios-color: hsl(var(--auditorios-h), var(--auditorios-s), var(--auditorios-l));
 
   /* Alimentos */
-  --alimentos-bg: hsl(var(--alimentos-h), var(--alimentos-s), calc(var(--alimentos-l) + var(--bg-lighten)));
+  --alimentos-bg: hsl(var(--alimentos-h), var(--alimentos-s),  var(--bg-lighten));
   --alimentos-comp: hsl(calc((var(--alimentos-h) + 180) % 360), var(--alimentos-s), var(--alimentos-l));
   --alimentos-icon-faint: hsl(var(--alimentos-h), calc(var(--alimentos-s) * var(--icon-faint-sat-mult)), calc(var(--alimentos-l) + var(--icon-faint-lighten)));
   --alimentos-color: hsl(var(--alimentos-h), var(--alimentos-s), var(--alimentos-l));
 
   /* Alojamiento */
-  --alojamiento-bg: hsl(var(--alojamiento-h), var(--alojamiento-s), calc(var(--alojamiento-l) + var(--bg-lighten)));
+  --alojamiento-bg: hsl(var(--alojamiento-h), var(--alojamiento-s), var(--bg-lighten));
   --alojamiento-comp: hsl(calc((var(--alojamiento-h) + 180) % 360), var(--alojamiento-s), var(--alojamiento-l));
   --alojamiento-icon-faint: hsl(var(--alojamiento-h), calc(var(--alojamiento-s) * var(--icon-faint-sat-mult)), calc(var(--alojamiento-l) + var(--icon-faint-lighten)));
   --alojamiento-color: hsl(var(--alojamiento-h), var(--alojamiento-s), var(--alojamiento-l));
 
   /* Otros */
-  --otros-bg: hsl(var(--otros-h), var(--otros-s), calc(var(--otros-l) + var(--bg-lighten)));
+  --otros-bg: hsl(var(--otros-h), var(--otros-s), var(--bg-lighten));
   --otros-comp: hsl(calc((var(--otros-h) + 180) % 360), var(--otros-s), var(--otros-l));
   --otros-icon-faint: hsl(var(--otros-h), calc(var(--otros-s) * var(--icon-faint-sat-mult)), calc(var(--otros-l) + var(--icon-faint-lighten)));
   --otros-color: hsl(var(--otros-h), var(--otros-s), var(--otros-l));
