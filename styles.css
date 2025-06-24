@@ -401,11 +401,12 @@ body::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-30deg);
-  font-size: 4rem;
-  color: rgba(200, 0, 0, 0.3);
+  font-size: 8vw; /* 90% of viewport width */
+  color: rgba(255, 0, 0, 0.308);
   white-space: nowrap;
   pointer-events: none;
   z-index: 9999;
   user-select: none;
   font-weight: bold;
+  text-align: center;
 }
