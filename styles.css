@@ -57,6 +57,11 @@
   --otros-comp: hsl(from var(--otros-color) calc(h + 180) s l);
   --otros-icon-faint: hsl(from var(--otros-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
+  --aviso-color: hsl(0, 95%, 24%);
+  --aviso-bg: hsl(from var(--aviso-color) h s var(--bg-lighten));
+  --aviso-comp: hsl(from var(--aviso-color) calc(h + 180) s l);
+  --aviso-icon-faint: hsl(from var(--aviso-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
+
 }
 
 
@@ -162,12 +167,14 @@
 .card-alimentos .card-icon     { background: var(--alimentos-color); }
 .card-alojamiento .card-icon   { background: var(--alojamiento-color); }
 .card-otros .card-icon         { background: var(--otros-color); }
+.card-aviso .card-icon         { background: var(--aviso-color); }
 
 .card-transporte .card-content    { background: var(--transporte-bg); }
 .card-auditorios .card-content    { background: var(--auditorios-bg); }
 .card-alimentos .card-content     { background: var(--alimentos-bg); }
 .card-alojamiento .card-content   { background: var(--alojamiento-bg); }
 .card-otros .card-content         { background: var(--otros-bg); }
+.card-aviso .card-content         { background: var(--aviso-bg); }
 
 
 .navbar .nav-link i {
