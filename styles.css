@@ -38,7 +38,7 @@
 
 
   /* Alimentos */
-  --alimentos-color: hsl(342, 60%, 36%);
+  --alimentos-color: hsl(332, 47%, 37%);
   --alimentos-bg: hsl(from var(--alimentos-color) h s var(--bg-lighten));
   --alimentos-comp: hsl(from var(--alimentos-color) calc(h + 180) s l);
   --alimentos-icon-faint: hsl(from var(--alimentos-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
