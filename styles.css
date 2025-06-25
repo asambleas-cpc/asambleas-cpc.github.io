@@ -10,7 +10,7 @@
 
 :root {
   /* Variant modifiers */
-  --bg-lighten: 85%;           /* How much lighter the pastel background is */
+  --bg-lighten: 90%;           /* How much lighter the pastel background is */
   --icon-faint-sat-mult: 0.3;  /* Saturation multiplier for faint icon */
   --icon-faint-lighten: 60%;   /* Lightness increase for faint icon */
 
