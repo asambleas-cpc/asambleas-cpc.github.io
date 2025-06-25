@@ -57,7 +57,7 @@
   --otros-comp: hsl(from var(--otros-color) calc(h + 180) s l);
   --otros-icon-faint: hsl(from var(--otros-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
-  --aviso-color: hsl(0, 95%, 24%);
+  --aviso-color: rgb(199, 0, 0);
   --aviso-bg: hsl(from var(--aviso-color) h s var(--bg-lighten));
   --aviso-comp: hsl(from var(--aviso-color) calc(h + 180) s l);
   --aviso-icon-faint: hsl(from var(--aviso-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
