@@ -154,6 +154,7 @@ function abrirMapa(rawCoords, nombre = '') {
       if (videoUrl) {
         videoSource.src = videoUrl;
         customVideo.load();
+        customVideo.play();
       }
     });
   });
