@@ -143,4 +143,25 @@ function abrirMapa(rawCoords, nombre = '') {
   }
 }
 
+  const videoModal = document.getElementById('videoModal');
+  const customVideo = document.getElementById('customVideo');
+  const videoSource = document.getElementById('videoSource');
+
+  // When a thumbnail is clicked, update video source
+  document.querySelectorAll('.video-link').forEach(link => {
+    link.addEventListener('click', function () {
+      const videoUrl = this.getAttribute('data-video');
+      if (videoUrl) {
+        videoSource.src = videoUrl;
+        customVideo.load();
+      }
+    });
+  });
+
+  // Stop and reset video on modal close
+  videoModal.addEventListener('hidden.bs.modal', () => {
+    customVideo.pause();
+    customVideo.currentTime = 0;
+    videoSource.src = "";
+  });
 
