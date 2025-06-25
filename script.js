@@ -166,3 +166,14 @@ function abrirMapa(rawCoords, nombre = '') {
     videoSource.src = "";
   });
 
+    const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const isVisible = window.getComputedStyle(navbarCollapse).display !== 'none';
+      if (isVisible && navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).hide();
+      }
+    });
+  });

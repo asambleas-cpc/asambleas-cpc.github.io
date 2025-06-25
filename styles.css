@@ -1,23 +1,27 @@
-.material-symbols-outlined { 
+.material-symbols-outlined {
   color: var(--icon-color);
   vertical-align: middle;
   font-size: 1.2em;
 }
-.material-symbols-outlined { 
+
+.material-symbols-outlined {
   vertical-align: middle;
   font-size: 1.2em;
 }
 
 :root {
   /* Variant modifiers */
-  --bg-lighten: 90%;           /* How much lighter the pastel background is */
-  --icon-faint-sat-mult: 0.3;  /* Saturation multiplier for faint icon */
-  --icon-faint-lighten: 60%;   /* Lightness increase for faint icon */
+  --bg-lighten: 90%;
+  /* How much lighter the pastel background is */
+  --icon-faint-sat-mult: 0.3;
+  /* Saturation multiplier for faint icon */
+  --icon-faint-lighten: 60%;
+  /* Lightness increase for faint icon */
 
   /* Colors for each section */
 
   /* Inicio */
-  --inicio-color: hsl(210,10%, 50%);  
+  --inicio-color: hsl(210, 10%, 50%);
   --inicio-bg: hsl(from var(--inicio-color) h s 95%);
   --inicio-comp: hsl(from var(--inicio-color) calc(h + 180) s l);
   --inicio-icon-faint: hsl(from var(--inicio-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
@@ -28,10 +32,10 @@
   --transporte-bg: hsl(from var(--transporte-color) h s var(--bg-lighten));
   --transporte-comp: hsl(from var(--transporte-color) calc(h + 180) s l);
   --transporte-icon-faint: hsl(from var(--transporte-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
-  
+
 
   /* Auditorios */
-  --auditorios-color: hsl(188,60%,40%);
+  --auditorios-color: hsl(188, 60%, 40%);
   --auditorios-bg: hsl(from var(--auditorios-color) h s var(--bg-lighten));
   --auditorios-comp: hsl(from var(--auditorios-color) calc(h + 180) s l);
   --auditorios-icon-faint: hsl(from var(--auditorios-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
@@ -45,7 +49,7 @@
 
 
   /* Alojamiento */
-  --alojamiento-color: hsl(30,98%,55%);
+  --alojamiento-color: hsl(30, 98%, 55%);
   --alojamiento-bg: hsl(from var(--alojamiento-color) h s var(--bg-lighten));
   --alojamiento-comp: hsl(from var(--alojamiento-color) calc(h + 180) s l);
   --alojamiento-icon-faint: hsl(from var(--alojamiento-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
@@ -84,30 +88,35 @@
   padding: 2rem;
   transition: background-color 0.6s ease, color 0.6s ease;
 }
+
 .section-transporte {
   background-color: var(--transporte-bg);
   color: black;
   padding: 2rem;
   transition: background-color 0.6s ease, color 0.6s ease;
 }
+
 .section-auditorios {
   background-color: var(--auditorios-bg);
   color: black;
   padding: 2rem;
   transition: background-color 0.6s ease, color 0.6s ease;
 }
+
 .section-alimentos {
   background-color: var(--alimentos-bg);
   color: black;
   padding: 2rem;
   transition: background-color 0.6s ease, color 0.6s ease;
 }
+
 .section-alojamiento {
   background-color: var(--alojamiento-bg);
   color: black;
   padding: 2rem;
   transition: background-color 0.6s ease, color 0.6s ease;
 }
+
 .section-otros {
   background-color: var(--otros-bg);
   color: black;
@@ -116,12 +125,29 @@
 }
 
 /* Icon color per section — not used in cards now */
-.section-inicio .material-symbols-outlined      { color: var(--inicio-color); }
-.section-transporte .material-symbols-outlined  { color: var(--transporte-color); }
-.section-auditorios .material-symbols-outlined  { color: var(--auditorios-color); }
-.section-alimentos .material-symbols-outlined   { color: var(--alimentos-color); }
-.section-alojamiento .material-symbols-outlined { color: var(--alojamiento-color); }
-.section-otros .material-symbols-outlined       { color: var(--otros-color); }
+.section-inicio .material-symbols-outlined {
+  color: var(--inicio-color);
+}
+
+.section-transporte .material-symbols-outlined {
+  color: var(--transporte-color);
+}
+
+.section-auditorios .material-symbols-outlined {
+  color: var(--auditorios-color);
+}
+
+.section-alimentos .material-symbols-outlined {
+  color: var(--alimentos-color);
+}
+
+.section-alojamiento .material-symbols-outlined {
+  color: var(--alojamiento-color);
+}
+
+.section-otros .material-symbols-outlined {
+  color: var(--otros-color);
+}
 
 /* Themed Card Layout in #inicio */
 .card {
@@ -132,7 +158,8 @@
   transition: transform 0.3s ease, background-color 0.3s;
   color: black;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle drop shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* subtle drop shadow */
   border: none;
 }
 
@@ -143,15 +170,20 @@
 
 .card-icon {
   display: flex;
-  align-items: flex-start; /* Align icon to the top */
+  align-items: flex-start;
+  /* Align icon to the top */
   justify-content: center;
   width: 4rem;
   flex-shrink: 0;
-  background: gray; /* temporary default, overridden below */
+  background: gray;
+  /* temporary default, overridden below */
 }
+
 .card-icon .material-symbols-outlined {
-  color: white !important; /* Force icon to be white */
-  font-size: 2rem; /* optional: make it bigger */
+  color: white !important;
+  /* Force icon to be white */
+  font-size: 2rem;
+  /* optional: make it bigger */
   padding-top: 1rem;
 }
 
@@ -162,19 +194,53 @@
 }
 
 /* Individual Card Variants */
-.card-transporte .card-icon    { background: var(--transporte-color); }
-.card-auditorios .card-icon    { background: var(--auditorios-color); }
-.card-alimentos .card-icon     { background: var(--alimentos-color); }
-.card-alojamiento .card-icon   { background: var(--alojamiento-color); }
-.card-otros .card-icon         { background: var(--otros-color); }
-.card-aviso .card-icon         { background: var(--aviso-color); }
+.card-transporte .card-icon {
+  background: var(--transporte-color);
+}
 
-.card-transporte .card-content    { background: var(--transporte-bg); }
-.card-auditorios .card-content    { background: var(--auditorios-bg); }
-.card-alimentos .card-content     { background: var(--alimentos-bg); }
-.card-alojamiento .card-content   { background: var(--alojamiento-bg); }
-.card-otros .card-content         { background: var(--otros-bg); }
-.card-aviso .card-content         { background: var(--aviso-bg); }
+.card-auditorios .card-icon {
+  background: var(--auditorios-color);
+}
+
+.card-alimentos .card-icon {
+  background: var(--alimentos-color);
+}
+
+.card-alojamiento .card-icon {
+  background: var(--alojamiento-color);
+}
+
+.card-otros .card-icon {
+  background: var(--otros-color);
+}
+
+.card-aviso .card-icon {
+  background: var(--aviso-color);
+}
+
+.card-transporte .card-content {
+  background: var(--transporte-bg);
+}
+
+.card-auditorios .card-content {
+  background: var(--auditorios-bg);
+}
+
+.card-alimentos .card-content {
+  background: var(--alimentos-bg);
+}
+
+.card-alojamiento .card-content {
+  background: var(--alojamiento-bg);
+}
+
+.card-otros .card-content {
+  background: var(--otros-bg);
+}
+
+.card-aviso .card-content {
+  background: var(--aviso-bg);
+}
 
 
 .navbar .nav-link i {
@@ -182,11 +248,15 @@
 }
 
 .navbar {
-  background-color: rgba(8, 8, 8, 0.4); /* semi-transparent white */
+  background-color: rgba(8, 8, 8, 0.4);
+  /* semi-transparent white */
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* subtle separation */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);  /* soft shadow */
+  -webkit-backdrop-filter: blur(10px);
+  /* Safari support */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* subtle separation */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  /* soft shadow */
   position: fixed;
   top: 0;
   width: 100%;
@@ -217,17 +287,17 @@ html {
 
 body {
   background-color: var(--bg-light);
-  color:  var(--text-color);
+  color: var(--text-color);
   transition: background-color 0.6s ease, color 0.6s ease;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
   height: 100%;
   /* overflow: hidden; */
 
 
 }
 
-body:not(.js-enabled) #inicio > *,
-#inicio.visible > * {
+body:not(.js-enabled) #inicio>*,
+#inicio.visible>* {
   opacity: 1;
   transform: none;
 }
@@ -236,16 +306,18 @@ body:not(.js-enabled) #inicio > *,
   scroll-snap-align: start;
   min-height: 100vh;
   padding-top: 4rem;
-  padding-bottom: 75vh; 
+  padding-bottom: 75vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: start;
 
-  transition: background-color 0.6s ease, color 0.6s ease; /* add color transition for icon */
+  transition: background-color 0.6s ease, color 0.6s ease;
+  /* add color transition for icon */
   /* background-color: inherit; ensure background is controlled by section-bg variables */
 
-  position: relative; /* required for absolute positioning inside */
+  position: relative;
+  /* required for absolute positioning inside */
   z-index: 0;
   /* overflow: visible; */
 }
@@ -260,44 +332,86 @@ body:not(.js-enabled) #inicio > *,
   overflow: visible !important;
 }
 
-.section-inicio      { background-color: var(--inicio-bg); color: black; }
-.section-transporte  { background-color: var(--transporte-bg); color: black; }
-.section-auditorios  { background-color: var(--auditorios-bg); color: black; }
-.section-alimentos   { background-color: var(--alimentos-bg); color: black; }
-.section-alojamiento { background-color: var(--alojamiento-bg); color: black; }
-.section-otros       { background-color: var(--otros-bg); color: black; }
+.section-inicio {
+  background-color: var(--inicio-bg);
+  color: black;
+}
+
+.section-transporte {
+  background-color: var(--transporte-bg);
+  color: black;
+}
+
+.section-auditorios {
+  background-color: var(--auditorios-bg);
+  color: black;
+}
+
+.section-alimentos {
+  background-color: var(--alimentos-bg);
+  color: black;
+}
+
+.section-alojamiento {
+  background-color: var(--alojamiento-bg);
+  color: black;
+}
+
+.section-otros {
+  background-color: var(--otros-bg);
+  color: black;
+}
 
 .snap-section.visible {
   opacity: 1;
 }
 
-.snap-section > *:not(.section-icon) {
+.snap-section>*:not(.section-icon) {
   position: relative;
   z-index: 1;
 }
+
 /* Apply the movement animation to inner content, not the container */
 
-.snap-section > * {
+.snap-section>* {
   opacity: 0;
   transform: translateY(2rem);
 }
 
-.snap-section.visible > * {
+.snap-section.visible>* {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-.snap-section.visible > *:nth-child(1) { animation-delay: 0.1s; }
-.snap-section.visible > *:nth-child(2) { animation-delay: 0.2s; }
-.snap-section.visible > *:nth-child(3) { animation-delay: 0.3s; }
-.snap-section.visible > *:nth-child(4) { animation-delay: 0.4s; }
-.snap-section.visible > *:nth-child(5) { animation-delay: 0.5s; }
-.snap-section.visible > *:nth-child(6) { animation-delay: 0.6s; }
+.snap-section.visible>*:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.snap-section.visible>*:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.snap-section.visible>*:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.snap-section.visible>*:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.snap-section.visible>*:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.snap-section.visible>*:nth-child(6) {
+  animation-delay: 0.6s;
+}
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(2rem);
   }
+
   to {
     opacity: 1;
     transform: none;
@@ -309,33 +423,54 @@ body:not(.js-enabled) #inicio > *,
   overflow-y: auto;
   height: 100vh;
   scroll-behavior: smooth;
-  transition: background-color 0.6s ease; /* added */
+  transition: background-color 0.6s ease;
+  /* added */
   position: relative;
 }
 
 .section-icon {
   position: absolute;
   top: 3rem;
-  left: -5vw; /* 1/3 offscreen */
+  left: -5vw;
+  /* 1/3 offscreen */
   font-size: 20rem;
-   filter: opacity(20%); /* Use filter instead of opacity */
+  filter: opacity(20%);
+  /* Use filter instead of opacity */
   pointer-events: none;
   z-index: 0;
 
   transition: color 0.6s ease;
-  color: inherit; /* inherits section's main color */
+  color: inherit;
+  /* inherits section's main color */
 }
 
 /* Set icon color using section main color */
-.section-inicio .section-icon      { color: var(--inicio-color); }
-.section-transporte .section-icon  { color: var(--transporte-color); }
-.section-auditorios .section-icon  { color: var(--auditorios-color); }
-.section-alimentos .section-icon   { color: var(--alimentos-color); }
-.section-alojamiento .section-icon { color: var(--alojamiento-color); }
-.section-otros .section-icon       { color: var(--otros-color); }
+.section-inicio .section-icon {
+  color: var(--inicio-color);
+}
+
+.section-transporte .section-icon {
+  color: var(--transporte-color);
+}
+
+.section-auditorios .section-icon {
+  color: var(--auditorios-color);
+}
+
+.section-alimentos .section-icon {
+  color: var(--alimentos-color);
+}
+
+.section-alojamiento .section-icon {
+  color: var(--alojamiento-color);
+}
+
+.section-otros .section-icon {
+  color: var(--otros-color);
+}
 
 
-body:not(.js-enabled) .snap-section > * {
+body:not(.js-enabled) .snap-section>* {
   opacity: 1;
   transform: none;
 }
@@ -396,12 +531,13 @@ body:not(.js-enabled) .snap-section > * {
 }
 
 body::before {
-  content: "BORRADOR-NO COMPARTIR";
+  content: "BORRADOR-NO DISTRIBUIR";
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
-  font-size: 8vw; /* 90% of viewport width */
+  font-size: 8vw;
+  /* 90% of viewport width */
   color: rgba(255, 0, 0, 0.308);
   white-space: nowrap;
   pointer-events: none;
@@ -412,9 +548,10 @@ body::before {
 }
 
 .logo-responsive {
-  width: min(80vw, 100vh); /* responsive max size */
+  width: min(80vw, 100vh);
+  /* responsive max size */
   height: auto;
   display: block;
-  margin: 0 ;
-  color:hsl(204, 100%, 16%)
+  margin: 0;
+  color: hsl(204, 100%, 16%)
 }
