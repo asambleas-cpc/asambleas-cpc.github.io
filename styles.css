@@ -396,11 +396,11 @@ body:not(.js-enabled) .snap-section > * {
 }
 
 body::before {
-  content: "BORRADOR - NO COMPARTIR";
+  content: "BORRADOR-NO COMPARTIR";
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-30deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
   font-size: 8vw; /* 90% of viewport width */
   color: rgba(255, 0, 0, 0.308);
   white-space: nowrap;
