@@ -163,10 +163,10 @@
   border: none;
 }
 
-.card:not(.card-static):hover {
+/* .card:not(.card-static):hover {
   transform: scale(1.08);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .card-icon {
   display: flex;
@@ -475,59 +475,35 @@ body:not(.js-enabled) .snap-section>* {
   transform: none;
 }
 
-.scrolling-cards-wrapper {
-  position: relative;
-  overflow: hidden;
+.scroll-wrapper {
+  width: 99vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  /* padding: 1rem 0; */
 }
 
-.scrolling-cards-container {
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  padding-bottom: 0.5rem;
-
-  scrollbar-width: none;
+.scroll-inner {
+  padding-left: var(--bs-gutter-x, 1rem);
+  padding-right: 5em; /* or more for visual spacing */
+    scroll-snap-type: x mandatory;
 }
-
-.scrolling-cards-container::-webkit-scrollbar {
-  display: none;
+.scroll-inner > .card {
+  scroll-snap-align: start;
 }
-
-.scrolling-cards-row {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0;
-}
-
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-
-.scroll-left {
-  left: 0.5rem;
-}
-
-.scroll-right {
-  right: 0.5rem;
-}
-
-.scroll-btn i {
-  font-size: 1.8rem;
-  pointer-events: none;
+.overflow-fade {
+  -webkit-mask-image: linear-gradient(to right,
+    transparent 0,
+    black 5em,
+    black calc(100% - 5em),
+    transparent 100%);
+  mask-image: linear-gradient(to right,
+    transparent 0,
+    black 5em,
+    black calc(100% - 5em),
+    transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
 
 body::before {
