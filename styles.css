@@ -507,7 +507,7 @@ body:not(.js-enabled) .snap-section>* {
 }
 
 body::before {
-  content: "BORRADOR-NO DISTRIBUIR";
+  content: "BORRADOR-NO DIFUNDIR";
   position: fixed;
   top: 50%;
   left: 50%;
