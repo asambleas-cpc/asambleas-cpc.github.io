@@ -177,3 +177,127 @@ function abrirMapa(rawCoords, nombre = '') {
       }
     });
   });
+
+// --- Highlight active menu item on scroll ---
+(function() {
+  const navLinksHighlight = document.querySelectorAll('.navbar-nav .nav-link');
+  const sectionIds = Array.from(navLinksHighlight)
+    .map(link => link.getAttribute('href'))
+    .filter(href => href && href.startsWith('#'))
+    .map(href => href.slice(1));
+
+  function highlightMenuOnScroll() {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight || 0;
+    let currentSection = sectionIds[0];
+    for (let i = sectionIds.length - 1; i >= 0; i--) {
+      const section = document.getElementById(sectionIds[i]);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= navbarHeight + 20) {
+          currentSection = sectionIds[i];
+          break;
+        }
+      }
+    }
+    navLinksHighlight.forEach(link => link.classList.remove('active'));
+    const activeLink = Array.from(navLinksHighlight).find(link => link.getAttribute('href') === '#' + currentSection);
+    if (activeLink) activeLink.classList.add('active');
+  }
+
+  window.addEventListener('scroll', highlightMenuOnScroll);
+  window.addEventListener('resize', highlightMenuOnScroll);
+  window.addEventListener('DOMContentLoaded', highlightMenuOnScroll);
+  // Si el scroll principal ocurre en .snap-container, también escuchar ahí
+  const snapContainer = document.querySelector('.snap-container');
+  if (snapContainer) {
+    snapContainer.addEventListener('scroll', highlightMenuOnScroll);
+  }
+})();
+
+// Mostrar el logo solo si no es visible en el viewport
+function isLogoVisible() {
+  const logo = document.querySelector('.logo-responsive');
+  if (!logo) return false;
+  const rect = logo.getBoundingClientRect();
+  console.log('Logo rect:', rect);
+  return (
+    rect.top < window.innerHeight &&
+    rect.bottom > 0 &&
+    rect.left < window.innerWidth &&
+    rect.right > 0
+  );
+}
+
+function toggleHeaderLogo() {
+  const headerLogo = document.getElementById('header-logo-fixed');
+  if (!headerLogo) return;
+  if (isLogoVisible()) {
+    // El logo principal está visible, ocultar el logo fijo
+    console.log('Logo principal visible, ocultando logo fijo');
+    headerLogo.style.visibility = 'hidden';
+  } else {
+    // El logo principal NO está visible, mostrar el logo fijo
+    console.log('Logo principal NO visible, mostrando logo fijo');
+    headerLogo.style.visibility = 'visible';
+  }
+}
+
+window.addEventListener('scroll', toggleHeaderLogo);
+window.addEventListener('resize', toggleHeaderLogo);
+window.addEventListener('DOMContentLoaded', toggleHeaderLogo);
+// Asegura que el evento scroll se escuche también en .snap-container
+const snapContainer = document.querySelector('.snap-container');
+if (snapContainer) {
+  snapContainer.addEventListener('scroll', toggleHeaderLogo);
+}
+
+// Leaflet.js para mapa interactivo
+(function() {
+  if (!document.getElementById('map')) return;
+  const leafletScript = document.createElement('script');
+  leafletScript.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+  leafletScript.onload = function() {
+    // Coordenadas del CPC Paraná
+    var map = L.map('map').setView([-31.721610, -60.52522], 16);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    L.marker([-31.721610, -60.52522]).addTo(map)
+      .bindPopup('Centro Provincial de Convenciones')
+      .openPopup();
+  };
+  document.body.appendChild(leafletScript);
+})();
+
+// Mantener el primer item del acordeón siempre abierto y abrir/cerrar los demás al hacer scroll
+(function() {
+  const accordion = document.getElementById('transporteAccordion');
+  if (!accordion) return;
+  const items = accordion.querySelectorAll('.accordion-item');
+  if (!items.length) return;
+  // Asegura que el primero esté abierto
+  const firstCollapse = items[0].querySelector('.accordion-collapse');
+  if (firstCollapse && !firstCollapse.classList.contains('show')) {
+    firstCollapse.classList.add('show');
+  }
+  // Detecta scroll y abre/cierra acordeones según visibilidad
+  function handleAccordionOnScroll() {
+    items.forEach((item, idx) => {
+      if (idx === 0) return; // El primero siempre abierto
+      const collapse = item.querySelector('.accordion-collapse');
+      const header = item.querySelector('.accordion-header');
+      if (!collapse || !header) return;
+      const rect = header.getBoundingClientRect();
+      // Si el header está visible en el viewport, abre el item
+      if (rect.top < window.innerHeight && rect.bottom > 80) {
+        collapse.classList.add('show');
+      } else {
+        collapse.classList.remove('show');
+      }
+    });
+  }
+  window.addEventListener('scroll', handleAccordionOnScroll);
+  window.addEventListener('resize', handleAccordionOnScroll);
+  window.addEventListener('DOMContentLoaded', handleAccordionOnScroll);
+})();

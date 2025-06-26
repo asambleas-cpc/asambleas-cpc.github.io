@@ -86,42 +86,42 @@
   background-color: var(--inicio-bg);
   color: black;
   padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .section-transporte {
   background-color: var(--transporte-bg);
   color: black;
   padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .section-auditorios {
   background-color: var(--auditorios-bg);
   color: black;
   padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .section-alimentos {
   background-color: var(--alimentos-bg);
   color: black;
   padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .section-alojamiento {
   background-color: var(--alojamiento-bg);
   color: black;
   padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .section-otros {
   background-color: var(--otros-bg);
   color: black;
   padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Icon color per section — not used in cards now */
@@ -261,7 +261,7 @@
   top: 0;
   width: 100%;
   z-index: 999;
-  transition: background-color 0.6s ease, backdrop-filter 0.6s ease;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .navbar-logo {
@@ -276,6 +276,49 @@
   color: white !important;
 }
 
+/* --- Navbar Active Highlight --- */
+.navbar .nav-link.active, .navbar .nav-link.active:focus, .navbar .nav-link.active:hover {
+  color: #fff !important;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  position: relative;
+}
+
+/* Colores de fondo activos por sección */
+.navbar .nav-link.active[href="#inicio"] {
+  background: rgba(51, 77, 102, 0.25); /* fallback */
+  background: linear-gradient(90deg, var(--inicio-color, #335)11 0% 0.25), transparent;
+  background-color: color-mix(in srgb, var(--inicio-color) 30%, transparent);
+}
+.navbar .nav-link.active[href="#transporte"] {
+  background-color: color-mix(in srgb, var(--transporte-color) 30%, transparent);
+}
+.navbar .nav-link.active[href="#auditorios"] {
+  background-color: color-mix(in srgb, var(--auditorios-color) 30%, transparent);
+}
+.navbar .nav-link.active[href="#alimentos"] {
+  background-color: color-mix(in srgb, var(--alimentos-color) 30%, transparent);
+}
+.navbar .nav-link.active[href="#alojamiento"] {
+  background-color: color-mix(in srgb, var(--alojamiento-color) 30%, transparent);
+}
+.navbar .nav-link.active[href="#otros"] {
+  background-color: color-mix(in srgb, var(--otros-color) 30%, transparent);
+}
+
+.navbar .nav-link {
+  transition: background 0.2s, color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.navbar .nav-link span {
+  margin-left: 0.2em;
+}
+
 #modeToggle i {
   font-size: 1.2rem;
 }
@@ -288,7 +331,7 @@ html {
 body {
   background-color: var(--bg-light);
   color: var(--text-color);
-  transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
   height: 100%;
   /* overflow: hidden; */
@@ -312,7 +355,7 @@ body:not(.js-enabled) #inicio>*,
   flex-direction: column;
   justify-content: start;
 
-  transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   /* add color transition for icon */
   /* background-color: inherit; ensure background is controlled by section-bg variables */
 
@@ -379,7 +422,7 @@ body:not(.js-enabled) #inicio>*,
 }
 
 .snap-section.visible>* {
-  animation: fadeInUp 0.6s ease forwards;
+  animation: fadeInUp 0.3s ease forwards;
 }
 
 .snap-section.visible>*:nth-child(1) {
@@ -403,7 +446,7 @@ body:not(.js-enabled) #inicio>*,
 }
 
 .snap-section.visible>*:nth-child(6) {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 
 @keyframes fadeInUp {
@@ -423,7 +466,7 @@ body:not(.js-enabled) #inicio>*,
   overflow-y: auto;
   height: 100vh;
   scroll-behavior: smooth;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.3s ease;
   /* added */
   position: relative;
 }
@@ -439,7 +482,7 @@ body:not(.js-enabled) #inicio>*,
   pointer-events: none;
   z-index: 0;
 
-  transition: color 0.6s ease;
+  transition: color 0.3s ease;
   color: inherit;
   /* inherits section's main color */
 }
@@ -530,4 +573,23 @@ body::before {
   display: block;
   margin: 0;
   color: hsl(204, 100%, 16%)
+}
+
+.info-card {
+  background-color: var(--bg-lighten);
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.info-card .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-card  .card {
+    min-height: 10rem;
+}
+
+.card.primary {
+  margin-right: 1rem;
 }

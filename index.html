@@ -38,7 +38,7 @@
   <!-- 🔝 Fixed Top Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top small-navbar border-bottom border-opacity-50">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2"><svg height="38" width="180" fill="currentColor">
+      <a id="header-logo-fixed" class="navbar-brand d-flex align-items-center gap-2"><svg height="38" width="180" fill="currentColor">
           <use href="#logo-cpc" />
         </svg>
       </a>
@@ -71,6 +71,7 @@
     </div>
   </nav>
 
+
   <!-- 🔻 Fullscreen Scroll Snap Sections -->
   <main class="snap-container">
 
@@ -95,7 +96,7 @@
   </div>
 </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-          <div class="col">
+          <div class="col info-card">
             <a href="#transporte" class="text-decoration-none">
               <div class="card h-80 d-flex flex-row align-items-stretch card-transporte">
                 <div class="d-flex px-3 border-end card-icon">
@@ -108,7 +109,7 @@
               </div>
             </a>
           </div>
-          <div class="col">
+          <div class="col info-card">
             <a href="#auditorios" class="text-decoration-none">
               <div class="card h-80 d-flex flex-row align-items-stretch card-auditorios">
                 <div class="d-flex px-3 border-end card-icon">
@@ -121,7 +122,7 @@
               </div>
             </a>
           </div>
-          <div class="col">
+          <div class="col info-card">
             <a href="#alimentos" class="text-decoration-none text-dark">
               <div class="card h-80 d-flex flex-row align-items-stretch card-alimentos">
                 <div class="d-flex px-3 border-end card-icon">
@@ -135,7 +136,7 @@
               </div>
             </a>
           </div>
-          <div class="col">
+          <div class="col info-card">
             <a href="#alojamiento" class="text-decoration-none text-dark">
               <div class="card h-80 d-flex flex-row align-items-stretch card-alojamiento">
                 <div class="d-flex px-3 border-end card-icon">
@@ -149,7 +150,7 @@
               </div>
             </a>
           </div>
-          <div class="col">
+          <div class="col info-card">
             <a href="#otros" class="text-decoration-none text-dark">
               <div class="card h-80 d-flex flex-row align-items-stretch card-otros">
                 <div class="d-flex px-3 border-end card-icon">
@@ -208,6 +209,16 @@
         <p><button class="btn btn-sm btn-primary"
             onclick="abrirMapa('-31.721610,-60.52522,Centro+Provincial+de+Convenciones')" role="button"
             target="_blank"><i class="material-symbols-outlined">pin_drop</i> Ver en el mapa</button></p>
+
+        <div class="ratio ratio-16x9 mb-4" style="max-width: 700px; margin: 0 auto; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.10);">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-60.52922%2C-31.72461%2C-60.52122%2C-31.71861&amp;layer=mapnik&amp;marker=-31.72161%2C-60.52522"
+            style="border:0; width:100%; height:100%;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa CPC Paraná"></iframe>
+        </div>
 
         <div class="accordion" id="transporteAccordion">
           <!-- Auto Particular -->
@@ -348,16 +359,16 @@
         <p>El CPC tiene dos auditorios. Es importante que nos ubiquemos en el auditorio que nos corresponde, porque
           ayuda a que no se pierda tiempo valioso ante una emergencia o si fuera necesario evacuar el local.</p>
         <div class="card-group mb-3" style="max-width: 40rem;"">
-  <div class=" card">
-          <img src="placeholder.png" class="card-img-top" alt="...">
+        <div class="card primary">
+          <img src="/images/a_principal.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Auditorio principal</h5>
             <p class="card-text">Para el público en general. Se accede mediante las escaleras a la izquierda de la
               entrada.</p>
           </div>
         </div>
-        <div class="card">
-          <img src="placeholder.png" class="card-img-top" alt="...">
+        <div class="card seccond">
+          <img src="/images/a_secundario.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Auditorio auxiliar</h5>
             <p class="card-text">Para personas mayores, con dificultades y padres con niños pequeños. Se accede por el
@@ -381,24 +392,18 @@
 
       </ul>
       <h3>En caso de emergencias</h3>
-      <a href="#" class="video-link position-relative d-inline-block" data-bs-toggle="modal"
-        data-bs-target="#videoModal" data-video="videos/emergencias-movil.mp4" class="text-decoration-none">
-        <div class="card h-20 text-decoration-none" style="width: 18rem;">
-          <img src="placeholder.png" class="card-img-top" alt="Instrucciones para emergencias">
-          <i class="material-symbols-outlined position-absolute top-50 start-50 translate-middle text-white"
-            style="font-size: 4rem;">play_circle</i>
-
-          <div class="card-body text-decoration-none">
-            <h5 class="card-title">Video: Instrucciones para emergencias</h5>
-            <p class="card-text">En este video verás instrucciones importantes para situaciones de emergencia. </p>
-
-          </div>
-        </div>
-      </a>
-
-
+       <div class="text-decoration-none">
+        <h5>Video: Instrucciones para emergencias</h5>
+        <p>En este video verás instrucciones importantes para situaciones de emergencia. </p>
 
       </div>
+      <div class="ratio ratio-16x9 mb-2" style="max-width:700px; margin:0 auto; border-radius:1rem; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.10);">
+          <video controls poster="placeholder.png" style="width:100%; height:100%; background:#000;">
+            <source src="videos/emergencias-movil.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+      </div>
+
     </section>
 
     <section id="alimentos" class="section-alimentos snap-section"><i
@@ -436,35 +441,35 @@
             <div class="scroll-inner d-flex flex-row gap-3 pb-3">
 
               <div class="card card-alimentos" style="min-width: 16rem;">
-                <img src="placeholder.png" class="card-img-top" alt="...">
+                <img src="/images/preparar_comida.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">1. Poner los alimentos en una bolsa</h5>
                   <p class="card-text">Llévelos en una bolsa de tela o friselina.</p>
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem;">
-                <img src="placeholder.png" class="card-img-top" alt="...">
+                <img src="/images/entrega_comida.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">2. Llevarla al puesto de guarda</h5>
                   <p class="card-text">Hay un puesto de guarda de alimentos en cada piso del predio.</p>
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem;">
-                <img src="placeholder.png" class="card-img-top" alt="...">
+                <img src="/images/guardar_ticket.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">3. Conservar el ticket</h5>
                   <p class="card-text">Le servirá para retirar su bolsa en el intermedio.</p>
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem;">
-                <img src="placeholder.png" class="card-img-top" alt="...">
+                <img src="/images/buscando_comida.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">4. Retirar la bolsa en el intermedio</h5>
                   <p class="card-text">Áreas silenciosas para descanso.</p>
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem">
-                <img src="placeholder.png" class="card-img-top" alt="...">
+                <img src="/images/comiendo.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">5. Volver a guardarla</h5>
                   <p class="card-text">Si desea, puede voler a guardar su bolsa hasta que termine el programa.</p>
