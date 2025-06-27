@@ -590,6 +590,31 @@ body::before {
     min-height: 10rem;
 }
 
-.card.primary {
+.card-group .card {
   margin-right: 1rem;
+  max-width: 80%;
 }
+
+
+.card-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-group .card {
+  min-width: 15rem;
+  min-height: 30rem;
+}
+
+.card.primary, .card.seccond {
+  margin-right: 0px;
+}
+
+@media (min-width: 575px) {
+  .card.primary {
+    margin-right: 1rem;
+  }
+}
+
+
