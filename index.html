@@ -94,8 +94,8 @@
 
   </div>
 </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-          <div class="col">
+        <div class="card-group">
+          
             <a href="#transporte" class="text-decoration-none">
               <div class="card h-80 d-flex flex-row align-items-stretch card-transporte">
                 <div class="d-flex px-3 border-end card-icon">
@@ -107,8 +107,6 @@
                 </div>
               </div>
             </a>
-          </div>
-          <div class="col">
             <a href="#auditorios" class="text-decoration-none">
               <div class="card h-80 d-flex flex-row align-items-stretch card-auditorios">
                 <div class="d-flex px-3 border-end card-icon">
@@ -120,8 +118,6 @@
                 </div>
               </div>
             </a>
-          </div>
-          <div class="col">
             <a href="#alimentos" class="text-decoration-none text-dark">
               <div class="card h-80 d-flex flex-row align-items-stretch card-alimentos">
                 <div class="d-flex px-3 border-end card-icon">
@@ -134,8 +130,6 @@
 
               </div>
             </a>
-          </div>
-          <div class="col">
             <a href="#alojamiento" class="text-decoration-none text-dark">
               <div class="card h-80 d-flex flex-row align-items-stretch card-alojamiento">
                 <div class="d-flex px-3 border-end card-icon">
@@ -148,8 +142,6 @@
 
               </div>
             </a>
-          </div>
-          <div class="col">
             <a href="#otros" class="text-decoration-none text-dark">
               <div class="card h-80 d-flex flex-row align-items-stretch card-otros">
                 <div class="d-flex px-3 border-end card-icon">
@@ -162,7 +154,7 @@
 
               </div>
             </a>
-          </div>
+          
         </div>
 
 
@@ -227,8 +219,7 @@
                   <li><strong>En las calles.</strong> En los alrededores del CPC hay abundantes lugares para estacionar
                     en la calle. Sin embargo, generalmente hay cuidacoches.</li>
                   <li><strong>Cocheras. </strong>Tambien hay disponibles estacionamientos pagos.<br> <button
-                      class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal"
-                      data-bs-target="#estacionamientoModal">
+                      class="btn btn-outline-primary btn-sm mt-2" onclick="mostrarDatos('estacionamiento')">
                       Ver cocheras en la zona del CPC
                     </button></li>
                   <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios para que
@@ -287,13 +278,12 @@
             <div id="collapseUrbano" class="accordion-collapse collapse" aria-labelledby="headingUrbano"
               data-bs-parent="#transporteAccordion">
               <div class="accordion-body">
-                El transporte urbano de Paraná se abona utilizando la tarjeta SUBE. La tarifa única del pasaje es $X.
-                <h5>Líneas que llegan al CPC</h5>
-                <ul>
-                  <li>Línea</li>
-                  <li>Parada</li>
-                  <li>Distancia</li>
-                </ul>
+                <p>El transporte urbano de Paraná se abona utilizando la tarjeta SUBE. La tarifa única del pasaje es $X.</p>
+                
+                <button
+                      class="btn btn-outline-primary btn-sm mt-2" onclick="mostrarDatos('colectivos')">
+                      Ver líneas que llegan al CPC
+                    </button>
               </div>
             </div>
           </div>
@@ -563,37 +553,26 @@
 
 
   <!-- 🪟 Modal -->
-  <div class="modal fade" id="estacionamientoModal" tabindex="-1" aria-labelledby="estacionamientoModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="estacionamientoModalLabel">Estacionamientos cercanos al CPC</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="table-responsive">
-            <table id="tabla-estacionamientos" class="table table-striped table-sm align-middle mb-0">
-              <thead>
-                <tr>
-                  <th>Lugar</th>
-                  <th>Distancia</th>
-                  <th>Precio</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- JS fills this -->
-              </tbody>
-            </table>
-          </div>
-          <div class="text-center mt-3" id="tabla-loading">
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Cargando datos...
-          </div>
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">Información</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div id="tabla-loading">Cargando...</div>
+        <div class="table-responsive">
+          <table class="table table-striped" id="tabla-datos">
+            <thead><tr id="tabla-head"></tr></thead>
+            <tbody></tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
+</div>
+  <!-- 🖥️ Video Modal -->
 
   <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">

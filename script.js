@@ -75,46 +75,124 @@ document.querySelectorAll('.scrolling-cards-wrapper').forEach(wrapper => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('estacionamientoModal');
-  modal.addEventListener('show.bs.modal', () => {
-    const tbody = document.querySelector('#tabla-estacionamientos tbody');
-    const loader = document.getElementById('tabla-loading');
-    tbody.innerHTML = '';
-    loader.style.display = 'block';
+const fuentesDatos = {
+  estacionamiento: {
+    url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0",
+    titulo: "Estacionamientos cercanos al CPC",
+    columnas: ["Nombre", "Distancia del CPC", "Costo", ""],
+    procesar: (c) => ([
+      `<strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small>`,
+      `${c[2]?.v || ''} cuadras`,
+      `${c[3]?.v || ''}`,
+      `<button class="btn btn-sm btn-outline-primary" onclick="abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')">
+        <i class="bi bi-geo-alt-fill"></i> Ver en mapa</button>`
+    ])
+  },
+  colectivos: {
+    url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=1511722551",
+    titulo: "Líneas de colectivos que llegan al CPC",
+    columnas: ["Línea - Ramal", "Frecuencia","Parada", "Distancia del CPC", ""],
+    procesar: (c) => ([
+      `<strong>${c[0]?.v || ''}</strong><br>${c[1]?.v || ''}`,
+      `${c[2]?.v || ''} min.`,
+      c[3]?.v || '',
+      `${c[4]?.v || ''} cuadras`,
+      `<button class="btn btn-sm btn-outline-primary" onclick="abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')">
+        <i class="bi bi-geo-alt-fill"></i> Ver en mapa</button>`
+    ])
+    
+  }
+};
 
-    fetch("https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0")
-      .then(res => res.text())
-      .then(text => {
-        const json = JSON.parse(text.substring(47).slice(0, -2));
-        const rows = json.table.rows;
+function mostrarDatos(tipo) {
+  const config = fuentesDatos[tipo];
+  if (!config) return;
 
-        console.log(text)
+  const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+  const titulo = document.getElementById('infoModalLabel');
+  const loader = document.getElementById('tabla-loading');
+  const thead = document.getElementById('tabla-head');
+  const tbody = document.querySelector('#tabla-datos tbody');
 
-        for (const row of rows) {
-          const c = row.c;
-          const tr = document.createElement('tr');
-          tr.innerHTML = `
-            <td>${c[0]?.v || ''}<br>${c[1]?.v || ''}</td>
-            <td>${c[2]?.v || ''} cuadras</td>
-            <td>$ ${c[3]?.v || ''}</td>
-            <td>
-            <button class="btn btn-sm btn-outline-primary" onclick="abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')">
-  <i class="bi bi-geo-alt-fill"></i> Ver en mapa
-</button>
-           
-          `;
-          tbody.appendChild(tr);
-        }
+  titulo.textContent = config.titulo;
+  loader.style.display = 'block';
+  thead.innerHTML = '';
+  tbody.innerHTML = '';
 
-        loader.style.display = 'none';
-      })
-      .catch(err => {
-        loader.innerHTML = "Error al cargar los datos.";
-        console.error("Error fetching estacionamientos:", err);
-      });
+  // Insert headers
+  config.columnas.forEach(col => {
+    const th = document.createElement('th');
+    th.textContent = col;
+    thead.appendChild(th);
   });
-});
+
+  // Fetch data
+  fetch(config.url)
+    .then(res => res.text())
+    .then(text => {
+      const json = JSON.parse(text.substring(47).slice(0, -2));
+      const rows = json.table.rows;
+
+      for (const row of rows) {
+        const c = row.c;
+        const tr = document.createElement('tr');
+        const cells = config.procesar(c);
+        tr.innerHTML = cells.map(cell => `<td>${cell}</td>`).join('');
+        tbody.appendChild(tr);
+      }
+
+      loader.style.display = 'none';
+    })
+    .catch(err => {
+      loader.textContent = "Error al cargar los datos.";
+      console.error("Error fetching data for", tipo, err);
+    });
+
+  modal.show();
+}
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const modal = document.getElementById('estacionamientoModal');
+//   modal.addEventListener('show.bs.modal', () => {
+//     const tbody = document.querySelector('#tabla-estacionamientos tbody');
+//     const loader = document.getElementById('tabla-loading');
+//     tbody.innerHTML = '';
+//     loader.style.display = 'block';
+
+//     fetch("https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0")
+//       .then(res => res.text())
+//       .then(text => {
+//         const json = JSON.parse(text.substring(47).slice(0, -2));
+//         const rows = json.table.rows;
+
+//         console.log(text)
+
+//         for (const row of rows) {
+//           const c = row.c;
+//           const tr = document.createElement('tr');
+//           tr.innerHTML = `
+//             <td>${c[0]?.v || ''}<br>${c[1]?.v || ''}</td>
+//             <td>${c[2]?.v || ''} cuadras</td>
+//             <td>$ ${c[3]?.v || ''}</td>
+//             <td>
+//             <button class="btn btn-sm btn-outline-primary" onclick="abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')">
+//   <i class="bi bi-geo-alt-fill"></i> Ver en mapa
+// </button>
+           
+//           `;
+//           tbody.appendChild(tr);
+//         }
+
+//         loader.style.display = 'none';
+//       })
+//       .catch(err => {
+//         loader.innerHTML = "Error al cargar los datos.";
+//         console.error("Error fetching estacionamientos:", err);
+//       });
+//   });
+// });
 
 function abrirMapa(rawCoords, nombre = '') {
   // Clean up coordinates
