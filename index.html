@@ -219,111 +219,80 @@
             referrerpolicy="no-referrer-when-downgrade"
             title="Mapa CPC Paraná"></iframe>
         </div>
+        <div class="trasporte-scrollspy">
 
-        <div class="accordion" id="transporteAccordion">
-          <!-- Auto Particular -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingAuto">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseAuto" aria-expanded="false" aria-controls="collapseAuto">
-                <i class="material-symbols-outlined me-2">directions_car</i> Auto particular
-              </button>
-            </h2>
-            <div id="collapseAuto" class="accordion-collapse collapse" aria-labelledby="headingAuto"
-              data-bs-parent="#transporteAccordion">
-              <div class="accordion-body">
-
-                <h5>Estacionamiento</h5>
-                <ul>
-                  <li><strong>En las calles.</strong> En los alrededores del CPC hay abundantes lugares para estacionar
-                    en la calle. Sin embargo, generalmente hay cuidacoches.</li>
-                  <li><strong>Cocheras. </strong>Tambien hay disponibles estacionamientos pagos.<br> <button
-                      class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal"
-                      data-bs-target="#estacionamientoModal">
-                      Ver cocheras en la zona del CPC
-                    </button></li>
-                  <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios para que
-                    estacionen hermanos con limitaciones físicas. Si considerás que calificás para solicitarlo, por
-                    favor, contactate con los ancianos de tu congregación. Tené en cuenta que se van a controlar los
-                    números de patentes en el ingreso.</li>
-                </ul>
-
-                <h5>Recomendaciones</h5>
-                <ul>
-                  <li>En las calles generalmente aparecen cuidacoches. Es conveniente dejarles una propina.</li>
-                  <li>El parque es muy concurrido los fines de semana.</li>
-                </ul>
-              </div>
-            </div>
+          <div id="list-example" class="list-group">
+            <a class="list-group-item list-group-item-action" href="#list-item-1">Auto particular</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-2">Ómnibus interurbanos</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-3">Colectivos urbanos</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-4">Taxis, remises y apps</a>
           </div>
-
-          <!-- Ómnibus interurbano -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingInterurbano">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseInterurbano" aria-expanded="false" aria-controls="collapseInterurbano">
-                <i class="material-symbols-outlined me-2">directions_bus</i> Ómnibus interurbanos
-              </button>
-            </h2>
-            <div id="collapseInterurbano" class="accordion-collapse collapse" aria-labelledby="headingInterurbano"
-              data-bs-parent="#transporteAccordion">
-              <div class="accordion-body">
-                <h5>Servicios hasta la terminal de ómnibus</h5>
-                <ul>
-                  <li><strong>Desde Santa Fe.</strong> Hay servicios cada 30 minutos. <a href="#auditorios">Ver
-                      horarios.</a></li>
-                  <li><strong>Desde el interior de Entre Ríos.</strong> Hay servicios diarios desde todas las
-                    localidades. <a href="#auditorios">Ver horarios.</a></li>
-                </ul>
-                <h5>Traslado desde la terminal hasta el CPC</h5>
-                <p>El CPC se encuentra a X cuadras de la terminal.</p>
-                <ul>
-                  <li><strong>Taxis, remises y aplicaciones.</strong> El costo ronda entre $X y $vX y se llega en X
-                    minutos. Para más detalles <a href="#auditorios">vea la sección más abajo</a>.</li>
-                  <li><strong>Colectivos urbanos.</strong> El pasaje sale $X, se paga con SUBE y se llega en X minutos.
-                    Para más detalles <a href="#auditorios">vea la sección más abajo</a>.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Colectivo urbano -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingUrbano">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseUrbano" aria-expanded="false" aria-controls="collapseUrbano">
-                <i class="material-symbols-outlined me-2">directions_bus</i> Colectivos urbanos
-              </button>
-            </h2>
-            <div id="collapseUrbano" class="accordion-collapse collapse" aria-labelledby="headingUrbano"
-              data-bs-parent="#transporteAccordion">
-              <div class="accordion-body">
-                El transporte urbano de Paraná se abona utilizando la tarjeta SUBE. La tarifa única del pasaje es $X.
+          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <h4 id="list-item-1">
+              Auto particular
+            </h4>
+            <p>
+              <h5>Estacionamiento</h5>
+              <ul>
+                <li><strong>En las calles.</strong> En los alrededores del CPC hay abundantes lugares para estacionar
+                  en la calle. Sin embargo, generalmente hay cuidacoches.</li>
+                <li><strong>Cocheras. </strong>Tambien hay disponibles estacionamientos pagos.<br> <button
+                    class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal"
+                    data-bs-target="#estacionamientoModal">
+                    Ver cocheras en la zona del CPC
+                  </button></li>
+                <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios para que
+                  estacionen hermanos con limitaciones físicas. Si considerás que calificás para solicitarlo, por
+                  favor, contactate con los ancianos de tu congregación. Tené en cuenta que se van a controlar los
+                  números de patentes en el ingreso.</li>
+              </ul>
+  
+              <h5>Recomendaciones</h5>
+              <ul>
+                <li>En las calles generalmente aparecen cuidacoches. Es conveniente dejarles una propina.</li>
+                <li>El parque es muy concurrido los fines de semana.</li>
+              </ul>
+            </p>
+            <h4 id="list-item-2">
+              Ómnibus interurbanos
+            </h4>
+            <p>
+              <h5>Servicios hasta la terminal de ómnibus</h5>
+              <ul>
+                <li><strong>Desde Santa Fe.</strong> Hay servicios cada 30 minutos. <a href="#auditorios">Ver
+                    horarios.</a></li>
+                <li><strong>Desde el interior de Entre Ríos.</strong> Hay servicios diarios desde todas las
+                  localidades. <a href="#auditorios">Ver horarios.</a></li>
+              </ul>
+              <h5>Traslado desde la terminal hasta el CPC</h5>
+              <p>El CPC se encuentra a X cuadras de la terminal.</p>
+              <ul>
+                <li><strong>Taxis, remises y aplicaciones.</strong> El costo ronda entre $X y $vX y se llega en X
+                  minutos. Para más detalles <a href="#auditorios">vea la sección más abajo</a>.</li>
+                <li><strong>Colectivos urbanos.</strong> El pasaje sale $X, se paga con SUBE y se llega en X minutos.
+                  Para más detalles <a href="#auditorios">vea la sección más abajo</a>.</li>
+              </ul>
+            </p>
+            <h4 id="list-item-3">
+               Colectivos urbanos
+            </h4>
+            <p> 
+              El transporte urbano de Paraná se abona utilizando la tarjeta SUBE. La tarifa única del pasaje es $X.
                 <h5>Líneas que llegan al CPC</h5>
                 <ul>
                   <li>Línea</li>
                   <li>Parada</li>
                   <li>Distancia</li>
                 </ul>
-              </div>
-            </div>
+            </p>
+            <h4 id="list-item-4">
+              Taxis, remises y apps
+            </h4>
+            <p>
+              <p>Información sobre servicios disponibles.</p>
+            </p>
           </div>
-
-          <!-- Taxis y Apps -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTaxi">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTaxi" aria-expanded="false" aria-controls="collapseTaxi">
-                <i class="material-symbols-outlined me-2">local_taxi</i> Taxis, remises y apps
-              </button>
-            </h2>
-            <div id="collapseTaxi" class="accordion-collapse collapse" aria-labelledby="headingTaxi"
-              data-bs-parent="#transporteAccordion">
-              <div class="accordion-body">
-                <p>Información sobre servicios disponibles.</p>
-              </div>
-            </div>
-          </div>
+        </div>
 
           <!-- Transportes contratados -->
           <div class="accordion-item">

@@ -68,11 +68,6 @@
 
 }
 
-
-
-
-
-
 .section-header {
   display: flex;
   align-items: center;
@@ -96,11 +91,43 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.section-transporte .btn-primary {
+  background: color-mix(in srgb, var(--transporte-bg) 80%, black 20%);
+  border-color: color-mix(in srgb, var(--transporte-bg) 80%, black 20%);
+}
+.section-transporte .btn-outline-primary {
+  border-color: color-mix(in srgb, var(--transporte-bg) 80%, black 20%);
+  color: color-mix(in srgb, var(--transporte-bg) 10%, black 90%);
+  font-weight: 600;
+} 
+
+.section-transporte a {
+  color: color-mix(in srgb, var(--transporte-bg) 10%, black 90%);
+  font-weight: 600;
+}
+
+.section-transporte a:visited {
+  color: color-mix(in srgb, var(--transporte-bg) 10%, black 80%);
+  font-weight: 600;
+}
+
+.section-transporte h1, .section-transporte h2,.section-transporte h3, .section-transporte h4, .section-transporte h5 {
+  border-color: color-mix(in srgb, var(--transporte-bg) 80%, black 20%);
+  color: color-mix(in srgb, var(--transporte-bg) 10%, black 90%);
+}
+
 .section-auditorios {
   background-color: var(--auditorios-bg);
   color: black;
   padding: 2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section-auditorios h1, .section-auditorios h2, .section-auditorios h3, .section-auditorios h4, .section-auditorios h5 {
+  color: color-mix(in srgb, var(--auditorios-bg) 10%, black 50%);
+}
+.section-auditorios .card-title, .section-auditorios .card-body {
+  color:  color-mix(in srgb, var(--auditorios-bg) 90%, black 50%);
 }
 
 .section-alimentos {
@@ -110,6 +137,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.section-alimentos h1, .section-alimentos h2, .section-alimentos h3, .section-alimentos h4, .section-alimentos h5 {
+  color: color-mix(in srgb, var(--alimentos-bg) 10%, black 50%);
+}
+.section-alimentos .card-title, .section-alimentos .card-body {
+  color:  color-mix(in srgb, var(--alimentos-bg) 90%, black 50%);
+}
+
 .section-alojamiento {
   background-color: var(--alojamiento-bg);
   color: black;
@@ -117,11 +151,35 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.section-alojamiento h1, .section-alojamiento h2, .section-alojamiento h3, .section-alojamiento h4, .section-alojamiento h5 {
+  color: color-mix(in srgb, var(--alojamiento-bg) 10%, black 50%);
+}
+.section-alojamiento .card-title, .section-alojamiento .card-body {
+  color:  color-mix(in srgb, var(--alojamiento-bg) 90%, black 50%);
+}
+
+.section-alojamiento a {
+  color: color-mix(in srgb, var(--transporte-bg) 10%, black 90%);
+  font-weight: 600;
+}
+
+.section-alojamiento a:visited {
+  color: color-mix(in srgb, var(--transporte-bg) 10%, black 80%);
+  font-weight: 600;
+}
+
 .section-otros {
   background-color: var(--otros-bg);
   color: black;
   padding: 2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section-otros h1, .section-otros h2, .section-otros h3, .section-otros h4, .section-otros h5 {
+  color: color-mix(in srgb, var(--alojamiento-bg) 10%, black 50%);
+}
+.section-otros .card-title, .section-otros .card-body {
+  color:  color-mix(in srgb, var(--alojamiento-bg) 90%, black 50%);
 }
 
 /* Icon color per section — not used in cards now */
@@ -617,4 +675,38 @@ body::before {
   }
 }
 
+.trasporte-scrollspy {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  flex-wrap: nowrap;
+}
+
+.trasporte-scrollspy .list-group-item-action.active {
+  background-color: var(--transporte-bg);
+  color: black;
+  font-weight: 600;
+  border-color: color-mix(in srgb, var(--transporte-bg) 70%, black 30%);
+}
+
+.trasporte-scrollspy .scrollspy-example {
+  margin-top: 1rem;
+}
+
+@media (min-width: 575px) {
+  .trasporte-scrollspy {
+     flex-direction: row;
+  }
+
+  .trasporte-scrollspy .list-example {
+    width: 40rem;
+  }
+
+  .trasporte-scrollspy .scrollspy-example {
+    margin-left: 2rem;
+    max-height: 20rem;
+    overflow: auto;
+    scroll-behavior: auto;
+  }
+}
 
