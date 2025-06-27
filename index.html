@@ -220,14 +220,33 @@
             title="Mapa CPC Paraná"></iframe>
         </div>
         <div class="trasporte-scrollspy">
-
-          <div id="list-example" class="list-group">
-            <a class="list-group-item list-group-item-action" href="#list-item-1">Auto particular</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-2">Ómnibus interurbanos</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-3">Colectivos urbanos</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-4">Taxis, remises y apps</a>
-          </div>
-          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+          <nav id="trasporte-md" class="navbar navbar-light flex-column align-items-stretch p-3 d-none d-md-flex">
+            <a class="navbar-brand" href="#">CPC</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link" href="#list-item-1">Auto particular</a>
+              <a class="nav-link" href="#list-item-2">Ómnibus interurbanos</a>
+              <a class="nav-link" href="#list-item-3">Colectivos urbanos</a>
+              <a class="nav-link" href="#list-item-4">Taxis, remises y apps</a>
+            </nav>
+          </nav>
+          <nav id="trasporte-sm" class="px-3 d-flex d-md-none">
+            <a class="navbar-brand" href="#">CPC</a>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#list-item-1">Auto particular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#list-item-2">Ómnibus interurbanos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#list-item-3">Colectivos urbanos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#list-item-4">Taxis, remises y apps</a>
+              </li>
+            </ul>
+          </nav>
+          <div data-bs-spy="scroll" data-bs-offset="0" class="scrollspy-content" tabindex="0">
             <h4 id="list-item-1">
               Auto particular
             </h4>

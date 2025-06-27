@@ -219,7 +219,6 @@ function isLogoVisible() {
   const logo = document.querySelector('.logo-responsive');
   if (!logo) return false;
   const rect = logo.getBoundingClientRect();
-  console.log('Logo rect:', rect);
   return (
     rect.top < window.innerHeight &&
     rect.bottom > 0 &&
@@ -233,11 +232,9 @@ function toggleHeaderLogo() {
   if (!headerLogo) return;
   if (isLogoVisible()) {
     // El logo principal está visible, ocultar el logo fijo
-    console.log('Logo principal visible, ocultando logo fijo');
     headerLogo.style.visibility = 'hidden';
   } else {
     // El logo principal NO está visible, mostrar el logo fijo
-    console.log('Logo principal NO visible, mostrando logo fijo');
     headerLogo.style.visibility = 'visible';
   }
 }
@@ -300,4 +297,22 @@ if (snapContainer) {
   window.addEventListener('scroll', handleAccordionOnScroll);
   window.addEventListener('resize', handleAccordionOnScroll);
   window.addEventListener('DOMContentLoaded', handleAccordionOnScroll);
+
+
+  function updateScrollspyTarget() {
+  const scrollspy = document.querySelector('[data-bs-spy="scroll"]');
+  console.log(window.innerWidth)
+  if (window.innerWidth >= 768) {
+    scrollspy.setAttribute('data-bs-target', '#trasporte-md');
+  } else {
+    scrollspy.setAttribute('data-bs-target', '#trasporte-sm');
+  }
+  // Reinicializa el scrollspy
+  bootstrap.ScrollSpy.getOrCreateInstance(scrollspy).refresh();
+}
+
+  document.addEventListener('scroll', updateScrollspyTarget);
+  document.addEventListener('resize', updateScrollspyTarget);
+  document.addEventListener('DOMContentLoaded', updateScrollspyTarget);
+
 })();
