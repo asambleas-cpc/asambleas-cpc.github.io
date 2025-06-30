@@ -23,6 +23,13 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css?v=1.1.1" />
+  <style>
+.scrollspy-content {
+  position: relative;
+  height: 400px; /* Ajusta según tu diseño */
+  overflow: auto;
+}
+</style>
 </head>
 
 <body>
@@ -220,31 +227,23 @@
             title="Mapa CPC Paraná"></iframe>
         </div>
         <div class="trasporte-scrollspy">
-          <nav id="trasporte-md" class="navbar navbar-light flex-column align-items-stretch p-3 d-none d-md-flex">
-            <nav class="nav nav-pills flex-column">
-              <a class="nav-link" href="#list-item-1">Auto particular</a>
-              <a class="nav-link" href="#list-item-2">Ómnibus interurbanos</a>
-              <a class="nav-link" href="#list-item-3">Colectivos urbanos</a>
-              <a class="nav-link" href="#list-item-4">Taxis, remises y apps</a>
-            </nav>
-          </nav>
-          <nav id="trasporte-sm" class="px-3 d-flex d-md-none">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
+          <nav id="trasporte-container">
+           <ul id="trasporte-menu" class="nav nav-pills flex-column">
+              <li>
                 <a class="nav-link" href="#list-item-1">Auto particular</a>
               </li>
-              <li class="nav-item">
+              <li>
                 <a class="nav-link" href="#list-item-2">Ómnibus interurbanos</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#list-item-3">Colectivos urbanos</a>
+              <li>
+                <a class="nav-link" href="#list-item-3">Colectivos urbanos</a>    
               </li>
-              <li class="nav-item">
+              <li>
                 <a class="nav-link" href="#list-item-4">Taxis, remises y apps</a>
               </li>
             </ul>
           </nav>
-          <div data-bs-spy="scroll" data-bs-offset="0" class="scrollspy-content" tabindex="0">
+          <div id="transporte-data" data-bs-spy="scroll" data-bs-offset="0" class="scrollspy-content" tabindex="0" data-bs-target="#trasporte-container">
             <h4 id="list-item-1">
               Auto particular
             </h4>
@@ -531,7 +530,7 @@
         <p>Se ruega que las personas mayores, con movilidad reducida y padres con hijos pequeños utilicen el auditorio
           auxiliar, debido a que es accesible sin necesidad de subir escaleras.
           Esto ayuda a que no se pierda tiempo valioso si es necesario evacuar el local.
-        </p>
+               </p>
         <h3>Recomendaciones al regresar</h3>
         <p>Los alrededores son muy concurridos los fines de semana. Tengamos especial cuidado al cruzar las calles.</p>
 

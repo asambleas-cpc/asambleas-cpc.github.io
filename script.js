@@ -300,19 +300,36 @@ if (snapContainer) {
 
 
   function updateScrollspyTarget() {
-  const scrollspy = document.querySelector('[data-bs-spy="scroll"]');
-  console.log(window.innerWidth)
-  if (window.innerWidth >= 768) {
-    scrollspy.setAttribute('data-bs-target', '#trasporte-md');
-  } else {
-    scrollspy.setAttribute('data-bs-target', '#trasporte-sm');
-  }
-  // Reinicializa el scrollspy
-  bootstrap.ScrollSpy.getOrCreateInstance(scrollspy).refresh();
-}
+    const scrollspy = document.getElementById('transporte-data');
+    let classContainer = '';
+    let classList = '';
+    target = '#trasporte-container';
 
-  document.addEventListener('scroll', updateScrollspyTarget);
-  document.addEventListener('resize', updateScrollspyTarget);
+    if (!scrollspy) return;
+    if (window.innerWidth >= 768) {
+      classContainer = 'navbar navbar-light flex-column align-items-stretch p-3 d-none d-md-flex';
+      classList = 'nav nav-pills flex-column';
+    } else {
+      classContainer = 'px-3 d-flex d-md-none';
+      classList = 'nav nav-pills';
+    }
+    console.log('Updating scrollspy target:', classContainer, classList);
+    document.getElementById('trasporte-container').className = classContainer;
+    document.getElementById('trasporte-menu').className = classList;
+
+    // Destruir instancia previa si existe
+    scrollspy.setAttribute('data-bs-target', target);
+    if (scrollspy._scrollspy) {
+      scrollspy._scrollspy.dispose();
+    }
+    // Crear nueva instancia
+    scrollspy._scrollspy = new bootstrap.ScrollSpy(scrollspy, {
+      target: target,
+      offset: 0
+    });
+  }
+
+  window.addEventListener('resize', updateScrollspyTarget);
   document.addEventListener('DOMContentLoaded', updateScrollspyTarget);
 
 })();
