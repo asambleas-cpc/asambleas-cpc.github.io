@@ -1,1 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet SVG Overlay with Rotation</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="leaflet-rotate.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        /* Transition for SVG layers */
+        #map svg g {
+            transition: filter 0.5s ease-in-out; /* Adjust duration and timing function as needed */
+        }
+        /* Transition for basemap */
+        .leaflet-tile-pane {
+            transition: filter 0.5s ease-in-out; /* Adjust duration and timing function as needed */
+        }
+        .basemap-blurred {
+            filter: blur(3px); /* Adjust blur amount as needed */
+        }
+        #floor-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000; /* Ensure controls are above the map */
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        #floor-controls button {
+            display: block;
+            width: 100px;
+            padding: 8px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f8f8f8;
+            cursor: pointer;
+        }
+        #floor-controls button.active {
+            background-color: #e0e0e0;
+            font-weight: bold;
+        }
+        #feature-controls {
+            position: absolute;
+            top: 150px; /* Adjust position below floor controls */
+            right: 10px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        #feature-controls label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        #feature-controls input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
 
+    <div id="map"></div>
+
+    <div id="floor-controls">
+        <button id="btnPlantaAlta">Planta Alta</button>
+        <button id="btnPlantaBaja">Planta Baja</button>
+    </div>
+
+    <div id="feature-controls">
+        <h3>Features</h3>
+        <label><input type="checkbox" id="chkSalidasEmergencia" checked> Salidas de emergencia</label>
+        <label><input type="checkbox" id="chkGuardaAlimentos" checked> Guarda de alimentos</label>
+        <label><input type="checkbox" id="chkAccesoAuditorios" checked> Acceso a auditorios</label>
+        <label><input type="checkbox" id="chkIconos" checked> Iconos</label>
+    </div>
+
+    
+
+    <script>
+        // 1. Define the corner coordinates
+        const bounds = L.latLngBounds([
+            [-31.72236, -60.52612], // Southwest corner
+            [-31.72096, -60.52442]  // Northeast corner
+        ]);
+
+        // 2. Initialize the map
+        const map = L.map('map', {
+            maxZoom: 24,
+            rotate: true // Enable rotation
+        }).setView(bounds.getCenter(), 19);
+
+        // Set the map rotation (bearing) in degrees. Adjust the value as needed.
+        map.setBearing(-9.8);
+
+        // 3. Add the OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+            maxZoom: 24,
+            maxNativeZoom: 19 // Add this line to prevent 400 errors beyond native zoom
+        }).addTo(map);
+
+        // 4. Define the SVG image URL
+        const svgUrl = 'cpc.svg';
+
+        // 5. Fetch the SVG content, then create the overlay
+        fetch(svgUrl)
+            .then(response => response.text())
+            .then(svgText => {
+                const parser = new DOMParser();
+                const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
+                const svgElement = svgDoc.documentElement;
+
+                // 6. Create the SVG overlay with the actual SVG element
+                const svgOverlay = L.svgOverlay(svgElement, bounds, {
+                    opacity: 1,
+                    interactive: true
+                }).addTo(map);
+
+                // Get references to the SVG layers
+                const layPlantaAlta = svgElement.querySelector('#layPlantaAlta');
+                const layPlantaBaja = svgElement.querySelector('#layPlantaBaja');
+                console.log('SVG Layer - Planta Alta:', layPlantaAlta);
+                console.log('SVG Layer - Planta Baja:', layPlantaBaja);
+
+                // Get references to the control buttons
+                const btnPlantaAlta = document.getElementById('btnPlantaAlta');
+                const btnPlantaBaja = document.getElementById('btnPlantaBaja');
+                console.log('Button - Planta Alta:', btnPlantaAlta);
+                console.log('Button - Planta Baja:', btnPlantaBaja);
+
+                // Get references to feature checkboxes
+                const chkSalidasEmergencia = document.getElementById('chkSalidasEmergencia');
+                const chkGuardaAlimentos = document.getElementById('chkGuardaAlimentos');
+                const chkAccesoAuditorios = document.getElementById('chkAccesoAuditorios');
+                const chkIconos = document.getElementById('chkIconos');
+
+                // Get references to the feature SVG groups (assuming they are direct children of floor layers)
+                const features = {
+                    'Salidas de emergencia': { element: null, id: 'layRutasEscape' },
+                    'Guarda de alimentos': { element: null, id: 'layCirculacionGuardaAlimentos' },
+                    'Acceso a auditorios': { element: null, id: 'layAccesoAuditorios' },
+                    'Iconos': { element: null, id: 'layIconos' }
+                };
+
+                // Function to update feature visibility based on active floor
+                function updateFeatureVisibility(activeFloorName) {
+                    const floorSuffix = activeFloorName === 'PlantaAlta' ? 'PA' : 'PB';
+                    const inactiveFloorSuffix = activeFloorName === 'PlantaAlta' ? 'PB' : 'PA';
+
+                    for (const featureKey in features) {
+                        const baseFeatureId = features[featureKey].id;
+                        const checkbox = document.getElementById(`chk${baseFeatureId.replace(/_/g, '')}`); // Get checkbox by its ID
+
+                        if (checkbox) {
+                            // Handle active floor's features
+                            const activeFeatureId = `${baseFeatureId}${floorSuffix}`;
+                            const activeFeatureElement = svgElement.querySelector(`#${activeFeatureId}`);
+                            if (activeFeatureElement) {
+                                activeFeatureElement.style.display = checkbox.checked ? 'block' : 'none';
+                            }
+
+                            // Handle inactive floor's features (always hide)
+                            const inactiveFeatureId = `${baseFeatureId}${inactiveFloorSuffix}`;
+                            const inactiveFeatureElement = svgElement.querySelector(`#${inactiveFeatureId}`);
+                            if (inactiveFeatureElement) {
+                                inactiveFeatureElement.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+
+                // Function to apply blur filter
+                function applyBlur(element) {
+                    if (element) {
+                        element.style.filter = 'url(#blur-filter)';
+                    }
+                }
+
+                // Function to remove blur filter
+                function removeBlur(element) {
+                    if (element) {
+                        element.style.filter = '';
+                    }
+                }
+
+                // Function to show a floor and blur the other
+                function showFloor(floorName) {
+                    const tilePane = map.getPane('tilePane');
+                    if (layPlantaAlta && layPlantaBaja && tilePane) {
+                        if (floorName === 'PlantaAlta') {
+                            layPlantaAlta.style.display = 'block';
+                            removeBlur(layPlantaAlta); // Ensure Planta Alta is clear
+                            layPlantaBaja.style.display = 'block'; // Keep Planta Baja visible for blur
+                            applyBlur(layPlantaBaja); // Apply blur to Planta Baja
+                            tilePane.classList.add('basemap-blurred'); // Blur the basemap
+                            btnPlantaAlta.classList.add('active');
+                            btnPlantaBaja.classList.remove('active');
+                        } else if (floorName === 'PlantaBaja') {
+                            layPlantaAlta.style.display = 'none'; // Hide Planta Alta
+                            layPlantaBaja.style.display = 'block';
+                            removeBlur(layPlantaBaja); // Ensure Planta Baja is clear
+                            removeBlur(layPlantaAlta); // Also ensure Planta Alta is not blurred if it was, though it's hidden
+                            tilePane.classList.remove('basemap-blurred'); // Unblur the basemap
+                            btnPlantaAlta.classList.remove('active');
+                            btnPlantaBaja.classList.add('active');
+                        }
+                        updateFeatureVisibility(floorName); // Pass active floor to update feature visibility
+                    }
+                }
+
+                // Initial state: Show Planta Alta
+                let currentActiveFloor = 'PlantaAlta';
+                showFloor(currentActiveFloor);
+
+                // Add event listeners to buttons
+                btnPlantaAlta.addEventListener('click', () => {
+                    currentActiveFloor = 'PlantaAlta';
+                    showFloor(currentActiveFloor);
+                });
+                btnPlantaBaja.addEventListener('click', () => {
+                    currentActiveFloor = 'PlantaBaja';
+                    showFloor(currentActiveFloor);
+                });
+
+                // Add event listeners to feature checkboxes
+                chkSalidasEmergencia.addEventListener('change', () => updateFeatureVisibility(currentActiveFloor));
+                chkGuardaAlimentos.addEventListener('change', () => updateFeatureVisibility(currentActiveFloor));
+                chkAccesoAuditorios.addEventListener('change', () => updateFeatureVisibility(currentActiveFloor));
+                chkIconos.addEventListener('change', () => updateFeatureVisibility(currentActiveFloor));
+
+                // --- Interactivity Example (from previous code) ---
+                // Now you can safely add event listeners to elements inside the SVG.
+                // Example: Find an element with id="some-room" and make it clickable.
+                const roomElement = svgElement.querySelector('#some-room');
+                if (roomElement) {
+                    roomElement.addEventListener('click', function(event) {
+                        // Stop the click from propagating to the map
+                        event.stopPropagation(); 
+                        
+                        // Change color on click
+                        this.style.fill = this.style.fill === 'red' ? '' : 'red';
+                        
+                        // Open a popup
+                        L.popup()
+                            .setLatLng(map.getCenter()) // Or get latlng from a map click event
+                            .setContent('You clicked on the room!')
+                            .openOn(map);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error loading or parsing SVG:', error);
+                alert('Could not load the SVG file. Please check the file path and ensure it is a valid SVG.');
+            });
+
+    </script>
+
+</body>
+</html>
