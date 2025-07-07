@@ -27,39 +27,37 @@
         .basemap-blurred {
             filter: blur(3px); /* Adjust blur amount as needed */
         }
-        #floor-controls {
+        #controls-container {
             position: absolute;
             top: 10px;
-            right: 10px;
-            z-index: 1000; /* Ensure controls are above the map */
-            background: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        }
-        #floor-controls button {
-            display: block;
-            width: 100px;
-            padding: 8px;
-            margin-bottom: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            background-color: #f8f8f8;
-            cursor: pointer;
-        }
-        #floor-controls button.active {
-            background-color: #e0e0e0;
-            font-weight: bold;
-        }
-        #feature-controls {
-            position: absolute;
-            top: 150px; /* Adjust position below floor controls */
             right: 10px;
             z-index: 1000;
             background: white;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        #floor-controls {
+            margin-bottom: 10px;
+        }
+        #floor-controls button {
+            display: inline-block;
+            width: 100px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f8f8f8;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        #floor-controls button.active {
+            background-color: #e0e0e0;
+            font-weight: bold;
+        }
+        #feature-controls h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
         }
         #feature-controls label {
             display: block;
@@ -68,23 +66,33 @@
         #feature-controls input[type="checkbox"] {
             margin-right: 5px;
         }
+        /* Style for highlighted SVG elements */
+        .highlight {
+            fill: #ff0000 !important; /* Bright red fill, !important to override inline styles if any */
+            stroke: #ffff00; /* Bright yellow stroke */
+            stroke-width: 5px;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body>
 
     <div id="map"></div>
 
-    <div id="floor-controls">
-        <button id="btnPlantaAlta">Planta Alta</button>
-        <button id="btnPlantaBaja">Planta Baja</button>
-    </div>
-
-    <div id="feature-controls" style="display:none">
-        <h3>Features</h3>
-        <label><input type="checkbox" id="chkSalidasEmergencia" checked> Salidas de emergencia</label>
-        <label><input type="checkbox" id="chkGuardaAlimentos" checked> Guarda de alimentos</label>
-        <label><input type="checkbox" id="chkAccesoAuditorios" checked> Acceso a auditorios</label>
-        <label><input type="checkbox" id="chkIconos" checked> Iconos</label>
+    <div id="controls-container">
+        <div id="floor-controls">
+            <button id="btnPlantaBaja">Planta Baja</button><button id="btnPlantaAlta">Planta Alta</button>
+            
+        </div>
+        <div id="feature-controls">
+            <select id="layer-selector" style="width: 100%; padding: 8px; border-radius: 3px; border: 1px solid #ccc;">
+                <option value="Iconos">Instalaciones y departamentos</option>
+                <option value="AccesoAuditorios">Acceso a auditorios</option>
+                <option value="CirculacionGuardaAlimentos">Guardado de alimentos</option>
+                <option value="RutasEscape">Salidas de emergencia</option>
+            </select>
+        </div>
     </div>
 
     
@@ -141,44 +149,37 @@
                 console.log('Button - Planta Alta:', btnPlantaAlta);
                 console.log('Button - Planta Baja:', btnPlantaBaja);
 
-                // Get references to feature checkboxes
-                const chkSalidasEmergencia = document.getElementById('chkSalidasEmergencia');
-                const chkGuardaAlimentos = document.getElementById('chkGuardaAlimentos');
-                const chkAccesoAuditorios = document.getElementById('chkAccesoAuditorios');
-                const chkIconos = document.getElementById('chkIconos');
+                // Get reference to the layer selector
+                const layerSelector = document.getElementById('layer-selector');
 
                 // Get references to the feature SVG groups (assuming they are direct children of floor layers)
                 const features = {
-                    'Salidas de emergencia': { element: null, id: 'layRutasEscape' },
-                    'Guarda de alimentos': { element: null, id: 'layCirculacionGuardaAlimentos' },
-                    'Acceso a auditorios': { element: null, id: 'layAccesoAuditorios' },
-                    'Iconos': { element: null, id: 'layIconos' }
+                    'Iconos': { element: null, id: 'layIconos' },
+                    'AccesoAuditorios': { element: null, id: 'layAccesoAuditorios' },
+                    'CirculacionGuardaAlimentos': { element: null, id: 'layCirculacionGuardaAlimentos' },
+                    'RutasEscape': { element: null, id: 'layRutasEscape' }
                 };
 
-                // Function to update feature visibility based on active floor
-                function updateFeatureVisibility(activeFloorName) {
+                // Function to update feature visibility based on active floor and selected layer
+                function updateFeatureVisibility(activeFloorName, selectedLayer) {
                     const floorSuffix = activeFloorName === 'PlantaAlta' ? 'PA' : 'PB';
-                    const inactiveFloorSuffix = activeFloorName === 'PlantaAlta' ? 'PB' : 'PA';
 
+                    // Hide all feature layers first
                     for (const featureKey in features) {
                         const baseFeatureId = features[featureKey].id;
-                        const checkbox = document.getElementById(`chk${baseFeatureId.replace(/_/g, '')}`); // Get checkbox by its ID
+                        const featureIdPA = `${baseFeatureId}PA`;
+                        const featureIdPB = `${baseFeatureId}PB`;
+                        const featureElementPA = svgElement.querySelector(`#${featureIdPA}`);
+                        const featureElementPB = svgElement.querySelector(`#${featureIdPB}`);
+                        if (featureElementPA) featureElementPA.style.display = 'none';
+                        if (featureElementPB) featureElementPB.style.display = 'none';
+                    }
 
-                        if (checkbox) {
-                            // Handle active floor's features
-                            const activeFeatureId = `${baseFeatureId}${floorSuffix}`;
-                            const activeFeatureElement = svgElement.querySelector(`#${activeFeatureId}`);
-                            if (activeFeatureElement) {
-                                activeFeatureElement.style.display = checkbox.checked ? 'block' : 'none';
-                            }
-
-                            // Handle inactive floor's features (always hide)
-                            const inactiveFeatureId = `${baseFeatureId}${inactiveFloorSuffix}`;
-                            const inactiveFeatureElement = svgElement.querySelector(`#${inactiveFeatureId}`);
-                            if (inactiveFeatureElement) {
-                                inactiveFeatureElement.style.display = 'none';
-                            }
-                        }
+                    // Show the selected layer
+                    const selectedFeatureId = `${features[selectedLayer].id}${floorSuffix}`;
+                    const selectedFeatureElement = svgElement.querySelector(`#${selectedFeatureId}`);
+                    if (selectedFeatureElement) {
+                        selectedFeatureElement.style.display = 'block';
                     }
                 }
 
@@ -217,12 +218,12 @@
                             btnPlantaAlta.classList.remove('active');
                             btnPlantaBaja.classList.add('active');
                         }
-                        updateFeatureVisibility(floorName); // Pass active floor to update feature visibility
+                        updateFeatureVisibility(floorName, layerSelector.value);
                     }
                 }
 
                 // Initial state: Show Planta Alta
-                let currentActiveFloor = 'PlantaAlta';
+                let currentActiveFloor = 'PlantaBaja';
                 showFloor(currentActiveFloor);
 
                 // Add event listeners to buttons
@@ -235,11 +236,64 @@
                     showFloor(currentActiveFloor);
                 });
 
-                // Add event listeners to feature checkboxes
-                chkSalidasEmergencia.addEventListener('change', () => updateFeatureVisibility(currentActiveFloor));
-                chkGuardaAlimentos.addEventListener('change', () => updateFeatureVisibility(currentActiveFloor));
-                chkAccesoAuditorios.addEventListener('change', () => updateFeatureVisibility(currentActiveFloor));
-                chkIconos.addEventListener('change', () => updateFeatureVisibility(currentActiveFloor));
+                // Add event listener to the layer selector
+                layerSelector.addEventListener('change', (event) => {
+                    mostrarMapa(currentActiveFloor, event.target.value);
+                });
+
+                // --- mostrarMapa function and helpers ---
+                let highlightedElement = null;
+
+                function clearHighlight() {
+                    if (highlightedElement) {
+                        highlightedElement.classList.remove('highlight');
+                        highlightedElement = null;
+                    }
+                }
+
+                function mostrarMapa(piso, capa, elemento) {
+                    // 1. Switch floor if necessary
+                    if (piso && piso !== currentActiveFloor) {
+                        showFloor(piso);
+                        currentActiveFloor = piso;
+                    }
+
+                    // 2. Control layer visibility
+                    if (capa) {
+                        const floorSuffix = currentActiveFloor === 'PlantaAlta' ? 'PA' : 'PB';
+                        const layerId = `lay${capa}${floorSuffix}`;
+                        const layerElement = svgElement.querySelector(`#${layerId}`);
+                        
+                        // Hide all layers first
+                        for (const featureKey in features) {
+                            const baseFeatureId = features[featureKey].id;
+                            const featureIdPA = `${baseFeatureId}PA`;
+                            const featureIdPB = `${baseFeatureId}PB`;
+                            const featureElementPA = svgElement.querySelector(`#${featureIdPA}`);
+                            const featureElementPB = svgElement.querySelector(`#${featureIdPB}`);
+                            if(featureElementPA) featureElementPA.style.display = 'none';
+                            if(featureElementPB) featureElementPB.style.display = 'none';
+                        }
+
+                        // Show the selected layer
+                        if (layerElement) {
+                            layerElement.style.display = 'block';
+                        }
+                    }
+
+                    // 3. Highlight a specific element
+                    clearHighlight();
+                    if (elemento) {
+                        const elementToHighlight = svgElement.querySelector(`#${elemento}`);
+                        if (elementToHighlight) {
+                            elementToHighlight.classList.add('highlight');
+                            highlightedElement = elementToHighlight;
+                        }
+                    }
+                }
+
+                // Example of how to use the function:
+                // mostrarMapa('PlantaAlta', 'RutasEscape', 'some_element_id_to_highlight');
 
                 // --- Interactivity Example (from previous code) ---
                 // Now you can safely add event listeners to elements inside the SVG.
