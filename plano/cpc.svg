@@ -15,9 +15,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layEdificioPA"
-   inkscape:cx="615.00613"
-   inkscape:cy="413.12714"
+   inkscape:current-layer="layEtiquetas"
+   inkscape:cx="866.20581"
+   inkscape:cy="713.47075"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -27,7 +27,7 @@
    inkscape:window-width="1920"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
-   inkscape:zoom="2.8284271"
+   inkscape:zoom="0.70710678"
    id="namedview1"
    bordercolor="#eeeeee"
    borderopacity="1"
@@ -3795,7 +3795,7 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layIconosPB"
    id="layIconosPB"
-   style="display:none">
+   style="display:inline">
       <g
    id="icoAccesoPeatonal"
    class="icoBox"
@@ -4278,26 +4278,32 @@ stroke-opacity: 1;}
    class="lblEtiqueta">Estacionamiento</text>
       <text
    id="lblPatio"
-   x="1311.5699"
-   y="325.01001"
-   class="lblEtiqueta"><tspan
+   x="1326.2965"
+   y="322.08026"
+   class="lblEtiqueta"
+   style="text-align:center;text-anchor:middle"><tspan
      id="tspan1806"
-     x="1311.5699"
-     y="325.01001">Patio</tspan><tspan
+     x="1310.3256"
+     y="322.08026"
+     style="text-align:center;text-anchor:middle">Patio</tspan><tspan
      id="tspan1807"
-     x="1311.5699"
-     y="338.03">exterior</tspan></text>
+     x="1310.3256"
+     y="335.10025"
+     style="text-align:center;text-anchor:middle">exterior</tspan></text>
       <text
    id="lblPatioCubierto"
-   x="1315.01"
-   y="485.60001"
-   class="lblEtiqueta"><tspan
+   x="1331.3011"
+   y="485.52386"
+   class="lblEtiqueta"
+   style="text-align:center;text-anchor:middle"><tspan
      id="tspan720"
-     x="1315.01"
-     y="485.60001">Galería</tspan><tspan
+     x="1313.9819"
+     y="485.52386"
+     style="text-align:center;text-anchor:middle">Galería</tspan><tspan
      id="tspan721"
-     x="1315.01"
-     y="498.63">cubierta</tspan></text>
+     x="1313.9819"
+     y="498.55386"
+     style="text-align:center;text-anchor:middle">cubierta</tspan></text>
       <text
    id="lblAccesoPeatonal"
    x="327.98999"
@@ -4369,12 +4375,12 @@ stroke-opacity: 1;}
      y="484.12">Ascensores</tspan></text>
       <text
    id="lblEscalerasPB"
-   x="618.73999"
-   y="389.73999"
+   x="567.07361"
+   y="391.84656"
    class="lblEtiqueta"><tspan
      id="tspan1703"
-     x="618.73999"
-     y="389.73999">Escaleras a planta alta</tspan></text>
+     x="567.07361"
+     y="391.84656">Escaleras a planta alta</tspan></text>
       <text
    id="lblSalidaCocina"
    x="1264.1801"
@@ -4518,7 +4524,7 @@ stroke-opacity: 1;}
    xml:space="preserve"
    style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
    id="text7-4"
-   transform="rotate(-180,1068.9482,737.87345)"><textPath
+   transform="rotate(180,1068.9482,737.87345)"><textPath
      xlink:href="#guardaIngresoPB"
      startOffset="100%"
      id="textPath8"
@@ -4539,7 +4545,7 @@ stroke-opacity: 1;}
      inkscape:groupmode="layer"
      inkscape:label="layPlantaAlta"
      id="layPlantaAlta"
-     style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+     style="clip-rule:evenodd;display:none;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
      transform="translate(2.5596824e-6)">
     <g
    inkscape:groupmode="layer"
@@ -4549,7 +4555,7 @@ stroke-opacity: 1;}
    id="atrioPA"
    d="M 578.37,322.17 445.77,454.51 607.69,611.87 V 351.49 Z"
    class="ediAtrio"
-   style="fill:#000000;fill-opacity:1;opacity:0.36103542" />
+   style="opacity:0.361035;fill:#000000;fill-opacity:1" />
       <path
    sodipodi:nodetypes="cccccccccccc"
    id="basePA"
@@ -4618,7 +4624,7 @@ stroke-opacity: 1;}
    class="ediSalas" />
       <g
    id="escaleraGeneralPA"
-   style="stroke:url(#linearGradient38);stroke-opacity:1">
+   style="stroke:url(#linearGradient38)">
         <path
    id="polygon24"
    d="m 496.99,420.79 88.73,-90.77 21.97,21.47 -88.73,90.77 z"
