@@ -15,9 +15,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layEdificioPB"
-   inkscape:cx="469.03346"
-   inkscape:cy="693.37051"
+   inkscape:current-layer="layAccesoAuditoriosPB"
+   inkscape:cx="699.51673"
+   inkscape:cy="649.57869"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -25,7 +25,7 @@
    inkscape:window-height="1009"
    inkscape:window-maximized="1"
    inkscape:window-width="1920"
-   inkscape:window-x="1272"
+   inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:zoom="1.3016129"
    id="namedview1"
@@ -3753,193 +3753,7 @@ stroke-opacity: 1;}
    class="secAreaRestringida" />
       </g>
     </g>
-    <g
-   inkscape:groupmode="layer"
-   inkscape:label="layEtiquetas"
-   id="layEtiquetas"
-   style="display:inline">
-      <text
-   id="lblEntradaPrincipal"
-   x="529.48071"
-   y="579.34003"
-   class="lblEtiqueta"
-   style="text-align:center;text-anchor:middle"><tspan
-     sodipodi:role="line"
-     id="tspan6"
-     x="510.13"
-     y="579.34003"><tspan
-       id="tspan716"
-       x="510.13"
-       y="579.34003"
-       style="text-align:center;text-anchor:middle">Entrada</tspan></tspan><tspan
-     sodipodi:role="line"
-     id="tspan8"
-     x="510.13"
-     y="592.36505">principal</tspan></text>
-      <text
-   id="lblBanosPBMujeres"
-   x="654.95789"
-   y="697.54999"
-   class="lblEtiqueta"
-   style="text-align:center;text-anchor:middle"><tspan
-     id="tspan722"
-     x="638.15002"
-     y="697.54999"
-     style="text-align:center;text-anchor:middle">Baños</tspan><tspan
-     id="tspan723"
-     x="638.15002"
-     y="710.58002"
-     style="text-align:center;text-anchor:middle">mujeres</tspan></text>
-      <text
-   id="lblBanosPBHombres"
-   x="757.30927"
-   y="657.39001"
-   class="lblEtiqueta"
-   style="text-align:center;text-anchor:middle"><tspan
-     id="tspan724"
-     x="738.83002"
-     y="657.39001"
-     style="text-align:center;text-anchor:middle">Baños</tspan><tspan
-     id="tspan725"
-     x="738.83002"
-     y="670.40997"
-     style="text-align:center;text-anchor:middle">hombres</tspan></text>
-      <text
-   id="lblInformes"
-   x="521.96997"
-   y="451.60001"
-   class="lblEtiqueta">Información</text>
-      <text
-   id="lblServicioVoluntario"
-   x="491.73001"
-   y="478.75"
-   class="lblEtiqueta">Servicio voluntario</text>
-      <text
-   id="lblAcomodadoresPB"
-   x="508.84"
-   y="505.98001"
-   class="lblEtiqueta">Acomodadores</text>
-      <text
-   id="lblEstacionamiento"
-   x="693.09998"
-   y="975.57001"
-   class="lblEtiqueta">Estacionamiento</text>
-      <text
-   id="lblPatio"
-   x="1311.5699"
-   y="325.01001"
-   class="lblEtiqueta"><tspan
-     id="tspan1806"
-     x="1311.5699"
-     y="325.01001">Patio</tspan><tspan
-     id="tspan1807"
-     x="1311.5699"
-     y="338.03">exterior</tspan></text>
-      <text
-   id="lblPatioCubierto"
-   x="1315.01"
-   y="485.60001"
-   class="lblEtiqueta"><tspan
-     id="tspan720"
-     x="1315.01"
-     y="485.60001">Galería</tspan><tspan
-     id="tspan721"
-     x="1315.01"
-     y="498.63">cubierta</tspan></text>
-      <text
-   id="lblAccesoPeatonal"
-   x="327.98999"
-   y="735.03998"
-   class="lblEtiqueta">Acceso peatonal</text>
-      <text
-   id="lblAccesoEstacionamiento"
-   x="311.73001"
-   y="908.22998"
-   class="lblEtiqueta">Acceso a estacionamiento</text>
-      <text
-   id="lblBautismoPB"
-   x="1298.25"
-   y="735.40997"
-   class="lblEtiqueta">Bautismo</text>
-      <text
-   id="lblFoyerPB"
-   x="634.94"
-   y="563.12"
-   class="lblEtiqueta">Vestíbulo</text>
-      <text
-   id="lblPrimerosAuxiliosPB"
-   x="739.84003"
-   y="444.13"
-   class="lblEtiqueta">Primeros auxilios</text>
-      <text
-   id="lblLactantes"
-   x="739.78998"
-   y="471.39999"
-   class="lblEtiqueta">Lactantes</text>
-      <text
-   id="lblGuardaAlimentosPB"
-   x="1061.3"
-   y="772.88"
-   class="lblEtiqueta">Guarda de alimentos</text>
-      <text
-   id="lblGuardaropasPB"
-   x="1061.74"
-   y="799.16998"
-   class="lblEtiqueta">Guardaropas</text>
-      <text
-   id="lblObjetosPerdidosPB"
-   x="1059.37"
-   y="826.60999"
-   class="lblEtiqueta">Objetos perdidos</text>
-      <text
-   id="lblSalidaEstacionamiento"
-   x="965.35999"
-   y="867.13"
-   class="lblEtiqueta"><tspan
-     id="tspan719"
-     x="965.35999"
-     y="867.13">Salida </tspan></text>
-      <text
-   id="lblSalidaPatio2"
-   x="1264.86"
-   y="581.5"
-   class="lblEtiqueta"><tspan
-     id="tspan719-8"
-     x="1264.86"
-     y="581.5">Salida </tspan></text>
-      <text
-   id="lblAscensoresPB"
-   x="656.60999"
-   y="484.12"
-   class="lblEtiqueta"><tspan
-     id="tspan725-4"
-     x="656.60999"
-     y="484.12">Ascensores</tspan></text>
-      <text
-   id="lblEscalerasPB"
-   x="618.73999"
-   y="389.73999"
-   class="lblEtiqueta"><tspan
-     id="tspan1703"
-     x="618.73999"
-     y="389.73999">Escaleras a planta alta</tspan></text>
-      <text
-   id="lblSalidaCocina"
-   x="1264.1801"
-   y="775.84998"
-   class="lblEtiqueta"><tspan
-     id="tspan719-5"
-     x="1264.1801"
-     y="775.84998">Salida </tspan></text>
-      <text
-   id="lblSalidaPatio"
-   x="769.35999"
-   y="392.42999"
-   class="lblEtiqueta"><tspan
-     id="tspan1808"
-     x="769.35999"
-     y="392.42999">Salida </tspan></text>
-    </g>
+    
     <g
    inkscape:groupmode="layer"
    inkscape:label="layIconosPB"
@@ -4353,12 +4167,199 @@ stroke-opacity: 1;}
    d="m -81.4,-202.84 q -21.32,0 -35.75,-14.43 -14.43,-14.43 -14.43,-35.76 v -28.85 q 0,-53.95 55.2,-87.82 55.2,-33.87 145.53,-33.87 16.31,0 31.37,0.62 15.05,0.63 28.85,3.14 -17.56,26.35 -26.35,55.2 -8.78,28.86 -8.78,60.22 v 81.55 z m 301.1,0 q -21.33,0 -35.76,-14.43 -14.42,-14.43 -14.42,-35.76 v -31.36 q 0,-40.15 21.95,-73.4 21.96,-33.24 62.1,-58.33 40.15,-25.09 95.98,-37.64 55.82,-12.54 121.06,-12.54 66.5,0 122.32,12.54 55.83,12.55 95.97,37.64 40.15,25.1 61.48,58.34 21.32,33.24 21.32,73.39 v 31.36 q 0,21.33 -14.42,35.76 -14.43,14.43 -35.76,14.43 z m 627.28,0 v -81.55 q 0,-32.62 -8.16,-61.47 -8.15,-28.86 -24.46,-53.95 13.8,-2.5 28.23,-3.14 14.42,-0.62 29.48,-0.62 90.33,0 145.53,33.24 55.2,33.25 55.2,88.45 v 28.85 q 0,21.33 -14.43,35.76 -14.43,14.43 -35.75,14.43 z M 276.15,-303.21 h 390.17 q -12.54,-25.09 -69.63,-43.9 -57.08,-18.83 -126.08,-18.83 -69,0 -126.08,18.82 -57.09,18.82 -68.38,43.91 z m -207,-150.55 q -41.4,0 -70.88,-29.48 -29.48,-29.48 -29.48,-70.88 0,-42.66 29.48,-71.51 29.48,-28.85 70.88,-28.85 42.66,0 71.51,28.85 28.86,28.85 28.86,71.51 0,41.4 -28.86,70.88 -28.85,29.48 -71.5,29.48 z m 802.92,0 q -41.4,0 -70.88,-29.48 -29.49,-29.48 -29.49,-70.88 0,-42.66 29.49,-71.51 29.48,-28.85 70.88,-28.85 42.65,0 71.5,28.85 28.86,28.85 28.86,71.51 0,41.4 -28.85,70.88 -28.86,29.48 -71.51,29.48 z M 470.6,-503.94 q -62.73,0 -106.64,-43.9 -43.9,-43.92 -43.9,-106.64 0,-63.99 43.9,-107.27 43.91,-43.28 106.64,-43.28 63.98,0 107.26,43.28 43.29,43.28 43.29,107.27 0,62.72 -43.29,106.63 -43.28,43.91 -107.26,43.91 z m 0,-100.36 q 21.33,0 35.75,-14.43 14.43,-14.43 14.43,-35.75 0,-21.33 -14.43,-35.76 -14.42,-14.43 -35.75,-14.43 -21.33,0 -35.75,14.43 -14.43,14.43 -14.43,35.76 0,21.32 14.43,35.75 14.42,14.43 35.75,14.43 z m 1.25,301.1 z m -1.25,-351.28 z"
    class="icoIcon" />
       </g>
-    </g>
+    <g
+   inkscape:groupmode="layer"
+   inkscape:label="layEtiquetas"
+   id="layEtiquetas"
+   style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd;display:inline"
+   transform="translate(2.5596824e-6)">
+      <text
+   id="lblEntradaPrincipal"
+   x="529.48071"
+   y="579.34003"
+   class="lblEtiqueta"
+   style="text-align:center;text-anchor:middle"><tspan
+     sodipodi:role="line"
+     id="tspan6"
+     x="510.13"
+     y="579.34003"><tspan
+       id="tspan716"
+       x="510.13"
+       y="579.34003"
+       style="text-align:center;text-anchor:middle">Entrada</tspan></tspan><tspan
+     sodipodi:role="line"
+     id="tspan8"
+     x="510.13"
+     y="592.36505">principal</tspan></text>
+      <text
+   id="lblBanosPBMujeres"
+   x="654.95789"
+   y="697.54999"
+   class="lblEtiqueta"
+   style="text-align:center;text-anchor:middle"><tspan
+     id="tspan722"
+     x="638.15002"
+     y="697.54999"
+     style="text-align:center;text-anchor:middle">Baños</tspan><tspan
+     id="tspan723"
+     x="638.15002"
+     y="710.58002"
+     style="text-align:center;text-anchor:middle">mujeres</tspan></text>
+      <text
+   id="lblBanosPBHombres"
+   x="757.30927"
+   y="657.39001"
+   class="lblEtiqueta"
+   style="text-align:center;text-anchor:middle"><tspan
+     id="tspan724"
+     x="738.83002"
+     y="657.39001"
+     style="text-align:center;text-anchor:middle">Baños</tspan><tspan
+     id="tspan725"
+     x="738.83002"
+     y="670.40997"
+     style="text-align:center;text-anchor:middle">hombres</tspan></text>
+      <text
+   id="lblInformes"
+   x="521.96997"
+   y="451.60001"
+   class="lblEtiqueta">Información</text>
+      <text
+   id="lblServicioVoluntario"
+   x="491.73001"
+   y="478.75"
+   class="lblEtiqueta">Servicio voluntario</text>
+      <text
+   id="lblAcomodadoresPB"
+   x="508.84"
+   y="505.98001"
+   class="lblEtiqueta">Acomodadores</text>
+      <text
+   id="lblEstacionamiento"
+   x="693.09998"
+   y="975.57001"
+   class="lblEtiqueta">Estacionamiento</text>
+      <text
+   id="lblPatio"
+   x="1311.5699"
+   y="325.01001"
+   class="lblEtiqueta"><tspan
+     id="tspan1806"
+     x="1311.5699"
+     y="325.01001">Patio</tspan><tspan
+     id="tspan1807"
+     x="1311.5699"
+     y="338.03">exterior</tspan></text>
+      <text
+   id="lblPatioCubierto"
+   x="1315.01"
+   y="485.60001"
+   class="lblEtiqueta"><tspan
+     id="tspan720"
+     x="1315.01"
+     y="485.60001">Galería</tspan><tspan
+     id="tspan721"
+     x="1315.01"
+     y="498.63">cubierta</tspan></text>
+      <text
+   id="lblAccesoPeatonal"
+   x="327.98999"
+   y="735.03998"
+   class="lblEtiqueta">Acceso peatonal</text>
+      <text
+   id="lblAccesoEstacionamiento"
+   x="311.73001"
+   y="908.22998"
+   class="lblEtiqueta">Acceso a estacionamiento</text>
+      <text
+   id="lblBautismoPB"
+   x="1298.25"
+   y="735.40997"
+   class="lblEtiqueta">Bautismo</text>
+      <text
+   id="lblFoyerPB"
+   x="634.94"
+   y="563.12"
+   class="lblEtiqueta">Vestíbulo</text>
+      <text
+   id="lblPrimerosAuxiliosPB"
+   x="739.84003"
+   y="444.13"
+   class="lblEtiqueta">Primeros auxilios</text>
+      <text
+   id="lblLactantes"
+   x="739.78998"
+   y="471.39999"
+   class="lblEtiqueta">Lactantes</text>
+      <text
+   id="lblGuardaAlimentosPB"
+   x="1061.3"
+   y="772.88"
+   class="lblEtiqueta">Guarda de alimentos</text>
+      <text
+   id="lblGuardaropasPB"
+   x="1061.74"
+   y="799.16998"
+   class="lblEtiqueta">Guardaropas</text>
+      <text
+   id="lblObjetosPerdidosPB"
+   x="1059.37"
+   y="826.60999"
+   class="lblEtiqueta">Objetos perdidos</text>
+      <text
+   id="lblSalidaEstacionamiento"
+   x="965.35999"
+   y="867.13"
+   class="lblEtiqueta"><tspan
+     id="tspan719"
+     x="965.35999"
+     y="867.13">Salida </tspan></text>
+      <text
+   id="lblSalidaPatio2"
+   x="1264.86"
+   y="581.5"
+   class="lblEtiqueta"><tspan
+     id="tspan719-8"
+     x="1264.86"
+     y="581.5">Salida </tspan></text>
+      <text
+   id="lblAscensoresPB"
+   x="656.60999"
+   y="484.12"
+   class="lblEtiqueta"><tspan
+     id="tspan725-4"
+     x="656.60999"
+     y="484.12">Ascensores</tspan></text>
+      <text
+   id="lblEscalerasPB"
+   x="618.73999"
+   y="389.73999"
+   class="lblEtiqueta"><tspan
+     id="tspan1703"
+     x="618.73999"
+     y="389.73999">Escaleras a planta alta</tspan></text>
+      <text
+   id="lblSalidaCocina"
+   x="1264.1801"
+   y="775.84998"
+   class="lblEtiqueta"><tspan
+     id="tspan719-5"
+     x="1264.1801"
+     y="775.84998">Salida </tspan></text>
+      <text
+   id="lblSalidaPatio"
+   x="769.35999"
+   y="392.42999"
+   class="lblEtiqueta"><tspan
+     id="tspan1808"
+     x="769.35999"
+     y="392.42999">Salida </tspan></text>
+    </g></g>
     <g
    inkscape:groupmode="layer"
    inkscape:label="layAccesoAuditoriosPB"
    id="layAccesoAuditoriosPB"
-   style="display:none">
+   style="display:inline">
       <path
    id="accesoAuxiliarPB"
    d="m 491.06,598.73 c 46.26,-46.13 68.63,-66.36 117.35,-62.48 58.59,4.67 82,42.4 167.89,42.92 55.64,0.34 172.12,-1.9 230.37,-3.26"
@@ -4462,7 +4463,7 @@ stroke-opacity: 1;}
      inkscape:groupmode="layer"
      inkscape:label="layPlantaAlta"
      id="layPlantaAlta"
-     style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+     style="clip-rule:evenodd;display:none;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
      transform="translate(2.5596824e-6)">
     <g
    inkscape:groupmode="layer"
@@ -11476,109 +11477,7 @@ stroke-opacity: 1;}
    class="secAreaRestringida" />
       </g>
     </g>
-    <g
-   inkscape:groupmode="layer"
-   inkscape:label="layEtiquetasPA"
-   id="layEtiquetasPA"
-   transform="translate(0.16,2.57)">
-      <text
-   id="lblBanosPAMujeres"
-   x="654.56787"
-   y="732.42999"
-   class="lblEtiqueta"
-   style="text-align:center;text-anchor:middle"><tspan
-     id="tspan54"
-     x="637.76001"
-     y="732.42999"
-     style="text-align:center;text-anchor:middle">Baños</tspan><tspan
-     id="tspan55"
-     x="637.76001"
-     y="745.46002"
-     style="text-align:center;text-anchor:middle">mujeres</tspan></text>
-      <text
-   id="lblBanosPAHombres"
-   x="727.65997"
-   y="827.08002"
-   class="lblEtiqueta">Baños hombres</text>
-      <text
-   id="lblFoyerPA"
-   x="773.08002"
-   y="403.31"
-   class="lblEtiqueta">Vestíbulo</text>
-      <text
-   id="lblSalidaFoyerPA"
-   x="1405.2"
-   y="385.07001"
-   class="lblEtiqueta"><tspan
-     id="tspan2"
-     x="1405.2"
-     y="385.07001">Salida de</tspan><tspan
-     id="tspan3"
-     x="1405.2"
-     y="398.10001">emergencia</tspan></text>
-      <text
-   id="lblPrimerosAuxiliosPA"
-   x="724.46002"
-   y="746.71997"
-   class="lblEtiqueta">Primeros auxilios</text>
-      <text
-   id="lblLimpieza"
-   x="618.60999"
-   y="596.5"
-   class="lblEtiqueta">Limpieza</text>
-      <text
-   id="lblAcomodadoresPA"
-   x="805.90997"
-   y="746.71997"
-   class="lblEtiqueta">Acomodadores</text>
-      <text
-   id="lblSalidaAuditorio"
-   x="1403.28"
-   y="772.71002"
-   class="lblEtiqueta"><tspan
-     id="tspan4"
-     x="1403.28"
-     y="772.71002">Salida de</tspan><tspan
-     id="tspan5"
-     x="1403.28"
-     y="785.72998">emergencia</tspan></text>
-      <text
-   id="lblGuardaAlimentosPA"
-   x="1062.47"
-   y="774.12"
-   class="lblEtiqueta"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000">Guarda de alimentos</text>
-      <text
-   id="lblGuardaropasPA"
-   x="1062.47"
-   y="800.40002"
-   class="lblEtiqueta"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000">Guardaropas</text>
-      <text
-   id="lblObjetosPerdidosPA"
-   x="1062.46"
-   y="827.84003"
-   class="lblEtiqueta"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000">Objetos perdidos</text>
-      <text
-   id="lblAscensoresPA"
-   x="656.45001"
-   y="481.54999"
-   class="lblEtiqueta"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000"><tspan
-     id="tspan725-4-5"
-     x="656.45001"
-     y="481.54999">Ascensores</tspan></text>
-      <text
-   id="lblEscalerasPA"
-   x="552.5"
-   y="413.29001"
-   class="lblEtiqueta"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000"><tspan
-     id="tspan1703-9"
-     x="552.5"
-     y="413.29001">Escaleras a planta baja</tspan></text>
-    </g>
+    
     <g
    inkscape:groupmode="layer"
    inkscape:label="layIconosPA"
@@ -11805,7 +11704,110 @@ stroke-opacity: 1;}
    d="m 190.96,-64.49 q -32.96,0 -56.43,-23.47 -23.47,-23.47 -23.47,-56.43 v -199.75 q 0,-82.9 58.43,-141.32 58.41,-58.44 141.31,-58.44 h 39.95 v -319.6 q 0,-32.96 23.47,-56.43 23.47,-23.47 56.43,-23.47 h 79.9 q 32.96,0 56.43,23.47 23.47,23.47 23.47,56.43 v 319.6 h 39.95 q 82.9,0 141.32,58.43 58.43,58.43 58.43,141.32 v 199.75 q 0,32.96 -23.47,56.43 -23.47,23.47 -56.43,23.47 z m 0,-79.9 h 79.9 v -119.85 q 0,-16.98 11.48,-28.46 11.49,-11.49 28.47,-11.49 16.98,0 28.46,11.49 11.49,11.48 11.49,28.46 v 119.85 h 79.9 v -119.85 q 0,-16.98 11.49,-28.46 11.48,-11.49 28.46,-11.49 16.98,0 28.46,11.49 11.49,11.48 11.49,28.46 v 119.85 h 79.9 v -119.85 q 0,-16.98 11.49,-28.46 11.48,-11.49 28.46,-11.49 16.98,0 28.47,11.49 11.48,11.48 11.48,28.46 v 119.85 h 79.9 v -199.75 q 0,-49.93 -34.96,-84.9 -34.95,-34.95 -84.89,-34.95 h -319.6 q -49.94,0 -84.9,34.96 -34.95,34.96 -34.95,84.9 z m 319.6,-399.5 v -319.6 h -79.9 v 319.6 z m 0,0 h -79.9 z"
    class="icoIcon" />
       </g>
-    </g>
+    <g
+   inkscape:groupmode="layer"
+   inkscape:label="layEtiquetasPA"
+   id="layEtiquetasPA"
+   transform="translate(0.16000276,2.5700036)"
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
+      <text
+   id="lblBanosPAMujeres"
+   x="654.56787"
+   y="732.42999"
+   class="lblEtiqueta"
+   style="text-align:center;text-anchor:middle"><tspan
+     id="tspan54"
+     x="637.76001"
+     y="732.42999"
+     style="text-align:center;text-anchor:middle">Baños</tspan><tspan
+     id="tspan55"
+     x="637.76001"
+     y="745.46002"
+     style="text-align:center;text-anchor:middle">mujeres</tspan></text>
+      <text
+   id="lblBanosPAHombres"
+   x="727.65997"
+   y="827.08002"
+   class="lblEtiqueta">Baños hombres</text>
+      <text
+   id="lblFoyerPA"
+   x="773.08002"
+   y="403.31"
+   class="lblEtiqueta">Vestíbulo</text>
+      <text
+   id="lblSalidaFoyerPA"
+   x="1405.2"
+   y="385.07001"
+   class="lblEtiqueta"><tspan
+     id="tspan2"
+     x="1405.2"
+     y="385.07001">Salida de</tspan><tspan
+     id="tspan3"
+     x="1405.2"
+     y="398.10001">emergencia</tspan></text>
+      <text
+   id="lblPrimerosAuxiliosPA"
+   x="724.46002"
+   y="746.71997"
+   class="lblEtiqueta">Primeros auxilios</text>
+      <text
+   id="lblLimpieza"
+   x="618.60999"
+   y="596.5"
+   class="lblEtiqueta">Limpieza</text>
+      <text
+   id="lblAcomodadoresPA"
+   x="805.90997"
+   y="746.71997"
+   class="lblEtiqueta">Acomodadores</text>
+      <text
+   id="lblSalidaAuditorio"
+   x="1403.28"
+   y="772.71002"
+   class="lblEtiqueta"><tspan
+     id="tspan4"
+     x="1403.28"
+     y="772.71002">Salida de</tspan><tspan
+     id="tspan5"
+     x="1403.28"
+     y="785.72998">emergencia</tspan></text>
+      <text
+   id="lblGuardaAlimentosPA"
+   x="1062.47"
+   y="774.12"
+   class="lblEtiqueta"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000">Guarda de alimentos</text>
+      <text
+   id="lblGuardaropasPA"
+   x="1062.47"
+   y="800.40002"
+   class="lblEtiqueta"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000">Guardaropas</text>
+      <text
+   id="lblObjetosPerdidosPA"
+   x="1062.46"
+   y="827.84003"
+   class="lblEtiqueta"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000">Objetos perdidos</text>
+      <text
+   id="lblAscensoresPA"
+   x="656.45001"
+   y="481.54999"
+   class="lblEtiqueta"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000"><tspan
+     id="tspan725-4-5"
+     x="656.45001"
+     y="481.54999">Ascensores</tspan></text>
+      <text
+   id="lblEscalerasPA"
+   x="552.5"
+   y="413.29001"
+   class="lblEtiqueta"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000"><tspan
+     id="tspan1703-9"
+     x="552.5"
+     y="413.29001">Escaleras a planta baja</tspan></text>
+    </g></g>
     <g
    inkscape:groupmode="layer"
    inkscape:label="layAccesoAuditoriosPA"
