@@ -15,9 +15,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layAccesoAuditoriosPB"
-   inkscape:cx="699.51673"
-   inkscape:cy="649.57869"
+   inkscape:current-layer="layCirculacionGuardaAlimentosPA"
+   inkscape:cx="966.26142"
+   inkscape:cy="711.70298"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -27,7 +27,7 @@
    inkscape:window-width="1920"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
-   inkscape:zoom="1.3016129"
+   inkscape:zoom="1.4142136"
    id="namedview1"
    bordercolor="#eeeeee"
    borderopacity="1"
@@ -1203,10 +1203,11 @@ stroke-opacity: 1;}
     <g
    inkscape:groupmode="layer"
    inkscape:label="layEdificioPB"
-   id="layEdificioPB">
+   id="layEdificioPB"
+   sodipodi:insensitive="true">
       <path
    id="patioExterior"
-   d="m 1429.49,261.17 -815.09,0 -256,240.07 77.26,91.29 -79.33,74.61 c 2.4,1.22 -24.9675,4.61207 -67.6675,-2.84793 L 272.36976,746.30931 384.19,764.03 498.42,656.4 l 72.6,186.85 -312.93818,-1.66407 -5.78084,31.54407 1177.18902,0 z"
+   d="M 1429.49,261.17 H 614.4 l -256,240.07 77.26,91.29 -79.33,74.61 c 2.4,1.22 -24.9675,4.61207 -67.6675,-2.84793 L 272.36976,746.30931 384.19,764.03 498.42,656.4 571.02,843.25 258.08182,841.58593 252.30098,873.13 H 1429.49 Z"
    class="fil0 ediVeredas"
    style="display:inline"
    sodipodi:nodetypes="cccccccccccccc" />
@@ -1338,7 +1339,7 @@ stroke-opacity: 1;}
    class="ediCesped" />
       <path
    id="calleEstacionamiento"
-   d="M 252.30098,873.13 H 1429.48 l 0,64.07 -1186.88122,0.46804 z"
+   d="M 252.30098,873.13 H 1429.48 v 64.07 l -1186.88122,0.46804 z"
    class="fil6 ediAsfalto"
    sodipodi:nodetypes="ccccc" />
       <path
@@ -3758,7 +3759,7 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layIconosPB"
    id="layIconosPB"
-   style="display:inline">
+   style="display:none">
       <g
    id="icoAccesoPeatonal"
    class="icoBox"
@@ -4171,7 +4172,7 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layEtiquetas"
    id="layEtiquetas"
-   style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd;display:inline"
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
    transform="translate(2.5596824e-6)">
       <text
    id="lblEntradaPrincipal"
@@ -4359,7 +4360,7 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layAccesoAuditoriosPB"
    id="layAccesoAuditoriosPB"
-   style="display:inline">
+   style="display:none">
       <path
    id="accesoAuxiliarPB"
    d="m 491.06,598.73 c 46.26,-46.13 68.63,-66.36 117.35,-62.48 58.59,4.67 82,42.4 167.89,42.92 55.64,0.34 172.12,-1.9 230.37,-3.26"
@@ -4368,7 +4369,26 @@ stroke-opacity: 1;}
    id="accesoGeneralPB"
    d="m 474.73,577.73 c 126,-113.29 -24.69,-87.41 49.71,-163.88 12.52,-12.86 26.71,-29.18 53.55,-53.63"
    style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient91);stroke-width:20.0023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker97-5);paint-order:normal;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
-    </g>
+    <text
+   xml:space="preserve"
+   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:stroke fill markers"
+   id="text1"
+   transform="translate(-9.7129528,14.548856)"><textPath
+     xlink:href="#accesoGeneralPB"
+     startOffset="100%"
+     id="textPath1"><tspan
+       id="tspan1"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519"
+       dy="1">Público general</tspan></textPath></text><text
+   xml:space="preserve"
+   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   id="text7"
+   transform="translate(-1.7716405,2.5114599)"><textPath
+     xlink:href="#accesoAuxiliarPB"
+     startOffset="100%"
+     id="textPath7"><tspan
+       id="tspan7"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill">Personas mayores, con movilidad reducida, embarazadas o con niños pequeños</tspan></textPath></text></g>
     <g
    inkscape:groupmode="layer"
    inkscape:label="layRutasEscapePB"
@@ -4448,7 +4468,7 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layCirculacionGuardaAlimentosPB"
    id="layCirculacionGuardaAlimentosPB"
-   style="display:none">
+   style="display:inline">
       <path
    id="guardaIngresoPB"
    d="m 1066.43,596.56 0.54,171.14"
@@ -4458,12 +4478,32 @@ stroke-opacity: 1;}
    id="guardaEgresoPB"
    d="m 1029.48,772.05 c -75.95,-0.46 -84.7,8.79 -84.22,-37.1 0.28,-27.5 0.23,-110.58 -0.28,-128.61 -1.01,-35.76 -28.22,-32.28 -83.38,-32.06"
    style="font-variation-settings:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient103);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker97-3);paint-order:normal;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000" />
-    </g>
+    <text
+   xml:space="preserve"
+   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   id="text7-4"
+   transform="rotate(-180,1068.9482,737.87345)"><textPath
+     xlink:href="#guardaIngresoPB"
+     startOffset="100%"
+     id="textPath8"
+     style="writing-mode:lr-tb;direction:ltr"><tspan
+       id="tspan7-8"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill"
+       rotate="0 0 0 0 0 0 0 0">Entrada</tspan></textPath></text><text
+   xml:space="preserve"
+   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   id="text7-4-5"
+   y="948.54303"
+   x="-717.36584"
+   transform="rotate(-90)"><tspan
+     id="tspan7-8-1"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill"
+     rotate="0 0 0 0 0 0 0">Salida</tspan></text></g>
   </g><g
      inkscape:groupmode="layer"
      inkscape:label="layPlantaAlta"
      id="layPlantaAlta"
-     style="clip-rule:evenodd;display:none;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+     style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
      transform="translate(2.5596824e-6)">
     <g
    inkscape:groupmode="layer"
@@ -11826,7 +11866,7 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layCirculacionGuardaAlimentosPA"
    id="layCirculacionGuardaAlimentosPA"
-   style="display:none">
+   style="display:inline">
       <path
    id="guardaIngresoPA"
    d="m 1181.07,623.73 0.53,98.64 -33.25,-0.03 -0.42,55.14"
@@ -11836,7 +11876,26 @@ stroke-opacity: 1;}
    id="guardaEgresoPA"
    d="m 1057.2,770.42 c -43.18,-0.41 -370.7,2.16 -372.63,-0.55 -1.1,-1.54 -0.32,-137.55 -0.63,-182"
    style="font-variation-settings:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient109);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker97-3);paint-order:normal;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000" />
-    </g>
+    <text
+   xml:space="preserve"
+   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   id="text7-4-1"
+   transform="rotate(180,1109.3222,743.09985)"><textPath
+     xlink:href="#guardaIngresoPB"
+     startOffset="100%"
+     id="textPath8-5"
+     style="writing-mode:lr-tb;direction:ltr"><tspan
+       id="tspan7-8-2"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill"
+       rotate="0 0 0 0 0 0 0 0">Entrada</tspan></textPath></text><text
+   xml:space="preserve"
+   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   id="text7-4-5-7"
+   y="774.02167"
+   x="988.64966"><tspan
+     id="tspan7-8-1-6"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill"
+     rotate="0 0 0 0 0 0 0">Salida</tspan></text></g>
     <g
    inkscape:groupmode="layer"
    inkscape:label="layRutasEscapePA"

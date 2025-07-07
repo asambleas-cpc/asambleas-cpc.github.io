@@ -79,6 +79,7 @@
 <body>
 
     <div id="map"></div>
+    <div id="floating-tooltip" style="display: none; position: absolute; background: white; padding: 5px; border: 1px solid #ccc; border-radius: 3px; z-index: 1001;"></div>
 
     <div id="controls-container">
         <div id="floor-controls">
@@ -297,23 +298,36 @@
 
                 // --- Interactivity Example (from previous code) ---
                 // Now you can safely add event listeners to elements inside the SVG.
-                // Example: Find an element with id="some-room" and make it clickable.
-                const roomElement = svgElement.querySelector('#some-room');
-                if (roomElement) {
-                    roomElement.addEventListener('click', function(event) {
-                        // Stop the click from propagating to the map
-                        event.stopPropagation(); 
-                        
-                        // Change color on click
-                        this.style.fill = this.style.fill === 'red' ? '' : 'red';
-                        
-                        // Open a popup
-                        L.popup()
-                            .setLatLng(map.getCenter()) // Or get latlng from a map click event
-                            .setContent('You clicked on the room!')
-                            .openOn(map);
+
+                const customTexts = {
+                    // Planta Alta
+                    'icon_id_1_pa': 'Custom text for icon 1 on Planta Alta',
+                    'icon_id_2_pa': 'Custom text for icon 2 on Planta Alta',
+                    // Planta Baja
+                    'icon_id_1_pb': 'Custom text for icon 1 on Planta Baja',
+                    'icon_id_2_pb': 'Custom text for icon 2 on Planta Baja',
+                };
+
+                const tooltip = document.getElementById('floating-tooltip');
+                const iconosLayers = svgElement.querySelectorAll('#layIconosPA, #layIconosPB');
+
+                iconosLayers.forEach(layer => {
+                    layer.addEventListener('mousemove', function(event) {
+                        const target = event.target.closest('g');
+                        if (target) {
+                            const iconId = target.id;
+                            const text = customTexts[iconId] || `Tooltip for ${iconId}`;
+                            tooltip.innerHTML = text;
+                            tooltip.style.display = 'block';
+                            tooltip.style.left = `${event.pageX + 10}px`;
+                            tooltip.style.top = `${event.pageY + 10}px`;
+                        }
                     });
-                }
+
+                    layer.addEventListener('mouseout', function() {
+                        tooltip.style.display = 'none';
+                    });
+                });
             })
             .catch(error => {
                 console.error('Error loading or parsing SVG:', error);
