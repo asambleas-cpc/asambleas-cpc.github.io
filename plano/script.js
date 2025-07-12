@@ -8,9 +8,9 @@ const bounds = L.latLngBounds([
 const map = L.map('map', {
     maxBounds: bounds,
     maxZoom: 24,
-    minZoom: 21,
+    minZoom: 20,
     rotate: true
-}).setView(bounds.getCenter(), 20);
+}).setView(bounds.getCenter(), 21);
 map.setBearing(-9.8);
 
 // 3. Add tile layer
