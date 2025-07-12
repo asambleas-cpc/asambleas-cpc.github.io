@@ -15,9 +15,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layIconosPB"
+   inkscape:current-layer="layEdificioPA"
    inkscape:cx="618.36488"
-   inkscape:cy="680.23672"
+   inkscape:cy="453.96255"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -4681,18 +4681,17 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layPlantaAlta"
    id="layPlantaAlta"
-   style="clip-rule:evenodd;display:none;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
    transform="translate(2.5596824e-6)">
     <g
    inkscape:groupmode="layer"
    inkscape:label="layEdificioPA"
-   id="layEdificioPA"
-   sodipodi:insensitive="true">
+   id="layEdificioPA">
       <path
    id="atrioPA"
    d="M 578.37,322.17 445.77,454.51 607.69,611.87 V 351.49 Z"
    class="ediAtrio"
-   style="opacity:0.361035;fill:#000000;fill-opacity:1" />
+   style="opacity:1;fill:#000000;fill-opacity:0.15121256" />
       <path
    sodipodi:nodetypes="cccccccccccc"
    id="basePA"

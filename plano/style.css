@@ -1,0 +1,47 @@
+        body {
+            padding-top: 56px; /* Adjust for fixed navbar */
+        }
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            width: 100%;
+        }
+        #map {
+            height: calc(100vh - 56px);
+        }
+        .highlight {
+            fill: #ff0000 !important;
+            stroke: #ffff00;
+            stroke-width: 5px;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
+            transition: all 0.3s ease-in-out;
+        }
+        .info-card-container {
+            position: absolute;
+            top: 70px; /* Below navbar */
+            right: 10px;
+            z-index: 1001;
+            width: 90%;
+            max-width: 350px;
+            pointer-events: none; /* Pass clicks through to the map */
+        }
+        .info-card-container .card {
+            pointer-events: auto; /* Allow interaction with the card itself */
+        }
+
+        .fade-transition {
+            transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+        }
+
+        .basemap-blurred {
+            filter: blur(3px) brightness(0.85);
+            transition: filter 0.5s ease-in-out;
+        }
+
+        /* Centered on mobile */
+        @media (max-width: 767.98px) {
+            .info-card-container {
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
