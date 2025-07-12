@@ -15,7 +15,7 @@ map.setBearing(-9.8);
 
 // 3. Add tile layer
 L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
     maxZoom: 24,
     maxNativeZoom: 20
 }).addTo(map);
@@ -182,6 +182,13 @@ fetch(svgUrl)
         const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
         svgElement = svgDoc.documentElement; // Assign to global variable
         L.svgOverlay(svgElement, bounds, { interactive: true }).addTo(map);
+
+        // Apply rotation to layBase
+        const layBase = svgElement.querySelector('#layBase');
+        if (layBase) {
+            layBase.style.transformOrigin = 'center center';
+            layBase.style.transform = 'rotate(9.8deg)';
+        }
 
         // --- CACHING ELEMENTS ---
         layPlantaAlta = svgElement.querySelector('#layPlantaAlta');
