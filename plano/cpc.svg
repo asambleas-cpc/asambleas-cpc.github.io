@@ -15,9 +15,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layEdificioPA"
-   inkscape:cx="618.36488"
-   inkscape:cy="453.96255"
+   inkscape:current-layer="layBase"
+   inkscape:cx="695.43952"
+   inkscape:cy="596.09102"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -1305,7 +1305,6 @@ stroke-opacity: 1;}
    id="layBase"
    inkscape:label="layBase"
    style="display:inline"
-   transform="rotate(9.8,832.66,574.21)"
    t="rotate(9.8,832.66,574.21)">
    <g
    inkscape:groupmode="layer"
