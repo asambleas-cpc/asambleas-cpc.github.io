@@ -3,248 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet SVG Overlay with Rotation</title>
+    <title>Leaflet SVG Overlay with Bootstrap</title>
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="leaflet-rotate.js"></script>
+
     <style>
-        html, body {
+        body {
+            padding-top: 56px; /* Adjust for fixed navbar */
+        }
+        html, body, #map {
             height: 100%;
             margin: 0;
+            width: 100%;
         }
         #map {
-            width: 100%;
-            height: 100%;
+            height: calc(100vh - 56px);
         }
-        /* Transition for SVG layers */
-        #map svg g {
-            transition: filter 0.5s ease-in-out; /* Adjust duration and timing function as needed */
-        }
-        /* Transition for basemap */
-        .leaflet-tile-pane {
-            transition: filter 0.5s ease-in-out; /* Adjust duration and timing function as needed */
-        }
-        .basemap-blurred {
-            filter: blur(3px); /* Adjust blur amount as needed */
-        }
-        #controls-container {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            background: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease-in-out;
-        }
-        #floor-controls {
-            margin-bottom: 10px;
-        }
-        #floor-controls button {
-            display: inline-block;
-            width: 100px;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            background-color: #f8f8f8;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-        #floor-controls button.active {
-            background-color: #e0e0e0;
-            font-weight: bold;
-        }
-        #feature-controls h3 {
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-        #feature-controls label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        #feature-controls input[type="checkbox"] {
-            margin-right: 5px;
-        }
-        /* Style for highlighted SVG elements */
         .highlight {
-            fill: #ff0000 !important; /* Bright red fill, !important to override inline styles if any */
-            stroke: #ffff00; /* Bright yellow stroke */
+            fill: #ff0000 !important;
+            stroke: #ffff00;
             stroke-width: 5px;
             filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
             transition: all 0.3s ease-in-out;
+        }
+        .info-card-container {
+            position: absolute;
+            top: 70px; /* Below navbar */
+            right: 10px;
+            z-index: 1001;
+            width: 90%;
+            max-width: 350px;
+            pointer-events: none; /* Pass clicks through to the map */
+        }
+        .info-card-container .card {
+            pointer-events: auto; /* Allow interaction with the card itself */
+        }
+
+        .fade-transition {
+            transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+        }
+
+        .basemap-blurred {
+            filter: blur(3px);
+            transition: filter 0.5s ease-in-out;
+        }
+
+        /* Centered on mobile */
+        @media (max-width: 767.98px) {
+            .info-card-container {
+                right: 50%;
+                transform: translateX(50%);
+            }
         }
     </style>
 </head>
 <body>
 
-    <div id="map"></div>
-    <div id="floating-tooltip" style="display: none; position: absolute; background: white; padding: 5px; border: 1px solid #ccc; border-radius: 3px; z-index: 1001;"></div>
+    <!-- Top Toolbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Title (Desktop: Left, Mobile: Hidden) -->
+            <span class="navbar-text d-none d-md-block order-md-1">
+                Plano del CPC
+            </span>
 
-    <div id="controls-container">
-        <div id="floor-controls">
-            <button id="btnPlantaBaja">Planta Baja</button><button id="btnPlantaAlta">Planta Alta</button>
-            
+            <!-- Floor Controls (Desktop: Center, Mobile: Right) -->
+            <div id="floor-controls" class="btn-group order-3 order-md-2" role="group">
+                <button id="btnPlantaBaja" type="button" class="btn btn-outline-primary">Planta Baja</button>
+                <button id="btnPlantaAlta" type="button" class="btn btn-outline-primary">Planta Alta</button>
+            </div>
+
+            <!-- Layer Selector (Desktop: Right, Mobile: Left) -->
+            <div id="feature-controls" class="order-2 order-md-3">
+                <select id="layer-selector" class="form-select">
+                    <option value="Iconos">Instalaciones y departamentos</option>
+                    <option value="AccesoAuditorios">Acceso a auditorios</option>
+                    <option value="CirculacionGuardaAlimentos">Guardado de alimentos</option>
+                    <option value="RutasEscape">Evacuación de emergencia</option>
+                </select>
+            </div>
         </div>
-        <div id="feature-controls">
-            <select id="layer-selector" style="width: 100%; padding: 8px; border-radius: 3px; border: 1px solid #ccc;">
-                <option value="Iconos">Instalaciones y departamentos</option>
-                <option value="AccesoAuditorios">Acceso a auditorios</option>
-                <option value="CirculacionGuardaAlimentos">Guardado de alimentos</option>
-                <option value="RutasEscape">Salidas de emergencia</option>
-            </select>
+    </nav>
+
+    <div id="map"></div>
+
+    <!-- Info Card Container -->
+    <div id="info-card-container" class="info-card-container">
+        <div class="card shadow" id="carAccesoPeatonal" style="display: none;">
+            <div class="card-body">
+            <h5 class="card-title">Acceso Peatonal</h5>
         </div>
+        </div>
+        <div class="card shadow" id="carAccesoEstacionamiento" style="display: none;">
+            <div class="card-body">
+            <h5 class="card-title">Acceso al estacionamiento interno</h5>
+            <p class="card-text">El estacionamiento está reservado para personas con necesidades especiales. Se debe reservar con anticipación y se controlará el acceso.</p>
+            <p class="card-text"><a href="#">Más información</a></p>
+        </div>
+        </div>
+        <div class="card shadow" id="carEntradaPrincipal" style="display: none;">
+            <div class="card-body">
+            <h5 class="card-title">Entrada principal</h5>
+        </div>
+        </div>
+        <div class="card shadow" id="carInformacion" style="display: none;">
+            <div class="card-body">
+            <h5 class="card-title">Información</h5>
+        </div>
+        </div>
+        <div class="card shadow" id="carServicioVoluntario" style="display: none;">
+            <div class="card-body">
+            <h5 class="card-title">Servicio voluntario</h5>
+            <p class="card-text">Aquí deben presentarse quienes deseen ofrecerse como voluntarios.</p>
+            <p class="card-text"><a href="#">Más información</a></p>
+        </div>
+        </div>
+        <div class="card shadow" id="carAcomodadores" style="display: none;">
+            <div class="card-body">
+            <h5 class="card-title">Acomodadores</h5>
+        </div>
+        </div>
+        <div class="card shadow" id="carGuardaAlimentos" style="display: none;">
+            <div class="card-body">
+            <h5 class="card-title">Guardado de alimentos</h5>
+            <p class="card-text">En esta área se reciben y retiran los alimentos. Recordá que <strong>no se puede ingresar a los auditorios con alimentos, bebidas o mate.</strong></p>
+            <p class="card-text"><a href="#">Más información</a></p>
+        </div>
+        </div>
+        <div class="card shadow" id="carGuardaropas" style="display: none;">
+            <div class="card-body">
+            <h5 class="card-title">Guardarropa</h5>
+        </div>
+        </div>
+        <div class="card shadow" id="carObjetosPerdidos" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Objetos perdidos</h5>
+            </div>
+        </div>
+        <div class="card shadow" id="carBanosMujeres" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Baños de mujeres</h5>
+            </div>
+        </div>
+        <div class="card shadow" id="carBanosHombres" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Baños de hombres</h5>
+            </div>
+        </div>
+        <div class="card shadow" id="carBautismo" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Piscina de bautismo</h5>
+                <p class="card-text">Aquí se hará el bautismo el sábado al mediodía.</p>
+                <p class="card-text"><a href="#">Más información</a></p>
+            </div>
+        </div>
+        <div class="card shadow" id="carGaleriaCubierta" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Galería Cubierta</h5>
+            </div>
+        </div>
+        <div class="card shadow" id="carAscensores" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Ascensores</h5>
+                <p class="card-text">Reservado para personas con dificultades para subir las escaleras. No se debe usar en caso de evacuación.</p>
+                <p class="card-text"><a href="#">Más información</a></p>
+            </div>
+        </div>
+        <div class="card shadow" id="carPrimerosAuxilios" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Primeros auxilios</h5>
+            </div>
+        </div>
+        <div class="card shadow" id="carLactantes" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Lactantes</h5>
+            </div>
+        </div>
+        <!-- <div class="card shadow" id="carSalidaPatio2" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Salida al Patio</h5>
+                <p class="card-text">Salida de emergencia hacia el patio.</p>
+            </div>
+        </div>
+        <div class="card shadow" id="carSalidaEstacionamiento" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Salida al Estacionamiento</h5>
+                <p class="card-text">Salida de emergencia hacia el estacionamiento.</p>
+            </div>
+        </div>
+        <div class="card shadow" id="carSalidaCocina" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Salida de Cocina</h5>
+                <p class="card-text">Salida de emergencia desde la cocina.</p>
+            </div>
+        </div> -->
+        <div class="card shadow" id="carEscaleras" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Escaleras a planta alta</h5>
+                <p class="card-text">Para acceder al auditorio principal</p>
+            </div>
+        </div>
+        <div class="card shadow" id="carPatio" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Patio exterior</h5>
+            </div>
+        </div>
+        <!-- <div class="card shadow" id="carSalidaPatio" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Salida al Patio</h5>
+                <p class="card-text">Salida de emergencia hacia el patio.</p>
+            </div>
+        </div> -->
+        <div class="card shadow" id="carEstacionamiento" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Estacionamiento interno</h5>
+            <p class="card-text">El estacionamiento está reservado para personas con necesidades especiales. Se debe reservar con anticipación y se controlará el acceso.</p>
+            <p class="card-text"><a href="#">Más información</a></p>
+            </div>
+        </div>
+        <!-- <div class="card shadow" id="carFoyer" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Vestíbulo</h5>
+                <p class="card-text">Información sobre el vestíbulo.</p>
+            </div>
+        </div> -->
+        <!-- <div class="card shadow" id="carSalidaAuditorio" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Salida del Auditorio</h5>
+                <p class="card-text">Salida de emergencia desde el auditorio.</p>
+            </div>
+        </div> -->
+        <div class="card shadow" id="carLimpieza" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Departamento limpieza</h5>
+            </div>
+        </div>
+        <!-- <div class="card shadow" id="carSalidaFoyer" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Salida del Vestíbulo</h5>
+                <p class="card-text">Salida de emergencia desde el vestíbulo.</p>
+            </div>
+        </div> -->
     </div>
 
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-
     <script>
-        // 1. Define the corner coordinates
+        // 1. Define map bounds
         const bounds = L.latLngBounds([
-            [-31.72236, -60.52612], // Southwest corner
-            [-31.72096, -60.52442]  // Northeast corner
+            [-31.72236, -60.52612], // Southwest
+            [-31.72096, -60.52442]  // Northeast
         ]);
 
-        // 2. Initialize the map
+        // 2. Initialize Leaflet map
         const map = L.map('map', {
+            maxBounds: bounds,
             maxZoom: 24,
-            rotate: true // Enable rotation
+            minZoom: 21,
+            rotate: true
         }).setView(bounds.getCenter(), 20);
-
-        // Set the map rotation (bearing) in degrees. Adjust the value as needed.
         map.setBearing(-9.8);
 
-        // 3. Add the OpenStreetMap tile layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // 3. Add tile layer
+        L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
             maxZoom: 24,
-            maxNativeZoom: 19 // Add this line to prevent 400 errors beyond native zoom
+            maxNativeZoom: 20
         }).addTo(map);
 
-        // 4. Define the SVG image URL
+        // 4. Fetch and load SVG
         const svgUrl = 'cpc.svg';
-
-        // 5. Fetch the SVG content, then create the overlay
         fetch(svgUrl)
             .then(response => response.text())
             .then(svgText => {
                 const parser = new DOMParser();
                 const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
                 const svgElement = svgDoc.documentElement;
+                L.svgOverlay(svgElement, bounds, { interactive: true }).addTo(map);
 
-                // 6. Create the SVG overlay with the actual SVG element
-                const svgOverlay = L.svgOverlay(svgElement, bounds, {
-                    opacity: 1,
-                    interactive: true
-                }).addTo(map);
-
-                // Get references to the SVG layers
+                // --- CACHING ELEMENTS ---
                 const layPlantaAlta = svgElement.querySelector('#layPlantaAlta');
                 const layPlantaBaja = svgElement.querySelector('#layPlantaBaja');
-                console.log('SVG Layer - Planta Alta:', layPlantaAlta);
-                console.log('SVG Layer - Planta Baja:', layPlantaBaja);
-
-                // Get references to the control buttons
                 const btnPlantaAlta = document.getElementById('btnPlantaAlta');
                 const btnPlantaBaja = document.getElementById('btnPlantaBaja');
-                console.log('Button - Planta Alta:', btnPlantaAlta);
-                console.log('Button - Planta Baja:', btnPlantaBaja);
-
-                // Get reference to the layer selector
                 const layerSelector = document.getElementById('layer-selector');
+                const cardContainer = document.getElementById('info-card-container');
 
-                // Get references to the feature SVG groups (assuming they are direct children of floor layers)
                 const features = {
-                    'Iconos': { element: null, id: 'layIconos' },
-                    'AccesoAuditorios': { element: null, id: 'layAccesoAuditorios' },
-                    'CirculacionGuardaAlimentos': { element: null, id: 'layCirculacionGuardaAlimentos' },
-                    'RutasEscape': { element: null, id: 'layRutasEscape' }
+                    'Iconos': 'layIconos',
+                    'AccesoAuditorios': 'layAccesoAuditorios',
+                    'CirculacionGuardaAlimentos': 'layCirculacionGuardaAlimentos',
+                    'RutasEscape': 'layRutasEscape'
                 };
 
-                // Function to update feature visibility based on active floor and selected layer
-                function updateFeatureVisibility(activeFloorName, selectedLayer) {
-                    const floorSuffix = activeFloorName === 'PlantaAlta' ? 'PA' : 'PB';
-
-                    // Hide all feature layers first
-                    for (const featureKey in features) {
-                        const baseFeatureId = features[featureKey].id;
-                        const featureIdPA = `${baseFeatureId}PA`;
-                        const featureIdPB = `${baseFeatureId}PB`;
-                        const featureElementPA = svgElement.querySelector(`#${featureIdPA}`);
-                        const featureElementPB = svgElement.querySelector(`#${featureIdPB}`);
-                        if (featureElementPA) featureElementPA.style.display = 'none';
-                        if (featureElementPB) featureElementPB.style.display = 'none';
-                    }
-
-                    // Show the selected layer
-                    const selectedFeatureId = `${features[selectedLayer].id}${floorSuffix}`;
-                    const selectedFeatureElement = svgElement.querySelector(`#${selectedFeatureId}`);
-                    if (selectedFeatureElement) {
-                        selectedFeatureElement.style.display = 'block';
-                    }
-                }
-
-                // Function to apply blur filter
-                function applyBlur(element) {
-                    if (element) {
-                        element.style.filter = 'url(#blur-filter)';
-                    }
-                }
-
-                // Function to remove blur filter
-                function removeBlur(element) {
-                    if (element) {
-                        element.style.filter = '';
-                    }
-                }
-
-                // Function to show a floor and blur the other
-                function showFloor(floorName) {
-                    const tilePane = map.getPane('tilePane');
-                    if (layPlantaAlta && layPlantaBaja && tilePane) {
-                        if (floorName === 'PlantaAlta') {
-                            layPlantaAlta.style.display = 'block';
-                            removeBlur(layPlantaAlta); // Ensure Planta Alta is clear
-                            layPlantaBaja.style.display = 'block'; // Keep Planta Baja visible for blur
-                            applyBlur(layPlantaBaja); // Apply blur to Planta Baja
-                            tilePane.classList.add('basemap-blurred'); // Blur the basemap
-                            btnPlantaAlta.classList.add('active');
-                            btnPlantaBaja.classList.remove('active');
-                        } else if (floorName === 'PlantaBaja') {
-                            layPlantaAlta.style.display = 'none'; // Hide Planta Alta
-                            layPlantaBaja.style.display = 'block';
-                            removeBlur(layPlantaBaja); // Ensure Planta Baja is clear
-                            removeBlur(layPlantaAlta); // Also ensure Planta Alta is not blurred if it was, though it's hidden
-                            tilePane.classList.remove('basemap-blurred'); // Unblur the basemap
-                            btnPlantaAlta.classList.remove('active');
-                            btnPlantaBaja.classList.add('active');
-                        }
-                        updateFeatureVisibility(floorName, layerSelector.value);
-                    }
-                }
-
-                // Initial state: Show Planta Alta
+                // --- STATE MANAGEMENT ---
                 let currentActiveFloor = 'PlantaBaja';
-                showFloor(currentActiveFloor);
-
-                // Add event listeners to buttons
-                btnPlantaAlta.addEventListener('click', () => {
-                    currentActiveFloor = 'PlantaAlta';
-                    showFloor(currentActiveFloor);
-                });
-                btnPlantaBaja.addEventListener('click', () => {
-                    currentActiveFloor = 'PlantaBaja';
-                    showFloor(currentActiveFloor);
-                });
-
-                // Add event listener to the layer selector
-                layerSelector.addEventListener('change', (event) => {
-                    mostrarMapa(currentActiveFloor, event.target.value);
-                });
-
-                // --- mostrarMapa function and helpers ---
                 let highlightedElement = null;
+                let activeCard = null;
 
+                // --- FUNCTIONS ---
                 function clearHighlight() {
                     if (highlightedElement) {
                         highlightedElement.classList.remove('highlight');
@@ -252,88 +315,158 @@
                     }
                 }
 
-                function mostrarMapa(piso, capa, elemento) {
-                    // 1. Switch floor if necessary
-                    if (piso && piso !== currentActiveFloor) {
-                        showFloor(piso);
-                        currentActiveFloor = piso;
-                    }
-
-                    // 2. Control layer visibility
-                    if (capa) {
-                        const floorSuffix = currentActiveFloor === 'PlantaAlta' ? 'PA' : 'PB';
-                        const layerId = `lay${capa}${floorSuffix}`;
-                        const layerElement = svgElement.querySelector(`#${layerId}`);
-                        
-                        // Hide all layers first
-                        for (const featureKey in features) {
-                            const baseFeatureId = features[featureKey].id;
-                            const featureIdPA = `${baseFeatureId}PA`;
-                            const featureIdPB = `${baseFeatureId}PB`;
-                            const featureElementPA = svgElement.querySelector(`#${featureIdPA}`);
-                            const featureElementPB = svgElement.querySelector(`#${featureIdPB}`);
-                            if(featureElementPA) featureElementPA.style.display = 'none';
-                            if(featureElementPB) featureElementPB.style.display = 'none';
-                        }
-
-                        // Show the selected layer
-                        if (layerElement) {
-                            layerElement.style.display = 'block';
-                        }
-                    }
-
-                    // 3. Highlight a specific element
-                    clearHighlight();
-                    if (elemento) {
-                        const elementToHighlight = svgElement.querySelector(`#${elemento}`);
-                        if (elementToHighlight) {
-                            elementToHighlight.classList.add('highlight');
-                            highlightedElement = elementToHighlight;
-                        }
+                function hideActiveCard() {
+                    if (activeCard) {
+                        activeCard.style.display = 'none';
+                        activeCard = null;
                     }
                 }
 
-                // Example of how to use the function:
-                // mostrarMapa('PlantaAlta', 'RutasEscape', 'some_element_id_to_highlight');
+                function showAndHighlightIcon(iconId) {
+                    const target = svgElement.querySelector(`#${iconId}`);
+                    if (!target) return;
 
-                // --- Interactivity Example (from previous code) ---
-                // Now you can safely add event listeners to elements inside the SVG.
+                    const iconBaseName = target.id.replace(/^ico/, '').replace(/P[AB]$/, '');
+                    const cardId = `car${iconBaseName}`;
+                    const card = document.getElementById(cardId);
 
-                const customTexts = {
-                    // Planta Alta
-                    'icon_id_1_pa': 'Custom text for icon 1 on Planta Alta',
-                    'icon_id_2_pa': 'Custom text for icon 2 on Planta Alta',
-                    // Planta Baja
-                    'icon_id_1_pb': 'Custom text for icon 1 on Planta Baja',
-                    'icon_id_2_pb': 'Custom text for icon 2 on Planta Baja',
-                };
+                    hideActiveCard();
+                    clearHighlight();
 
-                const tooltip = document.getElementById('floating-tooltip');
-                const iconosLayers = svgElement.querySelectorAll('#layIconosPA, #layIconosPB');
+                    if (card) {
+                        card.style.display = 'block';
+                        activeCard = card;
+                        highlightedElement = target;
+                        target.classList.add('highlight');
+                    }
+                }
 
-                iconosLayers.forEach(layer => {
-                    layer.addEventListener('mousemove', function(event) {
-                        const target = event.target.closest('g');
-                        if (target) {
-                            const iconId = target.id;
-                            const text = customTexts[iconId] || `Tooltip for ${iconId}`;
-                            tooltip.innerHTML = text;
-                            tooltip.style.display = 'block';
-                            tooltip.style.left = `${event.pageX + 10}px`;
-                            tooltip.style.top = `${event.pageY + 10}px`;
+                function updateLayerVisibility(isInitial) {
+                    const selectedLayer = layerSelector.value;
+                    const floorSuffix = currentActiveFloor === 'PlantaAlta' ? 'PA' : 'PB';
+                    const targetLayerId = features[selectedLayer] + floorSuffix;
+
+                    for (const key in features) {
+                        for (const suffix of ['PB', 'PA']) {
+                            const layerId = features[key] + suffix;
+                            const layer = svgElement.querySelector(`#${layerId}`);
+                            if (layer) {
+                                const isTarget = layer.id === targetLayerId;
+                                if (!isInitial) {
+                                    layer.classList.add('fade-transition');
+                                }
+                                layer.style.opacity = isTarget ? 1 : 0;
+                                if(isTarget){
+                                    layer.style.display = 'block';
+                                } else {
+                                    if (!isInitial) {
+                                        setTimeout(() => {
+                                            layer.style.display = 'none';
+                                        }, 500);
+                                    } else {
+                                        layer.style.display = 'none';
+                                    }
+                                }
+                            }
                         }
-                    });
+                    }
 
-                    layer.addEventListener('mouseout', function() {
-                        tooltip.style.display = 'none';
-                    });
+                    if (selectedLayer !== 'Iconos') {
+                        hideActiveCard();
+                        clearHighlight();
+                    }
+                }
+
+                function switchFloor(floorName, isInitial = false) {
+                    if (!isInitial && currentActiveFloor === floorName) {
+                        updateLayerVisibility(false);
+                        return;
+                    }
+                    currentActiveFloor = floorName;
+                    const isPlantaAlta = floorName === 'PlantaAlta';
+
+                    if (!isInitial) {
+                        layPlantaAlta.classList.add('fade-transition');
+                        layPlantaBaja.classList.add('fade-transition');
+                    }
+
+                    layPlantaAlta.style.opacity = isPlantaAlta ? 1 : 0;
+                    layPlantaBaja.style.opacity = 1; // Keep it opaque
+                    layPlantaBaja.style.filter = isPlantaAlta ? 'blur(3px)' : ''; // Apply blur instead of translucency
+
+                    if(isPlantaAlta){
+                        layPlantaAlta.style.display = 'block';
+                        layPlantaBaja.style.display = 'block';
+                    } else {
+                        setTimeout(() => {
+                            layPlantaAlta.style.display = 'none';
+                        }, 500);
+                    }
+
+                    map.getPane('tilePane').classList.toggle('basemap-blurred', isPlantaAlta);
+
+                    btnPlantaAlta.classList.toggle('active', isPlantaAlta);
+                    btnPlantaBaja.classList.toggle('active', !isPlantaAlta);
+                    
+                    hideActiveCard();
+                    clearHighlight();
+                    updateLayerVisibility(isInitial);
+                }
+
+                function mostrarMapa(planta, capa, highlightId, isInitial = false) {
+                    const floorName = planta === 'alta' ? 'PlantaAlta' : 'PlantaBaja';
+                    layerSelector.value = capa;
+                    switchFloor(floorName, isInitial);
+
+                    if (capa === 'Iconos' && highlightId) {
+                        const floorSuffix = floorName === 'PlantaAlta' ? 'PA' : 'PB';
+                        const iconId = `ico${highlightId}${floorSuffix}`;
+                        setTimeout(() => {
+                            showAndHighlightIcon(iconId);
+                        }, 100);
+                    }
+                }
+
+                // --- EVENT LISTENERS ---
+                btnPlantaAlta.addEventListener('click', () => mostrarMapa('alta', layerSelector.value));
+                btnPlantaBaja.addEventListener('click', () => mostrarMapa('baja', layerSelector.value));
+                layerSelector.addEventListener('change', () => {
+                    const currentFloor = currentActiveFloor === 'PlantaAlta' ? 'alta' : 'baja';
+                    mostrarMapa(currentFloor, layerSelector.value);
                 });
-            })
-            .catch(error => {
-                console.error('Error loading or parsing SVG:', error);
-                alert('Could not load the SVG file. Please check the file path and ensure it is a valid SVG.');
-            });
 
+                // Click on an icon
+                svgElement.addEventListener('click', function(event) {
+                    if (layerSelector.value !== 'Iconos') return;
+
+                    const target = event.target.closest('g[id]');
+                    if (!target) return;
+                    
+                    L.DomEvent.stopPropagation(event);
+
+                    if (highlightedElement && highlightedElement.id === target.id) {
+                        hideActiveCard();
+                        clearHighlight();
+                        return;
+                    }
+
+                    showAndHighlightIcon(target.id);
+                });
+
+                // Click on map to hide card
+                map.on('click', function() {
+                    hideActiveCard();
+                    clearHighlight();
+                });
+
+                // --- INITIALIZATION ---
+                mostrarMapa('baja', 'Iconos', null, true);
+
+
+            }).catch(error => {
+                console.error('Error loading or parsing SVG:', error);
+                alert('Could not load the SVG file.');
+            });
     </script>
 
 </body>
