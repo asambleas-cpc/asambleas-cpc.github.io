@@ -60,6 +60,43 @@ function hideActiveOffcanvas() {
     }
 }
 
+function centerOnElement(element) {
+    if (!element) return;
+
+    const mapContainer = map.getContainer();
+    const mapRect = mapContainer.getBoundingClientRect();
+    const elementRect = element.getBoundingClientRect();
+
+    // Calculate the geographical center of the icon
+    const pointX = (elementRect.left - mapRect.left) + (elementRect.width / 2);
+    const pointY = (elementRect.top - mapRect.top) + (elementRect.height / 2);
+    const latLng = map.layerPointToLatLng(L.point(pointX, pointY));
+
+    // Calculate the offset needed to counteract the offcanvas
+    let xOffset = 0;
+    let yOffset = 0;
+    
+    if (activeOffcanvas && activeOffcanvas._element) {
+        const offcanvasRect = activeOffcanvas._element.getBoundingClientRect();
+        if (activeOffcanvas._element.classList.contains('offcanvas-bottom')) {
+            // If offcanvas is at the bottom, shift the visual center up
+            yOffset = -offcanvasRect.height / 2;
+        } else if (activeOffcanvas._element.classList.contains('offcanvas-end')) {
+            // If offcanvas is on the right, shift the visual center left
+            xOffset = -offcanvasRect.width / 2;
+        }
+    }
+
+    // Pan to the geographical center first
+    map.panTo(latLng, { animate: false }); 
+    
+    // Then, pan by the pixel offset to place it in the visual center
+    if (xOffset !== 0 || yOffset !== 0) {
+        map.panBy([xOffset, yOffset], { animate: true });
+    }
+}
+
+
 function showAndHighlightIcon(iconId, offcanvasId) {
     const target = svgElement.querySelector(`#${iconId}`);
     if (!target) return;
@@ -80,19 +117,6 @@ function showAndHighlightIcon(iconId, offcanvasId) {
     activeOffcanvas = offcanvas;
     highlightedElement = target;
     target.classList.add('highlight');
-
-    // Center the map on the icon
-    const mapContainer = map.getContainer();
-    const mapBounds = mapContainer.getBoundingClientRect();
-    const iconBounds = target.getBoundingClientRect();
-
-    const iconCenterX = (iconBounds.left - mapBounds.left) + iconBounds.width / 2;
-    const iconCenterY = (iconBounds.top - mapBounds.top) + iconBounds.height / 2;
-
-    const layerPoint = L.point(iconCenterX, iconCenterY);
-    const latLng = map.layerPointToLatLng(layerPoint);
-
-    map.panTo(latLng);
 
     // When the offcanvas is hidden, remove the highlight
     offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
@@ -194,8 +218,8 @@ function switchFloor(floorName, isInitial = false) {
     updateLayerVisibility(isInitial);
 }
 
-function mostrarMapa(planta, capa, highlightId, isInitial = false) {
-    const floorName = planta === 'alta' ? 'PlantaAlta' : 'PlantaBaja';
+function mostrarMapa(floorNumber, capa, highlightId, isInitial = false) {
+    const floorName = floorNumber === 1 ? 'PlantaAlta' : 'PlantaBaja';
     currentLayer = capa;
     
     // Update active state in dropdown
@@ -210,7 +234,15 @@ function mostrarMapa(planta, capa, highlightId, isInitial = false) {
         const floorSuffix = getFloorSuffix();
         const iconId = `ico${highlightId}${floorSuffix}`;
         const offcanvasId = `offcanvas${highlightId}`;
-        showAndHighlightIcon(iconId, offcanvasId);
+        
+        // Use a timeout to ensure the element is visible before calculating its position
+        setTimeout(() => {
+            const elementToCenter = svgElement.querySelector(`#${iconId}`);
+            if (elementToCenter) {
+                showAndHighlightIcon(iconId, offcanvasId);
+                centerOnElement(elementToCenter);
+            }
+        }, 100); 
     }
 }
 
@@ -237,6 +269,7 @@ fetch(svgUrl)
         const parser = new DOMParser();
         const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
         svgElement = svgDoc.documentElement; // Assign to global variable
+        
         L.svgOverlay(svgElement, bounds, { interactive: true }).addTo(map);
 
         // Apply rotation to layBase
@@ -260,14 +293,14 @@ fetch(svgUrl)
 
 
         // --- EVENT LISTENERS ---
-        btnPlantaAlta.addEventListener('click', () => mostrarMapa('alta', currentLayer));
-        btnPlantaBaja.addEventListener('click', () => mostrarMapa('baja', currentLayer));
+        btnPlantaAlta.addEventListener('click', () => mostrarMapa(1, currentLayer));
+        btnPlantaBaja.addEventListener('click', () => mostrarMapa(0, currentLayer));
         
         layerSelectorDropdown.addEventListener('click', (event) => {
             const target = event.target;
             if (target.classList.contains('dropdown-item')) {
                 const newLayer = target.dataset.value;
-                const currentFloor = currentActiveFloor === 'PlantaAlta' ? 'alta' : 'baja';
+                const currentFloor = currentActiveFloor === 'PlantaAlta' ? 1 : 0;
                 mostrarMapa(currentFloor, newLayer);
             }
         });
@@ -293,6 +326,7 @@ fetch(svgUrl)
             const iconBaseName = target.id.replace(/^ico/, '').replace(/P[AB]$/, '');
             const offcanvasId = `offcanvas${iconBaseName}`;
             showAndHighlightIcon(target.id, offcanvasId);
+            centerOnElement(target); // Center on the clicked element
         });
 
         // Click on map to hide card
@@ -305,7 +339,7 @@ fetch(svgUrl)
         window.addEventListener('resize', updateOffcanvasLayout);
 
         // --- INITIALIZATION ---
-        mostrarMapa('baja', 'Iconos', null, true);
+        mostrarMapa(0, 'Iconos', null, true);
 
 
     }).catch(error => {
