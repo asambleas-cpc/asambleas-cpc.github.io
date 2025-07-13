@@ -9,7 +9,8 @@ const map = L.map('map', {
     maxBounds: bounds,
     maxZoom: 24,
     minZoom: 20,
-    rotate: true
+    rotate: true,
+    zoomControl: false // Disable default zoom control
 }).setView(bounds.getCenter(), 21);
 map.setBearing(-9.8);
 
@@ -25,9 +26,12 @@ let layPlantaAlta;
 let layPlantaBaja;
 let btnPlantaAlta;
 let btnPlantaBaja;
-let layerSelector;
-let cardContainer;
+let layerSelectorBtn;
+let layerSelectorDropdown;
 let svgElement;
+let layerTitleElement;
+let floorSubtitleElement;
+let currentLayer = 'Iconos'; // Default layer
 
         features = {
             'Iconos': 'layIconos',
@@ -39,7 +43,7 @@ let svgElement;
         // --- STATE MANAGEMENT ---
         currentActiveFloor = 'PlantaBaja';
         highlightedElement = null;
-        activeCard = null;
+        activeOffcanvas = null;
 
 // --- FUNCTIONS ---
 function clearHighlight() {
@@ -49,34 +53,54 @@ function clearHighlight() {
     }
 }
 
-function hideActiveCard() {
-    if (activeCard) {
-        const cardToHide = activeCard;
-        cardToHide.style.opacity = 0;
-        setTimeout(() => {
-            cardToHide.style.display = 'none';
-        }, 300); // Match CSS transition duration
-        activeCard = null;
+function hideActiveOffcanvas() {
+    if (activeOffcanvas) {
+        activeOffcanvas.hide();
+        // The 'hidden.bs.offcanvas' event will handle cleanup.
     }
 }
 
-function showAndHighlightIcon(iconId, cardId) {
+function showAndHighlightIcon(iconId, offcanvasId) {
     const target = svgElement.querySelector(`#${iconId}`);
     if (!target) return;
 
-    const card = document.getElementById(cardId);
+    const offcanvasElement = document.getElementById(offcanvasId);
+    if (!offcanvasElement) return;
 
-    hideActiveCard();
-    clearHighlight();
-
-    if (card) {
-        card.style.display = 'block';
-        card.style.opacity = 1;
-        
-        activeCard = card;
-        highlightedElement = target;
-        target.classList.add('highlight');
+    // If a different offcanvas is open, hide it first.
+    if (activeOffcanvas && activeOffcanvas._element.id !== offcanvasId) {
+        hideActiveOffcanvas();
     }
+    
+    clearHighlight();
+    
+    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+    offcanvas.show();
+    
+    activeOffcanvas = offcanvas;
+    highlightedElement = target;
+    target.classList.add('highlight');
+
+    // Center the map on the icon
+    const mapContainer = map.getContainer();
+    const mapBounds = mapContainer.getBoundingClientRect();
+    const iconBounds = target.getBoundingClientRect();
+
+    const iconCenterX = (iconBounds.left - mapBounds.left) + iconBounds.width / 2;
+    const iconCenterY = (iconBounds.top - mapBounds.top) + iconBounds.height / 2;
+
+    const layerPoint = L.point(iconCenterX, iconCenterY);
+    const latLng = map.layerPointToLatLng(layerPoint);
+
+    map.panTo(latLng);
+
+    // When the offcanvas is hidden, remove the highlight
+    offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
+        clearHighlight();
+        if (activeOffcanvas && activeOffcanvas._element.id === offcanvasId) {
+            activeOffcanvas = null;
+        }
+    }, { once: true });
 }
 
 // Helper function to get floor suffix
@@ -84,8 +108,17 @@ function getFloorSuffix() {
     return currentActiveFloor === 'PlantaAlta' ? 'PA' : 'PB';
 }
 
+function updateMapTitle() {
+    const activeLayerItem = layerSelectorDropdown.querySelector('.dropdown-item.active');
+    const layerText = activeLayerItem ? activeLayerItem.textContent : 'Cargando...';
+    layerTitleElement.textContent = layerText;
+
+    const floorText = currentActiveFloor === 'PlantaAlta' ? 'Planta alta' : 'Planta baja';
+    floorSubtitleElement.textContent = floorText;
+}
+
 function updateLayerVisibility(isInitial) {
-    const selectedLayer = layerSelector.value;
+    const selectedLayer = currentLayer;
     const floorSuffix = getFloorSuffix();
     const targetLayerId = features[selectedLayer] + floorSuffix;
 
@@ -115,12 +148,13 @@ function updateLayerVisibility(isInitial) {
     }
 
     if (selectedLayer !== 'Iconos') {
-        hideActiveCard();
+        hideActiveOffcanvas();
         clearHighlight();
     }
 }
 
 function switchFloor(floorName, isInitial = false) {
+    // If the floor is not actually changing, just update layer visibility.
     if (!isInitial && currentActiveFloor === floorName) {
         updateLayerVisibility(false);
         return;
@@ -155,21 +189,43 @@ function switchFloor(floorName, isInitial = false) {
     btnPlantaAlta.classList.toggle('active', isPlantaAlta);
     btnPlantaBaja.classList.toggle('active', !isPlantaAlta);
     
-    hideActiveCard();
+    hideActiveOffcanvas();
     clearHighlight();
     updateLayerVisibility(isInitial);
 }
 
 function mostrarMapa(planta, capa, highlightId, isInitial = false) {
     const floorName = planta === 'alta' ? 'PlantaAlta' : 'PlantaBaja';
-    layerSelector.value = capa;
+    currentLayer = capa;
+    
+    // Update active state in dropdown
+    layerSelectorDropdown.querySelectorAll('.dropdown-item').forEach(item => {
+        item.classList.toggle('active', item.dataset.value === capa);
+    });
+
     switchFloor(floorName, isInitial);
+    updateMapTitle();
 
     if (capa === 'Iconos' && highlightId) {
         const floorSuffix = getFloorSuffix();
         const iconId = `ico${highlightId}${floorSuffix}`;
-        const cardId = `car${highlightId}`;
-        showAndHighlightIcon(iconId, cardId);
+        const offcanvasId = `offcanvas${highlightId}`;
+        showAndHighlightIcon(iconId, offcanvasId);
+    }
+}
+
+function updateOffcanvasLayout() {
+    const offcanvasElements = document.querySelectorAll('.info-offcanvas');
+    if (window.innerHeight > window.innerWidth) { // Portrait
+        offcanvasElements.forEach(el => {
+            el.classList.remove('offcanvas-end');
+            el.classList.add('offcanvas-bottom');
+        });
+    } else { // Landscape
+        offcanvasElements.forEach(el => {
+            el.classList.remove('offcanvas-bottom');
+            el.classList.add('offcanvas-end');
+        });
     }
 }
 
@@ -195,20 +251,33 @@ fetch(svgUrl)
         layPlantaBaja = svgElement.querySelector('#layPlantaBaja');
         btnPlantaAlta = document.getElementById('btnPlantaAlta');
         btnPlantaBaja = document.getElementById('btnPlantaBaja');
-        layerSelector = document.getElementById('layer-selector');
-        cardContainer = document.getElementById('info-card-container');
+        layerSelectorBtn = document.getElementById('layer-selector-btn');
+        layerSelectorDropdown = document.querySelector('.dropdown-menu');
+        layerTitleElement = document.getElementById('layer-title');
+        floorSubtitleElement = document.getElementById('floor-subtitle');
+        const zoomInBtn = document.getElementById('zoom-in');
+        const zoomOutBtn = document.getElementById('zoom-out');
+
 
         // --- EVENT LISTENERS ---
-        btnPlantaAlta.addEventListener('click', () => mostrarMapa('alta', layerSelector.value));
-        btnPlantaBaja.addEventListener('click', () => mostrarMapa('baja', layerSelector.value));
-        layerSelector.addEventListener('change', () => {
-            const currentFloor = currentActiveFloor === 'PlantaAlta' ? 'alta' : 'baja';
-            mostrarMapa(currentFloor, layerSelector.value);
+        btnPlantaAlta.addEventListener('click', () => mostrarMapa('alta', currentLayer));
+        btnPlantaBaja.addEventListener('click', () => mostrarMapa('baja', currentLayer));
+        
+        layerSelectorDropdown.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target.classList.contains('dropdown-item')) {
+                const newLayer = target.dataset.value;
+                const currentFloor = currentActiveFloor === 'PlantaAlta' ? 'alta' : 'baja';
+                mostrarMapa(currentFloor, newLayer);
+            }
         });
+
+        zoomInBtn.addEventListener('click', () => map.zoomIn());
+        zoomOutBtn.addEventListener('click', () => map.zoomOut());
 
         // Click on an icon
         svgElement.addEventListener('click', function(event) {
-            if (layerSelector.value !== 'Iconos') return;
+            if (currentLayer !== 'Iconos') return;
 
             const target = event.target.closest('g[id]');
             if (!target) return;
@@ -216,21 +285,24 @@ fetch(svgUrl)
             L.DomEvent.stopPropagation(event);
 
             if (highlightedElement && highlightedElement.id === target.id) {
-                hideActiveCard();
+                hideActiveOffcanvas();
                 clearHighlight();
                 return;
             }
 
             const iconBaseName = target.id.replace(/^ico/, '').replace(/P[AB]$/, '');
-            const cardId = `car${iconBaseName}`;
-            showAndHighlightIcon(target.id, cardId);
+            const offcanvasId = `offcanvas${iconBaseName}`;
+            showAndHighlightIcon(target.id, offcanvasId);
         });
 
         // Click on map to hide card
         map.on('click', function() {
-            hideActiveCard();
+            hideActiveOffcanvas();
             clearHighlight();
         });
+
+        window.addEventListener('load', updateOffcanvasLayout);
+        window.addEventListener('resize', updateOffcanvasLayout);
 
         // --- INITIALIZATION ---
         mostrarMapa('baja', 'Iconos', null, true);

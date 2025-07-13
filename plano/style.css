@@ -1,5 +1,5 @@
         body {
-            padding-top: 56px; /* Adjust for fixed navbar */
+            padding-top: 0; /* Adjust for fixed navbar */
         }
         html, body, #map {
             height: 100%;
@@ -7,7 +7,79 @@
             width: 100%;
         }
         #map {
-            height: calc(100vh - 56px);
+            height: 100vh;
+        }
+        .vertical-toolbar {
+            z-index: 1001;
+        }
+        /* Frosted Glass Effect for Toolbar and Dropdown */
+        .vertical-toolbar .btn,
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .vertical-toolbar .btn i {
+            color: white;
+        }
+
+        /* Active and Hover States */
+        .vertical-toolbar .btn.active,
+        .vertical-toolbar .btn:hover,
+        .dropdown-item.active,
+        .dropdown-item:hover {
+            background-color: rgba(255, 255, 255, 0.7) !important;
+            color: #212529 !important; /* Dark text for contrast */
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        #map-title h5, #map-title small {
+            color: white;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .offcanvas-backdrop.show {
+            opacity: 0;
+        }
+        .info-offcanvas .btn-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+        }
+        .info-offcanvas .offcanvas-body h5 {
+            margin-right: 2rem;
+        }
+        .info-offcanvas a {
+            color: white;
+            text-decoration: underline;
+        }
+        .info-offcanvas a:hover {
+            background-color: white;
+            color: #212529;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            padding: 0.1rem 0.25rem;
+        }
+        .offcanvas-bottom {
+            --bs-offcanvas-height: 30vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .offcanvas-end {
+            --bs-offcanvas-width: 30vw;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .leaflet-control-rotate {
+            display: none !important;
         }
         .highlight {
             fill: #ff0000 !important;
@@ -34,24 +106,10 @@
         }
 
         /* Basemap blur for Planta Alta */
-.basemap-blurred {
-    filter: blur(3px) brightness(0.85);
-    transition: filter 0.5s ease-in-out;
-}
-
-/* Responsive adjustments for smaller screens */
-/* @media (max-width: 767.98px) {
-    #layer-selector {
-        left: auto;
-        right: 10px;
-        transform: none;
-    }
-
-    .floor-buttons {
-        right: 10px;
-        left: auto;
-    }
-} */
+        .basemap-blurred {
+            filter: blur(3px) brightness(0.85);
+            transition: filter 0.5s ease-in-out;
+        }
 
         /* Centered on mobile */
         @media (max-width: 767.98px) {
