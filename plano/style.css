@@ -26,8 +26,18 @@
             color: white;
         }
 
-        .vertical-toolbar .btn i {
+        .vertical-toolbar .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            padding: 0;
+        }
+
+        .vertical-toolbar .btn .material-icons {
             color: white;
+            font-size: 24px; /* Adjust icon size as needed */
         }
 
         /* Active and Hover States */
@@ -38,6 +48,19 @@
             background-color: rgba(255, 255, 255, 0.7) !important;
             color: #212529 !important; /* Dark text for contrast */
             border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .vertical-toolbar .btn.active .material-icons,
+        .vertical-toolbar .btn:hover .material-icons {
+            color: #212529 !important;
+        }
+
+        #btn-close-window {
+            background-color: rgba(161, 0, 16, 0.603);
+        }
+
+        #btn-close-window:hover {
+            background-color: hsl(354, 100%, 50%) !important;
         }
 
         .dropdown-item {

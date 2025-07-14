@@ -1,17 +1,17 @@
 // 1. Define map bounds
 const bounds = L.latLngBounds([
-    [-31.72236, -60.52612], // Southwest
-    [-31.72096, -60.52442]  // Northeast
+    [-31.72236, -60.526135], // Southwest
+    [-31.72097, -60.52445]  // Northeast
 ]);
 
 // 2. Initialize Leaflet map
 const map = L.map('map', {
     maxBounds: bounds,
     maxZoom: 24,
-    minZoom: 20,
+    minZoom: 19,
     rotate: true,
     zoomControl: false // Disable default zoom control
-}).setView(bounds.getCenter(), 21);
+}).setView(bounds.getCenter(), 19);
 map.setBearing(-9.8);
 
 // 3. Add tile layer
@@ -49,6 +49,18 @@ let currentLayer = 'Iconos'; // Default layer
 function clearHighlight() {
     if (highlightedElement) {
         highlightedElement.classList.remove('highlight');
+
+        // Construct the ID of the corresponding 'hl' element
+        const floorSuffix = getFloorSuffix();
+        const iconBaseName = highlightedElement.id.replace(/^ico/, '').replace(/P[AB]$/, '');
+        const hlElementId = `hl${iconBaseName}${floorSuffix}`;
+        const hlElement = svgElement.querySelector(`#${hlElementId}`);
+
+        // Hide the 'hl' element
+        if (hlElement) {
+            hlElement.style.display = 'none';
+        }
+
         highlightedElement = null;
     }
 }
@@ -63,37 +75,57 @@ function hideActiveOffcanvas() {
 function centerOnElement(element) {
     if (!element) return;
 
+    const svg = element.ownerSVGElement;
+    if (!svg) return;
+
+    const bbox = element.getBBox();
+    const ctm = element.getScreenCTM();
     const mapContainer = map.getContainer();
     const mapRect = mapContainer.getBoundingClientRect();
-    const elementRect = element.getBoundingClientRect();
 
-    // Calculate the geographical center of the icon
-    const pointX = (elementRect.left - mapRect.left) + (elementRect.width / 2);
-    const pointY = (elementRect.top - mapRect.top) + (elementRect.height / 2);
-    const latLng = map.layerPointToLatLng(L.point(pointX, pointY));
+    // Define the four corners of the bounding box
+    const corners = [
+        { x: bbox.x, y: bbox.y },
+        { x: bbox.x + bbox.width, y: bbox.y },
+        { x: bbox.x + bbox.width, y: bbox.y + bbox.height },
+        { x: bbox.x, y: bbox.y + bbox.height }
+    ];
 
-    // Calculate the offset needed to counteract the offcanvas
-    let xOffset = 0;
-    let yOffset = 0;
-    
+    const latLngs = corners.map(corner => {
+        const pt = svg.createSVGPoint();
+        pt.x = corner.x;
+        pt.y = corner.y;
+
+        // Transform the corner to screen coordinates
+        const screenPoint = pt.matrixTransform(ctm);
+
+        // Convert screen coordinates to map layer coordinates
+        const layerPoint = L.point(screenPoint.x - mapRect.left, screenPoint.y - mapRect.top);
+
+        // Convert layer point to a geographical coordinate
+        return map.layerPointToLatLng(layerPoint);
+    });
+
+    // Create a bounding box that contains all four transformed corners
+    const elementBounds = L.latLngBounds(latLngs);
+
+    // Calculate padding for the offcanvas
+    let padding = [0, 0]; // [x, y]
     if (activeOffcanvas && activeOffcanvas._element) {
         const offcanvasRect = activeOffcanvas._element.getBoundingClientRect();
         if (activeOffcanvas._element.classList.contains('offcanvas-bottom')) {
-            // If offcanvas is at the bottom, shift the visual center up
-            yOffset = -offcanvasRect.height / 2;
+            padding[1] = offcanvasRect.height; // Bottom padding
         } else if (activeOffcanvas._element.classList.contains('offcanvas-end')) {
-            // If offcanvas is on the right, shift the visual center left
-            xOffset = -offcanvasRect.width / 2;
+            padding[0] = offcanvasRect.width; // Right padding
         }
     }
 
-    // Pan to the geographical center first
-    map.panTo(latLng, { animate: false }); 
-    
-    // Then, pan by the pixel offset to place it in the visual center
-    if (xOffset !== 0 || yOffset !== 0) {
-        map.panBy([xOffset, yOffset], { animate: true });
-    }
+    // Fit the map to the element's bounds with padding and zoom constraints
+    map.fitBounds(elementBounds, {
+        paddingTopLeft: [0, 0], // No padding on top-left
+        paddingBottomRight: padding, // Apply padding to bottom-right
+        maxZoom: 21
+    });
 }
 
 
@@ -117,6 +149,17 @@ function showAndHighlightIcon(iconId, offcanvasId) {
     activeOffcanvas = offcanvas;
     highlightedElement = target;
     target.classList.add('highlight');
+
+    // Construct the ID of the corresponding 'hl' element
+    const floorSuffix = getFloorSuffix();
+    const iconBaseName = iconId.replace(/^ico/, '').replace(/P[AB]$/, '');
+    const hlElementId = `hl${iconBaseName}${floorSuffix}`;
+    const hlElement = svgElement.querySelector(`#${hlElementId}`);
+
+    // Show the 'hl' element
+    if (hlElement) {
+        hlElement.style.display = 'block';
+    }
 
     // When the offcanvas is hidden, remove the highlight
     offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
@@ -269,15 +312,28 @@ fetch(svgUrl)
         const parser = new DOMParser();
         const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
         svgElement = svgDoc.documentElement; // Assign to global variable
+      
+        // --- START of your modification code ---
+        // Find the specific element you want to change
+        const elementToModify = svgElement.querySelector('#layBase');
+
+        // Check if the element exists before trying to change it
+        if (elementToModify) {
+         // Change a property, for example, the fill color
+            elementToModify.setAttribute('transform', 'rotate(9.8,832.66,574.21)');
+         // You could also change other properties, like its stroke
+         // elementToModify.setAttribute('stroke', 'blue');
+        }
+        // --- END of your modification code ---       
         
         L.svgOverlay(svgElement, bounds, { interactive: true }).addTo(map);
 
         // Apply rotation to layBase
-        const layBase = svgElement.querySelector('#layBase');
-        if (layBase) {
-            layBase.style.transformOrigin = 'center center';
-            layBase.style.transform = 'rotate(9.8deg)';
-        }
+        // const layBase = svgElement.querySelector('#layBase');
+        // if (layBase) {
+        //     layBase.style.transformOrigin = 'center center';
+        //     layBase.style.transform = 'rotate(9.8deg)';
+        // }
 
         // --- CACHING ELEMENTS ---
         layPlantaAlta = svgElement.querySelector('#layPlantaAlta');
@@ -330,7 +386,8 @@ fetch(svgUrl)
         });
 
         // Click on map to hide card
-        map.on('click', function() {
+        map.on('click', function(e) {
+            console.log("Clicked coordinates:", e.latlng);
             hideActiveOffcanvas();
             clearHighlight();
         });
