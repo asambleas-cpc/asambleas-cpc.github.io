@@ -9,15 +9,14 @@
    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
    version="1.1"
    viewBox="0 0 1748 1240.14"
-   transform="rotate(9.8)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="icoGaleriaCubiertaPB"
-   inkscape:cx="1082.5"
-   inkscape:cy="534.5"
+   inkscape:current-layer="layIconosPB"
+   inkscape:cx="685.62498"
+   inkscape:cy="502.37499"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -27,7 +26,7 @@
    inkscape:window-width="1920"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
-   inkscape:zoom="1"
+   inkscape:zoom="4.0000001"
    id="namedview1"
    bordercolor="#eeeeee"
    borderopacity="1"
@@ -1273,81 +1272,100 @@
    y1="632.845"
    x2="1053.68"
    y2="632.845"
-   gradientUnits="userSpaceOnUse" /></defs>
+   gradientUnits="userSpaceOnUse" /><filter
+   inkscape:collect="always"
+   style="color-interpolation-filters:sRGB"
+   id="filter42"
+   x="-0.017408335"
+   y="-0.032817059"
+   width="1.034817"
+   height="1.065632"><feGaussianBlur
+     inkscape:collect="always"
+     stdDeviation="2.3259715"
+     id="feGaussianBlur42" /></filter><filter
+   inkscape:collect="always"
+   style="color-interpolation-filters:sRGB"
+   id="filter98"
+   x="-0.017405052"
+   y="-0.026164245"
+   width="1.0348101"
+   height="1.0523287"><feGaussianBlur
+     inkscape:collect="always"
+     stdDeviation="165.175"
+     id="feGaussianBlur98" /></filter><filter
+   inkscape:collect="always"
+   style="color-interpolation-filters:sRGB"
+   id="filter99"
+   x="-0.12635593"
+   y="-0.066918704"
+   width="1.2527119"
+   height="1.1338374"><feGaussianBlur
+     inkscape:collect="always"
+     stdDeviation="7.0948457"
+     id="feGaussianBlur99" /></filter><filter
+   inkscape:collect="always"
+   style="color-interpolation-filters:sRGB"
+   id="filter7"
+   x="-0.17466825"
+   y="-0.078368204"
+   width="1.3493365"
+   height="1.1567364"><feGaussianBlur
+     inkscape:collect="always"
+     stdDeviation="15.289563"
+     id="feGaussianBlur7" /></filter></defs>
   <style
    id="style1"
-   type="text/css">
-    .lblEtiqueta {font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1}
-    .mobiAudioVideo {   }
-    .mobiPlataforma {   }
-    .mobiEscalerasPlataforma {   }
-    .mobiPantalla {   }
-    .mobiCortinado {   }
-    .mobiMostrador {   }
-    .mobiPiscina {   }
-    .mobiSillas { font-variation-settings: normal;
-opacity: 1;
-vector-effect: none;
-fill: #000066;
-fill-opacity: 1;
-stroke: #c4c4c4;
-stroke-width: 1.2px;
-stroke-linecap: butt;
-stroke-linejoin: round;
-stroke-miterlimit: 4;
-stroke-dasharray: none;
-stroke-dashoffset: 0;
-stroke-opacity: 1;}
-    .ediCortinado {font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:2.00023;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.00023, 4.00045;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1}
-    .ediAtrio {shape-rendering: geometricPrecision;
-    text-rendering: geometricPrecision;
-    image-rendering: optimizeQuality;
-    fill-rule: evenodd;
-    clip-rule: evenodd;
-    display: inline;
-    opacity: 0.75;
-    fill: #cccccc;}
-    .ediParedesExternas { stroke:#4D4D4D;stroke-width:6.25;stroke-miterlimit:22.9256;fill:none   }
-    .ediPuertas {fill:white;stroke:black;stroke-width:0.9;stroke-miterlimit:22.9256; clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision}
-    .ediSalas {fill:none;stroke:#4d4d4d;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .ediLineasEstacionamiento {   }
-    .ediAsfalto {   }
-    .ediBase {fill:white;  }
-    .ediGalerias {   }
-    .ediVeredas {   }
-    .ediCesped {fill:#006633;opacity: 0}
-    .secAreaRestringida {font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:0.370262;vector-effect:none;fill:url(#pattern21);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000 }
-    .icoIcon {font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1}
-    .icoSalidas {clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#d64c00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3433.22;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision}
-    .icoDepartamentos {fill:#0c5c10;fill-opacity:1;stroke:none;stroke-width:3433.22}
-    .icoInstalaciones {clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#081a3f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3433.22;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision}
-    .icoBox {clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision}
-    .str1 {stroke:#4D4D4D;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str4 {stroke:white;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str10 {stroke:white;stroke-width:2.08;stroke-miterlimit:22.9256}
-    .str2 {stroke:black;stroke-width:0.9;stroke-miterlimit:22.9256}
-    .str3 {stroke:#4D4D4D;stroke-width:0.9;stroke-miterlimit:22.9256}
-    .str5 {stroke:#4D4D4D;stroke-width:0.9;stroke-miterlimit:22.9256}
-    
-    .str6 {stroke:#CC6633;stroke-width:0.9;stroke-miterlimit:22.9256}
-    .str7 {stroke:white;stroke-width:0.9;stroke-miterlimit:22.9256}
-    .str9 {stroke:white;stroke-width:3.13;stroke-linejoin:round;stroke-miterlimit:22.9256}
-    .fil3 {fill:none}
-    .fil14 {fill:none;fill-rule:nonzero}
-    .fil13 {fill:black}
-    
-    .fil5 {fill:#006633}
-    .fil4 {fill:#006633}
-    .fil6 {fill:#666666}
-    .fil9 {fill:#6699FF}
-    .fil1 {fill:#B3B3B3}
-    .fil8 {fill:#CC6633}
-    .fil0 {fill:#E6E6E6}
-    .fil11 {fill:white;fill-rule:nonzero}
-    .fil7 {fill:url(#id0)}
-    .fil12 {fill:url(#id1)}
-    .fnt0 {font-weight:normal;font-size:10.42px;font-family:'NewsGoth BT'}
-  </style>
+   type="text/css">.icoHighlightArea {opacity:1;mix-blend-mode:normal;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;paint-order:stroke;filter:url(#filter99);image-rendering:optimizeQuality;shape-rendering:geometricPrecision }
+.lblEtiqueta { font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1 }
+.mobiAudioVideo {   }
+.mobiPlataforma {   }
+.mobiEscalerasPlataforma {   }
+.mobiPantalla {   }
+.mobiCortinado {   }
+.mobiMostrador {   }
+.mobiPiscina {   }
+.mobiSillas { font-variation-settings: normal;opacity: 1;vector-effect: none;fill: #000066;fill-opacity: 1;stroke: #c4c4c4;stroke-width: 1.2px;stroke-linecap: butt;stroke-linejoin: round;stroke-miterlimit: 4;stroke-dasharray: none;stroke-dashoffset: 0;stroke-opacity: 1; }
+.ediCortinado { font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:2.00023;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.00023, 4.00045;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1 }
+.ediAtrio { shape-rendering: geometricPrecision;    text-rendering: geometricPrecision;    image-rendering: optimizeQuality;    fill-rule: evenodd;    clip-rule: evenodd;    display: inline;    opacity: 0.75;    fill: #cccccc; }
+.ediParedesExternas { stroke:#4D4D4D;stroke-width:6.25;stroke-miterlimit:22.9256;fill:none }
+.ediPuertas { fill:white;stroke:black;stroke-width:0.9;stroke-miterlimit:22.9256; clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision }
+.ediSalas { fill:none;stroke:#4d4d4d;stroke-width:4.17;stroke-miterlimit:22.9256 }
+.ediLineasEstacionamiento {   }
+.ediAsfalto {   }
+.ediBase { fill:white; }
+.ediGalerias {   }
+.ediVeredas {   }
+.ediCesped { fill:#006633;opacity: 0 }
+.secAreaRestringida { font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:0.370262;vector-effect:none;fill:url(#pattern21);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000 }
+.icoIcon { font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1 }
+.icoSalidas { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#d64c00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3433.22;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision }
+.icoDepartamentos { fill:#0c5c10;fill-opacity:1;stroke:none;stroke-width:3433.22 }
+.icoInstalaciones { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#081a3f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3433.22;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision }
+.icoBox { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision }
+.str1 { stroke:#4D4D4D;stroke-width:4.17;stroke-miterlimit:22.9256 }
+.str4 { stroke:white;stroke-width:4.17;stroke-miterlimit:22.9256 }
+.str10 { stroke:white;stroke-width:2.08;stroke-miterlimit:22.9256 }
+.str2 { stroke:black;stroke-width:0.9;stroke-miterlimit:22.9256 }
+.str3 { stroke:#4D4D4D;stroke-width:0.9;stroke-miterlimit:22.9256 }
+.str5 { stroke:#4D4D4D;stroke-width:0.9;stroke-miterlimit:22.9256 }
+.str6 { stroke:#CC6633;stroke-width:0.9;stroke-miterlimit:22.9256 }
+.str7 { stroke:white;stroke-width:0.9;stroke-miterlimit:22.9256 }
+.str9 { stroke:white;stroke-width:3.13;stroke-linejoin:round;stroke-miterlimit:22.9256 }
+.fil3 { fill:none }
+.fil14 { fill:none;fill-rule:nonzero }
+.fil13 { fill:black }
+.fil5 { fill:#006633 }
+.fil4 { fill:#006633 }
+.fil6 { fill:#666666 }
+.fil9 { fill:#6699FF }
+.fil1 { fill:#B3B3B3 }
+.fil8 { fill:#CC6633 }
+.fil0 { fill:#E6E6E6 }
+.fil11 { fill:white;fill-rule:nonzero }
+.fil7 { fill:url(#id0) }
+.fil12 { fill:url(#id1) }
+.fnt0 { font-weight:normal;font-size:10.42px;font-family:'NewsGoth BT' }
+</style>
   
   <g
    inkscape:groupmode="layer"
@@ -1811,7 +1829,8 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layMobiliarioPB"
    id="layMobiliarioPB"
-   style="display:inline">
+   style="display:inline"
+   sodipodi:insensitive="true">
       <path
    id="mostradorRecepcion"
    d="m 576.93,468.62 16.62,16.62 h 11.71 v 11.81 h -16.6 l -23.54,-23.54 v -38.38 h 11.81 z"
@@ -4025,7 +4044,7 @@ stroke-opacity: 1;}
    inkscape:groupmode="layer"
    inkscape:label="layCirculacionGuardaAlimentosPB"
    id="layCirculacionGuardaAlimentosPB"
-   style="display:inline">
+   style="display:none">
       <path
    id="path14"
    style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:0.368946;mix-blend-mode:darken;vector-effect:none;fill:#8fff7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter2);image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
@@ -4071,10 +4090,16 @@ stroke-opacity: 1;}
       <g
    id="icoAuditorioAuxiliarPB"
    inkscape:label="icoAuditorioAuxiliarPB"><path
-     style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd;display:inline;font-variation-settings:normal;opacity:1;mix-blend-mode:darken;vector-effect:none;fill:#ff847f;fill-opacity:0;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke"
+     style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;mix-blend-mode:darken;vector-effect:none;fill:#ff847f;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
      d="m 1228,421.23 0.01,329.17 H 1053.68 V 421.23 Z"
      id="path138"
-     transform="translate(2.5606754e-6)" /></g><g
+     transform="translate(2.5606754e-6)" /><path
+     d="m 1228,421.23 0.01,329.17 H 1053.68 V 421.23 Z"
+     id="hlAuditorioAuxiliarPB"
+     transform="translate(2.5606754e-6)"
+     inkscape:label="hlAuditorioAuxiliarPB"
+     class="icoHighlightArea"
+     style="display:none" /></g><g
    id="icoVestibuloPB"
    class="icoBox"
    transform="matrix(0.017,0,0,0.017,646.02,547.32)"
@@ -4103,31 +4128,57 @@ stroke-opacity: 1;}
    class="lblEtiqueta"
    style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
    transform="matrix(58.82353,-2.8658811e-7,2.8658811e-7,58.82353,-38001.176,-32195.294)"
-   inkscape:label="lblVestibuloPB">Vestíbulo</text></g><g
+   inkscape:label="lblVestibuloPB">Vestíbulo</text><path
+   id="hlVestibuloPB"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:10.0011;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter42);image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   d="m 608.69078,291.91036 -162.92003,162.59862 161.91918,159.88162 3.6e-4,-9.41982 445.98881,0.93897 V 546.8597 l -272.44915,10e-4 -38.97702,-41.15124 -0.005,-44.90955 0.49351,-39.5701 -10.21269,-1.8e-4 -8.6e-4,-112.6087 z m -0.99989,131.50015 32.19974,-0.002 -2.7e-4,71.77015 -32.19973,0.002 z"
+   transform="matrix(58.823529,0,0,58.823529,-38001.176,-32195.294)"
+   inkscape:label="hlVestibuloPB" /></g><g
    id="icoAreaRestringidaPB"
    style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd;display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0"
    inkscape:label="icoAreaRestringidaPB">
-        <path
-   id="path82"
-   d="m 931.34,844.46 0.78,-238.55 H 783.87 v 73.03 H 667.05 v 71.93 h -59.36 v 93.59 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-        <path
-   id="path83"
-   d="m 931.34,470.38 v -49.15 h 122.34 V 546.86 H 849.2 v -76.48 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-        <path
-   id="path84"
-   d="m 959.29,605.91 h 94.38 v 144.48 h -94.38 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-        <path
-   id="path85"
-   d="m 979.37,793.57 h 32.25 v 30.94 h -32.25 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-      </g><g
+        
+        
+        
+        
+      <g
+   id="g99"><path
+     id="path10"
+     d="m 931.34,844.46 0.78,-238.55 H 783.87 v 73.03 H 667.05 v 71.93 h -59.36 v 93.59 z"
+     class="secAreaRestringida"
+     style="fill:#ffffff;fill-opacity:0" /><path
+     id="path11"
+     d="m 931.34,470.38 v -49.15 h 122.34 V 546.86 H 849.2 v -76.48 z"
+     class="secAreaRestringida"
+     style="fill:#ffffff;fill-opacity:0" /><path
+     id="path98"
+     d="m 959.29,605.91 h 94.38 v 144.48 h -94.38 z"
+     class="secAreaRestringida"
+     style="fill:#ffffff;fill-opacity:0" /><path
+     id="path99"
+     d="m 979.37,793.57 h 32.25 v 30.94 h -32.25 z"
+     class="secAreaRestringida"
+     style="fill:#ffffff;fill-opacity:0" /></g><g
+   id="hlAreaRestringidaPB"
+   inkscape:label="hlAreaRestringidaPB"
+   style="display:inline"
+   class="icoHighlightArea"><path
+     id="path82"
+     d="m 931.34,844.46 0.78,-238.55 H 783.87 v 73.03 H 667.05 v 71.93 h -59.36 v 93.59 z"
+     class="secAreaRestringida"
+     style="fill:#ffffff;fill-opacity:0" /><path
+     id="path83"
+     d="m 931.34,470.38 v -49.15 h 122.34 V 546.86 H 849.2 v -76.48 z"
+     class="secAreaRestringida"
+     style="fill:#ffffff;fill-opacity:0" /><path
+     id="path84"
+     d="m 959.29,605.91 h 94.38 v 144.48 h -94.38 z"
+     class="secAreaRestringida"
+     style="fill:#ffffff;fill-opacity:0" /><path
+     id="path85"
+     d="m 979.37,793.57 h 32.25 v 30.94 h -32.25 z"
+     class="secAreaRestringida"
+     style="fill:#ffffff;fill-opacity:0" /></g></g><g
    id="icoAccesoPeatonalPB"
    class="icoBox"
    transform="matrix(0.017,0,0,0.017,355.35,718.72)"
@@ -4489,7 +4540,13 @@ stroke-opacity: 1;}
      id="tspan721"
      x="1313.9819"
      y="498.55386"
-     style="text-align:center;text-anchor:middle">cubierta</tspan></text></g>
+     style="text-align:center;text-anchor:middle">cubierta</tspan></text><path
+   id="hlGaleriaCubiertaPB"
+   d="m -33743.529,-2652.3529 v -6624.1176 l 18615.294,2512.3529 21061.176,4.7059 V 17117.059 H -4594.1177 l -4.1177,-19769.4119 z"
+   class="fil1 ediGalerias"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:588.302;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter98);image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   transform="translate(-7.1309296e-4,1.8170778e-4)"
+   inkscape:label="hlGaleriaCubiertaPB" /></g>
       <g
    id="icoAscensoresPB"
    class="icoBox"
@@ -4508,14 +4565,31 @@ stroke-opacity: 1;}
    class="icoIcon" />
       <text
    id="lblAscensoresPB"
-   x="-973.50696"
-   y="969.13641"
+   x="656.60999"
+   y="484.12"
    class="lblEtiqueta"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"><tspan
-     id="tspan725-4"
-     x="-973.50696"
-     y="969.13641"
-     style="stroke-width:235.321">Ascensores</tspan></text></g>
+   style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd;display:inline;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
+   transform="matrix(58.823529,0,0,58.823529,-38182.353,-27494.118)"
+   inkscape:label="lblAscensoresPB"><tspan
+     id="tspan725-4-5-8"
+     x="656.60999"
+     y="484.12">Ascensores</tspan></text><rect
+   style="opacity:1;fill:#ff6600;fill-rule:evenodd;stroke-width:58.83017078;stroke-opacity:0;paint-order:fill markers stroke;fill-opacity:0;stroke:none;stroke-dasharray:none"
+   id="rect5"
+   width="1894.139"
+   height="4221.686"
+   x="-2435.8801"
+   y="-2587.6465"
+   ry="314.32999" /><rect
+   style="display:none;opacity:1;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:588.302;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter7);stop-color:#000000;stop-opacity:1"
+   id="hlAscensoresPB"
+   width="1894.139"
+   height="4221.686"
+   x="-2435.8801"
+   y="-2587.6465"
+   ry="314.32999"
+   inkscape:label="hlAscensoresPB"
+   class="icoHighlightArea" /></g>
       <g
    id="icoPrimerosAuxiliosPB"
    class="icoBox"
