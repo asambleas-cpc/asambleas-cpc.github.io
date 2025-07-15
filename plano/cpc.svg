@@ -14,16 +14,16 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layIconosPB"
+   inkscape:current-layer="layEvacuacionPB"
    inkscape:cx="685.62498"
    inkscape:cy="502.37499"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
    inkscape:showpageshadow="0"
-   inkscape:window-height="1009"
+   inkscape:window-height="889"
    inkscape:window-maximized="1"
-   inkscape:window-width="1920"
+   inkscape:window-width="1536"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:zoom="4.0000001"
@@ -1315,7 +1315,9 @@
      id="feGaussianBlur7" /></filter></defs>
   <style
    id="style1"
-   type="text/css">.icoHighlightArea {opacity:1;mix-blend-mode:normal;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;paint-order:stroke;filter:url(#filter99);image-rendering:optimizeQuality;shape-rendering:geometricPrecision }
+   type="text/css">
+   .icoHighlightAreaHidden {display:none}
+   .icoHighlightArea {opacity:1;mix-blend-mode:normal;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;paint-order:stroke;filter:url(#filter99);image-rendering:optimizeQuality;shape-rendering:geometricPrecision }
 .lblEtiqueta { font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1 }
 .mobiAudioVideo {   }
 .mobiPlataforma {   }
@@ -3936,7 +3938,7 @@
    inkscape:groupmode="layer"
    inkscape:label="layAccesoAuditoriosPB"
    id="layAccesoAuditoriosPB"
-   style="display:none">
+   style="display:inline">
       <path
    id="accesoAuxiliarPB"
    d="m 491.06,598.73 c 46.26,-46.13 68.63,-66.36 117.35,-62.48 58.59,4.67 82,42.4 167.89,42.92 55.64,0.34 172.12,-1.9 230.37,-3.26"
@@ -3967,9 +3969,9 @@
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill">Personas mayores, con movilidad reducida, embarazadas o con niños pequeños</tspan></textPath></text></g>
     <g
    inkscape:groupmode="layer"
-   inkscape:label="layRutasEscapePB"
-   id="layRutasEscapePB"
-   style="display:none">
+   inkscape:label="layEvacuacionPB"
+   id="layEvacuacionPB"
+   style="display:inline">
       <g
    id="rutaAuxiliarPB">
         <path
@@ -4042,9 +4044,9 @@
     </g>
     <g
    inkscape:groupmode="layer"
-   inkscape:label="layCirculacionGuardaAlimentosPB"
-   id="layCirculacionGuardaAlimentosPB"
-   style="display:none">
+   inkscape:label="layGuardaAlimentosPB"
+   id="layGuardaAlimentosPB"
+   style="display:inline">
       <path
    id="path14"
    style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:0.368946;mix-blend-mode:darken;vector-effect:none;fill:#8fff7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter2);image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
@@ -4084,8 +4086,8 @@
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill"
      rotate="0 0 0 0 0 0 0">Salida</tspan></text></g><g
    inkscape:groupmode="layer"
-   inkscape:label="layIconosPB"
-   id="layIconosPB"
+   inkscape:label="layDepartamentosInstalacionesPB"
+   id="layDepartamentosInstalacionesPB"
    style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd;display:inline">
       <g
    id="icoAuditorioAuxiliarPB"
@@ -4840,7 +4842,7 @@
    inkscape:groupmode="layer"
    inkscape:label="layPlantaAlta"
    id="layPlantaAlta"
-   style="clip-rule:evenodd;display:none;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
    transform="translate(2.5596824e-6)">
     <g
    inkscape:groupmode="layer"
@@ -11864,7 +11866,7 @@
    inkscape:groupmode="layer"
    inkscape:label="layAccesoAuditoriosPA"
    id="layAccesoAuditoriosPA"
-   style="display:none">
+   style="display:inline">
       <path
    id="accesoGeneral2PA"
    d="m 543.91,398.16 c 106.03,-132.5 142.2,-52.04 217.19,-44.24 108.24,11.26 151.95,27.68 152.66,76.22"
@@ -11876,8 +11878,8 @@
     </g>
     <g
    inkscape:groupmode="layer"
-   inkscape:label="layCirculacionGuardaAlimentosPA"
-   id="layCirculacionGuardaAlimentosPA"
+   inkscape:label="layGuardaAlimentosPA"
+   id="layGuardaAlimentosPA"
    style="display:inline">
       <path
    id="path4"
@@ -11918,9 +11920,9 @@
      rotate="0 0 0 0 0 0 0">Salida</tspan></text></g>
     <g
    inkscape:groupmode="layer"
-   inkscape:label="layRutasEscapePA"
-   id="layRutasEscapePA"
-   style="display:none">
+   inkscape:label="layEvacuacionPA"
+   id="layEvacuacionPA"
+   style="display:inline">
       <path
    id="path21"
    d="m 1384.5,743.47 -0.1,52.96"
@@ -11991,8 +11993,8 @@
    style="display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient81);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none" />
     </g><g
    inkscape:groupmode="layer"
-   inkscape:label="layIconosPA"
-   id="layIconosPA"
+   inkscape:label="layDepartamentosInstalacionesPA"
+   id="layDepartamentosInstalacionesPA"
    style="clip-rule:evenodd;display:inline;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
       <g
    id="icoAuditorioPrincipalPA"

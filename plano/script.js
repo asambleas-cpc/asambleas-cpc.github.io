@@ -12,7 +12,6 @@ const map = L.map('map', {
     rotate: true,
     zoomControl: false // Disable default zoom control
 }).setView(bounds.getCenter(), 19);
-map.setBearing(-9.8);
 
 // 3. Add tile layer
 L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
@@ -22,28 +21,15 @@ L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
 }).addTo(map);
 
 // --- GLOBAL VARIABLES ---
-let layPlantaAlta;
-let layPlantaBaja;
-let btnPlantaAlta;
-let btnPlantaBaja;
-let layerSelectorBtn;
-let layerSelectorDropdown;
-let svgElement;
-let layerTitleElement;
-let floorSubtitleElement;
-let currentLayer = 'Iconos'; // Default layer
+let definitions, layers, floors;
+let floorLayers = {};
+let btnPlantaAlta, btnPlantaBaja, layerSelectorBtn, layerSelectorDropdown, svgElement, layerTitleElement, floorSubtitleElement;
+let currentLayer = 'departamentos'; // Default layer
 
-        features = {
-            'Iconos': 'layIconos',
-            'AccesoAuditorios': 'layAccesoAuditorios',
-            'CirculacionGuardaAlimentos': 'layCirculacionGuardaAlimentos',
-            'RutasEscape': 'layRutasEscape'
-        };
-
-        // --- STATE MANAGEMENT ---
-        currentActiveFloor = 'PlantaBaja';
-        highlightedElement = null;
-        activeOffcanvas = null;
+// --- STATE MANAGEMENT ---
+let currentActiveFloor = 0;
+let highlightedElement = null;
+let activeOffcanvas = null;
 
 // --- FUNCTIONS ---
 function clearHighlight() {
@@ -52,8 +38,8 @@ function clearHighlight() {
 
         // Construct the ID of the corresponding 'hl' element
         const floorSuffix = getFloorSuffix();
-        const iconBaseName = highlightedElement.id.replace(/^ico/, '').replace(/P[AB]$/, '');
-        const hlElementId = `hl${iconBaseName}${floorSuffix}`;
+        const iconBaseName = highlightedElement.id.replace(new RegExp(`^${definitions.prefixes.icon}`), '').replace(definitions.suffixes.floor, '');
+        const hlElementId = `${definitions.prefixes.highlight}${iconBaseName}${floorSuffix}`;
         const hlElement = svgElement.querySelector(`#${hlElementId}`);
 
         // Hide the 'hl' element
@@ -152,8 +138,8 @@ function showAndHighlightIcon(iconId, offcanvasId) {
 
     // Construct the ID of the corresponding 'hl' element
     const floorSuffix = getFloorSuffix();
-    const iconBaseName = iconId.replace(/^ico/, '').replace(/P[AB]$/, '');
-    const hlElementId = `hl${iconBaseName}${floorSuffix}`;
+    const iconBaseName = iconId.replace(new RegExp(`^${definitions.prefixes.icon}`), '').replace(definitions.suffixes.floor, '');
+    const hlElementId = `${definitions.prefixes.highlight}${iconBaseName}${floorSuffix}`;
     const hlElement = svgElement.querySelector(`#${hlElementId}`);
 
     // Show the 'hl' element
@@ -172,7 +158,7 @@ function showAndHighlightIcon(iconId, offcanvasId) {
 
 // Helper function to get floor suffix
 function getFloorSuffix() {
-    return currentActiveFloor === 'PlantaAlta' ? 'PA' : 'PB';
+    return floors[currentActiveFloor].suffix;
 }
 
 function updateMapTitle() {
@@ -180,18 +166,19 @@ function updateMapTitle() {
     const layerText = activeLayerItem ? activeLayerItem.textContent : 'Cargando...';
     layerTitleElement.textContent = layerText;
 
-    const floorText = currentActiveFloor === 'PlantaAlta' ? 'Planta alta' : 'Planta baja';
+    const floorText = floors[currentActiveFloor].name;
     floorSubtitleElement.textContent = floorText;
 }
 
 function updateLayerVisibility(isInitial) {
-    const selectedLayer = currentLayer;
+    const selectedLayer = layers[currentLayer];
     const floorSuffix = getFloorSuffix();
-    const targetLayerId = features[selectedLayer] + floorSuffix;
+    const targetLayerId = definitions.prefixes.layer + selectedLayer.id + floorSuffix;
 
-    for (const key in features) {
-        for (const suffix of ['PB', 'PA']) {
-            const layerId = features[key] + suffix;
+    for (const key in layers) {
+        for (const floorKey in floors) {
+            const floor = floors[floorKey];
+            const layerId = definitions.prefixes.layer + layers[key].id + floor.suffix;
             const layer = svgElement.querySelector(`#${layerId}`);
             if (layer) {
                 const isTarget = layer.id === targetLayerId;
@@ -214,55 +201,61 @@ function updateLayerVisibility(isInitial) {
         }
     }
 
-    if (selectedLayer !== 'Iconos') {
+    if (!selectedLayer.interactive) {
         hideActiveOffcanvas();
         clearHighlight();
     }
 }
 
-function switchFloor(floorName, isInitial = false) {
-    // If the floor is not actually changing, just update layer visibility.
-    if (!isInitial && currentActiveFloor === floorName) {
+function switchFloor(level, isInitial = false) {
+    if (!isInitial && currentActiveFloor === level) {
         updateLayerVisibility(false);
         return;
     }
-    currentActiveFloor = floorName;
-    const isPlantaAlta = floorName === 'PlantaAlta';
+    currentActiveFloor = level;
 
-    if (!isInitial) {
-        layPlantaAlta.classList.add('fade-transition');
-        layPlantaBaja.classList.add('fade-transition');
-    }
+    for (const floorLevel in floors) {
+        const floorLayer = floorLayers[floorLevel];
+        if (floorLayer) {
+            if (!isInitial) {
+                floorLayer.classList.add('fade-transition');
+            }
+            floorLayer.style.opacity = floorLevel <= level ? 1 : 0;
+            if (floorLevel < level) {
+                floorLayer.style.filter = 'blur(3px) brightness(0.85)';
+            } else {
+                floorLayer.style.filter = '';
+            }
 
-    layPlantaAlta.style.opacity = isPlantaAlta ? 1 : 0;
-    layPlantaBaja.style.opacity = 1; // Keep it opaque
-    layPlantaBaja.style.filter = isPlantaAlta ? 'blur(3px) brightness(0.85)' : ''; // Apply blur and darken filter
-
-    if (isPlantaAlta) {
-        layPlantaAlta.style.display = 'block';
-        layPlantaBaja.style.display = 'block';
-    } else {
-        if (!isInitial) {
-            setTimeout(() => {
-                layPlantaAlta.style.display = 'none';
-            }, 500);
-        } else {
-            layPlantaAlta.style.display = 'none';
+            if (floorLevel <= level) {
+                floorLayer.style.display = 'block';
+            } else {
+                if (!isInitial) {
+                    setTimeout(() => {
+                        floorLayer.style.display = 'none';
+                    }, 500);
+                } else {
+                    floorLayer.style.display = 'none';
+                }
+            }
         }
     }
 
-    map.getPane('tilePane').classList.toggle('basemap-blurred', isPlantaAlta);
+    map.getPane('tilePane').classList.toggle('basemap-blurred', level > 0);
 
-    btnPlantaAlta.classList.toggle('active', isPlantaAlta);
-    btnPlantaBaja.classList.toggle('active', !isPlantaAlta);
+    // Update floor button active states
+    const floorControls = document.getElementById('floor-controls');
+    const buttons = floorControls.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.classList.toggle('active', button.dataset.level == level);
+    });
     
     hideActiveOffcanvas();
     clearHighlight();
     updateLayerVisibility(isInitial);
 }
 
-function mostrarMapa(floorNumber, capa, highlightId, isInitial = false) {
-    const floorName = floorNumber === 1 ? 'PlantaAlta' : 'PlantaBaja';
+function mostrarMapa(floorKey, capa, highlightId, isInitial = false) {
     currentLayer = capa;
     
     // Update active state in dropdown
@@ -270,13 +263,13 @@ function mostrarMapa(floorNumber, capa, highlightId, isInitial = false) {
         item.classList.toggle('active', item.dataset.value === capa);
     });
 
-    switchFloor(floorName, isInitial);
+    switchFloor(floorKey, isInitial);
     updateMapTitle();
 
-    if (capa === 'Iconos' && highlightId) {
+    if (layers[capa].interactive && highlightId) {
         const floorSuffix = getFloorSuffix();
-        const iconId = `ico${highlightId}${floorSuffix}`;
-        const offcanvasId = `offcanvas${highlightId}`;
+        const iconId = `${definitions.prefixes.icon}${highlightId}${floorSuffix}`;
+        const offcanvasId = `${definitions.prefixes.offcanvas}${highlightId}`;
         
         // Use a timeout to ensure the element is visible before calculating its position
         setTimeout(() => {
@@ -304,42 +297,39 @@ function updateOffcanvasLayout() {
     }
 }
 
-// 4. Fetch and load SVG
-const svgUrl = 'cpc.svg';
-fetch(svgUrl)
-    .then(response => response.text())
-    .then(svgText => {
+async function initializeMap() {
+    try {
+        const response = await fetch('map-config.json');
+        const config = await response.json();
+        definitions = config.definitions;
+        layers = config.layers;
+        floors = config.floors;
+
+        // Convert suffix string to RegExp
+        definitions.suffixes.floor = new RegExp(definitions.suffixes.floor);
+
+        map.setBearing(config.rotation);
+
+        const svgUrl = 'cpc.svg';
+        const svgResponse = await fetch(svgUrl);
+        const svgText = await svgResponse.text();
+
         const parser = new DOMParser();
         const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
-        svgElement = svgDoc.documentElement; // Assign to global variable
-      
-        // --- START of your modification code ---
-        // Find the specific element you want to change
-        const elementToModify = svgElement.querySelector('#layBase');
+        svgElement = svgDoc.documentElement;
 
-        // Check if the element exists before trying to change it
+        const elementToModify = svgElement.querySelector('#layBase');
         if (elementToModify) {
-         // Change a property, for example, the fill color
-            elementToModify.setAttribute('transform', 'rotate(9.8,832.66,574.21)');
-         // You could also change other properties, like its stroke
-         // elementToModify.setAttribute('stroke', 'blue');
+            elementToModify.setAttribute('transform', `rotate(${-config.rotation},832.66,574.21)`);
         }
-        // --- END of your modification code ---       
-        
+
         L.svgOverlay(svgElement, bounds, { interactive: true }).addTo(map);
 
-        // Apply rotation to layBase
-        // const layBase = svgElement.querySelector('#layBase');
-        // if (layBase) {
-        //     layBase.style.transformOrigin = 'center center';
-        //     layBase.style.transform = 'rotate(9.8deg)';
-        // }
-
         // --- CACHING ELEMENTS ---
-        layPlantaAlta = svgElement.querySelector('#layPlantaAlta');
-        layPlantaBaja = svgElement.querySelector('#layPlantaBaja');
-        btnPlantaAlta = document.getElementById('btnPlantaAlta');
-        btnPlantaBaja = document.getElementById('btnPlantaBaja');
+        for (const level in floors) {
+            const floor = floors[level];
+            floorLayers[level] = svgElement.querySelector(`#${floor.baseLayerId}`);
+        }
         layerSelectorBtn = document.getElementById('layer-selector-btn');
         layerSelectorDropdown = document.querySelector('.dropdown-menu');
         layerTitleElement = document.getElementById('layer-title');
@@ -347,17 +337,39 @@ fetch(svgUrl)
         const zoomInBtn = document.getElementById('zoom-in');
         const zoomOutBtn = document.getElementById('zoom-out');
 
+        // --- DYNAMICALLY POPULATE FLOOR BUTTONS ---
+        const floorControls = document.getElementById('floor-controls');
+        floorControls.innerHTML = ''; // Clear existing items
+        Object.keys(floors).sort((a, b) => b - a).forEach(level => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'btn';
+            button.dataset.level = level;
+            button.textContent = level;
+            floorControls.appendChild(button);
 
-        // --- EVENT LISTENERS ---
-        btnPlantaAlta.addEventListener('click', () => mostrarMapa(1, currentLayer));
-        btnPlantaBaja.addEventListener('click', () => mostrarMapa(0, currentLayer));
-        
+            button.addEventListener('click', () => mostrarMapa(level, currentLayer));
+        });
+
+        // --- DYNAMICALLY POPULATE LAYER SELECTOR ---
+        layerSelectorDropdown.innerHTML = ''; // Clear existing items
+        for (const key in layers) {
+            const layer = layers[key];
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.className = 'dropdown-item';
+            a.href = '#';
+            a.dataset.value = key;
+            a.textContent = layer.name;
+            li.appendChild(a);
+            layerSelectorDropdown.appendChild(li);
+        }
+
         layerSelectorDropdown.addEventListener('click', (event) => {
             const target = event.target;
             if (target.classList.contains('dropdown-item')) {
                 const newLayer = target.dataset.value;
-                const currentFloor = currentActiveFloor === 'PlantaAlta' ? 1 : 0;
-                mostrarMapa(currentFloor, newLayer);
+                mostrarMapa(currentActiveFloor, newLayer);
             }
         });
 
@@ -366,11 +378,11 @@ fetch(svgUrl)
 
         // Click on an icon
         svgElement.addEventListener('click', function(event) {
-            if (currentLayer !== 'Iconos') return;
+            if (!layers[currentLayer].interactive) return;
 
-            const target = event.target.closest('g[id]');
+            const target = event.target.closest(`g[id^="${definitions.prefixes.icon}"]`);
             if (!target) return;
-            
+
             L.DomEvent.stopPropagation(event);
 
             if (highlightedElement && highlightedElement.id === target.id) {
@@ -379,10 +391,10 @@ fetch(svgUrl)
                 return;
             }
 
-            const iconBaseName = target.id.replace(/^ico/, '').replace(/P[AB]$/, '');
-            const offcanvasId = `offcanvas${iconBaseName}`;
+            const iconBaseName = target.id.replace(new RegExp(`^${definitions.prefixes.icon}`), '').replace(definitions.suffixes.floor, '');
+            const offcanvasId = `${definitions.prefixes.offcanvas}${iconBaseName}`;
             showAndHighlightIcon(target.id, offcanvasId);
-            centerOnElement(target); // Center on the clicked element
+            centerOnElement(target);
         });
 
         // Click on map to hide card
@@ -396,10 +408,12 @@ fetch(svgUrl)
         window.addEventListener('resize', updateOffcanvasLayout);
 
         // --- INITIALIZATION ---
-        mostrarMapa(0, 'Iconos', null, true);
+        mostrarMapa(config.defaultView.floor, config.defaultView.layer, null, true);
 
+    } catch (error) {
+        console.error('Error initializing map:', error);
+        alert('Could not initialize map. Please check the console for details.');
+    }
+}
 
-    }).catch(error => {
-        console.error('Error loading or parsing SVG:', error);
-        alert('Could not load the SVG file.');
-    });
+initializeMap();

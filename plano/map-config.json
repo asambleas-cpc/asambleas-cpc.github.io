@@ -1,0 +1,63 @@
+{
+  "definitions": {
+    "prefixes": {
+      "layer": "lay",
+      "icon": "ico",
+      "highlight": "hl",
+      "offcanvas": "offcanvas"
+    },
+    "suffixes": {
+      "floor": "P[AB]$"
+    }
+  },
+  "layers": {
+    "departamentos": {
+      "id": "DepartamentosInstalaciones",
+      "name": "Instalaciones y departamentos",
+      "interactive": true
+    },
+    "accesos": {
+      "id": "AccesoAuditorios",
+      "name": "Acceso a auditorios",
+      "interactive": true
+    },
+    "alimentos": {
+      "id": "GuardaAlimentos",
+      "name": "Guardado de alimentos",
+      "interactive": true
+    },
+    "evacuacion": {
+      "id": "Evacuacion",
+      "name": "Evacuación de emergencia",
+      "interactive": true
+    }
+  },
+  "floors": {
+    "0": {
+      "id": "PlantaBaja",
+      "name": "Planta baja",
+      "suffix": "PB",
+      "baseLayerId": "layPlantaBaja"
+    },
+    "1": {
+      "id": "PlantaAlta",
+      "name": "Planta alta",
+      "suffix": "PA",
+      "baseLayerId": "layPlantaAlta"
+    }
+  },
+  "defaultView": {
+    "floor": 0,
+    "layer": "departamentos"
+  },
+  "rotation": -9.8,
+  "map": {
+    "bounds": {
+      "southWest": [-31.72236, -60.526135],
+      "northEast": [-31.72097, -60.52445]
+    },
+    "maxZoom": 24,
+    "minZoom": 19,
+    "initialZoom": 19
+  }
+}
