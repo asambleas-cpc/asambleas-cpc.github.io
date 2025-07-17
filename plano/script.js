@@ -258,6 +258,15 @@ function switchFloor(level, isInitial = false) {
 }
 
 function mostrarMapa(floorKey, capa, highlightId, isInitial = false) {
+    // Ensure the map modal is visible only if not initial load
+    if (!isInitial) {
+        const mapModalElement = document.getElementById('mapModal');
+        if (mapModalElement && !mapModalElement.classList.contains('show')) {
+            const mapModal = new bootstrap.Modal(mapModalElement);
+            mapModal.show();
+        }
+    }
+
     currentLayer = capa;
     
     // Update active state in dropdown
@@ -456,11 +465,15 @@ async function initializeMap() {
             console.log("Map zoom level after zoom operation:", map.getZoom());
         });
 
-        window.addEventListener('load', updateOffcanvasLayout);
         window.addEventListener('resize', updateOffcanvasLayout);
 
         // --- INITIALIZATION ---
         mostrarMapa(config.defaultView.floor, config.defaultView.layer, null, true);
+
+        // Ensure offcanvas layout is correct after initial load
+        requestAnimationFrame(() => {
+            updateOffcanvasLayout();
+        });
 
         // Click on an icon (moved here to ensure zoomSettings is loaded)
         svgElement.addEventListener('click', function(event) {
