@@ -153,3 +153,12 @@
                 transform: translateX(50%);
             }
         }
+        /* .modal {
+        visibility: hidden;
+        display: block;
+        }
+
+        .modal[aria-hidden='false'] {
+        visibility: visible;
+        display: block;
+        } */

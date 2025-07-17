@@ -1,27 +1,6 @@
-// 1. Define map bounds
-const bounds = L.latLngBounds([
-    [-31.72236, -60.526135], // Southwest
-    [-31.72097, -60.52445]  // Northeast
-]);
-
-// 2. Initialize Leaflet map
-const map = L.map('map', {
-    maxBounds: bounds,
-    maxZoom: 24,
-    minZoom: 19,
-    rotate: true,
-    zoomControl: false // Disable default zoom control
-}).setView(bounds.getCenter(), 19);
-
-// 3. Add tile layer
-L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
-    maxZoom: 24,
-    maxNativeZoom: 20
-}).addTo(map);
-
 // --- GLOBAL VARIABLES ---
-let definitions, layers, floors;
+let definitions, layers, floors, mapConfig, offcanvasInfo, zoomSettings;
+let map; // Define map globally
 let floorLayers = {};
 let btnPlantaAlta, btnPlantaBaja, layerSelectorBtn, layerSelectorDropdown, svgElement, layerTitleElement, floorSubtitleElement;
 let currentLayer = 'departamentos'; // Default layer
@@ -36,13 +15,11 @@ function clearHighlight() {
     if (highlightedElement) {
         highlightedElement.classList.remove('highlight');
 
-        // Construct the ID of the corresponding 'hl' element
+        // Hide the 'hl' element
         const floorSuffix = getFloorSuffix();
         const iconBaseName = highlightedElement.id.replace(new RegExp(`^${definitions.prefixes.icon}`), '').replace(definitions.suffixes.floor, '');
         const hlElementId = `${definitions.prefixes.highlight}${iconBaseName}${floorSuffix}`;
         const hlElement = svgElement.querySelector(`#${hlElementId}`);
-
-        // Hide the 'hl' element
         if (hlElement) {
             hlElement.style.display = 'none';
         }
@@ -51,9 +28,11 @@ function clearHighlight() {
     }
 }
 
+
+
 function hideActiveOffcanvas() {
-    if (activeOffcanvas) {
-        activeOffcanvas.hide();
+    if (mainOffcanvas) {
+        mainOffcanvas.hide();
         // The 'hidden.bs.offcanvas' event will handle cleanup.
     }
 }
@@ -69,70 +48,76 @@ function centerOnElement(element) {
     const mapContainer = map.getContainer();
     const mapRect = mapContainer.getBoundingClientRect();
 
-    // Define the four corners of the bounding box
-    const corners = [
-        { x: bbox.x, y: bbox.y },
-        { x: bbox.x + bbox.width, y: bbox.y },
-        { x: bbox.x + bbox.width, y: bbox.y + bbox.height },
-        { x: bbox.x, y: bbox.y + bbox.height }
-    ];
+    // Calculate center of the element in screen coordinates
+    const pt = svg.createSVGPoint();
+    pt.x = bbox.x + bbox.width / 2;
+    pt.y = bbox.y + bbox.height / 2;
 
-    const latLngs = corners.map(corner => {
-        const pt = svg.createSVGPoint();
-        pt.x = corner.x;
-        pt.y = corner.y;
+    const screenPoint = pt.matrixTransform(ctm);
 
-        // Transform the corner to screen coordinates
-        const screenPoint = pt.matrixTransform(ctm);
+    // Convert to containerPoint relative to map container
+    const containerPoint = L.point(screenPoint.x - mapRect.left, screenPoint.y - mapRect.top);
 
-        // Convert screen coordinates to map layer coordinates
-        const layerPoint = L.point(screenPoint.x - mapRect.left, screenPoint.y - mapRect.top);
+    // Determine pixel offset for offcanvas
+    let offset = L.point(0, 0);
 
-        // Convert layer point to a geographical coordinate
-        return map.layerPointToLatLng(layerPoint);
-    });
-
-    // Create a bounding box that contains all four transformed corners
-    const elementBounds = L.latLngBounds(latLngs);
-
-    // Calculate padding for the offcanvas
-    let padding = [0, 0]; // [x, y]
     if (activeOffcanvas && activeOffcanvas._element) {
         const offcanvasRect = activeOffcanvas._element.getBoundingClientRect();
-        if (activeOffcanvas._element.classList.contains('offcanvas-bottom')) {
-            padding[1] = offcanvasRect.height; // Bottom padding
-        } else if (activeOffcanvas._element.classList.contains('offcanvas-end')) {
-            padding[0] = offcanvasRect.width; // Right padding
+
+        if (activeOffcanvas._element.classList.contains('offcanvas-end')) {
+            // Offcanvas on right: shift view left (positive x)
+            offset.x = offcanvasRect.width / 2;
+        } else if (activeOffcanvas._element.classList.contains('offcanvas-bottom')) {
+            // Offcanvas on bottom: shift view up (positive y)
+            offset.y = offcanvasRect.height / 2;
         }
     }
 
-    // Fit the map to the element's bounds with padding and zoom constraints
-    map.fitBounds(elementBounds, {
-        paddingTopLeft: [0, 0], // No padding on top-left
-        paddingBottomRight: padding, // Apply padding to bottom-right
-        maxZoom: 21
+    // Adjust containerPoint by offset
+    const adjustedPoint = containerPoint.add(offset);
+
+    // Convert back to latlng
+    const latlng = map.containerPointToLatLng(adjustedPoint);
+
+    // Center the map view
+    map.setView(latlng, mapConfig.zoomOnHighlight, {
+        animate: true
     });
 }
 
 
-function showAndHighlightIcon(iconId, offcanvasId) {
+
+
+
+function showAndHighlightIcon(iconId, offcanvasKey) {
     const target = svgElement.querySelector(`#${iconId}`);
     if (!target) return;
 
-    const offcanvasElement = document.getElementById(offcanvasId);
-    if (!offcanvasElement) return;
+    // Clear any existing highlight before applying a new one
+    clearHighlight();
+
+    const offcanvasData = offcanvasInfo[offcanvasKey];
+    if (!offcanvasData) {
+        console.error("offcanvasData is undefined for key:", offcanvasKey);
+        return;
+    }
+
+    const offcanvasBodyElement = document.getElementById('mainOffcanvasBody');
+
+    offcanvasBodyElement.innerHTML = `
+        <h5 class="offcanvas-title" id="mainOffcanvasLabel">${offcanvasData.title}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        ${offcanvasData.content || ''}
+    `;
 
     // If a different offcanvas is open, hide it first.
-    if (activeOffcanvas && activeOffcanvas._element.id !== offcanvasId) {
+    if (activeOffcanvas && activeOffcanvas._element.id !== 'mainOffcanvas') {
         hideActiveOffcanvas();
     }
     
-    clearHighlight();
+    mainOffcanvas.show();
     
-    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
-    offcanvas.show();
-    
-    activeOffcanvas = offcanvas;
+    activeOffcanvas = mainOffcanvas;
     highlightedElement = target;
     target.classList.add('highlight');
 
@@ -147,13 +132,30 @@ function showAndHighlightIcon(iconId, offcanvasId) {
         hlElement.style.display = 'block';
     }
 
-    // When the offcanvas is hidden, remove the highlight
-    offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
-        clearHighlight();
-        if (activeOffcanvas && activeOffcanvas._element.id === offcanvasId) {
-            activeOffcanvas = null;
+    // Center the map on the highlighted element
+    const bbox = highlightedElement.getBBox();
+    const elementWidth = bbox.width;
+    const elementHeight = bbox.height;
+
+    console.log("Selected element BBox (width, height):", elementWidth, elementHeight);
+    console.log("Current map zoom level:", map.getZoom());
+
+    let targetZoom = mapConfig.zoomOnHighlight; // Default zoom from config
+
+    if (window.innerWidth > window.innerHeight) { // Landscape (widescreen desktop)
+        targetZoom = zoomSettings.desktopZoom;
+    } else { // Portrait (vertical mobile)
+        if (elementWidth >= zoomSettings.mobileLargeObjectWidth) { // Large object
+            targetZoom = zoomSettings.mobileLargeObjectZoom;
+        } else if (elementHeight <= zoomSettings.mobileSmallObjectHeight) { // Small object
+            targetZoom = zoomSettings.mobileSmallObjectZoom;
+        } else {
+            targetZoom = zoomSettings.mobileDefaultZoom; // Intermediate zoom for other cases on mobile
         }
-    }, { once: true });
+    }
+
+    map.setView(map.getCenter(), targetZoom, { animate: true });
+    centerOnElement(highlightedElement);
 }
 
 // Helper function to get floor suffix
@@ -203,7 +205,7 @@ function updateLayerVisibility(isInitial) {
 
     if (!selectedLayer.interactive) {
         hideActiveOffcanvas();
-        clearHighlight();
+        // clearHighlight();
     }
 }
 
@@ -251,7 +253,7 @@ function switchFloor(level, isInitial = false) {
     });
     
     hideActiveOffcanvas();
-    clearHighlight();
+    // clearHighlight();
     updateLayerVisibility(isInitial);
 }
 
@@ -275,25 +277,20 @@ function mostrarMapa(floorKey, capa, highlightId, isInitial = false) {
         setTimeout(() => {
             const elementToCenter = svgElement.querySelector(`#${iconId}`);
             if (elementToCenter) {
-                showAndHighlightIcon(iconId, offcanvasId);
-                centerOnElement(elementToCenter);
+                showAndHighlightIcon(iconId, highlightId);
             }
         }, 100); 
     }
 }
 
 function updateOffcanvasLayout() {
-    const offcanvasElements = document.querySelectorAll('.info-offcanvas');
+    const mainOffcanvasElement = document.getElementById('mainOffcanvas');
     if (window.innerHeight > window.innerWidth) { // Portrait
-        offcanvasElements.forEach(el => {
-            el.classList.remove('offcanvas-end');
-            el.classList.add('offcanvas-bottom');
-        });
+        mainOffcanvasElement.classList.remove('offcanvas-end');
+        mainOffcanvasElement.classList.add('offcanvas-bottom');
     } else { // Landscape
-        offcanvasElements.forEach(el => {
-            el.classList.remove('offcanvas-bottom');
-            el.classList.add('offcanvas-end');
-        });
+        mainOffcanvasElement.classList.remove('offcanvas-bottom');
+        mainOffcanvasElement.classList.add('offcanvas-end');
     }
 }
 
@@ -304,13 +301,47 @@ async function initializeMap() {
         definitions = config.definitions;
         layers = config.layers;
         floors = config.floors;
+        mapConfig = config.map;
+        offcanvasInfo = config.informacion;
 
-        // Convert suffix string to RegExp
-        definitions.suffixes.floor = new RegExp(definitions.suffixes.floor);
+        console.log("initializeMap: config.zoomSettings =", config.zoomSettings); // Debugging
+        zoomSettings = config.zoomSettings;
+        console.log("initializeMap: zoomSettings (after assignment) =", zoomSettings); // Debugging
+
+        // // Convert suffix string to RegExp
+        // definitions.suffixes.floor = new RegExp(definitions.suffixes.floor);
+
+                const floorSuffixes = Object.values(floors).map(f => f.suffix);
+        if (!definitions.suffixes) {
+            definitions.suffixes = {};
+        }
+        definitions.suffixes.floor = new RegExp(`(${floorSuffixes.join('|')})$`);
+
+        // 1. Define map bounds
+        const bounds = L.latLngBounds(
+            mapConfig.bounds.southWest,
+            mapConfig.bounds.northEast
+        );
+
+        // 2. Initialize Leaflet map
+        map = L.map('map', {
+            maxBounds: bounds,
+            maxZoom: mapConfig.maxZoom,
+            minZoom: mapConfig.minZoom,
+            rotate: true,
+            zoomControl: false // Disable default zoom control
+        }).setView(bounds.getCenter(), mapConfig.initialZoom);
+
+        // 3. Add tile layer
+        L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+            maxZoom: 24,
+            maxNativeZoom: 20
+        }).addTo(map);
 
         map.setBearing(config.rotation);
 
-        const svgUrl = 'cpc.svg';
+        const svgUrl = config.svgSettings.url;
         const svgResponse = await fetch(svgUrl);
         const svgText = await svgResponse.text();
 
@@ -318,12 +349,50 @@ async function initializeMap() {
         const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
         svgElement = svgDoc.documentElement;
 
-        const elementToModify = svgElement.querySelector('#layBase');
+        const elementToModify = svgElement.querySelector(config.svgSettings.elementToRotate);
         if (elementToModify) {
             elementToModify.setAttribute('transform', `rotate(${-config.rotation},832.66,574.21)`);
         }
 
         L.svgOverlay(svgElement, bounds, { interactive: true }).addTo(map);
+
+        // Initialize the single offcanvas instance
+        const mainOffcanvasElement = document.getElementById('mainOffcanvas');
+        mainOffcanvas = new bootstrap.Offcanvas(mainOffcanvasElement);
+
+        // Attach event listeners to the single offcanvas instance once
+        mainOffcanvasElement.addEventListener('shown.bs.offcanvas', function () {
+            if (map) {
+                map.invalidateSize(true);
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        // Removed centerOnElement from here
+                    });
+                });
+            }
+        });
+
+        mainOffcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
+            clearHighlight();
+            if (activeOffcanvas && activeOffcanvas._element.id === 'mainOffcanvas') {
+                activeOffcanvas = null;
+            }
+        });
+
+        // Dismiss map modal when a link inside the offcanvas is clicked
+        const mainOffcanvasBodyElement = document.getElementById('mainOffcanvasBody');
+        mainOffcanvasBodyElement.addEventListener('click', function(event) {
+            const target = event.target.closest('a');
+            if (target) {
+                const mapModalElement = document.getElementById('mapModal');
+                if (mapModalElement) {
+                    const mapModalInstance = bootstrap.Modal.getInstance(mapModalElement);
+                    if (mapModalInstance) {
+                        mapModalInstance.hide();
+                    }
+                }
+            }
+        });
 
         // --- CACHING ELEMENTS ---
         for (const level in floors) {
@@ -376,7 +445,24 @@ async function initializeMap() {
         zoomInBtn.addEventListener('click', () => map.zoomIn());
         zoomOutBtn.addEventListener('click', () => map.zoomOut());
 
-        // Click on an icon
+        // Click on map to hide card
+        map.on('click', function(e) {
+            console.log("Clicked coordinates:", e.latlng);
+            hideActiveOffcanvas();
+            // clearHighlight();
+        });
+
+        map.on('zoomend', function() {
+            console.log("Map zoom level after zoom operation:", map.getZoom());
+        });
+
+        window.addEventListener('load', updateOffcanvasLayout);
+        window.addEventListener('resize', updateOffcanvasLayout);
+
+        // --- INITIALIZATION ---
+        mostrarMapa(config.defaultView.floor, config.defaultView.layer, null, true);
+
+        // Click on an icon (moved here to ensure zoomSettings is loaded)
         svgElement.addEventListener('click', function(event) {
             if (!layers[currentLayer].interactive) return;
 
@@ -387,28 +473,14 @@ async function initializeMap() {
 
             if (highlightedElement && highlightedElement.id === target.id) {
                 hideActiveOffcanvas();
-                clearHighlight();
+                // clearHighlight();
                 return;
             }
 
             const iconBaseName = target.id.replace(new RegExp(`^${definitions.prefixes.icon}`), '').replace(definitions.suffixes.floor, '');
-            const offcanvasId = `${definitions.prefixes.offcanvas}${iconBaseName}`;
-            showAndHighlightIcon(target.id, offcanvasId);
-            centerOnElement(target);
+            const offcanvasKey = iconBaseName;
+            showAndHighlightIcon(target.id, offcanvasKey);
         });
-
-        // Click on map to hide card
-        map.on('click', function(e) {
-            console.log("Clicked coordinates:", e.latlng);
-            hideActiveOffcanvas();
-            clearHighlight();
-        });
-
-        window.addEventListener('load', updateOffcanvasLayout);
-        window.addEventListener('resize', updateOffcanvasLayout);
-
-        // --- INITIALIZATION ---
-        mostrarMapa(config.defaultView.floor, config.defaultView.layer, null, true);
 
     } catch (error) {
         console.error('Error initializing map:', error);
@@ -417,3 +489,17 @@ async function initializeMap() {
 }
 
 initializeMap();
+
+// Fix for map in modal
+const mapModal = document.getElementById('mapModal');
+if (mapModal) {
+    mapModal.addEventListener('shown.bs.modal', () => {
+        if (map) {
+            setTimeout(() => {
+                map.invalidateSize(true);
+                const bounds = L.latLngBounds(mapConfig.bounds.southWest, mapConfig.bounds.northEast);
+                map.fitBounds(bounds);
+            }, 10); // Delay to ensure modal is fully rendered
+        }
+    });
+}

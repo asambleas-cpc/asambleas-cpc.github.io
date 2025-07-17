@@ -34,10 +34,6 @@
                 <span class="material-icons">layers</span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="layer-selector-btn">
-                <li><a class="dropdown-item" href="#" data-value="Iconos">Instalaciones y departamentos</a></li>
-                <li><a class="dropdown-item" href="#" data-value="AccesoAuditorios">Acceso a auditorios</a></li>
-                <li><a class="dropdown-item" href="#" data-value="CirculacionGuardaAlimentos">Guardado de alimentos</a></li>
-                <li><a class="dropdown-item" href="#" data-value="RutasEscape">Evacuación de emergencia</a></li>
             </ul>
         </div>
 
@@ -56,168 +52,12 @@
         <small id="floor-subtitle" class="text-muted"></small>
     </div>
 
-    <!-- Offcanvas Components -->
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasAccesoPeatonal" aria-labelledby="offcanvasAccesoPeatonalLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasAccesoPeatonalLabel">Acceso Peatonal</h5>
+    <!-- Single Offcanvas -->
+    <div class="offcanvas info-offcanvas" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
+        <div class="offcanvas-body text-white" id="mainOffcanvasBody">
+            <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasAccesoEstacionamiento" aria-labelledby="offcanvasAccesoEstacionamientoLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasAccesoEstacionamientoLabel">Acceso al estacionamiento interno</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>El estacionamiento está reservado para personas con necesidades especiales. Se debe reservar con anticipación y se controlará el acceso.</p>
-            <p><a href="#">Más información</a></p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasEntradaPrincipal" aria-labelledby="offcanvasEntradaPrincipalLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasEntradaPrincipalLabel">Entrada principal</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasInformacion" aria-labelledby="offcanvasInformacionLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasInformacionLabel">Información</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasServicioVoluntario" aria-labelledby="offcanvasServicioVoluntarioLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasServicioVoluntarioLabel">Servicio voluntario</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>Aquí deben presentarse quienes deseen ofrecerse como voluntarios.</p>
-            <p><a href="#">Más información</a></p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasAcomodadores" aria-labelledby="offcanvasAcomodadoresLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasAcomodadoresLabel">Acomodadores</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasGuardaAlimentos" aria-labelledby="offcanvasGuardaAlimentosLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasGuardaAlimentosLabel">Guardado de alimentos</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>En esta área se reciben y retiran los alimentos. Recordá que <strong>no se puede ingresar a los auditorios con alimentos, bebidas o mate.</strong></p>
-            <p><a href="#">Más información</a></p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasGuardaropas" aria-labelledby="offcanvasGuardaropasLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasGuardaropasLabel">Guardarropa</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasObjetosPerdidos" aria-labelledby="offcanvasObjetosPerdidosLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasObjetosPerdidosLabel">Objetos perdidos</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasBanosMujeres" aria-labelledby="offcanvasBanosMujeresLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasBanosMujeresLabel">Baños de mujeres</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasBanosHombres" aria-labelledby="offcanvasBanosHombresLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasBanosHombresLabel">Baños de hombres</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasBautismo" aria-labelledby="offcanvasBautismoLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasBautismoLabel">Piscina de bautismo</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>Aquí se hará el bautismo el sábado al mediodía.</p>
-            <p><a href="#">Más información</a></p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasGaleriaCubierta" aria-labelledby="offcanvasGaleriaCubiertaLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasGaleriaCubiertaLabel">Galería Cubierta</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasAscensores" aria-labelledby="offcanvasAscensoresLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasAscensoresLabel">Ascensores</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>Reservado para personas con dificultades para subir las escaleras. No se debe usar en caso de evacuación.</p>
-            <p><a href="#">Más información</a></p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasPrimerosAuxilios" aria-labelledby="offcanvasPrimerosAuxiliosLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasPrimerosAuxiliosLabel">Primeros auxilios</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasLactantes" aria-labelledby="offcanvasLactantesLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasLactantesLabel">Lactantes</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasEscaleras" aria-labelledby="offcanvasEscalerasLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasEscalerasLabel">Escaleras a planta alta</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>Para acceder al auditorio principal</p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasPatio" aria-labelledby="offcanvasPatioLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasPatioLabel">Patio exterior</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasAreaRestringida" aria-labelledby="offcanvasAreaRestringidaLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasAreaRestringidaLabel">Áreas restringidas</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>Estas zonas del predio no están accesibles al público general.</p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasEstacionamiento" aria-labelledby="offcanvasEstacionamientoLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasEstacionamientoLabel">Estacionamiento interno</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>El estacionamiento está reservado para personas con necesidades especiales. Se debe reservar con anticipación y se controlará el acceso.</p>
-            <p><a href="#">Más información</a></p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasVestibulo" aria-labelledby="offcanvasVestibuloLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasVestibuloLabel">Vestíbulo</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>Este área esta habilitada para consumir alimentos.</p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasAuditorioPrincipal" aria-labelledby="offcanvasAuditorioPrincipalLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasAuditorioPrincipalLabel">Auditorio principal</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>Este auditorio está destinado al público en general. Para personas mayores, con dificultades, embarazadas o con hijos pequeños está asignado el <a href="#">auditorio auxiliar.</a></p>
-            <p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasLimpieza" aria-labelledby="offcanvasLimpiezaLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasLimpiezaLabel">Departamento limpieza</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-    </div>
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="offcanvasAuditorioAuxiliar" aria-labelledby="offcanvasAuditorioAuxiliarLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white">
-            <h5 class="offcanvas-title" id="offcanvasAuditorioAuxiliarLabel">Auditorio auxiliar</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <p>Este auditorio está destinado a personas mayores, con dificultades, embarazadas o con hijos pequeños. Para el público general está asignado el <a href="#">auditorio principal.</a></p>
-            <p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>
+            <!-- Content will be dynamically loaded here -->
         </div>
     </div>
 
