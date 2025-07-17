@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano Interactivo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS for the floorplan viewer -->
+    <link rel="stylesheet" href="plano.css">
+</head>
+<body>
+
+    <!-- Vertical Toolbar -->
+    <div class="vertical-toolbar d-flex flex-column position-fixed top-0 end-0 m-3 gap-3">
+        <!-- Close button -->
+        <div id="close-control" class="btn-group-vertical" role="group" aria-label="Close control">
+            <button id="btn-close-window" type="button" class="btn btn-danger"><span class="material-icons">close</span></button>
+        </div>
+        <!-- Floor Controls -->
+        <div id="floor-controls" class="btn-group-vertical" role="group" aria-label="Floor controls">
+        </div>
+
+        <!-- Layer Selector -->
+        <div id="feature-controls" class="dropdown">
+            <button class="btn" type="button" id="layer-selector-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons">layers</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="layer-selector-btn">
+            </ul>
+        </div>
+
+        <!-- Zoom Controls -->
+        <div class="btn-group-vertical" role="group" aria-label="Zoom controls">
+            <button id="zoom-in" type="button" class="btn"><span class="material-icons">add</span></button>
+            <button id="zoom-out" type="button" class="btn"><span class="material-icons">remove</span></button>
+        </div>
+    </div>
+
+    <!-- Container for the SVG floorplan -->
+    <div id="plano-container">
+        <!-- The SVG will be loaded here by plano.js -->
+    </div>
+
+    <!-- Map Title -->
+    <div id="map-title" class="position-fixed top-0 start-0 m-3" style="z-index: 1000;">
+        <h5 id="layer-title" class="mb-0"></h5>
+        <small id="floor-subtitle" class="text-muted"></small>
+    </div>
+
+    <!-- Single Offcanvas for details -->
+    <div class="offcanvas offcanvas-end info-offcanvas" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
+        <div class="offcanvas-body text-white" id="mainOffcanvasBody">
+            <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <!-- Content will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Panzoom Library -->
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    <!-- Custom JS for the floorplan viewer -->
+    <script src="plano.js"></script>
+    
+</body>
+</html>
