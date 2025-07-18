@@ -14,7 +14,7 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="g140"
+   inkscape:current-layer="layPlantaBaja"
    inkscape:cx="686.99998"
    inkscape:cy="951.49998"
    inkscape:deskcolor="#505050"
@@ -1785,10 +1785,17 @@
    t="rotate(9.8,832.66,574.21)"
    transform="translate(159.50121,240.71622)">
    <g
+   inkscape:groupmode="layer"
+   inkscape:label="layPlantaBaja"
+   id="layPlantaBaja"
+   style="clip-rule:evenodd;display:inline;opacity:1;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
+    <g
    id="g140"
    inkscape:label="entorno"
    inkscape:groupmode="layer"
-   sodipodi:insensitive="true"><rect
+   sodipodi:insensitive="true"
+   style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;display:inline"
+   transform="translate(1.3462084e-6)"><rect
      style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:10.0011;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
      id="rect145"
      width="4291.4175"
@@ -1947,11 +1954,6 @@
      style="font-variation-settings:normal;clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:4.60304;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.60304, 4.60304;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
      d="m 262.22902,866.04125 -1.06664,72.10728"
      id="path184-4" /></g><g
-   inkscape:groupmode="layer"
-   inkscape:label="layPlantaBaja"
-   id="layPlantaBaja"
-   style="clip-rule:evenodd;display:inline;opacity:1;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
-    <g
    inkscape:groupmode="layer"
    inkscape:label="layEdificioPB"
    id="layEdificioPB"
