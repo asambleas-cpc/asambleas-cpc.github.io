@@ -3,18 +3,22 @@
         "url": "plano.svg",
         "elementToRotate": "#layBase"
     },
-    "regexes": {
-        "floorSuffixRegex": "(${floorSuffixes.join('|')})$"
-    },
+    
     "panzoomSettings": {
         "initialZoom": 0.7,
         "minZoom": 0.5,
-        "maxZoom": 5,
-        "panOnlyWhenZoomed": true
+        "panOnlyWhenZoomed": true,
+        "zoom": {
+            "maxScale": 4,
+            "padding": 0.15,
+            "maxZoom": 2,
+            "fitBoundsPadding": [50, 50]
+        }
     },
     "defaultView": {
         "floor": 0,
-        "layer": "departamentos"
+        "layer": "departamentos",
+        "initialElement": "basePB"
     },
     "definitions": {
         "prefixes": {

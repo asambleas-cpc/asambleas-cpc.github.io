@@ -1,4 +1,4 @@
-        body {
+body {
             padding-top: 0; /* Adjust for fixed navbar */
             -webkit-user-select: none; /* Safari */
             -moz-user-select: none;    /* Firefox */
@@ -162,3 +162,7 @@
         visibility: visible;
         display: block;
         } */
+
+        .interactive-layer g[id^="ico"]:hover {
+            cursor: pointer;
+        }

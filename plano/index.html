@@ -3,67 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet SVG Overlay with Bootstrap</title>
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <title>Main Page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="leaflet-rotate.js"></script>
-
     <link rel="stylesheet" href="map.css">
+    <style>
+        .modal-fullscreen .modal-content {
+            background-color: transparent;
+            border: 0;
+        }
+        .modal-fullscreen .modal-body {
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Vertical Toolbar -->
-    <div class="vertical-toolbar d-flex flex-column position-fixed top-0 end-0 m-3 gap-3">
-        <!-- Close button -->
-        <div id="close-control" class="btn-group-vertical" role="group" aria-label="Close control">
-            <button id="btn-close-window" type="button" class="btn btn-danger"><span class="material-icons">close</span></button>
-        </div>
-        <!-- Floor Controls -->
-        <div id="floor-controls" class="btn-group-vertical" role="group" aria-label="Floor controls">
-        </div>
-
-        <!-- Layer Selector -->
-        <div id="feature-controls" class="dropdown">
-            <button class="btn" type="button" id="layer-selector-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="material-icons">layers</span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="layer-selector-btn">
-            </ul>
-        </div>
-
-        <!-- Zoom Controls -->
-        <div class="btn-group-vertical" role="group" aria-label="Zoom controls">
-            <button id="zoom-in" type="button" class="btn"><span class="material-icons">add</span></button>
-            <button id="zoom-out" type="button" class="btn"><span class="material-icons">remove</span></button>
-        </div>
+    <div class="container mt-5">
+        <button type="button" class="btn btn-primary" onclick="mostrarMapa()">
+            Open Map
+        </button>
     </div>
 
-    <div id="map"></div>
+    <!-- Fullscreen Modal -->
+    <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- Vertical Toolbar -->
+                    <div class="vertical-toolbar d-flex flex-column position-fixed top-0 end-0 m-3 gap-3">
+                        <!-- Close button -->
+                        <div id="close-control" class="btn-group-vertical" role="group" aria-label="Close control">
+                            <button id="btn-close-window" type="button" class="btn btn-danger" data-bs-dismiss="modal"><span class="material-icons">close</span></button>
+                        </div>
+                        <!-- Floor Controls -->
+                        <div id="floor-controls" class="btn-group-vertical" role="group" aria-label="Floor controls">
+                        </div>
 
-    <!-- Map Title -->
-    <div id="map-title" class="position-fixed top-0 start-0 m-3" style="z-index: 1000;">
-        <h5 id="layer-title" class="mb-0"></h5>
-        <small id="floor-subtitle" class="text-muted"></small>
-    </div>
+                        <!-- Layer Selector -->
+                        <div id="feature-controls" class="dropdown">
+                            <button class="btn" type="button" id="layer-selector-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="material-icons">layers</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="layer-selector-btn">
+                            </ul>
+                        </div>
 
-    <!-- Single Offcanvas -->
-    <div class="offcanvas info-offcanvas" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
-        <div class="offcanvas-body text-white" id="mainOffcanvasBody">
-            <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <!-- Content will be dynamically loaded here -->
+                        <!-- Zoom Controls -->
+                        <div class="btn-group-vertical" role="group" aria-label="Zoom controls">
+                            <button id="zoom-in" type="button" class="btn"><span class="material-icons">add</span></button>
+                            <button id="zoom-out" type="button" class="btn"><span class="material-icons">remove</span></button>
+                        </div>
+                    </div>
+
+                    <div id="map">
+                        <!-- Spinner -->
+                        <div id="map-loader" class="d-flex justify-content-center align-items-center h-100">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Title -->
+                    <div id="map-title" class="position-fixed top-0 start-0 m-3" style="z-index: 1000;">
+                        <h5 id="layer-title" class="mb-0"></h5>
+                        <small id="floor-subtitle" class="text-muted"></small>
+                    </div>
+
+                    <!-- Single Offcanvas -->
+                    <div class="offcanvas offcanvas-bottom info-offcanvas" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
+                        <div class="offcanvas-body text-white" id="mainOffcanvasBody">
+                            <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            <!-- Content will be dynamically loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="map.js"></script>
-    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="plano.js"></script>
+    <script src="hack.js"></script>
+
 </body>
 </html>

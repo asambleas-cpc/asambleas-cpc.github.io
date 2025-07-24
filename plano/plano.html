@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plano Interactivo</title>
+    <title>Leaflet SVG Floorplan</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Custom CSS for the floorplan viewer -->
-    <link rel="stylesheet" href="plano.css">
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="map.css">
 </head>
 <body>
 
@@ -39,9 +43,13 @@
         </div>
     </div>
 
-    <!-- Container for the SVG floorplan -->
-    <div id="plano-container">
-        <!-- The SVG will be loaded here by plano.js -->
+    <div id="map">
+        <!-- Spinner -->
+        <div id="map-loader" class="d-flex justify-content-center align-items-center h-100">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
     </div>
 
     <!-- Map Title -->
@@ -50,8 +58,8 @@
         <small id="floor-subtitle" class="text-muted"></small>
     </div>
 
-    <!-- Single Offcanvas for details -->
-    <div class="offcanvas offcanvas-end info-offcanvas" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
+    <!-- Single Offcanvas -->
+    <div class="offcanvas offcanvas-bottom info-offcanvas" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
         <div class="offcanvas-body text-white" id="mainOffcanvasBody">
             <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -61,10 +69,8 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Panzoom Library -->
-    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-    <!-- Custom JS for the floorplan viewer -->
     <script src="plano.js"></script>
+    <script src="hack.js"></script>
     
 </body>
 </html>
