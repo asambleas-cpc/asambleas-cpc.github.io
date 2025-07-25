@@ -134,6 +134,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('zoom-in').addEventListener('click', () => map.zoomIn());
         document.getElementById('zoom-out').addEventListener('click', () => map.zoomOut());
 
+        map.on('moveend', rerenderSVG);
+
         floorControls.addEventListener('click', (event) => {
             const button = event.target.closest('button');
             if (button && button.dataset.level) {
@@ -287,6 +289,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     /**
      * Displays details in the offcanvas and highlights the corresponding SVG element.
      */
+    function bringToFront(element) {
+        if (element && element.parentElement) {
+            element.parentElement.appendChild(element);
+        }
+    }
+
     function showAndHighlightIcon(iconId, offcanvasKey) {
         const target = svgElement.querySelector(`#${iconId}`);
         if (!target) return;
@@ -325,6 +333,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             highlightedElement = target;
             highlightedElement.classList.add('highlight-direct'); // Add a class for direct highlight if no 'hl' element
         }
+        bringToFront(target);
     }
 
     /**
@@ -374,31 +383,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         const northEast = L.latLng(svgHeight - bbox.y, bbox.x + bbox.width);
         const elementBounds = L.latLngBounds(southWest, northEast);
 
-        // Prepare options for flyToBounds, considering the offcanvas.
+        // --- DYNAMIC PADDING CALCULATION ---
+        const topPadding = document.getElementById('map-title')?.offsetHeight || 0;
+        const rightPadding = document.querySelector('.vertical-toolbar')?.offsetWidth || 0;
+        const bottomPadding = mainOffcanvasElement.classList.contains('show') ? mainOffcanvasElement.offsetHeight : 0;
+
         const flyToBoundsOptions = {
-            maxZoom: config.panzoomSettings.zoom.maxZoom
+            maxZoom: config.panzoomSettings.zoom.maxZoom,
+            paddingTopLeft: L.point(0, topPadding),
+            paddingBottomRight: L.point(rightPadding, bottomPadding)
         };
-
-        const paddingConfig = config.panzoomSettings.zoom.fitBoundsPadding || [0, 0];
-        const basePadding = L.point(paddingConfig[0], paddingConfig[1]);
-
-        // Set base padding for all sides
-        flyToBoundsOptions.paddingTopLeft = basePadding;
-        flyToBoundsOptions.paddingBottomRight = basePadding;
-
-        // If the offcanvas is visible, add extra padding at the bottom
-        if (mainOffcanvasElement.classList.contains('show')) {
-            const offcanvasHeight = mainOffcanvasElement.offsetHeight;
-            flyToBoundsOptions.paddingBottomRight = flyToBoundsOptions.paddingBottomRight.add(L.point(0, offcanvasHeight));
-        }
-
+        
         // Use flyToBounds for a smooth animation that fits the element in the view.
         map.flyToBounds(elementBounds, flyToBoundsOptions);
-
-        // Rerender SVG after the animation is complete
-        map.once('moveend', () => {
-            rerenderSVG();
-        });
     }
     // Make it globally accessible for console calls
     window.centerOnElement = centerOnElement;

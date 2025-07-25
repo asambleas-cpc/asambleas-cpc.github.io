@@ -1,24 +1,25 @@
-body {
-            padding-top: 0; /* Adjust for fixed navbar */
-            -webkit-user-select: none; /* Safari */
-            -moz-user-select: none;    /* Firefox */
-            -ms-user-select: none;     /* IE10+/Edge */
-            user-select: none;         /* Standard */
-        }
-        html, body, #map {
+
+        .modal-fullscreen {
+    height: 100%;
+}
+
+        .plano-modal-styles .modal-dialog,
+        .plano-modal-styles .modal-content,
+        .plano-modal-styles .modal-body {
             height: 100%;
-            margin: 0;
-            width: 100%;
         }
-        #map {
-            height: 100vh;
+        .plano-modal-styles #map {
+            height: 100%;
         }
-        .vertical-toolbar {
+        .plano-modal-styles #map {
+            height: 100%;
+        }
+        .plano-modal-styles .vertical-toolbar {
             z-index: 1001;
         }
         /* Frosted Glass Effect for Toolbar and Dropdown */
-        .vertical-toolbar .btn,
-        .dropdown-menu {
+        .plano-modal-styles .vertical-toolbar .btn,
+        .plano-modal-styles .dropdown-menu {
             background-color: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -26,7 +27,7 @@ body {
             color: white;
         }
 
-        .vertical-toolbar .btn {
+        .plano-modal-styles .vertical-toolbar .btn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,39 +36,39 @@ body {
             padding: 0;
         }
 
-        .vertical-toolbar .btn .material-icons {
+        .plano-modal-styles .vertical-toolbar .btn .material-icons {
             color: white;
             font-size: 24px; /* Adjust icon size as needed */
         }
 
         /* Active and Hover States */
-        .vertical-toolbar .btn.active,
-        .vertical-toolbar .btn:hover,
-        .dropdown-item.active,
-        .dropdown-item:hover {
+        .plano-modal-styles .vertical-toolbar .btn.active,
+        .plano-modal-styles .vertical-toolbar .btn:hover,
+        .plano-modal-styles .dropdown-item.active,
+        .plano-modal-styles .dropdown-item:hover {
             background-color: rgba(255, 255, 255, 0.7) !important;
             color: #212529 !important; /* Dark text for contrast */
             border-color: rgba(255, 255, 255, 0.5);
         }
 
-        .vertical-toolbar .btn.active .material-icons,
-        .vertical-toolbar .btn:hover .material-icons {
+        .plano-modal-styles .vertical-toolbar .btn.active .material-icons,
+        .plano-modal-styles .vertical-toolbar .btn:hover .material-icons {
             color: #212529 !important;
         }
 
-        #btn-close-window {
+        .plano-modal-styles #btn-close-window {
             background-color: rgba(161, 0, 16, 0.603);
         }
 
-        #btn-close-window:hover {
+        .plano-modal-styles #btn-close-window:hover {
             background-color: hsl(354, 100%, 50%) !important;
         }
 
-        .dropdown-item {
+        .plano-modal-styles .dropdown-item {
             color: white;
         }
 
-        #map-title h5, #map-title small {
+        .plano-modal-styles #map-title h5, .plano-modal-styles #map-title small {
             color: #212529; /* Dark text */
             text-shadow: 
                 -1px -1px 0 #fff,  
@@ -77,53 +78,65 @@ body {
                  0 0 10px rgba(255, 255, 255, 0.8); /* White glow */
         }
 
-        .offcanvas-backdrop.show {
+        .plano-modal-styles .offcanvas-backdrop.show {
             opacity: 0;
         }
-        .info-offcanvas .btn-close {
+        .plano-modal-styles .info-offcanvas .btn-close {
             position: absolute;
             top: 1rem;
             right: 1rem;
             z-index: 10;
         }
-        .info-offcanvas .offcanvas-body h5 {
+        .plano-modal-styles .info-offcanvas .offcanvas-body h5 {
             margin-right: 2rem;
         }
-        .info-offcanvas a {
+        .plano-modal-styles .info-offcanvas a {
             color: white;
             text-decoration: underline;
         }
-        .info-offcanvas a:hover {
+        .plano-modal-styles .info-offcanvas a:hover {
             background-color: white;
             color: #212529;
             text-decoration: none;
             border-radius: 0.25rem;
             padding: 0.1rem 0.25rem;
         }
-        .offcanvas-bottom {
+        .plano-modal-styles .offcanvas-bottom {
             --bs-offcanvas-height: 30vh;
             background-color: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
         }
-        .offcanvas-end {
+        .plano-modal-styles .offcanvas-end {
             --bs-offcanvas-width: 30vw;
             background-color: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
         }
-        .leaflet-control-rotate {
+        .plano-modal-styles .leaflet-control-rotate {
             display: none !important;
         }
-        .highlight {
+        .plano-modal-styles .highlight {
             fill: #ff0000 !important;
             stroke: #ffff00;
             stroke-width: 5px;
             filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
-            transition: all 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
         }
-        svg g, svg path, svg circle, svg rect, svg text, svg line {
+
+        .plano-modal-styles .highlight.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .plano-modal-styles .highlight-direct {
+            fill: #ff0000 !important;
+            transition: fill 0.3s ease-in-out;
+        }
+        .plano-modal-styles svg g, .plano-modal-styles svg path, .plano-modal-styles svg circle, .plano-modal-styles svg rect, .plano-modal-styles svg text, .plano-modal-styles svg line {
             shape-rendering: geometricPrecision;
         }
-        .info-card-container {
+        .plano-modal-styles .info-card-container {
             position: absolute;
             top: 70px; /* Below navbar */
             right: 10px;
@@ -132,23 +145,23 @@ body {
             max-width: 350px;
             pointer-events: none; /* Pass clicks through to the map */
         }
-        .info-card-container .card {
+        .plano-modal-styles .info-card-container .card {
             pointer-events: auto; /* Allow interaction with the card itself */
         }
 
-        .fade-transition {
+        .plano-modal-styles .fade-transition {
             transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
         }
 
         /* Basemap blur for Planta Alta */
-        .basemap-blurred {
+        .plano-modal-styles .basemap-blurred {
             filter: blur(3px) brightness(0.85);
             transition: filter 0.5s ease-in-out;
         }
 
         /* Centered on mobile */
         @media (max-width: 767.98px) {
-            .info-card-container {
+            .plano-modal-styles .info-card-container {
                 right: 50%;
                 transform: translateX(50%);
             }
@@ -163,6 +176,6 @@ body {
         display: block;
         } */
 
-        .interactive-layer g[id^="ico"]:hover {
+        .plano-modal-styles .interactive-layer g[id^="ico"]:hover {
             cursor: pointer;
         }
