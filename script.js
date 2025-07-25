@@ -61,10 +61,12 @@ document.querySelectorAll('.snap-section').forEach(section => {
 
 document.body.classList.add('js-enabled');
 
-document.querySelectorAll('.scrolling-cards-wrapper').forEach(wrapper => {
-  const container = wrapper.querySelector('.scrolling-cards-container');
+document.querySelectorAll('.scroll-wrapper').forEach(wrapper => {
+  const container = wrapper.querySelector('.scroll-inner-container');
   const leftBtn = wrapper.querySelector('.scroll-left');
   const rightBtn = wrapper.querySelector('.scroll-right');
+
+  if (!container || !leftBtn || !rightBtn) return;
 
   leftBtn.addEventListener('click', () => {
     container.scrollBy({ left: -250, behavior: 'smooth' });
@@ -255,3 +257,11 @@ function abrirMapa(rawCoords, nombre = '') {
       }
     });
   });
+
+document.querySelectorAll('[data-bs-toggle="lightbox"]').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    const lightbox = new Lightbox(el);
+    lightbox.show();
+  });
+});

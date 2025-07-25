@@ -476,10 +476,61 @@ body:not(.js-enabled) .snap-section>* {
 }
 
 .scroll-wrapper {
-  width: 99vw;
-  margin-left: calc(-1 * (100vw - 100%) / 2);
-  /* padding: 1rem 0; */
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
 }
+
+.scroll-inner-container {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.scroll-inner-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.gallery.d-flex {
+  gap: 0.5rem; /* Spacing between thumbnails */
+}
+
+.gallery .col-4 {
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 30%; /* Adjust width as needed */
+  max-width: 120px; /* Max width for thumbnails */
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.scroll-left {
+  left: -10px;
+}
+
+.scroll-right {
+  right: -10px;
+}
+
 
 .scroll-inner {
   padding-left: var(--bs-gutter-x, 1rem);
