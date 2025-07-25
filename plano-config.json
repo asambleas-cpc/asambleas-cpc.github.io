@@ -1,12 +1,16 @@
 {
     "svgSettings": {
         "url": "plano.svg",
-        "elementToRotate": "#layBase"
+        "elementToRotate": "#layBase",
+        "transitionDuration": 500,
+        "style": {
+            "inactiveFloor": "blur(3px) brightness(0.85)"
+        }
     },
     
     "panzoomSettings": {
         "initialZoom": 0.7,
-        "minZoom": 0.5,
+        "minZoom": -5,
         "panOnlyWhenZoomed": true,
         "zoom": {
             "maxScale": 4,

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Initialize Leaflet map with simple coordinates
             map = L.map('map', {
                 crs: L.CRS.Simple,
-                minZoom: -5, // Adjust minZoom for CRS.Simple
+                minZoom: config.panzoomSettings.minZoom,
                 zoomControl: false, // Disable default zoom control
                 maxBounds: bounds
             });
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     } else {
                         setTimeout(() => {
                             if (layerElement.style.opacity === '0') layerElement.style.display = 'none';
-                        }, 500);
+                        }, config.svgSettings.transitionDuration);
                     }
                 }
             }
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const isVisible = parseInt(level, 10) <= currentActiveFloor;
                 if (!isInitial) baseLayerElement.classList.add('fade-transition');
                 baseLayerElement.style.opacity = isVisible ? 1 : 0;
-                baseLayerElement.style.filter = (parseInt(level, 10) < currentActiveFloor) ? 'blur(3px) brightness(0.85)' : '';
+                baseLayerElement.style.filter = (parseInt(level, 10) < currentActiveFloor) ? config.svgSettings.style.inactiveFloor : '';
                 baseLayerElement.style.pointerEvents = 'none';
             }
         }
