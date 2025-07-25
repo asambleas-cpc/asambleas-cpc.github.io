@@ -185,8 +185,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const link = event.target.closest('a');
             if (link && link.href) {
                 const href = link.getAttribute('href');
-                // If it's a link to another part of the map, let mostrarMapa handle it
-                if (href.includes('mostrarMapa')) {
+                // If it's a link to another part of the map, let plano handle it
+                if (href.includes('plano')) {
                     // The function call is already in the href, so we don't need to do anything extra
                     return;
                 }
@@ -328,6 +328,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 centerOnElement(iconId, animate);
             }, { once: true }); // Ensure the listener is only called once per show event.
         }
+        console.log(iconId);
 
         mainOffcanvas.show();
 
@@ -414,9 +415,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             svgOverlay.addTo(map);
             console.log('SVG overlay has been rerendered.');
         }
-        console.log(map.getCenter());
-        console.log(map.getZoom());
-        console.log(map.getBounds());
+        // console.log(map.getCenter());
+        // console.log(map.getZoom());
+        // console.log(map.getBounds());
     }
     window.rerenderSVG = rerenderSVG;
 
@@ -426,7 +427,7 @@ document.addEventListener('DOMContentLoaded', async () => {
      * @param {string} layer The key of the layer to display.
      * @param {string} [elementId] Optional: The base ID of an element to highlight and center on.
      */
-    function mostrarMapa(floor = 0, layer = 'departamentos', elementId = 'basePB', animate = false) {
+    function plano(floor = 0, layer = 'departamentos', elementId = 'basePB', animate = false) {
         const mapModalElement = document.getElementById('mapModal');
 
         const performMapActions = () => {
@@ -480,7 +481,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
     // Make it globally accessible
-    window.mostrarMapa = mostrarMapa;
+    window.plano = plano;
 
     // --- INITIALIZATION ---
     initializeMap();

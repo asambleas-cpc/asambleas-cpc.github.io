@@ -582,3 +582,26 @@ body::before {
   margin: 0;
   color: hsl(204, 100%, 16%)
 }
+.plano-link::after {
+    content: "map";
+    font-family: 'Material Icons';
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+
+.ext-link::after {
+    content: "open_in_new";
+    font-family: 'Material Icons';
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+
+.geo-link::after {
+    content: "pin_drop";
+    font-family: 'Material Icons';
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}

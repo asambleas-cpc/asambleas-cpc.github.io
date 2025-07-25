@@ -93,7 +93,7 @@
                     <i class="material-symbols-outlined fs-1">pin_drop</i>
                   </div>
                   <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">¿Cómo llego?</h5>
+                    <h5 class="card-title mb-2">Cómo llegar</h5>
                     <p class="card-text">Recomendaciones para transporte y estacionamiento.</p>
                   </div>
                 </div>
@@ -104,7 +104,7 @@
                     <i class="material-symbols-outlined fs-1">airline_seat_recline_normal</i>
                   </div>
                   <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">¿Dónde me ubico?</h5>
+                    <h5 class="card-title mb-2">Dónde ubicarse</h5>
                     <p class="card-text">Auditorios y plano del predio.</p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@
                     <i class="material-symbols-outlined fs-1">fastfood</i>
                   </div>
                   <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">¿Dónde puedo comer?</h5>
+                    <h5 class="card-title mb-2">Dónde comer</h5>
                     <p class="card-text">Opciones para comer en los intermedios.</p>
                   </div>
 
@@ -127,7 +127,7 @@
                     <i class="material-symbols-outlined fs-1">hotel</i>
                   </div>
                   <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">¿Dónde puedo alojarme?</h5>
+                    <h5 class="card-title mb-2">Dónde alojarse</h5>
                     <p class="card-text">Alojamientos disponibles y cómo ofrecer alojamiento.</p>
                   </div>
 
@@ -139,7 +139,7 @@
                     <i class="material-symbols-outlined fs-1">info</i>
                   </div>
                   <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">¿Qué más debo tener en cuenta?</h5>
+                    <h5 class="card-title mb-2">Qué más tener en cuenta</h5>
                     <p class="card-text">Otra información importante para los asistentes.</p>
                   </div>
 
@@ -217,7 +217,7 @@
                   </div>
                   <button class="scroll-btn scroll-right material-symbols-outlined">chevron_right</button>
                 </div>
-                <p class="card-text mt-3"><button class="btn btn-sm btn-primary" onclick="mostrarMapa()"><i
+                <p class="card-text mt-3"><button class="btn btn-sm btn-primary" onclick="plano()"><i
                       class="material-symbols-outlined">map</i> Plano del predio</button></p>
               </div>
             </div>
@@ -399,7 +399,7 @@
             <h5 class="card-title">Auditorio principal</h5>
             <p class="card-text">Para el público en general. Se accede mediante las escaleras a la izquierda de la
               entrada.</p>
-              <button class="btn btn-sm btn-primary" onclick="mostrarMapa(1,'departamentos','AuditorioPrincipal')"><i class="material-symbols-outlined">map</i> Ver en el plano</button>
+              <button class="btn btn-sm btn-primary" onclick="plano(1,'departamentos','AuditorioPrincipal')"><i class="material-symbols-outlined">map</i> Ver en el plano</button>
           </div>
         </div>
         <div class="card">
@@ -408,26 +408,46 @@
             <h5 class="card-title">Auditorio auxiliar</h5>
             <p class="card-text">Para personas mayores, con dificultades y padres con niños pequeños. Se accede por el
               pasillo de la derecha de la entrada. </p>
-              <button class="btn btn-sm btn-primary" onclick="mostrarMapa(0,'departamentos','AuditorioAuxiliar')"><i class="material-symbols-outlined">map</i> Ver en el plano</button>
+              <button class="btn btn-sm btn-primary" onclick="plano(0,'departamentos','AuditorioAuxiliar')"><i class="material-symbols-outlined">map</i> Ver en el plano</button>
 
           </div>
         </div>
+
       </div>
+        <div class="card h-80 d-flex flex-row align-items-stretch card-aviso">
+          <div class="d-flex px-3 border-end card-icon">
+            <i class="material-symbols-outlined fs-1">warning</i>
+          </div>
+          <div class="card-content flex-grow-1">
+            <h5 class="card-title mb-2">Es importante que nos sentemos en el auditorio que nos corresponde</h5>
+            <p class="card-text">En el auditorio auxiliar los baños están más cerca. Además, las salidas son sin escaleras. Si hubiera que evacuar el local, se perdería tiempo valioso si no estamos donde nos corresponde.</p>
+          </div>
+
+        </div>
+
+
 
       <h3>Plano del predio</h3>
-      <p><button class="btn btn-sm btn-primary" onclick="mostrarMapa()"><i class="material-symbols-outlined">map</i> Ver plano del predio</button></p>
+      <p><button class="btn btn-sm btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Ver plano del predio</button></p>
       <h4>Departamentos</h4>
-      <ul>
-        <li>Guardaropas y objetos perdidos</li>
-        <li>Guarda de alimentos</li>
-        <li>Primeros auxilios</li>
-        <li>Lactantes</li>
-        <li>Información y servicio voluntario</li>
-        <li>Limpieza</li>
-        <li>Administración</li>
-        <li>Alojamiento</li>
+      
+        <h5>Guardarropa y objetos perdidos</h5>
+        <p>Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en planta baja, junto con Guarda de alimentos</a></p>
+        <h5>Guarda de alimentos</h5>
+        <p>Es donde se guardan los alimentos durante el programa</p>
+        <p>Hay un puesto <a href="javascript:plano(0,'departamentos','GuardaAlimentos')" class="plano-link">en planta baja</a> y otro <a href="javascript:plano(1,'departamentos','GuardaAlimentos')" class="plano-link">en planta alta</a></p>
+        <h5>Primeros auxilios</h5>
+        <p>Se encuetra <a href="javascript:plano(0,'departamentos','PrimerosAuxilios')" class="plano-link">en planta baja</a> y hay una guardia <a href="javascript:plano(1,'departamentos','PrimerosAuxilios')" class="plano-link">en el auditorio de planta alta</a></p>
+        <h5>Lactantes</h5>
+        <p>Se encuentra <a href="javascript:plano(0,'departamentos','Lactantes')" class="plano-link">en planta baja</a></p>
+        <h5>Información y servicio voluntario</h5>
+        <p>Se encuentra <a href="javascript:plano(0,'departamentos','Informacion')" class="plano-link">en el mostrador de planta baja</a></p>
+        <h5>Limpieza</h5>
+        <p>Se encuentra <a href="javascript:plano(1,'departamentos','Limpieza')" class="plano-link">en el vestíbulo de planta alta</a></p>
+        <h5 class="d-none">Administración</h5>
+        <h5 class="d-none">Alojamiento</h5>
 
-      </ul>
+      
       <h3>En caso de emergencias</h3>
       <a href="#" class="video-link position-relative d-inline-block" data-bs-toggle="modal"
         data-bs-target="#videoModal" data-video="videos/emergencias-movil.mp4" class="text-decoration-none">
@@ -534,13 +554,13 @@
         <h3>Hoteles y alquileres temporales</h3>
         <p>Los siguientes sitios pueden ser útiles para conseguir alojamiento:</p>
         <ul>
-          <li><a href="https://www.parana.tur.ar/alojamiento" target="_blank">Secretaría de turismo: listado de
+          <li><a href="https://www.parana.tur.ar/alojamiento" target="_blank" class="ext-link">Secretaría de turismo: listado de
               alojamientos</a></li>
-          <li><a href="https://www.booking.com/city/ar/parana.es-ar.html" target="_blank">Booking.com</a></li>
-          <li><a href="https://www.airbnb.com.ar/s/Paran%C3%A1--Entre-R%C3%ADos/homes" target="_blank">airbnb.com</a>
+          <li><a href="https://www.booking.com/city/ar/parana.es-ar.html" target="_blank" class="ext-link">Booking.com</a></li>
+          <li><a href="https://www.airbnb.com.ar/s/Paran%C3%A1--Entre-R%C3%ADos/homes" target="_blank" class="ext-link">airbnb.com</a>
           </li>
           <li><a href="https://www.despegar.com.ar/alojamientos/alojamientos-en-parana/5877"
-              target="_blank">Despegar.com</a></li>
+              target="_blank" class="ext-link">Despegar.com</a></li>
         </ul>
         <p><small>Aclaración: La información aquí presentada es a modo de referencia y puede estar sujeta a cambios. La
             organización del evento no está relacionada con los servicios presentados, no los promociona ni se
@@ -568,9 +588,9 @@
           <li><strong>19:00</strong> Cierre de puertas</li>
         </ul>
         <h3>Bautismo</h3>
-        <p>El bautismo se hace en el patio cubierto. También se transmitirá una grabación en las pantallas al finalizar.
+        <p>El bautismo se hace en el <a href="javascript:plano(0,'departamentos','Bautismo')" class="plano-link">patio cubierto.</a> También se transmitirá una grabación en las pantallas al finalizar.
         </p>
-        <p>Los candidatos se deben ubicar en las primeras filas en la sesión del domingo por la mañana.</p>
+        <p>Los candidatos se deben ubicar <a href="javascript:plano(1,'departamentos','Bautismo')" class="plano-link">en las primeras filas </a>en la sesión del sábado por la mañana.</p>
         <h3>Climatización</h3>
         <p>Los auditorios están climatizados. La temperatura se fija en un promedio de 24°C, pero puede variar con el
           funcionamiento de los equipos.</p>

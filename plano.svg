@@ -14,9 +14,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layBase"
-   inkscape:cx="3744"
-   inkscape:cy="1876"
+   inkscape:current-layer="layDepartamentosInstalacionesPB"
+   inkscape:cx="1470.075"
+   inkscape:cy="2058.5646"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -26,15 +26,14 @@
    inkscape:window-width="1920"
    inkscape:window-x="1272"
    inkscape:window-y="375"
-   inkscape:zoom="0.125"
+   inkscape:zoom="2.8284271"
    id="namedview1"
    bordercolor="#eeeeee"
    borderopacity="1"
    pagecolor="#505050"
    showgrid="false"
    image-rendering="optimizeSpeed"
-   shape-rendering= "optimizeSpeed"    
-    />
+   shape-rendering="optimizeSpeed" />
   
   <defs
    id="defs4"><linearGradient
@@ -1741,10 +1740,10 @@
    inkscape:collect="always"
    style="color-interpolation-filters:sRGB"
    id="filter176"
-   x="-0.11106116"
-   y="-0.048831053"
-   width="1.2197772"
-   height="1.0976086"><feGaussianBlur
+   x="-0.10871608"
+   y="-0.048777518"
+   width="1.2174322"
+   height="1.097555"><feGaussianBlur
      inkscape:collect="always"
      stdDeviation="0.000125875"
      id="feGaussianBlur176" /></filter></defs>
@@ -1802,6 +1801,91 @@
 .fil7 { fill:url(#id0) }
 .fil12 { fill:url(#id1) }
 .fnt0 { font-weight:normal;font-size:10.42px;font-family:'NewsGoth BT' }
+
+    .background {
+        fill: #4d4d4d;
+    }
+    .parking-line {
+        stroke: #fff;
+        stroke-width: 35;
+        stroke-dasharray: 5.25, 5.25;
+        fill: none;
+    }
+    .grass {
+        fill: #72ab5f;
+    }
+    .walkway, .sidewalk {
+        fill: #ccc;
+    }
+    .building {
+        fill: #fff;
+    }
+    .building-wall {
+        stroke: #4d4d4d;
+        fill: none;
+    }
+    .building-wall-ext {
+        stroke-width: 6.25;
+    }
+    .building-wall-int {
+        stroke-width: 4.17;
+    }
+    .door {
+        fill: #fff;
+        stroke: #000;
+        stroke-width: .9;
+    }
+    .window {
+        fill: none;
+        stroke: #4d4d4d;
+        stroke-width: .9;
+    }
+    .stairs, .ramp {
+        fill: none;
+        stroke: #4d4d4d;
+        stroke-width: .9;
+    }
+    .curtain {
+        fill: none;
+        stroke: #4d4d4d;
+        stroke-width: 2;
+        stroke-dasharray: 2, 4;
+    }
+    .chair {
+        fill: #006;
+        stroke: #c4c4c4;
+        stroke-width: 1.2px;
+    }
+    .restricted-area {
+        fill: url(#pattern21);
+        opacity: .37
+    }
+    .icon {
+        fill: #fff;
+        stroke: none;
+    }
+    .icon-box {
+        fill: #fff;
+        stroke: #0016aa;
+        stroke-width: 58.5937;
+    }
+    .exit-icon {
+        fill: #d64c00;
+    }
+    .department-icon {
+        fill: #0c5c10;
+    }
+    .facility-icon {
+        fill: #081a3f;
+    }
+    .label {
+        font-family: 'NewsGoth BT', sans-serif;
+        font-size: 10.42px;
+        fill: #000;
+        stroke: #fff;
+        stroke-width: 4;
+        paint-order: stroke;
+    }
 </style>
   
   <g
@@ -4808,13 +4892,13 @@
    class="icoBox"
    inkscape:label="icoInformacionPB">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:2.48241;text-rendering:geometricPrecision;vector-effect:none"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.71288;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlInformacionPB"
-   width="97.809708"
-   height="34.377026"
-   x="1317.705481"
-   y="2024.1922641649999"
-   ry="6.5182109"
+   width="122.68436"
+   height="32.732182"
+   x="1292.7156"
+   y="2024.3075"
+   ry="6.2063332"
    inkscape:label="hlInformacionPB" /><rect
    id="rect2"
    width="24.902281"
@@ -4829,31 +4913,39 @@
    class="icoIcon" />
       <text
    id="lblInformacionPB"
-   x="680.76862"
-   y="691.69934"
+   x="1375.1394"
+   y="2037.6647"
    class="lblEtiqueta"
    inkscape:label="lblInformacionPB"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
-   transform="translate(646.1, 1352.33)">Información</text></g>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:end;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:end;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"><tspan
+     sodipodi:role="line"
+     id="tspan9"
+     x="1375.1394"
+     y="2037.6647">Información y</tspan><tspan
+     sodipodi:role="line"
+     id="tspan11"
+     x="1375.1394"
+     y="2050.166">servicio voluntario</tspan></text></g>
       
       <g
    id="icoAcomodadoresPB"
-   class="icoBox">
+   class="icoBox"
+   transform="translate(0,-24.397938)">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:2.61742;text-rendering:geometricPrecision;vector-effect:none"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.61742;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlAcomodadoresPB"
    width="109.16649"
    height="34.24202"
-   x="1306.2846909999996"
-   y="2078.1873441650005"
+   x="1306.2847"
+   y="2078.1873"
    ry="6.4926124"
    inkscape:label="hlAcomodadoresPB"
-   transform="matrix(-1 1.22465e-16 -1.22465e-16 -1 2721.74 4190.62)" /><rect
+   transform="rotate(180,1360.87,2095.31)" /><rect
    id="rect4"
    width="24.902281"
    height="24.902281"
-   x="1384.531481"
-   y="2082.754364165"
+   x="1384.5315"
+   y="2082.7544"
    class="icoDepartamentos"
    ry="5.3436098" /><text
    id="lblAcomodadoresPB"
@@ -4861,38 +4953,38 @@
    y="745.81976"
    class="lblEtiqueta"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
-   transform="translate(646.1, 1352.33)">Acomodadores</text>
+   transform="translate(646.1,1352.33)">Acomodadores</text>
         <path
    id="path1-35"
-   d="M 1394.72 2096.9 C 1394.46 2096.9 1394.24 2096.81 1394.05 2096.63 C 1393.87 2096.44 1393.78 2096.22 1393.78 2095.96 C 1393.78 2095.69 1393.87 2095.47 1394.05 2095.29 C 1394.24 2095.11 1394.46 2095.02 1394.72 2095.02 C 1394.99 2095.02 1395.21 2095.11 1395.39 2095.29 C 1395.57 2095.47 1395.66 2095.69 1395.66 2095.96 C 1395.66 2096.22 1395.57 2096.44 1395.39 2096.63 C 1395.21 2096.81 1394.99 2096.9 1394.72 2096.9 Z M 1399.24 2096.9 C 1398.98 2096.9 1398.75 2096.81 1398.57 2096.63 C 1398.39 2096.44 1398.3 2096.22 1398.3 2095.96 C 1398.3 2095.69 1398.39 2095.47 1398.57 2095.29 C 1398.75 2095.11 1398.98 2095.02 1399.24 2095.02 C 1399.5 2095.02 1399.73 2095.11 1399.91 2095.29 C 1400.09 2095.47 1400.18 2095.69 1400.18 2095.96 C 1400.18 2096.22 1400.09 2096.44 1399.91 2096.63 C 1399.73 2096.81 1399.5 2096.9 1399.24 2096.9 Z M 1396.98 2101.23 C 1398.66 2101.23 1400.09 2100.65 1401.26 2099.48 C 1402.42 2098.31 1403.01 2096.89 1403.01 2095.2 C 1403.01 2094.9 1402.99 2094.61 1402.95 2094.33 C 1402.91 2094.05 1402.84 2093.77 1402.74 2093.51 C 1402.48 2093.57 1402.22 2093.62 1401.95 2093.65 C 1401.69 2093.68 1401.41 2093.7 1401.12 2093.7 C 1399.98 2093.7 1398.9 2093.45 1397.89 2092.96 C 1396.87 2092.47 1396 2091.79 1395.29 2090.91 C 1394.89 2091.89 1394.31 2092.74 1393.56 2093.46 C 1392.82 2094.18 1391.95 2094.73 1390.96 2095.09 L 1390.96 2095.2 C 1390.96 2096.89 1391.54 2098.31 1392.71 2099.48 C 1393.88 2100.65 1395.3 2101.23 1396.98 2101.23 Z M 1396.98 2102.74 C 1395.94 2102.74 1394.96 2102.54 1394.04 2102.14 C 1393.13 2101.75 1392.33 2101.21 1391.65 2100.53 C 1390.98 2099.86 1390.44 2099.06 1390.04 2098.14 C 1389.65 2097.22 1389.45 2096.25 1389.45 2095.2 C 1389.45 2094.16 1389.65 2093.18 1390.04 2092.27 C 1390.44 2091.35 1390.98 2090.55 1391.65 2089.88 C 1392.33 2089.2 1393.13 2088.66 1394.04 2088.27 C 1394.96 2087.87 1395.94 2087.67 1396.98 2087.67 C 1398.02 2087.67 1399 2087.87 1399.92 2088.27 C 1400.84 2088.66 1401.63 2089.2 1402.31 2089.88 C 1402.99 2090.55 1403.52 2091.35 1403.92 2092.27 C 1404.31 2093.18 1404.51 2094.16 1404.51 2095.2 C 1404.51 2096.25 1404.31 2097.22 1403.92 2098.14 C 1403.52 2099.06 1402.99 2099.86 1402.31 2100.53 C 1401.63 2101.21 1400.83 2101.75 1399.92 2102.14 C 1399 2102.54 1398.02 2102.74 1396.98 2102.74 Z M 1395.96 2089.27 C 1396.49 2090.15 1397.21 2090.86 1398.11 2091.39 C 1399.02 2091.93 1400.02 2092.19 1401.12 2092.19 C 1401.3 2092.19 1401.47 2092.18 1401.63 2092.16 C 1401.8 2092.14 1401.96 2092.12 1402.14 2092.1 C 1401.61 2091.22 1400.9 2090.51 1399.99 2089.98 C 1399.09 2089.45 1398.09 2089.18 1396.98 2089.18 C 1396.81 2089.18 1396.64 2089.19 1396.47 2089.21 C 1396.31 2089.23 1396.14 2089.25 1395.96 2089.27 Z M 1391.28 2093.3 C 1391.92 2092.94 1392.48 2092.47 1392.95 2091.89 C 1393.43 2091.31 1393.79 2090.67 1394.03 2089.95 C 1393.39 2090.31 1392.83 2090.79 1392.35 2091.36 C 1391.87 2091.94 1391.52 2092.59 1391.28 2093.3 Z M 1395.96 2089.27 Z M 1394.02 2089.95 Z"
+   d="m 1394.72,2096.9 c -0.26,0 -0.48,-0.09 -0.67,-0.27 -0.18,-0.19 -0.27,-0.41 -0.27,-0.67 0,-0.27 0.09,-0.49 0.27,-0.67 0.19,-0.18 0.41,-0.27 0.67,-0.27 0.27,0 0.49,0.09 0.67,0.27 0.18,0.18 0.27,0.4 0.27,0.67 0,0.26 -0.09,0.48 -0.27,0.67 -0.18,0.18 -0.4,0.27 -0.67,0.27 z m 4.52,0 c -0.26,0 -0.49,-0.09 -0.67,-0.27 -0.18,-0.19 -0.27,-0.41 -0.27,-0.67 0,-0.27 0.09,-0.49 0.27,-0.67 0.18,-0.18 0.41,-0.27 0.67,-0.27 0.26,0 0.49,0.09 0.67,0.27 0.18,0.18 0.27,0.4 0.27,0.67 0,0.26 -0.09,0.48 -0.27,0.67 -0.18,0.18 -0.41,0.27 -0.67,0.27 z m -2.26,4.33 c 1.68,0 3.11,-0.58 4.28,-1.75 1.16,-1.17 1.75,-2.59 1.75,-4.28 0,-0.3 -0.02,-0.59 -0.06,-0.87 -0.04,-0.28 -0.11,-0.56 -0.21,-0.82 -0.26,0.06 -0.52,0.11 -0.79,0.14 -0.26,0.03 -0.54,0.05 -0.83,0.05 -1.14,0 -2.22,-0.25 -3.23,-0.74 -1.02,-0.49 -1.89,-1.17 -2.6,-2.05 -0.4,0.98 -0.98,1.83 -1.73,2.55 -0.74,0.72 -1.61,1.27 -2.6,1.63 v 0.11 c 0,1.69 0.58,3.11 1.75,4.28 1.17,1.17 2.59,1.75 4.27,1.75 z m 0,1.51 c -1.04,0 -2.02,-0.2 -2.94,-0.6 -0.91,-0.39 -1.71,-0.93 -2.39,-1.61 -0.67,-0.67 -1.21,-1.47 -1.61,-2.39 -0.39,-0.92 -0.59,-1.89 -0.59,-2.94 0,-1.04 0.2,-2.02 0.59,-2.93 0.4,-0.92 0.94,-1.72 1.61,-2.39 0.68,-0.68 1.48,-1.22 2.39,-1.61 0.92,-0.4 1.9,-0.6 2.94,-0.6 1.04,0 2.02,0.2 2.94,0.6 0.92,0.39 1.71,0.93 2.39,1.61 0.68,0.67 1.21,1.47 1.61,2.39 0.39,0.91 0.59,1.89 0.59,2.93 0,1.05 -0.2,2.02 -0.59,2.94 -0.4,0.92 -0.93,1.72 -1.61,2.39 -0.68,0.68 -1.48,1.22 -2.39,1.61 -0.92,0.4 -1.9,0.6 -2.94,0.6 z m -1.02,-13.47 c 0.53,0.88 1.25,1.59 2.15,2.12 0.91,0.54 1.91,0.8 3.01,0.8 0.18,0 0.35,-0.01 0.51,-0.03 0.17,-0.02 0.33,-0.04 0.51,-0.06 -0.53,-0.88 -1.24,-1.59 -2.15,-2.12 -0.9,-0.53 -1.9,-0.8 -3.01,-0.8 -0.17,0 -0.34,0.01 -0.51,0.03 -0.16,0.02 -0.33,0.04 -0.51,0.06 z m -4.68,4.03 c 0.64,-0.36 1.2,-0.83 1.67,-1.41 0.48,-0.58 0.84,-1.22 1.08,-1.94 -0.64,0.36 -1.2,0.84 -1.68,1.41 -0.48,0.58 -0.83,1.23 -1.07,1.94 z m 4.68,-4.03 z m -1.94,0.68 z"
    class="icoIcon" />
       </g><g
    id="icoServicioVoluntarioPB"
    class="icoBox"
    inkscape:label="icoServicioVoluntarioPB"
-   style="-inkscape-stroke:hairline;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;paint-order:stroke fill markers;stroke:#0016aa;stroke-dasharray:none;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:1;stroke-width:58.5937;text-rendering:geometricPrecision;vector-effect:non-scaling-stroke">
+   style="clip-rule:evenodd;display:none;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;text-rendering:geometricPrecision">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:2.78691;text-rendering:geometricPrecision;vector-effect:none"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.78691;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlServicioVoluntarioPB"
    width="124.3783"
    height="34.072525"
-   x="1290.9846810000001"
-   y="2050.8639641649997"
+   x="1290.9847"
+   y="2050.864"
    ry="6.460475"
    inkscape:label="hlServicioVoluntarioPB" /><rect
    id="rect3-4"
    width="24.902281"
    height="24.902281"
-   x="1384.531481"
-   y="2055.4743641649998"
+   x="1384.5315"
+   y="2055.4744"
    class="icoDepartamentos"
    ry="5.3436098"
    style="fill:#0c5c10;fill-opacity:1;stroke:none;stroke-width:3433.22" />
         <path
    id="path1-1-2"
-   d="M 1394.75 2074.65 L 1394.75 2065.51 C 1393.72 2065.24 1392.88 2064.69 1392.22 2063.87 C 1391.57 2063.05 1391.18 2062.12 1391.05 2061.07 C 1391.03 2060.9 1391.09 2060.75 1391.24 2060.63 C 1391.39 2060.51 1391.56 2060.45 1391.76 2060.45 C 1391.96 2060.45 1392.14 2060.51 1392.29 2060.61 C 1392.44 2060.72 1392.52 2060.86 1392.55 2061.05 C 1392.69 2061.95 1393.07 2062.69 1393.71 2063.29 C 1394.34 2063.89 1395.13 2064.19 1396.06 2064.19 L 1397.93 2064.19 C 1398.3 2064.19 1398.65 2064.26 1398.97 2064.39 C 1399.3 2064.53 1399.59 2064.73 1399.85 2064.99 L 1402.71 2067.85 C 1402.85 2067.99 1402.91 2068.16 1402.91 2068.37 C 1402.91 2068.58 1402.85 2068.76 1402.71 2068.9 C 1402.57 2069.03 1402.4 2069.1 1402.19 2069.1 C 1401.97 2069.1 1401.8 2069.03 1401.66 2068.9 L 1399.23 2066.47 L 1399.23 2074.65 C 1399.23 2074.86 1399.16 2075.04 1399.02 2075.18 C 1398.88 2075.32 1398.7 2075.39 1398.49 2075.39 C 1398.28 2075.39 1398.1 2075.32 1397.95 2075.18 C 1397.81 2075.04 1397.74 2074.86 1397.74 2074.65 L 1397.74 2070.91 L 1396.25 2070.91 L 1396.25 2074.65 C 1396.25 2074.86 1396.18 2075.04 1396.03 2075.18 C 1395.89 2075.32 1395.71 2075.39 1395.5 2075.39 C 1395.29 2075.39 1395.11 2075.32 1394.97 2075.18 C 1394.82 2075.04 1394.75 2074.86 1394.75 2074.65 Z M 1396.99 2063.44 C 1396.58 2063.44 1396.23 2063.3 1395.94 2063 C 1395.65 2062.71 1395.5 2062.36 1395.5 2061.95 C 1395.5 2061.54 1395.65 2061.18 1395.94 2060.89 C 1396.23 2060.6 1396.58 2060.45 1396.99 2060.45 C 1397.4 2060.45 1397.76 2060.6 1398.05 2060.89 C 1398.34 2061.18 1398.49 2061.54 1398.49 2061.95 C 1398.49 2062.36 1398.34 2062.71 1398.05 2063 C 1397.76 2063.3 1397.4 2063.44 1396.99 2063.44 Z"
+   d="m 1394.75,2074.65 v -9.14 c -1.03,-0.27 -1.87,-0.82 -2.53,-1.64 -0.65,-0.82 -1.04,-1.75 -1.17,-2.8 -0.02,-0.17 0.04,-0.32 0.19,-0.44 0.15,-0.12 0.32,-0.18 0.52,-0.18 0.2,0 0.38,0.06 0.53,0.16 0.15,0.11 0.23,0.25 0.26,0.44 0.14,0.9 0.52,1.64 1.16,2.24 0.63,0.6 1.42,0.9 2.35,0.9 h 1.87 c 0.37,0 0.72,0.07 1.04,0.2 0.33,0.14 0.62,0.34 0.88,0.6 l 2.86,2.86 c 0.14,0.14 0.2,0.31 0.2,0.52 0,0.21 -0.06,0.39 -0.2,0.53 -0.14,0.13 -0.31,0.2 -0.52,0.2 -0.22,0 -0.39,-0.07 -0.53,-0.2 l -2.43,-2.43 v 8.18 c 0,0.21 -0.07,0.39 -0.21,0.53 -0.14,0.14 -0.32,0.21 -0.53,0.21 -0.21,0 -0.39,-0.07 -0.54,-0.21 -0.14,-0.14 -0.21,-0.32 -0.21,-0.53 v -3.74 h -1.49 v 3.74 c 0,0.21 -0.07,0.39 -0.22,0.53 -0.14,0.14 -0.32,0.21 -0.53,0.21 -0.21,0 -0.39,-0.07 -0.53,-0.21 -0.15,-0.14 -0.22,-0.32 -0.22,-0.53 z m 2.24,-11.21 c -0.41,0 -0.76,-0.14 -1.05,-0.44 -0.29,-0.29 -0.44,-0.64 -0.44,-1.05 0,-0.41 0.15,-0.77 0.44,-1.06 0.29,-0.29 0.64,-0.44 1.05,-0.44 0.41,0 0.77,0.15 1.06,0.44 0.29,0.29 0.44,0.65 0.44,1.06 0,0.41 -0.15,0.76 -0.44,1.05 -0.29,0.3 -0.65,0.44 -1.06,0.44 z"
    class="icoIcon"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.0;text-rendering:geometricPrecision" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
       <text
    id="lblServicioVoluntarioPB"
    x="652.26208"
@@ -4900,96 +4992,60 @@
    class="lblEtiqueta"
    inkscape:label="lblServicioVoluntarioPB"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
-   transform="translate(646.1, 1352.33)">Servicio voluntario</text></g>
+   transform="translate(646.1,1352.33)">Servicio voluntario</text></g>
       <g
    id="icoGuardaAlimentosPB"
    class="icoBox">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;text-rendering:geometricPrecision;vector-effect:none"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.47772;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.47772, 14.9554;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlGuardaAlimentosPB"
-   width="216.38"
-   height="94.064003"
-   x="1817.220181"
-   y="2343.446964165"
-   ry="5.3436098"
+   width="224.38686"
+   height="103.48742"
+   x="1813.2155"
+   y="2338.7354"
+   ry="5.8789377"
    inkscape:label="hlGuardaAlimentosPB" /><rect
    id="rect2-9"
    width="24.902281"
    height="24.902281"
-   x="1836.321381"
-   y="2349.374264165"
+   x="1836.3214"
+   y="2362.8108"
    class="icoDepartamentos"
    ry="5.3436098" />
         <path
    id="path1-34"
-   d="M 1844.6 2368.79 C 1844.21 2368.79 1843.89 2368.65 1843.61 2368.38 C 1843.34 2368.1 1843.2 2367.78 1843.2 2367.39 L 1843.2 2359.04 C 1843.2 2358.66 1843.34 2358.33 1843.61 2358.06 C 1843.89 2357.78 1844.21 2357.65 1844.6 2357.65 L 1845.99 2357.65 C 1845.99 2356.88 1846.26 2356.23 1846.81 2355.68 C 1847.35 2355.14 1848.01 2354.86 1848.77 2354.86 C 1849.54 2354.86 1850.19 2355.14 1850.74 2355.68 C 1851.28 2356.23 1851.56 2356.88 1851.56 2357.65 L 1852.95 2357.65 C 1853.33 2357.65 1853.66 2357.78 1853.93 2358.06 C 1854.2 2358.33 1854.34 2358.66 1854.34 2359.04 L 1854.34 2367.39 C 1854.34 2367.78 1854.2 2368.1 1853.93 2368.38 C 1853.66 2368.65 1853.33 2368.79 1852.95 2368.79 Z M 1844.6 2367.39 L 1852.95 2367.39 L 1852.95 2359.04 L 1851.56 2359.04 L 1851.56 2360.43 C 1851.56 2360.63 1851.49 2360.79 1851.36 2360.93 C 1851.22 2361.06 1851.06 2361.13 1850.86 2361.13 C 1850.66 2361.13 1850.5 2361.06 1850.36 2360.93 C 1850.23 2360.79 1850.16 2360.63 1850.16 2360.43 L 1850.16 2359.04 L 1847.38 2359.04 L 1847.38 2360.43 C 1847.38 2360.63 1847.31 2360.79 1847.18 2360.93 C 1847.05 2361.06 1846.88 2361.13 1846.68 2361.13 C 1846.49 2361.13 1846.32 2361.06 1846.19 2360.93 C 1846.05 2360.79 1845.99 2360.63 1845.99 2360.43 L 1845.99 2359.04 L 1844.6 2359.04 Z M 1847.38 2357.65 L 1850.16 2357.65 C 1850.16 2357.27 1850.03 2356.94 1849.76 2356.66 C 1849.48 2356.39 1849.16 2356.26 1848.77 2356.26 C 1848.39 2356.26 1848.06 2356.39 1847.79 2356.66 C 1847.52 2356.94 1847.38 2357.27 1847.38 2357.65 Z M 1844.6 2367.39 L 1844.6 2359.04 Z"
+   d="m 1844.6,2382.2265 c -0.39,0 -0.71,-0.14 -0.99,-0.41 -0.27,-0.28 -0.41,-0.6 -0.41,-0.99 v -8.35 c 0,-0.38 0.14,-0.71 0.41,-0.98 0.28,-0.28 0.6,-0.41 0.99,-0.41 h 1.39 c 0,-0.77 0.27,-1.42 0.82,-1.97 0.54,-0.54 1.2,-0.82 1.96,-0.82 0.77,0 1.42,0.28 1.97,0.82 0.54,0.55 0.82,1.2 0.82,1.97 h 1.39 c 0.38,0 0.71,0.13 0.98,0.41 0.27,0.27 0.41,0.6 0.41,0.98 v 8.35 c 0,0.39 -0.14,0.71 -0.41,0.99 -0.27,0.27 -0.6,0.41 -0.98,0.41 z m 0,-1.4 h 8.35 v -8.35 h -1.39 v 1.39 c 0,0.2 -0.07,0.36 -0.2,0.5 -0.14,0.13 -0.3,0.2 -0.5,0.2 -0.2,0 -0.36,-0.07 -0.5,-0.2 -0.13,-0.14 -0.2,-0.3 -0.2,-0.5 v -1.39 h -2.78 v 1.39 c 0,0.2 -0.07,0.36 -0.2,0.5 -0.13,0.13 -0.3,0.2 -0.5,0.2 -0.19,0 -0.36,-0.07 -0.49,-0.2 -0.14,-0.14 -0.2,-0.3 -0.2,-0.5 v -1.39 h -1.39 z m 2.78,-9.74 h 2.78 c 0,-0.38 -0.13,-0.71 -0.4,-0.99 -0.28,-0.27 -0.6,-0.4 -0.99,-0.4 -0.38,0 -0.71,0.13 -0.98,0.4 -0.27,0.28 -0.41,0.61 -0.41,0.99 z m -2.78,9.74 v -8.35 z"
    class="icoIcon" />
       <text
    id="lblGuardaAlimentosPB"
-   x="1221.377"
-   y="1013.4528"
+   x="1867.4769"
+   y="2379.2195"
    class="lblEtiqueta"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
-   transform="translate(646.1, 1352.33)">Guarda de alimentos</text></g>
-      <g
-   id="icoGuardarropaPB"
-   class="icoBox"
-   inkscape:label="icoGuardarropaPB">
-        <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:2.65353;text-rendering:geometricPrecision;vector-effect:none"
-   id="hlGuardarropaPB"
-   width="99.258827"
-   height="38.706398"
-   x="1828.978681"
-   y="2369.082964165"
-   ry="7.3391027"
-   inkscape:label="hlGuardarropaPB" /><rect
-   id="rect3-6"
-   width="24.902281"
-   height="24.902281"
-   x="1836.321381"
-   y="2376.654264165"
-   class="icoDepartamentos"
-   ry="5.3436098" />
-        <path
-   id="path1-0"
-   d="M 1842.48 2396.58 C 1842.05 2396.58 1841.68 2396.42 1841.37 2396.11 C 1841.06 2395.81 1840.91 2395.43 1840.91 2395 L 1840.91 2386.35 C 1840.91 2385.92 1841.06 2385.55 1841.37 2385.24 C 1841.68 2384.93 1842.05 2384.78 1842.48 2384.78 L 1845.63 2384.78 L 1845.63 2383.21 C 1845.63 2382.77 1845.78 2382.4 1846.09 2382.1 C 1846.4 2381.79 1846.77 2381.63 1847.2 2381.63 L 1850.35 2381.63 C 1850.78 2381.63 1851.15 2381.79 1851.46 2382.1 C 1851.76 2382.4 1851.92 2382.77 1851.92 2383.21 L 1851.92 2384.78 L 1855.06 2384.78 C 1855.5 2384.78 1855.87 2384.93 1856.17 2385.24 C 1856.48 2385.55 1856.64 2385.92 1856.64 2386.35 L 1856.64 2395 C 1856.64 2395.44 1856.48 2395.81 1856.17 2396.11 C 1855.87 2396.42 1855.5 2396.58 1855.06 2396.58 Z M 1847.2 2384.78 L 1850.35 2384.78 L 1850.35 2383.21 L 1847.2 2383.21 Z M 1844.05 2386.35 L 1842.48 2386.35 L 1842.48 2395 L 1844.05 2395 Z M 1851.92 2395 L 1851.92 2386.35 L 1845.63 2386.35 L 1845.63 2395 Z M 1853.49 2386.35 L 1853.49 2395 L 1855.06 2395 L 1855.06 2386.35 Z M 1848.77 2390.68 Z"
-   class="icoIcon" />
-      <text
-   id="lblGuardarropaPB"
-   x="1221.0656"
-   y="1040.0991"
-   class="lblEtiqueta"
-   style="font-size:10.0011px;clip-rule:evenodd;display:inline;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-dasharray:none;stroke-opacity:0.998051;text-rendering:geometricPrecision"
-   inkscape:label="lblGuardarropaPB"
-   transform="translate(646.1, 1352.33)"><tspan
-     sodipodi:role="line"
-     id="tspan10"
-     x="1221.0656"
-     y="1040.0991"
-     style="font-size:10.0011px;stroke:#ffffff;stroke-dasharray:none;stroke-opacity:0.998051;stroke-width:3.00034">Guardarropa</tspan></text></g>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1">Guarda de alimentos</text></g>
+      
       <g
    id="icoObjetosPerdidosPB"
-   class="icoBox">
+   class="icoBox"
+   transform="translate(0,-10.607799)">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:2.8468;text-rendering:geometricPrecision;vector-effect:none"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:3.41656;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlObjetosPerdidosPB"
-   width="114.81734"
-   height="38.513134"
-   x="1829.075381"
-   y="2397.182864165"
-   ry="7.3024578"
+   width="174.35844"
+   height="36.528999"
+   x="1831.1283"
+   y="2397.8213"
+   ry="6.9262466"
    inkscape:label="hlObjetosPerdidosPB" /><rect
    id="rect4-8"
    width="24.902281"
    height="24.902281"
-   x="1836.321381"
-   y="2403.924264165"
+   x="1836.3214"
+   y="2403.9243"
    class="icoDepartamentos"
    ry="5.3436098" />
         <path
    id="path1-18"
-   d="M 1847.28 2411.14 L 1849.52 2411.14 C 1849.52 2410.82 1849.41 2410.55 1849.2 2410.34 C 1848.99 2410.13 1848.72 2410.02 1848.4 2410.02 C 1848.08 2410.02 1847.81 2410.13 1847.6 2410.34 C 1847.38 2410.55 1847.28 2410.82 1847.28 2411.14 Z M 1844.66 2412.64 L 1843.92 2412.64 L 1843.92 2417.87 L 1844.66 2417.87 Z M 1841.68 2422.35 C 1841.46 2422.35 1841.29 2422.28 1841.14 2422.14 C 1841 2421.99 1840.93 2421.82 1840.93 2421.6 C 1840.93 2421.39 1841 2421.21 1841.14 2421.07 C 1841.29 2420.93 1841.46 2420.86 1841.68 2420.86 L 1847.73 2420.86 C 1847.79 2421.16 1847.84 2421.4 1847.89 2421.6 C 1847.94 2421.8 1848.04 2422.05 1848.17 2422.35 Z M 1845.78 2412.64 L 1845.78 2417.87 L 1848.17 2417.87 C 1848.04 2418.17 1847.94 2418.42 1847.89 2418.62 C 1847.84 2418.81 1847.79 2419.06 1847.73 2419.36 L 1843.92 2419.36 C 1843.51 2419.36 1843.15 2419.22 1842.86 2418.92 C 1842.57 2418.63 1842.42 2418.28 1842.42 2417.87 L 1842.42 2412.64 C 1842.42 2412.23 1842.57 2411.88 1842.86 2411.58 C 1843.15 2411.29 1843.51 2411.14 1843.92 2411.14 L 1846.16 2411.14 C 1846.16 2410.52 1846.38 2409.99 1846.81 2409.56 C 1847.25 2409.12 1847.78 2408.9 1848.4 2408.9 C 1849.02 2408.9 1849.55 2409.12 1849.99 2409.56 C 1850.42 2409.99 1850.64 2410.52 1850.64 2411.14 L 1852.88 2411.14 C 1853.29 2411.14 1853.64 2411.29 1853.94 2411.58 C 1854.23 2411.88 1854.38 2412.23 1854.38 2412.64 L 1854.38 2415.1 C 1854.09 2415.03 1853.84 2414.97 1853.64 2414.94 C 1853.43 2414.9 1853.18 2414.88 1852.88 2414.88 L 1852.88 2412.64 L 1852.13 2412.64 L 1852.13 2414.95 C 1851.91 2414.99 1851.72 2415.03 1851.57 2415.06 C 1851.42 2415.09 1851.24 2415.14 1851.01 2415.22 L 1851.01 2412.64 Z M 1852.88 2416.37 C 1853.91 2416.37 1854.8 2416.74 1855.52 2417.47 C 1856.25 2418.2 1856.62 2419.08 1856.62 2420.11 C 1856.62 2421.14 1856.25 2422.02 1855.52 2422.75 C 1854.8 2423.48 1853.91 2423.85 1852.88 2423.85 C 1851.85 2423.85 1850.97 2423.48 1850.24 2422.75 C 1849.51 2422.02 1849.15 2421.14 1849.15 2420.11 C 1849.15 2419.08 1849.51 2418.2 1850.24 2417.47 C 1850.97 2416.74 1851.85 2416.37 1852.88 2416.37 Z M 1852.88 2422.35 C 1853.02 2422.35 1853.13 2422.3 1853.23 2422.21 C 1853.32 2422.12 1853.37 2422 1853.37 2421.87 C 1853.37 2421.73 1853.32 2421.61 1853.23 2421.52 C 1853.13 2421.43 1853.02 2421.38 1852.88 2421.38 C 1852.74 2421.38 1852.63 2421.43 1852.54 2421.52 C 1852.44 2421.61 1852.4 2421.73 1852.4 2421.87 C 1852.4 2422 1852.44 2422.12 1852.54 2422.21 C 1852.63 2422.3 1852.74 2422.35 1852.88 2422.35 Z M 1844.66 2412.64 L 1845.78 2412.64 Z M 1844.66 2412.64 L 1843.92 2412.64 Z M 1845.78 2412.64 L 1851.01 2412.64 Z M 1851.01 2412.64 L 1852.13 2412.64 Z M 1852.13 2412.64 L 1852.88 2412.64 Z M 1852.88 2417.87 C 1852.64 2417.87 1852.43 2417.93 1852.23 2418.05 C 1852.03 2418.16 1851.87 2418.32 1851.74 2418.52 C 1851.69 2418.6 1851.69 2418.67 1851.72 2418.76 C 1851.76 2418.84 1851.82 2418.9 1851.91 2418.93 C 1851.98 2418.97 1852.06 2418.97 1852.13 2418.93 C 1852.21 2418.9 1852.28 2418.85 1852.34 2418.78 C 1852.4 2418.7 1852.48 2418.63 1852.57 2418.58 C 1852.67 2418.53 1852.77 2418.5 1852.88 2418.5 C 1853.07 2418.5 1853.21 2418.55 1853.32 2418.64 C 1853.43 2418.74 1853.48 2418.88 1853.48 2419.06 C 1853.48 2419.2 1853.44 2419.32 1853.37 2419.41 C 1853.29 2419.5 1853.2 2419.6 1853.11 2419.7 C 1853.03 2419.77 1852.95 2419.85 1852.87 2419.92 C 1852.79 2420 1852.72 2420.08 1852.66 2420.18 C 1852.62 2420.26 1852.59 2420.33 1852.57 2420.41 C 1852.55 2420.48 1852.55 2420.57 1852.55 2420.67 C 1852.55 2420.77 1852.58 2420.85 1852.64 2420.91 C 1852.7 2420.98 1852.78 2421.01 1852.88 2421.01 C 1852.98 2421.01 1853.06 2420.98 1853.12 2420.91 C 1853.19 2420.85 1853.22 2420.77 1853.22 2420.67 C 1853.22 2420.57 1853.25 2420.47 1853.33 2420.37 C 1853.4 2420.27 1853.49 2420.17 1853.59 2420.07 C 1853.77 2419.92 1853.9 2419.78 1854 2419.64 C 1854.1 2419.51 1854.15 2419.31 1854.15 2419.06 C 1854.15 2418.7 1854.03 2418.41 1853.8 2418.2 C 1853.56 2417.98 1853.25 2417.87 1852.88 2417.87 Z"
+   d="m 1847.28,2411.14 h 2.24 c 0,-0.32 -0.11,-0.59 -0.32,-0.8 -0.21,-0.21 -0.48,-0.32 -0.8,-0.32 -0.32,0 -0.59,0.11 -0.8,0.32 -0.22,0.21 -0.32,0.48 -0.32,0.8 z m -2.62,1.5 h -0.74 v 5.23 h 0.74 z m -2.98,9.71 c -0.22,0 -0.39,-0.07 -0.54,-0.21 -0.14,-0.15 -0.21,-0.32 -0.21,-0.54 0,-0.21 0.07,-0.39 0.21,-0.53 0.15,-0.14 0.32,-0.21 0.54,-0.21 h 6.05 c 0.06,0.3 0.11,0.54 0.16,0.74 0.05,0.2 0.15,0.45 0.28,0.75 z m 4.1,-9.71 v 5.23 h 2.39 c -0.13,0.3 -0.23,0.55 -0.28,0.75 -0.05,0.19 -0.1,0.44 -0.16,0.74 h -3.81 c -0.41,0 -0.77,-0.14 -1.06,-0.44 -0.29,-0.29 -0.44,-0.64 -0.44,-1.05 v -5.23 c 0,-0.41 0.15,-0.76 0.44,-1.06 0.29,-0.29 0.65,-0.44 1.06,-0.44 h 2.24 c 0,-0.62 0.22,-1.15 0.65,-1.58 0.44,-0.44 0.97,-0.66 1.59,-0.66 0.62,0 1.15,0.22 1.59,0.66 0.43,0.43 0.65,0.96 0.65,1.58 h 2.24 c 0.41,0 0.76,0.15 1.06,0.44 0.29,0.3 0.44,0.65 0.44,1.06 v 2.46 c -0.29,-0.07 -0.54,-0.13 -0.74,-0.16 -0.21,-0.04 -0.46,-0.06 -0.76,-0.06 v -2.24 h -0.75 v 2.31 c -0.22,0.04 -0.41,0.08 -0.56,0.11 -0.15,0.03 -0.33,0.08 -0.56,0.16 v -2.58 z m 7.1,3.73 c 1.03,0 1.92,0.37 2.64,1.1 0.73,0.73 1.1,1.61 1.1,2.64 0,1.03 -0.37,1.91 -1.1,2.64 -0.72,0.73 -1.61,1.1 -2.64,1.1 -1.03,0 -1.91,-0.37 -2.64,-1.1 -0.73,-0.73 -1.09,-1.61 -1.09,-2.64 0,-1.03 0.36,-1.91 1.09,-2.64 0.73,-0.73 1.61,-1.1 2.64,-1.1 z m 0,5.98 c 0.14,0 0.25,-0.05 0.35,-0.14 0.09,-0.09 0.14,-0.21 0.14,-0.34 0,-0.14 -0.05,-0.26 -0.14,-0.35 -0.1,-0.09 -0.21,-0.14 -0.35,-0.14 -0.14,0 -0.25,0.05 -0.34,0.14 -0.1,0.09 -0.14,0.21 -0.14,0.35 0,0.13 0.04,0.25 0.14,0.34 0.09,0.09 0.2,0.14 0.34,0.14 z m -8.22,-9.71 h 1.12 z m 0,0 h -0.74 z m 1.12,0 h 5.23 z m 5.23,0 h 1.12 z m 1.12,0 h 0.75 z m 0.75,5.23 c -0.24,0 -0.45,0.06 -0.65,0.18 -0.2,0.11 -0.36,0.27 -0.49,0.47 -0.05,0.08 -0.05,0.15 -0.02,0.24 0.04,0.08 0.1,0.14 0.19,0.17 0.07,0.04 0.15,0.04 0.22,0 0.08,-0.03 0.15,-0.08 0.21,-0.15 0.06,-0.08 0.14,-0.15 0.23,-0.2 0.1,-0.05 0.2,-0.08 0.31,-0.08 0.19,0 0.33,0.05 0.44,0.14 0.11,0.1 0.16,0.24 0.16,0.42 0,0.14 -0.04,0.26 -0.11,0.35 -0.08,0.09 -0.17,0.19 -0.26,0.29 -0.08,0.07 -0.16,0.15 -0.24,0.22 -0.08,0.08 -0.15,0.16 -0.21,0.26 -0.04,0.08 -0.07,0.15 -0.09,0.23 -0.02,0.07 -0.02,0.16 -0.02,0.26 0,0.1 0.03,0.18 0.09,0.24 0.06,0.07 0.14,0.1 0.24,0.1 0.1,0 0.18,-0.03 0.24,-0.1 0.07,-0.06 0.1,-0.14 0.1,-0.24 0,-0.1 0.03,-0.2 0.11,-0.3 0.07,-0.1 0.16,-0.2 0.26,-0.3 0.18,-0.15 0.31,-0.29 0.41,-0.43 0.1,-0.13 0.15,-0.33 0.15,-0.58 0,-0.36 -0.12,-0.65 -0.35,-0.86 -0.24,-0.22 -0.55,-0.33 -0.92,-0.33 z"
    class="icoIcon" />
       <text
    id="lblObjetosPerdidosPB"
@@ -4997,7 +5053,7 @@
    y="1066.6926"
    class="lblEtiqueta"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
-   transform="translate(646.1, 1352.33)">Objetos perdidos</text></g>
+   transform="translate(646.1,1352.33)">Guardarropa y objetos perdidos</text></g>
       <g
    id="icoBañosMujeresPB"
    class="icoBox"
@@ -5144,41 +5200,41 @@
    id="rect1342-3"
    width="24.902281"
    height="24.902281"
-   x="1450.250381"
-   y="2039.4288641649998"
+   x="1416.6591"
+   y="2040.4896"
    class="icoInstalaciones"
    ry="5.3436098" /><rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;filter:url(#filter176);font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;text-rendering:geometricPrecision;vector-effect:none"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.00079;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter176);text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    id="hlAscensoresPB"
    width="32.200363"
    height="71.768661"
-   x="1413.291281"
-   y="2016.4570641649998"
+   x="1413.2913"
+   y="2016.457"
    ry="5.3436098"
    inkscape:label="hlAscensoresPB"
-   class="icoHighlightArea" />
+   class="icoHighlightArea"
+   transform="matrix(1.320875,0,0,1.1665531,-458.64285,-341.82417)" />
         <path
    id="path1-74"
-   d="M 1458.86 2053.41 L 1458.86 2055.72 C 1458.86 2055.93 1458.94 2056.12 1459.08 2056.26 C 1459.23 2056.41 1459.41 2056.48 1459.63 2056.48 L 1460.4 2056.48 C 1460.62 2056.48 1460.8 2056.41 1460.94 2056.26 C 1461.09 2056.12 1461.17 2055.93 1461.17 2055.72 L 1461.17 2053.41 C 1461.31 2053.27 1461.47 2053.16 1461.66 2053.08 C 1461.84 2052.99 1461.93 2052.85 1461.93 2052.65 L 1461.93 2051.49 C 1461.93 2051.07 1461.78 2050.71 1461.48 2050.41 C 1461.18 2050.11 1460.82 2049.96 1460.4 2049.96 L 1459.63 2049.96 C 1459.21 2049.96 1458.85 2050.11 1458.55 2050.41 C 1458.25 2050.71 1458.1 2051.07 1458.1 2051.49 L 1458.1 2052.65 C 1458.1 2052.85 1458.19 2052.99 1458.37 2053.08 C 1458.56 2053.16 1458.72 2053.27 1458.86 2053.41 Z M 1460.01 2049.19 C 1460.28 2049.19 1460.51 2049.1 1460.7 2048.91 C 1460.88 2048.73 1460.97 2048.5 1460.97 2048.23 C 1460.97 2047.96 1460.88 2047.74 1460.7 2047.55 C 1460.51 2047.37 1460.28 2047.27 1460.01 2047.27 C 1459.75 2047.27 1459.52 2047.37 1459.33 2047.55 C 1459.15 2047.74 1459.05 2047.96 1459.05 2048.23 C 1459.05 2048.5 1459.15 2048.73 1459.33 2048.91 C 1459.52 2049.1 1459.75 2049.19 1460.01 2049.19 Z M 1464.16 2051.11 L 1466.62 2051.11 C 1466.77 2051.11 1466.88 2051.04 1466.95 2050.91 C 1467.02 2050.77 1467.02 2050.64 1466.94 2050.52 L 1465.71 2048.56 C 1465.64 2048.43 1465.53 2048.37 1465.39 2048.37 C 1465.25 2048.37 1465.14 2048.43 1465.06 2048.56 L 1463.83 2050.52 C 1463.76 2050.64 1463.75 2050.78 1463.82 2050.91 C 1463.89 2051.04 1464 2051.11 1464.16 2051.11 Z M 1465.71 2055.2 L 1466.94 2053.24 C 1467.02 2053.11 1467.02 2052.98 1466.95 2052.85 C 1466.88 2052.71 1466.77 2052.65 1466.62 2052.65 L 1464.16 2052.65 C 1464 2052.65 1463.89 2052.71 1463.82 2052.85 C 1463.75 2052.98 1463.76 2053.11 1463.83 2053.24 L 1465.06 2055.2 C 1465.14 2055.33 1465.25 2055.39 1465.39 2055.39 C 1465.53 2055.39 1465.64 2055.33 1465.71 2055.2 Z M 1457.33 2058.79 C 1456.91 2058.79 1456.54 2058.64 1456.24 2058.34 C 1455.94 2058.04 1455.79 2057.67 1455.79 2057.25 L 1455.79 2046.51 C 1455.79 2046.08 1455.94 2045.72 1456.24 2045.42 C 1456.54 2045.12 1456.91 2044.97 1457.33 2044.97 L 1468.07 2044.97 C 1468.5 2044.97 1468.86 2045.12 1469.16 2045.42 C 1469.46 2045.72 1469.61 2046.08 1469.61 2046.51 L 1469.61 2057.25 C 1469.61 2057.67 1469.46 2058.04 1469.16 2058.34 C 1468.86 2058.64 1468.5 2058.79 1468.07 2058.79 Z M 1457.33 2057.25 L 1468.07 2057.25 L 1468.07 2046.51 L 1457.33 2046.51 Z M 1457.33 2057.25 L 1457.33 2046.51 Z"
+   d="m 1425.2686,2054.4708 v 2.31 c 0,0.21 0.08,0.4 0.22,0.54 0.15,0.15 0.33,0.22 0.55,0.22 h 0.77 c 0.22,0 0.4,-0.07 0.54,-0.22 0.15,-0.14 0.23,-0.33 0.23,-0.54 v -2.31 c 0.14,-0.14 0.3,-0.25 0.49,-0.33 0.18,-0.09 0.27,-0.23 0.27,-0.43 v -1.16 c 0,-0.42 -0.15,-0.78 -0.45,-1.08 -0.3,-0.3 -0.66,-0.45 -1.08,-0.45 h -0.77 c -0.42,0 -0.78,0.15 -1.08,0.45 -0.3,0.3 -0.45,0.66 -0.45,1.08 v 1.16 c 0,0.2 0.09,0.34 0.27,0.43 0.19,0.08 0.35,0.19 0.49,0.33 z m 1.15,-4.22 c 0.27,0 0.5,-0.09 0.69,-0.28 0.18,-0.18 0.27,-0.41 0.27,-0.68 0,-0.27 -0.09,-0.49 -0.27,-0.68 -0.19,-0.18 -0.42,-0.28 -0.69,-0.28 -0.26,0 -0.49,0.1 -0.68,0.28 -0.18,0.19 -0.28,0.41 -0.28,0.68 0,0.27 0.1,0.5 0.28,0.68 0.19,0.19 0.42,0.28 0.68,0.28 z m 4.15,1.92 h 2.46 c 0.15,0 0.26,-0.07 0.33,-0.2 0.07,-0.14 0.07,-0.27 -0.01,-0.39 l -1.23,-1.96 c -0.07,-0.13 -0.18,-0.19 -0.32,-0.19 -0.14,0 -0.25,0.06 -0.33,0.19 l -1.23,1.96 c -0.07,0.12 -0.08,0.26 -0.01,0.39 0.07,0.13 0.18,0.2 0.34,0.2 z m 1.55,4.09 1.23,-1.96 c 0.08,-0.13 0.08,-0.26 0.01,-0.39 -0.07,-0.14 -0.18,-0.2 -0.33,-0.2 h -2.46 c -0.16,0 -0.27,0.06 -0.34,0.2 -0.07,0.13 -0.06,0.26 0.01,0.39 l 1.23,1.96 c 0.08,0.13 0.19,0.19 0.33,0.19 0.14,0 0.25,-0.06 0.32,-0.19 z m -8.38,3.59 c -0.42,0 -0.79,-0.15 -1.09,-0.45 -0.3,-0.3 -0.45,-0.67 -0.45,-1.09 v -10.74 c 0,-0.43 0.15,-0.79 0.45,-1.09 0.3,-0.3 0.67,-0.45 1.09,-0.45 h 10.74 c 0.43,0 0.79,0.15 1.09,0.45 0.3,0.3 0.45,0.66 0.45,1.09 v 10.74 c 0,0.42 -0.15,0.79 -0.45,1.09 -0.3,0.3 -0.66,0.45 -1.09,0.45 z m 0,-1.54 h 10.74 v -10.74 h -10.74 z m 0,0 v -10.74 z"
    class="icoIcon" />
       <text
    id="lblAscensoresPB"
-   x="816.80585"
-   y="722.90814"
+   x="1475.2816"
+   y="2056.4978"
    class="lblEtiqueta"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
-   inkscape:label="lblAscensoresPB"
-   transform="translate(646.1, 1352.33)"><tspan
+   inkscape:label="lblAscensoresPB"><tspan
      id="tspan725-4-5-8"
-     x="816.80585"
-     y="722.90814"
-     style="-inkscape-stroke:none;baseline-shift:baseline;direction:ltr;dominant-baseline:auto;fill:#000000;fill-opacity:1;font-family:&quot;NewsGoth BT&quot;;font-feature-settings:normal;font-size:10.0011px;font-stretch:normal;font-style:normal;font-variant:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;font-weight:normal;letter-spacing:normal;line-height:normal;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1;stroke:#ffffff;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.998051;stroke-width:3.00034;text-align:start;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;vector-effect:none;white-space:normal;word-spacing:normal;writing-mode:lr-tb">Ascensores</tspan></text><rect
-   style="fill:#ff6600;fill-opacity:0;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stroke:none;stroke-dasharray:none;stroke-opacity:0;stroke-width:1.00011"
+     x="1475.2816"
+     y="2056.4978"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1">Ascensores</tspan></text><rect
+   style="display:inline;opacity:1;fill:#ff6600;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke"
    id="rect5"
    width="32.200363"
    height="71.768661"
-   x="1413.291281"
-   y="2016.4570641649998"
+   x="1413.2913"
+   y="2016.457"
    ry="5.3436098" /></g>
       <g
    id="icoPrimerosAuxiliosPB"
