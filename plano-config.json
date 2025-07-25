@@ -4,13 +4,15 @@
         "elementToRotate": "#layBase",
         "transitionDuration": 500,
         "style": {
-            "inactiveFloor": "blur(3px) brightness(0.85)"
+            "inactiveFloor": "blur(6px) brightness(0.85)"
         }
     },
     
-    "panzoomSettings": {
+    "mapSettings": {
         "initialZoom": 0.7,
-        "minZoom": -5,
+        "minZoom": -2,
+        "maxZoom": 1.8,
+        "zoomSnap": 0.1,
         "panOnlyWhenZoomed": true,
         "zoom": {
             "maxScale": 4,

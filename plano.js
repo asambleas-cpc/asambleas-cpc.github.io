@@ -51,14 +51,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Initialize Leaflet map with simple coordinates
             map = L.map('map', {
                 crs: L.CRS.Simple,
-                minZoom: config.panzoomSettings.minZoom,
+                minZoom: config.mapSettings.minZoom,
+                maxZoom: config.mapSettings.maxZoom,
                 zoomControl: false, // Disable default zoom control
-                maxBounds: bounds
+                maxBounds: bounds,
+                zoomSnap: config.mapSettings.zoomSnap,
+                center: [1757, 1649],
+                zoom: 0.5
+
             });
 
             // Add SVG overlay
             svgOverlay = L.svgOverlay(svgElement, bounds).addTo(map);
-            map.fitBounds(bounds);
+            map.fitBounds([[2129,2282],[1302,1003]]);
 
             // Setup UI and event listeners
             setupUI();
@@ -295,7 +300,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    function showAndHighlightIcon(iconId, offcanvasKey) {
+    function showAndHighlightIcon(iconId, offcanvasKey, animate = true) {
         const target = svgElement.querySelector(`#${iconId}`);
         if (!target) return;
 
@@ -316,11 +321,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // If the offcanvas is already visible, center on the new element immediately.
         if (mainOffcanvasElement.classList.contains('show')) {
-            centerOnElement(iconId);
+            centerOnElement(iconId, animate);
         } else {
             // Otherwise, wait for the offcanvas to be fully shown before centering.
             mainOffcanvasElement.addEventListener('shown.bs.offcanvas', () => {
-                centerOnElement(iconId);
+                centerOnElement(iconId, animate);
             }, { once: true }); // Ensure the listener is only called once per show event.
         }
 
@@ -363,7 +368,7 @@ document.addEventListener('DOMContentLoaded', async () => {
      * accounting for the offcanvas panel if it's visible.
      * @param {string} elementId The ID of the SVG element to focus on.
      */
-    function centerOnElement(elementId) {
+    function centerOnElement(elementId, animate = true) {
         const element = svgElement.querySelector(`#${elementId}`);
         if (!element) {
             console.error(`Element with ID '${elementId}' not found.`);
@@ -389,13 +394,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const bottomPadding = mainOffcanvasElement.classList.contains('show') ? mainOffcanvasElement.offsetHeight : 0;
 
         const flyToBoundsOptions = {
-            maxZoom: config.panzoomSettings.zoom.maxZoom,
+            maxZoom: config.mapSettings.zoom.maxZoom,
             paddingTopLeft: L.point(0, topPadding),
             paddingBottomRight: L.point(rightPadding, bottomPadding)
         };
-        
+
         // Use flyToBounds for a smooth animation that fits the element in the view.
-        map.flyToBounds(elementBounds, flyToBoundsOptions);
+        animate
+            ? map.flyToBounds(elementBounds, flyToBoundsOptions)
+            : map.fitBounds(elementBounds, flyToBoundsOptions);
+
     }
     // Make it globally accessible for console calls
     window.centerOnElement = centerOnElement;
@@ -406,6 +414,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             svgOverlay.addTo(map);
             console.log('SVG overlay has been rerendered.');
         }
+        console.log(map.getCenter());
+        console.log(map.getZoom());
+        console.log(map.getBounds());
     }
     window.rerenderSVG = rerenderSVG;
 
@@ -415,7 +426,7 @@ document.addEventListener('DOMContentLoaded', async () => {
      * @param {string} layer The key of the layer to display.
      * @param {string} [elementId] Optional: The base ID of an element to highlight and center on.
      */
-    function mostrarMapa(floor = 0, layer = 'departamentos', elementId = 'basePB') {
+    function mostrarMapa(floor = 0, layer = 'departamentos', elementId = 'basePB', animate = false) {
         const mapModalElement = document.getElementById('mapModal');
 
         const performMapActions = () => {
@@ -445,13 +456,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const targetElement = svgElement.querySelector(`#${iconIdWithSuffix}`) || svgElement.querySelector(`#${iconIdWithoutSuffix}`);
 
                     if (targetElement) {
-                        showAndHighlightIcon(targetElement.id, elementId);
+                        showAndHighlightIcon(targetElement.id, elementId, animate);
                     } else {
                         console.warn(`Icon with base ID '${elementId}' not found on floor ${floor}.`);
                     }
                 } else {
                     console.warn(`No information found for elementId: '${elementId}', cannot show details.`);
-                    centerOnElement(elementId); // Attempt to center even without info
+                    centerOnElement(elementId, animate); // Attempt to center even without info
                 }
             }
         };
