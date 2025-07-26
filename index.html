@@ -274,7 +274,7 @@
                   <li><strong>En las calles.</strong> En los alrededores del CPC hay abundantes lugares para estacionar
                     en la calle. Sin embargo, generalmente hay cuidacoches.</li>
                   <li><strong>Cocheras. </strong>Tambien hay disponibles estacionamientos pagos.<br> <button
-                      class="btn btn-outline-primary btn-sm mt-2" onclick="mostrarDatos('estacionamiento')">
+                      class="btn btn-sm btn-primary" onclick="mostrarDatos('estacionamiento')">
                       Ver cocheras en la zona del CPC
                     </button></li>
                   <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios para que
@@ -387,7 +387,7 @@
     <section id="auditorios" class="section-auditorios snap-section"><i
         class="section-icon material-symbols-outlined">airline_seat_recline_normal</i>
       <div class="container pt-5">
-        <h2> ¿Dónde me ubico?</h2>
+        <h2> Dónde ubicarse</h2>
 
         <h3>Auditorios</h3>
         <p>El CPC tiene dos auditorios. Es importante que nos ubiquemos en el auditorio que nos corresponde, porque
@@ -420,7 +420,7 @@
           <div class="row d-none">
   <div class="col-sm-6 mb-3 mb-sm-0">
           <div class="card">
-          <img src="placeholder.png" class="card-img-top" alt="...">
+          <i class="material-symbols-outlined fs-1 card-img-top">checked_bag_question</i>
           <div class="card-body">
             <h5 class="card-title">Auditorio principal</h5>
             <p class="card-text">Para el público en general. Se accede mediante las escaleras a la izquierda de la
@@ -459,6 +459,22 @@
       <p><button class="btn btn-sm btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Ver plano del predio</button></p>
       <h4>Departamentos</h4>
       
+<div class="card mb-3" id="cardObjetosPerdidos" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-2 d-flex align-items-start justify-content-center pt-3">
+      <i class="material-symbols-outlined fs-1 ">checked_bag_question</i>
+    </div>
+    <div class="col-md-10">
+      <div class="card-body">
+        <h5 class="card-title">Guardarropa y objetos perdidos</h5>
+<p class="card-text">Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en planta baja, junto con Guarda de alimentos</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
         <h5>Guardarropa y objetos perdidos</h5>
         <p>Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en planta baja, junto con Guarda de alimentos</a></p>
         <h5>Guarda de alimentos</h5>
