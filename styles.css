@@ -150,7 +150,7 @@
 }
 
 /* Themed Card Layout in #inicio */
-.card {
+#cardGroupEnlacesInicio .card {
   display: flex;
   overflow: hidden;
   border-radius: 0.75rem;
@@ -168,7 +168,7 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 } */
 
-.card-icon {
+#cardGroupEnlacesInicio .card-icon {
   display: flex;
   align-items: flex-start;
   /* Align icon to the top */
@@ -179,7 +179,7 @@
   /* temporary default, overridden below */
 }
 
-.card-icon .material-symbols-outlined {
+#cardGroupEnlacesInicio .card-icon .material-symbols-outlined {
   color: white !important;
   /* Force icon to be white */
   font-size: 2rem;
@@ -188,57 +188,57 @@
 }
 
 
-.card-content {
+#cardGroupEnlacesInicio .card-content {
   flex-grow: 1;
   padding: 1rem;
 }
 
 /* Individual Card Variants */
-.card-transporte .card-icon {
+#cardGroupEnlacesInicio .card-transporte .card-icon {
   background: var(--transporte-color);
 }
 
-.card-auditorios .card-icon {
+#cardGroupEnlacesInicio .card-auditorios .card-icon {
   background: var(--auditorios-color);
 }
 
-.card-alimentos .card-icon {
+#cardGroupEnlacesInicio .card-alimentos .card-icon {
   background: var(--alimentos-color);
 }
 
-.card-alojamiento .card-icon {
+#cardGroupEnlacesInicio .card-alojamiento .card-icon {
   background: var(--alojamiento-color);
 }
 
-.card-otros .card-icon {
+#cardGroupEnlacesInicio .card-otros .card-icon {
   background: var(--otros-color);
 }
 
-.card-aviso .card-icon {
+#cardGroupEnlacesInicio .card-aviso .card-icon {
   background: var(--aviso-color);
 }
 
-.card-transporte .card-content {
+#cardGroupEnlacesInicio .card-transporte .card-content {
   background: var(--transporte-bg);
 }
 
-.card-auditorios .card-content {
+#cardGroupEnlacesInicio .card-auditorios .card-content {
   background: var(--auditorios-bg);
 }
 
-.card-alimentos .card-content {
+#cardGroupEnlacesInicio .card-alimentos .card-content {
   background: var(--alimentos-bg);
 }
 
-.card-alojamiento .card-content {
+#cardGroupEnlacesInicio .card-alojamiento .card-content {
   background: var(--alojamiento-bg);
 }
 
-.card-otros .card-content {
+#cardGroupEnlacesInicio .card-otros .card-content {
   background: var(--otros-bg);
 }
 
-.card-aviso .card-content {
+#cardGroupEnlacesInicio .card-aviso .card-content {
   background: var(--aviso-bg);
 }
 

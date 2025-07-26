@@ -6,7 +6,7 @@
    id="planoCpcAsambleas"
    width="4300.9331"
    height="3901.0513"
-   style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:auto"
+   style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:geometricPrecision"
    version="1.1"
    viewBox="0 0 4300.933 3901.4916"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -14,9 +14,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layDepartamentosInstalacionesPB"
-   inkscape:cx="2138.2908"
-   inkscape:cy="2388.6066"
+   inkscape:current-layer="layMobiliarioPA"
+   inkscape:cx="2003.2335"
+   inkscape:cy="2065.8124"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -26,7 +26,7 @@
    inkscape:window-width="1920"
    inkscape:window-x="1272"
    inkscape:window-y="375"
-   inkscape:zoom="0.3535534"
+   inkscape:zoom="1.4142136"
    id="namedview1"
    bordercolor="#eeeeee"
    borderopacity="1"
@@ -1752,7 +1752,7 @@
    type="text/css">
    .icoHighlightAreaHidden {display:none}
    .icoHighlightArea {opacity:1;mix-blend-mode:normal;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;paint-order:stroke;filter:url(#filter99); }
-.lblEtiqueta { font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1;font-variation-settings:normal; }
+.lblEtiqueta { font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1 }
 .mobiAudioVideo {   }
 .mobiPlataforma {   }
 .mobiEscalerasPlataforma {   }
@@ -1761,10 +1761,10 @@
 .mobiMostrador {   }
 .mobiPiscina {   }
 .mobiSillas { font-variation-settings: normal;opacity: 1;vector-effect: none;fill: #000066;fill-opacity: 1;stroke: #c4c4c4;stroke-width: 1.2px;stroke-linecap: butt;stroke-linejoin: round;stroke-miterlimit: 4;stroke-dasharray: none;stroke-dashoffset: 0;stroke-opacity: 1; }
-.ediCortinado { opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:2.00023;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.00023, 4.00045;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1 }
-.ediAtrio {fill-rule: evenodd;    clip-rule: evenodd;    display: inline;    opacity: 0.75;    fill: #cccccc; }
+.ediCortinado { font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:2.00023;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.00023, 4.00045;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1 }
+.ediAtrio { text-rendering: geometricPrecision;        fill-rule: evenodd;    clip-rule: evenodd;    display: inline;    opacity: 0.75;    fill: #cccccc; }
 .ediParedesExternas { stroke:#4D4D4D;stroke-width:6.25;stroke-miterlimit:22.9256;fill:none }
-.ediPuertas { fill:white;stroke:black;stroke-width:0.9;stroke-miterlimit:22.9256; clip-rule:evenodd;display:inline;fill-rule:evenodd; }
+.ediPuertas { fill:white;stroke:black;stroke-width:0.9;stroke-miterlimit:22.9256; clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision }
 .ediSalas { fill:none;stroke:#4d4d4d;stroke-width:4.17;stroke-miterlimit:22.9256 }
 .ediLineasEstacionamiento {   }
 .ediAsfalto {   }
@@ -1772,12 +1772,12 @@
 .ediGalerias {   }
 .ediVeredas {   }
 .ediCesped { fill:#006633;opacity: 0 }
-.secAreaRestringida { clip-rule:evenodd;display:inline;opacity:0.370262;vector-effect:none;fill:url(#pattern21);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000 }
-.icoIcon { clip-rule:evenodd;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1 }
-.icoSalidas { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#d64c00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3433.22;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers; }
+.secAreaRestringida { font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:0.370262;vector-effect:none;fill:url(#pattern21);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000 }
+.icoIcon { font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1 }
+.icoSalidas { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#d64c00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3433.22;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;text-rendering:geometricPrecision }
 .icoDepartamentos { fill:#0c5c10;fill-opacity:1;stroke:none;stroke-width:3433.22 }
-.icoInstalaciones { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#081a3f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3433.22;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers; }
-.icoBox { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers; }
+.icoInstalaciones { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#081a3f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3433.22;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;text-rendering:geometricPrecision }
+.icoBox { clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;text-rendering:geometricPrecision }
 .str1 { stroke:#4D4D4D;stroke-width:4.17;stroke-miterlimit:22.9256 }
 .str4 { stroke:white;stroke-width:4.17;stroke-miterlimit:22.9256 }
 .str10 { stroke:white;stroke-width:2.08;stroke-miterlimit:22.9256 }
@@ -1898,114 +1898,114 @@
    inkscape:groupmode="layer"
    inkscape:label="layPlantaBaja"
    id="layPlantaBaja"
-   style="clip-rule:evenodd;display:inline;opacity:1;fill-rule:evenodd;">
+   style="clip-rule:evenodd;display:inline;opacity:1;fill-rule:evenodd;text-rendering:geometricPrecision">
     <g
    id="g140"
    inkscape:label="entorno"
    inkscape:groupmode="layer"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;"><rect
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:11.3502;vector-effect:none"
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision"><rect
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:11.3502;text-rendering:geometricPrecision;vector-effect:none"
      id="rect145"
      width="4290.0684"
      height="3890.1414"
      x="5.43230689999973"
      y="5.675099864999993"
      ry="6.8846302" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 1185.04 1253.91 L 1133.26 1334.41"
      id="path149-7-4-4" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 567.497 563.954 L 522.72 653.452"
      id="path149-7-4-4-3" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 355.973 486.946 L 337.199 581.444"
      id="path149-7-4-4-3-4" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 3808.18 1338.22 L 3703.68 1338.75"
      id="path149-7-7" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 3780.18 1577.25 L 3682.68 1562.77"
      id="path149-7-7-1" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 3881.65 1446.91 L 3863.02 1526.37"
      id="path149-7-7-1-6" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 3582.16 2407.48 L 3471.94 2381.7"
      id="path149-7-7-1-2" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.25059;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.25059;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 1004.98 1637.75 L 1075.33 1638.85"
      id="path150" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 1074.25 1395.97 L 1002.37 1396.42"
      id="path151" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 3681.49 2271.25 L 3653.03 2360.63"
      id="path149-7-7-1-6-8" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.25059;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.25059;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 1151 1691.75 L 1201.35 1757.86"
      id="path148" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 1336.28 1559.99 L 1386.42 1637.45"
      id="path149" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 1475.92 1404.23 L 1373.42 1488.77"
      id="path149-7" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ffffff;stroke-dasharray:5.2506;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:35.004;text-rendering:geometricPrecision"
      d="M 1669.52 1154.71 L 1596.82 1255.34"
      id="path149-7-4" /><path
      id="path103"
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#72ab5f;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#72ab5f;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;text-rendering:geometricPrecision;vector-effect:none"
      d="m 1133.26,1334.41 c 145.19,93.99 171.28,109.14 220.92,137.09 31.75,17.88 33.13,49.38 3.31,70.31 -86.27,60.55 -144.99,103.39 -206.49,149.94 -42.97,32.52 -77.56,15.63 -77.68,-38.25 l -0.63,-286.1 c -0.09,-39.98 27.01,-54.72 60.57,-32.99 z" /><path
      id="path104-3-2"
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#72ab5f;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stop-color:#000000;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#72ab5f;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stop-color:#000000;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;text-rendering:geometricPrecision;vector-effect:none"
      d="m 3183.36,398.196 c -44.92,-2.167 -90.15,0.341 -134.66,6.778 -110.72,16.012 -221.61,58.807 -297.02,141.436 -72.96,79.949 -105.31,187.549 -144.27,288.533 -51.2,132.73 -118.09,261.007 -212.15,367.737 -65.26,74.05 -143.51,137.23 -231.96,181.04 -156.56,77.56 -336.14,91.3 -503.52,141.44 -78.74,23.58 -154.86,55.28 -229.13,90.52 -113.98,54.08 -225.29,120.92 -304.34,219.25 -39.53,49.17 -70.49,105.01 -92.81,164.02 -22.31,59 -35.839,120.9 -48.616,182.68 l 21.056,30.17 c 5.63,8.07 7.81,18.06 6.06,27.74 l -16.398,90.53 c -1.732,9.56 -7.728,17.81 -16.287,22.4 l -35.185,18.9 -4.541,23.73 c -3.497,18.28 1.345,37.16 13.204,51.49 11.858,14.34 29.496,22.64 48.097,22.63 l 1315.85,-0.55 c 0,0 37.34,0.09 87.01,0.63 49.68,0.55 73.42,-0.23 97.01,16.01 41.37,28.46 87.33,54.01 137.52,62.5 19.34,3.27 60.51,8.84 92.51,7.5 27.41,-1.14 548.27,-98.01 697.29,-125.81 21.82,-4.07 44.21,-24.76 49.85,-46.23 37.24,-141.62 77.75,-312.71 96.91,-385.71 50.76,-190.38 105.8,-380.93 124.47,-577.07 12.71,-133.47 8.39,-268.07 -2.83,-401.68 -6.9,-82.154 -16.49,-164.531 -39.05,-243.829 -22.56,-79.298 -58.69,-155.852 -113.7,-217.255 -60.02,-66.991 -141.02,-113.754 -227.56,-138.266 -43.27,-12.255 -87.88,-19.097 -132.81,-21.264 z" /><path
      id="path104"
-     style="-inkscape-stroke:hairline;clip-rule:evenodd;display:inline;fill:url(#linearGradient179);fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:1.00011;vector-effect:non-scaling-stroke"
+     style="-inkscape-stroke:hairline;clip-rule:evenodd;display:inline;fill:url(#linearGradient179);fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:1.00011;text-rendering:geometricPrecision;vector-effect:non-scaling-stroke"
      d="m 1353.19,1655.03 c -85.77,46.97 -165.92,104.07 -226.88,179.9 -39.53,49.17 -70.49,105.01 -92.81,164.02 -22.31,59 -35.839,120.9 -48.616,182.68 l 21.056,30.17 c 5.63,8.07 7.81,18.06 6.06,27.74 l -16.398,90.53 c -1.731,9.55 -7.727,17.8 -16.286,22.4 l -35.186,18.9 -4.542,23.73 c -7.36,38.48 22.137,74.13 61.302,74.12 l 50.98,-0.02 6.03,-3.02 5.78,-31.55 -34.95,-17.98 c -6.92,-3.57 -11.04,-10.94 -10.44,-18.7 l 3.58,-46.59 c 0.23,-2.99 2.26,-5.55 5.12,-6.46 l 53.1,-16.86 14.17,-74.95 -50.08,-29.03 -13.14,-46.39 c -6.2,-21.9 -6.06,-45.1 0.39,-66.93 l 21.88,-73.93 c 6.15,-20.78 14.63,-40.8 25.27,-59.67 l 42.29,-75.01 c 11.06,-19.62 24.49,-37.8 39.97,-54.15 l 55.2,-58.27 c 15.5,-16.35 32.82,-30.87 51.63,-43.27 l 98.28,-64.79 z" /><path
      id="path104-3"
-     style="-inkscape-stroke:hairline;clip-rule:evenodd;display:inline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:1.00011;vector-effect:non-scaling-stroke"
+     style="-inkscape-stroke:hairline;clip-rule:evenodd;display:inline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:1.00011;text-rendering:geometricPrecision;vector-effect:non-scaling-stroke"
      d="m 3477.93,2383.27 -518.16,96.59 c -27.48,5.12 -54.79,11.13 -81.89,18.01 l -128.19,32.56 c -14.17,3.6 -28.83,4.84 -43.4,3.67 l -34.1,-2.73 c -14.61,-1.17 -29.02,-4.13 -42.91,-8.82 l -23.11,-7.79 c -16.8,-5.67 -32.9,-13.21 -47.99,-22.5 l -57.46,-35.33 c -9.68,-5.95 -26.72,-11.07 -38.07,-11.36 -40.11,-1.01 -101.92,-2.01 -149.39,-3.02 l -78.17,-27.55 0.17,53.7 81.48,-0.03 c 0,0 37.34,0.09 87.01,0.63 49.68,0.55 73.42,-0.23 97.01,16.01 41.37,28.46 87.33,54.01 137.52,62.5 19.34,3.27 60.51,8.84 92.51,7.5 27.41,-1.14 548.27,-98.01 697.29,-125.81 21.82,-4.07 44.21,-24.76 49.85,-46.23 z" /><path
      id="path145"
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stop-color:#000000;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stop-color:#000000;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;text-rendering:geometricPrecision;vector-effect:none"
      d="M 622.504,3895.82 906.95,2558.47 c 3.398,-16.43 17.862,-28.21 34.637,-28.22 l 1362.423,-0.76 c 0,0 37.34,0.09 87.01,0.63 49.68,0.55 73.42,-0.23 97.02,16 41.37,28.47 87.32,54.02 137.51,62.51 19.34,3.27 60.51,8.84 92.51,7.5 26.78,-1.11 522.23,-93.73 683.22,-123.93 27.65,-5.19 44.99,12.83 38.72,40.26 l -304.32,1363.36 z" /><path
      id="path105"
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;text-rendering:geometricPrecision;vector-effect:none"
      d="M 537.791,3895.82 C 590.965,3633.7 828.513,2501.04 890.365,2240.83 947.72,1999.54 1009.17,1756.2 1009.17,1508.18 c 0,-110.46 -12.316,-221.09 -39.6,-328.13 C 943.139,1076.36 902.187,975.367 839.447,888.689 768.923,791.257 672.216,714.187 565.059,659.561 393.832,572.272 194.228,541.806 4.75818,574.041 L 5.43231,3895.82 Z" /><path
      id="path106"
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#72ab5f;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#72ab5f;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;text-rendering:geometricPrecision;vector-effect:none"
      d="M 1879.34,5.00096 H 4.75818 V 496.322 C 115.502,482.098 229.901,485.77 340.174,503.272 c 71.239,11.306 141.524,29.223 208.821,55.182 84.398,32.555 164.408,78.125 231.049,139.295 87.65,80.452 149.31,184.768 206.418,289.142 30.058,54.939 59.398,110.619 96.928,160.759 95.34,127.33 239.78,212.17 392.53,256.58 29.06,8.45 59.35,15.61 89.38,11.79 15.01,-1.91 29.78,-6.64 42.54,-14.79 12.75,-8.15 23.4,-19.84 29.31,-33.78 5.7,-13.44 6.84,-28.62 4.24,-42.99 -2.62,-14.36 -8.87,-27.94 -17.23,-39.91 -16.73,-23.94 -41.33,-41.12 -66.21,-56.41 -95.94,-58.98 -205.69,-98.96 -285.71,-178.21 -77.08,-76.35 -118.95,-183.446 -130.12,-291.364 -8.74,-84.469 0.62,-172.089 36.77,-248.928 31.08,-66.037 80.69,-121.865 135.79,-169.727 66.19,-57.5 141.26,-104.86 221.98,-139.09 64.02,-27.15 131.55,-46.11 193.42,-77.86 58,-29.77 106.31,-68.9 149.26,-117.96004 z" /><path
      id="path141"
-     style="-inkscape-stroke:none;fill:#72ab5f;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;fill:#72ab5f;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
      d="M 4296.18,1544.7 V 5.00096 H 2009.64 C 1944.47,89.891 1859.58,159.541 1763.61,206.891 c -59.87,29.54 -123.58,50.36 -185.85,74.45 -62.26,24.09 -123.98,51.96 -176.19,93.568 -99.44,79.23 -157.26,208.105 -150.02,335.038 7.1,124.495 74.83,242.172 173.02,319.033 43,33.66 91.32,59.94 140.87,82.88 87.74,40.62 180.01,71.19 274.18,93.14 87.15,20.32 177.85,33.29 266.03,18 67.36,-11.68 131.38,-39.72 188.02,-78.01 70.73,-47.81 130.72,-112.22 170.02,-188.015 33.64,-64.87 51.65,-136.451 74.01,-206.023 17.76,-55.293 38.55,-109.964 68.01,-160.018 50.53,-85.873 125.82,-156.055 212.02,-206.023 79.99,-46.37 169.93,-75.92 262.03,-84.01 111.66,-9.81 224.75,11.91 329.04,53.006 52.33,20.624 103.01,46.252 148.01,80.009 63.99,47.998 115.44,111.891 152.02,183.021 57.01,110.84 77.71,236.746 87.01,361.041 8.58,114.752 8.11,229.962 8,345.042 -0.01,12.73 -0.02,25.47 -0.02,38.2 -0.01,33.03 25.99,66.33 58.02,74.38 z" /><path
      id="path142"
-     style="-inkscape-stroke:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
      d="m 3241.87,3895.82 339.85,-1481.68 c 4.21,-18.37 15.82,-34.18 32.09,-43.69 16.27,-9.51 35.75,-11.87 53.82,-6.52 l 628.55,186.02 -0.68,1345.87 z" /><path
      id="path143"
-     style="-inkscape-stroke:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
      d="m 3639.44,2186.36 137.2,-607.29 c 4.21,-18.6 15.76,-34.7 32.04,-44.63 16.27,-9.93 35.88,-12.84 54.34,-8.07 l 433.16,111.94 v 820.02 l -605.4,-183.74 c -37.59,-11.41 -60,-49.91 -51.34,-88.23 z" /><path
      id="path147"
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;text-rendering:geometricPrecision;vector-effect:none"
      d="m 2553.7,2245.07 40.98,161.24 53.75,-16.97 26.87,96.18 99.01,-29.71 -11.32,-42.43 384.71,-100.42 19.81,86.28 233.37,-59.4 -94.77,-367.74 -301.26,76.37 33.95,117.4 -318.24,74.96 -11.31,-48.09 z" /><path
      id="path146"
-     style="-inkscape-stroke:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
      d="m 2263.72,1956.54 1213.53,-302.68 52.34,219.23 -1224.85,319.65 z" /><path
      id="path145-4"
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#dc3545;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stop-color:#000000;stroke:#dc3545;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;vector-effect:none"
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#dc3545;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stop-color:#000000;stroke:#dc3545;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;text-rendering:geometricPrecision;vector-effect:none"
      d="m 3467.59,2422.12 c 0,0 -704.8,131.86 -736.8,133.19 -32,1.34 -73.17,-4.23 -92.51,-7.5 -50.19,-8.49 -96.15,-34.04 -137.52,-62.5 -23.59,-16.24 -47.33,-15.46 -97.01,-16.01 -49.67,-0.54 -87.01,-0.63 -87.01,-0.63 l -1391.338,0.58 -12.618,61.01 1392.646,-3.6 c 0,0 37.34,0.09 87.01,0.63 49.67,0.55 73.41,-0.23 97.01,16.01 41.37,28.46 87.33,54.01 137.51,62.5 19.35,3.28 60.51,8.84 92.51,7.5 31.01,-1.29 690.64,-122.75 731.88,-130.5 z" /><rect
-     style="-inkscape-stroke:hairline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;opacity:0;paint-order:markers fill stroke;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.935453;vector-effect:non-scaling-stroke"
+     style="-inkscape-stroke:hairline;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:0;paint-order:markers fill stroke;stroke:#808080;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.935453;vector-effect:non-scaling-stroke"
      id="rect179"
      width="1939.0295"
      height="1560.5348"
      x="646.0326110000001"
      y="1352.3307641650001"
      ry="4.8968601" /><path
-     style="fill:none;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stroke:#0050de;stroke-dasharray:5.00056, 5.00056;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:5.00056"
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stroke:#0050de;stroke-dasharray:5.00056, 5.00056;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:5.00056"
      d="M 3401.3 2531.46 L 3556.32 1930.39 L 3529.59 1873.09"
      id="path179" /><path
-     style="fill:none;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:markers fill stroke;stroke:#ececec;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:4.57771"
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:markers fill stroke;stroke:#ececec;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:4.57771"
      d="M 1067.83 2459.1 L 1066.76 2530.2"
      id="path184" /><path
-     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;paint-order:markers fill stroke;stroke:#ff0000;stroke-dasharray:4.60304, 4.60304;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:4.60304;"
+     style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;paint-order:markers fill stroke;stroke:#ff0000;stroke-dasharray:4.60304, 4.60304;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:4.60304;text-rendering:geometricPrecision"
      d="M 1067.83 2459.09 L 1066.76 2531.19"
      id="path184-4" /></g><g
    inkscape:groupmode="layer"
@@ -2486,7 +2486,7 @@
    inkscape:groupmode="layer"
    inkscape:label="laySectoresPB"
    id="laySectoresPB"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;">
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
       <g
    id="secAreaRestringidaPB"
    style="mix-blend-mode:darken">
@@ -2515,11 +2515,11 @@
       <path
    id="accesoAuxiliarPB"
    d="M 1296.66 2191.78 C 1342.92 2145.65 1365.29 2125.42 1414.01 2129.3 C 1472.6 2133.97 1496.01 2171.7 1581.9 2172.22 C 1637.54 2172.56 1754.02 2170.32 1812.27 2168.96"
-   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;marker-end:url(#marker97-5);opacity:1;paint-order:normal;stroke:url(#linearGradient94);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-width:20.0023;" />
+   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;marker-end:url(#marker97-5);opacity:1;paint-order:normal;stroke:url(#linearGradient94);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-width:20.0023;text-rendering:geometricPrecision" />
       <path
    id="accesoGeneralPB"
    d="M 1280.33 2170.78 C 1406.33 2057.49 1255.64 2083.37 1330.04 2006.9 C 1342.56 1994.04 1356.75 1977.72 1383.59 1953.27"
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;marker-end:url(#marker97-5);opacity:1;paint-order:normal;stop-color:#000000;stop-opacity:1;stroke:url(#linearGradient91);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:20.0023;vector-effect:none" />
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;marker-end:url(#marker97-5);opacity:1;paint-order:normal;stop-color:#000000;stop-opacity:1;stroke:url(#linearGradient91);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:20.0023;text-rendering:geometricPrecision;vector-effect:none" />
     <text
    xml:space="preserve"
    style="font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:stroke fill markers"
@@ -2532,7 +2532,7 @@
        style="-inkscape-font-specification:&quot;NewsGoth BT Bold&quot;;fill:#ffffff;fill-opacity:1;font-family:&quot;NewsGoth BT&quot;;font-size:10.0011px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:bold;stroke:#000000;stroke-dasharray:none;stroke-opacity:0.436519;stroke-width:1.50017;text-align:end;text-anchor:end"
        dy="1">Público general</tspan></textPath></text><text
    xml:space="preserve"
-   style="font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;"
+   style="font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;text-rendering:geometricPrecision"
    id="text7"
    transform="translate(641.176, 1354.41)"><textPath
      xlink:href="#accesoAuxiliarPB"
@@ -2550,11 +2550,11 @@
         <path
    id="path2"
    d="M 2097.5 2374.88 L 2187.7 2423.24"
-   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;marker-end:url(#marker97);opacity:1;paint-order:normal;stroke:#fe0000;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;" />
+   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;marker-end:url(#marker97);opacity:1;paint-order:normal;stroke:#fe0000;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;text-rendering:geometricPrecision" />
         <path
    id="path3"
    d="M 2020.63 2172.5 C 2067.48 2172.78 2059.63 2178.44 2059.49 2280.23 C 2059.39 2358.39 2096.42 2374.34 2096.42 2374.34 M 1887.57 2362.04 C 1979.55 2363.24 2075.21 2358.67 2094.52 2373.25"
-   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;opacity:1;paint-order:normal;stroke:#fe0000;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;" />
+   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:normal;stroke:#fe0000;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;text-rendering:geometricPrecision" />
         <path
    id="path5"
    d="M 1983.62 2102.61 C 1982.48 2175.27 2004.54 2172.08 2020.9 2172.5"
@@ -2574,11 +2574,11 @@
         <path
    id="path8-2"
    d="M 1922.86 2281.08 C 1925.16 2313.78 1911.54 2330.96 1884.04 2330.22"
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-rule:evenodd;stroke:url(#linearGradient11);stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:15.0017;" />
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-rule:evenodd;stroke:url(#linearGradient11);stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:15.0017;text-rendering:geometricPrecision" />
         <path
    id="path9-4"
    d="M 2001.69 2283.12 C 2000.72 2331.8 1986.24 2331.17 1884.04 2330.22"
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-rule:evenodd;stroke:url(#linearGradient12);stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:15.0017;" />
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-rule:evenodd;stroke:url(#linearGradient12);stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:15.0017;text-rendering:geometricPrecision" />
         <path
    id="path12"
    d="M 1885.05 2330.3 C 1882.05 2330.46 1879.11 2331.5 1876.67 2333.26 C 1874.22 2335.03 1872.33 2337.47 1871.22 2340.28 C 1869.39 2345.06 1869.96 2350.43 1872.75 2354.73 C 1875.61 2358.97 1880.33 2361.6 1885.44 2361.8"
@@ -2589,7 +2589,7 @@
         <path
    id="path2-1"
    d="M 1782.73 2452.46 L 1994.74 2452.54"
-   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;marker-end:url(#marker97-5-1);paint-order:normal;stroke:#fe0000;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;" />
+   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;marker-end:url(#marker97-5-1);paint-order:normal;stroke:#fe0000;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;text-rendering:geometricPrecision" />
         <path
    id="path15"
    d="M 1763.18 2368.63 C 1743.86 2368.95 1750.4 2435.96 1755.28 2444.13 C 1760.95 2453.6 1773.76 2452.19 1784.27 2452.7"
@@ -2604,11 +2604,11 @@
         <path
    id="path7-6"
    d="M 1358.12 1982.07 C 1224.28 2081.07 1396.03 2082.71 1348.82 2129.57"
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-rule:evenodd;stroke:url(#linearGradient13);stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:15.0017;" />
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-rule:evenodd;stroke:url(#linearGradient13);stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:15.0017;text-rendering:geometricPrecision" />
         <path
    id="path2-1-2"
    d="M 1350.14 2128.21 L 1237.14 2250.46"
-   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;marker-end:url(#marker97-5-1);paint-order:normal;stroke:#fe0000;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;" />
+   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;marker-end:url(#marker97-5-1);paint-order:normal;stroke:#fe0000;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;text-rendering:geometricPrecision" />
       </g>
     </g>
     <g
@@ -2618,21 +2618,21 @@
    style="display:none">
       <path
    id="path14"
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#8fff7f;fill-opacity:1;fill-rule:evenodd;filter:url(#filter2);mix-blend-mode:darken;opacity:0.368946;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-width:1.00011;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#8fff7f;fill-opacity:1;fill-rule:evenodd;filter:url(#filter2);font-variation-settings:normal;mix-blend-mode:darken;opacity:0.368946;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-width:1.00011;text-rendering:geometricPrecision;vector-effect:none"
    d="M 1414.29 1884.96 L 1251.37 2047.55 L 1413.29 2207.44 L 1413.29 2198.02 L 1859.28 2198.96 L 1859.28 2139.91 L 1586.83 2139.91 L 1547.85 2098.76 L 1547.85 2053.85 L 1548.34 2014.28 L 1538.13 2014.28 L 1538.13 1901.67 Z M 1413.29 2016.46 L 1445.49 2016.45 L 1445.49 2088.22 L 1413.29 2088.23 Z" /><path
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#ff847f;fill-opacity:1;fill-rule:evenodd;mix-blend-mode:darken;opacity:0.368946;paint-order:fill markers stroke;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-width:1.00011;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#ff847f;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;mix-blend-mode:darken;opacity:0.368946;paint-order:fill markers stroke;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-width:1.00011;text-rendering:geometricPrecision;vector-effect:none"
    d="M 2033.6 2014.28 L 2033.61 2343.45 L 1859.28 2343.45 L 1859.28 2014.28 Z"
    id="path36" /><path
    id="guardaIngresoPB"
    d="M 1872.03 2184.18 L 1872.57 2355.32"
-   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;marker-end:url(#marker97);opacity:1;paint-order:normal;stroke:url(#linearGradient98);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-width:15.0017;" />
+   style="clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;marker-end:url(#marker97);opacity:1;paint-order:normal;stroke:url(#linearGradient98);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-width:15.0017;text-rendering:geometricPrecision" />
       <path
    id="guardaEgresoPB"
    d="M 1835.08 2365.1 C 1759.13 2364.64 1750.38 2373.89 1750.86 2328 C 1751.14 2300.5 1751.09 2217.42 1750.58 2199.39 C 1749.57 2163.63 1722.36 2167.11 1667.2 2167.33"
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;marker-end:url(#marker97-3);paint-order:normal;stop-color:#000000;stroke:url(#linearGradient103);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;vector-effect:none" />
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;font-variation-settings:normal;marker-end:url(#marker97-3);paint-order:normal;stop-color:#000000;stroke:url(#linearGradient103);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:15.0017;text-rendering:geometricPrecision;vector-effect:none" />
     <text
    xml:space="preserve"
-   style="font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;"
+   style="font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;text-rendering:geometricPrecision"
    id="text7-4"
    transform="matrix(-1 1.22465e-16 -1.22465e-16 -1 3101.53 3308.57)"><textPath
      xlink:href="#guardaIngresoPB"
@@ -2643,7 +2643,7 @@
        style="-inkscape-font-specification:&quot;NewsGoth BT Bold&quot;;direction:ltr;fill:#ffffff;fill-opacity:1;font-family:&quot;NewsGoth BT&quot;;font-size:10.0011px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:bold;paint-order:markers stroke fill;stroke:#000000;stroke-dasharray:none;stroke-opacity:0.436519;stroke-width:1.50017;text-align:end;text-anchor:end;writing-mode:lr-tb"
        rotate="0 0 0 0 0 0 0 0">Entrada</tspan></textPath></text><text
    xml:space="preserve"
-   style="font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;"
+   style="font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;text-rendering:geometricPrecision"
    id="text7-4-5"
    y="948.54303"
    x="-717.36584"
@@ -2654,24 +2654,24 @@
    inkscape:groupmode="layer"
    inkscape:label="layDepartamentosInstalacionesPB"
    id="layDepartamentosInstalacionesPB"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;">
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
       <g
    id="icoAuditorioAuxiliarPB"
    inkscape:label="icoAuditorioAuxiliarPB"><path
-     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#ff847f;fill-opacity:0;fill-rule:evenodd;mix-blend-mode:darken;opacity:1;paint-order:fill markers stroke;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-width:1.00011;vector-effect:none"
+     style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#ff847f;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;mix-blend-mode:darken;opacity:1;paint-order:fill markers stroke;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-width:1.00011;text-rendering:geometricPrecision;vector-effect:none"
      d="M 2033.6 2014.28 L 2033.61 2343.45 L 1859.28 2343.45 L 1859.28 2014.28 Z"
      id="path138" /><path
      d="M 2033.6 2014.28 L 2033.61 2343.45 L 1859.28 2343.45 L 1859.28 2014.28 Z"
      id="hlAuditorioAuxiliarPB"
      class="icoHighlightArea"
-     style="-inkscape-stroke:none;display:none;fill:none;fill-opacity:0;filter:url(#filter175);opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;vector-effect:none" /></g><g
+     style="-inkscape-stroke:none;display:none;fill:none;fill-opacity:0;filter:url(#filter175);font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;vector-effect:none" /></g><g
    id="icoVestibuloPB"
    class="icoBox"
    inkscape:label="icoVestibuloPB"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;">
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
         <path
    id="path107"
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#8fff7f;fill-opacity:0;fill-rule:evenodd;mix-blend-mode:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-width:1.00011;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:inline;fill:#8fff7f;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;mix-blend-mode:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-width:1.00011;text-rendering:geometricPrecision;vector-effect:none"
    d="M 1414.29 1884.96 L 1251.37 2047.55 L 1413.29 2207.44 L 1413.29 2198.02 L 1859.28 2198.95 L 1859.28 2139.9 L 1586.83 2139.91 L 1547.85 2098.76 L 1547.85 2053.85 L 1548.34 2014.27 L 1538.13 2014.27 L 1538.13 1901.67 Z M 1413.29 2016.46 L 1445.49 2016.45 L 1445.49 2088.22 L 1413.29 2088.23 Z" /><rect
    id="rect1811"
    width="24.902281"
@@ -2691,11 +2691,11 @@
    class="lblEtiqueta"
    inkscape:label="lblVestibuloPB"
    transform="translate(646.1, 1352.33)">Vestíbulo</text><path
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;mix-blend-mode:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;mix-blend-mode:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;text-rendering:geometricPrecision;vector-effect:none"
    d="M 1414.29 1884.96 L 1251.37 2047.55 L 1413.29 2207.44 L 1413.29 2198.02 L 1859.28 2198.95 L 1859.28 2139.9 L 1586.83 2139.91 L 1547.85 2098.76 L 1547.85 2053.85 L 1548.34 2014.27 L 1538.13 2014.27 L 1538.13 1901.67 Z"
    id="hlVestibuloPB" /></g><g
    id="icoAreaRestringidaPB"
-   style="clip-rule:evenodd;display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;"
+   style="clip-rule:evenodd;display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;text-rendering:geometricPrecision"
    inkscape:label="icoAreaRestringidaPB">
         
         
@@ -2743,7 +2743,7 @@
    class="icoBox"
    inkscape:label="icoAccesoPeatonalPB">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:3.00845;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:3.00845;text-rendering:geometricPrecision;vector-effect:none"
    id="hlAccesoPeatonalPB"
    width="81.151909"
    height="60.854023"
@@ -2773,7 +2773,7 @@
    class="icoBox"
    inkscape:label="icoAccesoEstacionamientoPB">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:3.51605;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:3.51605;text-rendering:geometricPrecision;vector-effect:none"
    id="hlAccesoEstacionamientoPB"
    width="163.15363"
    height="41.344276"
@@ -2804,7 +2804,7 @@
    class="icoBox"
    inkscape:label="icoEntradaPrincipalPB">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:3.14099;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:3.14099;text-rendering:geometricPrecision;vector-effect:none"
    id="hlEntradaPrincipalPB"
    width="73.018463"
    height="73.722954"
@@ -2838,7 +2838,7 @@
        id="tspan716"
        x="670.49371"
        y="818.36084"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1">Entrada</tspan></tspan><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1">Entrada</tspan></tspan><tspan
      sodipodi:role="line"
      id="tspan8"
      x="670.49371"
@@ -2848,7 +2848,7 @@
    class="icoBox"
    inkscape:label="icoInformacionPB">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.71288;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.71288;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlInformacionPB"
    width="122.68436"
    height="32.732182"
@@ -2888,7 +2888,7 @@
    class="icoBox"
    transform="translate(0,-24.397938)">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.61742;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.61742;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlAcomodadoresPB"
    width="109.16649"
    height="34.24202"
@@ -2916,9 +2916,9 @@
    id="icoServicioVoluntarioPB"
    class="icoBox"
    inkscape:label="icoServicioVoluntarioPB"
-   style="clip-rule:evenodd;display:none;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;">
+   style="clip-rule:evenodd;display:none;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;text-rendering:geometricPrecision">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.78691;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.78691;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlServicioVoluntarioPB"
    width="124.3783"
    height="34.072525"
@@ -2938,20 +2938,20 @@
    id="path1-1-2"
    d="m 1394.75,2074.65 v -9.14 c -1.03,-0.27 -1.87,-0.82 -2.53,-1.64 -0.65,-0.82 -1.04,-1.75 -1.17,-2.8 -0.02,-0.17 0.04,-0.32 0.19,-0.44 0.15,-0.12 0.32,-0.18 0.52,-0.18 0.2,0 0.38,0.06 0.53,0.16 0.15,0.11 0.23,0.25 0.26,0.44 0.14,0.9 0.52,1.64 1.16,2.24 0.63,0.6 1.42,0.9 2.35,0.9 h 1.87 c 0.37,0 0.72,0.07 1.04,0.2 0.33,0.14 0.62,0.34 0.88,0.6 l 2.86,2.86 c 0.14,0.14 0.2,0.31 0.2,0.52 0,0.21 -0.06,0.39 -0.2,0.53 -0.14,0.13 -0.31,0.2 -0.52,0.2 -0.22,0 -0.39,-0.07 -0.53,-0.2 l -2.43,-2.43 v 8.18 c 0,0.21 -0.07,0.39 -0.21,0.53 -0.14,0.14 -0.32,0.21 -0.53,0.21 -0.21,0 -0.39,-0.07 -0.54,-0.21 -0.14,-0.14 -0.21,-0.32 -0.21,-0.53 v -3.74 h -1.49 v 3.74 c 0,0.21 -0.07,0.39 -0.22,0.53 -0.14,0.14 -0.32,0.21 -0.53,0.21 -0.21,0 -0.39,-0.07 -0.53,-0.21 -0.15,-0.14 -0.22,-0.32 -0.22,-0.53 z m 2.24,-11.21 c -0.41,0 -0.76,-0.14 -1.05,-0.44 -0.29,-0.29 -0.44,-0.64 -0.44,-1.05 0,-0.41 0.15,-0.77 0.44,-1.06 0.29,-0.29 0.64,-0.44 1.05,-0.44 0.41,0 0.77,0.15 1.06,0.44 0.29,0.29 0.44,0.65 0.44,1.06 0,0.41 -0.15,0.76 -0.44,1.05 -0.29,0.3 -0.65,0.44 -1.06,0.44 z"
    class="icoIcon"
-   style="clip-rule:evenodd;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
       <text
    id="lblServicioVoluntarioPB"
    x="652.26208"
    y="718.57727"
    class="lblEtiqueta"
    inkscape:label="lblServicioVoluntarioPB"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0011px;line-height:normal;font-family:'NewsGoth BT';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    transform="translate(646.1,1352.33)">Servicio voluntario</text></g>
       <g
    id="icoGuardaAlimentosPB"
    class="icoBox">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.47772;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.47772, 14.9554;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.47772;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.47772, 14.9554;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlGuardaAlimentosPB"
    width="224.38686"
    height="103.48742"
@@ -2981,7 +2981,7 @@
    class="icoBox"
    transform="translate(0,-10.607799)">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:3.41656;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:3.41656;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlObjetosPerdidosPB"
    width="174.35844"
    height="36.528999"
@@ -3010,7 +3010,7 @@
    class="icoBox"
    inkscape:label="icoBañosMujeresPB">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;text-rendering:geometricPrecision;vector-effect:none"
    id="hlBañosMujeresPB"
    width="59.360001"
    height="145.89999"
@@ -3043,7 +3043,7 @@
    class="icoBox"
    inkscape:label="icoBañosHombresPB">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;text-rendering:geometricPrecision;vector-effect:none"
    id="hlBañosHombresPB"
    width="87.790001"
    height="72.239998"
@@ -3076,7 +3076,7 @@
    class="icoBox"
    inkscape:label="icoBautismoPB">
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:6.65224, 13.3045;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:6.65224;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:6.65224, 13.3045;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:6.65224;text-rendering:geometricPrecision;vector-effect:none"
    id="hlBautismoPB"
    width="87.35923"
    height="77.270058"
@@ -3109,7 +3109,7 @@
    id="path139"
    d="M 1538.13 2014.28 L 1538.13 1901.67 L 1854.59 1944.38 L 2212.63 1944.46 L 2212.63 2350.36 L 2033.67 2350.36 L 2033.6 2014.28 Z"
    class="fil1 ediGalerias"
-   style="clip-rule:evenodd;display:inline;fill:#c2bfbc;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:58.5937;" /><rect
+   style="clip-rule:evenodd;display:inline;fill:#c2bfbc;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:58.5937;text-rendering:geometricPrecision" /><rect
    id="rect1342-5-5"
    width="24.902281"
    height="24.902281"
@@ -3133,7 +3133,7 @@
    id="hlGaleriaCubiertaPB"
    d="M 1538.13 2014.28 L 1538.13 1901.67 L 1854.59 1944.38 L 2212.63 1944.46 L 2212.63 2350.36 L 2033.67 2350.36 L 2033.6 2014.28 Z"
    class="fil1 ediGalerias"
-   style="clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;mix-blend-mode:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:10.0011, 20.0023;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;" /></g>
+   style="clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;mix-blend-mode:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:10.0011, 20.0023;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:10.0011;text-rendering:geometricPrecision" /></g>
       <g
    id="icoAscensoresPB"
    class="icoBox">
@@ -3145,7 +3145,7 @@
    y="2040.4896"
    class="icoInstalaciones"
    ry="5.3436098" /><rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.00079;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter176);stop-color:#000000;stop-opacity:1"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.00079;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter176);text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    id="hlAscensoresPB"
    width="32.200363"
    height="71.768661"
@@ -3179,7 +3179,7 @@
    id="icoPrimerosAuxiliosPB"
    class="icoBox">
         <path
-   style="clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;"
+   style="clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;text-rendering:geometricPrecision"
    d="M 1654.8 2014.28 L 1654.8 2084.79 L 1547.85 2084.79 L 1547.85 2053.85 L 1537.87 2053.72 L 1538.13 2014.28 Z"
    id="hlPrimerosAuxiliosPB" /><rect
    id="rect1697"
@@ -3215,7 +3215,7 @@
    id="path1-79"
    class="icoIcon"
    d="m 1585.43,2116.1 c -0.52,0 -1.03,-0.06 -1.52,-0.17 -0.49,-0.11 -0.94,-0.25 -1.34,-0.43 -0.57,-0.25 -1.04,-0.55 -1.4,-0.9 -0.36,-0.36 -0.54,-0.75 -0.54,-1.19 v -4.31 c 0,-0.39 0.15,-0.74 0.44,-1.07 0.29,-0.32 0.67,-0.61 1.13,-0.86 0.47,-0.25 0.99,-0.44 1.56,-0.58 0.57,-0.13 1.14,-0.2 1.73,-0.2 0.58,0 1.16,0.07 1.73,0.2 0.56,0.14 1.08,0.33 1.56,0.58 0.47,0.25 0.85,0.54 1.13,0.86 0.29,0.33 0.43,0.68 0.43,1.07 v 4.31 c 0,0.21 -0.04,0.42 -0.14,0.62 -0.09,0.2 -0.22,0.38 -0.4,0.56 -0.17,0.17 -0.37,0.34 -0.6,0.49 -0.24,0.16 -0.49,0.3 -0.78,0.42 0.01,-0.06 0.03,-0.23 0.06,-0.52 0,-0.72 -0.26,-1.34 -0.77,-1.85 -0.51,-0.51 -1.13,-0.76 -1.85,-0.76 -0.53,0 -1.01,0.14 -1.42,0.42 -0.41,0.29 -0.72,0.66 -0.93,1.11 0.4,0.1 0.76,0.16 1.09,0.2 0.33,0.04 0.62,0.06 0.87,0.06 0.21,0 0.38,-0.01 0.51,-0.02 0.13,-0.01 0.22,-0.02 0.25,-0.02 v 1.94 c -0.13,0.02 -0.27,0.03 -0.4,0.03 -0.13,0.01 -0.26,0.01 -0.4,0.01 z m 2.3,-4.11 c 0.41,0 0.76,-0.14 1.05,-0.44 0.3,-0.29 0.44,-0.64 0.44,-1.05 0,-0.41 -0.14,-0.77 -0.44,-1.06 -0.29,-0.29 -0.64,-0.44 -1.05,-0.44 -0.41,0 -0.76,0.15 -1.06,0.44 -0.29,0.29 -0.44,0.65 -0.44,1.06 0,0.41 0.15,0.76 0.44,1.05 0.3,0.3 0.65,0.44 1.06,0.44 z m -2.24,-6.35 c 0.62,0 1.15,-0.21 1.59,-0.64 0.43,-0.43 0.65,-0.96 0.65,-1.6 0,-0.62 -0.22,-1.15 -0.65,-1.59 -0.44,-0.43 -0.97,-0.65 -1.59,-0.65 -0.64,0 -1.17,0.22 -1.6,0.65 -0.43,0.44 -0.64,0.97 -0.64,1.59 0,0.64 0.21,1.17 0.64,1.6 0.43,0.43 0.96,0.64 1.6,0.64 z" /><path
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;text-rendering:geometricPrecision;vector-effect:none"
    d="M 1654.8 2084.79 L 1654.8 2139.91 L 1586.83 2139.91 L 1547.86 2100.94 L 1547.86 2084.79 Z"
    id="hlLactantesPB" />
       <text
@@ -3277,7 +3277,7 @@
      id="tspan719"
      x="1125.9396"
      y="1108.2139"
-     style="-inkscape-stroke:none;baseline-shift:baseline;direction:ltr;dominant-baseline:auto;fill:#000000;fill-opacity:1;font-family:&quot;NewsGoth BT&quot;;font-feature-settings:normal;font-size:10.0011px;font-stretch:normal;font-style:normal;font-variant:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-weight:normal;letter-spacing:normal;line-height:normal;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1;stroke:#ffffff;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.998051;stroke-width:3.00034;text-align:start;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;vector-effect:none;white-space:normal;word-spacing:normal;writing-mode:lr-tb">Salida </tspan></text></g>
+     style="-inkscape-stroke:none;baseline-shift:baseline;direction:ltr;dominant-baseline:auto;fill:#000000;fill-opacity:1;font-family:&quot;NewsGoth BT&quot;;font-feature-settings:normal;font-size:10.0011px;font-stretch:normal;font-style:normal;font-variant:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;font-weight:normal;letter-spacing:normal;line-height:normal;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1;stroke:#ffffff;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.998051;stroke-width:3.00034;text-align:start;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;vector-effect:none;white-space:normal;word-spacing:normal;writing-mode:lr-tb">Salida </tspan></text></g>
       <g
    id="icoSalidaCocinaPB"
    class="icoBox"
@@ -3308,7 +3308,7 @@
    id="icoEscalerasPB"
    class="icoBox">
         <path
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1;stroke:#ff8613;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.00079;text-rendering:geometricPrecision;vector-effect:none"
    d="M 1391.32 1923.07 L 1413.29 1944.54 L 1324.56 2035.31 L 1302.59 2013.84 Z"
    id="hlEscalerasPB" /><rect
    id="rect1716"
@@ -3396,7 +3396,7 @@
    class="icoInstalaciones"
    ry="5.3436098" />
         <rect
-   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.19265;vector-effect:none"
+   style="-inkscape-stroke:none;clip-rule:evenodd;display:none;fill:none;fill-opacity:0;fill-rule:evenodd;font-variation-settings:normal;opacity:1;paint-order:fill markers stroke;stroke:#ff8613;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:7.19265;text-rendering:geometricPrecision;vector-effect:none"
    id="hlEstacionamientoPB"
    width="897.64899"
    height="68.07"
@@ -3420,7 +3420,7 @@
    inkscape:groupmode="layer"
    inkscape:label="layPlantaAlta"
    id="layPlantaAlta"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;">
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
     <g
    inkscape:groupmode="layer"
    inkscape:label="layEdificioPA"
@@ -3654,7 +3654,7 @@
    id="descanso"
    d="m 1772.39,2418.2 h 57.46 v 16.31 h -57.46 z"
    class="fil1"
-   style="clip-rule:evenodd;display:inline;fill:#cccccc;fill-rule:evenodd;" />
+   style="clip-rule:evenodd;display:inline;fill:#cccccc;fill-rule:evenodd;text-rendering:geometricPrecision" />
       </g>
       <path
    id="areaServicioAuditorio1PA"
@@ -3696,12 +3696,12 @@
    id="rect74"
    d="m 1762.1,2374.51 v 2.56 h -14.09 v -2.56 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.471367;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.471367;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect75"
    d="m 1738.43,2381.66 h 2.56 v 14.09 h -2.56 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect10-2"
    d="m 1944.72,2015.64 h 80.49 v 6.05 h -80.49 z"
@@ -3711,42 +3711,42 @@
    id="rect23-0"
    d="m 2201.68,1965.1 h 3.77 v 36.43 h -3.77 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect43"
    d="m 1501.97,2352.13 h 2.56 v 21.63 h -2.56 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect44"
    d="m 1488.76,2374.51 v 2.56 h -14.09 v -2.56 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.471367;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.471367;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect45"
    d="m 1471.38,2207.04 h 2.56 v 16.56 h -2.56 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect46"
    d="m 1830.85,2352.43 h 2.56 v 23.39 h -2.56 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect54"
    d="m 1507.87,2347.46 h 19.44 v 2.62 h -19.44 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect59"
    d="m 1443.68,2024.77 h 3.61 v 19.28 h -3.61 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <path
    id="rect60-3"
    d="m 1443.68,2060.65 h 3.61 v 19.28 h -3.61 z"
    class="fil0 str1 ediPuertas"
-   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;" />
+   style="clip-rule:evenodd;display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.9;stroke-miterlimit:22.9256;text-rendering:geometricPrecision" />
         <g
    id="_1513003349744">
           <path
@@ -4020,7 +4020,7 @@
    id="cortinaPlataforma2"
    d="m 2167.23,2067.9 v -48.92"
    class="fil2 str8 mobiCortinado"
-   style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:2.08;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.08, 4.16;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" />
+   style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:2.08;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.08, 4.16;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" />
       <path
    id="cortinaPlataforma1"
    d="m 2167.14,2272.39 v 24.66 h 36.12"
@@ -4030,7 +4030,7 @@
    id="path140"
    d="m 1978.71,2430.82 v -77.81"
    class="fil2 str8 mobiCortinado"
-   style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:2.62322;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.62322, 5.24645;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" /></g>
+   style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:2.62322;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.62322, 5.24645;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" /></g>
     <g
    inkscape:groupmode="layer"
    inkscape:label="laySectoresPA"
@@ -4087,7 +4087,7 @@
    id="path144"
    d="m 1979.57,2350.62 h 50.93 v 85.94 h -50.93 z"
    class="secAreaRestringida"
-   style="opacity:0.370262;vector-effect:none;fill:url(#pattern21);fill-opacity:1;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1" /></g>
+   style="font-variation-settings:normal;opacity:0.370262;vector-effect:none;fill:url(#pattern21);fill-opacity:1;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1" /></g>
     </g>
     
     
@@ -4099,11 +4099,11 @@
       <path
    id="accesoGeneral2PA"
    d="m 1349.51,1991.21 c 106.03,-132.5 142.2,-52.04 217.19,-44.24 108.24,11.26 151.95,27.68 152.66,76.22"
-   style="clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient88);stroke-width:20.0023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-stroke:none;marker-end:url(#marker97-3);paint-order:normal;stop-color:#000000;stop-opacity:1" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient88);stroke-width:20.0023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-stroke:none;marker-end:url(#marker97-3);paint-order:normal;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
       <path
    id="accesoGeneral1PA"
    d="m 1580.02,1948.18 c 139.84,8.11 221.16,22.03 243.31,22.61 141.52,3.72 162.71,3.86 163.43,52.4"
-   style="clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff9103;stroke-width:20.0023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker97-5);paint-order:normal;stop-color:#000000;stop-opacity:1" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff9103;stroke-width:20.0023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker97-5);paint-order:normal;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
     </g>
     <g
    inkscape:groupmode="layer"
@@ -4115,20 +4115,20 @@
    id="path4"
    d="m 1565.3,2019.58 637.96,0.33 v 325.43 l -698.47,3.42 v -269.9 z"
    class="secAreaRestringida"
-   style="clip-rule:evenodd;display:inline;opacity:0.368946;mix-blend-mode:darken;vector-effect:none;fill:#ff847f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter6);stop-color:#000000;stop-opacity:1" /><path
-   style="clip-rule:evenodd;display:inline;opacity:0.368946;mix-blend-mode:darken;vector-effect:none;fill:#8fff7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter3);stop-color:#000000;stop-opacity:1"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:0.368946;mix-blend-mode:darken;vector-effect:none;fill:#ff847f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter6);text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" /><path
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:0.368946;mix-blend-mode:darken;vector-effect:none;fill:#8fff7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter3);text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    d="m 2203.26,1944.46 v 75.45 l -637.96,-0.33 -60.51,59.28 -1.3,122.19 -90.2,3.87 v -116.69 h 32.2 v -71.77 h -32.2 v -71.92 l -29.32,-29.32 30.32,-30.26 440.3,59.42 z"
    id="path6" /><path
    id="guardaIngresoPA"
    d="m 1986.67,2211.35 0.53,98.64 -33.25,-0.03 -0.42,55.14"
-   style="clip-rule:evenodd;display:inline;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient108);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker97-5-1);paint-order:normal;" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient108);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker97-5-1);paint-order:normal;text-rendering:geometricPrecision" />
       <path
    id="guardaEgresoPA"
    d="m 1862.8,2363.47 c -43.18,-0.41 -370.7,2.16 -372.63,-0.55 -1.1,-1.54 -0.32,-137.55 -0.63,-182"
-   style="clip-rule:evenodd;display:inline;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient109);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker97-3);paint-order:normal;stop-color:#000000" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient109);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker97-3);paint-order:normal;text-rendering:geometricPrecision;stop-color:#000000" />
     <text
    xml:space="preserve"
-   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;"
+   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;text-rendering:geometricPrecision"
    id="text7-4-1"
    transform="rotate(180,1608.13,1631.635)"><textPath
      xlink:href="#guardaIngresoPB"
@@ -4139,7 +4139,7 @@
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill"
        rotate="0 0 0 0 0 0 0 0">Entrada</tspan></textPath></text><text
    xml:space="preserve"
-   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;"
+   style="font-size:10.42px;line-height:normal;font-family:'NewsGoth BT';-inkscape-font-specification:'NewsGoth BT, Normal';text-align:center;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:middle;clip-rule:evenodd;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.50017;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill;text-rendering:geometricPrecision"
    id="text7-4-5-7"
    y="774.02167"
    x="988.64966"
@@ -4155,15 +4155,15 @@
       <path
    id="path21"
    d="m 2190.1,2331.09 -0.1,52.96"
-   style="clip-rule:evenodd;display:none;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fe0000;stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97);paint-order:normal;" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fe0000;stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97);paint-order:normal;text-rendering:geometricPrecision" />
       <path
    id="path22"
    d="m 1782.73,2452.46 212.01,0.08"
-   style="clip-rule:evenodd;display:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fe0000;stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5);paint-order:normal;" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fe0000;stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5);paint-order:normal;text-rendering:geometricPrecision" />
       <path
    id="path23"
    d="m 2076.04,2347.45 c 46.86,0.27 39,5.94 38.87,107.73 -0.1,78.15 36.93,94.1 36.93,94.1 m -208.85,-12.3 c 91.98,1.21 187.64,-3.36 206.95,11.22"
-   style="clip-rule:evenodd;display:none;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fe0000;stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fe0000;stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;text-rendering:geometricPrecision" />
       <path
    id="path44"
    d="m 2080.02,2250.75 c 0.87,63.68 48.5,58.26 106.27,58.52"
@@ -4175,7 +4175,7 @@
       <path
    id="path46"
    d="m 1358.12,1982.07 c -133.84,99 37.91,100.64 -9.3,147.5"
-   style="clip-rule:evenodd;display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient1);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;" />
+   style="clip-rule:evenodd;display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient1);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;text-rendering:geometricPrecision" />
       <path
    id="path47"
    d="m 1979.36,2138.31 c -2.29,-32.7 11.33,-49.87 38.82,-49.13"
@@ -4187,11 +4187,11 @@
       <path
    id="path55"
    d="m 1900.04,2532.1 c 2.3,32.7 -11.32,49.87 -38.82,49.13"
-   style="clip-rule:evenodd;display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient72);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;" />
+   style="clip-rule:evenodd;display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient72);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;text-rendering:geometricPrecision" />
       <path
    id="path56"
    d="m 2057.1,2458.07 c -0.96,48.68 -15.44,48.04 -117.64,47.1"
-   style="clip-rule:evenodd;display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient71);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;" />
+   style="clip-rule:evenodd;display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient71);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;text-rendering:geometricPrecision" />
       <path
    id="path57"
    d="m 1940.47,2505.25 c -3,0.16 -5.94,1.2 -8.38,2.96 -2.45,1.77 -4.34,4.2 -5.45,7.02 -1.83,4.78 -1.26,10.15 1.53,14.45 2.86,4.24 7.58,6.87 12.69,7.07"
@@ -4207,11 +4207,11 @@
       <path
    id="path60"
    d="m 1350.14,2128.21 -113,122.25"
-   style="clip-rule:evenodd;display:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fe0000;stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5-1);paint-order:normal;" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fe0000;stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5-1);paint-order:normal;text-rendering:geometricPrecision" />
       <path
    id="path45-8"
    d="m 1914.47,2252.65 c -1.81,74.55 15.1,52.82 229.76,57.3"
-   style="clip-rule:evenodd;display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient70);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;" />
+   style="clip-rule:evenodd;display:none;fill:none;fill-rule:evenodd;stroke:url(#linearGradient70);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;text-rendering:geometricPrecision" />
       <path
    id="path81"
    d="m 1914.47,2264.34 c -3.44,-55 29.77,-46.3 211.83,-45.36"
@@ -4220,17 +4220,17 @@
    inkscape:groupmode="layer"
    inkscape:label="layDepartamentosInstalacionesPA"
    id="layDepartamentosInstalacionesPA"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;">
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
       <g
    id="icoAuditorioPrincipalPA"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;"
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision"
    inkscape:label="icoAuditorioPrincipalPA"><path
      id="hlAuditorioPrincipalPA"
      d="m 1565.3,2019.58 637.96,0.33 v 299.93 l -698.47,0.41 v -241.39 z"
      class="secAreaRestringida"
-     style="clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1" /></g><g
+     style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" /></g><g
    id="icoAreaRestringidaPA"
-   style="clip-rule:evenodd;display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;"
+   style="clip-rule:evenodd;display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;text-rendering:geometricPrecision"
    inkscape:label="icoAreaRestringidaPA">
         <path
    id="path86"
@@ -4291,7 +4291,7 @@
    id="icoVestibuloPA"
    class="icoBox"
    inkscape:label="icoVestibuloPA"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;">
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
         <rect
    id="rect1811-2"
    width="24.902281"
@@ -4311,13 +4311,13 @@
    class="lblEtiqueta"
    inkscape:label="lblVestibuloPA"
    transform="translate(646.1,1352.33)">Vestíbulo</text><path
-   style="clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    d="m 2203.26,1944.46 v 75.45 l -637.96,-0.33 -60.51,59.28 -1.3,122.19 -90.2,3.87 v -116.69 h 32.2 v -71.77 h -32.2 v -71.92 l -29.32,-29.32 30.32,-30.26 440.3,59.42 z"
    id="hlVestibuloPA" /></g><g
    id="icoAcomodadoresPA"
    class="icoBox">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.00023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.00023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    id="hlAcomodadoresPA"
    width="75.3283"
    height="43.949497"
@@ -4358,7 +4358,7 @@
    class="icoIcon"
    d="m 1847.84,2401.56 c -0.38,0 -0.71,-0.13 -0.98,-0.41 -0.27,-0.27 -0.41,-0.6 -0.41,-0.98 v -8.35 c 0,-0.38 0.14,-0.71 0.41,-0.99 0.27,-0.27 0.6,-0.4 0.98,-0.4 h 1.39 c 0,-0.77 0.28,-1.43 0.82,-1.97 0.55,-0.55 1.2,-0.82 1.97,-0.82 0.76,0 1.42,0.27 1.97,0.82 0.54,0.54 0.81,1.2 0.81,1.97 h 1.4 c 0.38,0 0.71,0.13 0.98,0.4 0.27,0.28 0.41,0.61 0.41,0.99 v 8.35 c 0,0.38 -0.14,0.71 -0.41,0.98 -0.27,0.28 -0.6,0.41 -0.98,0.41 z m 0,-1.39 h 8.36 v -8.35 h -1.4 v 1.39 c 0,0.2 -0.06,0.36 -0.2,0.5 -0.13,0.13 -0.3,0.2 -0.49,0.2 -0.2,0 -0.37,-0.07 -0.5,-0.2 -0.13,-0.14 -0.2,-0.3 -0.2,-0.5 v -1.39 h -2.78 v 1.39 c 0,0.2 -0.07,0.36 -0.2,0.5 -0.14,0.13 -0.3,0.2 -0.5,0.2 -0.2,0 -0.36,-0.07 -0.5,-0.2 -0.13,-0.14 -0.2,-0.3 -0.2,-0.5 v -1.39 h -1.39 z m 2.79,-9.74 h 2.78 c 0,-0.39 -0.13,-0.71 -0.41,-0.99 -0.27,-0.27 -0.6,-0.41 -0.98,-0.41 -0.38,0 -0.71,0.14 -0.98,0.41 -0.28,0.28 -0.41,0.6 -0.41,0.99 z m -2.79,9.74 v -8.35 z" />
       <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.3092;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.3092, 14.6184;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.3092;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.3092, 14.6184;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlGuardaAlimentosPA"
    width="146.84254"
    height="88.020111"
@@ -4370,12 +4370,15 @@
    x="1224.4156"
    y="1017.3922"
    class="lblEtiqueta"
-   transform="translate(646.1,1381.32)">Guarda de alimentos</text></g><g
+   transform="translate(646.1,1381.32)">Guarda de alimentos</text></g>
+      
+      
+      <g
    id="icoBañosMujeresPA"
    class="icoBox"
    inkscape:label="icoBañosMujeresPA">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    id="hlBañosMujeresPA"
    width="59.359982"
    height="232.58989"
@@ -4414,7 +4417,7 @@
    class="icoBox"
    inkscape:label="icoBañosHombresPA">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    id="hlBañosHombresPA"
    width="180.60991"
    height="61.719921"
@@ -4444,7 +4447,7 @@
    id="icoAscensoresPA"
    class="icoBox">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    id="rect101"
    width="32.199993"
    height="71.769958"
@@ -4473,7 +4476,7 @@
    id="icoPrimerosAuxiliosPA"
    class="icoBox">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.00023;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;"
+   style="clip-rule:evenodd;display:none;opacity:1;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.00023;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;text-rendering:geometricPrecision"
    id="hlPrimerosAuxiliosPA"
    width="81.403275"
    height="45.104633"
@@ -4502,7 +4505,7 @@
    id="icoEscalerasPA"
    class="icoBox">
         <path
-   style="clip-rule:evenodd;display:none;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.00079;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.00079;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000"
    d="m 1391.32,1923.07 21.97,21.47 -88.73,90.77 -21.97,-21.47 z"
    id="hlEscalerasPA" /><rect
    id="rect1716-5"
@@ -4588,7 +4591,7 @@
    class="icoBox"
    inkscape:label="icoLimpiezaPA">
         <rect
-   style="clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.00023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;fill-rule:evenodd;stroke:#ff8613;stroke-width:2.00023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    id="hlLimpiezaPA"
    width="59.359982"
    height="58.344982"

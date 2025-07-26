@@ -86,7 +86,7 @@
 </div>
         <div class="row">
           <div class="col-lg-6">
-            <div id="cardGroupEnlacesInicio">
+            <div id="cardGroupEnlacesInicio" class="cardGroupEnlacesInicio">
               <a href="#transporte" class="text-decoration-none">
                 <div class="card h-80 d-flex flex-row align-items-stretch card-transporte mb-3">
                   <div class="d-flex px-3 border-end card-icon">
@@ -392,26 +392,53 @@
         <h3>Auditorios</h3>
         <p>El CPC tiene dos auditorios. Es importante que nos ubiquemos en el auditorio que nos corresponde, porque
           ayuda a que no se pierda tiempo valioso ante una emergencia o si fuera necesario evacuar el local.</p>
-        <div class="card-group mb-3">
-          <div class=" card" style="min-width: 16rem;">
-            <img src="placeholder.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Auditorio principal</h5>
-              <p class="card-text">Para el público en general. Se accede mediante las escaleras a la izquierda de la
-                entrada.</p>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+            <h5 class="card-title">Auditorio principal</h5>
+            <p class="card-text">Para el público en general. Se accede mediante las escaleras a la izquierda de la
+              entrada.</p>
               <button class="btn btn-sm btn-primary" onclick="plano(1,'departamentos','AuditorioPrincipal')"><i class="material-symbols-outlined">map</i> Ver en el plano</button>
-            </div>
-          </div>
-          <div class="card" style="min-width: 16rem;">
-            <img src="placeholder.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Auditorio auxiliar</h5>
-              <p class="card-text">Para personas mayores, con dificultades y padres con niños pequeños. Se accede por el
-                pasillo de la derecha de la entrada. </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+            <h5 class="card-title">Auditorio auxiliar</h5>
+            <p class="card-text">Para personas mayores, con dificultades y padres con niños pequeños. Se accede por el
+              pasillo de la derecha de la entrada. </p>
               <button class="btn btn-sm btn-primary" onclick="plano(0,'departamentos','AuditorioAuxiliar')"><i class="material-symbols-outlined">map</i> Ver en el plano</button>
-            </div>
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="row d-none">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card">
+          <img src="placeholder.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Auditorio principal</h5>
+            <p class="card-text">Para el público en general. Se accede mediante las escaleras a la izquierda de la
+              entrada.</p>
+              <button class="btn btn-sm btn-primary" onclick="plano(1,'departamentos','AuditorioPrincipal')"><i class="material-symbols-outlined">map</i> Ver en el plano</button>
           </div>
         </div>
+        <div class="card">
+          <img src="placeholder.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Auditorio auxiliar</h5>
+            <p class="card-text">Para personas mayores, con dificultades y padres con niños pequeños. Se accede por el
+              pasillo de la derecha de la entrada. </p>
+              <button class="btn btn-sm btn-primary" onclick="plano(0,'departamentos','AuditorioAuxiliar')"><i class="material-symbols-outlined">map</i> Ver en el plano</button>
+
+          </div>
+        </div>
+  </div>
+</div>
+
+      
         <div class="card h-80 d-flex flex-row align-items-stretch card-aviso">
           <div class="d-flex px-3 border-end card-icon">
             <i class="material-symbols-outlined fs-1">warning</i>
@@ -420,14 +447,15 @@
             <h5 class="card-title mb-2">Es importante que nos sentemos en el auditorio que nos corresponde</h5>
             <p class="card-text">En el auditorio auxiliar los baños están más cerca. Además, las salidas son sin escaleras. Si hubiera que evacuar el local, se perdería tiempo valioso si no estamos donde nos corresponde.</p>
           </div>
+
         </div>
 
 
 
-        <h3>Plano del predio</h3>
-        <p><button class="btn btn-sm btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Ver plano del predio</button></p>
-        <h4>Departamentos</h4>
-
+      <h3>Plano del predio</h3>
+      <p><button class="btn btn-sm btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Ver plano del predio</button></p>
+      <h4>Departamentos</h4>
+      
         <h5>Guardarropa y objetos perdidos</h5>
         <p>Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en planta baja, junto con Guarda de alimentos</a></p>
         <h5>Guarda de alimentos</h5>
@@ -444,22 +472,25 @@
         <h5 class="d-none">Administración</h5>
         <h5 class="d-none">Alojamiento</h5>
 
+      
+      <h3>En caso de emergencias</h3>
+      <a href="#" class="video-link position-relative d-inline-block" data-bs-toggle="modal"
+        data-bs-target="#videoModal" data-video="videos/emergencias-movil.mp4" class="text-decoration-none">
+        <div class="card h-20 text-decoration-none" style="width: 18rem;">
+          <img src="placeholder.png" class="card-img-top" alt="Instrucciones para emergencias">
+          <i class="material-symbols-outlined position-absolute top-50 start-50 translate-middle text-white"
+            style="font-size: 4rem;">play_circle</i>
 
-        <h3>En caso de emergencias</h3>
-        <a href="#" class="video-link position-relative d-inline-block" data-bs-toggle="modal"
-          data-bs-target="#videoModal" data-video="videos/emergencias-movil.mp4" class="text-decoration-none">
-          <div class="card h-20 text-decoration-none" style="width: 18rem;">
-            <img src="placeholder.png" class="card-img-top" alt="Instrucciones para emergencias">
-            <i class="material-symbols-outlined position-absolute top-50 start-50 translate-middle text-white"
-              style="font-size: 4rem;">play_circle</i>
+          <div class="card-body text-decoration-none">
+            <h5 class="card-title">Video: Instrucciones para emergencias</h5>
+            <p class="card-text">En este video verás instrucciones importantes para situaciones de emergencia. </p>
 
-            <div class="card-body text-decoration-none">
-              <h5 class="card-title">Video: Instrucciones para emergencias</h5>
-              <p class="card-text">En este video verás instrucciones importantes para situaciones de emergencia. </p>
-
-            </div>
           </div>
-        </a>
+        </div>
+      </a>
+
+
+
       </div>
     </section>
 
