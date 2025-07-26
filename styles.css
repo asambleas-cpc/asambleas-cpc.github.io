@@ -125,27 +125,27 @@
 }
 
 /* Icon color per section — not used in cards now */
-.section-inicio .material-symbols-outlined {
+.section-inicio .section-icon .material-symbols-outlined {
   color: var(--inicio-color);
 }
 
-.section-transporte .material-symbols-outlined {
+.section-transporte .section-icon .material-symbols-outlined {
   color: var(--transporte-color);
 }
 
-.section-auditorios .material-symbols-outlined {
+.section-auditorios .section-icon .material-symbols-outlined {
   color: var(--auditorios-color);
 }
 
-.section-alimentos .material-symbols-outlined {
+.section-alimentos .section-icon .material-symbols-outlined {
   color: var(--alimentos-color);
 }
 
-.section-alojamiento .material-symbols-outlined {
+.section-alojamiento .section-icon .material-symbols-outlined {
   color: var(--alojamiento-color);
 }
 
-.section-otros .material-symbols-outlined {
+.section-otros .section-icon .material-symbols-outlined {
   color: var(--otros-color);
 }
 
