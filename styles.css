@@ -587,7 +587,7 @@ body::before {
     font-family: 'Material Icons';
     font-size: 1.2em;
     vertical-align: middle;
-    margin-right: 0.3em;
+    margin-right: 0.1em;
 }
 
 .ext-link::after {
@@ -595,7 +595,7 @@ body::before {
     font-family: 'Material Icons';
     font-size: 1.2em;
     vertical-align: middle;
-    margin-right: 0.3em;
+    margin-right: 0.1em;
 }
 
 .geo-link::after {
@@ -603,5 +603,123 @@ body::before {
     font-family: 'Material Icons';
     font-size: 1.2em;
     vertical-align: middle;
-    margin-right: 0.3em;
+    margin-right: 0.1em;
 }
+
+/* Link Styling */
+.snap-section p a, .snap-section li a {
+  color: inherit; /* Inherit color from parent (black text) */
+  /* text-decoration: none; */
+   /* Optional: remove underline */
+  text-decoration-style: dotted;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  padding: 0.1em 0.3em; /* Add some padding for the background effect */
+  border-radius: 0.25em; /* Rounded corners for the background */
+}
+
+/* Hover effect for each section */
+.section-inicio p a:hover, .section-inicio li a:hover {
+  color: var(--inicio-bg);
+  background-color: var(--inicio-color);
+}
+
+.section-transporte p a:hover, .section-transporte li a:hover {
+  color: var(--transporte-bg);
+  background-color: var(--transporte-color);
+}
+
+.section-auditorios p a:hover, .section-auditorios li a:hover {
+  color: var(--auditorios-bg);
+  background-color: var(--auditorios-color);
+}
+
+.section-alimentos p a:hover, .section-alimentos li a:hover {
+  color: var(--alimentos-bg);
+  background-color: var(--alimentos-color);
+}
+
+.section-alojamiento p a:hover, .section-alojamiento li a:hover {
+  color: var(--alojamiento-bg);
+  background-color: var(--alojamiento-color);
+}
+
+.section-otros p a:hover, .section-otros li a:hover {
+  color: var(--otros-bg);
+  background-color: var(--otros-color);
+  border-bottom-color: transparent; /* Hide underline on hover */
+}
+
+/*==========================================================================
+  Button Styling
+==========================================================================*/
+
+.snap-section .btn-primary {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.section-inicio .btn-primary {
+  background-color: var(--inicio-color);
+  border-color: var(--inicio-color);
+  color: var(--inicio-bg);
+}
+.section-inicio .btn-primary:hover {
+  background-color: var(--inicio-bg);
+  border-color: var(--inicio-color);
+  color: var(--inicio-color);
+}
+
+.section-transporte .btn-primary {
+  background-color: var(--transporte-color);
+  border-color: var(--transporte-color);
+  color: var(--transporte-bg);
+}
+.section-transporte .btn-primary:hover {
+  background-color: var(--transporte-bg);
+  border-color: var(--transporte-color);
+  color: var(--transporte-color);
+}
+
+.section-auditorios .btn-primary {
+  background-color: var(--auditorios-color);
+  border-color: var(--auditorios-color);
+  color: var(--auditorios-bg);
+}
+.section-auditorios .btn-primary:hover {
+  background-color: var(--auditorios-bg);
+  border-color: var(--auditorios-color);
+  color: var(--auditorios-color);
+}
+
+.section-alimentos .btn-primary {
+  background-color: var(--alimentos-color);
+  border-color: var(--alimentos-color);
+  color: var(--alimentos-bg);
+}
+.section-alimentos .btn-primary:hover {
+  background-color: var(--alimentos-bg);
+  border-color: var(--alimentos-color);
+  color: var(--alimentos-color);
+}
+
+.section-alojamiento .btn-primary {
+  background-color: var(--alojamiento-color);
+  border-color: var(--alojamiento-color);
+  color: var(--alojamiento-bg);
+}
+.section-alojamiento .btn-primary:hover {
+  background-color: var(--alojamiento-bg);
+  border-color: var(--alojamiento-color);
+  color: var(--alojamiento-color);
+}
+
+.section-otros .btn-primary {
+  background-color: var(--otros-color);
+  border-color: var(--otros-color);
+  color: var(--otros-bg);
+}
+.section-otros .btn-primary:hover {
+  background-color: var(--otros-bg);
+  border-color: var(--otros-color);
+  color: var(--otros-color);
+}
+
