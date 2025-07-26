@@ -306,7 +306,7 @@ body:not(.js-enabled) #inicio>*,
   scroll-snap-align: start;
   min-height: 100vh;
   padding-top: 4rem;
-  padding-bottom: 75vh;
+  /* padding-bottom: 75vh; */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -373,7 +373,7 @@ body:not(.js-enabled) #inicio>*,
 
 /* Apply the movement animation to inner content, not the container */
 
-.snap-section>* {
+/* .snap-section>* {
   opacity: 0;
   transform: translateY(2rem);
 }
@@ -416,12 +416,12 @@ body:not(.js-enabled) #inicio>*,
     opacity: 1;
     transform: none;
   }
-}
+} */
 
 .snap-container {
   scroll-snap-type: y mandatory;
   overflow-y: auto;
-  height: 100vh;
+  min-height: 100vh;
   scroll-behavior: smooth;
   transition: background-color 0.6s ease;
   /* added */
