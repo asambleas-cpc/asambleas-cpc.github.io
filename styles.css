@@ -44,6 +44,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Cabin", sans-serif;
 }
 
+/* Add vertical space before headings that follow other content */
+.snap-section :not(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4, h5, h6) {
+  margin-top: 2.5rem;
+}
+
 /* General purpose watermark */
 body::before {
   content: "BORRADOR-NO DIFUNDIR";
@@ -204,6 +209,28 @@ body::before {
     padding: 1rem;
     background: var(--card-theme-bg-color);
   }
+}
+
+/*
+ * Themed cards for departments and other section-specific content.
+ * These cards inherit the theme color from their parent .snap-section.
+ */
+.card-themed-icon {
+  overflow: hidden; /* Ensures the child's corners are clipped */
+}
+.card-themed-icon .icon-half {
+  background-color: var(--section-theme-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 5rem;
+  flex-shrink: 0;
+}
+
+.card-themed-icon .icon-half .material-symbols-outlined {
+  font-size: 3.75rem; /* Approx 75% of the 5rem container */
 }
 
 /* Generic header for sections */
@@ -424,6 +451,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Cabin", sans-serif;
 }
 
+/* Add vertical space before headings that follow other content */
+.snap-section :not(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4, h5, h6) {
+  margin-top: 2.5rem;
+}
+
 /* General purpose watermark */
 body::before {
   content: "BORRADOR-NO DIFUNDIR";
@@ -584,6 +616,28 @@ body::before {
     padding: 1rem;
     background: var(--card-theme-bg-color);
   }
+}
+
+/*
+ * Themed cards for departments and other section-specific content.
+ * These cards inherit the theme color from their parent .snap-section.
+ */
+.card-themed-icon {
+  overflow: hidden; /* Ensures the child's corners are clipped */
+}
+.card-themed-icon .icon-half {
+  background-color: var(--section-theme-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 5rem;
+  flex-shrink: 0;
+}
+
+.card-themed-icon .icon-half .material-symbols-outlined {
+  font-size: 3.75rem; /* Approx 75% of the 5rem container */
 }
 
 /* Generic header for sections */

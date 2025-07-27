@@ -357,6 +357,8 @@
         class="section-icon material-symbols-outlined">airline_seat_recline_normal</i>
       <div class="container pt-5">
         <h2>Dónde ubicarse</h2>
+      <h3>Plano del predio</h3>
+      <p><button class="btn btn-sm btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Ver plano del predio</button></p>
 
         <h3>Auditorios</h3>
         <p>El CPC tiene dos auditorios. Es importante que nos ubiquemos en el auditorio que nos corresponde, porque
@@ -424,42 +426,79 @@
 
 
 
-      <h3>Plano del predio</h3>
-      <p><button class="btn btn-sm btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Ver plano del predio</button></p>
-      <h4>Departamentos</h4>
+      <h3>Departamentos</h3>
       
-<div class="card mb-3" id="cardObjetosPerdidos" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-2 d-flex align-items-start justify-content-center pt-3">
-      <i class="material-symbols-outlined fs-1 ">checked_bag_question</i>
-    </div>
-    <div class="col-md-10">
-      <div class="card-body">
-        <h5 class="card-title">Guardarropa y objetos perdidos</h5>
-<p class="card-text">Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en planta baja, junto con Guarda de alimentos</a></p>
+<div class="row">
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
+            <div class="icon-half">
+              <i class="material-symbols-outlined">checked_bag_question</i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Guardarropa y objetos perdidos</h5>
+              <p class="card-text">Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en planta baja, junto con Guarda de alimentos</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardGuardaAlimentos">
+            <div class="icon-half">
+              <i class="material-symbols-outlined">shopping_bag</i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Guarda de alimentos</h5>
+              <p class="card-text">Es donde se guardan los alimentos durante el programa. Hay un puesto <a href="javascript:plano(0,'departamentos','GuardaAlimentos')" class="plano-link">en planta baja</a> y otro <a href="javascript:plano(1,'departamentos','GuardaAlimentos')" class="plano-link">en planta alta</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardPrimerosAuxilios">
+            <div class="icon-half">
+              <i class="material-symbols-outlined">health_cross</i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Primeros auxilios</h5>
+              <p class="card-text">Se encuetra <a href="javascript:plano(0,'departamentos','PrimerosAuxilios')" class="plano-link">en planta baja</a> y hay una guardia <a href="javascript:plano(1,'departamentos','PrimerosAuxilios')" class="plano-link">en el auditorio de planta alta</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardLactantes">
+            <div class="icon-half">
+              <i class="material-symbols-outlined">breastfeeding</i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Lactantes</h5>
+              <p class="card-text">Se encuentra <a href="javascript:plano(0,'departamentos','Lactantes')" class="plano-link">en planta baja</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardInformacion">
+            <div class="icon-half">
+              <i class="material-symbols-outlined">info</i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Información y servicio voluntario</h5>
+              <p class="card-text">Se encuentra <a href="javascript:plano(0,'departamentos','Informacion')" class="plano-link">en el mostrador de planta baja</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-3">
+          <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardLimpieza">
+            <div class="icon-half">
+              <i class="material-symbols-outlined">cleaning_services</i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Limpieza</h5>
+              <p class="card-text">Se encuentra <a href="javascript:plano(1,'departamentos','Limpieza')" class="plano-link">en el vestíbulo de planta alta</a>.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-        <h5>Guardarropa y objetos perdidos</h5>
-        <p>Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en planta baja, junto con Guarda de alimentos</a></p>
-        <h5>Guarda de alimentos</h5>
-        <p>Es donde se guardan los alimentos durante el programa</p>
-        <p>Hay un puesto <a href="javascript:plano(0,'departamentos','GuardaAlimentos')" class="plano-link">en planta baja</a> y otro <a href="javascript:plano(1,'departamentos','GuardaAlimentos')" class="plano-link">en planta alta</a></p>
-        <h5>Primeros auxilios</h5>
-        <p>Se encuetra <a href="javascript:plano(0,'departamentos','PrimerosAuxilios')" class="plano-link">en planta baja</a> y hay una guardia <a href="javascript:plano(1,'departamentos','PrimerosAuxilios')" class="plano-link">en el auditorio de planta alta</a></p>
-        <h5>Lactantes</h5>
-        <p>Se encuentra <a href="javascript:plano(0,'departamentos','Lactantes')" class="plano-link">en planta baja</a></p>
-        <h5>Información y servicio voluntario</h5>
-        <p>Se encuentra <a href="javascript:plano(0,'departamentos','Informacion')" class="plano-link">en el mostrador de planta baja</a></p>
-        <h5>Limpieza</h5>
-        <p>Se encuentra <a href="javascript:plano(1,'departamentos','Limpieza')" class="plano-link">en el vestíbulo de planta alta</a></p>
         <h5 class="d-none">Administración</h5>
         <h5 class="d-none">Alojamiento</h5>
-
+<p></p>
       
       <h3>En caso de emergencias</h3>
       <a href="#" class="video-link position-relative d-inline-block" data-bs-toggle="modal"
