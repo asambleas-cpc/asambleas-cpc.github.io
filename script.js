@@ -265,3 +265,23 @@ document.querySelectorAll('[data-bs-toggle="lightbox"]').forEach(el => {
     lightbox.show();
   });
 });
+
+// Back to Top Button Logic
+const backToTopBtn = document.getElementById('backToTopBtn');
+const inicioSection = document.getElementById('inicio');
+
+const btnObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+}, {
+  threshold: 0.1 // Triggers when 10% of the section is out of view
+});
+
+if (inicioSection) {
+  btnObserver.observe(inicioSection);
+}
