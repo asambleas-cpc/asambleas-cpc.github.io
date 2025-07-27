@@ -278,7 +278,7 @@ const btnObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.1 // Triggers when 10% of the section is out of view
+  threshold: 0.01 // Triggers when 10% of the section is out of view
 });
 
 if (inicioSection) {
