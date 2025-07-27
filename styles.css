@@ -1,245 +1,30 @@
-.material-symbols-outlined {
-  color: var(--icon-color);
-  vertical-align: middle;
-  font-size: 1.2em;
-}
+/* ==========================================================================
+   1. Root and Base Styles
+   ========================================================================== */
 
-.material-symbols-outlined {
-  vertical-align: middle;
-  font-size: 1.2em;
-}
-
+/**
+ * :root contains all global CSS variables for colors, fonts, and layout.
+ * It's the single source of truth for the site's design tokens.
+ */
 :root {
-  /* Variant modifiers */
-  --bg-lighten: 90%;
-  /* How much lighter the pastel background is */
-  --icon-faint-sat-mult: 0.3;
-  /* Saturation multiplier for faint icon */
-  --icon-faint-lighten: 60%;
-  /* Lightness increase for faint icon */
-
-  /* Colors for each section */
-
-  /* Inicio */
+  /* Color Theme Definitions */
   --inicio-color: hsl(210, 10%, 50%);
-  --inicio-bg: hsl(from var(--inicio-color) h s 95%);
-  --inicio-comp: hsl(from var(--inicio-color) calc(h + 180) s l);
-  --inicio-icon-faint: hsl(from var(--inicio-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
-
-
-  /* Transporte */
   --transporte-color: hsl(134, 61%, 40%);
-  --transporte-bg: hsl(from var(--transporte-color) h s var(--bg-lighten));
-  --transporte-comp: hsl(from var(--transporte-color) calc(h + 180) s l);
-  --transporte-icon-faint: hsl(from var(--transporte-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
-
-
-  /* Auditorios */
   --auditorios-color: hsl(188, 60%, 40%);
-  --auditorios-bg: hsl(from var(--auditorios-color) h s var(--bg-lighten));
-  --auditorios-comp: hsl(from var(--auditorios-color) calc(h + 180) s l);
-  --auditorios-icon-faint: hsl(from var(--auditorios-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
-
-
-  /* Alimentos */
   --alimentos-color: hsl(332, 47%, 37%);
-  --alimentos-bg: hsl(from var(--alimentos-color) h s var(--bg-lighten));
-  --alimentos-comp: hsl(from var(--alimentos-color) calc(h + 180) s l);
-  --alimentos-icon-faint: hsl(from var(--alimentos-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
-
-
-  /* Alojamiento */
   --alojamiento-color: hsl(30, 98%, 55%);
-  --alojamiento-bg: hsl(from var(--alojamiento-color) h s var(--bg-lighten));
-  --alojamiento-comp: hsl(from var(--alojamiento-color) calc(h + 180) s l);
-  --alojamiento-icon-faint: hsl(from var(--alojamiento-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
-
-
-  /* Otros */
   --otros-color: hsl(270, 50%, 45%);
-  --otros-bg: hsl(from var(--otros-color) h s var(--bg-lighten));
-  --otros-comp: hsl(from var(--otros-color) calc(h + 180) s l);
-  --otros-icon-faint: hsl(from var(--otros-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
-
   --aviso-color: rgb(199, 0, 0);
+
+  /* Color Variant Generation */
+  --bg-lighten: 90%;
+  --inicio-bg: hsl(from var(--inicio-color) h s var(--bg-lighten));
+  --transporte-bg: hsl(from var(--transporte-color) h s var(--bg-lighten));
+  --auditorios-bg: hsl(from var(--auditorios-color) h s var(--bg-lighten));
+  --alimentos-bg: hsl(from var(--alimentos-color) h s var(--bg-lighten));
+  --alojamiento-bg: hsl(from var(--alojamiento-bg) h s var(--bg-lighten));
+  --otros-bg: hsl(from var(--otros-color) h s var(--bg-lighten));
   --aviso-bg: hsl(from var(--aviso-color) h s var(--bg-lighten));
-  --aviso-comp: hsl(from var(--aviso-color) calc(h + 180) s l);
-  --aviso-icon-faint: hsl(from var(--aviso-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
-
-}
-
-
-
-
-
-
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Pastel background and black text for each section */
-.section-inicio {
-  background-color: var(--inicio-bg);
-  color: black;
-  padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
-}
-
-.section-transporte {
-  background-color: var(--transporte-bg);
-  color: black;
-  padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
-}
-
-.section-auditorios {
-  background-color: var(--auditorios-bg);
-  color: black;
-  padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
-}
-
-.section-alimentos {
-  background-color: var(--alimentos-bg);
-  color: black;
-  padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
-}
-
-.section-alojamiento {
-  background-color: var(--alojamiento-bg);
-  color: black;
-  padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
-}
-
-.section-otros {
-  background-color: var(--otros-bg);
-  color: black;
-  padding: 2rem;
-  transition: background-color 0.6s ease, color 0.6s ease;
-}
-
-/* Icon color per section — not used in cards now */
-.section-inicio .section-icon .material-symbols-outlined {
-  color: var(--inicio-color);
-}
-
-.section-transporte .section-icon .material-symbols-outlined {
-  color: var(--transporte-color);
-}
-
-.section-auditorios .section-icon .material-symbols-outlined {
-  color: var(--auditorios-color);
-}
-
-.section-alimentos .section-icon .material-symbols-outlined {
-  color: var(--alimentos-color);
-}
-
-.section-alojamiento .section-icon .material-symbols-outlined {
-  color: var(--alojamiento-color);
-}
-
-.section-otros .section-icon .material-symbols-outlined {
-  color: var(--otros-color);
-}
-
-/* Themed Card Layout in #inicio */
-#cardGroupEnlacesInicio .card {
-  display: flex;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease, background-color 0.3s;
-  color: black;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* subtle drop shadow */
-  border: none;
-}
-
-/* .card:not(.card-static):hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-} */
-
-#cardGroupEnlacesInicio .card-icon {
-  display: flex;
-  align-items: flex-start;
-  /* Align icon to the top */
-  justify-content: center;
-  width: 4rem;
-  flex-shrink: 0;
-  background: gray;
-  /* temporary default, overridden below */
-}
-
-#cardGroupEnlacesInicio .card-icon .material-symbols-outlined {
-  color: white !important;
-  /* Force icon to be white */
-  font-size: 2rem;
-  /* optional: make it bigger */
-  padding-top: 1rem;
-}
-
-
-#cardGroupEnlacesInicio .card-content {
-  flex-grow: 1;
-  padding: 1rem;
-}
-
-/* Individual Card Variants */
-#cardGroupEnlacesInicio .card-transporte .card-icon {
-  background: var(--transporte-color);
-}
-
-#cardGroupEnlacesInicio .card-auditorios .card-icon {
-  background: var(--auditorios-color);
-}
-
-#cardGroupEnlacesInicio .card-alimentos .card-icon {
-  background: var(--alimentos-color);
-}
-
-#cardGroupEnlacesInicio .card-alojamiento .card-icon {
-  background: var(--alojamiento-color);
-}
-
-#cardGroupEnlacesInicio .card-otros .card-icon {
-  background: var(--otros-color);
-}
-
-#cardGroupEnlacesInicio .card-aviso .card-icon {
-  background: var(--aviso-color);
-}
-
-#cardGroupEnlacesInicio .card-transporte .card-content {
-  background: var(--transporte-bg);
-}
-
-#cardGroupEnlacesInicio .card-auditorios .card-content {
-  background: var(--auditorios-bg);
-}
-
-#cardGroupEnlacesInicio .card-alimentos .card-content {
-  background: var(--alimentos-bg);
-}
-
-#cardGroupEnlacesInicio .card-alojamiento .card-content {
-  background: var(--alojamiento-bg);
-}
-
-#cardGroupEnlacesInicio .card-otros .card-content {
-  background: var(--otros-bg);
-}
-
-#cardGroupEnlacesInicio .card-aviso .card-content {
-  background: var(--aviso-bg);
 }
 
 html {
@@ -252,282 +37,14 @@ body {
   background-color: var(--bg-light);
   color: var(--text-color);
   transition: background-color 0.6s ease, color 0.6s ease;
-  scroll-behavior: smooth;
   height: 100%;
-  /* overflow: hidden; */
-
-
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Cabin", sans-serif;
 }
 
-body:not(.js-enabled) #inicio>*,
-#inicio.visible>* {
-  opacity: 1;
-  transform: none;
-}
-
-.snap-section {
-  scroll-snap-align: start;
-  min-height: 100vh;
-  /* padding-bottom: 75vh; */
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-
-  transition: background-color 0.6s ease, color 0.6s ease;
-  /* add color transition for icon */
-  /* background-color: inherit; ensure background is controlled by section-bg variables */
-
-  position: relative;
-  /* required for absolute positioning inside */
-  z-index: 0;
-  /* overflow: visible; */
-}
-
-#inicio.snap-section {
-  height: auto;
-  scroll-snap-align: start;
-}
-
-#inicio {
-  min-height: 100vh;
-  overflow: visible !important;
-}
-
-.section-inicio {
-  background-color: var(--inicio-bg);
-  color: black;
-}
-
-.section-transporte {
-  background-color: var(--transporte-bg);
-  color: black;
-}
-
-.section-auditorios {
-  background-color: var(--auditorios-bg);
-  color: black;
-}
-
-.section-alimentos {
-  background-color: var(--alimentos-bg);
-  color: black;
-}
-
-.section-alojamiento {
-  background-color: var(--alojamiento-bg);
-  color: black;
-}
-
-.section-otros {
-  background-color: var(--otros-bg);
-  color: black;
-}
-
-.snap-section.visible {
-  opacity: 1;
-}
-
-.snap-section>*:not(.section-icon) {
-  position: relative;
-  z-index: 1;
-}
-
-/* Apply the movement animation to inner content, not the container */
-
-/* .snap-section>* {
-  opacity: 0;
-  transform: translateY(2rem);
-}
-
-.snap-section.visible>* {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.snap-section.visible>*:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.snap-section.visible>*:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.snap-section.visible>*:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.snap-section.visible>*:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.snap-section.visible>*:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.snap-section.visible>*:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-} */
-
-.snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  transition: background-color 0.6s ease;
-  /* added */
-  position: relative;
-}
-
-.section-icon {
-  position: absolute;
-  top: 3rem;
-  left: -5vw;
-  font-size: 20rem;
-  filter: opacity(20%); /* Final transparency */
-  pointer-events: none;
-  z-index: 0;
-  color: inherit;
-
-  /* Animation properties */
-  opacity: 0; /* Initially invisible */
-  transform: translateX(-100%); /* Initially off-screen to the left */
-  transition: color 0.6s ease, opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.snap-section.visible .section-icon {
-  opacity: 1; /* Fade in */
-  transform: translateX(0); /* Slide in */
-}
-
-/* Set icon color using section main color */
-.section-inicio .section-icon {
-  color: var(--inicio-color);
-}
-
-.section-transporte .section-icon {
-  color: var(--transporte-color);
-}
-
-.section-auditorios .section-icon {
-  color: var(--auditorios-color);
-}
-
-.section-alimentos .section-icon {
-  color: var(--alimentos-color);
-}
-
-.section-alojamiento .section-icon {
-  color: var(--alojamiento-color);
-}
-
-.section-otros .section-icon {
-  color: var(--otros-color);
-}
-
-
-body:not(.js-enabled) .snap-section>* {
-  opacity: 1;
-  transform: none;
-}
-
-.scroll-wrapper {
-  position: relative;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-.scroll-inner-container {
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-}
-
-.scroll-inner-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
-}
-
-.gallery.d-flex {
-  gap: 0.5rem; /* Spacing between thumbnails */
-}
-
-.gallery .col-4 {
-  flex: 0 0 auto; /* Prevent shrinking */
-  width: 30%; /* Adjust width as needed */
-  max-width: 120px; /* Max width for thumbnails */
-}
-
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.scroll-btn:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.scroll-left {
-  left: -10px;
-}
-
-.scroll-right {
-  right: -10px;
-}
-
-
-.scroll-inner {
-  padding-left: var(--bs-gutter-x, 1rem);
-  padding-right: 5em; /* or more for visual spacing */
-    scroll-snap-type: x mandatory;
-}
-.scroll-inner > .card {
-  scroll-snap-align: start;
-}
-.overflow-fade {
-  -webkit-mask-image: linear-gradient(to right,
-    transparent 0,
-    black 5em,
-    black calc(100% - 5em),
-    transparent 100%);
-  mask-image: linear-gradient(to right,
-    transparent 0,
-    black 5em,
-    black calc(100% - 5em),
-    transparent 100%);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-}
-
+/* General purpose watermark */
 body::before {
   content: "BORRADOR-NO DIFUNDIR";
   position: fixed;
@@ -535,7 +52,6 @@ body::before {
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
   font-size: 8vw;
-  /* 90% of viewport width */
   color: rgba(255, 0, 0, 0.308);
   white-space: nowrap;
   pointer-events: none;
@@ -545,187 +61,688 @@ body::before {
   text-align: center;
 }
 
-.logo-responsive {
-  width: min(80vw, 100vh);
-  /* responsive max size */
-  height: auto;
-  display: block;
-  margin: 0;
-  color: hsl(204, 100%, 16%)
-}
-.plano-link::after {
-    content: "map";
-    font-family: 'Material Icons';
-    font-size: 1.2em;
-    vertical-align: middle;
-    margin-right: 0.1em;
+/* ==========================================================================
+   2. Layout Containers
+   ========================================================================== */
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  transition: background-color 0.6s ease;
+  position: relative;
 }
 
-.ext-link::after {
-    content: "open_in_new";
-    font-family: 'Material Icons';
-    font-size: 1.2em;
-    vertical-align: middle;
-    margin-right: 0.1em;
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: relative;
+  z-index: 0;
+  padding: 2rem;
+  
+  /* Generic theme properties that will be inherited */
+  background-color: var(--section-theme-bg-color);
+  color: black;
+  transition: background-color 0.6s ease, color 0.6s ease;
+
+  /* Nesting section-specific variables and styles */
+  &.section-inicio {
+    --section-theme-color: var(--inicio-color);
+    --section-theme-bg-color: var(--inicio-bg);
+  }
+  &.section-transporte {
+    --section-theme-color: var(--transporte-color);
+    --section-theme-bg-color: var(--transporte-bg);
+  }
+  &.section-auditorios {
+    --section-theme-color: var(--auditorios-color);
+    --section-theme-bg-color: var(--auditorios-bg);
+  }
+  &.section-alimentos {
+    --section-theme-color: var(--alimentos-color);
+    --section-theme-bg-color: var(--alimentos-bg);
+  }
+  &.section-alojamiento {
+    --section-theme-color: var(--alojamiento-color);
+    --section-theme-bg-color: var(--alojamiento-bg);
+  }
+  &.section-otros {
+    --section-theme-color: var(--otros-color);
+    --section-theme-bg-color: var(--otros-bg);
+  }
+
+  /* Special case for the #inicio section layout */
+  &#inicio {
+    height: auto;
+    scroll-snap-align: start;
+    min-height: 100vh;
+    overflow: visible !important;
+  }
+
+  /* Child elements inside a section */
+  > *:not(.section-icon) {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Visibility transition for the icon */
+  &.visible .section-icon {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.geo-link::after {
-    content: "pin_drop";
-    font-family: 'Material Icons';
-    font-size: 1.2em;
-    vertical-align: middle;
-    margin-right: 0.1em;
+/* ==========================================================================
+   3. Components
+   ========================================================================== */
+
+/**
+ * Themed cards used in the #inicio section.
+ * Uses scoped variables for theming.
+ */
+#cardGroupEnlacesInicio {
+  .card {
+    display: flex;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s;
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+
+    /* Define scoped variables for each card type */
+    &.card-transporte {
+      --card-theme-color: var(--transporte-color);
+      --card-theme-bg-color: var(--transporte-bg);
+    }
+    &.card-auditorios {
+      --card-theme-color: var(--auditorios-color);
+      --card-theme-bg-color: var(--auditorios-bg);
+    }
+    &.card-alimentos {
+      --card-theme-color: var(--alimentos-color);
+      --card-theme-bg-color: var(--alimentos-bg);
+    }
+    &.card-alojamiento {
+      --card-theme-color: var(--alojamiento-color);
+      --card-theme-bg-color: var(--alojamiento-bg);
+    }
+    &.card-otros {
+      --card-theme-color: var(--otros-color);
+      --card-theme-bg-color: var(--otros-bg);
+    }
+    &.card-aviso {
+      --card-theme-color: var(--aviso-color);
+      --card-theme-bg-color: var(--aviso-bg);
+    }
+  }
+
+  .card-icon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 4rem;
+    flex-shrink: 0;
+    background: var(--card-theme-color);
+
+    .material-symbols-outlined {
+      color: white !important;
+      font-size: 2rem;
+      padding-top: 1rem;
+    }
+  }
+
+  .card-content {
+    flex-grow: 1;
+    padding: 1rem;
+    background: var(--card-theme-bg-color);
+  }
 }
 
-/* Link Styling */
-.snap-section p a, .snap-section li a {
-  color: inherit; /* Inherit color from parent (black text) */
-  /* text-decoration: none; */
-   /* Optional: remove underline */
-  text-decoration-style: dotted;
-  transition: color 0.2s ease, background-color 0.2s ease;
-  /* padding: 0.1em 0.1em; Add some padding for the background effect */
-  border-radius: 0.25em; /* Rounded corners for the background */
+/* Generic header for sections */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Hover effect for each section */
-.section-inicio p a:hover, .section-inicio li a:hover {
-  color: var(--inicio-bg);
-  background-color: var(--inicio-color);
+/* Large decorative icon in the background of each section */
+.section-icon {
+  position: absolute;
+  top: 3rem;
+  left: -5vw;
+  font-size: 20rem;
+  filter: opacity(20%);
+  pointer-events: none;
+  z-index: 0;
+  color: var(--section-theme-color);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: color 0.6s ease, opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.section-transporte p a:hover, .section-transporte li a:hover {
-  color: var(--transporte-bg);
-  background-color: var(--transporte-color);
+/* Horizontal scrolling component for image gallery */
+.scroll-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+
+  .scroll-inner-container {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+  }
+
+  .gallery.d-flex {
+    gap: 0.5rem;
+    .col-4 {
+      flex: 0 0 auto;
+      width: 30%;
+      max-width: 120px;
+    }
+  }
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    &.scroll-left { left: -10px; }
+    &.scroll-right { right: -10px; }
+  }
 }
 
-.section-auditorios p a:hover, .section-auditorios li a:hover {
-  color: var(--auditorios-bg);
-  background-color: var(--auditorios-color);
-}
-
-.section-alimentos p a:hover, .section-alimentos li a:hover {
-  color: var(--alimentos-bg);
-  background-color: var(--alimentos-color);
-}
-
-.section-alojamiento p a:hover, .section-alojamiento li a:hover {
-  color: var(--alojamiento-bg);
-  background-color: var(--alojamiento-color);
-}
-
-.section-otros p a:hover, .section-otros li a:hover {
-  color: var(--otros-bg);
-  background-color: var(--otros-color);
-  border-bottom-color: transparent; /* Hide underline on hover */
-}
-
-/*==========================================================================
-  Button Styling
-==========================================================================*/
-
-.snap-section .btn-primary {
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.section-inicio .btn-primary {
-  background-color: var(--inicio-color);
-  border-color: var(--inicio-color);
-  color: var(--inicio-bg);
-}
-.section-inicio .btn-primary:hover {
-  background-color: var(--inicio-bg);
-  border-color: var(--inicio-color);
-  color: var(--inicio-color);
-}
-
-.section-transporte .btn-primary {
-  background-color: var(--transporte-color);
-  border-color: var(--transporte-color);
-  color: var(--transporte-bg);
-}
-.section-transporte .btn-primary:hover {
-  background-color: var(--transporte-bg);
-  border-color: var(--transporte-color);
-  color: var(--transporte-color);
-}
-
-.section-auditorios .btn-primary {
-  background-color: var(--auditorios-color);
-  border-color: var(--auditorios-color);
-  color: var(--auditorios-bg);
-}
-.section-auditorios .btn-primary:hover {
-  background-color: var(--auditorios-bg);
-  border-color: var(--auditorios-color);
-  color: var(--auditorios-color);
-}
-
-.section-alimentos .btn-primary {
-  background-color: var(--alimentos-color);
-  border-color: var(--alimentos-color);
-  color: var(--alimentos-bg);
-}
-.section-alimentos .btn-primary:hover {
-  background-color: var(--alimentos-bg);
-  border-color: var(--alimentos-color);
-  color: var(--alimentos-color);
-}
-
-.section-alojamiento .btn-primary {
-  background-color: var(--alojamiento-color);
-  border-color: var(--alojamiento-color);
-  color: var(--alojamiento-bg);
-}
-.section-alojamiento .btn-primary:hover {
-  background-color: var(--alojamiento-bg);
-  border-color: var(--alojamiento-color);
-  color: var(--alojamiento-color);
-}
-
-.section-otros .btn-primary {
-  background-color: var(--otros-color);
-  border-color: var(--otros-color);
-  color: var(--otros-bg);
-}
-.section-otros .btn-primary:hover {
-  background-color: var(--otros-bg);
-  border-color: var(--otros-color);
-  color: var(--otros-color);
-}
-
-
+/* Floating action button to return to the top */
 .back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
-  /* backdrop-filter: blur(10px); */
-  /* -webkit-backdrop-filter: blur(10px); Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  display: flex; /* Use flex to center icon */
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   text-decoration: none;
-  /* Animation properties */
   opacity: 0;
   transform: translateY(20px);
   visibility: hidden;
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-}
 
-.back-to-top .material-symbols-outlined {
+  .material-symbols-outlined {
     color: white;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
 
-.back-to-top.show {
+/* ==========================================================================
+   4. Themed Elements (Links & Buttons)
+   ========================================================================== */
+
+.snap-section {
+  /* Themed links */
+  p a, li a {
+    color: inherit;
+    text-decoration-style: dotted;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 0.25em;
+    &:hover {
+      color: var(--section-theme-bg-color);
+      background-color: var(--section-theme-color);
+      border-bottom-color: transparent;
+    }
+  }
+
+  /* Themed primary buttons */
+  .btn-primary {
+    background-color: var(--section-theme-color);
+    border-color: var(--section-theme-color);
+    color: white;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    &:hover {
+      background-color: transparent;
+      border-color: var(--section-theme-color);
+      color: var(--section-theme-color);
+    }
+  }
+}
+
+/* Link pseudo-elements for icons */
+.plano-link::after, .ext-link::after, .geo-link::after {
+  font-family: 'Material Icons';
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+.plano-link::after { content: "map"; }
+.ext-link::after { content: "open_in_new"; }
+.geo-link::after { content: "pin_drop"; }
+
+/* ==========================================================================
+   5. Utilities
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Root and Base Styles
+   ========================================================================== */
+
+/**
+ * :root contains all global CSS variables for colors, fonts, and layout.
+ * It's the single source of truth for the site's design tokens.
+ */
+:root {
+  /* Variant modifiers */
+  --bg-lighten: 90%;
+  --icon-faint-sat-mult: 0.3;
+  --icon-faint-lighten: 60%;
+
+  /* Colors for each section */
+  --inicio-color: hsl(210, 10%, 50%);
+  --inicio-bg: hsl(from var(--inicio-color) h s 95%);
+  --inicio-comp: hsl(from var(--inicio-color) calc(h + 180) s l);
+  --inicio-icon-faint: hsl(from var(--inicio-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
+
+  --transporte-color: hsl(134, 61%, 40%);
+  --transporte-bg: hsl(from var(--transporte-color) h s var(--bg-lighten));
+  --transporte-comp: hsl(from var(--transporte-color) calc(h + 180) s l);
+  --transporte-icon-faint: hsl(from var(--transporte-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
+
+  --auditorios-color: hsl(188, 60%, 40%);
+  --auditorios-bg: hsl(from var(--auditorios-color) h s var(--bg-lighten));
+  --auditorios-comp: hsl(from var(--auditorios-color) calc(h + 180) s l);
+  --auditorios-icon-faint: hsl(from var(--auditorios-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
+
+  --alimentos-color: hsl(332, 47%, 37%);
+  --alimentos-bg: hsl(from var(--alimentos-color) h s var(--bg-lighten));
+  --alimentos-comp: hsl(from var(--alimentos-color) calc(h + 180) s l);
+  --alimentos-icon-faint: hsl(from var(--alimentos-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
+
+  --alojamiento-color: hsl(30, 98%, 55%);
+  --alojamiento-bg: hsl(from var(--alojamiento-color) h s var(--bg-lighten));
+  --alojamiento-comp: hsl(from var(--alojamiento-color) calc(h + 180) s l);
+  --alojamiento-icon-faint: hsl(from var(--alojamiento-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
+
+  --otros-color: hsl(270, 50%, 45%);
+  --otros-bg: hsl(from var(--otros-color) h s var(--bg-lighten));
+  --otros-comp: hsl(from var(--otros-color) calc(h + 180) s l);
+  --otros-icon-faint: hsl(from var(--otros-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
+
+  --aviso-color: rgb(199, 0, 0);
+  --aviso-bg: hsl(from var(--aviso-color) h s var(--bg-lighten));
+  --aviso-comp: hsl(from var(--aviso-color) calc(h + 180) s l);
+  --aviso-icon-faint: hsl(from var(--aviso-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  transition: background-color 0.6s ease, color 0.6s ease;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cabin", sans-serif;
+}
+
+/* General purpose watermark */
+body::before {
+  content: "BORRADOR-NO DIFUNDIR";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 8vw;
+  color: rgba(255, 0, 0, 0.308);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 9999;
+  user-select: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ==========================================================================
+   2. Layout Containers
+   ========================================================================== */
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  transition: background-color 0.6s ease;
+  position: relative;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: relative;
+  z-index: 0;
+  padding: 2rem;
+  
+  /* Generic theme properties that will be inherited */
+  background-color: var(--section-theme-bg-color);
+  color: black;
+  transition: background-color 0.6s ease, color 0.6s ease;
+
+  /* Nesting section-specific variables and styles */
+  &.section-inicio {
+    --section-theme-color: var(--inicio-color);
+    --section-theme-bg-color: var(--inicio-bg);
+  }
+  &.section-transporte {
+    --section-theme-color: var(--transporte-color);
+    --section-theme-bg-color: var(--transporte-bg);
+  }
+  &.section-auditorios {
+    --section-theme-color: var(--auditorios-color);
+    --section-theme-bg-color: var(--auditorios-bg);
+  }
+  &.section-alimentos {
+    --section-theme-color: var(--alimentos-color);
+    --section-theme-bg-color: var(--alimentos-bg);
+  }
+  &.section-alojamiento {
+    --section-theme-color: var(--alojamiento-color);
+    --section-theme-bg-color: var(--alojamiento-bg);
+  }
+  &.section-otros {
+    --section-theme-color: var(--otros-color);
+    --section-theme-bg-color: var(--otros-bg);
+  }
+
+  /* Special case for the #inicio section layout */
+  &#inicio {
+    height: auto;
+    scroll-snap-align: start;
+    min-height: 100vh;
+    overflow: visible !important;
+  }
+
+  /* Child elements inside a section */
+  > *:not(.section-icon) {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Visibility transition for the icon */
+  &.visible .section-icon {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==========================================================================
+   3. Components
+   ========================================================================== */
+
+/**
+ * Themed cards used in the #inicio section.
+ * Uses scoped variables for theming.
+ */
+#cardGroupEnlacesInicio {
+  .card {
+    display: flex;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s;
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+
+    /* Define scoped variables for each card type */
+    &.card-transporte {
+      --card-theme-color: var(--transporte-color);
+      --card-theme-bg-color: var(--transporte-bg);
+    }
+    &.card-auditorios {
+      --card-theme-color: var(--auditorios-color);
+      --card-theme-bg-color: var(--auditorios-bg);
+    }
+    &.card-alimentos {
+      --card-theme-color: var(--alimentos-color);
+      --card-theme-bg-color: var(--alimentos-bg);
+    }
+    &.card-alojamiento {
+      --card-theme-color: var(--alojamiento-color);
+      --card-theme-bg-color: var(--alojamiento-bg);
+    }
+    &.card-otros {
+      --card-theme-color: var(--otros-color);
+      --card-theme-bg-color: var(--otros-bg);
+    }
+    &.card-aviso {
+      --card-theme-color: var(--aviso-color);
+      --card-theme-bg-color: var(--aviso-bg);
+    }
+  }
+
+  .card-icon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 4rem;
+    flex-shrink: 0;
+    background: var(--card-theme-color);
+
+    .material-symbols-outlined {
+      color: white !important;
+      font-size: 2rem;
+      padding-top: 1rem;
+    }
+  }
+
+  .card-content {
+    flex-grow: 1;
+    padding: 1rem;
+    background: var(--card-theme-bg-color);
+  }
+}
+
+/* Generic header for sections */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Large decorative icon in the background of each section */
+.snap-section .section-icon {
+  position: absolute;
+  top: 3rem;
+  left: -5vw;
+  font-size: 20rem;
+  filter: opacity(20%);
+  pointer-events: none;
+  z-index: 0;
+  color: var(--section-theme-color);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: color 0.6s ease, opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Horizontal scrolling component for image gallery */
+.scroll-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+
+  .scroll-inner-container {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+  }
+
+  .gallery.d-flex {
+    gap: 0.5rem;
+    .col-4 {
+      flex: 0 0 auto;
+      width: 30%;
+      max-width: 120px;
+    }
+  }
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    &.scroll-left { left: -10px; }
+    &.scroll-right { right: -10px; }
+  }
+}
+
+/* Floating action button to return to the top */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+  .material-symbols-outlined {
+    color: white;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+/* ==========================================================================
+   4. Themed Elements (Links & Buttons)
+   ========================================================================== */
+
+.snap-section {
+  /* Themed links */
+  p a, li a {
+    color: inherit;
+    text-decoration-style: dotted;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 0.25em;
+    &:hover {
+      color: var(--section-theme-bg-color);
+      background-color: var(--section-theme-color);
+      border-bottom-color: transparent;
+    }
+  }
+
+  /* Themed primary buttons */
+  .btn-primary {
+    background-color: var(--section-theme-color);
+    border-color: var(--section-theme-color);
+    color: white;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    &:hover {
+      background-color: transparent;
+      border-color: var(--section-theme-color);
+      color: var(--section-theme-color);
+    }
+  }
+}
+
+/* Link pseudo-elements for icons */
+.plano-link::after, .ext-link::after, .geo-link::after {
+  font-family: 'Material Icons';
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+.plano-link::after { content: "map"; }
+.ext-link::after { content: "open_in_new"; }
+.geo-link::after { content: "pin_drop"; }
+
+/* ==========================================================================
+   5. Utilities
+   ========================================================================== */
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+/* Fallback for when JavaScript is disabled */
+body:not(.js-enabled) #inicio > * {
   opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
+  transform: none;
 }
-
-

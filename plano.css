@@ -1,192 +1,187 @@
-/* This stylesheet is used to style everything related to the plano component. For other styles, use styles.css. */
-        .modal-fullscreen {
+/* ==========================================================================
+   Plano (Map Modal) Stylesheet
+   ========================================================================== */
+
+/**
+ * This entire stylesheet is scoped within the .plano-modal-styles class,
+ * which is applied to the modal container. This prevents any style leakage.
+ */
+.plano-modal-styles {
+
+  /* ========================================================================
+     1. Modal & Map Layout
+     ======================================================================== */
+  
+  .modal-dialog, .modal-content, .modal-body, #map {
     height: 100%;
+  }
+
+  #map-title {
+    h5, small {
+      color: #212929;
+      text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff,
+         0 0 10px rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  /* ========================================================================
+     2. Vertical Toolbar
+     ======================================================================== */
+
+  .vertical-toolbar {
+    z-index: 1001;
+
+    .btn, .dropdown-menu {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+
+      .material-icons {
+        color: white;
+        font-size: 24px;
+      }
+
+      /* Active and Hover States */
+      &.active, &:hover {
+        background-color: rgba(255, 255, 255, 0.7) !important;
+        color: #212929 !important;
+        border-color: rgba(255, 255, 255, 0.5);
+        
+        .material-icons {
+          color: #212929 !important;
+        }
+      }
+    }
+
+    /* Style button groups as a single pill */
+    .btn-group-vertical {
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    /* Make standalone buttons circular */
+    #layer-selector-btn, #btn-close-window {
+      border-radius: 50%;
+    }
+
+    #btn-close-window {
+      background-color: rgba(161, 0, 16, 0.603);
+      &:hover {
+        background-color: hsl(354, 100%, 50%) !important;
+      }
+    }
+  }
+
+  /* Styles for the dropdown menu items */
+  .dropdown-item {
+    color: white;
+    &.active, &:hover {
+      background-color: rgba(255, 255, 255, 0.7) !important;
+      color: #212929 !important;
+    }
+  }
+
+  /* ========================================================================
+     3. Offcanvas Info Panel
+     ======================================================================== */
+
+  .offcanvas-backdrop.show {
+    opacity: 0;
+  }
+
+  .info-offcanvas {
+    .btn-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+    }
+    .offcanvas-body h5 {
+      margin-right: 2rem;
+    }
+    a {
+      color: white;
+      text-decoration: underline;
+      &:hover {
+        background-color: white;
+        color: #212929;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        padding: 0.1rem 0.25rem;
+      }
+    }
+  }
+
+  .offcanvas-bottom {
+    --bs-offcanvas-height: 30vh;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .offcanvas-end {
+    --bs-offcanvas-width: 30vw;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  /* ========================================================================
+     4. SVG and Map Element Styling
+     ======================================================================== */
+
+  /* General SVG rendering quality */
+  svg g, svg path, svg circle, svg rect, svg text, svg line {
+    shape-rendering: geometricPrecision;
+  }
+
+  /* Hide Leaflet's default rotate control */
+  .leaflet-control-rotate {
+    display: none !important;
+  }
+
+  /* Highlight effect for selected elements */
+  .highlight {
+    fill: #ff0000 !important;
+    stroke: #ffff00;
+    stroke-width: 5px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    &.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .highlight-direct {
+    fill: #ff0000 !important;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  /* Add pointer cursor to interactive icons */
+  .interactive-layer g[id^="ico"]:hover {
+    cursor: pointer;
+  }
+
+  /* Transition for fading layers */
+  .fade-transition {
+    transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+  }
+
+  /* Style for blurred/inactive floor basemaps */
+  .basemap-blurred {
+    filter: brightness(0.75);
+    transition: filter 0.5s ease-in-out;
+  }
 }
-
-        .plano-modal-styles .modal-dialog,
-        .plano-modal-styles .modal-content,
-        .plano-modal-styles .modal-body {
-            height: 100%;
-        }
-        .plano-modal-styles #map {
-            height: 100%;
-        }
-        .plano-modal-styles #map {
-            height: 100%;
-        }
-        .plano-modal-styles .vertical-toolbar {
-            z-index: 1001;
-        }
-        /* Frosted Glass Effect for Toolbar and Dropdown */
-        .plano-modal-styles .vertical-toolbar .btn,
-        .plano-modal-styles .dropdown-menu {
-            background-color: rgba(0, 0, 0, 0.6);
-            /* backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px); */
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-
-        .plano-modal-styles .vertical-toolbar .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            padding: 0;
-        }
-
-        /* Style the group as a single pill */
-        .plano-modal-styles .btn-group-vertical {
-            border-radius: 24px; /* half of button height */
-            overflow: hidden;    /* This is key to clip the inner button corners */
-        }
-
-        /* Make the standalone layers button round */
-        .plano-modal-styles #layer-selector-btn {
-            border-radius: 50%;
-        }
-
-        .plano-modal-styles .vertical-toolbar .btn .material-icons {
-            color: white;
-            font-size: 24px; /* Adjust icon size as needed */
-        }
-
-        /* Active and Hover States */
-        .plano-modal-styles .vertical-toolbar .btn.active,
-        .plano-modal-styles .vertical-toolbar .btn:hover,
-        .plano-modal-styles .dropdown-item.active,
-        .plano-modal-styles .dropdown-item:hover {
-            background-color: rgba(255, 255, 255, 0.7) !important;
-            color: #212529 !important; /* Dark text for contrast */
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .plano-modal-styles .vertical-toolbar .btn.active .material-icons,
-        .plano-modal-styles .vertical-toolbar .btn:hover .material-icons {
-            color: #212529 !important;
-        }
-
-        .plano-modal-styles #btn-close-window {
-            background-color: rgba(161, 0, 16, 0.603);
-        }
-
-        .plano-modal-styles #btn-close-window:hover {
-            background-color: hsl(354, 100%, 50%) !important;
-        }
-
-        .plano-modal-styles .dropdown-item {
-            color: white;
-        }
-
-        .plano-modal-styles #map-title h5, .plano-modal-styles #map-title small {
-            color: #212529; /* Dark text */
-            text-shadow: 
-                -1px -1px 0 #fff,  
-                 1px -1px 0 #fff,
-                -1px  1px 0 #fff,
-                 1px  1px 0 #fff,
-                 0 0 10px rgba(255, 255, 255, 0.8); /* White glow */
-        }
-
-        .plano-modal-styles .offcanvas-backdrop.show {
-            opacity: 0;
-        }
-        .plano-modal-styles .info-offcanvas .btn-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            z-index: 10;
-        }
-        .plano-modal-styles .info-offcanvas .offcanvas-body h5 {
-            margin-right: 2rem;
-        }
-        .plano-modal-styles .info-offcanvas a {
-            color: white;
-            text-decoration: underline;
-        }
-        .plano-modal-styles .info-offcanvas a:hover {
-            background-color: white;
-            color: #212529;
-            text-decoration: none;
-            border-radius: 0.25rem;
-            padding: 0.1rem 0.25rem;
-        }
-        .plano-modal-styles .offcanvas-bottom {
-            --bs-offcanvas-height: 30vh;
-            background-color: rgba(0, 0, 0, 0.7);
-            /* backdrop-filter: blur(10px); */
-        }
-        .plano-modal-styles .offcanvas-end {
-            --bs-offcanvas-width: 30vw;
-            background-color: rgba(0, 0, 0, 0.7);
-            /* backdrop-filter: blur(10px); */
-        }
-        .plano-modal-styles .leaflet-control-rotate {
-            display: none !important;
-        }
-        .plano-modal-styles .highlight {
-            fill: #ff0000 !important;
-            stroke: #ffff00;
-            stroke-width: 5px;
-            filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
-            transition: opacity 0.3s ease-in-out;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .plano-modal-styles .highlight.visible {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .plano-modal-styles .highlight-direct {
-            fill: #ff0000 !important;
-            transition: fill 0.3s ease-in-out;
-        }
-        .plano-modal-styles svg g, .plano-modal-styles svg path, .plano-modal-styles svg circle, .plano-modal-styles svg rect, .plano-modal-styles svg text, .plano-modal-styles svg line {
-            shape-rendering: geometricPrecision;
-        }
-        .plano-modal-styles .info-card-container {
-            position: absolute;
-            top: 70px; /* Below navbar */
-            right: 10px;
-            z-index: 1001;
-            width: 90%;
-            max-width: 350px;
-            pointer-events: none; /* Pass clicks through to the map */
-        }
-        .plano-modal-styles .info-card-container .card {
-            pointer-events: auto; /* Allow interaction with the card itself */
-        }
-
-        .plano-modal-styles .fade-transition {
-            transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
-        }
-
-        /* Basemap blur for Planta Alta */
-        .plano-modal-styles .basemap-blurred {
-            filter: brightness(0.75);
-            transition: filter 0.5s ease-in-out;
-        }
-
-        /* Centered on mobile */
-        @media (max-width: 767.98px) {
-            .plano-modal-styles .info-card-container {
-                right: 50%;
-                transform: translateX(50%);
-            }
-        }
-        /* .modal {
-        visibility: hidden;
-        display: block;
-        }
-
-        .modal[aria-hidden='false'] {
-        visibility: visible;
-        display: block;
-        } */
-
-        .plano-modal-styles .interactive-layer g[id^="ico"]:hover {
-            cursor: pointer;
-        }
