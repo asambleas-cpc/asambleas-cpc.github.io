@@ -4,7 +4,7 @@
         "elementToRotate": "#layBase",
         "transitionDuration": 500,
         "style": {
-            "inactiveFloor": "blur(6px) brightness(0.85)"
+            "inactiveFloor": "brightness(0.75)"
         }
     },
     
