@@ -21,8 +21,8 @@
         .plano-modal-styles .vertical-toolbar .btn,
         .plano-modal-styles .dropdown-menu {
             background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            /* backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); */
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
         }
@@ -115,12 +115,12 @@
         .plano-modal-styles .offcanvas-bottom {
             --bs-offcanvas-height: 30vh;
             background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
+            /* backdrop-filter: blur(10px); */
         }
         .plano-modal-styles .offcanvas-end {
             --bs-offcanvas-width: 30vw;
             background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
+            /* backdrop-filter: blur(10px); */
         }
         .plano-modal-styles .leaflet-control-rotate {
             display: none !important;
@@ -166,7 +166,7 @@
 
         /* Basemap blur for Planta Alta */
         .plano-modal-styles .basemap-blurred {
-            filter: blur(3px) brightness(0.85);
+            filter: brightness(0.75);
             transition: filter 0.5s ease-in-out;
         }
 
