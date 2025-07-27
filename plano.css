@@ -36,6 +36,17 @@
             padding: 0;
         }
 
+        /* Style the group as a single pill */
+        .plano-modal-styles .btn-group-vertical {
+            border-radius: 24px; /* half of button height */
+            overflow: hidden;    /* This is key to clip the inner button corners */
+        }
+
+        /* Make the standalone layers button round */
+        .plano-modal-styles #layer-selector-btn {
+            border-radius: 50%;
+        }
+
         .plano-modal-styles .vertical-toolbar .btn .material-icons {
             color: white;
             font-size: 24px; /* Adjust icon size as needed */

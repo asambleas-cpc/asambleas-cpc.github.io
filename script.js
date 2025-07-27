@@ -41,8 +41,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.2, // lower threshold makes triggering easier on mobile
-  rootMargin: '0px 0px -20% 0px' // trigger a bit earlier when scrolling up
+  threshold: 0.0 // Trigger when the element is fully out of view
 });
 
 

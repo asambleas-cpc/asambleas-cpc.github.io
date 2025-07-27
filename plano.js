@@ -485,4 +485,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // --- INITIALIZATION ---
     initializeMap();
+
+    // --- MODAL BUG FIX ---
+    // Handles the bug where the page becomes unresponsive after dismissing the modal.
+    const mapModalElement = document.getElementById('mapModal');
+    if (mapModalElement) {
+        mapModalElement.addEventListener('hidden.bs.modal', () => {
+            const body = document.body;
+            
+            // Force remove the 'modal-open' class from the body
+            body.classList.remove('modal-open');
+            
+            // Reset the body's overflow style
+            body.style.overflow = '';
+
+            // Find and remove any lingering modal backdrops
+            const backdrops = document.querySelectorAll('.modal-backdrop');
+            backdrops.forEach(backdrop => backdrop.remove());
+        });
+    }
 });
