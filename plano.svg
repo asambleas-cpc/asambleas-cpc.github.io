@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/css" href="svgfont.css"?><svg
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-   sodipodi:docname="plano.svg"
-   xml:space="preserve"
-   id="planoCpcAsambleas"
-   width="4300.93"
-   height="3901.05"
-   style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:geometricPrecision"
-   version="1.1"
-   viewBox="0 0 4300.93 3901.49"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+<?xml-stylesheet type="text/css" href="plano.css"?>
+<svg
+       inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+       sodipodi:docname="plano.svg"
+       xml:space="preserve"
+       id="planoCpcAsambleas"
+       width="4300.93"
+       height="3901.05"
+       style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:geometricPrecision"
+       version="1.1"
+       viewBox="0 0 4300.93 3901.49"
+       xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+       xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       xmlns="http://www.w3.org/2000/svg"
+       xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
    inkscape:current-layer="layEdificioPB"
    inkscape:cx="2090.2076"

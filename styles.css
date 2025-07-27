@@ -746,3 +746,193 @@ body:not(.js-enabled) #inicio > * {
   opacity: 1;
   transform: none;
 }
+
+
+
+/* ==========================================================================
+   Plano (Map Modal) Stylesheet
+   ========================================================================== */
+
+/**
+ * This entire stylesheet is scoped within the .plano-modal-styles class,
+ * which is applied to the modal container. This prevents any style leakage.
+ */
+.plano-modal-styles {
+
+  /* ========================================================================
+     1. Modal & Map Layout
+     ======================================================================== */
+  
+  .modal-dialog, .modal-content, .modal-body, #map {
+    height: 100%;
+  }
+
+  #map-title {
+    h5, small {
+      color: #212929;
+      text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff,
+         0 0 10px rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  /* ========================================================================
+     2. Vertical Toolbar
+     ======================================================================== */
+
+  .vertical-toolbar {
+    z-index: 1001;
+
+    .btn, .dropdown-menu {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+
+      .material-icons {
+        color: white;
+        font-size: 24px;
+      }
+
+      /* Active and Hover States */
+      &.active, &:hover {
+        background-color: rgba(255, 255, 255, 0.7) !important;
+        color: #212929 !important;
+        border-color: rgba(255, 255, 255, 0.5);
+        
+        .material-icons {
+          color: #212929 !important;
+        }
+      }
+    }
+
+    /* Style button groups as a single pill */
+    .btn-group-vertical {
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    /* Make standalone buttons circular */
+    #layer-selector-btn, #btn-close-window {
+      border-radius: 50%;
+    }
+
+    #btn-close-window {
+      background-color: rgba(161, 0, 16, 0.603);
+      &:hover {
+        background-color: hsl(354, 100%, 50%) !important;
+      }
+    }
+  }
+
+  /* Styles for the dropdown menu items */
+  .dropdown-item {
+    color: white;
+    &.active, &:hover {
+      background-color: rgba(255, 255, 255, 0.7) !important;
+      color: #212929 !important;
+    }
+  }
+
+  /* ========================================================================
+     3. Offcanvas Info Panel
+     ======================================================================== */
+
+  .offcanvas-backdrop.show {
+    opacity: 0;
+  }
+
+  .info-offcanvas {
+    .btn-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+    }
+    .offcanvas-body h5 {
+      margin-right: 2rem;
+    }
+    a {
+      color: white;
+      text-decoration: underline;
+      &:hover {
+        background-color: white;
+        color: #212929;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        padding: 0.1rem 0.25rem;
+      }
+    }
+  }
+
+  .offcanvas-bottom {
+    --bs-offcanvas-height: 30vh;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .offcanvas-end {
+    --bs-offcanvas-width: 30vw;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  /* ========================================================================
+     4. SVG and Map Element Styling
+     ======================================================================== */
+
+  /* General SVG rendering quality */
+  svg g, svg path, svg circle, svg rect, svg text, svg line {
+    shape-rendering: geometricPrecision;
+  }
+
+  /* Hide Leaflet's default rotate control */
+  .leaflet-control-rotate {
+    display: none !important;
+  }
+
+  /* Highlight effect for selected elements */
+  .highlight {
+    fill: #ff0000 !important;
+    stroke: #ffff00;
+    stroke-width: 5px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    &.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .highlight-direct {
+    fill: #ff0000 !important;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  /* Add pointer cursor to interactive icons */
+  .interactive-layer g[id^="ico"]:hover {
+    cursor: pointer;
+  }
+
+  /* Transition for fading layers */
+  .fade-transition {
+    transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+  }
+
+  /* Style for blurred/inactive floor basemaps */
+  .basemap-blurred {
+    filter: brightness(0.75);
+    transition: filter 0.5s ease-in-out;
+  }
+}
