@@ -15,6 +15,9 @@
   --alojamiento-color: hsl(30, 98%, 55%);
   --otros-color: hsl(270, 50%, 45%);
   --aviso-color: rgb(199, 0, 0);
+  --info-color: hsl(134, 61%, 40%);
+  --warning-color: hsl(45, 100%, 51%);
+  --alert-color: hsl(0, 79%, 63%);
 
   /* Color Variant Generation */
   --bg-lighten: 90%;
@@ -25,6 +28,9 @@
   --alojamiento-bg: hsl(from var(--alojamiento-bg) h s var(--bg-lighten));
   --otros-bg: hsl(from var(--otros-color) h s var(--bg-lighten));
   --aviso-bg: hsl(from var(--aviso-color) h s var(--bg-lighten));
+  --info-bg: hsl(from var(--info-color) h s var(--bg-lighten));
+  --warning-bg: hsl(from var(--warning-color) h s var(--bg-lighten));
+  --alert-bg: hsl(from var(--alert-color) h s var(--bg-lighten));
 }
 
 html {
@@ -219,18 +225,40 @@ body::before {
   overflow: hidden; /* Ensures the child's corners are clipped */
 }
 .card-themed-icon .icon-half {
-  background-color: var(--section-theme-color);
+  background-color: var(--card-theme-color, var(--section-theme-color));
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  flex-direction: column; /* Stack icons vertically */
+  align-items: center;      /* Center icons horizontally */
+  justify-content: flex-start; /* Align to the top */
+  padding-top: 1rem;
+  gap: 0.5rem;              /* Add space between multiple icons */
   width: 5rem;
   flex-shrink: 0;
 }
 
+.card-themed-icon .card-body {
+  background-color: var(--card-theme-bg-color, hsl(from var(--section-theme-color) h s var(--card-bg-lighten)));
+}
+
 .card-themed-icon .icon-half .material-symbols-outlined {
   font-size: 3.75rem; /* Approx 75% of the 5rem container */
+}
+
+/*
+ * Card type modifiers for info, warning, and alert messages.
+ */
+.card-info {
+  --card-theme-color: var(--info-color);
+  --card-theme-bg-color: var(--info-bg);
+}
+.card-warning {
+  --card-theme-color: var(--warning-color);
+  --card-theme-bg-color: var(--warning-bg);
+}
+.card-alert {
+  --card-theme-color: var(--alert-color);
+  --card-theme-bg-color: var(--alert-bg);
 }
 
 /* Generic header for sections */
@@ -394,6 +422,7 @@ body::before {
 :root {
   /* Variant modifiers */
   --bg-lighten: 90%;
+  --card-bg-lighten: 95%;
   --icon-faint-sat-mult: 0.3;
   --icon-faint-lighten: 60%;
 
@@ -429,7 +458,13 @@ body::before {
   --otros-icon-faint: hsl(from var(--otros-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
   --aviso-color: rgb(199, 0, 0);
+  --info-color: hsl(134, 61%, 40%);
+  --warning-color: hsl(45, 100%, 51%);
+  --alert-color: hsl(0, 79%, 63%);
   --aviso-bg: hsl(from var(--aviso-color) h s var(--bg-lighten));
+  --info-bg: hsl(from var(--info-color) h s var(--bg-lighten));
+  --warning-bg: hsl(from var(--warning-color) h s var(--bg-lighten));
+  --alert-bg: hsl(from var(--alert-color) h s var(--bg-lighten));
   --aviso-comp: hsl(from var(--aviso-color) calc(h + 180) s l);
   --aviso-icon-faint: hsl(from var(--aviso-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 }
@@ -626,18 +661,40 @@ body::before {
   overflow: hidden; /* Ensures the child's corners are clipped */
 }
 .card-themed-icon .icon-half {
-  background-color: var(--section-theme-color);
+  background-color: var(--card-theme-color, var(--section-theme-color));
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  flex-direction: column; /* Stack icons vertically */
+  align-items: center;      /* Center icons horizontally */
+  justify-content: flex-start; /* Align to the top */
+  padding-top: 1rem;
+  gap: 0.5rem;              /* Add space between multiple icons */
   width: 5rem;
   flex-shrink: 0;
 }
 
+.card-themed-icon .card-body {
+  background-color: var(--card-theme-bg-color, hsl(from var(--section-theme-color) h s var(--card-bg-lighten)));
+}
+
 .card-themed-icon .icon-half .material-symbols-outlined {
   font-size: 3.75rem; /* Approx 75% of the 5rem container */
+}
+
+/*
+ * Card type modifiers for info, warning, and alert messages.
+ */
+.card-info {
+  --card-theme-color: var(--info-color);
+  --card-theme-bg-color: var(--info-bg);
+}
+.card-warning {
+  --card-theme-color: var(--warning-color);
+  --card-theme-bg-color: var(--warning-bg);
+}
+.card-alert {
+  --card-theme-color: var(--alert-color);
+  --card-theme-bg-color: var(--alert-bg);
 }
 
 /* Generic header for sections */
