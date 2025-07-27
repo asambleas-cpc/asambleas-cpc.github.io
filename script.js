@@ -267,7 +267,7 @@ document.querySelectorAll('[data-bs-toggle="lightbox"]').forEach(el => {
 
 // Back to Top Button Logic
 const backToTopBtn = document.getElementById('backToTopBtn');
-const inicioSection = document.getElementById('inicio');
+const inicioSection = document.getElementById('intro');
 
 const btnObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -278,7 +278,7 @@ const btnObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.01 // Triggers when 10% of the section is out of view
+  threshold: 0.1 // Triggers when 10% of the section is out of view
 });
 
 if (inicioSection) {
