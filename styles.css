@@ -331,6 +331,14 @@ body::before {
     &.scroll-left { left: -10px; }
     &.scroll-right { right: -10px; }
   }
+  .card-scroller {
+    scroll-snap-type: x mandatory;
+    gap: 1rem; /* Explicitly add space between cards */
+  }
+
+  .card-scroller > .card {
+    scroll-snap-align: start;
+  }
 }
 
 /* Floating action button to return to the top */
@@ -422,7 +430,7 @@ body::before {
 :root {
   /* Variant modifiers */
   --bg-lighten: 90%;
-  --card-bg-lighten: 95%;
+  --card-bg-lighten: 97%;
   --icon-faint-sat-mult: 0.3;
   --icon-faint-lighten: 60%;
 
@@ -766,6 +774,14 @@ body::before {
     }
     &.scroll-left { left: -10px; }
     &.scroll-right { right: -10px; }
+  }
+  .card-scroller {
+    scroll-snap-type: x mandatory;
+    gap: 1rem; /* Explicitly add space between cards */
+  }
+
+  .card-scroller > .card {
+    scroll-snap-align: start;
   }
 }
 
