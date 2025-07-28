@@ -22,11 +22,6 @@
   /* Color Variant Generation */
   --bg-lighten: 90%;
   --inicio-bg: hsl(from var(--inicio-color) h s var(--bg-lighten));
-  --transporte-bg: hsl(from var(--transporte-color) h s var(--bg-lighten));
-  --auditorios-bg: hsl(from var(--auditorios-color) h s var(--bg-lighten));
-  --alimentos-bg: hsl(from var(--alimentos-color) h s var(--bg-lighten));
-  --alojamiento-bg: hsl(from var(--alojamiento-bg) h s var(--bg-lighten));
-  --otros-bg: hsl(from var(--otros-color) h s var(--bg-lighten));
   --aviso-bg: hsl(from var(--aviso-color) h s var(--bg-lighten));
   --info-bg: hsl(from var(--info-color) h s var(--bg-lighten));
   --warning-bg: hsl(from var(--warning-color) h s var(--bg-lighten));
@@ -108,23 +103,33 @@ body::before {
   }
   &.section-transporte {
     --section-theme-color: var(--transporte-color);
-    --section-theme-bg-color: var(--transporte-bg);
+    --section-theme-bg-color: hsl(from var(--transporte-color) h s var(--bg-lighten));
+    --section-theme-comp: hsl(from var(--transporte-color) calc(h + 180) s l);
+    --section-theme-bg-comp: hsl(from var(--transporte-color) calc(h + 180) s var(--bg-lighten));
   }
   &.section-auditorios {
     --section-theme-color: var(--auditorios-color);
-    --section-theme-bg-color: var(--auditorios-bg);
+    --section-theme-bg-color: hsl(from var(--auditorios-color) h s var(--bg-lighten));
+    --section-theme-comp: hsl(from var(--auditorios-color) calc(h + 180) s l);
+    --section-theme-bg-comp: hsl(from var(--auditorios-color) calc(h + 180) s var(--bg-lighten));
   }
   &.section-alimentos {
     --section-theme-color: var(--alimentos-color);
-    --section-theme-bg-color: var(--alimentos-bg);
+    --section-theme-bg-color: hsl(from var(--alimentos-color) h s var(--bg-lighten));
+    --section-theme-comp: hsl(from var(--alimentos-color) calc(h + 180) s l);
+    --section-theme-bg-comp: hsl(from var(--alimentos-color) calc(h + 180) s var(--bg-lighten));
   }
   &.section-alojamiento {
     --section-theme-color: var(--alojamiento-color);
-    --section-theme-bg-color: var(--alojamiento-bg);
+    --section-theme-bg-color: hsl(from var(--alojamiento-color) h s var(--bg-lighten));
+    --section-theme-comp: hsl(from var(--alojamiento-color) calc(h + 180) s l);
+    --section-theme-bg-comp: hsl(from var(--alojamiento-color) calc(h + 180) s var(--bg-lighten));
   }
   &.section-otros {
     --section-theme-color: var(--otros-color);
-    --section-theme-bg-color: var(--otros-bg);
+    --section-theme-bg-color: hsl(from var(--otros-color) h s var(--bg-lighten));
+    --section-theme-comp: hsl(from var(--otros-color) calc(h + 180) s l);
+    --section-theme-bg-comp: hsl(from var(--otros-color) calc(h + 180) s var(--bg-lighten));
   }
 
   /* Special case for the #inicio section layout */
@@ -260,6 +265,11 @@ body::before {
   --card-theme-color: var(--alert-color);
   --card-theme-bg-color: var(--alert-bg);
 }
+.card-comp {
+  --card-theme-color: var(--section-theme-comp);
+  --card-theme-bg-color: var(--section-bg-comp);
+}
+
 
 /* Generic header for sections */
 .section-header {
@@ -467,31 +477,37 @@ body::before {
   --inicio-color: hsl(210, 10%, 50%);
   --inicio-bg: hsl(from var(--inicio-color) h s 95%);
   --inicio-comp: hsl(from var(--inicio-color) calc(h + 180) s l);
+  --inicio-comp-bg: hsl(from var(--inicio-comp) h s var(--bg-lighten));
   --inicio-icon-faint: hsl(from var(--inicio-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
   --transporte-color: hsl(134, 61%, 40%);
   --transporte-bg: hsl(from var(--transporte-color) h s var(--bg-lighten));
   --transporte-comp: hsl(from var(--transporte-color) calc(h + 180) s l);
+  --transporte-comp-bg: hsl(from var(--transporte-comp) h s var(--bg-lighten));
   --transporte-icon-faint: hsl(from var(--transporte-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
   --auditorios-color: hsl(188, 60%, 40%);
   --auditorios-bg: hsl(from var(--auditorios-color) h s var(--bg-lighten));
   --auditorios-comp: hsl(from var(--auditorios-color) calc(h + 180) s l);
+  --auditorios-comp-bg: hsl(from var(--auditorios-comp) h s var(--bg-lighten));
   --auditorios-icon-faint: hsl(from var(--auditorios-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
   --alimentos-color: hsl(332, 47%, 37%);
   --alimentos-bg: hsl(from var(--alimentos-color) h s var(--bg-lighten));
   --alimentos-comp: hsl(from var(--alimentos-color) calc(h + 180) s l);
+  --alimentos-comp-bg: hsl(from var(--alimentos-comp) h s var(--bg-lighten));
   --alimentos-icon-faint: hsl(from var(--alimentos-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
   --alojamiento-color: hsl(30, 98%, 55%);
   --alojamiento-bg: hsl(from var(--alojamiento-color) h s var(--bg-lighten));
   --alojamiento-comp: hsl(from var(--alojamiento-color) calc(h + 180) s l);
+  --alojamiento-comp-bg: hsl(from var(--alojamiento-comp) h s var(--bg-lighten));
   --alojamiento-icon-faint: hsl(from var(--alojamiento-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
   --otros-color: hsl(270, 50%, 45%);
   --otros-bg: hsl(from var(--otros-color) h s var(--bg-lighten));
   --otros-comp: hsl(from var(--otros-color) calc(h + 180) s l);
+  --otros-comp-bg: hsl(from var(--otros-comp) h s var(--bg-lighten));
   --otros-icon-faint: hsl(from var(--otros-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
   --aviso-color: rgb(199, 0, 0);
