@@ -271,6 +271,12 @@ body::before {
 }
 
 
+.drawing-highlight { display: block;fill: white; }
+.drawing-objects { display: inline;fill: black }
+.drawing-background { display: inline;fill: gray }
+
+
+
 /* Generic header for sections */
 .section-header {
   display: flex;

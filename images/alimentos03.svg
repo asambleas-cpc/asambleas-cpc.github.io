@@ -1,54 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: visioncortex VTracer -->
-
-<svg
-   id="svg"
-   version="1.1"
-   style="display: block;"
-   viewBox="0 0 1024 1024"
-   sodipodi:docname="paso3.svg"
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview8"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     inkscape:zoom="0.55726091"
-     inkscape:cx="394.78814"
-     inkscape:cy="314.93327"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1272"
-     inkscape:window-y="375"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg" />
-  <style
-     id="style1">.destacado { display: block;fill: #cccccc; }
+<svg xmlns="http://www.w3.org/2000/svg" id="svg" style="display: block;" version="1.1" viewBox="0 0 1024 1024">
+  <style id="style1">
+    .destacado { display: block;fill: #cccccc; }
 .formas { display: inline;fill: #555555; }
 .fondo { display: inline;fill: #e9e9e9; }
-</style>
-  <defs
-     id="defs8" />
-  <path
-     d="M0 0 C337.92 0 675.84 0 1024 0 C1024 337.92 1024 675.84 1024 1024 C686.08 1024 348.16 1024 0 1024 C0 686.08 0 348.16 0 0 Z "
-     style=""
-     id="fondo"
-     class="fondo" />
-  <path
-     id="ticket"
-     class="destacado"
-     d="M 680.47386,80.34169 234.5922,189.94356 304.80726,475.60709 750.6962,366.01249 Z"
-     style="display:block;fill:#cccccc;stroke-width:7.27768" />
-  <path
-     id="mano"
-     d="m 517.77734,315.76367 c -44.74901,0.19327 -81.11999,38.16223 -91.47169,79.78306 -26.44498,73.07085 -31.27621,154.79111 -77.26054,219.90747 -35.34619,59.33809 -88.94763,108.88441 -106.31478,177.70301 -10.20369,37.82558 -21.30068,76.25043 -26.48358,114.67727 -20.85796,11.51199 -55.42926,-2.11572 -63.12749,32.98804 -14.18999,25.61555 -46.37696,62.95448 -46.38977,83.20398 127.26629,0.354 254.63269,1.642 381.81882,1.0287 31.84024,-2.5029 51.51606,-33.10973 77.80548,-48.61135 66.57612,-51.2498 135.54117,-99.57364 201.81981,-151.03138 36.27439,-30.52419 29.94088,-79.47585 18.88909,-119.98338 -12.53273,-68.28014 -17.88786,-137.81308 -31.4444,-205.82157 -9.36827,-40.83375 -52.66768,-56.47836 -81.08037,-82.01127 -24.6039,-30.58212 -60.39039,-27.38797 -92.84559,-13.16808 -19.43989,-20.03766 -3.43418,-78.8859 -49.02026,-85.87922 l -7.40333,-1.93586 z M 552,481 c 15.66381,10.29678 58.26333,35.71748 15.77521,28.97077 C 534.25019,516.07811 544.52071,506.19596 552,481 Z m 2.97656,128.74609 c 13.72825,0.99175 10.04013,31.90525 -6.21354,13.84499 -10.44104,-5.26379 -44.85156,-15.60648 -14.61774,-13.17842 6.95029,-0.0372 13.88114,-0.6353 20.83128,-0.66657 z"
-     class="formas" />
+  </style>
+  <path id="fondo" d="M0 0h1024v1024H0V0Z" class="drawing-background"/>/>
+  <path id="ticket" d="M680 80 235 190l70 286 446-110Z" class="drawing-highlight"/>
+  <path id="mano" d="M518 316c-45 0-81 38-92 80-26 73-31 154-77 219-35 60-89 109-106 178-10 38-22 76-27 115-21 11-55-2-63 33-14 25-46 63-46 83 127 0 254 2 382 1 31-2 51-33 77-49 67-51 136-99 202-151 36-30 30-79 19-120-12-68-18-137-31-205-10-41-53-57-81-82-25-31-61-28-93-14-20-20-4-78-49-85l-8-2zm34 165c16 10 58 36 16 29-34 6-23-4-16-29Zm3 129c14 1 10 32-6 14-11-6-45-16-15-14h21z" class="drawing-objects"/>
 </svg>
