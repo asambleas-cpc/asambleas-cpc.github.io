@@ -55,7 +55,7 @@
           <div class="card-body">
             <h5 class="card-title">ESTO ES UN BORRADOR - NO DIFUNDIR</h5>
             <p class="card-text">Si recibiste este enlace, por favor no lo difundas ni tengas en cuenta la información
-              que contiene. Difundirlo pudiera
+              que contiene. Difundirlo podría
               generar confusión. Este sitio es un borrador y no debe ser compartido públicamente.
             </p>
 
@@ -122,7 +122,7 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="card card-static h-100" id="cardConozcaCPC">
+            <div class="card card-static" id="cardConozcaCPC">
               <div class="card-body">
                 <h5 class="card-title">Cómo es el <em>Centro Provincial de Convenciones</em></h5>
                 <p class="card-text">
@@ -132,7 +132,8 @@
                   <li>Galería cubierta y patio exterior con acceso al parque.</li>
                   <li>Servicios y baños modernos.</li>
                 </ul>
-                </p>
+                </p>                <p class="card-text mt-3"><button class="btn btn-md btn-primary" onclick="plano()"><i
+                      class="material-symbols-outlined">map</i> Plano del predio</button></p>
                 <h6>Galería de fotos</h6>
                 <div class="scroll-wrapper">
                   <button class="scroll-btn scroll-left material-symbols-outlined">chevron_left</button>
@@ -178,10 +179,33 @@
                   </div>
                   <button class="scroll-btn scroll-right material-symbols-outlined">chevron_right</button>
                 </div>
-                <p class="card-text mt-3"><button class="btn btn-sm btn-primary" onclick="plano()"><i
-                      class="material-symbols-outlined">map</i> Plano del predio</button></p>
+
               </div>
             </div>
+            <div class="card card-static mt-3 bg-success-subtle" id="cardAntesDeAsistir">
+  <div class="card-body">
+    <h5 class="card-title">Antes de asistir</h5>
+    <ul class="list-group bg-success-subtle">
+  <li class="list-group-item bg-success-subtle">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+    <label class="form-check-label" for="firstCheckbox">Cononcer <a href="#transporte">cómo llegar y dónde estacionar.</a></label>
+  </li>
+  <li class="list-group-item bg-success-subtle">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+    <label class="form-check-label" for="secondCheckbox">Preparar los <a href="#alimentos">alimentos.</a></label>
+  </li>
+  <li class="list-group-item bg-success-subtle">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Saber <a href="#auditorios">a qué auditorio ir.</a></label>
+  </li>
+    <li class="list-group-item bg-success-subtle">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Conocer las <a href="#h3Emergencias">instrucciones de emergencia.</a></label>
+  </li>
+</ul>
+
+  </div>
+</div>
           </div>
         </div>
 
@@ -670,7 +694,7 @@
                 </svg>
                 <div class="card-body">
                   <h5 class="card-title">1. Poner los alimentos en una bolsa</h5>
-                  <p class="card-text">Llévelos en una bolsa de tela o friselina.</p>
+                  <p class="card-text">Preferentemente una bolsa de tela o friselina.</p>
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem;">
@@ -680,6 +704,10 @@
                 <div class="card-body">
                   <h5 class="card-title">2. Llevarla al puesto de guarda</h5>
                   <p class="card-text">Hay un puesto de guarda de alimentos en cada piso del predio.</p>
+                    <button class="btn btn-sm btn-primary" onclick="plano(0,'departamentos','GuardaAlimentos')"><i
+                    class="material-symbols-outlined">map</i> Planta baja</button>                <button class="btn btn-sm btn-primary" onclick="plano(1,'departamentos','GuardaAlimentos')"><i
+                    class="material-symbols-outlined">map</i> Planta alta</button>
+                  
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem;">
@@ -688,7 +716,7 @@
                 </svg>
                 <div class="card-body">
                   <h5 class="card-title">3. Conservar el ticket</h5>
-                  <p class="card-text">Le servirá para retirar su bolsa en el intermedio.</p>
+                  <p class="card-text">Sirve para retirar la bolsa en el intermedio.</p>
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem;">
@@ -697,7 +725,7 @@
                 </svg>
                 <div class="card-body">
                   <h5 class="card-title">4. Retirar la bolsa en el intermedio</h5>
-                  <p class="card-text">Áreas silenciosas para descanso.</p>
+                  <p class="card-text">Los hermanos van a organizar las filas para evitar demoras.</p>
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem">
@@ -706,7 +734,7 @@
                 </svg>
                 <div class="card-body">
                   <h5 class="card-title">5. Volver a guardarla</h5>
-                  <p class="card-text">Si desea, puede voler a guardar su bolsa hasta que termine el programa.</p>
+                  <p class="card-text">Se puede volver a guardar la bolsa hasta que termine el programa.</p>
                 </div>
               </div>
             </div>
