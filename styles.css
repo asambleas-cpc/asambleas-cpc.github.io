@@ -20,7 +20,7 @@
   --inicio-comp-bg: hsl(from var(--inicio-comp) h s var(--bg-lighten));
   --inicio-icon-faint: hsl(from var(--inicio-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
-  --transporte-color: hsl(134, 61%, 40%);
+  --transporte-color: hsl(332, 47%, 37%);
   --transporte-bg: hsl(from var(--transporte-color) h s var(--bg-lighten));
   --transporte-comp: hsl(from var(--transporte-color) calc(h + 180) s l);
   --transporte-comp-bg: hsl(from var(--transporte-comp) h s var(--bg-lighten));
@@ -32,13 +32,13 @@
   --auditorios-comp-bg: hsl(from var(--auditorios-comp) h s var(--bg-lighten));
   --auditorios-icon-faint: hsl(from var(--auditorios-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
-  --alimentos-color: hsl(332, 47%, 37%);
+  --alimentos-color: hsl(30, 100%, 42%);
   --alimentos-bg: hsl(from var(--alimentos-color) h s var(--bg-lighten));
-  --alimentos-comp: hsl(from var(--alimentos-color) calc(h + 180) s l);
+  --alimentos-comp: hsl(from var(--alimentos-color) calc(h + 180) 50% l);
   --alimentos-comp-bg: hsl(from var(--alimentos-comp) h s var(--bg-lighten));
   --alimentos-icon-faint: hsl(from var(--alimentos-color) h calc(s * var(--icon-faint-sat-mult)) calc(l + var(--icon-faint-lighten)));
 
-  --alojamiento-color: hsl(30, 98%, 55%);
+  --alojamiento-color: hsl(134, 61%, 40%);
   --alojamiento-bg: hsl(from var(--alojamiento-color) h s var(--bg-lighten));
   --alojamiento-comp: hsl(from var(--alojamiento-color) calc(h + 180) s l);
   --alojamiento-comp-bg: hsl(from var(--alojamiento-comp) h s var(--bg-lighten));
@@ -240,7 +240,7 @@ body::before {
   .accordion-button:not(.collapsed) {
     background-color: var(--section-theme-color);
     color: white;
-  }
+     }
 
   .accordion-button:not(.collapsed) .material-symbols-outlined {
     color: white;
@@ -408,15 +408,15 @@ body::before {
 
 
 .drawing-background {
-  fill: hsl(from var(--section-theme-color) h s 80%);
+  fill: hsl(from var(--section-theme-comp) h s 80%);
 }
 
 .drawing-objects {
-  fill: var(--section-theme-color);
+  fill: hsl(from var(--section-theme-comp) h s 30%);
 }
 
 .drawing-highlight {
-  fill: hsl(from var(--section-theme-color) h s 100%);
+  fill: hsl(from var(--section-theme-comp) h s 100%);
 }
 
 
