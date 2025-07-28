@@ -270,6 +270,35 @@ body::before {
   margin-bottom: 1.5rem;
 }
 
+/* --- Accordion Custom Styles --- */
+.accordion-button {
+  font-size: 1.25rem; /* h5 size */
+  font-weight: 500;
+  padding: 1rem 1.25rem;
+}
+
+/* Default state: Icon is theme color, text is default color */
+.snap-section .accordion-button {
+  color: inherit; /* Inherit default text color */
+}
+.snap-section .accordion-button .material-symbols-outlined {
+  color: var(--section-theme-color);
+}
+
+/* Expanded state: Background is theme color, all content is white */
+.snap-section .accordion-button:not(.collapsed) {
+  background-color: var(--section-theme-color);
+  color: white;
+}
+.snap-section .accordion-button:not(.collapsed) .material-symbols-outlined {
+  color: white;
+}
+
+.snap-section .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem hsla(from var(--section-theme-color) h s l / 0.25);
+  border-color: var(--section-theme-color);
+}
+
 /* Large decorative icon in the background of each section */
 .section-icon {
   position: absolute;
@@ -712,6 +741,35 @@ body::before {
   gap: 0.5rem;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+/* --- Accordion Custom Styles --- */
+.accordion-button {
+  font-size: 1.25rem; /* h5 size */
+  font-weight: 500;
+  padding: 1rem 1.25rem;
+}
+
+/* Default state: Icon is theme color, text is default color */
+.snap-section .accordion-button {
+  color: inherit; /* Inherit default text color */
+}
+.snap-section .accordion-button .material-symbols-outlined {
+  color: var(--section-theme-color);
+}
+
+/* Expanded state: Background is theme color, all content is white */
+.snap-section .accordion-button:not(.collapsed) {
+  background-color: var(--section-theme-color);
+  color: white;
+}
+.snap-section .accordion-button:not(.collapsed) .material-symbols-outlined {
+  color: white;
+}
+
+.snap-section .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem hsla(from var(--section-theme-color) h s l / 0.25);
+  border-color: var(--section-theme-color);
 }
 
 /* Large decorative icon in the background of each section */

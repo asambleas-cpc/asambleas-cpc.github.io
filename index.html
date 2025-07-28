@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=1.1.4" />
+  <link rel="stylesheet" href="styles.css?v=1.1.5" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -220,7 +220,7 @@
         <div class="accordion" id="transporteAccordion">
           <!-- Auto Particular -->
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingAuto">
+            <h5 class="accordion-header" id="headingAuto">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseAuto" aria-expanded="false" aria-controls="collapseAuto">
                 <i class="material-symbols-outlined me-2">directions_car</i> Auto particular
@@ -255,7 +255,7 @@
 
           <!-- Ómnibus interurbano -->
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingInterurbano">
+            <h5 class="accordion-header" id="headingInterurbano">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseInterurbano" aria-expanded="false" aria-controls="collapseInterurbano">
                 <i class="material-symbols-outlined me-2">directions_bus</i> Ómnibus interurbanos
@@ -285,7 +285,7 @@
 
           <!-- Colectivo urbano -->
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingUrbano">
+            <h5 class="accordion-header" id="headingUrbano">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseUrbano" aria-expanded="false" aria-controls="collapseUrbano">
                 <i class="material-symbols-outlined me-2">directions_bus</i> Colectivos urbanos
@@ -306,7 +306,7 @@
 
           <!-- Taxis y Apps -->
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTaxi">
+            <h5 class="accordion-header" id="headingTaxi">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseTaxi" aria-expanded="false" aria-controls="collapseTaxi">
                 <i class="material-symbols-outlined me-2">local_taxi</i> Taxis, remises y apps
@@ -322,7 +322,7 @@
 
           <!-- Transportes contratados -->
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingShuttle">
+            <h5 class="accordion-header" id="headingShuttle">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseShuttle" aria-expanded="false" aria-controls="collapseShuttle">
                 <i class="material-symbols-outlined me-2">airport_shuttle</i> Transportes contratados
@@ -356,32 +356,40 @@
         <h3>Auditorios</h3>
         <p>El CPC tiene dos auditorios. Es importante que nos ubiquemos en el auditorio que nos corresponde, porque
           ayuda a que no se pierda tiempo valioso ante una emergencia o si fuera necesario evacuar el local.</p>
-        <div id="cardsAuditorios" class="d-flex flex-wrap gap-3 mb-3">
-          <div class="card" style="width: 18rem;">
-            <img src="placeholder.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Auditorio principal</h5>
+                        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">groups</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Auditorio principal</h5>
               <p class="card-text">Para el <strong>público en general.</strong></p>
               <p class="card-text"></p>Se accede mediante las escaleras a la izquierda de la
               entrada.</p>
               <button class="btn btn-sm btn-primary" onclick="plano(1,'departamentos','AuditorioPrincipal')"><i
                   class="material-symbols-outlined">map</i> Ver en el plano</button>
+              </div>
             </div>
           </div>
-          <div class="card" style="width: 18rem;">
-            <img src="placeholder.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Auditorio auxiliar</h5>
+                    <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">assist_walker</i><i class="material-symbols-outlined">pregnancy</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Auditorio auxiliar</h5>
               <p class="card-text">Para <strong>personas mayores, con dificultades, embarazadas o padres con niños
                   pequeños.</strong> </p>
               <p class="card-text"></p>Se accede por el
               pasillo de la derecha de la entrada. </p>
               <button class="btn btn-sm btn-primary" onclick="plano(0,'departamentos','AuditorioAuxiliar')"><i
                   class="material-symbols-outlined">map</i> Ver en el plano</button>
-
+              </div>
             </div>
           </div>
-        </div>
+                </div>
+
         <div class="row d-none">
           <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="card">
@@ -426,81 +434,82 @@
 
 
         <h3>Departamentos</h3>
-
-        <div class="row">
-          <div class="col-12 col-lg-6 mb-3">
-            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
-              <div class="icon-half">
-                <i class="material-symbols-outlined">checked_bag_question</i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Guardarropa y objetos perdidos</h5>
-                <p class="card-text">Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')"
-                    class="plano-link">en planta baja, junto con Guarda de alimentos</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 mb-3">
-            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardGuardaAlimentos">
-              <div class="icon-half">
-                <i class="material-symbols-outlined">shopping_bag</i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Guarda de alimentos</h5>
-                <p class="card-text">Es donde se guardan los alimentos durante el programa. Hay un puesto <a
-                    href="javascript:plano(0,'departamentos','GuardaAlimentos')" class="plano-link">en planta baja</a> y
-                  otro <a href="javascript:plano(1,'departamentos','GuardaAlimentos')" class="plano-link">en planta
-                    alta</a>.</p>
+        <div class="accordion" id="departamentosAccordion">
+          <!-- Guardarropa y objetos perdidos -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingObjetosPerdidos">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObjetosPerdidos" aria-expanded="false" aria-controls="collapseObjetosPerdidos">
+                <i class="material-symbols-outlined me-2">checked_bag_question</i> Guardarropa y objetos perdidos
+              </button>
+            </h2>
+            <div id="collapseObjetosPerdidos" class="accordion-collapse collapse" aria-labelledby="headingObjetosPerdidos" data-bs-parent="#departamentosAccordion">
+              <div class="accordion-body">
+                <p>Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en planta baja, junto con Guarda de alimentos</a>.</p>
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 mb-3">
-            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardPrimerosAuxilios">
-              <div class="icon-half">
-                <i class="material-symbols-outlined">health_cross</i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Primeros auxilios</h5>
-                <p class="card-text">Se encuetra <a href="javascript:plano(0,'departamentos','PrimerosAuxilios')"
-                    class="plano-link">en planta baja</a> y hay una guardia <a
-                    href="javascript:plano(1,'departamentos','PrimerosAuxilios')" class="plano-link">en el auditorio de
-                    planta alta</a>.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 mb-3">
-            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardLactantes">
-              <div class="icon-half">
-                <i class="material-symbols-outlined">breastfeeding</i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Lactantes</h5>
-                <p class="card-text">Se encuentra <a href="javascript:plano(0,'departamentos','Lactantes')"
-                    class="plano-link">en planta baja</a>.</p>
+          <!-- Guarda de alimentos -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingGuardaAlimentos">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGuardaAlimentos" aria-expanded="false" aria-controls="collapseGuardaAlimentos">
+                <i class="material-symbols-outlined me-2">shopping_bag</i> Guarda de alimentos
+              </button>
+            </h2>
+            <div id="collapseGuardaAlimentos" class="accordion-collapse collapse" aria-labelledby="headingGuardaAlimentos" data-bs-parent="#departamentosAccordion">
+              <div class="accordion-body">
+                <p>Es donde se guardan los alimentos durante el programa. Hay un puesto <a href="javascript:plano(0,'departamentos','GuardaAlimentos')" class="plano-link">en planta baja</a> y otro <a href="javascript:plano(1,'departamentos','GuardaAlimentos')" class="plano-link">en planta alta</a>.</p>
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 mb-3">
-            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardInformacion">
-              <div class="icon-half">
-                <i class="material-symbols-outlined">info</i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Información y servicio voluntario</h5>
-                <p class="card-text">Se encuentra <a href="javascript:plano(0,'departamentos','Informacion')"
-                    class="plano-link">en el mostrador de planta baja</a>.</p>
+          <!-- Primeros auxilios -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingPrimerosAuxilios">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrimerosAuxilios" aria-expanded="false" aria-controls="collapsePrimerosAuxilios">
+                <i class="material-symbols-outlined me-2">health_cross</i> Primeros auxilios
+              </button>
+            </h2>
+            <div id="collapsePrimerosAuxilios" class="accordion-collapse collapse" aria-labelledby="headingPrimerosAuxilios" data-bs-parent="#departamentosAccordion">
+              <div class="accordion-body">
+                <p>Se encuetra <a href="javascript:plano(0,'departamentos','PrimerosAuxilios')" class="plano-link">en planta baja</a> y hay una guardia <a href="javascript:plano(1,'departamentos','PrimerosAuxilios')" class="plano-link">en el auditorio de planta alta</a>.</p>
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 mb-3">
-            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardLimpieza">
-              <div class="icon-half">
-                <i class="material-symbols-outlined">cleaning_services</i>
+          <!-- Lactantes -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingLactantes">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLactantes" aria-expanded="false" aria-controls="collapseLactantes">
+                <i class="material-symbols-outlined me-2">breastfeeding</i> Lactantes
+              </button>
+            </h2>
+            <div id="collapseLactantes" class="accordion-collapse collapse" aria-labelledby="headingLactantes" data-bs-parent="#departamentosAccordion">
+              <div class="accordion-body">
+                <p>Se encuentra <a href="javascript:plano(0,'departamentos','Lactantes')" class="plano-link">en planta baja</a>.</p>
               </div>
-              <div class="card-body">
-                <h5 class="card-title">Limpieza</h5>
-                <p class="card-text">Se encuentra <a href="javascript:plano(1,'departamentos','Limpieza')"
-                    class="plano-link">en el vestíbulo de planta alta</a>.</p>
+            </div>
+          </div>
+          <!-- Información y servicio voluntario -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingInformacion">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInformacion" aria-expanded="false" aria-controls="collapseInformacion">
+                <i class="material-symbols-outlined me-2">info</i> Información y servicio voluntario
+              </button>
+            </h2>
+            <div id="collapseInformacion" class="accordion-collapse collapse" aria-labelledby="headingInformacion" data-bs-parent="#departamentosAccordion">
+              <div class="accordion-body">
+                <p>Se encuentra <a href="javascript:plano(0,'departamentos','Informacion')" class="plano-link">en el mostrador de planta baja</a>.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Limpieza -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingLimpieza">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLimpieza" aria-expanded="false" aria-controls="collapseLimpieza">
+                <i class="material-symbols-outlined me-2">cleaning_services</i> Limpieza
+              </button>
+            </h2>
+            <div id="collapseLimpieza" class="accordion-collapse collapse" aria-labelledby="headingLimpieza" data-bs-parent="#departamentosAccordion">
+              <div class="accordion-body">
+                <p>Se encuentra <a href="javascript:plano(1,'departamentos','Limpieza')" class="plano-link">en el vestíbulo de planta alta</a>.</p>
               </div>
             </div>
           </div>
@@ -536,19 +545,65 @@
         <h2>Dónde comer</h2>
 
         <p>En el predio y alrededores hay abundantes lugares disponibles para comer durante los intermedios.</p>
-        <ul>
-          <li>Patios exteriores</li>
-          <li>Foyer</li>
-          <li>Parque Urquiza</li>
-        </ul>
+                        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">Sunny</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">En los patios exteriores o la galería cubierta</h5>
+                <p class="card-text"></p>
+                <p class="card-text"></p> 
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">forest</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">En el parque Urquiza</h5>
+                <p class="card-text"></p> 
+                    <p class="card-text"></p> 
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">directions_car</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">En el auto</h5>
+                <p class="card-text"></p> 
+                    <p class="card-text"></p> 
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">groups</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">En los vestíbulos</h5>
+                <p class="card-text"></p> 
+                    <p class="card-text"></p> 
+              </div>
+            </div>
+          </div>
+                </div>
+
         <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-alert">
           <div class="icon-half">
             <i class="material-symbols-outlined">dangerous</i>
           </div>
           <div class="card-body">
             <h5 class="card-title mb-2">No se debe comer ni beber en los auditorios</h5>
-            <p class="card-text">No podemos ingresar ni consumir alimentos ni bebidas (incluído tomar mate) en los
-              auditorios. Podemos hacerlo fuera de ellos. Es una cláusula del contrato de uso del predio. Nuestra
+            <p class="card-text"><strong>No podemos ingresar ni consumir alimentos ni bebidas (incluído tomar mate) en los
+              auditorios.</strong> Sí podemos hacerlo fuera de ellos. <strong>Es una cláusula del contrato de uso del predio.</strong> Nuestra
               obediencia permitirá que siga estando a nuestro alcance celebrar asambleas en el CPC.</p>
           </div>
         </div>
@@ -556,6 +611,7 @@
 
 
         <h3>Dónde guardar los alimentos</h3>
+        <p>Como <strong>no podemos ingresar a los auditorios con alimentos o bebidas,</strong> veamos qué alternativas tenemos disponibles para guardarlos durante el programa.</p>
                 <div class="row">
           <div class="col-12 col-lg-6 mb-3">
             <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardObjetosPerdidos">
