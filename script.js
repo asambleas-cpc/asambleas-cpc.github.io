@@ -284,3 +284,48 @@ const btnObserver = new IntersectionObserver((entries) => {
 if (inicioSection) {
   btnObserver.observe(inicioSection);
 }
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Select all checkboxes within the cardAntesDeAsistir element
+    const checkboxes = document.querySelectorAll('#cardAntesDeAsistir .form-check-input');
+
+    checkboxes.forEach(function(checkbox) {
+        // Create a unique cookie name for each checkbox
+        const cookieName = 'checkbox_' + checkbox.id;
+
+        // Check if a cookie exists for this checkbox and set its state
+        const cookieValue = getCookie(cookieName);
+        if (cookieValue !== null) {
+            checkbox.checked = (cookieValue === 'true');
+        }
+
+        // Add an event listener to save the state of the checkbox when it's changed
+        checkbox.addEventListener('change', function() {
+            setCookie(cookieName, this.checked, 365); // Save for 1 year
+        });
+    });
+});
