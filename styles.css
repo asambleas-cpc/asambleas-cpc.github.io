@@ -7,472 +7,6 @@
  * It's the single source of truth for the site's design tokens.
  */
 :root {
-  /* Color Theme Definitions */
-  --inicio-color: hsl(210, 10%, 50%);
-  --transporte-color: hsl(134, 61%, 40%);
-  --auditorios-color: hsl(188, 60%, 40%);
-  --alimentos-color: hsl(332, 47%, 37%);
-  --alojamiento-color: hsl(30, 98%, 55%);
-  --otros-color: hsl(270, 50%, 45%);
-  --aviso-color: rgb(199, 0, 0);
-  --info-color: hsl(134, 61%, 40%);
-  --warning-color: hsl(45, 100%, 51%);
-  --alert-color: hsl(0, 79%, 63%);
-
-  /* Color Variant Generation */
-  --bg-lighten: 90%;
-  --inicio-bg: hsl(from var(--inicio-color) h s var(--bg-lighten));
-  --aviso-bg: hsl(from var(--aviso-color) h s var(--bg-lighten));
-  --info-bg: hsl(from var(--info-color) h s var(--bg-lighten));
-  --warning-bg: hsl(from var(--warning-color) h s var(--bg-lighten));
-  --alert-bg: hsl(from var(--alert-color) h s var(--bg-lighten));
-}
-
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
-body {
-  font-family: "Cabin", sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-color);
-  transition: background-color 0.6s ease, color 0.6s ease;
-  height: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Cabin", sans-serif;
-}
-
-/* Add vertical space before headings that follow other content */
-.snap-section :not(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4, h5, h6) {
-  margin-top: 2.5rem;
-}
-
-/* General purpose watermark */
-body::before {
-  content: "BORRADOR-NO DIFUNDIR";
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  font-size: 8vw;
-  color: rgba(255, 0, 0, 0.308);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 9999;
-  user-select: none;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* ==========================================================================
-   2. Layout Containers
-   ========================================================================== */
-
-.snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  transition: background-color 0.6s ease;
-  position: relative;
-}
-
-.snap-section {
-  scroll-snap-align: start;
-  min-height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  position: relative;
-  z-index: 0;
-  padding: 2rem;
-  
-  /* Generic theme properties that will be inherited */
-  background-color: var(--section-theme-bg-color);
-  color: black;
-  transition: background-color 0.6s ease, color 0.6s ease;
-
-  /* Nesting section-specific variables and styles */
-  &.section-inicio {
-    --section-theme-color: var(--inicio-color);
-    --section-theme-bg-color: var(--inicio-bg);
-  }
-  &.section-transporte {
-    --section-theme-color: var(--transporte-color);
-    --section-theme-bg-color: hsl(from var(--transporte-color) h s var(--bg-lighten));
-    --section-theme-comp: hsl(from var(--transporte-color) calc(h + 180) s l);
-    --section-theme-bg-comp: hsl(from var(--transporte-color) calc(h + 180) s var(--bg-lighten));
-  }
-  &.section-auditorios {
-    --section-theme-color: var(--auditorios-color);
-    --section-theme-bg-color: hsl(from var(--auditorios-color) h s var(--bg-lighten));
-    --section-theme-comp: hsl(from var(--auditorios-color) calc(h + 180) s l);
-    --section-theme-bg-comp: hsl(from var(--auditorios-color) calc(h + 180) s var(--bg-lighten));
-  }
-  &.section-alimentos {
-    --section-theme-color: var(--alimentos-color);
-    --section-theme-bg-color: hsl(from var(--alimentos-color) h s var(--bg-lighten));
-    --section-theme-comp: hsl(from var(--alimentos-color) calc(h + 180) s l);
-    --section-theme-bg-comp: hsl(from var(--alimentos-color) calc(h + 180) s var(--bg-lighten));
-  }
-  &.section-alojamiento {
-    --section-theme-color: var(--alojamiento-color);
-    --section-theme-bg-color: hsl(from var(--alojamiento-color) h s var(--bg-lighten));
-    --section-theme-comp: hsl(from var(--alojamiento-color) calc(h + 180) s l);
-    --section-theme-bg-comp: hsl(from var(--alojamiento-color) calc(h + 180) s var(--bg-lighten));
-  }
-  &.section-otros {
-    --section-theme-color: var(--otros-color);
-    --section-theme-bg-color: hsl(from var(--otros-color) h s var(--bg-lighten));
-    --section-theme-comp: hsl(from var(--otros-color) calc(h + 180) s l);
-    --section-theme-bg-comp: hsl(from var(--otros-color) calc(h + 180) s var(--bg-lighten));
-  }
-
-  /* Special case for the #inicio section layout */
-  &#inicio {
-    height: auto;
-    scroll-snap-align: start;
-    min-height: 100vh;
-    overflow: visible !important;
-  }
-
-  /* Child elements inside a section */
-  > *:not(.section-icon) {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Visibility transition for the icon */
-  &.visible .section-icon {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* ==========================================================================
-   3. Components
-   ========================================================================== */
-
-/**
- * Themed cards used in the #inicio section.
- * Uses scoped variables for theming.
- */
-#cardGroupEnlacesInicio {
-  .card {
-    display: flex;
-    overflow: hidden;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s;
-    color: black;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: none;
-
-    /* Define scoped variables for each card type */
-    &.card-transporte {
-      --card-theme-color: var(--transporte-color);
-      --card-theme-bg-color: var(--transporte-bg);
-    }
-    &.card-auditorios {
-      --card-theme-color: var(--auditorios-color);
-      --card-theme-bg-color: var(--auditorios-bg);
-    }
-    &.card-alimentos {
-      --card-theme-color: var(--alimentos-color);
-      --card-theme-bg-color: var(--alimentos-bg);
-    }
-    &.card-alojamiento {
-      --card-theme-color: var(--alojamiento-color);
-      --card-theme-bg-color: var(--alojamiento-bg);
-    }
-    &.card-otros {
-      --card-theme-color: var(--otros-color);
-      --card-theme-bg-color: var(--otros-bg);
-    }
-    &.card-aviso {
-      --card-theme-color: var(--aviso-color);
-      --card-theme-bg-color: var(--aviso-bg);
-    }
-  }
-
-  .card-icon {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 4rem;
-    flex-shrink: 0;
-    background: var(--card-theme-color);
-
-    .material-symbols-outlined {
-      color: white !important;
-      font-size: 2rem;
-      padding-top: 1rem;
-    }
-  }
-
-  .card-content {
-    flex-grow: 1;
-    padding: 1rem;
-    background: var(--card-theme-bg-color);
-  }
-}
-
-/*
- * Themed cards for departments and other section-specific content.
- * These cards inherit the theme color from their parent .snap-section.
- */
-.card-themed-icon {
-  overflow: hidden; /* Ensures the child's corners are clipped */
-}
-.card-themed-icon .icon-half {
-  background-color: var(--card-theme-color, var(--section-theme-color));
-  color: white;
-  display: flex;
-  flex-direction: column; /* Stack icons vertically */
-  align-items: center;      /* Center icons horizontally */
-  justify-content: flex-start; /* Align to the top */
-  padding-top: 1rem;
-  gap: 0.5rem;              /* Add space between multiple icons */
-  width: 5rem;
-  flex-shrink: 0;
-}
-
-.card-themed-icon .card-body {
-  background-color: var(--card-theme-bg-color, hsl(from var(--section-theme-color) h s var(--card-bg-lighten)));
-}
-
-.card-themed-icon .icon-half .material-symbols-outlined {
-  font-size: 3.75rem; /* Approx 75% of the 5rem container */
-}
-
-/*
- * Card type modifiers for info, warning, and alert messages.
- */
-.card-info {
-  --card-theme-color: var(--info-color);
-  --card-theme-bg-color: var(--info-bg);
-}
-.card-warning {
-  --card-theme-color: var(--warning-color);
-  --card-theme-bg-color: var(--warning-bg);
-}
-.card-alert {
-  --card-theme-color: var(--alert-color);
-  --card-theme-bg-color: var(--alert-bg);
-}
-.card-comp {
-  --card-theme-color: var(--section-theme-comp);
-  --card-theme-bg-color: var(--section-bg-comp);
-}
-
-
-.drawing-highlight { display: block;fill: white; }
-.drawing-objects { display: inline;fill: black }
-.drawing-background { display: inline;fill: gray }
-
-
-
-/* Generic header for sections */
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* --- Accordion Custom Styles --- */
-.accordion-button {
-  font-size: 1.25rem; /* h5 size */
-  font-weight: 500;
-  padding: 1rem 1.25rem;
-}
-
-/* Default state: Icon is theme color, text is default color */
-.snap-section .accordion-button {
-  color: inherit; /* Inherit default text color */
-}
-.snap-section .accordion-button .material-symbols-outlined {
-  color: var(--section-theme-color);
-}
-
-/* Expanded state: Background is theme color, all content is white */
-.snap-section .accordion-button:not(.collapsed) {
-  background-color: var(--section-theme-color);
-  color: white;
-}
-.snap-section .accordion-button:not(.collapsed) .material-symbols-outlined {
-  color: white;
-}
-
-.snap-section .accordion-button:focus {
-  box-shadow: 0 0 0 0.25rem hsla(from var(--section-theme-color) h s l / 0.25);
-  border-color: var(--section-theme-color);
-}
-
-/* Large decorative icon in the background of each section */
-.section-icon {
-  position: absolute;
-  top: 3rem;
-  left: -5vw;
-  font-size: 20rem;
-  filter: opacity(20%);
-  pointer-events: none;
-  z-index: 0;
-  color: var(--section-theme-color);
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: color 0.6s ease, opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Horizontal scrolling component for image gallery */
-.scroll-wrapper {
-  position: relative;
-  width: 100%;
-  margin: 1rem 0;
-
-  .scroll-inner-container {
-    overflow-x: auto;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    &::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
-    }
-  }
-
-  .gallery.d-flex {
-    gap: 0.5rem;
-    .col-4 {
-      flex: 0 0 auto;
-      width: 30%;
-      max-width: 120px;
-    }
-  }
-
-  .scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-    &.scroll-left { left: -10px; }
-    &.scroll-right { right: -10px; }
-  }
-  .card-scroller {
-    scroll-snap-type: x mandatory;
-    gap: 1rem; /* Explicitly add space between cards */
-  }
-
-  .card-scroller > .card {
-    scroll-snap-align: start;
-  }
-}
-
-/* Floating action button to return to the top */
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  text-decoration: none;
-  opacity: 0;
-  transform: translateY(20px);
-  visibility: hidden;
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-
-  .material-symbols-outlined {
-    color: white;
-  }
-
-  &.show {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-}
-
-/* ==========================================================================
-   4. Themed Elements (Links & Buttons)
-   ========================================================================== */
-
-.snap-section {
-  /* Themed links */
-  p a, li a {
-    color: inherit;
-    text-decoration-style: dotted;
-    transition: color 0.2s ease, background-color 0.2s ease;
-    border-radius: 0.25em;
-    &:hover {
-      color: var(--section-theme-bg-color);
-      background-color: var(--section-theme-color);
-      border-bottom-color: transparent;
-    }
-  }
-
-  /* Themed primary buttons */
-  .btn-primary {
-    background-color: var(--section-theme-color);
-    border-color: var(--section-theme-color);
-    color: white;
-    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-    &:hover {
-      background-color: transparent;
-      border-color: var(--section-theme-color);
-      color: var(--section-theme-color);
-    }
-  }
-}
-
-/* Link pseudo-elements for icons */
-.plano-link::after, .ext-link::after, .geo-link::after {
-  font-family: 'Material Icons';
-  font-size: 1.2em;
-  vertical-align: middle;
-  margin-right: 0.1em;
-}
-.plano-link::after { content: "map"; }
-.ext-link::after { content: "open_in_new"; }
-.geo-link::after { content: "pin_drop"; }
-
-/* ==========================================================================
-   5. Utilities
-   ========================================================================== */
-
-/* ==========================================================================
-   1. Root and Base Styles
-   ========================================================================== */
-
-/**
- * :root contains all global CSS variables for colors, fonts, and layout.
- * It's the single source of truth for the site's design tokens.
- */
-:root {
   /* Variant modifiers */
   --bg-lighten: 90%;
   --card-bg-lighten: 97%;
@@ -541,12 +75,17 @@ body {
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Cabin", sans-serif;
 }
 
 /* Add vertical space before headings that follow other content */
-.snap-section :not(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4, h5, h6) {
+.snap-section :not(h1, h2, h3, h4, h5, h6)+ :is(h2, h3, h4, h5, h6) {
   margin-top: 2.5rem;
 }
 
@@ -590,7 +129,7 @@ body::before {
   position: relative;
   z-index: 0;
   padding: 2rem;
-  
+
   /* Generic theme properties that will be inherited */
   background-color: var(--section-theme-bg-color);
   color: black;
@@ -600,26 +139,43 @@ body::before {
   &.section-inicio {
     --section-theme-color: var(--inicio-color);
     --section-theme-bg-color: var(--inicio-bg);
+    --section-theme-comp: var(--inicio-comp);
+    --section-theme-comp-bg: var(--inicio-comp-bg);
   }
+
   &.section-transporte {
     --section-theme-color: var(--transporte-color);
     --section-theme-bg-color: var(--transporte-bg);
+    --section-theme-comp: var(--transporte-comp);
+    --section-theme-comp-bg: var(--transporte-comp-bg);
   }
+
   &.section-auditorios {
     --section-theme-color: var(--auditorios-color);
     --section-theme-bg-color: var(--auditorios-bg);
+    --section-theme-comp: var(--auditorios-comp);
+    --section-theme-comp-bg: var(--auditorios-comp-bg);
   }
+
   &.section-alimentos {
     --section-theme-color: var(--alimentos-color);
     --section-theme-bg-color: var(--alimentos-bg);
+    --section-theme-comp: var(--alimentos-comp);
+    --section-theme-comp-bg: var(--alimentos-comp-bg);
   }
+
   &.section-alojamiento {
     --section-theme-color: var(--alojamiento-color);
     --section-theme-bg-color: var(--alojamiento-bg);
+    --section-theme-comp: var(--alojamiento-comp);
+    --section-theme-comp-bg: var(--alojamiento-comp-bg);
   }
+
   &.section-otros {
     --section-theme-color: var(--otros-color);
     --section-theme-bg-color: var(--otros-bg);
+    --section-theme-comp: var(--otros-comp);
+    --section-theme-comp-bg: var(--otros-comp-bg);
   }
 
   /* Special case for the #inicio section layout */
@@ -631,7 +187,7 @@ body::before {
   }
 
   /* Child elements inside a section */
-  > *:not(.section-icon) {
+  >*:not(.section-icon) {
     position: relative;
     z-index: 1;
   }
@@ -641,6 +197,66 @@ body::before {
     opacity: 1;
     transform: translateX(0);
   }
+
+  /* Themed links */
+  p a,
+  li a {
+    color: inherit;
+    text-decoration-style: dotted;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 0.25em;
+
+    &:hover {
+      color: var(--section-theme-bg-color);
+      background-color: var(--section-theme-color);
+      border-bottom-color: transparent;
+    }
+  }
+
+  /* Themed primary buttons */
+  .btn-primary {
+    background-color: var(--section-theme-color);
+    border-color: var(--section-theme-color);
+    color: white;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--section-theme-color);
+      color: var(--section-theme-color);
+    }
+  }
+
+  /* --- Accordion Custom Styles --- */
+  .accordion-button {
+    color: inherit;
+    /* Inherit default text color */
+  }
+
+  .accordion-button .material-symbols-outlined {
+    color: var(--section-theme-color);
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: var(--section-theme-color);
+    color: white;
+  }
+
+  .accordion-button:not(.collapsed) .material-symbols-outlined {
+    color: white;
+  }
+
+  .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem hsla(from var(--section-theme-color) h s l / 0.25);
+    border-color: var(--section-theme-color);
+  }
+
+  /*
+   * Themed drawing classes for multi-part SVGs.
+   * Apply a container class (e.g., .themed-drawing) to the <svg> element.
+   * The child shapes will be themed correctly based on the section.
+   */
+
 }
 
 /* ==========================================================================
@@ -668,22 +284,27 @@ body::before {
       --card-theme-color: var(--transporte-color);
       --card-theme-bg-color: var(--transporte-bg);
     }
+
     &.card-auditorios {
       --card-theme-color: var(--auditorios-color);
       --card-theme-bg-color: var(--auditorios-bg);
     }
+
     &.card-alimentos {
       --card-theme-color: var(--alimentos-color);
       --card-theme-bg-color: var(--alimentos-bg);
     }
+
     &.card-alojamiento {
       --card-theme-color: var(--alojamiento-color);
       --card-theme-bg-color: var(--alojamiento-bg);
     }
+
     &.card-otros {
       --card-theme-color: var(--otros-color);
       --card-theme-bg-color: var(--otros-bg);
     }
+
     &.card-aviso {
       --card-theme-color: var(--aviso-color);
       --card-theme-bg-color: var(--aviso-bg);
@@ -717,17 +338,23 @@ body::before {
  * These cards inherit the theme color from their parent .snap-section.
  */
 .card-themed-icon {
-  overflow: hidden; /* Ensures the child's corners are clipped */
+  overflow: hidden;
+  /* Ensures the child's corners are clipped */
 }
+
 .card-themed-icon .icon-half {
   background-color: var(--card-theme-color, var(--section-theme-color));
   color: white;
   display: flex;
-  flex-direction: column; /* Stack icons vertically */
-  align-items: center;      /* Center icons horizontally */
-  justify-content: flex-start; /* Align to the top */
+  flex-direction: column;
+  /* Stack icons vertically */
+  align-items: center;
+  /* Center icons horizontally */
+  justify-content: flex-start;
+  /* Align to the top */
   padding-top: 1rem;
-  gap: 0.5rem;              /* Add space between multiple icons */
+  gap: 0.5rem;
+  /* Add space between multiple icons */
   width: 5rem;
   flex-shrink: 0;
 }
@@ -737,7 +364,8 @@ body::before {
 }
 
 .card-themed-icon .icon-half .material-symbols-outlined {
-  font-size: 3.75rem; /* Approx 75% of the 5rem container */
+  font-size: 3.75rem;
+  /* Approx 75% of the 5rem container */
 }
 
 /*
@@ -747,14 +375,35 @@ body::before {
   --card-theme-color: var(--info-color);
   --card-theme-bg-color: var(--info-bg);
 }
+
 .card-warning {
   --card-theme-color: var(--warning-color);
   --card-theme-bg-color: var(--warning-bg);
 }
+
 .card-alert {
   --card-theme-color: var(--alert-color);
   --card-theme-bg-color: var(--alert-bg);
 }
+
+.card-comp {
+  --card-theme-color: var(--section-theme-comp);
+  --card-theme-bg-color: var(--section-theme-comp-bg);
+}
+
+
+.drawing-background {
+  fill: hsl(from var(--section-theme-color) h s 80%);
+}
+
+.drawing-objects {
+  fill: var(--section-theme-color);
+}
+
+.drawing-highlight {
+  fill: hsl(from var(--section-theme-color) h s 100%);
+}
+
 
 /* Generic header for sections */
 .section-header {
@@ -765,37 +414,16 @@ body::before {
   margin-bottom: 1.5rem;
 }
 
-/* --- Accordion Custom Styles --- */
+/* --- Accordion Base Styles --- */
 .accordion-button {
-  font-size: 1.25rem; /* h5 size */
+  font-size: 1.25rem;
+  /* h5 size */
   font-weight: 500;
   padding: 1rem 1.25rem;
 }
 
-/* Default state: Icon is theme color, text is default color */
-.snap-section .accordion-button {
-  color: inherit; /* Inherit default text color */
-}
-.snap-section .accordion-button .material-symbols-outlined {
-  color: var(--section-theme-color);
-}
-
-/* Expanded state: Background is theme color, all content is white */
-.snap-section .accordion-button:not(.collapsed) {
-  background-color: var(--section-theme-color);
-  color: white;
-}
-.snap-section .accordion-button:not(.collapsed) .material-symbols-outlined {
-  color: white;
-}
-
-.snap-section .accordion-button:focus {
-  box-shadow: 0 0 0 0.25rem hsla(from var(--section-theme-color) h s l / 0.25);
-  border-color: var(--section-theme-color);
-}
-
 /* Large decorative icon in the background of each section */
-.snap-section .section-icon {
+.section-icon {
   position: absolute;
   top: 3rem;
   left: -5vw;
@@ -817,15 +445,20 @@ body::before {
 
   .scroll-inner-container {
     overflow-x: auto;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+
+    /* IE and Edge */
     &::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
+      display: none;
+      /* Chrome, Safari, Opera */
     }
   }
 
   .gallery.d-flex {
     gap: 0.5rem;
+
     .col-4 {
       flex: 0 0 auto;
       width: 30%;
@@ -849,18 +482,27 @@ body::before {
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.2s;
+
     &:hover {
       background-color: rgba(0, 0, 0, 0.6);
     }
-    &.scroll-left { left: -10px; }
-    &.scroll-right { right: -10px; }
-  }
-  .card-scroller {
-    scroll-snap-type: x mandatory;
-    gap: 1rem; /* Explicitly add space between cards */
+
+    &.scroll-left {
+      left: -10px;
+    }
+
+    &.scroll-right {
+      right: -10px;
+    }
   }
 
-  .card-scroller > .card {
+  .card-scroller {
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    /* Explicitly add space between cards */
+  }
+
+  .card-scroller>.card {
     scroll-snap-align: start;
   }
 }
@@ -900,44 +542,27 @@ body::before {
    4. Themed Elements (Links & Buttons)
    ========================================================================== */
 
-.snap-section {
-  /* Themed links */
-  p a, li a {
-    color: inherit;
-    text-decoration-style: dotted;
-    transition: color 0.2s ease, background-color 0.2s ease;
-    border-radius: 0.25em;
-    &:hover {
-      color: var(--section-theme-bg-color);
-      background-color: var(--section-theme-color);
-      border-bottom-color: transparent;
-    }
-  }
-
-  /* Themed primary buttons */
-  .btn-primary {
-    background-color: var(--section-theme-color);
-    border-color: var(--section-theme-color);
-    color: white;
-    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-    &:hover {
-      background-color: transparent;
-      border-color: var(--section-theme-color);
-      color: var(--section-theme-color);
-    }
-  }
-}
-
 /* Link pseudo-elements for icons */
-.plano-link::after, .ext-link::after, .geo-link::after {
+.plano-link::after,
+.ext-link::after,
+.geo-link::after {
   font-family: 'Material Icons';
   font-size: 1.2em;
   vertical-align: middle;
   margin-right: 0.1em;
 }
-.plano-link::after { content: "map"; }
-.ext-link::after { content: "open_in_new"; }
-.geo-link::after { content: "pin_drop"; }
+
+.plano-link::after {
+  content: "map";
+}
+
+.ext-link::after {
+  content: "open_in_new";
+}
+
+.geo-link::after {
+  content: "pin_drop";
+}
 
 /* ==========================================================================
    5. Utilities
@@ -949,12 +574,10 @@ body::before {
 }
 
 /* Fallback for when JavaScript is disabled */
-body:not(.js-enabled) #inicio > * {
+body:not(.js-enabled) #inicio>* {
   opacity: 1;
   transform: none;
 }
-
-
 
 /* ==========================================================================
    Plano (Map Modal) Stylesheet
@@ -969,20 +592,25 @@ body:not(.js-enabled) #inicio > * {
   /* ========================================================================
      1. Modal & Map Layout
      ======================================================================== */
-  
-  .modal-dialog, .modal-content, .modal-body, #map {
+
+  .modal-dialog,
+  .modal-content,
+  .modal-body,
+  #map {
     height: 100%;
   }
 
   #map-title {
-    h5, small {
+
+    h5,
+    small {
       color: #212929;
-      text-shadow: 
-        -1px -1px 0 #fff,  
-         1px -1px 0 #fff,
-        -1px  1px 0 #fff,
-         1px  1px 0 #fff,
-         0 0 10px rgba(255, 255, 255, 0.8);
+      text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff,
+        0 0 10px rgba(255, 255, 255, 0.8);
     }
   }
 
@@ -993,7 +621,8 @@ body:not(.js-enabled) #inicio > * {
   .vertical-toolbar {
     z-index: 1001;
 
-    .btn, .dropdown-menu {
+    .btn,
+    .dropdown-menu {
       background-color: rgba(0, 0, 0, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.2);
       color: white;
@@ -1013,11 +642,12 @@ body:not(.js-enabled) #inicio > * {
       }
 
       /* Active and Hover States */
-      &.active, &:hover {
+      &.active,
+      &:hover {
         background-color: rgba(255, 255, 255, 0.7) !important;
         color: #212929 !important;
         border-color: rgba(255, 255, 255, 0.5);
-        
+
         .material-icons {
           color: #212929 !important;
         }
@@ -1031,12 +661,14 @@ body:not(.js-enabled) #inicio > * {
     }
 
     /* Make standalone buttons circular */
-    #layer-selector-btn, #btn-close-window {
+    #layer-selector-btn,
+    #btn-close-window {
       border-radius: 50%;
     }
 
     #btn-close-window {
       background-color: rgba(161, 0, 16, 0.603);
+
       &:hover {
         background-color: hsl(354, 100%, 50%) !important;
       }
@@ -1046,7 +678,9 @@ body:not(.js-enabled) #inicio > * {
   /* Styles for the dropdown menu items */
   .dropdown-item {
     color: white;
-    &.active, &:hover {
+
+    &.active,
+    &:hover {
       background-color: rgba(255, 255, 255, 0.7) !important;
       color: #212929 !important;
     }
@@ -1067,12 +701,15 @@ body:not(.js-enabled) #inicio > * {
       right: 1rem;
       z-index: 10;
     }
+
     .offcanvas-body h5 {
       margin-right: 2rem;
     }
+
     a {
       color: white;
       text-decoration: underline;
+
       &:hover {
         background-color: white;
         color: #212929;
@@ -1098,7 +735,12 @@ body:not(.js-enabled) #inicio > * {
      ======================================================================== */
 
   /* General SVG rendering quality */
-  svg g, svg path, svg circle, svg rect, svg text, svg line {
+  svg g,
+  svg path,
+  svg circle,
+  svg rect,
+  svg text,
+  svg line {
     shape-rendering: geometricPrecision;
   }
 
@@ -1116,6 +758,7 @@ body:not(.js-enabled) #inicio > * {
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
     pointer-events: none;
+
     &.visible {
       opacity: 1;
       pointer-events: auto;
