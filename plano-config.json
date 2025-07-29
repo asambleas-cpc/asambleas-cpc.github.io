@@ -71,35 +71,29 @@
         }
     },
     "informacion": {
-        "AccesoPeatonal": {
-            "title": "Acceso Peatonal"
-        },
         "AccesoEstacionamiento": {
             "title": "Acceso al estacionamiento interno",
-            "content": "<p>El estacionamiento está reservado para personas con necesidades especiales. Se debe reservar con anticipación y se controlará el acceso.</p><p><a href=\"#\">Más información</a></p>"
-        },
-        "EntradaPrincipal": {
-            "title": "Entrada principal"
+            "content": "<p>El <a href=\"javascript:plano(0,'departamentos','Estacionamiento')\" class=\"plano-link\">estacionamiento interno</a> está reservado para personas con necesidades especiales. Se debe reservar con anticipación y se controlará el acceso.</p><p><a href=\"#headingAuto\">Más información</a></p>"
         },
         "Informacion": {
-            "title": "Información"
-        },
-        "ServicioVoluntario": {
-            "title": "Servicio voluntario",
-            "content": "<p>Aquí deben presentarse quienes deseen ofrecerse como voluntarios.</p><p><a href=\"#\">Más información</a></p>"
+            "title": "Información y servicio voluntario",
+            "content": "<p>Si desea ofrecerse como voluntario para ayudar en los trabajos de la asamblea, preséntese este departamento</p><p><a href=\"#headingInformacion\">Más información</a></p>"
         },
         "Acomodadores": {
-            "title": "Acomodadores"
+            "title": "Acomodadores",
+            "content": "<p>Los acomodadores están para ayudarle. Coopere con ellos en todo y siga sus instrucciones sobre el estacionamiento, la circulación por los pasillos, la reserva de asientos y otros asuntos.</p>"
         },
         "GuardaAlimentos": {
             "title": "Guardado de alimentos",
             "content": "<p>En esta área se reciben y retiran los alimentos. Recordá que <strong>no se puede ingresar a los auditorios con alimentos, bebidas o mate.</strong></p><p><a href=\"#\">Más información</a></p>"
         },
         "Guardaropas": {
-            "title": "Guardarropa"
+            "title": "Guardarropa y objetos perdidos",
+            "content": "<p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los niños que se hayan perdido.</p>"
         },
         "ObjetosPerdidos": {
-            "title": "Objetos perdidos"
+            "title": "Guardarropa y objetos perdidos",
+            "content": "<p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los niños que se hayan perdido.</p>"
         },
         "BañosMujeres": {
             "title": "Baños de mujeres"
