@@ -132,7 +132,8 @@
                   <li>Galería cubierta y patio exterior con acceso al parque.</li>
                   <li>Servicios y baños modernos.</li>
                 </ul>
-                </p>                <p class="card-text mt-3"><button class="btn btn-md btn-primary" onclick="plano()"><i
+                </p>
+                <p class="card-text mt-3"><button class="btn btn-md btn-primary" onclick="plano()"><i
                       class="material-symbols-outlined">map</i> Plano del predio</button></p>
                 <h6>Galería de fotos</h6>
                 <div class="scroll-wrapper">
@@ -183,29 +184,33 @@
               </div>
             </div>
             <div class="card card-static mt-3 bg-success-subtle" id="cardAntesDeAsistir">
-  <div class="card-body">
-    <h5 class="card-title">Antes de asistir</h5>
-    <ul class="list-group bg-success-subtle">
-  <li class="list-group-item bg-success-subtle">
-    <input class="form-check-input me-1" type="checkbox" value="" id="cbTransporte">
-    <label class="form-check-label" for="firstCheckbox">Cononcer <a href="#transporte">cómo llegar y dónde estacionar.</a></label>
-  </li>
-  <li class="list-group-item bg-success-subtle">
-    <input class="form-check-input me-1" type="checkbox" value="" id="cbAlimentos">
-    <label class="form-check-label" for="secondCheckbox">Preparar los <a href="#alimentos">alimentos.</a></label>
-  </li>
-  <li class="list-group-item bg-success-subtle">
-    <input class="form-check-input me-1" type="checkbox" value="" id="cbAuditorios">
-    <label class="form-check-label" for="thirdCheckbox">Saber <a href="#auditorios">a qué auditorio ir.</a></label>
-  </li>
-    <li class="list-group-item bg-success-subtle">
-    <input class="form-check-input me-1" type="checkbox" value="" id="cbEmergencias">
-    <label class="form-check-label" for="thirdCheckbox">Conocer las <a href="#h3Emergencias">instrucciones de emergencia.</a></label>
-  </li>
-</ul>
+              <div class="card-body">
+                <h5 class="card-title">Antes de asistir</h5>
+                <ul class="list-group bg-success-subtle">
+                  <li class="list-group-item bg-success-subtle">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="cbTransporte">
+                    <label class="form-check-label" for="firstCheckbox">Cononcer <a href="#transporte">cómo llegar y
+                        dónde estacionar.</a></label>
+                  </li>
+                  <li class="list-group-item bg-success-subtle">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="cbAlimentos">
+                    <label class="form-check-label" for="secondCheckbox">Preparar los <a
+                        href="#alimentos">alimentos.</a></label>
+                  </li>
+                  <li class="list-group-item bg-success-subtle">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="cbAuditorios">
+                    <label class="form-check-label" for="thirdCheckbox">Saber <a href="#auditorios">a qué auditorio
+                        ir.</a></label>
+                  </li>
+                  <li class="list-group-item bg-success-subtle">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="cbEmergencias">
+                    <label class="form-check-label" for="thirdCheckbox">Conocer las <a
+                        href="#h3Emergencias">instrucciones de emergencia.</a></label>
+                  </li>
+                </ul>
 
-  </div>
-</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -351,13 +356,14 @@
           </div>
         </div>
         <div class="card mt-2 ">
-  <div class="card-body">
-    <strong>Aclaración:</strong> La información presentada es solamente a modo de referencia y pudiera estar sujeta a cambios. La
-            organización del evento no está relacionada con los servicios presentados, no los promociona ni se
-            responsabiliza por ellos.
-  </div>
-</div>
-        
+          <div class="card-body"><small>
+              <strong>Aclaración:</strong> La información presentada es solamente a modo de referencia y pudiera estar
+              sujeta a cambios. La
+              organización del evento no está relacionada con los servicios presentados, no los promociona ni se
+              responsabiliza por ellos.</small>
+          </div>
+        </div>
+
 
       </div>
     </section>
@@ -366,13 +372,12 @@
         class="section-icon material-symbols-outlined">airline_seat_recline_normal</i>
       <div class="container pt-5">
         <h2 class="display-5">Dónde ubicarse</h2>
-        <h3>Plano del predio</h3>
-        <p><button class="btn btn-lg btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Ver
-            plano del predio</button></p>
+        <h3>Plano interactivo del CPC</h3>
+        <p><button class="btn btn-lg btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Plano
+            del predio</button></p>
 
         <h3>Auditorios</h3>
-        <p>El CPC tiene dos auditorios. Es importante que nos ubiquemos en el auditorio que nos corresponde, porque
-          ayuda a que no se pierda tiempo valioso ante una emergencia o si fuera necesario evacuar el local.</p>
+        <p>El CPC tiene dos auditorios, destinados a públicos específicos.</p>
         <div class="row">
           <div class="col-12 col-lg-6 mb-3">
             <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardAuditorioPrincipal">
@@ -406,24 +411,18 @@
             </div>
           </div>
         </div>
-
-
-
-        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp" id="cardAuditorioCorrespondiente">
+        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp"
+          id="cardAuditorioCorrespondiente">
           <div class="icon-half">
             <i class="material-symbols-outlined">warning</i>
           </div>
           <div class="card-body">
-            <h5 class="card-title mb-2">Es importante que nos sentemos en el auditorio que nos corresponde</h5>
-            <p class="card-text">En el auditorio auxiliar los baños están más cerca. Además, las salidas son sin
-              escaleras. Si hubiera que evacuar el local, se perdería tiempo valioso si no estamos donde nos
+            <h5 class="card-title mb-2">Es importante sentarse en el auditorio que corresponde</h5>
+            <p class="card-text">El acceso al auditorio auxiliar es a nivel, mientras que al principal se accede por
+              escaleras o ascensor. Ante una evacuación, se perdería tiempo valioso si no estamos donde nos
               corresponde.</p>
           </div>
-
         </div>
-
-
-
         <h3>Departamentos</h3>
         <div class="accordion" id="departamentosAccordion">
           <!-- Guardarropa y objetos perdidos -->
@@ -439,6 +438,7 @@
                 <div class="accordion-body">
                   <p>Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en
                       planta baja, junto con Guarda de alimentos</a>.</p>
+                      <p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los niños que se hayan perdido.</p>
                 </div>
               </div>
           </div>
@@ -475,6 +475,7 @@
                   <p>Se encuetra <a href="javascript:plano(0,'departamentos','PrimerosAuxilios')" class="plano-link">en
                       planta baja</a> y hay una guardia <a href="javascript:plano(1,'departamentos','PrimerosAuxilios')"
                       class="plano-link">en el auditorio de planta alta</a>.</p>
+                      <p>Tenga en cuenta que este departamento es <em>solo para casos de emergencia.</em></p>
                 </div>
               </div>
           </div>
@@ -505,6 +506,7 @@
               <div id="collapseInformacion" class="accordion-collapse collapse" aria-labelledby="headingInformacion"
                 data-bs-parent="#departamentosAccordion">
                 <div class="accordion-body">
+                  <p>Si desea ofrecerse como voluntario para ayudar en los trabajos de la asamblea, preséntese este departamento</p>
                   <p>Se encuentra <a href="javascript:plano(0,'departamentos','Informacion')" class="plano-link">en el
                       mostrador de planta baja</a>.</p>
                 </div>
@@ -533,17 +535,17 @@
 
         <h3 id="h3Emergencias">En caso de emergencias</h3>
         <div class="row">
-                    <div class="col-12 col-lg-6 mb-3">
+          <div class="col-12 col-lg-6 mb-3">
             <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardGuardarAuto">
               <div class="icon-half">
                 <i class="material-symbols-outlined">health_cross</i>
               </div>
               <div class="card-body">
                 <h5 class="card-title">Emergencias médicas</h5>
-                <p class="card-text">En el plano del predio se encuentra el plan de evacuación.</p>
-                <p class="card-text">                <button class="btn btn-md btn-primary" onclick="plano(0,'evacuacion')"><i
-                    class="material-symbols-outlined">map</i> Planta baja</button>                <button class="btn btn-md btn-primary" onclick="plano(1,'evacuacion')"><i
-                    class="material-symbols-outlined">map</i> Planta alta</button></p>
+                <p class="card-text">El departamento de primeros auxilios tiene un puesto en cada piso. Tenga en cuenta que este departamento es <em>solo para casos de emergencia.</em></p>
+                <p class="card-text"> <button class="btn btn-md btn-primary m-1" onclick="plano(0,'departamentos','PrimerosAuxilios')"><i class="material-symbols-outlined">map</i> Planta baja</button> <button
+                    class="btn btn-md btn-primary m-1" onclick="plano(1,'departamentos','PrimerosAuxilios')"><i
+                      class="material-symbols-outlined">map</i> Planta alta</button></p>
               </div>
             </div>
           </div>
@@ -555,32 +557,30 @@
               <div class="card-body">
                 <h5 class="card-title">Plan de evacuación</h5>
                 <p class="card-text">En el plano del predio se encuentra el plan de evacuación.</p>
-                <p class="card-text">                <button class="btn btn-md btn-primary" onclick="plano(0,'evacuacion')"><i
-                    class="material-symbols-outlined">map</i> Planta baja</button>                <button class="btn btn-md btn-primary" onclick="plano(1,'evacuacion')"><i
-                    class="material-symbols-outlined">map</i> Planta alta</button></p>
+                <p class="card-text"> <button class="btn btn-md btn-primary m-1" onclick="plano(0,'evacuacion')"><i
+                      class="material-symbols-outlined">map</i> Planta baja</button> <button
+                    class="btn btn-md btn-primary m-1" onclick="plano(1,'evacuacion')"><i
+                      class="material-symbols-outlined">map</i> Planta alta</button></p>
               </div>
             </div>
           </div>
-        <div class="col-12 col-lg-6 mb-3"> 
-          <a href="#" class="video-link text-body text-decoration-none"
-            data-bs-toggle="modal" data-bs-target="#videoModal" data-video="videos/emergencias-movil.mp4">
-            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardVideoEmergencias">
-
-              <div class="icon-half">
-                <i class="material-symbols-outlined">play_circle</i>
+          <div class="col-12 col-lg-6 mb-3">
+            <a href="#" class="video-link text-body text-decoration-none" data-bs-toggle="modal"
+              data-bs-target="#videoModal" data-video="videos/emergencias-movil.mp4">
+              <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardVideoEmergencias">
+                <div class="icon-half">
+                  <i class="material-symbols-outlined">play_circle</i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Video: Instrucciones para emergencias</h5>
+                  <p class="card-text">En este video hay instrucciones importantes para situaciones de emergencia.</p>
+                </div>
               </div>
-              <div class="card-body">
-                <h5 class="card-title">Video: Instrucciones para emergencias</h5>
-                <p class="card-text">En este video verás instrucciones importantes para situaciones de emergencia.</p>
-              </div>
-
-            </div>
-          </a>
-        </div></div>
-
+            </a>
+          </div>
+        </div>
       </div>
     </section>
-
     <section id="alimentos" class="section-alimentos snap-section"><i
         class="section-icon material-symbols-outlined">fastfood</i>
       <div class="container pt-5">
@@ -599,7 +599,7 @@
               <div id="collapsePatios" class="accordion-collapse collapse" aria-labelledby="headingPatios"
                 data-bs-parent="#accordionDondeComer">
                 <div class="accordion-body">
-                  <p>Contenido sobre patios exteriores.</p>
+                  <p>En los patios exteriores y la galería cubierta hay espacios para comer y conversar. Hay sillas para usar temporalmente, por lo que <strong>no se pueden reservar.</strong></p>
                 </div>
               </div>
           </div>
@@ -614,7 +614,7 @@
               <div id="collapseParque" class="accordion-collapse collapse" aria-labelledby="headingParque"
                 data-bs-parent="#accordionDondeComer">
                 <div class="accordion-body">
-                  <p>Contenido sobre el parque Urquiza.</p>
+                  <p>En el parque hay abundantes espacios para comer y disfrutar</p>
                 </div>
               </div>
           </div>
@@ -629,7 +629,7 @@
               <div id="collapseEnElAuto" class="accordion-collapse collapse" aria-labelledby="headingEnElAuto"
                 data-bs-parent="#accordionDondeComer">
                 <div class="accordion-body">
-                  <p>Contenido sobre comer en el auto.</p>
+                  <p>Algunos hermanos prefieren guardar la comida en el auto y comerla ahí mismo.</p>
                 </div>
               </div>
           </div>
@@ -644,7 +644,7 @@
               <div id="collapseVestibulos" class="accordion-collapse collapse" aria-labelledby="headingVestibulos"
                 data-bs-parent="#accordionDondeComer">
                 <div class="accordion-body">
-                  <p>Contenido sobre comer en los vestíbulos.</p>
+                  <p>Los vestíbulos de ambas plantas están habilitados para comer, pero no en los auditorios. Hay sillas para usar temporalmente, por lo que <strong>no se pueden reservar.</strong></p>
                 </div>
               </div>
           </div>
@@ -655,10 +655,10 @@
             <i class="material-symbols-outlined">no_food</i>
           </div>
           <div class="card-body">
-            <h5 class="card-title mb-2">No se debe comer ni beber en los auditorios</h5>
-            <p class="card-text"><strong>No podemos ingresar ni consumir alimentos ni bebidas (incluído tomar mate) en
+            <h5 class="card-title mb-2">No se puede comer en los auditorios</h5>
+            <p class="card-text"><strong>No se pueden ingresar ni consumir alimentos ni bebidas (incluído tomar mate) en
                 los
-                auditorios.</strong> Sí podemos hacerlo fuera de ellos. <strong>Es una cláusula del contrato de uso del
+                auditorios.</strong> Sí es posible hacerlo fuera de ellos. <strong>Es una cláusula del contrato de uso del
                 predio.</strong> Nuestra
               obediencia permitirá que siga estando a nuestro alcance celebrar asambleas en el CPC.</p>
           </div>
@@ -683,16 +683,17 @@
             </div>
           </div>
           <div class="col-12 col-lg-6 mb-3">
-            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardGuardarGuardaAlimentos">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon"
+              id="cardGuardarGuardaAlimentos">
               <div class="icon-half">
                 <i class="material-symbols-outlined">shopping_bag</i>
               </div>
               <div class="card-body">
                 <h5 class="card-title">Usando el servicio de guarda de alimentos</h5>
-                <p class="card-text">Contamos con un servicio para guardar los alimentos. Hay un puesto <a
-                    href="javascript:plano(0,'departamentos','GuardaAlimentos')" class="plano-link">en planta baja</a> y
-                  otro <a href="javascript:plano(1,'departamentos','GuardaAlimentos')" class="plano-link">en planta
-                    alta.</a></p>
+                <p class="card-text">Contamos con un servicio para guardar los alimentos. Hay un puesto en cada piso:</a></p><p class="card-text"> <button class="btn btn-md btn-primary m-1" onclick="plano(0,'departamentos','GuardaAlimentos')"><i
+                      class="material-symbols-outlined">map</i> Planta baja</button> <button
+                    class="btn btn-md btn-primary m-1" onclick="plano(1,'departamentos','GuardaAlimentos')"><i
+                      class="material-symbols-outlined">map</i> Planta alta</button></p>
                 <p>A continuación se explica como funciona.</p>
               </div>
             </div>
@@ -723,10 +724,11 @@
                 <div class="card-body">
                   <h5 class="card-title">2. Llevarla al puesto de guarda</h5>
                   <p class="card-text">Hay un puesto de guarda de alimentos en cada piso del predio.</p>
-                    <button class="btn btn-sm btn-primary" onclick="plano(0,'departamentos','GuardaAlimentos')"><i
-                    class="material-symbols-outlined">map</i> Planta baja</button>                <button class="btn btn-sm btn-primary" onclick="plano(1,'departamentos','GuardaAlimentos')"><i
-                    class="material-symbols-outlined">map</i> Planta alta</button>
-                  
+                  <button class="btn btn-sm btn-primary m-1" onclick="plano(0,'departamentos','GuardaAlimentos')"><i
+                      class="material-symbols-outlined">map</i> Planta baja</button> <button
+                    class="btn btn-sm btn-primary m-1" onclick="plano(1,'departamentos','GuardaAlimentos')"><i
+                      class="material-symbols-outlined">map</i> Planta alta</button>
+
                 </div>
               </div>
               <div class="card card-alimentos" style="min-width: 16rem;">
@@ -785,23 +787,27 @@
           <li><a href="https://www.despegar.com.ar/alojamientos/alojamientos-en-parana/5877" target="_blank"
               class="ext-link">Despegar.com</a></li>
         </ul>
-                <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp" id="cardAuditorioCorrespondiente">
+        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp"
+          id="cardAuditorioCorrespondiente">
           <div class="icon-half">
             <i class="material-symbols-outlined">warning</i>
           </div>
           <div class="card-body">
             <h5 class="card-title mb-2">Conviene conocer la reputación del alojamiento y la seguridad de la zona</h5>
-            <p class="card-text">Algunos alojamientos cercanos al predio pueden ser de mala reputación. Además, algunas zonas de la ciudad son peligrosas. Si tenemos alguna duda, conviene consultar a los ancianos, quienes se asesorarán con los hermanos de alojamiento.</p>
+            <p class="card-text">Algunos alojamientos cercanos al predio pueden ser de mala reputación. Además, algunas
+              zonas de la ciudad son peligrosas. Si tenemos alguna duda, conviene consultar a los ancianos, quienes se
+              asesorarán con los hermanos de alojamiento.</p>
           </div>
 
         </div>
-<div class="card mt-2 ">
-  <div class="card-body">
-    <strong>Aclaración:</strong> La información presentada es solamente a modo de referencia y pudiera estar sujeta a cambios. La
-            organización del evento no está relacionada con los servicios presentados, no los promociona ni se
-            responsabiliza por ellos.
-  </div>
-</div>
+        <div class="card mt-2 ">
+          <div class="card-body"><small>
+              <strong>Aclaración:</strong> La información presentada es solamente a modo de referencia y pudiera estar
+              sujeta a cambios. La
+              organización del evento no está relacionada con los servicios presentados, no los promociona ni se
+              responsabiliza por ellos.</small>
+          </div>
+        </div>
         <h3>Solicitar alojamiento</h3>
         <p>Si deseas solicitar alojamiento en casa de hermanos, por favor, contactate con los ancianos de tu
           congregación.</p>
@@ -833,13 +839,15 @@
         <h3>Climatización</h3>
         <p>Los auditorios están climatizados. La temperatura se fija en un promedio de 24°C, pero puede variar con el
           funcionamiento de los equipos.</p>
-                        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp" id="cardAuditorioCorrespondiente">
+        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp"
+          id="cardAuditorioCorrespondiente">
           <div class="icon-half">
             <i class="material-symbols-outlined">mode_cool</i>
           </div>
           <div class="card-body">
             <h5 class="card-title mb-2">Puede convenir llevar abrigo</h5>
-            <p class="card-text">Aunque el aire se fija en una temperatura razonable, a veces varía según donde estemos sentados.</p>
+            <p class="card-text">Aunque el aire se fija en una temperatura razonable, a veces varía según donde estemos
+              sentados.</p>
           </div>
 
         </div>
@@ -888,7 +896,9 @@
       </symbol>
       <symbol id="alimentos02" viewBox="0 0 1024 1024">
         <path id="fondo" d="M0 0h1024v1024H0V0Z" class="drawing-background" />
-        <path id="bolsa" d="m616 732 75-18-9-206c0-4 0-9-5-8l-20-1c-2-14-4-28-10-40-5-12-15-24-29-26-4-1-10 1-14-3-10-6-23-6-32 1-11 8-18 21-22 34l-6 27c-4 0-11-3-9 3l6 252c0 5 8-1 11 0zm32-214c-4-4 0-13 6-11 7 0 8 10 2 13-3 1-6 0-8-2zm-81 0c-5-3-2-12 4-12 6-1 9 7 6 12-2 3-8 3-10 0zm67-22c-1-18-5-36-15-52-4-5 6 1 8 3 6 4 11 11 14 18 5 10 8 21 8 32 1 2-3 0-4 1l-10-1zm-34-1-23-1c-2-4 1-9 2-14 4-12 9-26 20-34 4-4 10-3 12 2 9 13 13 28 15 43 2 5-2 7-6 5zm-47-3c0-9 2-18 4-26 5-12 12-26 26-30 4-1 10-2 13 1l-13 13c-8 12-12 27-15 41-3 3-10 1-15 1zm-18 256-24-39-34 9c10-6 21-10 32-15l4-207-18 1-3 28-17 193 60 31zm1-7-7-245c1-4 0-7-3-4l-8 4-2 145-1 62c0 3 2 6 4 9l17 36z" class="drawing-highlight"/>
+        <path id="bolsa"
+          d="m616 732 75-18-9-206c0-4 0-9-5-8l-20-1c-2-14-4-28-10-40-5-12-15-24-29-26-4-1-10 1-14-3-10-6-23-6-32 1-11 8-18 21-22 34l-6 27c-4 0-11-3-9 3l6 252c0 5 8-1 11 0zm32-214c-4-4 0-13 6-11 7 0 8 10 2 13-3 1-6 0-8-2zm-81 0c-5-3-2-12 4-12 6-1 9 7 6 12-2 3-8 3-10 0zm67-22c-1-18-5-36-15-52-4-5 6 1 8 3 6 4 11 11 14 18 5 10 8 21 8 32 1 2-3 0-4 1l-10-1zm-34-1-23-1c-2-4 1-9 2-14 4-12 9-26 20-34 4-4 10-3 12 2 9 13 13 28 15 43 2 5-2 7-6 5zm-47-3c0-9 2-18 4-26 5-12 12-26 26-30 4-1 10-2 13 1l-13 13c-8 12-12 27-15 41-3 3-10 1-15 1zm-18 256-24-39-34 9c10-6 21-10 32-15l4-207-18 1-3 28-17 193 60 31zm1-7-7-245c1-4 0-7-3-4l-8 4-2 145-1 62c0 3 2 6 4 9l17 36z"
+          class="drawing-highlight" />
         <path id="hermano"
           d="m787 525 5-94c-19-1-84-11-103-11-17-11-33-26-54-30-18-6-34 4-51 9-16 2-41 19-17 32 9 2 3 9 11 14 12 12 19 33 39 35 16-7 31-1 47 0 21-10 0 23 17 27 24 5 81 15 106 18z"
           class="drawing-objects" />
@@ -896,7 +906,7 @@
           d="m859 54-11 1c-26 4-52 15-72 33-15 8-8 22-8 35-12 19-1 39-1 58-4 12-26 40-1 44 6 12 9 28 15 41-1 23 21 32 40 25 19-8 29 18 28 33-14 14-28 30-36 48a599 599 0 0 0-44 181l-6 93c-3 53-2 107-2 160 0 16-6 42 19 38 0 60 2 120 7 180h237V354c5-20-11-32-24-43-16-14-31-28-45-43-16-11-9-24-6-38-1-26 13-50 14-76 4-29-9-59-31-78-21-16-47-23-73-22z"
           class="drawing-objects" />
         <path id="ticket" d="m474 332-62 15 10 39 61-15z" class="drawing-highlight" />
-        <path id="mostrador" d="M276 770v23h21v231h396V793h21v-23H276z" class="drawing-objects"/>
+        <path id="mostrador" d="M276 770v23h21v231h396V793h21v-23H276z" class="drawing-objects" />
         <path id="hermana"
           d="M167 63c-8 1-15 1-22 3-33 6-61 34-68 66-10 33-4 70-15 104l-9 26c-13 18-25 36-31 58-7 24-12 53 3 75 10 13-3 30 0 45-1 36 7 71 6 107 1 19-1 37-6 55-5 21-15 41-19 62-14 119-6 240-6 360h227c1-75-5-150-9-225l-4-65c14-3 2-24 5-35-1-21-5-41-1-62 3-27 8-54 9-82 13 4 28 3 38-7l91-73c10-9-11-23 0-29 10-14 23-16 39-14 15-6 17-8 26-8l12-9c5-1 10-9 13-22-3-23-17-18-29-27-20-10-30 6-49 18-14 7-26 19-40 26-11-3-18 9-27 14l-54 37c-12-1-17-21-20-32-12-36-38-69-54-104-1-8 14-47 20-53 12 2 41 5 52-4 7-9 6-21 11-31 1-11 3-10 9-12 4-1 7-5 6-10l-11-45c0-12 15-22 11-37-1-24-22-41-42-51-18-13-41-19-62-19Z"
           class="drawing-objects" />
@@ -920,7 +930,7 @@
         <path id="mano2"
           d="m193 612-10 79a1791 1791 0 0 1 64 19c8 2 16 5 24 4 5-3 6-6 8-11l1-3 3-4 22 18c10 10 19 18 31 24l3 2c9 5 18 11 28 11 5-1 9 1 13 3s6 4 11 4l5-2 5-3 10 1 2-7-1-4 4-1 1-8-17-16a432 432 0 0 1-46-42l9 2c10 3 16 4 26 0l1-6-7-5-2-1a559 559 0 0 0-29-13c-14-7-29-7-44-3l-18 2-1-9c-5-4-5-4-51-17l-45-14z"
           class="drawing-objects" />
-        <path id="mostrador" d="M276 770v23h21v231h396V793h21v-23H276z" class="drawing-objects"/>
+        <path id="mostrador" d="M276 770v23h21v231h396V793h21v-23H276z" class="drawing-objects" />
         <path id="bolsa"
           d="m397 708-75-18 9-206c0-4-1-9 5-8l20-1c1-14 3-28 9-40s16-24 29-26c5-1 11 1 15-3 9-6 22-6 31 1 12 8 18 21 23 34l6 27c4 0 11-3 8 3l-5 252c0 5-8-1-11 0zm-33-214c5-4 1-13-6-12s-8 11-1 14c2 1 5 0 7-2zm82 0c4-3 2-12-4-12-7-1-10 7-6 12 2 3 8 3 10 0zm-68-22c2-18 6-36 16-52 3-5-7 1-8 3-7 4-11 11-14 18-5 10-8 21-9 31 0 3 3 1 5 2l10-1zm35-1 23-1c1-4-2-9-2-14-4-12-9-26-20-34-4-4-10-4-13 2-8 13-12 28-14 43-2 5 1 6 6 5zm47-3c0-9-2-18-5-26-4-13-12-26-25-30-4-1-10-2-13 1 4 4 9 8 12 13 9 12 13 27 16 41 3 3 9 1 14 1zm18 255 23-39 35 10-32-16-4-206 18 1 2 28 17 193-60 31zm-1-6c2-82 3-164 6-245 0-4 0-7 4-4l7 4 3 144v63c1 3-2 6-3 9l-18 36z"
           class="drawing-highlight" />
