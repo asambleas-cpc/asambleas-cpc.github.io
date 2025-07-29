@@ -108,7 +108,7 @@
                   </div>
                 </div>
               </a>
-              <a href="#otros" class="text-decoration-none text-dark">
+              <a href="#otros" class="text-decoration-none text-dark d-none">
                 <div class="card h-80 d-flex flex-row align-items-stretch mb-3 card-otros">
                   <div class="d-flex px-3 border-end card-icon">
                     <i class="material-symbols-outlined fs-1">info</i>
@@ -411,7 +411,9 @@
             </div>
           </div>
         </div>
-        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp"
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp mt-3"
           id="cardAuditorioCorrespondiente">
           <div class="icon-half">
             <i class="material-symbols-outlined">warning</i>
@@ -423,6 +425,17 @@
               corresponde.</p>
           </div>
         </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon mt-3" id="cardClimatizacion">
+          <div class="icon-half">
+            <i class="material-symbols-outlined">mode_cool</i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-2">Climatización</h5>
+            <p class="card-text">Los auditorios están climatizados a 24°C en promedio. Puede convenir llevar abrigo, ya que la temperatura puede variar según la ubicación.</p>
+          </div>
+        </div></div></div>
         <h3>Instalaciones</h3>
         <div class="accordion" id="accordionInstalaciones">
           <!-- Baños -->
@@ -494,6 +507,29 @@
                 <p><button class="btn btn-sm btn-primary" onclick="plano(0,'instalaciones','EstacionamientoInterno')"><i class="material-symbols-outlined">map</i> Mostrar en el plano</button></p>
               </div>
             </div>
+          </div>
+          <!-- Bautismo -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingBautismo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBautismo" aria-expanded="false" aria-controls="collapseBautismo">
+                <i class="material-symbols-outlined me-2">water</i> Bautismo
+              </button>
+            </h5>
+            <div id="collapseBautismo" class="accordion-collapse collapse" aria-labelledby="headingBautismo" data-bs-parent="#accordionInstalaciones">
+              <div class="accordion-body">
+                <p>El bautismo se hace en el <a href="javascript:plano(0,'departamentos','Bautismo')" class="plano-link">patio cubierto.</a> También se transmitirá una grabación en las pantallas al finalizar.</p>
+                <p>Los candidatos se deben ubicar <a href="javascript:plano(1,'departamentos','Bautismo')" class="plano-link">en las primeras filas </a>en la sesión del sábado por la mañana.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp mt-3" id="cardPrecauciones">
+          <div class="icon-half">
+            <i class="material-symbols-outlined">warning</i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-2">Precauciones</h5>
+            <p class="card-text">El predio tiene escaleras y otros lugares que pueden ser peligrosos. Se recomienda circular con cuidado y supervisar a los niños en todo momento.</p>
           </div>
         </div>
         <h3>Departamentos</h3>
@@ -911,12 +947,12 @@
     </section>
 
 
-    <section id="otros" class="section-otros snap-section"><i class="section-icon material-symbols-outlined">info</i>
+    <section id="otros" class="section-otros snap-section d-none"><i class="section-icon material-symbols-outlined">info</i>
       <div class="container pt-5">
         <h2 class="display-5">Qué más tener en cuenta</h2>
 
 
-        <h3>Horarios</h3>
+        <h3 class="d-none">Horarios</h3>
         <ul>
           <li><strong>8:00</strong> Apertura de puertas</li>
           <li><strong>9:20</strong> Inicio del programa</li>
