@@ -62,68 +62,53 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-6">
-            <div id="cardGroupEnlacesInicio" class="cardGroupEnlacesInicio">
-              <a href="#transporte" class="text-decoration-none">
-                <div class="card h-80 d-flex flex-row align-items-stretch mb-3 card-transporte">
-                  <div class="d-flex px-3 border-end card-icon">
-                    <i class="material-symbols-outlined fs-1">pin_drop</i>
-                  </div>
-                  <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">Cómo llegar</h5>
-                    <p class="card-text">Recomendaciones para transporte y estacionamiento.</p>
-                  </div>
+          <div class="col-lg-4 mb-3 mb-lg-0">
+            <div class="d-flex flex-column h-100">
+              <div class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-bottom-0 flex-grow-1">
+                <div class="icon-half" style="background-color: var(--transporte-color);">
+                  <i class="material-symbols-outlined">pin_drop</i>
                 </div>
-              </a>
-              <a href="#auditorios" class="text-decoration-none">
-                <div class="card h-80 d-flex flex-row align-items-stretch mb-3 card-auditorios">
-                  <div class="d-flex px-3 border-end card-icon">
-                    <i class="material-symbols-outlined fs-1">airline_seat_recline_normal</i>
-                  </div>
-                  <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">Dónde ubicarse</h5>
-                    <p class="card-text">Auditorios, instalaciones y departamentos.</p>
-                  </div>
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <h5 class="card-title">Cómo llegar</h5>
+                  <p class="card-text mb-0">Recomendaciones para transporte y estacionamiento.</p>
+                  <a href="#transporte" class="stretched-link"></a>
                 </div>
-              </a>
-              <a href="#alimentos" class="text-decoration-none text-dark">
-                <div class="card h-80 d-flex flex-row align-items-stretch mb-3 card-alimentos">
-                  <div class="d-flex px-3 border-end card-icon">
-                    <i class="material-symbols-outlined fs-1">fastfood</i>
-                  </div>
-                  <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">Dónde comer</h5>
-                    <p class="card-text">Opciones para comer en los intermedios.</p>
-                  </div>
+              </div>
+              <div class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-0 border-top-0 flex-grow-1">
+                <div class="icon-half" style="background-color: var(--auditorios-color);">
+                  <i class="material-symbols-outlined">airline_seat_recline_normal</i>
                 </div>
-              </a>
-              <a href="#alojamiento" class="text-decoration-none text-dark">
-                <div class="card h-80 d-flex flex-row align-items-stretch mb-3 card-alojamiento">
-                  <div class="d-flex px-3 border-end card-icon">
-                    <i class="material-symbols-outlined fs-1">hotel</i>
-                  </div>
-                  <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">Dónde alojarse</h5>
-                    <p class="card-text">Alojamientos disponibles y cómo ofrecer alojamiento.</p>
-                  </div>
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <h5 class="card-title">Dónde ubicarse</h5>
+                  <p class="card-text mb-0">Auditorios, instalaciones y departamentos.</p>
+                  <a href="#auditorios" class="stretched-link"></a>
                 </div>
-              </a>
-              <a href="#otros" class="text-decoration-none text-dark d-none">
-                <div class="card h-80 d-flex flex-row align-items-stretch mb-3 card-otros">
-                  <div class="d-flex px-3 border-end card-icon">
-                    <i class="material-symbols-outlined fs-1">info</i>
-                  </div>
-                  <div class="card-content flex-grow-1">
-                    <h5 class="card-title mb-2">Qué más tener en cuenta</h5>
-                    <p class="card-text">Otra información importante para los asistentes.</p>
-                  </div>
+              </div>
+              <div class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-0 border-top-0 flex-grow-1">
+                <div class="icon-half" style="background-color: var(--alimentos-color);">
+                  <i class="material-symbols-outlined">fastfood</i>
                 </div>
-              </a>
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <h5 class="card-title">Dónde comer</h5>
+                  <p class="card-text mb-0">Opciones para comer en los intermedios.</p>
+                  <a href="#alimentos" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="card d-flex flex-row align-items-stretch card-themed-icon rounded-top-0 border-top-0 flex-grow-1">
+                <div class="icon-half" style="background-color: var(--alojamiento-color);">
+                  <i class="material-symbols-outlined">hotel</i>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <h5 class="card-title">Dónde alojarse</h5>
+                  <p class="card-text mb-0">Alojamientos disponibles y cómo ofrecer alojamiento.</p>
+                  <a href="#alojamiento" class="stretched-link"></a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="card card-static" id="cardConozcaCPC">
-              <div class="card-body">
+          <div class="col-lg-4 mb-3 mb-lg-0">
+            <div class="card card-static h-100" id="cardConozcaCPC">
+              <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Cómo es el <em>Centro Provincial de Convenciones</em></h5>
                 <p class="card-text">
                 <ul>
@@ -135,7 +120,7 @@
                 </p>
                 <p class="card-text mt-3"><button class="btn btn-md btn-primary" onclick="plano()"><i
                       class="material-symbols-outlined">map</i> Plano del predio</button></p>
-                <h6>Galería de fotos</h6>
+                <h6 class="mt-auto">Galería de fotos</h6>
                 <div class="scroll-wrapper">
                   <button class="scroll-btn scroll-left material-symbols-outlined">chevron_left</button>
                   <div class="scroll-inner-container">
@@ -183,7 +168,9 @@
 
               </div>
             </div>
-            <div class="card card-static mt-3 bg-success-subtle" id="cardAntesDeAsistir">
+          </div>
+          <div class="col-lg-4">
+            <div class="card card-static h-100 bg-success-subtle" id="cardAntesDeAsistir">
               <div class="card-body">
                 <h5 class="card-title">Antes de asistir</h5>
                 <ul class="list-group bg-success-subtle">
