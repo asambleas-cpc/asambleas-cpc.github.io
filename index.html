@@ -213,11 +213,14 @@
         <header class="section-header">
           <h2 class="display-5">Cómo llegar</h2>
         </header>
-        <p>El predio se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por la ayoría de los
-          medios de transporte. Elija un medio de transporte para más información</p>
-        <p><button class="btn btn-lg btn-primary"
+        <p>El predio se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por varios
+          medios de transporte. Elija un medio para más información</p>
+        <p><div class="btn-group" role="group" aria-label="Ubicación del CPC"><button class="btn btn-lg btn-primary"
             onclick="abrirMapa('-31.721610,-60.52522,Centro+Provincial+de+Convenciones')" role="button"
-            target="_blank"><i class="material-symbols-outlined">pin_drop</i> Abrir ubicación</button></p>
+            target="_blank"><i class="material-symbols-outlined">pin_drop</i> Abrir ubicación</button>
+          <button class="btn btn-lg btn-primary"
+            onclick="abrirMapa('-31.721610,-60.52522,Centro+Provincial+de+Convenciones')" role="button"
+            target="_blank"><i class="material-symbols-outlined">share</i></button></div></p>
 
         <div class="accordion" id="accordionTransporte">
           <!-- Auto Particular -->
@@ -241,15 +244,14 @@
                         class="btn btn-md btn-primary" onclick="mostrarDatos('estacionamiento')">
                         Listado de cocheras en la zona del CPC
                       </button></li>
-                    <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios para que
-                      estacionen hermanos con limitaciones físicas. Si considera que califica para solicitarlo, por
+                    <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios en el estacionamiento interno para personas con limitaciones físicas. Si considera que califica para solicitarlo, por
                       favor, contáctese con los ancianos de su congregación. Tenga en cuenta que se van a controlar los
                       números de patentes en el ingreso.</li>
                   </ul>
 
                   <h5>Recomendaciones</h5>
                   <ul>
-                    <li>En las calles generalmente aparecen cuidacoches. Es conveniente dejarles una propina.</li>
+                    <li>En las calles generalmente andan cuidacoches. Por lo general, es conveniente dejarles una propina.</li>
                     <li>El parque es muy concurrido los fines de semana.</li>
                   </ul>
                 </div>
@@ -336,9 +338,14 @@
               <div id="collapseShuttle" class="accordion-collapse collapse" aria-labelledby="headingShuttle"
                 data-bs-parent="#accordionTransporte">
                 <div class="accordion-body">
-                  <ul>
-                    <li>Parada</li>
-                  </ul>
+<p>Hay un punto de descenso de pasajeros de ómnibus y trafics contratados, por calle Gregoria Matorras de San Martín (continuación de calle Corrientes), en el acceso al Centro Cultural la Vieja Usina.</p>
+<div class="btn-group" role="group" aria-label="Ubicación del punto de descenso">
+<button class="btn btn-md btn-primary"
+            onclick="abrirMapa('-31.722105,-60.523525,Centro+Cultural+la+Vieja+Usina')" role="button"
+            target="_blank"><i class="material-symbols-outlined">pin_drop</i> Abrir ubicación</button>
+            <button class="btn btn-md btn-primary"
+            onclick="abrirMapa('-31.722105, -60.523525,Centro+Cultural+la+Vieja+Usina')" role="button"
+            target="_blank"><i class="material-symbols-outlined">share</i></button></div>
                 </div>
               </div>
           </div>
