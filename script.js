@@ -195,7 +195,7 @@ function mostrarDatos(tipo) {
 //   });
 // });
 
-function abrirMapa(rawCoords, nombre = '') {
+function abrirMapa(rawCoords, nombre = '', share = false) {
   // Clean up coordinates
   const [lat, lng] = rawCoords.trim().split(/\s*,\s*/);
   if (!lat || !lng) {
@@ -205,20 +205,39 @@ function abrirMapa(rawCoords, nombre = '') {
 
   // Sanitize label
   const label = encodeURIComponent(nombre.trim());
-
-  const geoUri = `geo:${lat},${lng}?q=${lat},${lng}(${label})`; // for Android
   const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
 
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-  if (isMobile) {
-    window.location.href = geoUri;
-
-    setTimeout(() => {
-      window.open(gmapsUrl, '_blank');
-    }, 800);
+  if (share) {
+    if (navigator.share) {
+      navigator.share({
+        title: `Ubicación: ${nombre}`,
+        text: `Te comparto la ubicación de "${nombre}"`,
+        url: gmapsUrl,
+      })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+    } else {
+      navigator.clipboard.writeText(gmapsUrl).then(() => {
+        alert('Enlace de la ubicación copiado al portapapeles.');
+      }).catch(err => {
+        console.error('Could not copy text: ', err);
+        alert('No se pudo copiar el enlace. Abriendo en una nueva pestaña para que puedas copiarlo manualmente.');
+        window.open(gmapsUrl, '_blank');
+      });
+    }
   } else {
-    window.open(gmapsUrl, '_blank');
+    const geoUri = `geo:${lat},${lng}?q=${lat},${lng}(${label})`; // for Android
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      window.location.href = geoUri;
+
+      setTimeout(() => {
+        window.open(gmapsUrl, '_blank');
+      }, 800);
+    } else {
+      window.open(gmapsUrl, '_blank');
+    }
   }
 }
 

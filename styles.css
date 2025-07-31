@@ -214,9 +214,9 @@ body::before {
   }
 
   /* Themed primary buttons */
-  .btn-primary {
+  .btn-theme {
     background-color: var(--section-theme-color);
-    border-color: var(--section-theme-color);
+    border-color: var(--section-theme-bg-color);
     color: white;
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 

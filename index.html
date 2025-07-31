@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=1.1.7" />
+  <link rel="stylesheet" href="styles.css?v=1.1.8" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -119,7 +119,7 @@
                   <li>Servicios y baños modernos.</li>
                 </ul>
                 </p>
-                <p class="card-text mt-3"><button class="btn btn-md btn-primary" onclick="plano()"><i
+                <p class="card-text mt-3"><button class="btn btn-md btn-primary btn-theme" onclick="plano()"><i
                       class="material-symbols-outlined">map</i> Plano del predio</button></p>
                 <h6 class="mt-auto">Galería de fotos</h6>
                 <div class="scroll-wrapper">
@@ -215,11 +215,11 @@
         </header>
         <p>El predio se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por varios
           medios de transporte. Elija un medio para más información</p>
-        <p><div class="btn-group" role="group" aria-label="Ubicación del CPC"><button class="btn btn-lg btn-primary"
-            onclick="abrirMapa('-31.721610,-60.52522,Centro+Provincial+de+Convenciones')" role="button"
+        <p><div class="btn-group" role="group" aria-label="Ubicación del CPC"><button class="btn btn-lg btn-primary btn-theme"
+            onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones')" role="button"
             target="_blank"><i class="material-symbols-outlined">pin_drop</i> Abrir ubicación</button>
-          <button class="btn btn-lg btn-primary"
-            onclick="abrirMapa('-31.721610,-60.52522,Centro+Provincial+de+Convenciones')" role="button"
+          <button class="btn btn-lg btn-primary btn-theme"
+            onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones', true)" role="button"
             target="_blank"><i class="material-symbols-outlined">share</i></button></div></p>
 
         <div class="accordion" id="accordionTransporte">
@@ -241,7 +241,7 @@
                       estacionar
                       en la calle. Sin embargo, generalmente hay cuidacoches.</li>
                     <li><strong>Cocheras. </strong>Tambien hay disponibles estacionamientos pagos.<br> <button
-                        class="btn btn-md btn-primary" onclick="mostrarDatos('estacionamiento')">
+                        class="btn btn-md btn-primary btn-theme" onclick="mostrarDatos('estacionamiento')">
                         Listado de cocheras en la zona del CPC
                       </button></li>
                     <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios en el estacionamiento interno para personas con limitaciones físicas. Si considera que califica para solicitarlo, por
@@ -304,7 +304,7 @@
                     $X.
                   </p>
 
-                  <button class="btn btn-primary btn-md mt-2" onclick="mostrarDatos('colectivos')">
+                  <button class="btn btn-primary btn-theme btn-md mt-2" onclick="mostrarDatos('colectivos')">
                     Lista de líneas que llegan al CPC
                   </button>
                 </div>
@@ -340,11 +340,11 @@
                 <div class="accordion-body">
 <p>Hay un punto de descenso de pasajeros de ómnibus y trafics contratados, por calle Gregoria Matorras de San Martín (continuación de calle Corrientes), en el acceso al Centro Cultural la Vieja Usina.</p>
 <div class="btn-group" role="group" aria-label="Ubicación del punto de descenso">
-<button class="btn btn-md btn-primary"
-            onclick="abrirMapa('-31.722105,-60.523525,Centro+Cultural+la+Vieja+Usina')" role="button"
+<button class="btn btn-md btn-primary btn-theme"
+            onclick="abrirMapa('-31.722105,-60.523525','Centro Cultural la Vieja Usina')" role="button"
             target="_blank"><i class="material-symbols-outlined">pin_drop</i> Abrir ubicación</button>
-            <button class="btn btn-md btn-primary"
-            onclick="abrirMapa('-31.722105, -60.523525,Centro+Cultural+la+Vieja+Usina')" role="button"
+            <button class="btn btn-md btn-primary btn-theme"
+            onclick="abrirMapa('-31.722105,-60.523525','Centro Cultural la Vieja Usina', true)" role="button"
             target="_blank"><i class="material-symbols-outlined">share</i></button></div>
                 </div>
               </div>
@@ -369,7 +369,7 @@
         <h2 class="display-5">Dónde ubicarse</h2>
         <h3>Plano interactivo del CPC</h3>
         <p>Contamos con un plano interactivo para conocer mejor el predio.</p>
-        <p><button class="btn btn-lg btn-primary" onclick="plano()"><i class="material-symbols-outlined">map</i> Abrir plano
+        <p><button class="btn btn-lg btn-primary btn-theme" onclick="plano()"><i class="material-symbols-outlined">map</i> Abrir plano
             del predio</button></p>
 
         <h3>Auditorios</h3>
@@ -384,7 +384,7 @@
                 <h5 class="card-title">Auditorio principal: para el público en general</h5>
                 <p class="card-text"></p>Se accede mediante las escaleras a la izquierda de la
                 entrada.</p>
-                <button class="btn btn-md btn-primary" onclick="plano(1,'departamentos','AuditorioPrincipal')"><i
+                <button class="btn btn-md btn-primary btn-theme" onclick="plano(1,'departamentos','AuditorioPrincipal')"><i
                     class="material-symbols-outlined">map</i> Mostrar en el plano</button>
               </div>
             </div>
@@ -400,7 +400,7 @@
                     pequeños</strong> a ubicarse en este auditorio.</p>
                 <p class="card-text"></p>Se accede por el
                 pasillo de la derecha de la entrada. </p>
-                <button class="btn btn-md btn-primary" onclick="plano(0,'departamentos','AuditorioAuxiliar')"><i
+                <button class="btn btn-md btn-primary btn-theme" onclick="plano(0,'departamentos','AuditorioAuxiliar')"><i
                     class="material-symbols-outlined">map</i> Mostrar en el plano</button>
               </div>
             </div>
@@ -443,7 +443,7 @@
             <div id="collapseBanos" class="accordion-collapse collapse" aria-labelledby="headingBanos" data-bs-parent="#accordionInstalaciones">
               <div class="accordion-body">
                 El CPC cuenta con baños en ambas plantas. Es importante <strong>cuidar el consumo de agua,</strong> porque en eventos de uso intensivo se puede agotar el suministro.
-                <p><button class="btn btn-sm btn-primary" onclick="plano(0,'instalaciones','Banos')"><i class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button class="btn btn-sm btn-primary" onclick="plano(1,'instalaciones','Banos')"><i class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'instalaciones','Banos')"><i class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button class="btn btn-sm btn-primary btn-theme" onclick="plano(1,'instalaciones','Banos')"><i class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
               </div>
             </div>
           </div>
@@ -458,7 +458,7 @@
               <div class="accordion-body">
                 <p></p>Los vestíbulos son amplios y luminosos, con vista al parque Urquiza y el río Paraná. Se pueden usar para comer y conversar durante los intermedios.</p>
                 <p>En planta alta hay <strong>asientos para uso temporal,</strong> por lo que <strong>no se deben reservar.</strong></p>
-                <p><button class="btn btn-sm btn-primary" onclick="plano(0,'instalaciones','Vestibulo')"><i class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button class="btn btn-sm btn-primary" onclick="plano(1,'instalaciones','Vestibulo')"><i class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'instalaciones','Vestibulo')"><i class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button class="btn btn-sm btn-primary btn-theme" onclick="plano(1,'instalaciones','Vestibulo')"><i class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
               </div>
             </div>
           </div>
@@ -472,7 +472,7 @@
             <div id="collapseAscensores" class="accordion-collapse collapse" aria-labelledby="headingAscensores" data-bs-parent="#accordionInstalaciones">
               <div class="accordion-body">
                 Hay ascensores disponibles para acceder a la planta alta. Si se los utiliza en exceso, el sistema hidráulico se sobrecalienta y hay que clausurarlos. Padres, cuiden que sus hijos <strong>no jueguen con con ellos.</strong>
-                <p><button class="btn btn-sm btn-primary" onclick="plano(0,'instalaciones','Ascensores')"><i class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button class="btn btn-sm btn-primary" onclick="plano(1,'instalaciones','Ascensores')"><i class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'instalaciones','Ascensores')"><i class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button class="btn btn-sm btn-primary btn-theme" onclick="plano(1,'instalaciones','Ascensores')"><i class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
               </div>
             </div>
           </div>
@@ -487,7 +487,7 @@
               <div class="accordion-body">
                 <p>La galería cubierta y el patio exterior tienen acceso al parque Urquiza. Son lugares ideales para comer y conversar durante los intermedios.</p>
                 <p>En la galería hay <strong>asientos para uso temporal,</strong> por lo que <strong>no se deben reservar.</strong></p>
-                <p><button class="btn btn-sm btn-primary" onclick="plano(0,'instalaciones','Galeria')"><i class="material-symbols-outlined">map</i> Mostrar en el plano</button></p>
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'instalaciones','Galeria')"><i class="material-symbols-outlined">map</i> Mostrar en el plano</button></p>
               </div>
             </div>
           </div>
@@ -501,7 +501,7 @@
             <div id="collapseEstacionamientoInterno" class="accordion-collapse collapse" aria-labelledby="headingEstacionamientoInterno" data-bs-parent="#accordionInstalaciones">
               <div class="accordion-body">
                 Hay un número limitado de espacios<strong> para personas con limitaciones físicas.</strong> Si considera que califica para solicitarlo, por favor, contáctese con los ancianos de su congregación. Tenga en cuenta que se van a controlar los números de patentes en el ingreso.
-                <p><button class="btn btn-sm btn-primary" onclick="plano(0,'instalaciones','EstacionamientoInterno')"><i class="material-symbols-outlined">map</i> Mostrar en el plano</button></p>
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'instalaciones','EstacionamientoInterno')"><i class="material-symbols-outlined">map</i> Mostrar en el plano</button></p>
               </div>
             </div>
           </div>
@@ -682,8 +682,8 @@
               <div class="card-body">
                 <h5 class="card-title">Emergencias médicas</h5>
                 <p class="card-text">El departamento de primeros auxilios tiene un puesto en cada piso. Tenga en cuenta que este departamento es <em>solo para casos de emergencia.</em></p>
-                <p class="card-text"> <button class="btn btn-md btn-primary m-1" onclick="plano(0,'departamentos','PrimerosAuxilios')"><i class="material-symbols-outlined">map</i> Planta baja</button> <button
-                    class="btn btn-md btn-primary m-1" onclick="plano(1,'departamentos','PrimerosAuxilios')"><i
+                <p class="card-text"> <button class="btn btn-md btn-primary btn-theme m-1" onclick="plano(0,'departamentos','PrimerosAuxilios')"><i class="material-symbols-outlined">map</i> Planta baja</button> <button
+                    class="btn btn-md btn-primary btn-theme m-1" onclick="plano(1,'departamentos','PrimerosAuxilios')"><i
                       class="material-symbols-outlined">map</i> Planta alta</button></p>
               </div>
             </div>
@@ -696,9 +696,9 @@
               <div class="card-body">
                 <h5 class="card-title">Plan de evacuación</h5>
                 <p class="card-text">En el plano del predio se encuentra el plan de evacuación.</p>
-                <p class="card-text"> <button class="btn btn-md btn-primary m-1" onclick="plano(0,'evacuacion')"><i
+                <p class="card-text"> <button class="btn btn-md btn-primary btn-theme m-1" onclick="plano(0,'evacuacion')"><i
                       class="material-symbols-outlined">map</i> Planta baja</button> <button
-                    class="btn btn-md btn-primary m-1" onclick="plano(1,'evacuacion')"><i
+                    class="btn btn-md btn-primary btn-theme m-1" onclick="plano(1,'evacuacion')"><i
                       class="material-symbols-outlined">map</i> Planta alta</button></p>
               </div>
             </div>
@@ -829,9 +829,9 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">Usando el servicio de guarda de alimentos</h5>
-                <p class="card-text">Contamos con un servicio para guardar los alimentos. Hay un puesto en cada piso:</a></p><p class="card-text"> <button class="btn btn-md btn-primary m-1" onclick="plano(0,'departamentos','GuardaAlimentos')"><i
+                <p class="card-text">Contamos con un servicio para guardar los alimentos. Hay un puesto en cada piso:</a></p><p class="card-text"> <button class="btn btn-md btn-primary btn-theme m-1" onclick="plano(0,'departamentos','GuardaAlimentos')"><i
                       class="material-symbols-outlined">map</i> Planta baja</button> <button
-                    class="btn btn-md btn-primary m-1" onclick="plano(1,'departamentos','GuardaAlimentos')"><i
+                    class="btn btn-md btn-primary btn-theme m-1" onclick="plano(1,'departamentos','GuardaAlimentos')"><i
                       class="material-symbols-outlined">map</i> Planta alta</button></p>
                 <p>A continuación se explica como funciona.</p>
               </div>
@@ -863,9 +863,9 @@
                 <div class="card-body">
                   <h5 class="card-title">2. Llevarla al puesto de guarda</h5>
                   <p class="card-text">Hay un puesto en cada piso.</p>
-                  <button class="btn btn-sm btn-primary m-1" onclick="plano(0,'departamentos','GuardaAlimentos')"><i
+                  <button class="btn btn-sm btn-primary btn-theme m-1" onclick="plano(0,'departamentos','GuardaAlimentos')"><i
                       class="material-symbols-outlined">map</i> Planta baja</button> <button
-                    class="btn btn-sm btn-primary m-1" onclick="plano(1,'departamentos','GuardaAlimentos')"><i
+                    class="btn btn-sm btn-primary btn-theme m-1" onclick="plano(1,'departamentos','GuardaAlimentos')"><i
                       class="material-symbols-outlined">map</i> Planta alta</button>
 
                 </div>
@@ -1187,7 +1187,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="script.js?v=1.1.2"></script>
+  <script src="script.js?v=1.1.8"></script>
   <script src="plano.js?v=1.1.2"></script>
   <script src="hack.js"></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="9c22250e-d4b0-470b-9dfc-9f1f7c5badf4"></script>
