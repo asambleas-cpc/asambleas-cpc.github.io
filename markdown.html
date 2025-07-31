@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="Asambleas en el CPC" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Favicons -->
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="icons/icon-16x16.png">
+  <link rel="icon" sizes="32x32" href="icons/icon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180x180.png">
+  <link rel="icon" sizes="192x192" href="icons/icon-192x192.png">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Asambleas en el CPC (Markdown Version)</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=1.1.8" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Botón flotante para volver al inicio -->
+  <a href="#inicio" id="backToTopBtn" class="back-to-top" aria-label="Volver al inicio">
+    <i class="material-symbols-outlined">arrow_upward</i>
+  </a>
+
+  <!-- 🔻 Fullscreen Scroll Snap Sections -->
+  <main class="snap-container">
+
+    <!-- 🔻 Section 1: Inicio (Rendered from Markdown) -->
+    <section id="inicio" class="section-inicio snap-section">
+      <div class="container pt-5" id="inicio-content">
+        <p>Cargando...</p>
+      </div>
+    </section>
+
+    <!-- 🔻 Section 2: Transporte (Rendered from Markdown) -->
+    <section id="transporte" class="section-transporte snap-section">
+      <i class="section-icon material-symbols-outlined">pin_drop</i>
+      <div class="container pt-5" id="transporte-content">
+        <p>Cargando...</p>
+      </div>
+    </section>
+
+    <!-- 🔻 Section 3: Auditorios (Rendered from Markdown) -->
+    <section id="auditorios" class="section-auditorios snap-section">
+      <i class="section-icon material-symbols-outlined">airline_seat_recline_normal</i>
+      <div class="container pt-5" id="auditorios-content">
+        <p>Cargando...</p>
+      </div>
+    </section>
+
+    <!-- 🔻 Section 4: Alimentos (Rendered from Markdown) -->
+    <section id="alimentos" class="section-alimentos snap-section">
+      <i class="section-icon material-symbols-outlined">fastfood</i>
+      <div class="container pt-5" id="alimentos-content">
+        <p>Cargando...</p>
+      </div>
+    </section>
+
+    <!-- 🔻 Section 5: Alojamiento (Rendered from Markdown) -->
+    <section id="alojamiento" class="section-alojamiento snap-section">
+      <i class="section-icon material-symbols-outlined">hotel</i>
+      <div class="container pt-5" id="alojamiento-content">
+        <p>Cargando...</p>
+      </div>
+    </section>
+
+    <!-- 🔻 Section 6: Conclusion (Rendered from Markdown) -->
+    <section id="conclusion" class="section-inicio snap-section">
+      <div class="container pt-5" id="conclusion-content">
+        <p>Cargando...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <svg width="0" height="0" style="position:absolute; display: none;" id="svgAlimentos">
+    <defs>
+      <symbol id="alimentos01" viewBox="0 0 1024 1024">
+        <path d="M0 0h1024v1024H0V0Z" class="drawing-background" />
+        <path d="M0 691v333h1024V691H787l7 171-201 47c-167 40-197 44-217 46l-162-83 16-181z" class="drawing-objects" />
+        <path
+          d="m593 909 201-47c-7-186-16-371-24-556 0-11 2-24-13-21l-54-3c-4-37-10-74-26-107-15-32-41-64-78-70-13-3-28 2-38-8a76 76 0 0 0-86 2c-31 22-48 58-60 93-8 23-12 47-16 71-11 0-29-9-23 10l15 676c0 13 21-1 30 0l172-40zm87-575c-13-11-2-36 16-31 19 1 22 29 5 35-7 4-16 2-21-4zm-220 0c-11-9-5-32 11-32 18-4 25 19 16 31-5 9-20 10-27 1zm183-59c-5-49-16-98-42-140-10-15 17 2 22 7a117 117 0 0 1 37 50c12 26 21 55 23 84 1 6-8 2-12 3-9-1-19 1-28-2zm-93-2-62-4c-5-10 4-25 6-37 9-34 24-70 53-92 11-12 27-9 34 6 22 34 33 74 38 114 5 14-3 19-16 15l-53-2zm-127-10c1-24 5-47 12-69 12-34 33-69 68-81 11-3 28-6 36 2-12 11-25 22-34 36-23 33-34 71-41 110-9 9-27 2-39 2zm-49 688-62-105-94 25c29-15 58-27 87-41 4-185 5-370 10-555-16 1-32-1-47 2-4 25-5 50-8 76l-46 519 162 82c1-1-3-3-2-3zm3-18c-7-220-10-440-17-659 1-9 0-18-10-10l-20 10c-1 130-4 259-6 389l-2 167c-1 10 6 17 9 25l47 97-1-19z"
+          class="drawing-highlight" />
+      </symbol>
+      <symbol id="alimentos02" viewBox="0 0 1024 1024">
+        <path id="fondo" d="M0 0h1024v1024H0V0Z" class="drawing-background" />
+        <path id="bolsa"
+          d="m616 732 75-18-9-206c0-4 0-9-5-8l-20-1c-2-14-4-28-10-40-5-12-15-24-29-26-4-1-10 1-14-3-10-6-23-6-32 1-11 8-18 21-22 34l-6 27c-4 0-11-3-9 3l6 252c0 5 8-1 11 0zm32-214c-4-4 0-13 6-11 7 0 8 10 2 13-3 1-6 0-8-2zm-81 0c-5-3-2-12 4-12 6-1 9 7 6 12-2 3-8 3-10 0zm67-22c-1-18-5-36-15-52-4-5 6 1 8 3 6 4 11 11 14 18 5 10 8 21 8 32 1 2-3 0-4 1l-10-1zm-34-1-23-1c-2-4 1-9 2-14 4-12 9-26 20-34 4-4 10-3 12 2 9 13 13 28 15 43 2 5-2 7-6 5zm-47-3c0-9 2-18 4-26 5-12 12-26 26-30 4-1 10-2 13 1l-13 13c-8 12-12 27-15 41-3 3-10 1-15 1zm-18 256-24-39-34 9c10-6 21-10 32-15l4-207-18 1-3 28-17 193 60 31zm1-7-7-245c1-4 0-7-3-4l-8 4-2 145-1 62c0 3 2 6 4 9l17 36z"
+          class="drawing-highlight" />
+        <path id="hermano"
+          d="m787 525 5-94c-19-1-84-11-103-11-17-11-33-26-54-30-18-6-34 4-51 9-16 2-41 19-17 32 9 2 3 9 11 14 12 12 19 33 39 35 16-7 31-1 47 0 21-10 0 23 17 27 24 5 81 15 106 18z"
+          class="drawing-objects" />
+        <path id="hermano2"
+          d="m859 54-11 1c-26 4-52 15-72 33-15 8-8 22-8 35-12 19-1 39-1 58-4 12-26 40-1 44 6 12 9 28 15 41-1 23 21 32 40 25 19-8 29 18 28 33-14 14-28 30-36 48a599 599 0 0 0-44 181l-6 93c-3 53-2 107-2 160 0 16-6 42 19 38 0 60 2 120 7 180h237V354c5-20-11-32-24-43-16-14-31-28-45-43-16-11-9-24-6-38-1-26 13-50 14-76 4-29-9-59-31-78-21-16-47-23-73-22z"
+          class="drawing-objects" />
+        <path id="ticket" d="m474 332-62 15 10 39 61-15z" class="drawing-highlight" />
+        <path id="mostrador" d="M276 770v23h21v231h396V793h21v-23H276z" class="drawing-objects" />
+        <path id="hermana"
+          d="M167 63c-8 1-15 1-22 3-33 6-61 34-68 66-10 33-4 70-15 104l-9 26c-13 18-25 36-31 58-7 24-12 53 3 75 10 13-3 30 0 45-1 36 7 71 6 107 1 19-1 37-6 55-5 21-15 41-19 62-14 119-6 240-6 360h227c1-75-5-150-9-225l-4-65c14-3 2-24 5-35-1-21-5-41-1-62 3-27 8-54 9-82 13 4 28 3 38-7l91-73c10-9-11-23 0-29 10-14 23-16 39-14 15-6 17-8 26-8l12-9c5-1 10-9 13-22-3-23-17-18-29-27-20-10-30 6-49 18-14 7-26 19-40 26-11-3-18 9-27 14l-54 37c-12-1-17-21-20-32-12-36-38-69-54-104-1-8 14-47 20-53 12 2 41 5 52-4 7-9 6-21 11-31 1-11 3-10 9-12 4-1 7-5 6-10l-11-45c0-12 15-22 11-37-1-24-22-41-42-51-18-13-41-19-62-19Z"
+          class="drawing-objects" />
+      </symbol>
+      <symbol id="alimentos03" viewBox="0 0 1024 1024">
+        <path id="fondo" d="M0 0h1024v1024H0V0Z" class="drawing-background" />
+        <path id="ticket" d="M680 80 235 190l70 286 446-110Z" class="drawing-highlight" />
+        <path id="mano"
+          d="M518 316c-45 0-81 38-92 80-26 73-31 154-77 219-35 60-89 109-106 178-10 38-22 76-27 115-21 11-55-2-63 33-14 25-46 63-46 83 127 0 254 2 382 1 31-2 51-33 77-49 67-51 136-99 202-151 36-30 30-79 19-120-12-68-18-137-31-205-10-41-53-57-81-82-25-31-61-28-93-14-20-20-4-78-49-85l-8-2zm34 165c16 10 58 36 16 29-34 6-23-4-16-29Zm3 129c14 1 10 32-6 14-11-6-45-16-15-14h21z"
+          class="drawing-objects" />
+      </symbol>
+      <symbol id="alimentos04" viewBox="0 0 1024 1024">
+        <path id="fondo" d="M0 0h1024v1024H0V0Z" class="drawing-background" />
+        <path id="ticket" d="m569 369 61 15-9 39-62-15z" class="drawing-highlight" />
+        <path id="hermano-1"
+          d="m796 571 25-91c-18-5-79-29-98-33-14-15-26-33-46-41-16-10-34-4-52-2-16-2-44 9-23 27 8 4 1 10 7 16 10 14 12 36 31 43 17-4 30 6 46 10 22-5-5 22 11 30l99 41z"
+          class="drawing-objects" />
+        <path id="hermano2"
+          d="m859 54-11 1c-26 4-52 15-72 33-15 8-8 22-8 35-12 19-1 39-1 58-4 12-26 40-1 44 6 12 9 28 15 41-1 23 21 32 40 25 19-8 29 18 28 33-14 14-28 30-36 48a599 599 0 0 0-44 181l-6 93c-3 53-2 107-2 160 0 16-6 42 19 38 0 60 2 120 7 180h237V354c5-20-11-32-24-43-16-14-31-28-45-43-16-11-9-24-6-38-1-26 13-50 14-76 4-29-9-59-31-78-21-16-47-23-73-22Z"
+          class="drawing-objects" />
+        <path id="mano2"
+          d="m193 612-10 79a1791 1791 0 0 1 64 19c8 2 16 5 24 4 5-3 6-6 8-11l1-3 3-4 22 18c10 10 19 18 31 24l3 2c9 5 18 11 28 11 5-1 9 1 13 3s6 4 11 4l5-2 5-3 10 1 2-7-1-4 4-1 1-8-17-16a432 432 0 0 1-46-42l9 2c10 3 16 4 26 0l1-6-7-5-2-1a559 559 0 0 0-29-13c-14-7-29-7-44-3l-18 2-1-9c-5-4-5-4-51-17l-45-14z"
+          class="drawing-objects" />
+        <path id="mostrador" d="M276 770v23h21v231h396V793h21v-23H276z" class="drawing-objects" />
+        <path id="bolsa"
+          d="m397 708-75-18 9-206c0-4-1-9 5-8l20-1c1-14 3-28 9-40s16-24 29-26c5-1 11 1 15-3 9-6 22-6 31 1 12 8 18 21 23 34l6 27c4 0 11-3 8 3l-5 252c0 5-8-1-11 0zm-33-214c5-4 1-13-6-12s-8 11-1 14c2 1 5 0 7-2zm82 0c4-3 2-12-4-12-7-1-10 7-6 12 2 3 8 3 10 0zm-68-22c2-18 6-36 16-52 3-5-7 1-8 3-7 4-11 11-14 18-5 10-8 21-9 31 0 3 3 1 5 2l10-1zm35-1 23-1c1-4-2-9-2-14-4-12-9-26-20-34-4-4-10-4-13 2-8 13-12 28-14 43-2 5 1 6 6 5zm47-3c0-9-2-18-5-26-4-13-12-26-25-30-4-1-10-2-13 1 4 4 9 8 12 13 9 12 13 27 16 41 3 3 9 1 14 1zm18 255 23-39 35 10-32-16-4-206 18 1 2 28 17 193-60 31zm-1-6c2-82 3-164 6-245 0-4 0-7 4-4l7 4 3 144v63c1 3-2 6-3 9l-18 36z"
+          class="drawing-highlight" />
+        <path id="hermana"
+          d="M167 63c-8 1-15 1-22 3-33 6-61 34-68 66-10 33-4 70-15 104l-9 26c-13 18-25 36-31 58-7 24-12 53 3 75 10 13-3 30 0 45-1 36 7 71 6 107 1 19-1 37-6 55-5 21-15 41-19 62-14 119-6 240-6 360h227c1-75-5-150-9-225l-4-65c14-3 2-24 5-35-1-21-5-41-1-62 3-27 8-54 9-82 13 4 28 3 38-7l91-73c10-9-11-23 0-29 10-14 23-16 39-14 15-6 17-8 26-8l12-9c5-1 10-9 13-22-3-23-17-18-29-27-20-10-30 6-49 18-14 7-26 19-40 26-11-3-18 9-27 14l-54 37c-12-1-17-21-20-32-12-36-38-69-54-104-1-8 14-47 20-53 12 2 41 5 52-4 7-9 6-21 11-31 1-11 3-10 9-12 4-1 7-5 6-10l-11-45c0-12 15-22 11-37-1-24-22-41-42-51-18-13-41-19-62-19Z"
+          class="drawing-objects" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Fullscreen Modal -->
+  <div class="modal fade plano-modal-styles" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body" style="padding: 0;">
+          <!-- Vertical Toolbar -->
+          <div class="vertical-toolbar d-flex flex-column position-fixed top-0 end-0 m-3 gap-3">
+            <!-- Close button -->
+            <div id="close-control" class="btn-group-vertical" role="group" aria-label="Close control">
+              <button id="btn-close-window" type="button" class="btn btn-danger" data-bs-dismiss="modal"><span
+                  class="material-icons">close</span></button>
+            </div>
+            <!-- Floor Controls -->
+            <div id="floor-controls" class="btn-group-vertical" role="group" aria-label="Floor controls">
+            </div>
+
+            <!-- Layer Selector -->
+            <div id="feature-controls" class="dropdown">
+              <button class="btn" type="button" id="layer-selector-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons">layers</span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="layer-selector-btn">
+              </ul>
+            </div>
+
+            <!-- Zoom Controls -->
+            <div class="btn-group-vertical" role="group" aria-label="Zoom controls">
+              <button id="zoom-in" type="button" class="btn"><span class="material-icons">add</span></button>
+              <button id="zoom-out" type="button" class="btn"><span class="material-icons">remove</span></button>
+            </div>
+          </div>
+
+          <div id="map">
+            <!-- Spinner -->
+            <div id="map-loader" class="d-flex justify-content-center align-items-center h-100"
+              style="background-color: #ccc;">
+              <!-- <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div> -->
+            </div>
+          </div>
+
+          <!-- Map Title -->
+          <div id="map-title" class="position-fixed top-0 start-0 m-3" style="z-index: 1000;">
+            <h5 id="layer-title" class="mb-0"></h5>
+            <small id="floor-subtitle" class="text-muted"></small>
+          </div>
+
+          <!-- Single Offcanvas -->
+          <div class="offcanvas offcanvas-bottom info-offcanvas" tabindex="-1" id="mainOffcanvas"
+            aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
+            <div class="offcanvas-body text-white" id="mainOffcanvasBody">
+              <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+              <!-- Content will be dynamically loaded here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🪟 Modal -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Información</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="tabla-loading">Cargando...</div>
+          <div class="table-responsive">
+            <table class="table table-striped" id="tabla-datos">
+              <thead>
+                <tr id="tabla-head"></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 🖥️ Video Modal -->
+
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-body p-0">
+          <video id="customVideo" class="w-100" controls playsinline>
+            <source id="videoSource" src="" type="video/mp4">
+            Su navegador no soporta la reproducción de video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 🧠 Bootstrap + tooltip init -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js?v=1.1.8"></script>
+  <script src="plano.js?v=1.1.2"></script>
+  <script src="hack.js"></script>
+  <script src="markdown-renderer.js"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="9c22250e-d4b0-470b-9dfc-9f1f7c5badf4"></script>
+
+
+
+</body>
+
+</html>
