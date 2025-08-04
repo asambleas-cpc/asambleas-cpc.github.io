@@ -211,7 +211,7 @@ function abrirMapa(rawCoords, nombre = '', share = false) {
     if (navigator.share) {
       navigator.share({
         title: `Ubicación: ${nombre}`,
-        text: `Te comparto la ubicación de "${nombre}"`,
+        text: `Ubicación por GPS de "${nombre}"`,
         url: gmapsUrl,
       })
       .then(() => console.log('Successful share'))
