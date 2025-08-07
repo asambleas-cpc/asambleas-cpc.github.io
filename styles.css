@@ -228,6 +228,10 @@ body::before {
   }
 
   /* --- Accordion Custom Styles --- */
+  .accordion-item {
+    border-color: hsl(from var(--section-theme-color) h s 80%);;
+  }
+
   .accordion-button {
     color: inherit;
     /* Inherit default text color */
@@ -357,6 +361,7 @@ body::before {
 .card-themed-icon {
   overflow: hidden;
   /* Ensures the child's corners are clipped */
+  border: 1px solid var(--card-theme-color, var(--section-theme-color));
 }
 
 .card-themed-icon .icon-half {
