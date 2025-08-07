@@ -112,6 +112,7 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Cómo es el <em>Centro Provincial de Convenciones</em></h5>
                 <p class="card-text">
+                  El CPC se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por varios medios de transporte.
                 <ul>
                   <li>Dos auditorios alfombrados y climatizados para 1800 asistentes.</li>
                   <li>Vestíbulos amplios y luminosos con vista al parque Urquiza y el río Paraná.</li>
@@ -213,23 +214,37 @@
         <header class="section-header">
           <h2 class="display-5">Cómo llegar</h2>
         </header>
-        <p>El predio se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por varios
-          medios de transporte. Elija un medio para más información</p>
-        <p><div class="btn-group" role="group" aria-label="Ubicación del CPC"><button class="btn btn-lg btn-primary btn-theme"
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardGuardarAuto">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">pin_drop</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Dirección</h5>
+                <p class="card-text">Calle San Martín 15, Paraná.</em></p>
+                <p class="card-text"><div class="btn-group" role="group" aria-label="Ubicación del CPC"><button class="btn btn-lg btn-primary btn-theme"
             onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones')" role="button"
             target="_blank"><i class="material-symbols-outlined">pin_drop</i> Abrir ubicación</button>
           <button class="btn btn-lg btn-primary btn-theme"
             onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones', true)" role="button"
             target="_blank"><i class="material-symbols-outlined">share</i></button></div></p>
-
+              </div>
+            </div>
+          </div>
+          </div>
+        
+          
+        <h3>Medios de transporte</h3>
         <div class="accordion" id="accordionTransporte">
+          
           <!-- Auto Particular -->
           <div class="accordion-item">
-            <h5 class="accordion-header" id="collapseAuto">
+            <h5 class="accordion-header" id="headingAuto">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseAuto" aria-expanded="false" aria-controls="collapseAuto">
+                data-bs-target="#collapseAuto " aria-expanded="false" aria-controls="collapseAuto">
                 <i class="material-symbols-outlined me-2">directions_car</i> Auto particular
-              </button>
+              </button></h5>
               </h2>
               <div id="collapseAuto" class="accordion-collapse collapse" aria-labelledby="headingAuto"
                 data-bs-parent="#accordionTransporte">
