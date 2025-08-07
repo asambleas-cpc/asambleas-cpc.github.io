@@ -216,12 +216,12 @@ body::before {
   /* Themed primary buttons */
   .btn-theme {
     background-color: var(--section-theme-color);
-    border-color: var(--section-theme-bg-color);
+    border-color: hsl(from var(--section-theme-color) h s 65%);
     color: white;
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 
     &:hover {
-      background-color: transparent;
+      background-color: var(--section-theme-bg-color);
       border-color: var(--section-theme-color);
       color: var(--section-theme-color);
     }
@@ -229,7 +229,7 @@ body::before {
 
   /* --- Accordion Custom Styles --- */
   .accordion-item {
-    border-color: hsl(from var(--section-theme-color) h s 80%);;
+    border-color: hsl(from var(--section-theme-color) h s 80%);
   }
 
   .accordion-button {
