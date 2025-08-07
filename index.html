@@ -254,10 +254,15 @@
                   <ul>
                     <li><strong>En las calles.</strong> En los alrededores del CPC hay abundantes lugares para
                       estacionar
-                      en la calle. Sin embargo, generalmente hay cuidacoches.</li>
+                      en la calle. Sin embargo, generalmente hay cuidacoches.
+                    <br> <button
+                        class="btn btn-md btn-primary btn-theme" onclick="mostrarDatos('estacionamiento')">
+                        Lugares donde estacionar en la calle
+                      </button>
+                    </li>
                     <li><strong>Cocheras. </strong>Tambien hay disponibles estacionamientos pagos.<br> <button
                         class="btn btn-md btn-primary btn-theme" onclick="mostrarDatos('estacionamiento')">
-                        Listado de cocheras en la zona del CPC
+                        Cocheras cercanas
                       </button></li>
                     <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios en el estacionamiento interno para personas con limitaciones físicas. Si considera que califica para solicitarlo, por
                       favor, contáctese con los ancianos de su congregación. Tenga en cuenta que se van a controlar los
@@ -295,10 +300,10 @@
                   <p>El CPC se encuentra a X cuadras de la terminal.</p>
                   <ul>
                     <li><strong>Taxis, remises y aplicaciones.</strong> El costo ronda entre $X y $vX y se llega en X
-                      minutos. Para más detalles <a href="#auditorios">vea la sección más abajo</a>.</li>
+                      minutos. Para más detalles <a href="#collapseTaxi" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTaxi">vea la sección de taxis y apps.</a></li>
                     <li><strong>Colectivos urbanos.</strong> El pasaje sale $X, se paga con SUBE y se llega en X
                       minutos.
-                      Para más detalles <a href="#auditorios">vea la sección de colectivos urbanos</a>.</li>
+                      Para más detalles <a href="#collapseUrbano" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseUrbano">vea la sección de colectivos urbanos</a>.</li>
                   </ul>
                 </div>
               </div>
@@ -399,11 +404,6 @@
         class="section-icon material-symbols-outlined">airline_seat_recline_normal</i>
       <div class="container pt-5">
         <h2 class="display-5">Dónde ubicarse</h2>
-        <h3>Plano interactivo del CPC</h3>
-        <p>Contamos con un plano interactivo para conocer mejor el predio.</p>
-        <p><button class="btn btn-lg btn-primary btn-theme" onclick="plano()"><i class="material-symbols-outlined">map</i> Abrir plano
-            del predio</button></p>
-
         <h3>Auditorios</h3>
         <p>El CPC tiene dos auditorios cómodos y climatizados. Para las asambleas, cada auditorio se asigna a un público específico.</p>
         <div class="row">
@@ -465,6 +465,11 @@
         </div></div>
 
       </div>
+              <h3>Plano interactivo del CPC</h3>
+        <p>Contamos con un plano interactivo para conocer mejor el predio.</p>
+        <p><button class="btn btn-lg btn-primary btn-theme" onclick="plano()"><i class="material-symbols-outlined">map</i> Abrir plano
+            del predio</button></p>
+            
         <h3>Instalaciones</h3>
         <div class="accordion" id="accordionInstalaciones">
           <!-- Baños -->
