@@ -201,15 +201,20 @@ body::before {
   /* Themed links */
   p a,
   li a {
-    color: inherit;
-    text-decoration-style: dotted;
+    padding: .25rem .25rem;
+    margin: -.25rem -.25rem;
+    color: var(--section-theme-color);
+    font-weight: 600;
+    text-decoration: none;;
+    /* text-decoration-color: var(--section-theme-bg-color); */
+    /* text-decoration-style: dotted; */
     transition: color 0.2s ease, background-color 0.2s ease;
-    border-radius: 0.25em;
+    border-radius: .25rem ;
 
     &:hover {
-      color: var(--section-theme-bg-color);
+      color: white;
       background-color: var(--section-theme-color);
-      border-bottom-color: transparent;
+      text-decoration-color: transparent;
     }
   }
 
@@ -217,6 +222,7 @@ body::before {
   .btn-theme {
     background-color: var(--section-theme-color);
     border-color: hsl(from var(--section-theme-color) h s 65%);
+    
     color: white;
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 
