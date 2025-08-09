@@ -14,7 +14,7 @@
   --icon-faint-lighten: 60%;
 
   /* Colors for each section */
-  --inicio-color: hsl(140, 62%, 31%);
+  --inicio-color: hsl(224, 40%, 35%);
   --inicio-bg: hsl(from var(--inicio-color) h 5% 95%);
   --inicio-comp: hsl(from var(--inicio-color) calc(h + 180) s l);
   --inicio-comp-bg: hsl(from var(--inicio-comp) h s var(--bg-lighten));
