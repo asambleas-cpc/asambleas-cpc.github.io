@@ -77,15 +77,24 @@ document.querySelectorAll('.scroll-wrapper').forEach(wrapper => {
 });
 
 const fuentesDatos = {
-  estacionamiento: {
+  cocheras: {
     url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0",
-    titulo: "Estacionamientos cercanos al CPC",
-    columnas: ["Nombre", "Distancia del CPC", "Costo", ""],
+    titulo: "Cocheras cercanas al CPC",
+    columnas: ["Nombre", "Distancia del CPC (cuadras)", "Costo", ""],
     procesar: (c) => ([
-      `<strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small>`,
-      `${c[2]?.v || ''} cuadras`,
-      `${c[3]?.v || ''}`,
-      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')" class="geo-link">Ver en mapa</a>`
+      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')" class="geo-link"><strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small></a>`,
+      `${c[2]?.v || ''} `,
+      `${c[3]?.v || ''}`
+    ])
+  },
+    estacionamiento: {
+    url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0",
+    titulo: "Estacionamiento cercano al CPC",
+    columnas: ["Lugar", "Distancia del CPC (cuadras)", "Comentaios"],
+    procesar: (c) => ([
+      `<a href="javascript:abrirMapa('${c[4]?.v || ''}','${c[0]?.v || ''}')" class="geo-link">${c[0]?.v || ''}</a>`,
+      `${c[1]?.v || ''}`,
+      `${c[2]?.v || ''}`
     ])
   },
   colectivos: {
@@ -94,59 +103,77 @@ const fuentesDatos = {
     columnas: ["Línea - Ramal", "Parada (nro.)", "Distancia del CPC (cuadras)"],
     procesar: (c) => ([
       `<strong>${c[0]?.v || ''}</strong><br>${c[1]?.v || ''}`,
-      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','',false,true)" class="geo-link">${c[3]?.v || ''}`,
+      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','',false,true)" class="geo-link">${c[3]?.v || ''}</a>`,
       `${c[4]?.v || ''}`
     ])
     
   }
 };
 
+// Pre-populates a table with data from a Google Sheet.
+function populateTable(tipo) {
+  const config = fuentesDatos[tipo];
+  if (!config) return;
+
+  const tbody = document.getElementById(`tbody-${tipo}`);
+  const loader = document.getElementById('tabla-loading');
+  
+  if(tbody) {
+    loader.style.display = 'block';
+    fetch(config.url)
+      .then(res => res.text())
+      .then(text => {
+        const json = JSON.parse(text.substring(47).slice(0, -2));
+        const rows = json.table.rows;
+
+        rows.forEach(row => {
+          const c = row.c;
+          const tr = document.createElement('tr');
+          const cells = config.procesar(c);
+          tr.innerHTML = cells.map(cell => `<td>${cell}</td>`).join('');
+          tbody.appendChild(tr);
+        });
+        loader.style.display = 'none';
+      })
+      .catch(err => {
+        tbody.innerHTML = `<tr><td colspan="${config.columnas.length}">Error al cargar los datos.</td></tr>`;
+        console.error(`Error fetching data for ${tipo}:`, err);
+        loader.style.display = 'none';
+      });
+  }
+}
+
+// New function to show the pre-populated modal
 function mostrarDatos(tipo) {
   const config = fuentesDatos[tipo];
   if (!config) return;
 
   const modal = new bootstrap.Modal(document.getElementById('infoModal'));
   const titulo = document.getElementById('infoModalLabel');
-  const loader = document.getElementById('tabla-loading');
-  const thead = document.getElementById('tabla-head');
-  const tbody = document.querySelector('#tabla-datos tbody');
-
+  
+  // Set title
   titulo.textContent = config.titulo;
-  loader.style.display = 'block';
-  thead.innerHTML = '';
-  tbody.innerHTML = '';
 
-  // Insert headers
-  config.columnas.forEach(col => {
-    const th = document.createElement('th');
-    th.textContent = col;
-    thead.appendChild(th);
+  // Hide all tables first
+  document.querySelectorAll('.data-table').forEach(table => {
+    table.style.display = 'none';
   });
 
-  // Fetch data
-  fetch(config.url)
-    .then(res => res.text())
-    .then(text => {
-      const json = JSON.parse(text.substring(47).slice(0, -2));
-      const rows = json.table.rows;
-
-      for (const row of rows) {
-        const c = row.c;
-        const tr = document.createElement('tr');
-        const cells = config.procesar(c);
-        tr.innerHTML = cells.map(cell => `<td>${cell}</td>`).join('');
-        tbody.appendChild(tr);
-      }
-
-      loader.style.display = 'none';
-    })
-    .catch(err => {
-      loader.textContent = "Error al cargar los datos.";
-      console.error("Error fetching data for", tipo, err);
-    });
+  // Show the correct one
+  const tableToShow = document.getElementById(`tabla-${tipo}`);
+  if (tableToShow) {
+    tableToShow.style.display = 'table';
+  }
 
   modal.show();
 }
+
+// Populate all tables on page load
+document.addEventListener('DOMContentLoaded', () => {
+  populateTable('cocheras');
+  populateTable('estacionamiento');
+  populateTable('colectivos');
+});
 
 
 
@@ -192,7 +219,7 @@ function mostrarDatos(tipo) {
 // });
 
 function abrirMapa(rawCoords, nombre = '', share = false, walking = false) {
-  const DESTINATION_COORDS = '-31.721610,-60.52522';
+  const DESTINATION_COORDS = '-31.721622,-60.525844';
 
   // Handle walking directions to the hardcoded destination
   if (walking) {

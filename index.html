@@ -269,7 +269,7 @@
                       </button>
                     </li>
                     <li><strong>Cocheras. </strong>Tambien hay disponibles estacionamientos pagos.<br> <button
-                        class="btn btn-md btn-primary btn-theme" onclick="mostrarDatos('estacionamiento')">
+                        class="btn btn-md btn-primary btn-theme" onclick="mostrarDatos('cocheras')">
                         Cocheras cercanas
                       </button></li>
                     <li><strong>Asistentes con limitaciones.</strong> Hay un número limitado de espacios en el estacionamiento interno para personas con limitaciones físicas. Si considera que califica para solicitarlo, por
@@ -331,7 +331,7 @@
                   </p>
 
                   <button class="btn btn-primary btn-theme btn-md mt-2" onclick="mostrarDatos('colectivos')">
-                    Lista de líneas que llegan al CPC
+                    Líneas que llegan al CPC
                   </button>
                 </div>
               </div>
@@ -1167,13 +1167,41 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
-          <div id="tabla-loading">Cargando...</div>
+          <div id="tabla-loading" style="display: none;">Cargando...</div>
           <div class="table-responsive">
-            <table class="table table-striped" id="tabla-datos">
+            <!-- Parking Table -->
+            <table class="table table-striped data-table" id="tabla-cocheras" style="display:none;">
               <thead>
-                <tr id="tabla-head"></tr>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Distancia del CPC</th>
+                  <th>Costo</th>
+                  <th></th>
+                </tr>
               </thead>
-              <tbody></tbody>
+              <tbody id="tbody-cocheras"></tbody>
+            </table>
+                        <!-- Parking Table -->
+            <table class="table table-striped data-table" id="tabla-estacionamiento" style="display:none;">
+              <thead>
+                <tr>
+                  <th>Lugar</th>
+                  <th>Distancia del CPC</th>
+                  <th>Comentarios</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-estacionamiento"></tbody>
+            </table>
+            <!-- Bus Table -->
+            <table class="table table-striped data-table" id="tabla-colectivos" style="display:none;">
+              <thead>
+                <tr>
+                  <th>Línea - Ramal</th>
+                  <th>Parada</th>
+                  <th>Distancia del CPC</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-colectivos"></tbody>
             </table>
           </div>
         </div>
