@@ -15,9 +15,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-   inkscape:current-layer="layGuardaAlimentosPA"
-   inkscape:cx="1893.2784"
-   inkscape:cy="2304.6378"
+   inkscape:current-layer="layDepartamentosInstalacionesPA"
+   inkscape:cx="1789"
+   inkscape:cy="2108.5"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -27,7 +27,7 @@
    inkscape:window-width="1920"
    inkscape:window-x="-8"
    inkscape:window-y="262"
-   inkscape:zoom="2.8284271"
+   inkscape:zoom="1"
    id="namedview1"
    bordercolor="#eeeeee"
    borderopacity="1"
@@ -4312,10 +4312,13 @@
    style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:0.368946;mix-blend-mode:darken;vector-effect:none;fill:#8fff7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter3);text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
         <path
    id="guardaIngresoPA"
-   d="m 1948.4947,2319.42 -0.1241,37.9192"
-   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#3188cd;stroke-width:6.58186;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5-1);paint-order:normal;text-rendering:geometricPrecision"
+   d="m 1951.4497,2309.96 -0.42,51.1395"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#3188cd;stroke-width:7.00079;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5-1);paint-order:normal;text-rendering:geometricPrecision"
    sodipodi:nodetypes="cc" />
-        
+        <path
+   id="guardaEgresoPA"
+   d="m 1862.8,2363.47 c -43.18,-0.41 -370.7,2.16 -372.63,-0.55 -1.1,-1.54 -0.32,-137.55 -0.63,-182"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient109);stroke-width:15.0017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker97-3);paint-order:normal;text-rendering:geometricPrecision;stop-color:#000000" />
         <text
    xml:space="preserve"
    id="text7-4-1"
@@ -4340,16 +4343,8 @@
      style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-family:Cabin;-inkscape-font-specification:'Cabin Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.50017;stroke-dasharray:none;stroke-opacity:0.436519;paint-order:markers stroke fill">Salida</tspan></text>
       <path
    id="path110"
-   d="m 1958.398,2351.9914 -0.4786,-40.6774"
-   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:#ff6600;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:6.66535;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5-1);paint-order:normal;text-rendering:geometricPrecision"
-   sodipodi:nodetypes="cc" /><path
-   id="path115"
-   d="m 1845.0075,2357.2697 -38.2843,0.126"
-   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#3188cd;stroke-width:6.58186;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5-1);paint-order:normal;text-rendering:geometricPrecision"
-   sodipodi:nodetypes="cc" /><path
-   id="path126"
-   d="m 1812.071,2367.4231 40.6774,-0.4786"
-   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:#ff6600;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:6.66535;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5-1);paint-order:normal;text-rendering:geometricPrecision"
+   d="m 1959.3094,2309.96 -0.42,51.1395"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#3188cd;stroke-width:7.00079;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker97-5-1);paint-order:normal;text-rendering:geometricPrecision"
    sodipodi:nodetypes="cc" /></g>
       <g
    inkscape:groupmode="layer"
