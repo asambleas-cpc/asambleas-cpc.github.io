@@ -85,21 +85,17 @@ const fuentesDatos = {
       `<strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small>`,
       `${c[2]?.v || ''} cuadras`,
       `${c[3]?.v || ''}`,
-      `<button class="btn btn-sm btn-outline-primary" onclick="abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')">
-        <i class="bi bi-geo-alt-fill"></i> Ver en mapa</button>`
+      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')" class="geo-link">Ver en mapa</a>`
     ])
   },
   colectivos: {
     url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=1511722551",
     titulo: "Líneas de colectivos que llegan al CPC",
-    columnas: ["Línea - Ramal", "Frecuencia","Parada", "Distancia del CPC", ""],
+    columnas: ["Línea - Ramal", "Parada (nro.)", "Distancia del CPC (cuadras)"],
     procesar: (c) => ([
       `<strong>${c[0]?.v || ''}</strong><br>${c[1]?.v || ''}`,
-      `${c[2]?.v || ''} min.`,
-      c[3]?.v || '',
-      `${c[4]?.v || ''} cuadras`,
-      `<button class="btn btn-sm btn-outline-primary" onclick="abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')">
-        <i class="bi bi-geo-alt-fill"></i> Ver en mapa</button>`
+      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','',false,true)" class="geo-link">${c[3]?.v || ''}`,
+      `${c[4]?.v || ''}`
     ])
     
   }
@@ -195,14 +191,23 @@ function mostrarDatos(tipo) {
 //   });
 // });
 
-function abrirMapa(rawCoords, nombre = '', share = false) {
-  // Clean up coordinates
+function abrirMapa(rawCoords, nombre = '', share = false, walking = false) {
+  const DESTINATION_COORDS = '-31.721610,-60.52522';
+
+  // Handle walking directions to the hardcoded destination
+  if (walking) {
+    const url = `https://www.google.com/maps/dir/?api=1&origin=${rawCoords}&destination=${DESTINATION_COORDS}&travelmode=walking`;
+    window.open(url, '_blank');
+    return;
+  }
+
+  // Clean up coordinates for general purpose use
   const [lat, lng] = rawCoords.trim().split(/\s*,\s*/);
   if (!lat || !lng) {
     alert('Coordenadas no válidas');
     return;
   }
-
+  
   // Sanitize label
   const label = encodeURIComponent(nombre.trim());
   const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;

@@ -577,6 +577,24 @@ body::before {
   content: "pin_drop";
 }
 
+/* Custom styles for links within the info modal */
+#infoModal .modal-body a {
+  padding: .25rem .25rem;
+  margin: -.25rem -.25rem;
+  color: var(--transporte-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-radius: 0.25em;
+}
+
+#infoModal .modal-body a:hover {
+  color: white;
+  background-color: var(--transporte-color);
+  text-decoration-color: transparent;
+}
+
+
 /* ==========================================================================
    5. Utilities
    ========================================================================== */
@@ -799,3 +817,4 @@ body:not(.js-enabled) #inicio>* {
     transition: filter 0.5s ease-in-out;
   }
 }
+
