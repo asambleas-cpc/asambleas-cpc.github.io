@@ -146,18 +146,17 @@ function mostrarDatos(tipo) {
   const config = fuentesDatos[tipo];
   if (!config) return;
 
-  const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+  const modalEl = document.getElementById('infoModal');
+  // Get existing instance or create a new one to prevent issues
+  const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
   const titulo = document.getElementById('infoModalLabel');
   
-  // Set title
   titulo.textContent = config.titulo;
 
-  // Hide all tables first
   document.querySelectorAll('.data-table').forEach(table => {
     table.style.display = 'none';
   });
 
-  // Show the correct one
   const tableToShow = document.getElementById(`tabla-${tipo}`);
   if (tableToShow) {
     tableToShow.style.display = 'table';
@@ -165,56 +164,6 @@ function mostrarDatos(tipo) {
 
   modal.show();
 }
-
-// Populate all tables on page load
-document.addEventListener('DOMContentLoaded', () => {
-  populateTable('cocheras');
-  populateTable('estacionamiento');
-  populateTable('colectivos');
-});
-
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const modal = document.getElementById('estacionamientoModal');
-//   modal.addEventListener('show.bs.modal', () => {
-//     const tbody = document.querySelector('#tabla-estacionamientos tbody');
-//     const loader = document.getElementById('tabla-loading');
-//     tbody.innerHTML = '';
-//     loader.style.display = 'block';
-
-//     fetch("https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0")
-//       .then(res => res.text())
-//       .then(text => {
-//         const json = JSON.parse(text.substring(47).slice(0, -2));
-//         const rows = json.table.rows;
-
-//         console.log(text)
-
-//         for (const row of rows) {
-//           const c = row.c;
-//           const tr = document.createElement('tr');
-//           tr.innerHTML = `
-//             <td>${c[0]?.v || ''}<br>${c[1]?.v || ''}</td>
-//             <td>${c[2]?.v || ''} cuadras</td>
-//             <td>$ ${c[3]?.v || ''}</td>
-//             <td>
-//             <button class="btn btn-sm btn-outline-primary" onclick="abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')">
-//   <i class="bi bi-geo-alt-fill"></i> Ver en mapa
-// </button>
-           
-//           `;
-//           tbody.appendChild(tr);
-//         }
-
-//         loader.style.display = 'none';
-//       })
-//       .catch(err => {
-//         loader.innerHTML = "Error al cargar los datos.";
-//         console.error("Error fetching estacionamientos:", err);
-//       });
-//   });
-// });
 
 function abrirMapa(rawCoords, nombre = '', share = false, walking = false) {
   const DESTINATION_COORDS = '-31.721622,-60.525844';
@@ -376,5 +325,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
         checkbox.addEventListener('change', function() {
             setCookie(cookieName, this.checked, 365); // Save for 1 year
         });
+    });
+
+    populateTable('cocheras');
+    populateTable('estacionamiento');
+    populateTable('colectivos');
+  
+    // --- Final, Corrected Back Button Modal Dismissal Logic ---
+    const modals = Array.from(document.querySelectorAll('.modal'));
+  
+    modals.forEach(modal => {
+      // When a modal is shown, push a new state to the history.
+      modal.addEventListener('show.bs.modal', () => {
+        const hash = `#${modal.id}`;
+        if (window.location.hash !== hash) {
+          history.pushState({ modalId: modal.id }, '', hash);
+        }
+      });
+  
+      // When a modal is hidden (by any means).
+      modal.addEventListener('hidden.bs.modal', () => {
+        // If the hash in the URL still corresponds to the modal being closed,
+        // it means the user closed it manually (e.g., Esc, close button),
+        // not with the back button. We need to clean up the URL.
+        if (window.location.hash === `#${modal.id}`) {
+          // Replace the current history state to remove the hash without
+          // navigating. This prevents the "double back" issue.
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      });
+    });
+  
+    // Listen for the browser's back/forward navigation.
+    window.addEventListener('popstate', () => {
+      const openModal = document.querySelector('.modal.show');
+      // If there's an open modal but the URL hash doesn't match it
+      // (i.e., the hash was removed by the back button), hide the modal.
+      if (openModal && window.location.hash !== `#${openModal.id}`) {
+        const modalInstance = bootstrap.Modal.getInstance(openModal);
+        if (modalInstance) {
+          modalInstance.hide();
+        }
+      }
     });
 });
