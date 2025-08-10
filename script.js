@@ -80,20 +80,18 @@ const fuentesDatos = {
   cocheras: {
     url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0",
     titulo: "Cocheras cercanas al CPC",
-    columnas: ["Nombre", "Distancia del CPC (cuadras)", "Costo", ""],
+    columnas: ["Nombre", "Costo"],
     procesar: (c) => ([
-      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')" class="geo-link"><strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small></a>`,
-      `${c[2]?.v || ''} `,
+      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')" class="geo-link"><strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small></a><span class="badge text-bg-success">${c[2]?.v || ''} min</span>`,
       `${c[3]?.v || ''}`
     ])
   },
     estacionamiento: {
-    url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0",
+    url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=706768651",
     titulo: "Estacionamiento cercano al CPC",
-    columnas: ["Lugar", "Distancia del CPC (cuadras)", "Comentaios"],
+    columnas: ["Lugar", "Comentaios"],
     procesar: (c) => ([
-      `<a href="javascript:abrirMapa('${c[4]?.v || ''}','${c[0]?.v || ''}')" class="geo-link">${c[0]?.v || ''}</a>`,
-      `${c[1]?.v || ''}`,
+      `<a href="javascript:abrirMapa('${c[4]?.v || ''}','${c[0]?.v || ''}')" class="geo-link">${c[0]?.v || ''}</a><span class="badge text-bg-success">${c[1]?.v || ''} min</span>`,
       `${c[2]?.v || ''}`
     ])
   },
@@ -102,9 +100,9 @@ const fuentesDatos = {
     titulo: "Líneas de colectivos que llegan al CPC",
     columnas: ["Línea - Ramal", "Parada (nro.)", "Distancia del CPC (cuadras)"],
     procesar: (c) => ([
-      `${(c[0]?.v || '').split(',').map(item => `<span class="badge bg-secondary">${item.trim()}</span>`).join(' ')}<br> ${(c[1]?.v || '').split(',').map(item => `<span class="badge bg-primary">${item.trim()}</span>`).join(' ')}`,
-      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','',false,true)" class="geo-link">${c[3]?.v || ''}</a>`,
-      `${c[4]?.v || ''}`
+      `${(c[0]?.v || '').split(',').map(item => `<span class="badge text-bg-dark">${item.trim()}</span>`).join(' ')}<br> ${(c[1]?.v || '').split(',').map(item => `<span class="badge text-bg-secondary">${item.trim()}</span>`).join(' ')}`,
+      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','',false,true)" class="geo-link">${c[3]?.v || ''}</a><br><span class="badge text-bg-success">${c[4]?.v || ''} min</span>`
+      
     ])
     
   }

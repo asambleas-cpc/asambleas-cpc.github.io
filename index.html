@@ -1195,11 +1195,10 @@
           <div id="tabla-loading" style="display: none;">Cargando...</div>
           <div class="table-responsive">
             <!-- Parking Table -->
-            <table class="table table-striped data-table" id="tabla-cocheras" style="display:none;">
+            <table class="table table-sm data-table" id="tabla-cocheras" style="display:none;">
               <thead>
                 <tr>
-                  <th>Nombre</th>
-                  <th>Distancia del CPC</th>
+                  <th>Nombre <span class="badge text-bg-success">Distancia</span></th>
                   <th>Costo</th>
                   <th></th>
                 </tr>
@@ -1207,23 +1206,21 @@
               <tbody id="tbody-cocheras"></tbody>
             </table>
                         <!-- Parking Table -->
-            <table class="table table-striped data-table" id="tabla-estacionamiento" style="display:none;">
+            <table class="table table-sn data-table" id="tabla-estacionamiento" style="display:none;">
               <thead>
                 <tr>
-                  <th>Lugar</th>
-                  <th>Distancia del CPC</th>
+                  <th>Lugar <span class="badge text-bg-success">Distancia</span></th>
                   <th>Comentarios</th>
                 </tr>
               </thead>
               <tbody id="tbody-estacionamiento"></tbody>
             </table>
             <!-- Bus Table -->
-            <table class="table data-table" id="tabla-colectivos" style="display:none;">
+            <table class="table data-table table-sm" id="tabla-colectivos" style="display:none;">
               <thead>
                 <tr>
-                  <th>Línea - Ramal</th>
-                  <th>Parada</th>
-                  <th>Cuadras al CPC</th>
+                  <th>Línea <span class="badge text-bg-secondary">Ramal</span></th>
+                  <th>Parada <span class="badge text-bg-success">Distancia</span></th>
                 </tr>
               </thead>
               <tbody id="tbody-colectivos"></tbody>
