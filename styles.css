@@ -841,3 +841,17 @@ body:not(.js-enabled) #inicio>* {
 .custom-checkbox-input:checked + .custom-checkbox-label .checked-icon {
   display: inline-block;
 }
+
+/* ==========================================================================
+   6. Responsive Styles
+   ========================================================================== */
+
+@media (max-width: 767.98px) {
+  .card-themed-icon .icon-half {
+    width: 3.4rem; /* 25% narrower than the default 5rem */
+  }
+
+  .card-themed-icon .icon-half .material-symbols-outlined {
+    font-size: 2.5rem; /* Proportionally smaller icon */
+  }
+}
