@@ -362,7 +362,7 @@ function getCookie(name) {
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', (event) => {
     // Select all checkboxes within the cardAntesDeAsistir element
-    const checkboxes = document.querySelectorAll('#cardAntesDeAsistir .form-check-input');
+    const checkboxes = document.querySelectorAll('#cardAntesDeAsistir .custom-checkbox-input');
 
     checkboxes.forEach(function(checkbox) {
         // Create a unique cookie name for each checkbox

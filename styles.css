@@ -818,3 +818,26 @@ body:not(.js-enabled) #inicio>* {
   }
 }
 
+/* CSS Checkbox Hack */
+.custom-checkbox-input {
+  display: none;
+}
+
+.custom-checkbox-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.custom-checkbox-label .checked-icon {
+  display: none;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-label .unchecked-icon {
+  display: none;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-label .checked-icon {
+  display: inline-block;
+}
