@@ -631,79 +631,82 @@ body:not(.js-enabled) #inicio>* {
     height: 100%;
   }
 
-  #map-title {
+  /* New Header Panel */
+  .map-header-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    h5,
-    small {
-      color: #212929;
-      text-shadow:
-        -1px -1px 0 #fff,
-        1px -1px 0 #fff,
-        -1px 1px 0 #fff,
-        1px 1px 0 #fff,
-        0 0 10px rgba(255, 255, 255, 0.8);
+  #map-title h5,
+  #map-title small {
+    color: #ffffff !important;
+    text-shadow: none; /* Remove old text shadow */
+  }
+
+  /* Reposition Vertical Toolbar */
+  .vertical-toolbar {
+    z-index: 1001;
+    top: 70px !important; /* Position it below the header */
+    right: 0.1rem; /* Keep it on the right */
+    margin: 0px; /* Reset margin */
+    padding: 0px;;
+  }
+
+
+  /* ========================================================================
+     2. Vertical Toolbar Buttons (Adjustments)
+     ======================================================================== */
+
+  .vertical-toolbar .btn,
+  .vertical-toolbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  .vertical-toolbar .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+
+    .material-icons {
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Active and Hover States */
+    &.active,
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7) !important;
+      color: #212929 !important;
+      border-color: rgba(255, 255, 255, 0.5);
+
+      .material-icons {
+        color: #212929 !important;
+      }
     }
   }
 
-  /* ========================================================================
-     2. Vertical Toolbar
-     ======================================================================== */
+  /* Style button groups as a single pill */
+  .vertical-toolbar .btn-group-vertical {
+    border-radius: 2px;
+    overflow: hidden;
+  }
 
-  .vertical-toolbar {
-    z-index: 1001;
-
-    .btn,
-    .dropdown-menu {
-      background-color: rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: white;
-    }
-
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      padding: 0;
-
-      .material-icons {
-        color: white;
-        font-size: 24px;
-      }
-
-      /* Active and Hover States */
-      &.active,
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.7) !important;
-        color: #212929 !important;
-        border-color: rgba(255, 255, 255, 0.5);
-
-        .material-icons {
-          color: #212929 !important;
-        }
-      }
-    }
-
-    /* Style button groups as a single pill */
-    .btn-group-vertical {
-      border-radius: 24px;
-      overflow: hidden;
-    }
-
-    /* Make standalone buttons circular */
-    #layer-selector-btn,
-    #btn-close-window {
-      border-radius: 50%;
-    }
-
-    #btn-close-window {
-      background-color: rgba(161, 0, 16, 0.603);
-
-      &:hover {
-        background-color: hsl(354, 100%, 50%) !important;
-      }
-    }
+  /* Make standalone buttons circular */
+  #layer-selector-btn {
+    border-radius: 10%;
   }
 
   /* Styles for the dropdown menu items */

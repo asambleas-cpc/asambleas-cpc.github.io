@@ -1131,13 +1131,17 @@
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-body" style="padding: 0;">
+          <!-- Map Header Panel -->
+          <div class="map-header-panel">
+            <div id="map-title">
+              <h5 id="layer-title" class="mb-0"></h5>
+              <small id="floor-subtitle" class="text-muted"></small>
+            </div>
+            <button id="btn-close-window" type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
           <!-- Vertical Toolbar -->
           <div class="vertical-toolbar d-flex flex-column position-fixed top-0 end-0 m-3 gap-3">
-            <!-- Close button -->
-            <div id="close-control" class="btn-group-vertical" role="group" aria-label="Close control">
-              <button id="btn-close-window" type="button" class="btn btn-danger" data-bs-dismiss="modal"><span
-                  class="material-icons">close</span></button>
-            </div>
             <!-- Floor Controls -->
             <div id="floor-controls" class="btn-group-vertical" role="group" aria-label="Floor controls">
             </div>
@@ -1166,12 +1170,6 @@
                                 <span class="visually-hidden">Loading...</span>
                             </div> -->
             </div>
-          </div>
-
-          <!-- Map Title -->
-          <div id="map-title" class="position-fixed top-0 start-0 m-3" style="z-index: 1000;">
-            <h5 id="layer-title" class="mb-0"></h5>
-            <small id="floor-subtitle" class="text-muted"></small>
           </div>
 
           <!-- Single Offcanvas -->
