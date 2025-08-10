@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-6 mb-3 mb-lg-0">
+          <div class="col-lg-6 mb-2 mb-lg-0">
             <div class="d-flex flex-column">
               <div class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-bottom-0 flex-grow-1" style="border-color: var(--transporte-color);">
                 <div class="icon-half" style="background-color: var(--transporte-color);">
@@ -106,7 +106,10 @@
                 </div>
               </div>
             </div>
-                        <div class="card mt-2 " id="cardAntesDeAsistir" style="background-color: LightYellow;">
+                        
+          </div>
+          <div class="col-lg-6">
+  <div class="card mb-2 " id="cardAntesDeAsistir" style="background-color: LightYellow;">
               <div class="card-body">
                 <h5 class="card-title">Antes de asistir</h5>
                 <ul class="list-group list-group-flush">
@@ -146,73 +149,80 @@
 
               </div>
             </div>
-          </div>
-          <div class="col-lg-6 ">
-            <div class="card card-static h-100" id="cardConozcaCPC">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Cómo es el <em>Centro Provincial de Convenciones</em></h5>
-                <p class="card-text">
-                  El CPC se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por varios medios de transporte.
-                <ul>
-                  <li>Dos auditorios alfombrados y climatizados para 1800 asistentes.</li>
-                  <li>Vestíbulos amplios y luminosos con vista al parque Urquiza y el río Paraná.</li>
-                  <li>Galería cubierta y patio exterior con acceso al parque.</li>
-                  <li>Servicios y baños modernos.</li>
-                </ul>
-                </p>
-                <p class="card-text"><button class="btn btn-md btn-primary btn-theme" onclick="plano()"><i
-                      class="material-symbols-outlined">map</i> Plano del predio</button>
-                </p>
-                <h6 class="mt-auto">Galería de fotos</h6>
-                <div class="scroll-wrapper">
-                  <button class="scroll-btn scroll-left material-symbols-outlined">chevron_left</button>
-                  <div class="scroll-inner-container">
-                    <div class="gallery d-flex flex-nowrap g-2">
-                      <a href="images/01.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/01.jpg" class="img-thumbnail" alt="Foto del frente del Centro Provincial de Convenciones">
-                      </a>
-                      <a href="images/02.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/02.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/03.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/03.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/04.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/04.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/05.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/05.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/06.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/06.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/07.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/07.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/08.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/08.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/09.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/09.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/10.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/10.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/11.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/11.jpg" class="img-thumbnail">
-                      </a>
-                      <a href="images/12.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
-                        <img src="images/thumbs/12.jpg" class="img-thumbnail">
-                      </a>
+            <div class="accordion" id="accordionConozcaCPC">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <i class="material-symbols-outlined me-2">info</i>
+                    <span>Conozca el <em>Centro Provincial de Convenciones</em></span>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionConozcaCPC">
+                  <div class="accordion-body">
+                    <p class="card-text">
+                      El CPC se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por varios medios de transporte.
+                    <ul>
+                      <li>Dos auditorios alfombrados y climatizados para 1800 asistentes.</li>
+                      <li>Vestíbulos amplios y luminosos con vista al parque Urquiza y el río Paraná.</li>
+                      <li>Galería cubierta y patio exterior con acceso al parque.</li>
+                      <li>Servicios y baños modernos.</li>
+                    </ul>
+                    </p><button class="btn btn-md btn-primary btn-theme" onclick="plano()"><i class="material-symbols-outlined">map</i> Plano del predio</button> <div class="btn-group" role="group" aria-label="Ubicación del CPC"><button class="btn btn-md btn-primary btn-theme"
+            onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones')" role="button"
+            target="_blank"><i class="material-symbols-outlined">pin_drop</i> Ubicación</button>
+          <button class="btn btn-md btn-primary btn-theme"
+            onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones', true)" role="button"
+            target="_blank"><i class="material-symbols-outlined">share</i></button></div>
+                    
+                    <h6 class="mt-3">Galería de fotos</h6>
+                    <div class="scroll-wrapper">
+                      <button class="scroll-btn scroll-left material-symbols-outlined">chevron_left</button>
+                      <div class="scroll-inner-container">
+                        <div class="gallery d-flex flex-nowrap g-2">
+                          <a href="images/01.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/01.jpg" class="img-thumbnail" alt="Foto del frente del Centro Provincial de Convenciones">
+                          </a>
+                          <a href="images/02.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/02.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/03.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/03.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/04.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/04.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/05.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/05.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/06.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/06.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/07.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/07.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/08.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/08.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/09.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/09.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/10.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/10.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/11.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/11.jpg" class="img-thumbnail">
+                          </a>
+                          <a href="images/12.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/12.jpg" class="img-thumbnail">
+                          </a>
+                        </div>
+                      </div>
+                      <button class="scroll-btn scroll-right material-symbols-outlined">chevron_right</button>
                     </div>
                   </div>
-                  <button class="scroll-btn scroll-right material-symbols-outlined">chevron_right</button>
                 </div>
-
               </div>
             </div>
-
-
           </div>
         </div>
 
