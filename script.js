@@ -102,7 +102,7 @@ const fuentesDatos = {
     titulo: "Líneas de colectivos que llegan al CPC",
     columnas: ["Línea - Ramal", "Parada (nro.)", "Distancia del CPC (cuadras)"],
     procesar: (c) => ([
-      `<strong>${c[0]?.v || ''}</strong><br>${c[1]?.v || ''}`,
+      `${(c[0]?.v || '').split(',').map(item => `<span class="badge bg-secondary">${item.trim()}</span>`).join(' ')}<br> ${(c[1]?.v || '').split(',').map(item => `<span class="badge bg-primary">${item.trim()}</span>`).join(' ')}`,
       `<a href="javascript:abrirMapa('${c[5]?.v || ''}','',false,true)" class="geo-link">${c[3]?.v || ''}</a>`,
       `${c[4]?.v || ''}`
     ])
