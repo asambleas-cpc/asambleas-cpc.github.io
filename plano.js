@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 maxBounds: bounds,
                 zoomSnap: config.mapSettings.zoomSnap,
                 center: [1757, 1649],
-                zoom: 0.5
+                zoom: 0.5,
+                attributionControl: false
 
             });
 
