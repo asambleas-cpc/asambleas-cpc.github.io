@@ -80,28 +80,31 @@ const fuentesDatos = {
   cocheras: {
     url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0",
     titulo: "Cocheras cercanas al CPC",
+    subtitulo: "Seleccione una cochera para ver la ubicación.",
     columnas: ["Nombre", "Costo"],
     procesar: (c) => ([
-      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','${c[0]?.v || ''}')" class="geo-link"><strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small></a><span class="badge text-bg-success">${c[2]?.v || ''} min</span>`,
+      `<strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small> <span class="badge text-bg-success">${c[2]?.v || ''} min</span>`,
       `${c[3]?.v || ''}`
     ])
   },
     estacionamiento: {
     url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=706768651",
     titulo: "Estacionamiento cercano al CPC",
-    columnas: ["Lugar", "Comentaios"],
+    subtitulo: "Seleccione un estacionamiento para ver la ubicación.",
+    columnas: ["Lugar", "Comentarios"],
     procesar: (c) => ([
-      `<a href="javascript:abrirMapa('${c[4]?.v || ''}','${c[0]?.v || ''}')" class="geo-link">${c[0]?.v || ''}</a><span class="badge text-bg-success">${c[1]?.v || ''} min</span>`,
+      `${c[0]?.v || ''} <span class="badge text-bg-success">${c[1]?.v || ''} min</span>`,
       `${c[2]?.v || ''}`
     ])
   },
   colectivos: {
     url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=1511722551",
     titulo: "Líneas de colectivos que llegan al CPC",
-    columnas: ["Línea - Ramal", "Parada (nro.)", "Distancia del CPC (cuadras)"],
+    subtitulo: "Seleccione una parada para ver el camino de la parada al CPC.",
+    columnas: ["Línea (Ramal)", "Parada (Distancia)"],
     procesar: (c) => ([
-      `${(c[0]?.v || '').split(',').map(item => `<span class="badge text-bg-dark">${item.trim()}</span>`).join(' ')}<br> ${(c[1]?.v || '').split(',').map(item => `<span class="badge text-bg-secondary">${item.trim()}</span>`).join(' ')}`,
-      `<a href="javascript:abrirMapa('${c[5]?.v || ''}','',false,true)" class="geo-link">${c[3]?.v || ''}</a><br><span class="badge text-bg-success">${c[4]?.v || ''} min</span>`
+      `${(c[0]?.v || '').split(',').map(item => `<span class="badge text-bg-secondary">${item.trim()}</span>`).join(' ')}<br> ${(c[1]?.v || '').split(',').map(item => `<span class="badge text-bg-light">${item.trim()}</span>`).join(' ')}`,
+      `${c[3]?.v || ''}<br><span class="badge text-bg-success">${c[4]?.v || ''} min</span>`
       
     ])
     
@@ -129,6 +132,29 @@ function populateTable(tipo) {
           const tr = document.createElement('tr');
           const cells = config.procesar(c);
           tr.innerHTML = cells.map(cell => `<td>${cell}</td>`).join('');
+
+          let coords = '';
+          let nombre = '';
+          let walking = false;
+
+          if (tipo === 'colectivos') {
+            coords = c[5]?.v || '';
+            nombre = 'Parada ' + (c[1]?.v || '');
+            walking = true;
+          } else if (tipo === 'cocheras') {
+            coords = c[5]?.v || '';
+            nombre = c[0]?.v || '';
+          } else if (tipo === 'estacionamiento') {
+            coords = c[3]?.v || '';
+            nombre = 'Estacionamiento en ' + c[0]?.v || '';
+          }
+
+          if (coords) {
+            tr.style.cursor = 'pointer';
+            tr.setAttribute('role', 'link');
+            tr.onclick = () => abrirMapa(coords, nombre, false, walking);
+          }
+
           tbody.appendChild(tr);
         });
         loader.style.display = 'none';
@@ -150,8 +176,10 @@ function mostrarDatos(tipo) {
   // Get existing instance or create a new one to prevent issues
   const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
   const titulo = document.getElementById('infoModalLabel');
+  const subtitulo = document.getElementById('infoModalSubtitle');
   
   titulo.textContent = config.titulo;
+  subtitulo.textContent = config.subtitulo || '';
 
   document.querySelectorAll('.data-table').forEach(table => {
     table.style.display = 'none';
