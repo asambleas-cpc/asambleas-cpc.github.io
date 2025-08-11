@@ -40,11 +40,6 @@
             "name": "Instalaciones y departamentos",
             "interactive": true
         },
-        "accesos": {
-            "id": "AccesoAuditorios",
-            "name": "Acceso a auditorios",
-            "interactive": true
-        },
         "alimentos": {
             "id": "GuardaAlimentos",
             "name": "Guardado de alimentos",

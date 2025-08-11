@@ -734,7 +734,7 @@ body:not(.js-enabled) #inicio>* {
   .vertical-toolbar {
     z-index: 1001;
     top: 70px !important; /* Position it below the header */
-    left: 0.1rem; /* Keep it on the right */
+    left: 0.05rem; /* Keep it on the right */
     margin: 0px; /* Reset margin */
     padding: 0px;;
   }

@@ -391,14 +391,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         const elementBounds = L.latLngBounds(southWest, northEast);
 
         // --- DYNAMIC PADDING CALCULATION ---
-        const topPadding = document.getElementById('map-title')?.offsetHeight || 0;
-        const rightPadding = document.querySelector('.vertical-toolbar')?.offsetWidth || 0;
+        const topPadding = document.getElementById('map-header-panel')?.offsetHeight || 0;
+        // const rightPadding = document.querySelector('.vertical-toolbar')?.offsetWidth || 0;
         const bottomPadding = mainOffcanvasElement.classList.contains('show') ? mainOffcanvasElement.offsetHeight : 0;
 
         const flyToBoundsOptions = {
             maxZoom: config.mapSettings.zoom.maxZoom,
             paddingTopLeft: L.point(0, topPadding),
-            paddingBottomRight: L.point(rightPadding, bottomPadding)
+            paddingBottomRight: L.point(0, bottomPadding)
         };
 
         // Use flyToBounds for a smooth animation that fits the element in the view.
