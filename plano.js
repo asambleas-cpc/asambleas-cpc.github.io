@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             button.type = 'button';
             button.className = 'btn';
             button.dataset.level = level;
-            button.textContent = level;
+            button.textContent = config.floors[level].name;
             floorControls.appendChild(button);
         });
 

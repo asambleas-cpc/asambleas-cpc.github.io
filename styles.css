@@ -650,19 +650,67 @@ body:not(.js-enabled) #inicio>* {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    overflow: hidden;
+    /* overflow: hidden; */ /* Removed to prevent clipping dropdowns */
     flex-grow: 1;
-    min-width: 0;
+    min-width: 0; /* Important for ellipsis to work in flex child */
   }
 
-  .map-title-text {
-    overflow: hidden;
+  .map-title-selectors {
+    /* overflow: hidden; */ /* Removed to prevent clipping dropdowns */
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* Fix for flex container */
   }
 
-  #map-title h5 {
+  .title-dropdown-selector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Changed from space-between */
+    cursor: pointer;
+    gap: 0.15rem;
+  }
+
+  #layer-title,
+  #floor-subtitle {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 0;
+  }
+
+  .title-dropdown-menu {
+    background-color: hsl(from var(--auditorios-color) h s 20% / 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .title-dropdown-menu .dropdown-item {
+    color: white;
+  }
+
+  .title-dropdown-menu .dropdown-item:hover,
+  .title-dropdown-menu .dropdown-item.active {
+    background-color: rgba(255, 255, 255, 0.8)!important;
+    color: hsl(from var(--auditorios-color) h s 20% / 1);
+  }
+
+  /* Style buttons inside floor controls to act like dropdown items */
+  #floor-controls .btn {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem; /* Match Bootstrap's dropdown-item padding */
+    font-weight: 400;
+    color: #ffffff; /* Match dropdown-item text color */
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0; /* Remove default button border-radius */
+  }
+
+  #floor-controls .btn:hover,
+  #floor-controls .btn.active {
+    color: hsl(from var(--auditorios-color) h s 20% / 1) !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
   }
 
   #map-title h5,
@@ -676,12 +724,17 @@ body:not(.js-enabled) #inicio>* {
     text-shadow: none;
     font-size: 1.8em;
   }
+  
+  .title-dropdown-selector .material-symbols-outlined {
+    font-size: 1.5em; /* Smaller chevron */
+    flex-shrink: 0;
+  }
 
   /* Reposition Vertical Toolbar */
   .vertical-toolbar {
     z-index: 1001;
     top: 70px !important; /* Position it below the header */
-    right: 0.1rem; /* Keep it on the right */
+    left: 0.1rem; /* Keep it on the right */
     margin: 0px; /* Reset margin */
     padding: 0px;;
   }

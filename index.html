@@ -1134,27 +1134,40 @@
           <div class="map-header-panel px-3 py-2">
             <div id="map-title">
               <i class="material-symbols-outlined">map</i>
-              <div class="map-title-text">
-                <h5 id="layer-title" class="mb-0"></h5>
-                <small id="floor-subtitle" class="text-muted"></small>
+              <div class="map-title-selectors">
+                <div class="dropdown">
+                  <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                    <h5 id="layer-title" class="mb-0"></h5>
+                    <i class="material-symbols-outlined" style="opacity: 0.7;">arrow_drop_down</i>
+                  </div>
+                  <ul class="dropdown-menu title-dropdown-menu" aria-labelledby="layer-selector-btn">
+                    <!-- Layer options will be populated by JS -->
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                    <small id="floor-subtitle" class="text-muted"></small>
+                    <i class="material-symbols-outlined" style="opacity: 0.7;">arrow_drop_down</i>
+                  </div>
+                  <div id="floor-controls" class="dropdown-menu title-dropdown-menu">
+                    <!-- Floor options will be populated by JS -->
+                  </div>
+                </div>
               </div>
             </div>
             <button id="btn-close-window" type="button" class="btn-close btn-close-white px-2" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          
+
           <!-- Vertical Toolbar -->
           <div class="vertical-toolbar d-flex flex-column position-fixed top-5 end-0 m-2 gap-2">
-            <!-- Floor Controls -->
-            <div id="floor-controls" class="btn-group-vertical" role="group" aria-label="Floor controls">
-            </div>
-
-            <!-- Layer Selector -->
-            <div id="feature-controls" class="dropdown">
+            <!-- Floor Controls (Now in Header) -->
+            
+            <!-- Layer Selector (Now in Header) -->
+            <div id="feature-controls" class="dropdown d-none">
               <button class="btn" type="button" id="layer-selector-btn" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="material-icons">layers</span>
               </button>
-              <ul class="dropdown-menu" aria-labelledby="layer-selector-btn">
-              </ul>
+              
             </div>
 
             <!-- Zoom Controls -->
