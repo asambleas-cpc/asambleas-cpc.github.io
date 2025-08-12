@@ -14,9 +14,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="layEvacuacionPB"
-   inkscape:cx="1887.9751"
-   inkscape:cy="2222.0831"
+   inkscape:current-layer="layEdificioPB"
+   inkscape:cx="1661.701"
+   inkscape:cy="2108.946"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -2454,18 +2454,17 @@
    inkscape:groupmode="layer"
    inkscape:label="layEdificioPB"
    id="layEdificioPB"
-   style="display:inline;opacity:1"
-   sodipodi:insensitive="true">
+   style="display:inline;opacity:1">
         <path
    id="patioExterior"
    d="m 2222.59,1854.22 h -790.8 c -7.57,0 -14.87,2.88 -20.39,8.06 l -236.02,221.33 c -6.38,5.98 -6.95,15.91 -1.3,22.58 l 60.09,71.01 c 3.97,4.69 3.58,11.68 -0.91,15.9 l -59.25,55.72 c -6.67,6.28 -18.97,12.7 -27.39,11.89 -10.21,-0.98 -26.59,-3.19 -52.36,-7.62 l -14.17,74.95 102.29,20.36 c 9.45,1.88 19.19,-1.25 25.78,-8.28 l 81.2,-86.67 c 2.28,-2.44 5.59,-3.66 8.91,-3.29 3.33,0.38 6.28,2.3 7.96,5.18 l 26.95,46.13 c 10.68,18.28 18.75,37.97 23.98,58.49 l 13.46,52.8 c 1.44,5.63 0.18,11.61 -3.4,16.19 -3.58,4.58 -9.08,7.25 -14.89,7.22 l -288.65,-1.54 -11.81,34.57 1183.39,-0.5 -0.17,-601.98 c 0,-6.91 -5.6,-12.5 -12.5,-12.5 z"
    class="fil0 ediVeredas"
-   style="display:inline;fill:#f5f1ed;fill-opacity:1" />
+   style="display:inline;fill:#f1f1f1;fill-opacity:1" />
         <path
    id="galeriaCubierta"
    d="m 1538.13,2014.28 v -112.61 l 316.46,42.71 348.67,0.08 v 405.9 h -169.59 l -0.07,-336.08 z"
    class="fil1 ediGalerias"
-   style="fill:#c2bfbc;fill-opacity:1" /><g
+   style="fill:#e0dfdf;fill-opacity:1" /><g
    id="sillasTemporalesPB"
    style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision"
    inkscape:label="sillasTemporalesPB"><g

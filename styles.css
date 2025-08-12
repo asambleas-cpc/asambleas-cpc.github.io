@@ -90,7 +90,7 @@ h6 {
 }
 
 /* General purpose watermark */
-body::before {
+/* body::before {
   content: "BORRADOR-NO DIFUNDIR";
   position: fixed;
   top: 50%;
@@ -104,7 +104,7 @@ body::before {
   user-select: none;
   font-weight: bold;
   text-align: center;
-}
+} */
 
 /* ==========================================================================
    2. Layout Containers

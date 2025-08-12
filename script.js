@@ -81,17 +81,17 @@ const fuentesDatos = {
     url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=0",
     titulo: "Cocheras cercanas al CPC",
     subtitulo: "Seleccione una cochera para ver la ubicación.",
-    columnas: ["Nombre", "Costo"],
+    columnas: ["Nombre", "Observaciones"],
     procesar: (c) => ([
       `<strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small> <span class="badge text-bg-success">${c[2]?.v || ''} min</span>`,
-      `${c[3]?.v || ''}`
+      `${c[4]?.v || ''}`
     ])
   },
     estacionamiento: {
     url: "https://docs.google.com/spreadsheets/d/1T32oH5vm0p9BGYICw8pe4tu_Q1FYzcoDm778ClFXyFY/gviz/tq?tqx=out:json&tq&gid=706768651",
     titulo: "Estacionamiento cercano al CPC",
     subtitulo: "Seleccione un estacionamiento para ver la ubicación.",
-    columnas: ["Lugar", "Comentarios"],
+    columnas: ["Lugar", "Observaciones"],
     procesar: (c) => ([
       `${c[0]?.v || ''} <span class="badge text-bg-success">${c[1]?.v || ''} min</span>`,
       `${c[2]?.v || ''}`
