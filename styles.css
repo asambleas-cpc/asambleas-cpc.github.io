@@ -484,7 +484,7 @@ h6 {
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: hsl(from var(--alimentos-color) h s l / 0.75);
     color: white;
     border: none;
     border-radius: 50%;
@@ -497,7 +497,7 @@ h6 {
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: var(--alimentos-color);
     }
 
     &.scroll-left {
