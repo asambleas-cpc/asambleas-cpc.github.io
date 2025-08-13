@@ -960,20 +960,21 @@ body:not(.js-enabled) #inicio>* {
 }
 
 .f0 {
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .f1 {
-  opacity: 0.5;
-}
-
-.f2 {
   opacity: 0.8;
 }
 
+.f2 {
+  opacity: 0.5;
+}
+
 .titulo {
-  padding-top: 20vh; /* Creates space for the logo */
+  padding-top: 22vh; /* Creates space for the logo */
   position: relative; /* Ensure stacking context */
+  text-align: center;
   z-index: 1; /* Place above the logo */
 }
 
