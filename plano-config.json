@@ -47,7 +47,7 @@
         },
         "evacuacion": {
             "id": "Evacuacion",
-            "name": "Evacuación de emergencia",
+            "name": "Plan de evacuación",
             "interactive": true
         }
     },

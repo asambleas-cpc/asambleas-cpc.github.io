@@ -938,3 +938,41 @@ body:not(.js-enabled) #inicio>* {
     font-size: 2.5rem; /* Proportionally smaller icon */
   }
 }
+
+.header-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;/* Define the space it can occupy */
+  z-index: -1;
+  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-logo svg {
+  width: 90vw; /* Scale with viewport width */
+  min-height: 20vh;
+  height: 25vh;  /* Scale height proportionally */
+  
+}
+
+.f0 {
+  opacity: 0.1;
+}
+
+.f1 {
+  opacity: 0.5;
+}
+
+.f2 {
+  opacity: 0.8;
+}
+
+.titulo {
+  padding-top: 20vh; /* Creates space for the logo */
+  position: relative; /* Ensure stacking context */
+  z-index: 1; /* Place above the logo */
+}
+
