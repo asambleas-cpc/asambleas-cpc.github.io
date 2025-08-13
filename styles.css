@@ -945,7 +945,7 @@ body:not(.js-enabled) #inicio>* {
   left: 0;
   right: 0;/* Define the space it can occupy */
   z-index: -1;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -955,6 +955,7 @@ body:not(.js-enabled) #inicio>* {
   width: 90vw; /* Scale with viewport width */
   min-height: 20vh;
   height: 25vh;  /* Scale height proportionally */
+  fill: var(--alojamiento-color);
   
 }
 
