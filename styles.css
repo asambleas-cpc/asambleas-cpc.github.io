@@ -12,7 +12,7 @@
   --card-bg-lighten: 97%;
   --icon-faint-sat-mult: 0.3;
   --icon-faint-lighten: 60%;
-  --logo-animation-duration: 40s;
+  --logo-animation-duration: 45s;
 
   /* Colors for each section */
   --inicio-color: hsl(224, 40%, 35%);
@@ -968,7 +968,7 @@ body:not(.js-enabled) #inicio>* {
 }
 
 .header-logo svg {
-  width: 200vw; 
+  width: 95vw; 
   min-height: 20vh;
   height: 25vh; 
   fill: gray;
@@ -1046,7 +1046,7 @@ body:not(.js-enabled) #inicio>* {
 }
 @keyframes frente-animation {
   0%   { transform: matrix(1, 0, 0, 1, 0, 0); }
-  70%  { transform: matrix(2, 0, 0, 1, -260, 0); }
+  70%  { transform: matrix(2, 0, 0, 1, -360, 0); }
   100% { transform: matrix(1, 0, 0, 1, 0, 0); }
 }
 #costado {
@@ -1055,7 +1055,7 @@ body:not(.js-enabled) #inicio>* {
 }
 @keyframes costado-animation {
   0%   { transform: matrix(1, 0, 0, 1, 0, 0); }
-  70%  { transform: matrix(0.75, 0, 0, 1, 890, 0); }
+  70%  { transform: matrix(0.75, 0, 0, 1, 790, 0); }
   100% { transform: matrix(1, 0, 0, 1, 0, 0); }
 }
 
@@ -1075,25 +1075,12 @@ body:not(.js-enabled) #inicio>* {
 
   height: 14vh; 
   animation: logo-zoom var(--logo-animation-duration) ease-in-out infinite;
-width: 200vw; 
+width: 100vw; 
 }
 .titulo {
   padding-top: 15vh; /* Creates space for the logo */}
 
-@keyframes logo-zoom {
-  0% {
-    /* width: 90vw;  */
-    transform: scale(0.85);
-  }
-  70% {
-    /* width: 160vw;  */
-    transform: scale(0.75);
-  }
-  100% {
-    /* width: 90vw;  */
-    transform: scale(0.85);
-  }
-} 
+
 
 }
 
@@ -1101,8 +1088,8 @@ width: 200vw;
 .header-logo svg {
 
   height: 14vh; 
-  animation: logo-zoom var(--logo-animation-duration) ease-in-out infinite;
-width: 200vw; 
+ 
+
 }
 .titulo {
   padding-top: 15vh; /* Creates space for the logo */}
