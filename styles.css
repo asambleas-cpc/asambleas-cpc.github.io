@@ -971,7 +971,7 @@ body:not(.js-enabled) #inicio>* {
   width: 200vw; 
   min-height: 20vh;
   height: 25vh; 
-  fill: var(--alojamiento-color);
+  fill: gray;
   /* animation: logo-zoom var(--logo-animation-duration) ease-in-out infinite; */
   transform-origin: center bottom;
 }
@@ -979,36 +979,66 @@ body:not(.js-enabled) #inicio>* {
 
 
 @keyframes f0-cycle {
-  0% { opacity: 0.5; }
-  70% { opacity: 0.5; }
-  100% { opacity: 0.5; }
+  0% { opacity: 0.5; fill: gray;}
+  15% { opacity: 0.5;fill: var(--alojamiento-color); }
+  20% { opacity: 0.5;fill: var(--alojamiento-color); }
+  25% { opacity: 0.5; fill: gray;}
+  40% { opacity: 0.5;fill: var(--transporte-color); }
+  45% { opacity: 0.5;fill: var(--transporte-color); }
+  50% { opacity: 0.5; fill: gray;}
+  65% { opacity: 0.5;fill: var(--auditorios-color); }
+  70% { opacity: 0.5;fill: var(--auditorios-color); }
+  75% { opacity: 0.5; fill: gray;}
+  85% { opacity: 0.5;fill: var(--alimentos-color); }
+  90% { opacity: 0.5;fill: var(--alimentos-color); }
+  100% { opacity: 0.5; fill: gray;}
 }
 
 @keyframes f1-cycle {
   0% { opacity: 0.5; }
-  70% { opacity: 0.35; }
-  100% { opacity: 0.5; }
+  15% { opacity: 0.35;fill: var(--alojamiento-color); }
+  20% { opacity: 0.35;fill: var(--alojamiento-color); }
+  25% { opacity: 0.5; fill: gray;}
+  40% { opacity: 0.35;fill: var(--transporte-color); }
+  45% { opacity: 0.35;fill: var(--transporte-color); }
+  50% { opacity: 0.5; fill: gray;}
+  65% { opacity: 0.35;fill: var(--auditorios-color); }
+  70% { opacity: 0.35;fill: var(--auditorios-color); }
+  75% { opacity: 0.5; fill: gray;}
+  85% { opacity: 0.35;fill: var(--alimentos-color); }
+  90% { opacity: 0.35;fill: var(--alimentos-color); }
+  100% { opacity: 0.5; fill: gray;}
 }
 
 @keyframes f2-cycle {
   0% { opacity: 0.5; }
-  70% { opacity: 0.2; }
-  100% { opacity: 0.5; }
+  15% { opacity: 0.2;fill: var(--alojamiento-color); }
+  20% { opacity: 0.2;fill: var(--alojamiento-color); }
+  25% { opacity: 0.5; fill: gray;}
+  40% { opacity: 0.2;fill: var(--transporte-color); }
+  45% { opacity: 0.2;fill: var(--transporte-color); }
+  50% { opacity: 0.5; fill: gray;}
+  65% { opacity: 0.2;fill: var(--auditorios-color); }
+  70% { opacity: 0.2;fill: var(--auditorios-color); }
+  75% { opacity: 0.5; fill: gray;}
+  85% { opacity: 0.2;fill: var(--alimentos-color); }
+  90% { opacity: 0.2;fill: var(--alimentos-color); }
+  100% { opacity: 0.5; fill: gray;}
 }
 
 .f0 {
   opacity: 0.6;
-  animation: f0-cycle var(--logo-animation-duration) ease-in-out infinite;
+  animation: f0-cycle calc(var(--logo-animation-duration) * 4) ease-in-out infinite;
 }
 
 .f1 {
   opacity: 0.2;
-  animation: f1-cycle var(--logo-animation-duration) ease-in-out infinite;
+  animation: f1-cycle calc(var(--logo-animation-duration) * 4) ease-in-out infinite;
 }
 
 .f2 {
   opacity: 0.5;
-  animation: f2-cycle var(--logo-animation-duration) ease-in-out infinite;
+  animation: f2-cycle calc(var(--logo-animation-duration) * 4) ease-in-out infinite;
 }
 #frente {
   animation: frente-animation var(--logo-animation-duration) ease-in-out infinite;
