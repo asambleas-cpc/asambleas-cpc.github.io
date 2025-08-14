@@ -604,9 +604,10 @@ h6 {
    5. Utilities
    ========================================================================== */
 
-.material-symbols-outlined {
+.material-symbols-outlined, .material-icons {
   vertical-align: middle;
   font-size: 1.2em;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Fallback for when JavaScript is disabled */
@@ -965,6 +966,7 @@ body:not(.js-enabled) #inicio>* {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .header-logo svg {
@@ -1040,6 +1042,13 @@ body:not(.js-enabled) #inicio>* {
   opacity: 0.5;
   animation: f2-cycle calc(var(--logo-animation-duration) * 4) ease-in-out infinite;
 }
+
+/* Prevents Flash of Unstyled Text (FOUT) for Material Icons */
+.fonts-loading .material-symbols-outlined,
+.fonts-loading .material-icons {
+  opacity: 0 !important;
+}
+
 #frente {
   animation: frente-animation var(--logo-animation-duration) ease-in-out infinite;
   transform-origin: left center;

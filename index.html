@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="fonts-loading">
 
 <head>
   <meta charset="UTF-8" />
@@ -30,7 +30,21 @@
   <link rel="stylesheet" href="styles.css?v=1.4" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+  <script>
+    (async () => {
+      try {
+        await document.fonts.load("1em Material Icons");
+        await document.fonts.load("1em Material Symbols Outlined");
+        document.documentElement.classList.remove('fonts-loading');
+      } catch (e) {
+        console.error('Font loading error:', e);
+        // Fallback: remove the class anyway after a timeout
+        setTimeout(() => {
+          document.documentElement.classList.remove('fonts-loading');
+        }, 500);
+      }
+    })();
+  </script>
 </head>
 
 <body>
@@ -1180,11 +1194,9 @@
                   ancianos, quienes se
                   asesorarán con los hermanos de alojamiento.</p>
               </div>
-
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-12 col-lg-6 mb-3">
             <div class="card mt-2 card-themed-icon">
@@ -1198,7 +1210,6 @@
             </div>
           </div>
         </div>
-
         <h3>Solicitar alojamiento</h3>
         <p>Si desea solicitar alojamiento en casa de hermanos, por favor, contáctese con los ancianos de su
           congregación.</p>
@@ -1206,24 +1217,16 @@
         <p>Se necesitan lugares para alojar a los hermanos que asisten a las asambleas. Si desea ofrecer alojamiento,
           por favor, contáctese con los ancianos de su
           congregación.</p>
-
       </div>
     </section>
-
-
-
     <section id="conclusion" class="section-inicio snap-section">
       <div class="container pt-5">
+        <div>
         <h1 class="display-5">¡Los esperamos!</h1>
         <h3 class="display-6"><em>Comités de Asamblea<br> Asambleas Regionales <wbr>Paraná 1 y 2</em></h3>
-
-
-
-
-
+        </div>
       </div>
     </section>
-
   </main>
   <svg width="0" height="0" style="position:absolute; display: none;" id="svgCPC">
     <defs>
