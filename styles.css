@@ -13,7 +13,7 @@
   --icon-faint-sat-mult: 0.3;
   --icon-faint-lighten: 60%;
   --logo-animation-duration: 45s;
-  --logo-initial-color: hsl(224, 5%, 50%);
+  --logo-initial-color: hsl(224, 5%, 70%);
 
   /* Colors for each section */
   --inicio-color: hsl(224, 40%, 35%);
@@ -946,7 +946,7 @@ body:not(.js-enabled) #inicio>* {
 }
 
 .titulo {
-  padding-top: 19vh; /* Creates space for the logo */
+  padding-top: 18vh; /* Creates space for the logo */
   position: relative; /* Ensure stacking context */
   text-align: center;
   z-index: 1; /* Place above the logo */
