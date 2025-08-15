@@ -13,7 +13,7 @@
   --icon-faint-sat-mult: 0.3;
   --icon-faint-lighten: 60%;
   --logo-animation-duration: 45s;
-  --logo-initial-color: hsl(0, 1%, 50%);
+  --logo-initial-color: hsl(224, 5%, 50%);
 
   /* Colors for each section */
   --inicio-color: hsl(224, 40%, 35%);
@@ -946,7 +946,7 @@ body:not(.js-enabled) #inicio>* {
 }
 
 .titulo {
-  padding-top: 22vh; /* Creates space for the logo */
+  padding-top: 19vh; /* Creates space for the logo */
   position: relative; /* Ensure stacking context */
   text-align: center;
   z-index: 1; /* Place above the logo */
@@ -976,6 +976,8 @@ body:not(.js-enabled) #inicio>* {
   fill: var(--logo-initial-color);
   /* animation: logo-zoom var(--logo-animation-duration) ease-in-out infinite; */
   transform-origin: center bottom;
+  /* mask-image: linear-gradient(to bottom, black 80%, transparent);  */
+  mask-image: linear-gradient(to bottom, black 80%, transparent); 
 }
 
 
@@ -1075,7 +1077,7 @@ body:not(.js-enabled) #inicio>* {
 width: 100vw; 
 }
 .titulo {
-  padding-top: 15vh; /* Creates space for the logo */}
+  padding-top: 13vh; /* Creates space for the logo */}
 }
 
 @media (min-width: 480px) and (max-width: 922px) {
@@ -1083,5 +1085,5 @@ width: 100vw;
   height: 15vh; 
  }
 .titulo {
-  padding-top: 15vh; /* Creates space for the logo */}
+  padding-top: 14vh; /* Creates space for the logo */}
 }
