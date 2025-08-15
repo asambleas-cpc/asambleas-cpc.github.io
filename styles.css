@@ -986,13 +986,13 @@ body:not(.js-enabled) #inicio>* {
   0% { opacity: 1; }
   15% { opacity: 0.5;fill: var(--alojamiento-color); }
   20% { opacity: 0.5;fill: var(--alojamiento-color); }
-  25% { opacity: 0.5; fill: var(--alojamiento-color); }
+  25% { opacity: 0.4; fill: var(--alojamiento-color); }
   40% { opacity: 0.5;fill: var(--transporte-color); }
   45% { opacity: 0.5;fill: var(--transporte-color); }
-  50% { opacity: 0.5; fill: var(--transporte-color); }
+  50% { opacity: 0.4; fill: var(--transporte-color); }
   65% { opacity: 0.5;fill: var(--auditorios-color); }
   70% { opacity: 0.5;fill: var(--auditorios-color); }
-  75% { opacity: 0.5; fill:  var(--auditorios-color); }
+  75% { opacity: 0.4; fill:  var(--auditorios-color); }
   85% { opacity: 0.5;fill: var(--alimentos-color); }
   90% { opacity: 0.5;fill: var(--alimentos-color); }
   100% { opacity: 1;}
@@ -1002,13 +1002,13 @@ body:not(.js-enabled) #inicio>* {
   0% { opacity: 1; }
   15% { opacity: 0.35;fill: var(--alojamiento-color); }
   20% { opacity: 0.35;fill: var(--alojamiento-color); }
-  25% { opacity: 0.5; fill: var(--alojamiento-color); }
+  25% { opacity: 0.4; fill: var(--alojamiento-color); }
   40% { opacity: 0.35;fill: var(--transporte-color); }
   45% { opacity: 0.35;fill: var(--transporte-color); }
-  50% { opacity: 0.5; fill: var(--transporte-color); }
+  50% { opacity: 0.4; fill: var(--transporte-color); }
   65% { opacity: 0.35;fill: var(--auditorios-color); }
   70% { opacity: 0.35;fill: var(--auditorios-color); }
-  75% { opacity: 0.5; fill:  var(--auditorios-color); }
+  75% { opacity: 0.4; fill:  var(--auditorios-color); }
   85% { opacity: 0.35;fill: var(--alimentos-color); }
   90% { opacity: 0.35;fill: var(--alimentos-color); }
   100% { opacity: 1;  }
@@ -1018,13 +1018,13 @@ body:not(.js-enabled) #inicio>* {
   0% { opacity: 1; }
   15% { opacity: 0.2;fill: var(--alojamiento-color); }
   20% { opacity: 0.2;fill: var(--alojamiento-color); }
-  25% { opacity: 0.5; fill: var(--alojamiento-color); }
+  25% { opacity: 0.4; fill: var(--alojamiento-color); }
   40% { opacity: 0.2;fill: var(--transporte-color); }
   45% { opacity: 0.2;fill: var(--transporte-color); }
-  50% { opacity: 0.5; fill: var(--transporte-color); }
+  50% { opacity: 0.4; fill: var(--transporte-color); }
   65% { opacity: 0.2;fill: var(--auditorios-color); }
   70% { opacity: 0.2;fill: var(--auditorios-color); }
-  75% { opacity: 0.5; fill:  var(--auditorios-color); }
+  75% { opacity: 0.4; fill:  var(--auditorios-color); }
   85% { opacity: 0.2;fill: var(--alimentos-color); }
   90% { opacity: 0.2;fill: var(--alimentos-color); }
   100% { opacity: 1; }
