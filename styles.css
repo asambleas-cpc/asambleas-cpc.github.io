@@ -1072,12 +1072,12 @@ body:not(.js-enabled) #inicio>* {
 
 @media (max-width: 480px) {
 .header-logo svg {
-  height: 14vh; 
+  height: 12vh; 
   animation: logo-zoom var(--logo-animation-duration) ease-in-out infinite;
 width: 100vw; 
 }
 .titulo {
-  padding-top: 13vh; /* Creates space for the logo */}
+  padding-top: 12vh; /* Creates space for the logo */}
 }
 
 @media (min-width: 480px) and (max-width: 922px) {
