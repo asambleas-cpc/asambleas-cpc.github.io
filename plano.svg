@@ -2890,7 +2890,7 @@
    inkscape:groupmode="layer"
    inkscape:label="layPlantaAlta"
    id="layPlantaAlta"
-   style="clip-rule:evenodd;display:none;fill-rule:evenodd;text-rendering:geometricPrecision"
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision"
    sodipodi:insensitive="true">
       <g
    inkscape:groupmode="layer"
