@@ -256,8 +256,15 @@ function abrirMapa(rawCoords, nombre = '', share = false, walking = false) {
   document.querySelectorAll('.video-link').forEach(link => {
     link.addEventListener('click', function () {
       const videoUrl = this.getAttribute('data-video');
-      if (videoUrl) {
-        videoSource.src = videoUrl;
+      const videoUrlHd = this.getAttribute('data-video-hd');
+      
+      let selectedVideoUrl = videoUrl;
+      if (window.innerWidth > 768 && videoUrlHd) {
+        selectedVideoUrl = videoUrlHd;
+      }
+
+      if (selectedVideoUrl) {
+        videoSource.src = selectedVideoUrl;
         customVideo.load();
         customVideo.play();
       }

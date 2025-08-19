@@ -1080,10 +1080,23 @@ width: 100vw;
   padding-top: 12vh; /* Creates space for the logo */}
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35em;
+}
+
 @media (min-width: 480px) and (max-width: 922px) {
 .header-logo svg {
   height: 15vh; 
  }
 .titulo {
   padding-top: 14vh; /* Creates space for the logo */}
+}
+
+@media (min-width: 992px) {
+  #videoModal .modal-dialog {
+    max-width: 80vw;
+  }
 }
