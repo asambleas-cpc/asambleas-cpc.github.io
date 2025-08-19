@@ -66,10 +66,6 @@
         }
     },
     "informacion": {
-        "AccesoEstacionamiento": {
-            "title": "Acceso al estacionamiento interno",
-            "content": "<p>El <a href=\"javascript:plano(0,'departamentos','Estacionamiento')\" class=\"plano-link\">estacionamiento interno</a> está reservado para personas con necesidades especiales. Se debe reservar con anticipación y se controlará el acceso.</p><p><a href=\"#headingAuto\">Más información</a></p>"
-        },
         "Informacion": {
             "title": "Información y servicio voluntario",
             "content": "<p>Si desea ofrecerse como voluntario para ayudar en los trabajos de la asamblea, preséntese este departamento</p><p><a href=\"#headingInformacion\">Más información</a></p>"
@@ -80,7 +76,7 @@
         },
         "GuardaAlimentos": {
             "title": "Guardado de alimentos",
-            "content": "<p>En esta área se reciben y retiran los alimentos. Recordá que <strong>no se puede ingresar a los auditorios con alimentos, bebidas o mate.</strong></p><p><a href=\"#\">Más información</a></p>"
+            "content": "<p>Es <a href='#guardaAlimentos'>donde se pueden guardar los alimentos</a> durante el programa. Recuerde que <strong>no se debe ingresar a los auditorios con alimentos o bebidas.</strong></p><p>Por favor, forme fila de la manera que se indica en los siguientes planos:</p><ul><li><a href=\"javascript:plano(0,'alimentos')\" class=\"plano-link\">Planta baja</a></li><li><a href=\"javascript:plano(1,'alimentos')\" class=\"plano-link\">Planta alta</a></li></ul>"
         },
         "Guardaropas": {
             "title": "Guardarropa y objetos perdidos",
@@ -90,25 +86,24 @@
             "title": "Guardarropa y objetos perdidos",
             "content": "<p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los niños que se hayan perdido.</p>"
         },
-        "BañosMujeres": {
-            "title": "Baños de mujeres"
-        },
-        "BañosHombres": {
-            "title": "Baños de hombres"
+        "Baños": {
+            "title": "Baños",
+            "content": "<p>Es importante <strong>cuidar el consumo de agua,</strong>   porque en eventos de uso intensivo se puede agotar el suministro.</p>"
         },
         "Bautismo": {
             "title": "Piscina de bautismo",
-            "content": "<p>Aquí se hará el bautismo el sábado al mediodía.</p><p><a href=\"#\">Más información</a></p>"
+            "content": "<p>Aquí se hará el bautismo el sábado al mediodía.</p>"
         },
         "GaleriaCubierta": {
             "title": "Galería Cubierta"
         },
         "Ascensores": {
             "title": "Ascensores",
-            "content": "<p>Reservado para personas con dificultades para subir las escaleras. No se debe usar en caso de evacuación.</p><p><a href=\"#\">Más información</a></p>"
+            "content": "<p>No se debe usar en caso de evacuación.</p><p>Padres, cuiden que sus hijos no jueguen con con ellos. Si se usan excesivamente, el sistema hidráulico se sobrecalienta y dejan de funcionar.</p>"
         },
         "PrimerosAuxilios": {
-            "title": "Primeros auxilios"
+            "title": "Primeros auxilios",
+            "content": "<p>Tenga en cuenta que este departamento es <strong>solo para casos de emergencia.</strong></p>"
         },
         "Lactantes": {
             "title": "Lactantes"
@@ -118,7 +113,8 @@
             "content": "<p>Para acceder al auditorio principal</p>"
         },
         "Patio": {
-            "title": "Patio exterior"
+            "title": "Galería cubierta y patios exteriores",
+            "content": "<p>La galería cubierta y los patios exteriores tienen acceso al parque Urquiza. Son lugares ideales para comer y conversar durante los intermedios.</p><p>En la galería hay <strong>asientos para uso temporal,</strong> por lo que <strong>no se deben reservar.</strong></p>"
         },
         "AreaRestringida": {
             "title": "Áreas restringidas",
@@ -126,18 +122,19 @@
         },
         "Estacionamiento": {
             "title": "Estacionamiento interno",
-            "content": "<p>El estacionamiento está reservado para personas con necesidades especiales. Se debe reservar con anticipación y se controlará el acceso.</p><p><a href=\"#\">Más información</a></p>"
+            "content": "<p>Hay un <strong>número limitado de espacios para personas con limitaciones físicas.</strong> Si considera que califica para solicitarlo, por favor, contáctese con los ancianos de su congregación. Tenga en cuenta que <strong>se van a controlar los números de patentes</strong> en el ingreso.</p>"
         },
         "Vestibulo": {
             "title": "Vestíbulo",
-            "content": "<p>Este área esta habilitada para consumir alimentos.</p>"
+            "content": "<p>Los vestíbulos son amplios y luminosos, con vista al parque Urquiza y el río Paraná. Se pueden usar para comer y conversar durante los intermedios.</p><p>En planta alta hay <strong>asientos para uso temporal,</strong> por lo que <strong>no se deben reservar.</strong></p>"
         },
         "AuditorioPrincipal": {
             "title": "Auditorio principal",
             "content": "<p>Este auditorio está destinado al público en general. Para personas mayores, con dificultades, embarazadas o con hijos pequeños está asignado el <a href=\"#\">auditorio auxiliar.</a></p><p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>"
         },
         "Limpieza": {
-            "title": "Departamento limpieza"
+            "title": "Departamento de limpieza",
+            "content": "<p>Se necesitan voluntarios para colaborar con la limpieza del local. Para más información, vea la sección de <a href='#collapseInformacion' data-bs-toggle='collapse' aria-expanded='false' aria-controls='collapseInformacion'>Servicio Voluntario.</a></p>"
         },
         "AuditorioAuxiliar": {
             "title": "Auditorio auxiliar",
@@ -145,7 +142,7 @@
         },
         "Donate": {
             "title": "Punto de información sobre donaciones",
-            "content": "<p>Conozca cómo usar <a href='https://donate.jw.org' target='_blank'>donate.jw.org</a></p>"
+            "content": "<p>Aquí recibirá información sobre los métodos de donación existentes en <a href='https://donate.jw.org' target='_blank'>donate.jw.org</a>. Los hermanos le ayudarán a despejar sus dudas y le darán asesoramiento sobre el uso del sitio para que pueda demostrar su agradecimiento por los eventos teocráticos.</p>"
         }
     },
     "zoomSettings": {
