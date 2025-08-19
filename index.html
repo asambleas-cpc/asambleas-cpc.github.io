@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=1.6" />
+  <link rel="stylesheet" href="styles.css?v=1.6.1" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script>
@@ -869,7 +869,7 @@
                 data-bs-target="#collapseInformacion" aria-expanded="false" aria-controls="collapseInformacion">
                 <i class="material-symbols-outlined me-2">info</i> Información y servicio voluntario
               </button>
-              </h2>
+              </h5>
               <div id="collapseInformacion" class="accordion-collapse collapse" aria-labelledby="headingInformacion"
                 data-bs-parent="#departamentosAccordion">
                 <div class="accordion-body">
@@ -884,6 +884,26 @@
                   </ul>
                   <p>Es recomendable ofrecerse <strong>antes de la fecha de la asamblea.</strong> Para hacerlo,
                     contáctese con los ancianos de su congregación.</p>
+
+                </div>
+              </div>
+          </div>
+          <!-- Punto de información sobre donaciones -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingDonaciones">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseDonaciones" aria-expanded="false" aria-controls="collapseDonaciones">
+                <svg class="accordion-icon me-2" viewBox="0 0 24 24" style="width: 1.2em; height: 1.2em; fill: currentColor;"><use href="#iconDonaciones"></use></svg>
+                Punto de información sobre donaciones
+              </button>
+              </h5>
+              <div id="collapseDonaciones" class="accordion-collapse collapse" aria-labelledby="headingDonaciones"
+                data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+                  <p>Aquí recibirá información sobre los métodos de donación existentes en <a href='https://donate.jw.org' target='_blank' class="ext-link">donate.jw.org</a>. Los hermanos le ayudarán a despejar sus dudas y le darán asesoramiento sobre el uso del sitio para que pueda demostrar su agradecimiento por los eventos teocráticos. </p>
+                  <p>Se encuentra <a href="javascript:plano(0,'departamentos','Donate')" class="plano-link">en el
+                      vestíbulo de planta baja.</a></p>
+                  
 
                 </div>
               </div>
@@ -1248,6 +1268,10 @@
       </div>
     </section>
   </main>
+  <svg width="0" height="0" style="position:absolute; display: none;" id="svgIcons">
+    <defs>
+      <symbol id="iconDonaciones" viewBox="0 0 323.4 257.3">
+        <path d="M12.3-10.3C-3-10.5-2 14.4 13.2 13.2h29.2l-.2 115.3c-11.7.5-23.7-1.2-35.1 1-14.2 5.7-4.9 26.2 8.7 22.5 13.4-.2 27 .3 40.4-.3 11.4-2.6 9.4-15.3 9.5-24.2l.1-114.3H243c19.2 20.8 38.7 41.4 56.7 63.2l-4.5 89.6c-7.9-8.7-28.3-2.2-24.8-17.6-1.2-18.4-1-37-3-55.3-4.8-9.2-16.5-9.9-25-14.3-14-4.6-28.2-15-43.3-8.1-19.3 7.3-27.6 33-15.4 50 11.1 15.5 27.6 26.4 41.1 39.8 10.7 9.7 24.7 20.8 24.1 36.6-7.3 17-25.5.3-34.3-7-17.7-15-34-32-51.7-47-22.6-11-46.8-18.5-70.7-26-17-1.6-16.2 23.7-.7 24.2 19.9 6.9 40.1 13 59.2 22 20.6 18.5 39.7 39.2 62.4 55A53.8 53.8 0 1 0 319 200.2c-3.2-10.7-.1-22.1-.3-33.2l4.8-93.4c-2.6-14-16.2-22.7-24.3-33.8-14.6-16-29-32.4-44.2-47.8-9-4.1-19.3-1.4-28.9-2.2H12.3zm-1 94.7C1 85.2-.3 96.4.5 104.6c-.4 8-.5 19 9.5 21 10.2 2 15.5-9 14-17.5-.1-8.1 2.1-19.3-7.9-23l-2.3-.6h-2.3zM211 92c11.4 4 22.6 8.8 33.9 13.1l2 43.7c-14.1-13.5-29.8-25.4-42.9-39.9-5.6-6.7-1.4-15.8 7-17zm59.1 89.5c21 2.5 34.2 29.3 21 46.6-10 16.2-35.5 18.8-47.4 3.7-6.7-6.6 14-4 17.3-11.6 11.1-9.3 13.8-25.4 9.1-38.7z"/></symbol>  </svg>
   <svg width="0" height="0" style="position:absolute; display: none;" id="svgCPC">
     <defs>
       <symbol id="sketchCPC" viewBox="0 0 1548 866">

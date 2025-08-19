@@ -248,7 +248,8 @@ h6 {
     /* Inherit default text color */
   }
 
-  .accordion-button .material-symbols-outlined {
+  .accordion-button .material-symbols-outlined,
+  .accordion-button .accordion-icon {
     color: var(--section-theme-color);
   }
 
@@ -257,7 +258,8 @@ h6 {
     color: white;
      }
 
-  .accordion-button:not(.collapsed) .material-symbols-outlined {
+  .accordion-button:not(.collapsed) .material-symbols-outlined,
+  .accordion-button:not(.collapsed) .accordion-icon {
     color: white;
   }
 

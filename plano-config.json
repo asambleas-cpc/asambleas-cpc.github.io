@@ -142,6 +142,10 @@
         "AuditorioAuxiliar": {
             "title": "Auditorio auxiliar",
             "content": "<p>Este auditorio está destinado a personas mayores, con dificultades, embarazadas o con hijos pequeños. Para el público general está asignado el <a href=\"#\">auditorio principal.</a></p><p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>"
+        },
+        "Donate": {
+            "title": "Punto de información sobre donaciones",
+            "content": "<p>Conozca cómo usar <a href='https://donate.jw.org' target='_blank'>donate.jw.org</a></p>"
         }
     },
     "zoomSettings": {
