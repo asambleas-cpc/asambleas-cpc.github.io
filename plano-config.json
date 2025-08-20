@@ -127,7 +127,7 @@
         },
         "AuditorioPrincipal": {
             "title": "Auditorio principal",
-            "content": "<p>Este auditorio está destinado al público en general. Para personas mayores, con dificultades, embarazadas o con hijos pequeños está asignado el <a href=\"#\">auditorio auxiliar.</a></p><p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>"
+            "content": "<p>Este auditorio está destinado al público en general. Para personas mayores, con dificultades, embarazadas o con hijos pequeños está asignado el <a href='#cardAuditorioAuxiliar'>auditorio auxiliar.</a></p><p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>"
         },
         "Limpieza": {
             "title": "Departamento de limpieza",
@@ -135,7 +135,7 @@
         },
         "AuditorioAuxiliar": {
             "title": "Auditorio auxiliar",
-            "content": "<p>Este auditorio está destinado a personas mayores, con dificultades, embarazadas o con hijos pequeños. Para el público general está asignado el <a href=\"#\">auditorio principal.</a></p><p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>"
+            "content": "<p>Este auditorio está destinado a personas mayores, con dificultades, embarazadas o con hijos pequeños. Para el público general está asignado el <a href='#cardAuditorioPrincipal'>auditorio principal.</a></p><p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>"
         },
         "Donate": {
             "title": "Punto de información sobre donaciones",
@@ -144,6 +144,42 @@
         "SillasTemporales": {
             "title": "Asientos para uso temporal",
             "content": "<p>Estos asientos se pueden usar para comer en los intermedios. Como son para uso temporal, <strong>no se deben reservar.</strong> Por favor, sea considerado con los demás cuando los use.</p>"
+        },
+        "Salidas": {
+            "title": "Salidas de emergencia",
+            "content": "<p>Estas salidas sirven para evacuar el local ante una emergencia. Están señaladas con carteles luminosos. No las obstruya.</p><p>Ante una emergencia, diríjase a la salida indicada en el <a href='#cardEvacuacion'>plan de evacuación</a> o a la más cercana.</p>"
+        },
+        "EvacuacionPrincipalFrenteIzquierda": {
+            "title": "Sector del frente, lado izquierdo (mirando a la plataforma)",
+            "content": "<p>Se dirigirán al vestíbulo y luego a la derecha hacia la salida de emergencia.</p>"
+        },
+        "EvacuacionPrincipalFrenteDerecha": {
+            "title": "Sector del frente, lado derecho (mirando a la plataforma)",
+            "content": "<p>Se dirigirán al hacia la salida de emergencia que se encuentra a la derecha de la plataforma.</p>"
+        },
+        "EvacuacionPrincipalFondoDerecha": {
+            "title": "Sector del fondo, lado derecho (mirando a la plataforma)",
+            "content": "<p>Se dirigirán hacia la salidas de emergencia que se encuentran a la derecha del auditorio, hacia la escalera de servicio que lleva a la salida al estacionamiento.</p>"
+        },
+        "EvacuacionPrincipalFondoIzquierda": {
+            "title": "Sector del fondo, lado izquierdo (mirando a la plataforma)",
+            "content": "<p>Se dirigirán al vestíbulo y luego a la izquierda hacia la escalera principal, saliendo por la entrada principal</p>"
+        },
+        "EvacuacionSalidas": {
+            "title": "Salidas de emergencia",
+            "content": "<p>Estas salidas sirven para evacuar el local ante una emergencia. Están señaladas con carteles luminosos. No las obstruya.</p><p>Ante una emergencia, diríjase a la salida indicada en el <a href='#cardEvacuacion'>plan de evacuación</a> o a la más cercana.</p>"
+        },
+        "EvacuacionSinSalida": {
+            "title": "Sin salida",
+            "content": "<p>Estos lugares se dirigen a sectores sin salida para evacuar. Ante una emergencia evite ingresar en ellos. No use los ascensores para evacuar porque puede quedar atrapado.</p>"
+        },
+        "EvacuacionAuxiliarFondo": {
+            "title": "Sector del centro y fondo (mirando a la pantalla)",
+            "content": "<p>Se dirigirán hacia la salidas de emergencia que se encuentran a la izquierda del auditorio.</p>"
+        },
+        "EvacuacionAuxiliarFrente": {
+            "title": "Sector del frente (mirando a la pantalla)",
+            "content": "<p>Se dirigirán hacia la puerta que está al frente a la derecha y saldrán hacia la izquierda por la salida de emergencia de la cocina.</p>"
         }
     },
     "zoomSettings": {
