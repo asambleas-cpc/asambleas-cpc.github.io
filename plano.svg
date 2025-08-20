@@ -14,9 +14,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="planoCpcAsambleas"
-   inkscape:cx="1768.8276"
-   inkscape:cy="2137.9374"
+   inkscape:current-layer="layDepartamentosInstalacionesPA"
+   inkscape:cx="1819.7393"
+   inkscape:cy="2118.8455"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -849,7 +849,12 @@
    apply_no_radius="true"
    apply_with_radius="true"
    only_selected="false"
-   hide_knots="false" /></defs>
+   hide_knots="false" />
+            
+            
+            
+            
+          </defs>
   <style
    id="style1"
    type="text/css">.icoHighlightAreaHidden {   }
@@ -2053,55 +2058,13 @@
    inkscape:label="icoAreaRestringidaPB"
    id="icoAreaRestringidaPB"
    style="clip-rule:evenodd;display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;text-rendering:geometricPrecision">
-          <g
-   id="g99">
-            <path
-   id="path10"
-   d="m 1736.94,2437.51 0.78,-238.55 h -148.25 v 73.03 h -116.82 v 71.93 h -59.36 v 93.59 z"
+          <path
+   id="intAreaRestringidaPB"
+   style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;opacity:1;stop-opacity:1"
    class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-            <path
-   id="path11"
-   d="m 1736.94,2063.43 v -49.15 h 122.34 v 125.63 H 1654.8 v -76.48 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-            <path
-   id="path98"
-   d="m 1764.89,2198.96 h 94.38 v 144.48 h -94.38 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-            <path
-   id="path99"
-   d="m 1784.97,2386.62 h 32.25 v 30.94 h -32.25 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          </g>
-          <g
-   inkscape:label="hlAreaRestringidaPB"
-   id="hlAreaRestringidaPB"
-   class="icoHighlightArea"
-   style="display:inline">
-            <path
-   id="path82"
-   d="m 1736.94,2437.51 0.78,-238.55 h -148.25 v 73.03 h -116.82 v 71.93 h -59.36 v 93.59 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-            <path
-   id="path83"
-   d="m 1736.94,2063.43 v -49.15 h 122.34 v 125.63 H 1654.8 v -76.48 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-            <path
-   id="path84"
-   d="m 1764.89,2198.96 h 94.38 v 144.48 h -94.38 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-            <path
-   id="path85"
-   d="m 1784.97,2386.62 h 32.25 v 30.94 h -32.25 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          </g>
+   d="M 1736.9396 2014.2799 L 1736.9396 2063.4299 L 1654.7995 2063.4299 L 1654.7995 2139.9093 L 1859.2796 2139.9093 L 1859.2796 2014.2799 L 1736.9396 2014.2799 z M 1589.4699 2198.9609 L 1589.4699 2271.9906 L 1472.65 2271.9906 L 1472.65 2343.9206 L 1413.2898 2343.9206 L 1413.2898 2437.5092 L 1736.9396 2437.5092 L 1737.7209 2198.9609 L 1589.4699 2198.9609 z M 1764.89 2198.9609 L 1764.89 2343.44 L 1859.2698 2343.44 L 1859.2698 2198.9609 L 1764.89 2198.9609 z M 1784.9704 2386.6207 L 1784.9704 2417.5597 L 1817.2201 2417.5597 L 1817.2201 2386.6207 L 1784.9704 2386.6207 z "
+   inkscape:label="intAreaRestringidaPB" />
+          
         </g>
         <g
    inkscape:label="icoAccesoPeatonalPB"
@@ -2692,11 +2655,7 @@
    inkscape:label="icoPatioPB"
    id="icoPatioPB"
    class="icoBox">
-          <path
-   id="path139"
-   d="m 1538.13,2014.28 v -112.61 l 316.46,42.71 358.04,0.08 v 405.9 h -178.96 l -0.07,-336.08 z"
-   class="fil1 ediGalerias"
-   style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:geometricPrecision;display:inline;opacity:1;fill:#c2bfbc;fill-opacity:0;stroke:none;stroke-width:58.5937" /><rect
+          <rect
    id="rect1342-5-5"
    width="24.9"
    height="24.9"
@@ -2940,7 +2899,7 @@
    inkscape:groupmode="layer"
    inkscape:label="layPlantaAlta"
    id="layPlantaAlta"
-   style="clip-rule:evenodd;display:none;fill-rule:evenodd;text-rendering:geometricPrecision">
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
       <g
    inkscape:groupmode="layer"
    inkscape:label="layEdificioPA"
@@ -4012,61 +3971,22 @@
    inkscape:label="icoAreaRestringidaPA"
    id="icoAreaRestringidaPA"
    style="clip-rule:evenodd;display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;text-rendering:geometricPrecision">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           <path
-   id="path92"
-   d="m 1784.97,2386.62 h 32.25 v 30.94 h -32.25 z"
+   id="intAreaRestringidaPA"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path93"
-   d="m 1653.26,2375.79 h 115.52 v 61.72 h -115.52 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path94"
-   d="m 1527.31,2320.99 h 154.61 v 27.77 h -154.61 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path95"
-   d="m 1702.52,2320.99 h 40.47 v 27.77 h -40.47 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path96"
-   d="m 1763.84,2320.99 h 180.08 v 27.77 h -180.08 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path135"
-   d="m 1964.6,2320.99 h 40.47 v 27.77 h -40.47 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path154"
-   d="m 2025.88,2320.99 h 154.01 v 27.77 h -154.01 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path157"
-   d="m 2167.23,2018.98 h 36.03 v 107.98 h -36.03 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path159"
-   d="m 2007.03,2146.53 h 32.96 v 47.28 h -32.96 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path160"
-   d="m 2167.23,2213.34 h 36.03 v 83.71 h -36.03 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
-          <path
-   id="path161"
-   d="m 1770.05,2386.62 h 14.92 v 30.94 h -14.92 z"
-   class="secAreaRestringida"
-   style="fill:#ffffff;fill-opacity:0" />
+   d="m 2167.2303,2018.9796 v 107.9809 h 36.0295 v -107.9809 z m -160.1997,127.5496 v 47.2807 h 32.9588 v -47.2807 z m 160.1997,66.8102 v 83.7106 h 36.0295 v -83.7106 z m -639.9198,107.6508 v 27.7708 h 154.6092 v -27.7708 z m 175.2092,0 v 27.7708 h 40.4694 v -27.7708 z m 61.3194,0 v 27.7708 H 1943.92 v -27.7708 z m 200.7609,0 v 27.7708 h 40.4695 v -27.7708 z m 61.2804,0 v 27.7708 h 154.0095 v -27.7708 z m -372.6201,54.7992 v 61.7198 h 115.5188 v -61.7198 z m 116.7905,10.8313 v 30.939 h 14.9196 32.2497 v -30.939 h -32.2497 z"
+   inkscape:label="intAreaRestringidaPA" />
         </g>
         <g
    inkscape:label="icoVestibuloPA"
@@ -4410,7 +4330,33 @@
      d="m 1564.9339,1938.2187 6.1489,-32.1013 283.5073,38.2626 289.4086,0.066 1.0006,30.2768 -294.5332,1 z"
      id="intSillasTemporalesPA"
      sodipodi:nodetypes="ccccccc"
-     inkscape:label="intSillasTemporalesPA" /></g></g>
+     inkscape:label="intSillasTemporalesPA" /></g><g
+   inkscape:label="icoBautismoPA"
+   id="icoBautismoPA"
+   class="icoBox"
+   style="clip-rule:evenodd;display:inline;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;-inkscape-stroke:hairline;paint-order:stroke fill markers;text-rendering:geometricPrecision"
+   transform="translate(-2.1215634,-131.53666)">
+          <rect
+   inkscape:label="hlBautismoPA"
+   id="hlBautismoPA"
+   width="38.58934"
+   height="79.513855"
+   x="2099.6602"
+   y="2263.1379"
+   ry="4.9496784"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:4.48498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.48498, 8.96999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision" />
+          
+          
+          
+        <rect
+   inkscape:label="intBautismoPA"
+   id="intBautismoPA"
+   width="44.986286"
+   height="77.269997"
+   x="2099.8091"
+   y="2264.26"
+   ry="4.8099999"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.16146;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:5.16146, 10.3229;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" /></g></g>
     <g
    id="g24"
    style="display:none"><rect

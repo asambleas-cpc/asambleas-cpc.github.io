@@ -92,10 +92,7 @@
         },
         "Bautismo": {
             "title": "Piscina de bautismo",
-            "content": "<p>Aquí se hará el bautismo el sábado al mediodía.</p>"
-        },
-        "GaleriaCubierta": {
-            "title": "Galería Cubierta"
+            "content": "<p>El bautismo se hará en el <a href=\"javascript:plano(0,'departamentos','Bautismo')\" class='plano-link'>patio cubierto.</a></p>    <p>Los candidatos se deben ubicar <a href=\"javascript:plano(1,'departamentos','Bautismo')\" class='plano-link'>en las primeras filas </a>en la sesión del sábado por la mañana.</p>"
         },
         "Ascensores": {
             "title": "Ascensores",
@@ -118,7 +115,7 @@
         },
         "AreaRestringida": {
             "title": "Áreas restringidas",
-            "content": "<p>Estas zonas del predio no están accesibles al público general.</p>"
+            "content": "<p>Estas zonas del predio no están accesibles al público general. En algunos casos pudieran contener elementos peligrosos.</p>"
         },
         "Estacionamiento": {
             "title": "Estacionamiento interno",
@@ -146,7 +143,7 @@
         },
         "SillasTemporales": {
             "title": "Asientos para uso temporal",
-            "content": "<p>Estos asientos se pueden usar para comer en los intermedios. Como son para uso temporal, <strong>no se deben reservar.</strong> Por favor, sea cosiderado con los demás cuando los use.</p>"
+            "content": "<p>Estos asientos se pueden usar para comer en los intermedios. Como son para uso temporal, <strong>no se deben reservar.</strong> Por favor, sea considerado con los demás cuando los use.</p>"
         }
     },
     "zoomSettings": {
