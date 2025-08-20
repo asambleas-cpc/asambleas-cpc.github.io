@@ -43,6 +43,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                 throw new Error("SVG element not found after loading.");
             }
 
+            // Ensure all base floor layers are displayed inline before initial setup
+            // to allow for CSS opacity transitions to work correctly.
+            for (const level in config.floors) {
+                const baseLayerId = config.floors[level].baseLayerId;
+                const baseLayerElement = svgElement.querySelector(`#${baseLayerId}`);
+                if (baseLayerElement) {
+                    baseLayerElement.style.display = 'inline';
+                }
+            }
+
             // Get SVG dimensions for CRS
             const svgWidth = svgElement.viewBox.baseVal.width;
             const svgHeight = svgElement.viewBox.baseVal.height;
