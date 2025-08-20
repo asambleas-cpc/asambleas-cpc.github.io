@@ -14,9 +14,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   inkscape:current-layer="icoBañosPA"
-   inkscape:cx="1849.5"
-   inkscape:cy="2281.5"
+   inkscape:current-layer="planoCpcAsambleas"
+   inkscape:cx="1768.8276"
+   inkscape:cy="2137.9374"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -26,7 +26,7 @@
    inkscape:window-width="1920"
    inkscape:window-x="-8"
    inkscape:window-y="262"
-   inkscape:zoom="0.99999999"
+   inkscape:zoom="1.4142135"
    id="namedview1"
    bordercolor="#eeeeee"
    borderopacity="1"
@@ -1997,14 +1997,15 @@
    inkscape:groupmode="layer"
    inkscape:label="layDepartamentosInstalacionesPB"
    id="layDepartamentosInstalacionesPB"
-   style="clip-rule:evenodd;display:none;fill-rule:evenodd;text-rendering:geometricPrecision">
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
         <g
    inkscape:label="icoAuditorioAuxiliarPB"
    id="icoAuditorioAuxiliarPB">
           <path
-   id="path138"
+   id="intAuditorioAuxiliarPB"
    d="m 2033.6,2014.28 0.01,329.17 h -174.33 v -329.17 z"
-   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;mix-blend-mode:darken;vector-effect:none;fill:#ff847f;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intAuditorioAuxiliarPB" />
           <path
    id="hlAuditorioAuxiliarPB"
    d="m 2033.6,2014.28 0.01,329.17 h -174.33 v -329.17 z"
@@ -2043,7 +2044,11 @@
    id="hlVestibuloPB"
    d="m 1414.29,1884.96 -162.92,162.59 161.92,159.89 v -9.42 l 445.99,0.93 v -59.05 l -272.45,0.01 -38.98,-41.15 v -44.91 l 0.49,-39.58 h -10.21 v -112.6 z"
    style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.00079;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.00079, 14.0016;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
-        </g>
+        <path
+   id="intVestibuloPB"
+   d="m 1414.29,1884.96 -162.92,162.59 161.92,159.89 v -9.42 l 445.99,0.93 v -59.05 l -272.45,0.01 -38.98,-41.15 v -44.91 l 0.49,-39.58 h -10.21 v -112.6 z"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intVestibuloPB" /></g>
         <g
    inkscape:label="icoAreaRestringidaPB"
    id="icoAreaRestringidaPB"
@@ -2316,7 +2321,15 @@
    x="1867.48"
    y="2379.22"
    class="lblEtiqueta">Guarda de alimentos</text>
-        </g>
+        <rect
+   inkscape:label="intGuardaAlimentosPB"
+   id="intGuardaAlimentosPB"
+   width="224.39"
+   height="103.49"
+   x="1813.22"
+   y="2338.74"
+   ry="5.8800001"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" /></g>
         <g
    id="icoObjetosPerdidosPB"
    class="icoBox">
@@ -2348,15 +2361,7 @@
    class="lblEtiqueta"
    transform="translate(0,-10.6)">Guardarropa y objetos perdidos</text>
         </g>
-        <g
-   inkscape:label="icoBañosMujeresPB"
-   id="icoBañosMujeresPB"
-   class="icoBox">
-          
-          
-          
-          
-        </g>
+        
         <g
    inkscape:label="icoBañosPB"
    id="icoBañosPB"
@@ -2408,7 +2413,11 @@
      id="tspan724"
      x="1509.39"
      y="2249.4299">Baños hombres</tspan></text>
-        </g>
+        <path
+   id="intBañosPB"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intBañosPB"
+   d="m 1418.6303,2198.0193 c -2.9584,0 -5.3405,2.3821 -5.3405,5.3405 v 135.2203 c 0,2.9584 2.3821,5.3405 5.3405,5.3405 h 48.6793 c 2.9584,0 5.3404,-2.3821 5.3404,-5.3405 v -135.2203 c 0,-2.9584 -2.382,-5.3405 -5.3404,-5.3405 z m 88.3889,0.9416 c -2.9584,0 -5.3385,2.3801 -5.3385,5.3384 v 61.5597 c 0,2.9584 2.3801,5.3405 5.3385,5.3405 h 77.1102 c 2.9584,0 5.3405,-2.3821 5.3405,-5.3405 v -61.5597 c 0,-2.9583 -2.3821,-5.3384 -5.3405,-5.3384 z" /></g>
         <g
    inkscape:label="icoBautismoPB"
    id="icoBautismoPB"
@@ -2440,43 +2449,16 @@
    y="977.65997"
    class="lblEtiqueta"
    transform="translate(646.1,1352.33)">Bautismo</text>
-        </g>
-        <g
-   inkscape:label="icoGaleriaCubiertaPB"
-   id="icoGaleriaCubiertaPB"
-   class="icoBox">
-          <path
-   id="path139"
-   d="m 1538.13,2014.28 v -112.61 l 316.46,42.71 358.04,0.08 v 405.9 h -178.96 l -0.07,-336.08 z"
-   class="fil1 ediGalerias"
-   style="clip-rule:evenodd;display:inline;fill:#c2bfbc;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:58.5937;text-rendering:geometricPrecision" />
-          <rect
-   id="rect1342-5-5"
-   width="24.9"
-   height="24.9"
-   x="2114.6001"
-   y="1958.8411"
-   class="icoInstalaciones"
-   ry="5.3400002" />
-          <path
-   id="path1-2"
-   d="m 2133.379,1977.871 -4.64,-4.64 v -1.1 c 0,-0.19 0.08,-0.33 0.25,-0.4 0.17,-0.07 0.33,-0.03 0.47,0.11 l 5.31,5.31 c 0.15,0.15 0.18,0.3 0.11,0.47 -0.07,0.17 -0.2,0.25 -0.4,0.25 z m -4.64,-0.84 v -1.69 l 2.53,2.53 h -1.69 c -0.24,0 -0.44,-0.08 -0.6,-0.24 -0.16,-0.16 -0.24,-0.36 -0.24,-0.6 z m -8.44,0 v -7.6 h -0.68 c -0.19,0 -0.33,-0.08 -0.4,-0.25 -0.07,-0.17 -0.03,-0.33 0.11,-0.47 l 3.75,-3.75 c 0.17,-0.17 0.37,-0.26 0.6,-0.26 0.22,0 0.42,0.09 0.59,0.26 l 3.75,3.75 c 0.14,0.14 0.18,0.3 0.11,0.47 -0.07,0.17 -0.21,0.25 -0.4,0.25 h -0.68 v 7.6 c 0,0.24 -0.08,0.44 -0.24,0.6 -0.16,0.16 -0.36,0.24 -0.6,0.24 h -5.07 c -0.24,0 -0.44,-0.08 -0.6,-0.24 -0.16,-0.16 -0.24,-0.36 -0.24,-0.6 z m 2.53,-4.22 h 1.69 v -3.38 h -1.69 z"
-   class="icoIcon" />
-          <text
-   inkscape:label="lblGaleriaCubiertaPB"
-   id="lblGaleriaCubiertaPB"
-   x="3110.8999"
-   y="1999.181"
-   class="lblEtiqueta"><tspan
-     id="tspan720"
-     x="2092.1201"
-     y="1999.181">Galería cubierta</tspan></text>
-          <path
-   id="hlGaleriaCubiertaPB"
-   d="m 1538.13,2014.28 v -112.61 l 316.46,42.71 358.04,0.08 v 405.9 h -178.96 l -0.07,-336.08 z"
-   class="fil1 ediGalerias"
-   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:10.0011;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:10.0011, 20.0023;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
-        </g>
+        <rect
+   inkscape:label="intBautismoPB"
+   id="intBautismoPB"
+   width="87.360001"
+   height="77.269997"
+   x="2080.98"
+   y="2264.26"
+   ry="4.8099999"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" /></g>
+        
         <g
    id="icoAscensoresPB"
    class="icoBox">
@@ -2519,7 +2501,16 @@
    y="2016.46"
    ry="5.3400002"
    style="display:inline;opacity:1;fill:#ff6600;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:1.00011;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke" />
-        </g>
+        <rect
+   inkscape:label="intAscensoresPB"
+   id="intAscensoresPB"
+   width="42.529999"
+   height="83.720001"
+   x="1408.15"
+   y="2010.47"
+   class="icoHighlightArea"
+   ry="6.23"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter176);text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" /></g>
         <g
    id="icoPrimerosAuxiliosPB"
    class="icoBox">
@@ -2545,7 +2536,11 @@
    y="684.71002"
    class="lblEtiqueta"
    transform="translate(672.1,1352.83)">Primeros auxilios</text>
-        </g>
+        <path
+   id="intPrimerosAuxiliosPB"
+   d="m 1654.8,2014.28 v 70.51 h -106.95 v -30.94 l -9.98,-0.13 0.26,-39.44 z"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intPrimerosAuxiliosPB" /></g>
         <g
    inkscape:label="icoLactantesPB"
    id="icoLactantesPB"
@@ -2573,7 +2568,11 @@
    y="712.59998"
    class="lblEtiqueta"
    transform="translate(703.6,1400.34)">Lactantes</text>
-        </g>
+        <path
+   id="intLactantesPB"
+   d="m 1654.8,2084.79 v 55.12 h -67.97 l -38.97,-38.97 v -16.15 z"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intLactantesPB" /></g>
         <g
    inkscape:label="icoSalidaPatio2PB"
    id="icoSalidaPatio2PB"
@@ -2684,12 +2683,46 @@
      id="tspan1703"
      x="728.34003"
      y="629.64001">Escaleras a planta alta</tspan></text>
-        </g>
+        <path
+   id="intEscalerasPB"
+   d="m 1391.32,1923.07 21.97,21.47 -88.73,90.77 -21.97,-21.47 z"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intEscalerasPB" /></g>
         <g
    inkscape:label="icoPatioPB"
    id="icoPatioPB"
    class="icoBox">
-          <rect
+          <path
+   id="path139"
+   d="m 1538.13,2014.28 v -112.61 l 316.46,42.71 358.04,0.08 v 405.9 h -178.96 l -0.07,-336.08 z"
+   class="fil1 ediGalerias"
+   style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:geometricPrecision;display:inline;opacity:1;fill:#c2bfbc;fill-opacity:0;stroke:none;stroke-width:58.5937" /><rect
+   id="rect1342-5-5"
+   width="24.9"
+   height="24.9"
+   x="2114.6001"
+   y="1958.8411"
+   class="icoInstalaciones"
+   ry="5.3400002"
+   style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:geometricPrecision;display:inline;opacity:1" /><path
+   id="path1-2"
+   d="m 2133.379,1977.871 -4.64,-4.64 v -1.1 c 0,-0.19 0.08,-0.33 0.25,-0.4 0.17,-0.07 0.33,-0.03 0.47,0.11 l 5.31,5.31 c 0.15,0.15 0.18,0.3 0.11,0.47 -0.07,0.17 -0.2,0.25 -0.4,0.25 z m -4.64,-0.84 v -1.69 l 2.53,2.53 h -1.69 c -0.24,0 -0.44,-0.08 -0.6,-0.24 -0.16,-0.16 -0.24,-0.36 -0.24,-0.6 z m -8.44,0 v -7.6 h -0.68 c -0.19,0 -0.33,-0.08 -0.4,-0.25 -0.07,-0.17 -0.03,-0.33 0.11,-0.47 l 3.75,-3.75 c 0.17,-0.17 0.37,-0.26 0.6,-0.26 0.22,0 0.42,0.09 0.59,0.26 l 3.75,3.75 c 0.14,0.14 0.18,0.3 0.11,0.47 -0.07,0.17 -0.21,0.25 -0.4,0.25 h -0.68 v 7.6 c 0,0.24 -0.08,0.44 -0.24,0.6 -0.16,0.16 -0.36,0.24 -0.6,0.24 h -5.07 c -0.24,0 -0.44,-0.08 -0.6,-0.24 -0.16,-0.16 -0.24,-0.36 -0.24,-0.6 z m 2.53,-4.22 h 1.69 v -3.38 h -1.69 z"
+   class="icoIcon"
+   style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:geometricPrecision;display:inline;opacity:1" /><text
+   inkscape:label="lblGaleriaCubiertaPB"
+   id="lblGaleriaCubiertaPB"
+   x="3110.8999"
+   y="1999.181"
+   class="lblEtiqueta"
+   style="clip-rule:evenodd;fill-rule:evenodd;text-rendering:geometricPrecision;display:inline;opacity:1"><tspan
+     id="tspan720"
+     x="2092.1201"
+     y="1999.181">Galería cubierta</tspan></text><path
+   id="hlPatioPB"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:10.0011;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:10.0011, 20.0023;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   class="fil1 ediGalerias"
+   d="m 1419.9996,1854.2208 -5.7097,30.7398 123.8402,16.7089 v 112.6104 H 2033.6 l 0.066,454.5083 201.5931,-0.088 -0.17,-614.4795 z m -186.3824,174.7775 -69.6172,65.2926 78.8898,91.8287 -68.8789,62.7004 -27.3918,11.89 -52.3594,-7.62 -14.1696,74.9499 102.2909,20.3597 25.7783,-8.2802 81.2005,-86.67 14.6599,-3.9985 43.1943,80.4251 29.4057,106.4241 36.6701,1.2091 v -230.0689 z"
+   inkscape:label="hlPatioPB" /><rect
    id="rect1342-5-5-7"
    width="24.9"
    height="24.9"
@@ -2711,7 +2744,12 @@
      id="tspan1806"
      x="2089.3899"
      y="1916.64">Patio exterior</tspan></text>
-        </g>
+        <path
+   id="intPatioPB"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;mix-blend-mode:normal;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1;vector-effect:none;-inkscape-stroke:none"
+   class="fil1 ediGalerias"
+   d="M 1419.9996 1854.2208 L 1414.2899 1884.9606 L 1538.1301 1901.6695 L 1538.1301 2014.2799 L 2033.6 2014.2799 L 2033.6664 2468.7882 L 2235.2595 2468.7003 L 2235.0895 1854.2208 L 1419.9996 1854.2208 z M 1233.6172 2028.9983 L 1164 2094.2909 L 1242.8898 2186.1196 L 1174.0109 2248.82 L 1146.6191 2260.71 L 1094.2597 2253.09 L 1080.0901 2328.0399 L 1182.381 2348.3996 L 1208.1593 2340.1194 L 1289.3598 2253.4494 L 1304.0197 2249.4509 L 1347.214 2329.876 L 1376.6197 2436.3001 L 1413.2898 2437.5092 L 1413.2898 2207.4403 L 1233.6172 2028.9983 z "
+   inkscape:label="intPatioPB" /></g>
         <g
    inkscape:label="icoSalidaPatioPB"
    id="icoSalidaPatioPB"
@@ -2884,13 +2922,25 @@
      y="2016.7965"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Cabin;-inkscape-font-specification:Cabin"
      id="tspan1">sobre donaciones</tspan></text>
-        </g></g>
+        </g><g
+   id="icoSillasTemporalesPB"
+   inkscape:label="icoSillasTemporalesPB"
+   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision"
+   transform="translate(-1.5254613e-5)"><path
+     id="hlSillasTemporalesPB"
+     style="font-variation-settings:normal;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+     d="m 1606.4855,1969.5151 v 30.1713 h 436.0687 v -30.1713 z m 545.2411,37.4807 v 139.3146 h 32.5291 v -139.3146 z m -91.2271,0.7072 v 137.9003 h 35.3595 V 2007.703 Z"
+     inkscape:label="hlSillasTemporalesPB" /><path
+     id="intSillasTemporalesPB"
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+     d="M 1606.4855 1969.5151 L 1606.4855 1999.6864 L 2042.5542 1999.6864 L 2042.5542 1969.5151 L 1606.4855 1969.5151 z M 2151.7266 2006.9958 L 2151.7266 2146.3104 L 2184.2557 2146.3104 L 2184.2557 2006.9958 L 2151.7266 2006.9958 z M 2060.4995 2007.703 L 2060.4995 2145.6033 L 2095.859 2145.6033 L 2095.859 2007.703 L 2060.4995 2007.703 z "
+     inkscape:label="intSillasTemporalesPB" /></g></g>
     </g>
     <g
    inkscape:groupmode="layer"
    inkscape:label="layPlantaAlta"
    id="layPlantaAlta"
-   style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision">
+   style="clip-rule:evenodd;display:none;fill-rule:evenodd;text-rendering:geometricPrecision">
       <g
    inkscape:groupmode="layer"
    inkscape:label="layEdificioPA"
@@ -3952,7 +4002,12 @@
    d="m 1565.3,2019.58 637.96,0.33 v 299.93 l -698.47,0.41 v -241.39 z"
    class="secAreaRestringida"
    style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
-        </g>
+        <path
+   id="intAuditorioPrincipalPA"
+   d="m 1565.3,2019.58 637.96,0.33 v 299.93 l -698.47,0.41 v -241.39 z"
+   class="secAreaRestringida"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intAuditorioPrincipalPA" /></g>
         <g
    inkscape:label="icoAreaRestringidaPA"
    id="icoAreaRestringidaPA"
@@ -4042,9 +4097,10 @@
    d="m 2203.26,1944.46 v 75.45 l -637.96,-0.33 -60.51,59.28 -1.3,122.19 -90.2,3.87 v -116.69 h 32.2 v -71.77 h -32.2 v -71.92 l -29.32,-29.32 30.32,-30.26 440.3,59.42 z"
    style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;mix-blend-mode:normal;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
         <path
-   id="areaVestibuloPA"
+   id="intVestibuloPA"
    d="m 2203.26,1944.46 v 75.45 l -637.96,-0.33 -60.51,59.28 -1.3,122.19 -90.2,3.87 v -116.69 h 32.2 v -71.77 h -32.2 v -71.92 l -29.32,-29.32 30.32,-30.26 440.3,59.42 z"
-   style="display:none" /></g>
+   style="display:inline;fill:none;stroke:none;stroke-width:0;stroke-dasharray:none"
+   inkscape:label="intVestibuloPA" /></g>
         <g
    id="icoAcomodadoresPA"
    class="icoBox">
@@ -4106,14 +4162,24 @@
    y="1017.39"
    class="lblEtiqueta"
    transform="translate(646.1,1381.32)">Guarda de alimentos</text>
-        </g>
+        <rect
+   inkscape:label="intGuardaAlimentosPA"
+   id="intGuardaAlimentosPA"
+   width="146.84"
+   height="88.019997"
+   x="1831.4301"
+   y="2349.4299"
+   ry="5.3400002"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" /></g>
         
         <g
    inkscape:label="icoBañosPA"
    id="icoBañosPA"
-   class="icoBox">
+   class="icoBox"
+   pointer-events="all">
           <path
    id="hlBañosPA"
+   pointer-events="auto"
    style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
    inkscape:label="hlBañosPA"
    d="m 1413.2898,2204.9205 v 232.5887 h 59.3602 180.6103 v -61.7198 H 1472.65 v -170.8689 z" /><rect
@@ -4125,10 +4191,6 @@
    class="icoInstalaciones"
    ry="5.3400002"
    style="clip-rule:evenodd;display:inline;fill-rule:evenodd;text-rendering:geometricPrecision" /><path
-   id="BañosPA"
-   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:0.74942;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
-   inkscape:label="BañosPA"
-   d="m 1413.2898,2204.9205 v 232.5887 h 59.3602 180.6103 v -61.7198 H 1472.65 v -170.8689 z" /><path
    id="path1-5-7"
    d="m 1443.28,2309.57 v -3.73 h -1.51 c -0.27,0 -0.47,-0.11 -0.62,-0.33 -0.15,-0.22 -0.17,-0.45 -0.07,-0.7 l 1.86,-4.72 c 0.13,-0.3 0.32,-0.54 0.58,-0.71 0.26,-0.18 0.56,-0.27 0.88,-0.27 0.32,0 0.62,0.09 0.88,0.27 0.26,0.17 0.45,0.41 0.58,0.71 l 1.87,4.72 c 0.1,0.25 0.07,0.48 -0.08,0.7 -0.15,0.22 -0.36,0.33 -0.62,0.33 h -1.51 v 3.73 c 0,0.21 -0.07,0.39 -0.21,0.54 -0.15,0.14 -0.32,0.21 -0.54,0.21 h -0.74 c -0.22,0 -0.39,-0.07 -0.54,-0.21 -0.14,-0.15 -0.21,-0.33 -0.21,-0.54 z m 1.12,-11.2 c -0.41,0 -0.76,-0.15 -1.05,-0.44 -0.3,-0.29 -0.44,-0.65 -0.44,-1.06 0,-0.41 0.14,-0.76 0.44,-1.05 0.29,-0.29 0.64,-0.44 1.05,-0.44 0.41,0 0.76,0.15 1.06,0.44 0.29,0.29 0.43,0.64 0.43,1.05 0,0.41 -0.14,0.77 -0.43,1.06 -0.3,0.29 -0.65,0.44 -1.06,0.44 z"
    class="icoIcon"
@@ -4167,18 +4229,23 @@
    y="1070.11"
    class="lblEtiqueta"
    style="text-align:center;text-anchor:middle"
-   transform="translate(646.1,1352.33)">Baños hombres</text>
+   transform="translate(646.1,1352.33)">Baños hombres</text><path
+   id="intBañosPA"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intBañosPA"
+   d="m 1413.2898,2204.9205 v 232.5887 h 59.3602 180.6103 v -61.7198 H 1472.65 v -170.8689 z" />
         </g>
         <g
    id="icoAscensoresPA"
    class="icoBox">
           <rect
-   id="rect101"
+   id="hlAscensoresPA"
    width="32.200001"
    height="71.769997"
    x="1413.29"
    y="2016.46"
-   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1" />
+   style="font-variation-settings:normal;clip-rule:evenodd;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="hlAscensoresPA" />
           <rect
    id="rect1342-3-3"
    width="24.9"
@@ -4199,7 +4266,14 @@
      id="tspan725-4-5"
      x="1439.26"
      y="2075.4099">Ascensores</tspan></text>
-        </g>
+        <rect
+   id="intAscensoresPA"
+   width="32.200001"
+   height="71.769997"
+   x="1413.29"
+   y="2016.46"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intAscensoresPA" /></g>
         <g
    id="icoPrimerosAuxiliosPA"
    class="icoBox">
@@ -4258,7 +4332,11 @@
      id="tspan1703-9"
      x="1375.22"
      y="1983.26">Escaleras a planta baja</tspan></text>
-        </g>
+        <path
+   id="intEscalerasPA"
+   d="m 1391.32,1923.07 21.97,21.47 -88.73,90.77 -21.97,-21.47 z"
+   style="font-variation-settings:normal;clip-rule:evenodd;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;text-rendering:geometricPrecision;stop-color:#000000;stop-opacity:1"
+   inkscape:label="intEscalerasPA" /></g>
         <g
    inkscape:label="icoSalidaVestibuloPA"
    id="icoSalidaVestibuloPA"
@@ -4320,7 +4398,19 @@
      y="1029">emergencia</tspan></text>
         </g>
         
-      </g>
+      <g
+   id="icoSillasTemporalesPA"
+   inkscape:label="icoSillasTemporalesPA"><path
+     style="font-variation-settings:normal;display:none;opacity:1;vector-effect:none;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff8613;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+     d="m 1564.9339,1938.2187 6.1489,-32.1013 283.5073,38.2626 289.4086,0.066 1.0006,30.2768 -294.5332,1 z"
+     id="hlSillasTemporalesPA"
+     sodipodi:nodetypes="ccccccc"
+     inkscape:label="hlSillasTemporalesPA" /><path
+     style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+     d="m 1564.9339,1938.2187 6.1489,-32.1013 283.5073,38.2626 289.4086,0.066 1.0006,30.2768 -294.5332,1 z"
+     id="intSillasTemporalesPA"
+     sodipodi:nodetypes="ccccccc"
+     inkscape:label="intSillasTemporalesPA" /></g></g>
     <g
    id="g24"
    style="display:none"><rect

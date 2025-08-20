@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     let currentLayer = 'departamentos';
     let currentActiveFloor = 0;
     let highlightedElement = null;
+    let originalNextSibling = null;
+    let originalParent = null;
 
     /**
      * Fetches config and SVG, then initializes the application.
@@ -42,6 +44,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!svgElement) {
                 throw new Error("SVG element not found after loading.");
             }
+
+            // Programmatically set pointer events so that only child elements
+            // with an ID starting with "int" are interactive.
+            const iconGroups = svgElement.querySelectorAll(`g[id^="${config.definitions.prefixes.icon}"]`);
+            iconGroups.forEach(group => {
+                // First, disable pointer events on all children to ensure a clean slate.
+                // group.querySelectorAll('*').forEach(child => {
+                //     child.style.pointerEvents = 'none';
+                // });
+                // Then, enable pointer events only on the specifically marked interactive elements.
+                group.querySelectorAll(`[id^="int"]`).forEach(interactiveElement => {
+                    interactiveElement.style.pointerEvents = 'all';
+                });
+            });
 
             // Ensure all base floor layers are displayed inline before initial setup
             // to allow for CSS opacity transitions to work correctly.
@@ -332,40 +348,52 @@ document.addEventListener('DOMContentLoaded', async () => {
             ${offcanvasData.content || ''}
         `;
         
-        // If the offcanvas is already visible, center on the new element immediately.
         if (mainOffcanvasElement.classList.contains('show')) {
             centerOnElement(iconId, animate);
         } else {
-            // Otherwise, wait for the offcanvas to be fully shown before centering.
             mainOffcanvasElement.addEventListener('shown.bs.offcanvas', () => {
                 centerOnElement(iconId, animate);
-            }, { once: true }); // Ensure the listener is only called once per show event.
+            }, { once: true });
         }
-        console.log(iconId);
-
+        
         mainOffcanvas.show();
 
         if (highlightElement) {
-            highlightedElement = highlightElement;
-            highlightedElement.style.display = 'inline';
-        } else {
-            highlightedElement = target;
-            highlightedElement.classList.add('highlight-direct'); // Add a class for direct highlight if no 'hl' element
+            highlightedElement = target; // The group is the reference
+            originalParent = target.parentElement;
+            originalNextSibling = target.nextElementSibling;
+
+            const interactivePart = target.querySelector(`[id^="int"]`);
+            if (interactivePart) {
+                interactivePart.style.pointerEvents = 'none';
+            }
+
+            highlightElement.style.display = 'inline';
+            bringToFront(target);
         }
-        bringToFront(target);
     }
 
-    /**
-     * Removes the highlight from the currently selected element.
-     */
     function clearHighlight() {
         if (highlightedElement) {
-            if (highlightedElement.id.startsWith(config.definitions.prefixes.highlight)) {
-                highlightedElement.style.display = 'none';
-            } else {
-                highlightedElement.classList.remove('highlight-direct');
+            const highlightId = `${config.definitions.prefixes.highlight}${highlightedElement.id.replace(config.definitions.prefixes.icon, '')}`;
+            const highlightElement = svgElement.querySelector(`#${highlightId}`);
+
+            if (highlightElement) {
+                highlightElement.style.display = 'none';
             }
+
+            const interactivePart = highlightedElement.querySelector(`[id^="int"]`);
+            if (interactivePart) {
+                interactivePart.style.pointerEvents = 'all';
+            }
+
+            if (originalParent) {
+                originalParent.insertBefore(highlightedElement, originalNextSibling);
+            }
+
             highlightedElement = null;
+            originalParent = null;
+            originalNextSibling = null;
         }
     }
 

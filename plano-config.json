@@ -143,6 +143,10 @@
         "Donate": {
             "title": "Punto de información sobre donaciones",
             "content": "<p>Aquí recibirá información sobre los métodos de donación existentes en <a href='https://donate.jw.org' target='_blank'>donate.jw.org</a>. Los hermanos le ayudarán a despejar sus dudas y le darán asesoramiento sobre el uso del sitio para que pueda demostrar su agradecimiento por los eventos teocráticos.</p>"
+        },
+        "SillasTemporales": {
+            "title": "Asientos para uso temporal",
+            "content": "<p>Estos asientos se pueden usar para comer en los intermedios. Como son para uso temporal, <strong>no se deben reservar.</strong> Por favor, sea cosiderado con los demás cuando los use.</p>"
         }
     },
     "zoomSettings": {
