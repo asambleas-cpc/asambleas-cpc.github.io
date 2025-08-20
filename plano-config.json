@@ -75,7 +75,7 @@
             "content": "<p>Los acomodadores están para ayudarle. Coopere con ellos en todo y siga sus instrucciones sobre el estacionamiento, la circulación por los pasillos, la reserva de asientos y otros asuntos.</p>"
         },
         "GuardaAlimentos": {
-            "title": "Guardado de alimentos",
+            "title": "Punto de guardado de alimentos",
             "content": "<p>Es <a href='#guardaAlimentos'>donde se pueden guardar los alimentos</a> durante el programa. Recuerde que <strong>no se debe ingresar a los auditorios con alimentos o bebidas.</strong></p><p>Por favor, forme fila de la manera que se indica en los siguientes planos:</p><ul><li><a href=\"javascript:plano(0,'alimentos')\" class=\"plano-link\">Planta baja</a></li><li><a href=\"javascript:plano(1,'alimentos')\" class=\"plano-link\">Planta alta</a></li></ul>"
         },
         "Guardaropas": {
@@ -180,6 +180,26 @@
         "EvacuacionAuxiliarFrente": {
             "title": "Sector del frente (mirando a la pantalla)",
             "content": "<p>Se dirigirán hacia la puerta que está al frente a la derecha y saldrán hacia la izquierda por la salida de emergencia de la cocina.</p>"
+        },
+        "AlimentosFilaRetirar": {
+            "title": "Fila para retirar alimentos",
+            "content": "<p>Forme fila en el auditorio hacia la puerta de acceso al punto de guardado. Para agilizar el proceso, siga las instrucciones de los hermanos que organizan la fila. No regrese al auditorio con los alimentos.</p>"
+        },
+        "AlimentosFilaGuardar": {
+            "title": "Fila para guardar alimentos",
+            "content": "<p>Forme fila por el pasillo que da al punto de guardado. Para agilizar el proceso, siga las instrucciones de los hermanos que organizan la fila. No ingrese al auditorio con los alimentos.</p>"
+        },
+        "AlimentosHabilitado": {
+            "title": "Área habilitada para consumir alimentos",
+            "content": "<p>En los vestíbulos y exteriores del predio se pueden consumir alimentos. No se pueden ingresar alimentos ni bebidas a los auditorios.</p>"
+        },
+        "AlimentosRestringido": {
+            "title": "Área no habilitada para consumir alimentos",
+            "content": "<p><strong>No se debe ingresar a los auditorios con alimentos ni bebidas (incluído mate).</strong></p>"
+        },
+        "AlimentosPuntoGuarda": {
+            "title": "Punto de guardado de alimentos",
+            "content": "<p>Es <a href='#guardaAlimentos'>donde se pueden guardar los alimentos</a> durante el programa. Recuerde que <strong>no se debe ingresar a los auditorios con alimentos o bebidas.</strong></p><p>Por favor, forme fila de la manera que se indica."
         }
     },
     "zoomSettings": {
