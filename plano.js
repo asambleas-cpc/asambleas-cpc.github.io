@@ -221,7 +221,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     function switchFloor(level, isInitial = false) {
         if (!isInitial && currentActiveFloor === level) return;
         
-        mainOffcanvas.hide();
+        if (!isInitial) {
+            mainOffcanvas.hide();
+        }
         currentActiveFloor = level;
 
         floorControls.querySelectorAll('button').forEach(btn => {
@@ -443,16 +445,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const performMapActions = () => {
             map.invalidateSize();
-            // Validate and switch floor
+            // When calling programmatically, use the 'isInitial' flag to prevent
+            // the offcanvas from hiding and re-showing, which causes a race condition
+            // that clears the new highlight. This also skips fade transitions for an instant view change.
             if (config.floors[floor] !== undefined) {
-                switchFloor(parseInt(floor, 10));
+                switchFloor(parseInt(floor, 10), true);
             } else {
                 console.error(`Invalid floor number provided: ${floor}.`);
             }
 
             // Validate and switch layer
             if (config.layers[layer] !== undefined) {
-                switchLayer(layer);
+                switchLayer(layer, true);
             } else {
                 console.error(`Invalid layer key provided: '${layer}'.`);
             }
