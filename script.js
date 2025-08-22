@@ -1,3 +1,17 @@
+    (async () => {
+      try {
+        await document.fonts.load("1em Material Icons");
+        await document.fonts.load("1em Material Symbols Outlined");
+        document.documentElement.classList.remove('fonts-loading');
+      } catch (e) {
+        console.error('Font loading error:', e);
+        // Fallback: remove the class anyway after a timeout
+        setTimeout(() => {
+          document.documentElement.classList.remove('fonts-loading');
+        }, 500);
+      }
+    })();
+
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
   new bootstrap.Tooltip(el);
 });
