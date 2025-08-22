@@ -83,7 +83,7 @@ const fuentesDatos = {
     subtitulo: "Seleccione una cochera para ver la ubicación.",
     columnas: ["Nombre", "Observaciones"],
     procesar: (c) => ([
-      `<strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small> <span class="badge text-bg-success">${c[2]?.v || ''} min</span>`,
+      `<strong>${c[0]?.v || ''}</strong><br><small>${c[1]?.v || ''}</small> <span class="badge text-bg-success"><i class="material-symbols-outlined">directions_walk</i> ${c[2]?.v || ''} min</span>`,
       `${c[4]?.v || ''}`
     ])
   },
@@ -93,7 +93,7 @@ const fuentesDatos = {
     subtitulo: "Seleccione un estacionamiento para ver la ubicación.",
     columnas: ["Lugar", "Observaciones"],
     procesar: (c) => ([
-      `${c[0]?.v || ''} <span class="badge text-bg-success">${c[1]?.v || ''} min</span>`,
+      `${c[0]?.v || ''} <span class="badge text-bg-success"><i class="material-symbols-outlined">directions_walk</i> ${c[1]?.v || ''} min</span>`,
       `${c[2]?.v || ''}`
     ])
   },
@@ -104,7 +104,7 @@ const fuentesDatos = {
     columnas: ["Línea (Ramal)", "Parada (Distancia)"],
     procesar: (c) => ([
       `${(c[0]?.v || '').split(',').map(item => `<span class="badge text-bg-secondary">${item.trim()}</span>`).join(' ')}<br> ${(c[1]?.v || '').split(',').map(item => `<span class="badge text-bg-light">${item.trim()}</span>`).join(' ')}`,
-      `${c[3]?.v || ''}<br><span class="badge text-bg-success">${c[4]?.v || ''} min</span>`
+      `${c[3]?.v || ''}<br><span class="badge text-bg-success"><i class="material-symbols-outlined">directions_walk</i> ${c[4]?.v || ''} min</span>`
       
     ])
     
