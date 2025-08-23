@@ -7,13 +7,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
     // --- DOM ELEMENT CACHE ---
-    const floorControls = document.getElementById('floor-controls');
-    const layerSelectorDropdown = document.querySelector('.dropdown-menu[aria-labelledby="layer-selector-btn"]');
-    const layerTitleElement = document.getElementById('layer-title');
-    const floorSubtitleElement = document.getElementById('floor-subtitle');
-    const mainOffcanvasElement = document.getElementById('mainOffcanvas');
-    const mainOffcanvas = new bootstrap.Offcanvas(mainOffcanvasElement);
-    const mapLoader = document.getElementById('map-loader');
+    const dom = {
+        floorControls: document.getElementById('floor-controls'),
+        layerSelectorDropdown: document.querySelector('.dropdown-menu[aria-labelledby="layer-selector-btn"]'),
+        layerTitleElement: document.getElementById('layer-title'),
+        floorSubtitleElement: document.getElementById('floor-subtitle'),
+        mainOffcanvasElement: document.getElementById('mainOffcanvas'),
+        mapLoader: document.getElementById('map-loader'),
+        mapModal: document.getElementById('mapModal'),
+        zoomIn: document.getElementById('zoom-in'),
+        zoomOut: document.getElementById('zoom-out'),
+        mainOffcanvasBody: document.getElementById('mainOffcanvasBody'),
+        mapHeaderPanel: document.getElementById('map-header-panel')
+    };
+    const mainOffcanvas = new bootstrap.Offcanvas(dom.mainOffcanvasElement);
 
     // --- STATE MANAGEMENT ---
     let currentLayer = 'departamentos';
@@ -105,11 +112,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateMapTitle();
 
             // Center on the initial element if defined
-            const mapModal = document.getElementById('mapModal');
-            if (mapModal) {
+            if (dom.mapModal) {
                 let initialCenterDone = false;
                 if (config.defaultView.initialElement) {
-                    mapModal.addEventListener('shown.bs.modal', () => {
+                    dom.mapModal.addEventListener('shown.bs.modal', () => {
                         if (!initialCenterDone) {
                             centerOnElement(config.defaultView.initialElement);
                             initialCenterDone = true;
@@ -122,13 +128,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             }""
 
             // Hide loader
-            mapLoader.style.display = 'none';
+            dom.mapLoader.style.display = 'none';
 
             
 
         } catch (error) {
             console.error('Error initializing map:', error);
-            mapLoader.innerHTML = '<div class="alert alert-danger">Could not load map.</div>';
+            dom.mapLoader.innerHTML = '<div class="alert alert-danger">Could not load map.</div>';
         }
     }
 
@@ -137,18 +143,18 @@ document.addEventListener('DOMContentLoaded', async () => {
      */
     function setupUI() {
         // Populate floor controls
-        floorControls.innerHTML = '';
+        dom.floorControls.innerHTML = '';
         Object.keys(config.floors).sort((a, b) => b - a).forEach(level => {
             const button = document.createElement('button');
             button.type = 'button';
             button.className = 'btn';
             button.dataset.level = level;
             button.textContent = config.floors[level].name;
-            floorControls.appendChild(button);
+            dom.floorControls.appendChild(button);
         });
 
         // Populate layer selector
-        layerSelectorDropdown.innerHTML = '';
+        dom.layerSelectorDropdown.innerHTML = '';
         for (const key in config.layers) {
             const layer = config.layers[key];
             const li = document.createElement('li');
@@ -158,7 +164,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             a.dataset.value = key;
             a.textContent = layer.name;
             li.appendChild(a);
-            layerSelectorDropdown.appendChild(li);
+            dom.layerSelectorDropdown.appendChild(li);
         }
     }
 
@@ -166,19 +172,19 @@ document.addEventListener('DOMContentLoaded', async () => {
      * Sets up all necessary event listeners for UI interaction.
      */
     function setupEventListeners() {
-        document.getElementById('zoom-in').addEventListener('click', () => map.zoomIn());
-        document.getElementById('zoom-out').addEventListener('click', () => map.zoomOut());
+        dom.zoomIn.addEventListener('click', () => map.zoomIn());
+        dom.zoomOut.addEventListener('click', () => map.zoomOut());
 
         // map.on('moveend', rerenderSVG);
 
-        floorControls.addEventListener('click', (event) => {
+        dom.floorControls.addEventListener('click', (event) => {
             const button = event.target.closest('button');
             if (button && button.dataset.level) {
                 switchFloor(parseInt(button.dataset.level, 10));
             }
         });
 
-        layerSelectorDropdown.addEventListener('click', (event) => {
+        dom.layerSelectorDropdown.addEventListener('click', (event) => {
             const link = event.target.closest('a');
             if (link && link.dataset.value) {
                 event.preventDefault();
@@ -208,10 +214,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             mainOffcanvas.hide();
         });
 
-        mainOffcanvasElement.addEventListener('hidden.bs.offcanvas', clearHighlight);
+        dom.mainOffcanvasElement.addEventListener('hidden.bs.offcanvas', clearHighlight);
 
         // Add this new event listener for offcanvas links
-        mainOffcanvasElement.addEventListener('click', (event) => {
+        dom.mainOffcanvasElement.addEventListener('click', (event) => {
             const link = event.target.closest('a');
             if (link && link.href) {
                 const href = link.getAttribute('href');
@@ -222,9 +228,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 // If it's a link to a section on the main page, close the modal
                 if (href.startsWith('#')) {
-                    const mapModalElement = document.getElementById('mapModal');
-                    if (mapModalElement) {
-                        const mapModal = bootstrap.Modal.getInstance(mapModalElement);
+                    if (dom.mapModal) {
+                        const mapModal = bootstrap.Modal.getInstance(dom.mapModal);
                         if (mapModal) {
                             mapModal.hide();
                         }
@@ -245,7 +250,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         currentActiveFloor = level;
 
-        floorControls.querySelectorAll('button').forEach(btn => {
+        dom.floorControls.querySelectorAll('button').forEach(btn => {
             btn.classList.toggle('active', parseInt(btn.dataset.level) === level);
         });
 
@@ -259,7 +264,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function switchLayer(newLayerKey, isInitial = false) {
         currentLayer = newLayerKey;
         
-        layerSelectorDropdown.querySelectorAll('a').forEach(link => {
+        dom.layerSelectorDropdown.querySelectorAll('a').forEach(link => {
             link.classList.toggle('active', link.dataset.value === newLayerKey);
         });
 
@@ -328,17 +333,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const highlightElement = svgElement.querySelector(`#${highlightId}`);
         const highlightLayer = svgElement.querySelector('#highlights');
 
-        const offcanvasBody = document.getElementById('mainOffcanvasBody');
-        offcanvasBody.innerHTML = `
+        dom.mainOffcanvasBody.innerHTML = `
             <h5 class="offcanvas-title" id="mainOffcanvasLabel">${offcanvasData.title}</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             ${offcanvasData.content || ''}
         `;
         
-        if (mainOffcanvasElement.classList.contains('show')) {
+        if (dom.mainOffcanvasElement.classList.contains('show')) {
             centerOnElement(iconId, animate);
         } else {
-            mainOffcanvasElement.addEventListener('shown.bs.offcanvas', () => {
+            dom.mainOffcanvasElement.addEventListener('shown.bs.offcanvas', () => {
                 centerOnElement(iconId, animate);
             }, { once: true });
         }
@@ -358,6 +362,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Add the whole cloned group to the highlights layer
             highlightLayer.appendChild(clonedIconGroup);
             highlightedElement = clonedIconGroup; // Keep a reference to the cloned group
+            // Disable interactivity on the highlight clone so elements below can be clicked
+            if (highlightedElement) {
+                highlightedElement.style.pointerEvents = 'none';
+                const children = highlightedElement.querySelectorAll('*');
+                children.forEach(child => {
+                    child.style.pointerEvents = 'none';
+                });
+            }
         }
     }
 
@@ -373,8 +385,8 @@ document.addEventListener('DOMContentLoaded', async () => {
      * Updates the main title and subtitle based on current state.
      */
     function updateMapTitle() {
-        layerTitleElement.textContent = config.layers[currentLayer].name;
-        floorSubtitleElement.textContent = config.floors[currentActiveFloor].name;
+        dom.layerTitleElement.textContent = config.layers[currentLayer].name;
+        dom.floorSubtitleElement.textContent = config.floors[currentActiveFloor].name;
     }
 
     /**
@@ -403,9 +415,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const elementBounds = L.latLngBounds(southWest, northEast);
 
         // --- DYNAMIC PADDING CALCULATION ---
-        const topPadding = document.getElementById('map-header-panel')?.offsetHeight || 0;
+        const topPadding = dom.mapHeaderPanel?.offsetHeight || 0;
         // const rightPadding = document.querySelector('.vertical-toolbar')?.offsetWidth || 0;
-        const bottomPadding = mainOffcanvasElement.classList.contains('show') ? mainOffcanvasElement.offsetHeight : 0;
+        const bottomPadding = dom.mainOffcanvasElement.classList.contains('show') ? dom.mainOffcanvasElement.offsetHeight : 0;
 
         const flyToBoundsOptions = {
             maxZoom: config.mapSettings.zoom.maxZoom,
@@ -441,8 +453,6 @@ document.addEventListener('DOMContentLoaded', async () => {
      * @param {string} [elementId] Optional: The base ID of an element to highlight and center on.
      */
     function plano(floor = 0, layer = 'departamentos', elementId = 'basePB', animate = false) {
-        const mapModalElement = document.getElementById('mapModal');
-
         const performMapActions = () => {
             map.invalidateSize();
             // When calling programmatically, use the 'isInitial' flag to prevent
@@ -483,12 +493,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         };
 
-        if (mapModalElement) {
-            const mapModal = bootstrap.Modal.getInstance(mapModalElement) || new bootstrap.Modal(mapModalElement);
-            if (mapModalElement.classList.contains('show')) {
+        if (dom.mapModal) {
+            const mapModal = bootstrap.Modal.getInstance(dom.mapModal) || new bootstrap.Modal(dom.mapModal);
+            if (dom.mapModal.classList.contains('show')) {
                 performMapActions();
             } else {
-                mapModalElement.addEventListener('shown.bs.modal', performMapActions, { once: true });
+                dom.mapModal.addEventListener('shown.bs.modal', performMapActions, { once: true });
                 mapModal.show();
             }
         } else {
@@ -503,9 +513,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // --- MODAL BUG FIX ---
     // Handles the bug where the page becomes unresponsive after dismissing the modal.
-    const mapModalElement = document.getElementById('mapModal');
-    if (mapModalElement) {
-        mapModalElement.addEventListener('hidden.bs.modal', () => {
+    if (dom.mapModal) {
+        dom.mapModal.addEventListener('hidden.bs.modal', () => {
             const body = document.body;
             
             // Force remove the 'modal-open' class from the body
