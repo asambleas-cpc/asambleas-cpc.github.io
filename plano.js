@@ -88,6 +88,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             });
 
+            // Add image overlay as the base layer
+            L.imageOverlay('plano.webp', bounds).addTo(map);
+
             // Add SVG overlay
             svgOverlay = L.svgOverlay(svgElement, bounds).addTo(map);
             map.fitBounds([[2129,2282],[1302,1003]]);
@@ -166,7 +169,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('zoom-in').addEventListener('click', () => map.zoomIn());
         document.getElementById('zoom-out').addEventListener('click', () => map.zoomOut());
 
-        map.on('moveend', rerenderSVG);
+        // map.on('moveend', rerenderSVG);
 
         floorControls.addEventListener('click', (event) => {
             const button = event.target.closest('button');
@@ -291,17 +294,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 if (layerElement) {
                     const isTarget = layerElement.id === targetLayerId;
-                    if (!isInitial) layerElement.classList.add('fade-transition');
-                    layerElement.style.opacity = isTarget ? 1 : 0;
+                    layerElement.style.display = isTarget ? 'block' : 'none';
                     layerElement.style.pointerEvents = isTarget ? 'auto' : 'none';
-
-                    if (isTarget) {
-                        layerElement.style.display = 'block';
-                    } else {
-                        setTimeout(() => {
-                            if (layerElement.style.opacity === '0') layerElement.style.display = 'none';
-                        }, config.svgSettings.transitionDuration);
-                    }
                 }
             }
         }
@@ -311,10 +305,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const baseLayerId = config.floors[level].baseLayerId;
             const baseLayerElement = svgElement.querySelector(`#${baseLayerId}`);
             if (baseLayerElement) {
-                const isVisible = parseInt(level, 10) <= currentActiveFloor;
-                if (!isInitial) baseLayerElement.classList.add('fade-transition');
-                baseLayerElement.style.opacity = isVisible ? 1 : 0;
-                baseLayerElement.style.filter = (parseInt(level, 10) < currentActiveFloor) ? config.svgSettings.style.inactiveFloor : '';
+                const isCurrent = parseInt(level, 10) === currentActiveFloor;
+                baseLayerElement.style.display = isCurrent ? 'inline' : 'none';
                 baseLayerElement.style.pointerEvents = 'none';
             }
         }
@@ -323,12 +315,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     /**
      * Displays details in the offcanvas and highlights the corresponding SVG element.
      */
-    function bringToFront(element) {
-        if (element && element.parentElement) {
-            element.parentElement.appendChild(element);
-        }
-    }
-
     function showAndHighlightIcon(iconId, offcanvasKey, animate = true) {
         const target = svgElement.querySelector(`#${iconId}`);
         if (!target) return;
@@ -340,6 +326,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const highlightId = `${config.definitions.prefixes.highlight}${iconId.replace(config.definitions.prefixes.icon, '')}`;
         const highlightElement = svgElement.querySelector(`#${highlightId}`);
+        const highlightLayer = svgElement.querySelector('#highlights');
 
         const offcanvasBody = document.getElementById('mainOffcanvasBody');
         offcanvasBody.innerHTML = `
@@ -358,43 +345,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         mainOffcanvas.show();
 
-        if (highlightElement) {
-            highlightedElement = target; // The group is the reference
-            originalParent = target.parentElement;
-            originalNextSibling = target.nextElementSibling;
-
-            const interactivePart = target.querySelector(`[id^="int"]`);
-            if (interactivePart) {
-                interactivePart.style.pointerEvents = 'none';
+        if (highlightLayer) {
+            // Clone the entire icon group to bring it to the front
+            const clonedIconGroup = target.cloneNode(true);
+            
+            // Find the highlight shape within the cloned group and make it visible
+            const clonedHighlightShape = clonedIconGroup.querySelector(`[id^="${config.definitions.prefixes.highlight}"]`);
+            if (clonedHighlightShape) {
+                clonedHighlightShape.style.display = 'inline';
             }
-
-            highlightElement.style.display = 'inline';
-            bringToFront(target);
+            
+            // Add the whole cloned group to the highlights layer
+            highlightLayer.appendChild(clonedIconGroup);
+            highlightedElement = clonedIconGroup; // Keep a reference to the cloned group
         }
     }
 
     function clearHighlight() {
-        if (highlightedElement) {
-            const highlightId = `${config.definitions.prefixes.highlight}${highlightedElement.id.replace(config.definitions.prefixes.icon, '')}`;
-            const highlightElement = svgElement.querySelector(`#${highlightId}`);
-
-            if (highlightElement) {
-                highlightElement.style.display = 'none';
-            }
-
-            const interactivePart = highlightedElement.querySelector(`[id^="int"]`);
-            if (interactivePart) {
-                interactivePart.style.pointerEvents = 'all';
-            }
-
-            if (originalParent) {
-                originalParent.insertBefore(highlightedElement, originalNextSibling);
-            }
-
-            highlightedElement = null;
-            originalParent = null;
-            originalNextSibling = null;
+        const highlightLayer = svgElement.querySelector('#highlights');
+        if (highlightLayer) {
+            highlightLayer.innerHTML = ''; // Clear all highlights
         }
+        highlightedElement = null;
     }
 
     /**
@@ -450,17 +422,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Make it globally accessible for console calls
     window.centerOnElement = centerOnElement;
 
-    function rerenderSVG() {
-        if (map && svgOverlay) {
-            svgOverlay.removeFrom(map);
-            svgOverlay.addTo(map);
-            console.log('SVG overlay has been rerendered.');
-        }
-        // console.log(map.getCenter());
-        // console.log(map.getZoom());
-        // console.log(map.getBounds());
-    }
-    window.rerenderSVG = rerenderSVG;
+    // function rerenderSVG() {
+    //     if (map && svgOverlay) {
+    //         svgOverlay.removeFrom(map);
+    //         svgOverlay.addTo(map);
+    //         console.log('SVG overlay has been rerendered.');
+    //     }
+    //     // console.log(map.getCenter());
+    //     // console.log(map.getZoom());
+    //     // console.log(map.getBounds());
+    // }
+    // window.rerenderSVG = rerenderSVG;
 
     /**
      * Publicly accessible function to control the map view.
