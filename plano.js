@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 zoomControl: false, // Disable default zoom control
                 maxBounds: bounds,
                 zoomSnap: config.mapSettings.zoomSnap,
-                center: [1757, 1649],
-                zoom: 0.5,
+                center: config.mapSettings.initialCenter,
+                zoom: config.mapSettings.initialZoom,
                 attributionControl: false
 
             });
@@ -111,21 +111,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             switchLayer(config.defaultView.layer, true);
             updateMapTitle();
 
-            // Center on the initial element if defined
+            // Center on the overview element on load
             if (dom.mapModal) {
                 let initialCenterDone = false;
-                if (config.defaultView.initialElement) {
+                if (config.defaultView.overviewElement) {
                     dom.mapModal.addEventListener('shown.bs.modal', () => {
                         if (!initialCenterDone) {
-                            centerOnElement(config.defaultView.initialElement);
+                            centerOnElement(config.defaultView.overviewElement, false);
                             initialCenterDone = true;
                         }
                     }, { once: true });
                 }
-            } else if (config.defaultView.initialElement) {
+            } else if (config.defaultView.overviewElement) {
                 // If no modal, center on load
-                centerOnElement(config.defaultView.initialElement);
-            }""
+                centerOnElement(config.defaultView.overviewElement, false);
+            }
 
             // Hide loader
             dom.mapLoader.style.display = 'none';
@@ -424,11 +424,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             paddingTopLeft: L.point(0, topPadding),
             paddingBottomRight: L.point(0, bottomPadding)
         };
+        const fitToBoundsOptions = {
+            maxZoom: config.mapSettings.zoom.maxZoom,
+            paddingTopLeft: L.point(0, topPadding),
+            paddingBottomRight: L.point(0, bottomPadding),
+            animate: false
+        };
 
         // Use flyToBounds for a smooth animation that fits the element in the view.
         animate
             ? map.flyToBounds(elementBounds, flyToBoundsOptions)
-            : map.fitBounds(elementBounds, flyToBoundsOptions);
+            : map.fitBounds(elementBounds, fitToBoundsOptions);
 
     }
     // Make it globally accessible for console calls
@@ -451,8 +457,10 @@ document.addEventListener('DOMContentLoaded', async () => {
      * @param {number} floor The floor number to display.
      * @param {string} layer The key of the layer to display.
      * @param {string} [elementId] Optional: The base ID of an element to highlight and center on.
+     * @param {boolean} [animate=true] Optional: Whether to animate the transition.
+     * @param {boolean} [overview=true] Optional: Whether to start from a zoomed-out overview.
      */
-    function plano(floor = 0, layer = 'departamentos', elementId = 'basePB', animate = false) {
+    function plano(floor = 0, layer = 'departamentos', elementId = 'basePB', animate = true, overview = true) {
         const performMapActions = () => {
             map.invalidateSize();
             // When calling programmatically, use the 'isInitial' flag to prevent
@@ -471,33 +479,55 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.error(`Invalid layer key provided: '${layer}'.`);
             }
 
-            // Highlight and center on element if provided
-            if (elementId) {
-                if (config.informacion[elementId] !== undefined) {
-                    const floorSuffix = config.floors[floor].suffix;
-                    const iconPrefix = config.definitions.prefixes.icon;
-                    const iconIdWithSuffix = `${iconPrefix}${elementId}${floorSuffix}`;
-                    const iconIdWithoutSuffix = `${iconPrefix}${elementId}`;
+            const findAndShowElement = (shouldAnimate) => {
+                if (elementId) {
+                    if (config.informacion[elementId] !== undefined) {
+                        const floorSuffix = config.floors[floor].suffix;
+                        const iconPrefix = config.definitions.prefixes.icon;
+                        const iconIdWithSuffix = `${iconPrefix}${elementId}${floorSuffix}`;
+                        const iconIdWithoutSuffix = `${iconPrefix}${elementId}`;
 
-                    const targetElement = svgElement.querySelector(`#${iconIdWithSuffix}`) || svgElement.querySelector(`#${iconIdWithoutSuffix}`);
+                        const targetElement = svgElement.querySelector(`#${iconIdWithSuffix}`) || svgElement.querySelector(`#${iconIdWithoutSuffix}`);
 
-                    if (targetElement) {
-                        showAndHighlightIcon(targetElement.id, elementId, animate);
+                        if (targetElement) {
+                            showAndHighlightIcon(targetElement.id, elementId, shouldAnimate);
+                        } else {
+                            console.warn(`Icon with base ID '${elementId}' not found on floor ${floor}.`);
+                        }
                     } else {
-                        console.warn(`Icon with base ID '${elementId}' not found on floor ${floor}.`);
+                        console.warn(`No information found for elementId: '${elementId}', cannot show details.`);
+                        centerOnElement(elementId, shouldAnimate); // Attempt to center even without info
                     }
-                } else {
-                    console.warn(`No information found for elementId: '${elementId}', cannot show details.`);
-                    centerOnElement(elementId, animate); // Attempt to center even without info
                 }
+            };
+
+            if (overview && elementId) {
+                centerOnElement(config.defaultView.overviewElement, false);
+
+                // Hide loader once the overview is set, before the animation starts
+                dom.mapLoader.style.display = 'none';
+
+                setTimeout(() => {
+                    findAndShowElement(true); // Always animate from overview
+                }, 250);
+            } else {
+                findAndShowElement(animate);
+                // Hide loader if not in overview mode either
+                dom.mapLoader.style.display = 'none';
             }
         };
 
         if (dom.mapModal) {
             const mapModal = bootstrap.Modal.getInstance(dom.mapModal) || new bootstrap.Modal(dom.mapModal);
             if (dom.mapModal.classList.contains('show')) {
-                performMapActions();
+                // If modal is already open, show loader briefly while the view changes.
+                dom.mapLoader.style.display = 'flex';
+                // Use a short timeout to allow the loader to render before the map actions run.
+                setTimeout(performMapActions, 50);
             } else {
+                // If modal is closed, show the loader, then show the modal.
+                // The 'shown' event will then trigger the map actions.
+                dom.mapLoader.style.display = 'flex';
                 dom.mapModal.addEventListener('shown.bs.modal', performMapActions, { once: true });
                 mapModal.show();
             }
@@ -514,6 +544,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     // --- MODAL BUG FIX ---
     // Handles the bug where the page becomes unresponsive after dismissing the modal.
     if (dom.mapModal) {
+        dom.mapModal.addEventListener('hide.bs.modal', () => {
+            // Reset to overview element as the modal is closing
+            if (config && config.defaultView.overviewElement) {
+                centerOnElement(config.defaultView.overviewElement, false);
+            }
+            clearHighlight();
+        });
+
         dom.mapModal.addEventListener('hidden.bs.modal', () => {
             const body = document.body;
             

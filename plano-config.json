@@ -9,7 +9,11 @@
     },
     
     "mapSettings": {
-        "initialZoom": 0.7,
+        "initialCenter": [
+            -20000,
+            0
+        ],
+        "initialZoom": -2,
         "minZoom": -2,
         "maxZoom": 1,
         "zoomSnap": 0.1,
@@ -18,13 +22,17 @@
             "maxScale": 4,
             "padding": 0.15,
             "maxZoom": 2,
-            "fitBoundsPadding": [50, 50]
+            "fitBoundsPadding": [
+                50,
+                50
+            ]
         }
     },
     "defaultView": {
         "floor": 0,
         "layer": "departamentos",
-        "initialElement": "basePB"
+        "initialElement": "basePB",
+        "overviewElement": "patioExterior"
     },
     "definitions": {
         "prefixes": {
