@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function initializeMap() {
         try {
             // Fetch configuration
-            const response = await fetch('plano-config.json');
+            const response = await fetch('plano-config.json?v=1');
             config = await response.json();
             
             // Fetch SVG
