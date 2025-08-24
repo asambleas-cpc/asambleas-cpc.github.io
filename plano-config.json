@@ -1,6 +1,7 @@
 {
     "svgSettings": {
         "url": "plano.svg",
+        "imageOverlayUrl": "plano.webp",
         "elementToRotate": "#layBase",
         "transitionDuration": 500,
         "style": {
@@ -18,6 +19,7 @@
         "maxZoom": 1,
         "zoomSnap": 0.1,
         "panOnlyWhenZoomed": true,
+        "overviewAnimationDelay": 250,
         "zoom": {
             "maxScale": 4,
             "padding": 0.15,

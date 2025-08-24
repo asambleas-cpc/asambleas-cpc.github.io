@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             // Add image overlay as the base layer
-            L.imageOverlay('plano.webp', bounds).addTo(map);
+            L.imageOverlay(config.svgSettings.imageOverlayUrl, bounds).addTo(map);
 
             // Add SVG overlay
             svgOverlay = L.svgOverlay(svgElement, bounds).addTo(map);
@@ -509,7 +509,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 setTimeout(() => {
                     findAndShowElement(true); // Always animate from overview
-                }, 250);
+                }, config.mapSettings.overviewAnimationDelay);
             } else {
                 findAndShowElement(animate);
                 // Hide loader if not in overview mode either
