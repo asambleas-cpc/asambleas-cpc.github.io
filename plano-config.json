@@ -109,8 +109,8 @@
             "content": "<p>No se debe usar en caso de evacuación.</p><p>Padres, cuiden que sus hijos no jueguen con con ellos. Si se usan excesivamente, el sistema hidráulico se sobrecalienta y dejan de funcionar.</p>"
         },
         "PrimerosAuxilios": {
-            "title": "Primeros auxilios",
-            "content": "<p>Tenga en cuenta que este departamento es <strong>solo para casos de emergencia.</strong></p>"
+            "title": "Primeros auxilios y lactantes",
+            "content": "<p>Tenga en cuenta que los primeros auxilios son <strong>solamente para casos de emergencia.</strong></p>"
         },
         "Lactantes": {
             "title": "Lactantes"

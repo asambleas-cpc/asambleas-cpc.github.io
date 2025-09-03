@@ -14,11 +14,10 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-   inkscape:current-layer="g140"
-   inkscape:cx="1911.2086"
-   inkscape:cy="2119.3001"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   inkscape:current-layer="layPlantaBaja"
+   inkscape:cx="1523.5715"
+   inkscape:cy="2073.9286"
    inkscape:deskcolor="#505050"
    inkscape:pagecheckerboard="0"
    inkscape:pageopacity="0"
@@ -28,7 +27,7 @@
    inkscape:window-width="1920"
    inkscape:window-x="-8"
    inkscape:window-y="262"
-   inkscape:zoom="0.24748737"
+   inkscape:zoom="1.4"
    id="namedview1"
    bordercolor="#eeeeee"
    borderopacity="1"
@@ -36,6 +35,7 @@
    pagecolor="#505050"
    shape-rendering="optimizeSpeed"
    showgrid="false" />
+  
   <defs
    id="defs4"><linearGradient
    inkscape:collect="always"
@@ -681,7 +681,6 @@
    y="2461.2"
    style="fill:#ffffff;stroke:#ffffff;stroke-width:1.00011;stroke-linejoin:round;paint-order:markers fill stroke" />
       </g></g><path
-   sodipodi:nodetypes="csccccccccccccccccccccccssc"
    shape-rendering="optimizeSpeed"
    id="patioExterior"
    d="m 2223,1854 h -791 c -8,0 -15,3 -20,8 l -236,221 c -6,6 -7,16 -1,23 l 60,71 c 4,5 4,12 -1,16 l -59,56 c -7,6 -19,13 -27,12 -10,-1 -29,-3 -54,-8 l -14,75 104,20 c 9,2 19,-1 26,-8 l 81,-87 c 2,-2 6,-4 9,-3 3,0 6,2 8,5 l 27,46 c 11,18 19,38 24,58 l 13,53 c 1,6 0,12 -3,16 -4,5 -9,7 -15,7 h -291 l -6,32 1179,1 v -602 c 0,-7 -6,-12 -12,-12 z"
@@ -691,8 +690,6 @@
    d="m 1129,2530 h 900 v 68 h -900 z"
    class="fil6 ediAsfalto"
    style="display:inline;opacity:1;fill-rule:evenodd;stroke-width:0.904202" /><path
-   inkscape:label="lineasEstacionamiento"
-   sodipodi:insensitive="true"
    id="lineasEstacionamiento"
    d="m 1176,2542 v 56 z m 47,0 v 56 z m 48,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z m 48,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z m 48,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z m 48,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z m 47,0 v 56 z"
    class="fil3 str4"
@@ -704,7 +701,6 @@
     </g><g
    inkscape:groupmode="layer"
    inkscape:label="layEdificioPB"
-   sodipodi:insensitive="true"
    id="layEdificioPB"
    style="display:inline;opacity:1">
         
@@ -720,7 +716,6 @@
    d="m 2034,2014 h -495 v -113 l -124,-17 -163,163 162,160 v 230 h 620 z"
    class="fil2 str0 ediBase" />
         <path
-   sodipodi:nodetypes="ccccccccccccc"
    id="paredesPB"
    d="m 2034,2014 h -495 v -113 l -124,-17 -163,163 162,160 v 230 h 324 v -51 h 33 v 52 h 264 z"
    class="ediParedesExternas"
@@ -730,7 +725,6 @@
    d="m 1785,2387 h 32 v 31 h -32 z"
    class="ediSalas" />
         <path
-   inkscape:label="escaleraServicioPB"
    id="escaleraServicioPB"
    d="m 1770,2417 h 15 m -15,-31 h 15 m -15,26 h 15 m -15,-5 h 15 m -15,-5 h 15 m -15,-5 h 15 m -15,-5 h 15"
    class="fil3 str3" />
@@ -757,10 +751,10 @@
    d="m 1859,2014 h 174 v 329 h -174 z"
    class="ediSalas" />
           <path
-   sodipodi:nodetypes="ccccccccccccccccccccccc"
    id="primerosAuxilios2"
-   d="m 1590,2014 h 65 v 71 h -65 z m 65,126 h -68 l -39,-39 v -16 h 107 z m -107,-86 h 42 v 31 h -42 z m 311,-40 h -122 v 49 h -82 v 77 h 204 z"
-   class="ediSalas" />
+   d="m 1655,2140 h -68 l -39,-39 v -16 l 107,0 z M 1548,2015.1 V 2085 Z M 1859,2014 h -122 v 49 h -82 v 77 h 204 z"
+   class="ediSalas"
+   style="display:inline" />
           <path
    id="restringido7"
    d="m 1502,2272 h 44 v 71 h -44 z m 44,0 h 44 v 71 h -44 z m 43,-73 h 148 v 144 h -148 z m -87,0 h 88 v 73 h -88 z"
@@ -774,9 +768,8 @@
         </g>
         
         <path
-   inkscape:label="puertasPB"
    id="puertasPB"
-   d="m 1559.9,2341.6 v 3.6 h -10.3 v -3.6 z m -116.2,-281 h 3.6 v 19.3 h -3.6 z m 97.7,281 v 3.6 h -10.3 v -3.6 z m -66.5,-66.1 v -3.6 h 24.5 v 3.6 z m 262.8,-1.8 v -3.6 h 27.2 v 3.6 z m 118.8,67.9 v 3.3 H 1824 v -3.3 z m 175.3,4.9 h 3.6 v 38.6 h -3.6 z m -216.4,-0.2 h 3.6 v 38.6 h -3.6 z m -76.4,41.5 v -3.6 h 29.1 v 3.6 z m 125.7,-42.6 v -3.6 h 19.3 v 3.6 z m -556.6,-239.1 2.5,-2.6 57.7,57 -2.5,2.6 z m 135.6,-81.3 h 3.6 v 19.3 h -3.6 z m 218.4,-8.7 v -3.6 h 15.6 v 3.6 z m -9.1,2.1 h 3.6 v 15.6 h -3.6 z m -65.2,38 h 3.6 v 15.6 h -3.6 z m 0,-20.2 h 3.6 v 15.6 h -3.6 z m -41.8,51 h 3.6 v 11.8 h -3.6 z m -46.2,114.1 h 3.6 v 15.6 h -3.6 z m -29,-0.5 h 3.6 v 15.6 h -3.6 z m 386.6,-50 h 3.6 v 38.6 h -3.6 z m 174.4,0 h 3.6 v 38.5 h -3.6 z"
+   d="m 1559.9,2341.6 v 3.6 h -10.3 v -3.6 z m -116.2,-281 h 3.6 v 19.3 h -3.6 z m 97.7,281 v 3.6 h -10.3 v -3.6 z m -66.5,-66.1 v -3.6 h 24.5 v 3.6 z m 262.8,-1.8 v -3.6 h 27.2 v 3.6 z m 118.8,67.9 v 3.3 H 1824 v -3.3 z m 175.3,4.9 h 3.6 v 38.6 h -3.6 z m -216.4,-0.2 h 3.6 v 38.6 h -3.6 z m -76.4,41.5 v -3.6 h 29.1 v 3.6 z m 125.7,-42.6 v -3.6 h 19.3 v 3.6 z m -556.6,-239.1 2.5,-2.6 57.7,57 -2.5,2.6 z m 135.6,-81.3 h 3.6 v 19.3 h -3.6 z m 102.7,-6.8 h 3.6 v 29.7 h -3.6 z M 1499.8,2201.1 h 3.6 v 15.6 h -3.6 z m -29,-0.5 h 3.6 v 15.6 h -3.6 z m 386.6,-50 h 3.6 v 38.6 h -3.6 z m 174.4,0 h 3.6 v 38.5 h -3.6 z"
    class="ediPuertas" />
         <g
    id="escaleraGeneralPB">
@@ -885,12 +878,10 @@
    class="fil9 str7 mobiPiscina"
    ry="4.9000001" />
         <path
-   inkscape:label="sillasPB"
    id="sillasPB"
    d="m 2017.8,2201.9 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,-118.5 h -60.3 m -16.1,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,-118.5 h -60.3 m 136.6,-140.3 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,11.8 h -60.3 m 60.3,-118.5 h -60.3 m -16.1,11.8 H 1881 m 60.3,11.8 H 1881 m 60.3,11.8 H 1881 m 60.3,11.8 H 1881 m 60.3,11.8 H 1881 m 60.3,11.8 H 1881 m 60.3,11.8 H 1881 m 60.3,11.8 H 1881 m 60.3,11.8 H 1881 m 60.3,11.8 H 1881 M 1941.3,2036 H 1881"
    class="s" />
         <path
-   inkscape:label="sillasTemporalesPB"
    id="sillasTemporalesPB"
    d="m 2167,2138 v -120 m 7,120 v -120 m -287,-30 h -120 m 120,-7 h -120 m -30,7 h -119 m 119,-7 h -119 m 458,157 v -120 m 7,120 v -120 m -50,-30 h -119 m 119,-7 h -119"
    class="s sg"
@@ -899,13 +890,12 @@
       <g
    inkscape:groupmode="layer"
    inkscape:label="laySectoresPB"
-   sodipodi:insensitive="true"
    id="laySectoresPB"
-   style="display:inline">
+   style="display:inline"
+   sodipodi:insensitive="true">
         <path
-   inkscape:label="secAreaRestringidaPB"
    id="secAreaRestringidaPB"
-   d="m 1737,2014 v 49 h -82 v 76 h 204 v -126 z m -147,185 v 73 h -117 v 72 h -59 v 94 h 324 l 1,-239 z m 175,0 v 117 h 94 v -117 z m 20,188 v 31 h 32 v -31 z"
+   d="m 1737,2014 v 49 h -82 v 22 h -107 v 16 l 39,39 68,-1 h 204 v -126 z m -147,185 v 73 h -117 v 72 h -59 v 94 h 324 l 1,-239 z m 175,0 v 117 h 94 v -117 z m 20,188 v 31 h 32 v -31 z"
    class="secAreaRestringida"
    style="mix-blend-mode:darken;fill:url(#pattern1)" />
       </g>
@@ -920,7 +910,6 @@
    id="icoEvacuacionAuxiliarFondoPB"
    style="fill:#2c89a0;stroke:#ff0000">
           <path
-   inkscape:label="intEvacuacionAuxiliarFondoPB"
    id="intEvacuacionAuxiliarFondoPB"
    d="m 1866.9,2026.7 h 155.6 v 216.5 h -155.6 z"
    style="fill:#ff0000;fill-opacity:0.5;stroke-width:4.00045;stroke-linejoin:round" />
@@ -934,7 +923,6 @@
    id="icoEvacuacionAuxiliarFrentePB"
    style="fill:#2c89a0;stroke:#00ccff">
           <path
-   inkscape:label="intEvacuacionAuxiliarFrentePB"
    id="intEvacuacionAuxiliarFrentePB"
    d="m 1866.4,2243 h 156.3 v 76.6 h -156.3 z"
    style="fill:#00ccff;fill-opacity:0.5;stroke-width:4.00045;stroke-linejoin:round" />
@@ -1109,7 +1097,7 @@
    y="633.20001"
    class="lblEtiqueta"
    style="font-size:10.42px;font-family:Cabin;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;vector-effect:none;fill:#000000;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
-   transform="translate(646.1,1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan1808-5"
      x="929.29999"
      y="633.20001">Salida </tspan></text>
@@ -1216,7 +1204,6 @@
    inkscape:label="icoAlimentosHabilitadoPB"
    id="icoAlimentosHabilitadoPB">
           <path
-   inkscape:label="intAlimentosHabilitadoPB"
    id="intAlimentosHabilitadoPB"
    d="m 1414,1885 -163,163 162,160 v -9 l 446,1 v -59 h -272 l -39,-41 v -85 h -10 v -113 z m -1,132 h 32 v 72 h -32 z"
    style="opacity:0.368946;mix-blend-mode:normal;vector-effect:none;fill:#8fff7f;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter2);stop-color:#000000" />
@@ -1237,7 +1224,6 @@
    inkscape:label="icoAlimentosRestringidoPB"
    id="icoAlimentosRestringidoPB">
           <path
-   inkscape:label="intAlimentosRestringidoPB"
    id="intAlimentosRestringidoPB"
    d="m 2034,2014 v 329 h -174 v -329 z"
    style="opacity:0.368946;mix-blend-mode:normal;vector-effect:none;fill:#ff847f;fill-opacity:0.619608;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke" />
@@ -1271,12 +1257,12 @@
    y="2388"
    class="lblEtiqueta"
    style="font-size:10.42px;font-family:Cabin;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;vector-effect:none;fill:#f9f9f9;stroke:#4d4d4d;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
-   transform="translate(-15.2,-2)"><tspan
+   transform="translate(-15.2, -2)"><tspan
      sodipodi:role="line"
      id="tspan74-9"
      x="1856.7"
      y="2388"
-     style="font-weight:700;font-family:Cabin;-inkscape-font-specification:'Cabin Bold';text-align:center;text-anchor:middle;fill:#f9f9f9;stroke:#4d4d4d;stroke-width:5.00056;stroke-linejoin:round">1</tspan></text>
+     style="-inkscape-font-specification:&quot;Cabin Bold&quot;;fill:#f9f9f9;font-family:Cabin;font-weight:700;stroke:#4d4d4d;stroke-linejoin:round;stroke-width:5.00056;text-align:center;text-anchor:middle">1</tspan></text>
           <text
    inkscape:label="lblGuardarPB5"
    id="lblGuardarPB5"
@@ -1284,12 +1270,12 @@
    y="2388"
    class="lblEtiqueta"
    style="font-size:10.42px;font-family:Cabin;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;vector-effect:none;fill:#f9f9f9;stroke:#4d4d4d;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
-   transform="translate(-15.2,-2)"><tspan
+   transform="translate(-15.2, -2)"><tspan
      sodipodi:role="line"
      id="tspan75-7"
      x="1882.7"
      y="2388"
-     style="font-weight:700;font-family:Cabin;-inkscape-font-specification:'Cabin Bold';text-align:center;text-anchor:middle;fill:#f9f9f9;stroke:#4d4d4d;stroke-width:5.00056;stroke-linejoin:round">2</tspan></text>
+     style="-inkscape-font-specification:&quot;Cabin Bold&quot;;fill:#f9f9f9;font-family:Cabin;font-weight:700;stroke:#4d4d4d;stroke-linejoin:round;stroke-width:5.00056;text-align:center;text-anchor:middle">2</tspan></text>
           <rect
    id="rect2-9-2-0-7"
    width="25"
@@ -1310,7 +1296,7 @@
    y="2411"
    class="lblEtiqueta"
    style="font-size:10.42px;font-family:Cabin;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;vector-effect:none;fill:#000000;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
-   transform="translate(-15.2,-2)">Guarda de alimentos</text>
+   transform="translate(-15.2, -2)">Guarda de alimentos</text>
           <rect
    inkscape:label="intAlimentosPuntoGuardaPB"
    id="intAlimentosPuntoGuardaPB"
@@ -1330,8 +1316,6 @@
    d="m 1878.2,2181.2 -4,4 v 46.1 l 4,-4 4,4 v -46.1 z m -137.3,14.2 v 39 l 4,4 4,-4 v -39 l -4,4 z m 137.3,35.9 -4,4 v 73.2 l 4,-4 4,4 v -73.2 z m -137.3,7.1 v 73.2 l 4,4 4,-4 v -73.2 l -4,4.1 z m 137.2,70.1 -3.9,4 v 44.1 c 0,1.1 -0.4,2 -1.1,2.8 -0.7,0.7 -1.7,1.1 -2.7,1.1 h -19.1 l 4,4 -4,4 h 19.1 c 3.1,0 6.1,-1.3 8.3,-3.5 2.3,-2.2 3.5,-5.2 3.5,-8.4 v -44.1 h -0.1 z m -129.2,7.1 -4,4 -4,-4 v 38.2 c 0,8.1 6.6,14.7 14.7,14.7 h 14.5 l 4,-4 -4,-4 h -14.5 c -3.8,0 -6.7,-3 -6.7,-6.7 v -30.2 z m 25.2,44.9 4,4 -4,4 h 73.2 l 4,-4 -4,-4 h -65.2 z"
    style="baseline-shift:baseline;overflow:visible;vector-effect:none;fill:#ff8d27;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000" />
           <path
-   inkscape:label="intAlimentosFilaGuardarPB"
-   sodipodi:nodetypes="ccccccccc"
    id="intAlimentosFilaGuardarPB"
    d="m 1734.5,2185.2 h 18.4 l -0.7,172.6 119.5,-0.7 -3.5,-189.5 24,0.7 -3.5,203.7 -154.2,-2.8 z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -1362,8 +1346,6 @@
    d="m 1865.2,2186.1 v 29.7 l 4,4 4,-4 v -29.7 l -4,4 z m -108.3,2.5 -4,4 v 39.2 l 4,-4 4,4 v -39.2 z m 108.3,31.2 v 73.1 l 4,4.1 4,-4.1 v -73.1 l -4,4 z m -108.3,12 -4,4 v 73.2 l 4,-4 4,4 v -73.2 z m 108.3,65.1 v 53.5 h -15.6 l -4,4 4,4 v -0.1 0.1 h 19.6 a 4,4 0 0 0 4,-4 v -57.5 l -4,4 z m -108.3,12.1 -4,4 0.2,41.4 a 4,4 0 0 0 4,4 h 11.3 l -4,-4 4,-4 h -8 0.7 l -0.2,-37.4 z m 15.5,41.4 -4,4 4,4 h 73.2 l -4,-4 4,-4 h -8 z"
    style="baseline-shift:baseline;overflow:visible;vector-effect:none;fill:#008cc4;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000" />
           <path
-   inkscape:label="intAlimentosFilaRetirarPB"
-   sodipodi:nodetypes="ccccccccc"
    id="intAlimentosFilaRetirarPB"
    d="M 1770.6,2185.2 H 1748 l 2.8,173.3 121.6,1.4 2.1,-192.4 h -21.9 v 176.1 h -83.4 z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -1390,12 +1372,11 @@
    inkscape:groupmode="layer"
    inkscape:label="layDepartamentosInstalacionesPB"
    id="layDepartamentosInstalacionesPB"
-   style="display:none">
+   style="display:inline">
         <g
    inkscape:label="icoAuditorioAuxiliarPB"
    id="icoAuditorioAuxiliarPB">
           <path
-   inkscape:label="intAuditorioAuxiliarPB"
    id="intAuditorioAuxiliarPB"
    d="m 2033.6,2014.3 v 329.2 h -174.3 v -329.2 z"
    style="mix-blend-mode:normal;vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -1417,28 +1398,25 @@
    id="rect1811"
    width="24.9"
    height="24.9"
-   x="1447.2"
-   y="2119.3999"
+   x="1478.9857"
+   y="2104.3999"
    class="icoInstalaciones"
    ry="5.3000002" />
           <path
    id="path1-9"
-   d="m 1450.2,2137 -0.6,-0.3 a 0.8,0.8 0 0 1 -0.2,-0.6 v -0.5 c 0,-0.6 0.3,-1.1 1,-1.5 0.6,-0.4 1.4,-0.6 2.4,-0.6 a 9.2,9.2 0 0 1 1,0 3.5,3.5 0 0 0 -0.6,2 v 1.4 z m 5.1,0 -0.6,-0.3 a 0.8,0.8 0 0 1 -0.2,-0.6 v -0.6 c 0,-0.4 0.1,-0.8 0.4,-1.2 0.2,-0.4 0.6,-0.7 1,-1 l 1.7,-0.7 a 9.6,9.6 0 0 1 4.1,0 6,6 0 0 1 1.6,0.7 c 0.5,0.3 0.8,0.6 1,1 0.3,0.4 0.4,0.8 0.4,1.2 v 0.6 c 0,0.2 0,0.4 -0.2,0.6 l -0.6,0.2 z m 10.7,0 v -1.5 l -0.1,-1 a 3,3 0 0 0 -0.4,-1 h 0.9 c 1,0 1.9,0.2 2.5,0.6 0.6,0.3 1,0.8 1,1.5 v 0.5 l -0.3,0.6 -0.6,0.2 z m -9.7,-1.8 h 6.6 c -0.1,-0.3 -0.5,-0.5 -1.1,-0.7 a 6.6,6.6 0 0 0 -4.3,0 c -0.7,0.2 -1,0.4 -1.2,0.7 z m -3.5,-2.5 c -0.5,0 -0.9,-0.2 -1.2,-0.5 a 2,2 0 0 1 -0.5,-1.2 c 0,-0.5 0.2,-1 0.5,-1.3 0.3,-0.3 0.7,-0.5 1.2,-0.5 0.5,0 0.9,0.2 1.2,0.5 0.3,0.4 0.5,0.8 0.5,1.3 0,0.4 -0.2,0.8 -0.5,1.2 -0.3,0.3 -0.7,0.5 -1.2,0.5 z m 13.6,0 a 2,2 0 0 1 -1.2,-0.5 2,2 0 0 1 -0.5,-1.2 c 0,-0.5 0.2,-1 0.5,-1.3 a 2,2 0 0 1 1.2,-0.5 c 0.5,0 1,0.2 1.3,0.5 0.3,0.4 0.5,0.8 0.5,1.3 0,0.4 -0.2,0.8 -0.5,1.2 -0.4,0.3 -0.8,0.5 -1.3,0.5 z m -6.8,-0.9 c -0.7,0 -1.3,-0.3 -1.8,-0.8 -0.5,-0.4 -0.7,-1 -0.7,-1.8 0,-0.7 0.2,-1.3 0.7,-1.8 0.5,-0.5 1.1,-0.7 1.8,-0.7 0.8,0 1.4,0.2 1.8,0.7 0.5,0.5 0.8,1.1 0.8,1.8 0,0.8 -0.3,1.4 -0.8,1.9 -0.5,0.5 -1,0.7 -1.8,0.7 z m 0,-1.7 c 0.3,0 0.5,0 0.6,-0.2 0.2,-0.2 0.3,-0.4 0.3,-0.7 l -0.3,-0.6 a 0.9,0.9 0 0 0 -0.6,-0.2 c -0.2,0 -0.4,0 -0.6,0.2 l -0.2,0.6 c 0,0.3 0,0.5 0.2,0.7 z m 0,5.1 z m 0,-6 z"
+   d="m 1481.9857,2122 -0.6,-0.3 a 0.8,0.8 0 0 1 -0.2,-0.6 v -0.5 c 0,-0.6 0.3,-1.1 1,-1.5 0.6,-0.4 1.4,-0.6 2.4,-0.6 a 9.2,9.2 0 0 1 1,0 3.5,3.5 0 0 0 -0.6,2 v 1.4 z m 5.1,0 -0.6,-0.3 a 0.8,0.8 0 0 1 -0.2,-0.6 v -0.6 c 0,-0.4 0.1,-0.8 0.4,-1.2 0.2,-0.4 0.6,-0.7 1,-1 l 1.7,-0.7 a 9.6,9.6 0 0 1 4.1,0 6,6 0 0 1 1.6,0.7 c 0.5,0.3 0.8,0.6 1,1 0.3,0.4 0.4,0.8 0.4,1.2 v 0.6 c 0,0.2 0,0.4 -0.2,0.6 l -0.6,0.2 z m 10.7,0 v -1.5 l -0.1,-1 a 3,3 0 0 0 -0.4,-1 h 0.9 c 1,0 1.9,0.2 2.5,0.6 0.6,0.3 1,0.8 1,1.5 v 0.5 l -0.3,0.6 -0.6,0.2 z m -9.7,-1.8 h 6.6 c -0.1,-0.3 -0.5,-0.5 -1.1,-0.7 a 6.6,6.6 0 0 0 -4.3,0 c -0.7,0.2 -1,0.4 -1.2,0.7 z m -3.5,-2.5 c -0.5,0 -0.9,-0.2 -1.2,-0.5 a 2,2 0 0 1 -0.5,-1.2 c 0,-0.5 0.2,-1 0.5,-1.3 0.3,-0.3 0.7,-0.5 1.2,-0.5 0.5,0 0.9,0.2 1.2,0.5 0.3,0.4 0.5,0.8 0.5,1.3 0,0.4 -0.2,0.8 -0.5,1.2 -0.3,0.3 -0.7,0.5 -1.2,0.5 z m 13.6,0 a 2,2 0 0 1 -1.2,-0.5 2,2 0 0 1 -0.5,-1.2 c 0,-0.5 0.2,-1 0.5,-1.3 a 2,2 0 0 1 1.2,-0.5 c 0.5,0 1,0.2 1.3,0.5 0.3,0.4 0.5,0.8 0.5,1.3 0,0.4 -0.2,0.8 -0.5,1.2 -0.4,0.3 -0.8,0.5 -1.3,0.5 z m -6.8,-0.9 c -0.7,0 -1.3,-0.3 -1.8,-0.8 -0.5,-0.4 -0.7,-1 -0.7,-1.8 0,-0.7 0.2,-1.3 0.7,-1.8 0.5,-0.5 1.1,-0.7 1.8,-0.7 0.8,0 1.4,0.2 1.8,0.7 0.5,0.5 0.8,1.1 0.8,1.8 0,0.8 -0.3,1.4 -0.8,1.9 -0.5,0.5 -1,0.7 -1.8,0.7 z m 0,-1.7 c 0.3,0 0.5,0 0.6,-0.2 0.2,-0.2 0.3,-0.4 0.3,-0.7 l -0.3,-0.6 a 0.9,0.9 0 0 0 -0.6,-0.2 c -0.2,0 -0.4,0 -0.6,0.2 l -0.2,0.6 c 0,0.3 0,0.5 0.2,0.7 z m 0,5.1 z m 0,-6 z"
    class="icoIcon" />
           <text
    inkscape:label="lblVestibuloPB"
    id="lblVestibuloPB"
-   x="794.59998"
-   y="803.70001"
-   class="lblEtiqueta"
-   transform="translate(646.1,1352.3)">Vestíbulo</text>
+   x="1472.4857"
+   y="2141"
+   class="lblEtiqueta">Vestíbulo</text>
           <path
-   sodipodi:nodetypes="ccccccccccccc"
    id="hlVestibuloPB"
    d="m 1414,1879 -171,168.6 166.4,164.3 v -9.7 l 454.3,1 v -68.7 h -276 l -36,-34.3 v -46.1 l 0.4,-44.7 h -8.4 V 1897 Z"
    style="display:none;mix-blend-mode:normal;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000000" />
           <path
-   inkscape:label="intVestibuloPB"
    id="intVestibuloPB"
    d="m 1414.3,1885 -163,162.6 162,159.8 v -9.4 l 446,1 v -59.1 h -272.5 l -39,-41.1 v -45 l 0.5,-39.5 h -10.2 v -112.6 z"
    style="mix-blend-mode:normal;vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -1448,7 +1426,6 @@
    id="icoAreaRestringidaPB"
    style="mix-blend-mode:normal;fill:#ffffff;fill-opacity:0">
           <path
-   inkscape:label="intAreaRestringidaPB"
    id="intAreaRestringidaPB"
    d="m 1737,2014.3 v 49.1 h -82.2 v 76.5 h 204.5 V 2014.3 Z M 1589.4,2199 v 73 h -116.8 v 72 h -59.4 v 93.5 h 323.6 l 0.8,-238.5 z m 175.4,0 v 144.4 h 94.4 V 2199 Z m 20,187.6 v 31 h 32.3 v -31 z"
    class="secAreaRestringida"
@@ -1518,7 +1495,7 @@
    y="818.40002"
    class="lblEtiqueta"
    style="text-align:center;text-anchor:middle"
-   transform="translate(646.1,1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      sodipodi:role="line"
      id="tspan6"
      x="670.5"
@@ -1526,7 +1503,7 @@
        id="tspan716"
        x="670.5"
        y="818.40002"
-       style="font-size:10.0011px;font-family:Cabin;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;vector-effect:none;fill:#000000;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000">Entrada</tspan></tspan><tspan
+       style="-inkscape-stroke:none;baseline-shift:baseline;dominant-baseline:auto;fill:#000000;font-family:Cabin;font-size:10.0011px;paint-order:stroke fill markers;stop-color:#000000;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.998051;stroke-width:3.00034;text-align:center;text-anchor:middle;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-orientation:mixed;vector-effect:none;white-space:normal">Entrada</tspan></tspan><tspan
      sodipodi:role="line"
      id="tspan8"
      x="670.5"
@@ -1581,11 +1558,11 @@
    id="hlAcomodadoresPB"
    width="109.2"
    height="34.200001"
-   x="1306.3"
-   y="2053.8"
+   x="1306.3000000000002"
+   y="2053.9999989999997"
    ry="6.5"
-   style="display:none;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;stroke:#ff8613;stroke-width:2.61742;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;-inkscape-stroke:none;paint-order:fill markers stroke"
-   transform="rotate(180,1360.9,2071)" />
+   style="-inkscape-stroke:none;display:none;fill:#ffffff;fill-opacity:0.779727;paint-order:fill markers stroke;stroke:#ff8613;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-width:2.61742;vector-effect:none"
+   transform="matrix(-1 1.22465e-16 -1.22465e-16 -1 2721.8 4142.2)" />
           <rect
    id="rect4"
    width="24.9"
@@ -1599,7 +1576,7 @@
    x="1311.6"
    y="2098.1001"
    class="lblEtiqueta"
-   transform="translate(0,-24.4)">Acomodadores</text>
+   transform="translate(0, -24.4)">Acomodadores</text>
           <path
    id="path1-35"
    d="m 1394.7,2072.5 a 1,1 0 0 1 -0.7,-0.3 1,1 0 0 1 -0.2,-0.6 c 0,-0.3 0,-0.5 0.3,-0.7 0.1,-0.2 0.4,-0.3 0.6,-0.3 0.3,0 0.5,0.1 0.7,0.3 0.2,0.2 0.3,0.4 0.3,0.7 l -0.3,0.6 a 1,1 0 0 1 -0.7,0.3 z m 4.5,0 a 1,1 0 0 1 -0.9,-1 c 0,-0.2 0,-0.4 0.3,-0.6 l 0.6,-0.3 a 1,1 0 0 1 1,1 l -0.3,0.6 a 1,1 0 0 1 -0.7,0.3 z m -2.2,4.3 c 1.7,0 3,-0.6 4.3,-1.7 a 5.8,5.8 0 0 0 1.4,-6 6.9,6.9 0 0 1 -1.6,0.2 7.4,7.4 0 0 1 -5.8,-2.8 7.3,7.3 0 0 1 -4.3,4.2 v 0.1 c 0,1.7 0.5,3.1 1.7,4.3 a 5.8,5.8 0 0 0 4.3,1.7 z m 0,1.5 a 7.6,7.6 0 0 1 -7,-10.5 7.7,7.7 0 0 1 4,-4 7.3,7.3 0 0 1 6,0 7.5,7.5 0 0 1 4.5,7 7.4,7.4 0 0 1 -4.6,7 c -0.9,0.3 -1.9,0.5 -3,0.5 z m -1,-13.4 a 6,6 0 0 0 5.1,2.9 h 0.5 l 0.5,-0.1 a 6,6 0 0 0 -6.1,-2.8 z m -4.7,4 a 6,6 0 0 0 2.8,-3.3 6.1,6.1 0 0 0 -2.8,3.3 z m 4.7,-4 z m -2,0.7 z"
@@ -1673,15 +1650,13 @@
    x="1867.6"
    y="2419.8999"
    class="lblEtiqueta"
-   transform="translate(0,-10.6)">Guardarropa y objetos perdidos</text>
+   transform="translate(0, -10.6)">Guardarropa y objetos perdidos</text>
         </g>
         <g
    inkscape:label="icoBañosPB"
    id="icoBañosPB"
    class="icoBox">
           <path
-   inkscape:label="hlBañosPB"
-   sodipodi:nodetypes="ssssssssssssssssss"
    id="hlBañosPB"
    d="m 1414.6,2194 c -3,0 -5.3,2.4 -5.3,5.4 v 143.2 c 0,3 2.4,5.3 5.3,5.3 h 56.7 c 3,0 5.4,-2.4 5.4,-5.3 v -143.2 c 0,-3 -2.4,-5.4 -5.4,-5.4 z m 88.4,1 c -3,0 -5.3,2.3 -5.3,5.3 v 69.6 c 0,3 2.4,5.3 5.3,5.3 h 85.1 c 3,0 5.4,-2.4 5.4,-5.3 v -69.6 c 0,-3 -2.4,-5.3 -5.4,-5.3 z"
    style="display:none;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke" />
@@ -1731,7 +1706,6 @@
      x="1509.4"
      y="2249.3999">Baños hombres</tspan></text>
           <path
-   inkscape:label="intBañosPB"
    id="intBañosPB"
    d="m 1418.6,2198 c -3,0 -5.3,2.4 -5.3,5.4 v 135.2 c 0,3 2.4,5.3 5.3,5.3 h 48.7 c 3,0 5.4,-2.4 5.4,-5.3 v -135.2 c 0,-3 -2.4,-5.4 -5.4,-5.4 z m 88.4,1 c -3,0 -5.3,2.3 -5.3,5.3 v 61.6 c 0,3 2.4,5.3 5.3,5.3 h 77.1 c 3,0 5.4,-2.4 5.4,-5.3 v -61.6 c 0,-3 -2.4,-5.3 -5.4,-5.3 z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -1765,7 +1739,7 @@
    x="1457.9"
    y="977.70001"
    class="lblEtiqueta"
-   transform="translate(646.1,1352.3)">Bautismo</text>
+   transform="translate(646.1, 1352.3)">Bautismo</text>
           <rect
    inkscape:label="intBautismoPB"
    id="intBautismoPB"
@@ -1833,28 +1807,34 @@
    class="icoBox">
           <path
    id="hlPrimerosAuxiliosPB"
-   d="m 1659.7,2009.6 v 79.9 h -116.5 v -35 l -10.9,-0.2 0.3,-44.7 z"
+   d="m 1742,2010 v 58 h -82 v 22 h -116 v -80 z"
    style="display:none;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000000" />
           <rect
    id="rect1697"
    width="24.9"
    height="24.9"
-   x="1541.5"
-   y="2021.4"
+   x="1574.3361"
+   y="2027.2518"
    class="icoDepartamentos"
    ry="5.3000002" />
           <path
    id="path1-3"
-   d="m 1551.5,2041.3 c -0.2,0 -0.4,0 -0.6,-0.2 a 0.8,0.8 0 0 1 -0.2,-0.6 v -3.3 h -3.4 a 0.5,0.5 0 0 1 -0.5,-0.3 0.8,0.8 0 0 1 -0.3,-0.6 v -5 c 0,-0.2 0,-0.4 0.3,-0.5 0.1,-0.2 0.3,-0.3 0.5,-0.3 h 3.4 v -3.3 c 0,-0.2 0,-0.4 0.2,-0.6 l 0.6,-0.2 h 5 c 0.2,0 0.4,0 0.6,0.2 l 0.2,0.6 v 3.3 h 3.3 c 0.3,0 0.5,0.1 0.6,0.3 0.2,0.1 0.2,0.3 0.2,0.6 v 5 c 0,0.2 0,0.4 -0.2,0.5 -0.1,0.2 -0.3,0.3 -0.6,0.3 h -3.3 v 3.3 c 0,0.2 0,0.4 -0.2,0.6 l -0.6,0.2 z m 0.8,-1.6 h 3.3 v -4.2 h 4.2 v -3.3 h -4.2 v -4.2 h -3.3 v 4.2 h -4.1 v 3.3 h 4.1 z m 1.7,-5.9 z"
+   d="m 1584.3361,2047.1517 c -0.2,0 -0.4,0 -0.6,-0.2 a 0.8,0.8 0 0 1 -0.2,-0.6 v -3.3 h -3.4 a 0.5,0.5 0 0 1 -0.5,-0.3 0.8,0.8 0 0 1 -0.3,-0.6 v -5 c 0,-0.2 0,-0.4 0.3,-0.5 0.1,-0.2 0.3,-0.3 0.5,-0.3 h 3.4 v -3.3 c 0,-0.2 0,-0.4 0.2,-0.6 l 0.6,-0.2 h 5 c 0.2,0 0.4,0 0.6,0.2 l 0.2,0.6 v 3.3 h 3.3 c 0.3,0 0.5,0.1 0.6,0.3 0.2,0.1 0.2,0.3 0.2,0.6 v 5 c 0,0.2 0,0.4 -0.2,0.5 -0.1,0.2 -0.3,0.3 -0.6,0.3 h -3.3 v 3.3 c 0,0.2 0,0.4 -0.2,0.6 l -0.6,0.2 z m 0.8,-1.6 h 3.3 v -4.2 h 4.2 v -3.3 h -4.2 v -4.2 h -3.3 v 4.2 h -4.1 v 3.3 h 4.1 z m 1.7,-5.9 z"
    class="icoIcon" />
           <text
    id="lblPrimerosAuxiliosPB"
-   x="899.70001"
-   y="684.70001"
-   class="lblEtiqueta"
-   transform="translate(672.1,1352.8)">Primeros auxilios</text>
+   x="1604.6361"
+   y="2037.6376"
+   class="lblEtiqueta"><tspan
+     sodipodi:role="line"
+     id="tspan7"
+     x="1604.6361"
+     y="2037.6376">Primeros auxilios</tspan><tspan
+     sodipodi:role="line"
+     id="tspan10"
+     x="1604.6361"
+     y="2050.6626">y lactantes</tspan></text>
           <path
-   inkscape:label="intPrimerosAuxiliosPB"
    id="intPrimerosAuxiliosPB"
    d="m 1654.8,2014.3 v 70.5 h -107 v -31 h -10 l 0.3,-39.5 z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -1862,7 +1842,8 @@
         <g
    inkscape:label="icoLactantesPB"
    id="icoLactantesPB"
-   class="icoBox">
+   class="icoBox"
+   style="display:none">
           <rect
    id="rect1698"
    width="24.9"
@@ -1885,9 +1866,8 @@
    x="897.79999"
    y="712.59998"
    class="lblEtiqueta"
-   transform="translate(703.6,1400.3)">Lactantes</text>
+   transform="translate(703.6, 1400.3)">Lactantes</text>
           <path
-   inkscape:label="intLactantesPB"
    id="intLactantesPB"
    d="m 1654.8,2084.8 v 55.1 h -68 l -39,-39 v -16.1 z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -1916,12 +1896,11 @@
    x="728.29999"
    y="629.59998"
    class="lblEtiqueta"
-   transform="translate(646.1,1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan1703"
      x="728.29999"
      y="629.59998">Escaleras a planta alta</tspan></text>
           <path
-   inkscape:label="intEscalerasPB"
    id="intEscalerasPB"
    d="m 1391.3,1923 22,21.5 -88.7,90.8 -22,-21.5 z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -1955,7 +1934,6 @@
      x="2092.1001"
      y="1999.2">Galería cubierta</tspan></text>
           <path
-   inkscape:label="hlPatioPB"
    id="hlPatioPB"
    d="m 1420,1854.2 -5.7,30.8 123.8,16.7 v 112.6 h 495.5 v 454.5 l 201.7,-0.1 -0.2,-614.5 z m -186.4,174.8 -69.6,65.3 78.9,91.8 -68.9,62.7 -27.4,12 -52.3,-7.7 -14.2,75 102.3,20.3 25.8,-8.3 81.2,-86.7 14.6,-4 43.2,80.5 29.4,106.4 36.7,1.2 v -230 z"
    class="fil1 ediGalerias"
@@ -1978,12 +1956,11 @@
    x="3028.8999"
    y="1916.6"
    class="lblEtiqueta"
-   transform="translate(10.6,5)"><tspan
+   transform="translate(10.6, 5)"><tspan
      id="tspan1806"
      x="2089.3999"
      y="1916.6">Patio exterior</tspan></text>
           <path
-   inkscape:label="intPatioPB"
    id="intPatioPB"
    d="m 1420,1854.2 -5.7,30.8 123.8,16.7 v 112.6 h 495.5 v 454.5 l 201.7,-0.1 -0.2,-614.5 z m -186.4,174.8 -69.6,65.3 78.9,91.8 -68.9,62.7 -27.4,12 -52.3,-7.7 -14.2,75 102.3,20.3 25.8,-8.3 81.2,-86.7 14.6,-4 43.2,80.5 29.4,106.4 36.7,1.2 v -230 z"
    class="fil1 ediGalerias"
@@ -2011,7 +1988,7 @@
    x="929.29999"
    y="633.20001"
    class="lblEtiqueta"
-   transform="translate(646.1,1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan1808"
      x="929.29999"
      y="633.20001">Salida </tspan></text>
@@ -2038,7 +2015,7 @@
    x="1423.1"
    y="1017"
    class="lblEtiqueta"
-   transform="translate(646.1,1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan719-5"
      x="1423.1"
      y="1017">Salida </tspan></text>
@@ -2066,7 +2043,7 @@
    x="1424.3"
    y="822.79999"
    class="lblEtiqueta"
-   transform="translate(646.1,1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan719-8"
      x="1424.3"
      y="822.79999">Salida </tspan></text>
@@ -2094,11 +2071,11 @@
    x="1125.9"
    y="1108.2"
    class="lblEtiqueta"
-   transform="translate(646.1,1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan719"
      x="1125.9"
      y="1108.2"
-     style="font-size:10.0011px;font-family:Cabin;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;vector-effect:none;fill:#000000;stroke:#ffffff;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.998051;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000">Salida </tspan></text>
+     style="-inkscape-stroke:none;baseline-shift:baseline;dominant-baseline:auto;fill:#000000;font-family:Cabin;font-size:10.0011px;paint-order:stroke fill markers;stop-color:#000000;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.998051;stroke-width:3.00034;text-align:start;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-orientation:mixed;vector-effect:none;white-space:normal">Salida </tspan></text>
           </g>
         </g>
         <g
@@ -2137,7 +2114,6 @@
    style="fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.14837;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke" />
           </g>
           <path
-   inkscape:label="intEstacionamiento"
    id="intEstacionamiento"
    d="m 1027,2473 h 990 c 5,0 10,4 10,10 v 105 c 0,5 -4,10 -10,10 h -990 c -5,0 -10,-4 -10,-10 v -105 c 0,-5 4,-10 10,-10 z"
    style="fill:none;fill-opacity:0;stroke:none;stroke-width:7.17542;stroke-linecap:round;paint-order:fill markers stroke" />
@@ -2166,14 +2142,14 @@
    y="1149.8"
    class="lblEtiqueta"
    style="opacity:1"
-   transform="translate(646.1,1352.3)">Acceso a estacionamiento</text>
+   transform="translate(646.1, 1352.3)">Acceso a estacionamiento</text>
           <text
    inkscape:label="lblEstacionamientoPB"
    id="lblEstacionamientoPB"
    x="856.29999"
    y="1216.3"
    class="lblEtiqueta"
-   transform="translate(646.1,1352.3)">Estacionamiento</text>
+   transform="translate(646.1, 1352.3)">Estacionamiento</text>
         </g>
         <g
    inkscape:label="icoLimpiezaPB"
@@ -2210,7 +2186,7 @@
    y="2175.8"
    class="lblEtiqueta"
    style="font-size:10.42px;font-family:Cabin;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:normal;vector-effect:none;fill:#000000;stroke:#ffffff;stroke-width:4.00045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.754839;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
-   transform="translate(394.7,157.2)">Limpieza</text>
+   transform="translate(394.7, 157.2)">Limpieza</text>
         </g>
         <g
    inkscape:label="icoDonatePB"
@@ -2219,57 +2195,54 @@
           <rect
    inkscape:label="hlDonatePB"
    id="hlDonatePB"
-   width="87"
-   height="63"
-   x="1509"
-   y="2112.8999"
-   ry="12"
-   style="display:none;vector-effect:none;fill:#ffffff;fill-opacity:0.779727;stroke:#ff8613;stroke-width:3.18408;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;-inkscape-stroke:none;paint-order:fill markers stroke" />
+   width="133.33276"
+   height="43.618484"
+   x="1396.3624"
+   y="2159.7334"
+   ry="8.3082829"
+   style="-inkscape-stroke:none;display:none;fill:#ffffff;fill-opacity:0.779727;paint-order:fill markers stroke;stroke:#ff8613;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-width:3.27988;vector-effect:none" />
           <rect
    id="rect78"
-   width="25"
-   height="25"
-   x="1539.8"
-   y="2119"
+   width="25.0"
+   height="25.0"
+   x="1408.543"
+   y="2167.9285"
    class="icoInstalaciones"
    ry="5.3000002" />
           <path
    id="path1-0"
-   d="m 1544,2124.1 c -0.3,0 -0.6,0.3 -0.6,0.6 0,0.3 0.3,0.6 0.6,0.6 h 1.7 v 6.4 h -1.7 c -0.3,0 -0.6,0.3 -0.6,0.6 0,0.3 0.3,0.6 0.6,0.6 h 2.3 c 0.3,0 0.6,-0.3 0.6,-0.6 v -7 h 9.8 l 1.9,2.1 1.2,1.4 -0.3,5 a 3,3 0 0 0 -1.6,-0.5 h 0.2 l -0.1,-3.4 c 0,-0.2 -0.2,-0.5 -0.4,-0.6 l -2.2,-0.9 c -0.8,-0.3 -1.6,0.1 -2,0.8 -0.2,0.4 -0.3,0.9 -0.2,1.3 0.1,0.5 0.4,0.9 0.8,1.2 l 1.2,1.1 1.1,1 0.2,0.2 0.4,0.5 0.2,0.6 -0.1,0.5 c -0.2,0.2 -0.3,0.3 -0.6,0.2 l -0.9,-0.6 -0.1,-0.1 -0.4,-0.3 -0.7,-0.7 -1.7,-1.6 -0.1,-0.1 -0.8,-0.4 -1.2,-0.5 -1.8,-0.6 a 0.7,0.7 0 0 0 -0.8,0.4 c -0.1,0.3 0.1,0.7 0.4,0.8 l 2.1,0.7 0.9,0.3 0.5,0.2 1.4,1.3 0.9,0.8 0.6,0.5 0.1,0.1 0.5,0.3 c 0.1,0.7 0.4,1.3 0.9,1.8 a 3,3 0 0 0 2,0.8 3,3 0 0 0 2.7,-4 v 0.1 l 0.3,-6.7 -0.1,-0.3 -0.2,-0.3 -0.4,-0.5 -1.1,-1.2 a 80.5,80.5 0 0 0 -2.4,-2.3 h -13 z m 11.4,4.4 h -0.1 z m -11.5,0.8 c -0.3,0 -0.6,0.3 -0.6,0.6 v 1 c 0,0.3 0.3,0.6 0.6,0.6 0.3,0 0.6,-0.3 0.6,-0.6 v -1 c 0,-0.3 -0.3,-0.7 -0.7,-0.6 z m 11,0.4 c 0.2,0 -0.1,0 0,0 0.2,0 -0.1,-0.1 0,0 l 1.8,0.7 0.1,2.4 -0.9,-0.8 -1.2,-1.1 -0.4,-0.6 c -0.1,-0.2 0,-0.3 0.1,-0.4 0.1,-0.2 0.3,-0.3 0.5,-0.3 z m 3.2,4.9 c 0.4,0 0.8,0.2 1,0.5 0.3,0.3 0.5,0.8 0.5,1.2 0,0.4 -0.2,0.9 -0.5,1.2 -0.3,0.3 -0.8,0.5 -1.2,0.5 h -0.3 l -0.3,-0.1 -0.3,-0.1 -0.2,-0.1 -0.2,-0.2 -0.2,-0.2 c 0.5,0 0.9,-0.2 1.3,-0.7 a 2,2 0 0 0 0.2,-1.9 z"
+   d="M 1412.74 2173.03 C 1412.44 2173.03 1412.14 2173.33 1412.14 2173.63 C 1412.14 2173.93 1412.44 2174.23 1412.74 2174.23 L 1414.44 2174.23 L 1414.44 2180.63 L 1412.74 2180.63 C 1412.44 2180.63 1412.14 2180.93 1412.14 2181.23 C 1412.14 2181.53 1412.44 2181.83 1412.74 2181.83 L 1415.04 2181.83 C 1415.34 2181.83 1415.64 2181.53 1415.64 2181.23 L 1415.64 2174.23 L 1425.44 2174.23 L 1427.34 2176.33 L 1428.54 2177.73 L 1428.24 2182.73 C 1427.77 2182.41 1427.21 2182.24 1426.64 2182.23 L 1426.84 2182.23 L 1426.74 2178.83 C 1426.74 2178.63 1426.54 2178.33 1426.34 2178.23 L 1424.14 2177.33 C 1423.34 2177.03 1422.54 2177.43 1422.14 2178.13 C 1421.94 2178.53 1421.84 2179.03 1421.94 2179.43 C 1422.04 2179.93 1422.34 2180.33 1422.74 2180.63 L 1423.94 2181.73 L 1425.04 2182.73 L 1425.24 2182.93 L 1425.64 2183.43 L 1425.84 2184.03 L 1425.74 2184.53 C 1425.54 2184.73 1425.44 2184.83 1425.14 2184.73 L 1424.24 2184.13 L 1424.14 2184.03 L 1423.74 2183.73 L 1423.04 2183.03 L 1421.34 2181.43 L 1421.24 2181.33 L 1420.44 2180.93 L 1419.24 2180.43 L 1417.44 2179.83 C 1417.11 2179.75 1416.78 2179.92 1416.64 2180.23 C 1416.54 2180.53 1416.74 2180.93 1417.04 2181.03 L 1419.14 2181.73 L 1420.04 2182.03 L 1420.54 2182.23 L 1421.94 2183.53 L 1422.84 2184.33 L 1423.44 2184.83 L 1423.54 2184.93 L 1424.04 2185.23 C 1424.14 2185.93 1424.44 2186.53 1424.94 2187.03 C 1425.49 2187.53 1426.2 2187.82 1426.94 2187.83 C 1427.89 2187.79 1428.77 2187.3 1429.3 2186.51 C 1429.83 2185.72 1429.96 2184.73 1429.64 2183.83 L 1429.64 2183.93 L 1429.94 2177.23 L 1429.84 2176.93 L 1429.64 2176.63 L 1429.24 2176.13 L 1428.14 2174.93 C 1427.36 2174.15 1426.56 2173.38 1425.74 2172.63 L 1412.74 2172.63 Z M 1424.14 2177.43 L 1424.04 2177.43 Z M 1412.64 2178.23 C 1412.34 2178.23 1412.04 2178.53 1412.04 2178.83 L 1412.04 2179.83 C 1412.04 2180.13 1412.34 2180.43 1412.64 2180.43 C 1412.94 2180.43 1413.24 2180.13 1413.24 2179.83 L 1413.24 2178.83 C 1413.24 2178.53 1412.94 2178.13 1412.54 2178.23 Z M 1423.64 2178.63 C 1423.84 2178.63 1423.54 2178.63 1423.64 2178.63 C 1423.84 2178.63 1423.54 2178.53 1423.64 2178.63 L 1425.44 2179.33 L 1425.54 2181.73 L 1424.64 2180.93 L 1423.44 2179.83 L 1423.04 2179.23 C 1422.94 2179.03 1423.04 2178.93 1423.14 2178.83 C 1423.24 2178.63 1423.44 2178.53 1423.64 2178.53 Z M 1426.84 2183.53 C 1427.24 2183.53 1427.64 2183.73 1427.84 2184.03 C 1428.14 2184.33 1428.34 2184.83 1428.34 2185.23 C 1428.34 2185.63 1428.14 2186.13 1427.84 2186.43 C 1427.54 2186.73 1427.04 2186.93 1426.64 2186.93 L 1426.34 2186.93 L 1426.04 2186.83 L 1425.74 2186.73 L 1425.54 2186.63 L 1425.34 2186.43 L 1425.14 2186.23 C 1425.64 2186.23 1426.04 2186.03 1426.44 2185.53 C 1426.83 2184.97 1426.9 2184.25 1426.64 2183.63 Z"
    style="fill:#f9f9f9;stroke:none;stroke-width:3.2213" />
           <text
    id="text78"
-   x="1389.3"
-   y="2003.8"
+   x="1567.5469"
+   y="2129.0715"
    class="lblEtiqueta"
-   style="font-family:Cabin;-inkscape-font-specification:Cabin;text-align:center;text-anchor:middle"
-   transform="translate(195.8,151.7)"><tspan
+   style="font-family:Cabin;-inkscape-font-specification:Cabin;text-align:start;text-anchor:start"
+   transform="translate(-131.257, 48.9285)"><tspan
      sodipodi:role="line"
      id="tspan80"
-     x="1356.2"
-     y="2003.8"
-     style="font-family:Cabin;-inkscape-font-specification:Cabin"><tspan
+     x="1572.7142"
+     y="2129.0715"
+     style="font-family:Cabin;-inkscape-font-specification:Cabin;text-align:start;text-anchor:start"><tspan
        id="tspan78"
-       x="1356.2"
-       y="2003.8"
-       style="font-family:Cabin;-inkscape-font-specification:Cabin;text-align:center;text-anchor:middle">Información </tspan></tspan><tspan
+       x="1572.7142"
+       y="2129.0715"
+       style="font-family:Cabin;-inkscape-font-specification:Cabin;text-align:start;text-anchor:start">Información </tspan></tspan><tspan
      sodipodi:role="line"
      id="tspan1"
-     x="1356.2"
-     y="2016.8251"
-     style="font-family:Cabin;-inkscape-font-specification:Cabin">sobre donaciones</tspan></text>
+     x="1572.7142"
+     y="2142.0964"
+     style="font-family:Cabin;-inkscape-font-specification:Cabin;text-align:start;text-anchor:start">sobre donaciones</tspan></text>
         </g>
         <g
    inkscape:label="icoSillasTemporalesPB"
    id="icoSillasTemporalesPB">
           <path
-   inkscape:label="hlSillasTemporalesPB"
-   sodipodi:nodetypes="ccccccccccccccc"
    id="hlSillasTemporalesPB"
    d="m 1606,1970 v 30 h 436 v -30 z m 548,39 v 139 h 33 v -139 z m -92,1 v 138 h 35 v -138 z"
    style="display:none;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000000" />
           <path
-   inkscape:label="intSillasTemporalesPB"
    id="intSillasTemporalesPB"
    d="m 1606,1970 v 30 h 436 v -30 z m 545,38 v 139 h 32 v -139 z m -91,1 v 138 h 35 v -139 z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265, 14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000" />
@@ -2465,7 +2438,6 @@
    sodipodi:insensitive="true"
    id="layMobiliarioPA">
         <path
-   inkscape:label="audioVideo"
    id="audioVideo"
    d="M2027 2186v-33h6v33zm-10-31h6v6h-6zm0 6h6v6h-6zm0 6h6v6h-6zm0 12h6v6h-6zm0-6h6v6h-6zm-3 19v-43h22v43z"
    class="fil2 str6"
@@ -2473,13 +2445,11 @@
         <g
    id="mobiPlataforma">
           <path
-   inkscape:label="escaleraPlataforma2"
    id="escaleraPlataforma2"
    d="M2177.9 2109.3h11.7v17.6h-11.7zm11.7 0h-11.7m11.7 4.4h-11.7m11.7 4.4h-11.7m11.7 4.4h-11.7m11.7 4.4h-11.7"
    class="fil2 str7"
    style="fill:none;stroke:#333;stroke-width:.9;stroke-miterlimit:22.9256" />
           <path
-   inkscape:label="escaleraPlataforma1"
    id="escaleraPlataforma1"
    d="M2177.9 2213.3h11.7v17.6h-11.7zm11.7 0h-11.7m11.7 4.4h-11.7m11.7 4.4h-11.7m11.7 4.4h-11.7m11.7 4.4h-11.7"
    class="fil2 str7"
@@ -2491,44 +2461,38 @@
    style="fill:#333;stroke:#333;stroke-width:.9;stroke-miterlimit:22.9256" />
         </g>
         <path
-   inkscape:label="sillasPrincipal"
    id="sillasPrincipal"
    d="M2021.9 2195.2v11.8m11.8-11.8v11.8m11.8-35.4v35.4m11.8-35.4v35.4m11.8-35.4v35.4m11.8-35.4v35.4m11.8-35.4v35.4m11.8-35.4v35.4m11.8-35.4v35.4m11.8-35.4v35.4m-118.5-11.8v11.8m11.9 21.8v71.2m11.8-71.2v71.2m11.8-71.2v71.2m11.8-71.2v71.2m11.8-71.2v71.2m11.8-71.2v71.2m11.8-71.2v71.2m11.8-71.2v71.2m11.8-71.2v71.2m11.8-71.2v71.2m11.8-59.4v59.4m-130.3-71.2v71.2m12.1-154.9v-11.8m11.8 11.8v-11.8m11.8 35.4v-35.4m11.8 35.4v-35.4m11.8 35.4v-35.4m11.8 35.4v-35.4m11.8 35.4v-35.4m11.8 35.4v-35.4m11.8 35.4v-35.4m11.8 35.4v-35.4m-118.5 11.8v-11.8m11.9-21.8v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 59.4v-59.4m-130.3 71.2v-71.2m-489.9 71.2v-24.2m11.8 24.2v-36.2m11.8 36.2v-48m11.8 48v-59.7m11.8 59.7v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m-165.3 165v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m-166.4 166.3v-71.3m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m77.3 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m-201.4 71.2v-71.2m213.2 71.2v-71.2m-201.4-23.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m-201.4 71.2v-71.2m213.2 71.2v-71.2m-201.4-23.4v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m11.8 71.2v-71.2m-201.4 71.2v-71.2m213.2 71.2v-71.2"
    class="s" />
         <g
-   id="pantallas"
-   transform="translate(29.8)">
+   id="pantallas">
           <path
    id="pantalla2"
-   d="M2164 2232h3v59h-3z"
+   d="M 2193.8 2232 L 2196.8 2232 L 2196.8 2291 L 2193.8 2291 Z"
    class="fil8 str1 mobiPantalla"
-   style="fill:#000;stroke:#000;stroke-width:.9;stroke-miterlimit:22.9256" />
+   style="fill:#000;stroke:#000;stroke-miterlimit:22.9256;stroke-width:0.9" />
           <path
    id="pantalla1"
-   d="M2164 2049h3v59h-3z"
+   d="M 2193.8 2049 L 2196.8 2049 L 2196.8 2108 L 2193.8 2108 Z"
    class="fil8 str1 mobiPantalla"
-   style="fill:#000;stroke:#000;stroke-width:.9;stroke-miterlimit:22.9256" />
+   style="fill:#000;stroke:#000;stroke-miterlimit:22.9256;stroke-width:0.9" />
         </g>
         <path
-   sodipodi:nodetypes="cc"
    id="cortinaPlataforma2"
    d="M2167 2127v-108"
    class="fil2 str8 mobiCortinado"
    style="vector-effect:none;fill:none;stroke:#4d4d4d;stroke-width:2.08;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.08,4.16;stroke-dashoffset:0;-inkscape-stroke:none;stop-color:#000;" />
         <path
-   sodipodi:nodetypes="ccc"
    id="cortinaPlataforma1"
    d="M2167 2213v84h36"
    class="fil2 str8 mobiCortinado"
    style="fill:none;stroke:#4d4d4d;stroke-width:2.08;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-dasharray:2.08,4.16;stroke-dashoffset:0" />
         <path
-   inkscape:label="cortinaAdministracion"
    id="cortinaAdministracion"
    d="M1979 2431v-78"
    class="fil2 str8 mobiCortinado"
    style="vector-effect:none;fill:none;stroke:#4d4d4d;stroke-width:2.62322;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:2.62322,5.24645;stroke-dashoffset:0;-inkscape-stroke:none;stop-color:#000;" />
         <path
-   inkscape:label="sillasTemporalesPA"
    id="sillasTemporalesPA"
    d="m1839 1962-119-16m120 9-119-16m-30 4-118-16m119 9-118-16m563 45h-120m120-7h-120m-30 7h-119m119-7h-119"
    class="s sg" />
@@ -2539,7 +2503,6 @@
    sodipodi:insensitive="true"
    id="laySectoresPA">
         <path
-   inkscape:label="secAreaRestringidaPA"
    id="secAreaRestringidaPA"
    d="M2167 2019v108h36v-108zm-160 128v47h33v-47zm160 66v84h36v-84zm-640 108v28h155v-28zm176 0v28h40v-28zm61 0v28h180v-28zm201 0v28h40v-28zm61 0v28h154v-28zm-46 30v86h51v-86zm-327 25v62h116v-62zm117 11v31h47v-31h-32z"
    class="secAreaRestringida"
@@ -2556,7 +2519,6 @@
    id="icoAlimentosHabilitadoPA"
    style="">
           <path
-   inkscape:label="intAlimentosHabilitadoPA"
    id="intAlimentosHabilitadoPA"
    d="M2203 1944v75h-638l-61 59-1 122-90 4v-117h32v-72h-32v-72l-29-29 30-30 440 59z"
    style="opacity:.368946;mix-blend-mode:normal;vector-effect:none;fill:#8fff7f;stroke:none;stroke-width:1.00011;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;-inkscape-stroke:none;paint-order:fill markers stroke;filter:url(#filter3);stop-color:#000;" />
@@ -2578,7 +2540,6 @@
    id="icoAlimentosRestringidoPA"
    style="">
           <path
-   inkscape:label="intAlimentosRestringidoPA"
    id="intAlimentosRestringidoPA"
    d="M1565 2020h638v325l-698 3v-270z"
    class="secAreaRestringida"
@@ -2621,8 +2582,6 @@
      y="2195"
      style="font-weight:700;font-family:Cabin;-inkscape-font-specification:&quot;Cabin Bold&quot;;text-align:center;text-anchor:middle;fill:#f9f9f9;stroke:#ff8d27;stroke-width:5.00056;stroke-linejoin:round">guardar</tspan></text>
           <path
-   inkscape:label="intAlimentosFilaGuardarPA"
-   sodipodi:nodetypes="ccccccccc"
    id="intAlimentosFilaGuardarPA"
    d="m1488.5 2154.2-16.6 1 .8 219.8 493.3-.6 6.4-68.5-19.1.1.2 55.2-464.9-3z"
    style="fill:none;stroke:none;stroke-width:1.00011;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.00011,2.00023;stroke-dashoffset:0;paint-order:fill markers stroke;stop-color:#000;" />
@@ -2652,8 +2611,6 @@
      y="2310.1"
      style="font-weight:700;font-family:Cabin;-inkscape-font-specification:&quot;Cabin Bold&quot;;text-align:center;text-anchor:middle;fill:#fff;stroke:#008cc4;stroke-width:5.00056;stroke-linejoin:round">retirar</tspan></text>
           <path
-   inkscape:label="intAlimentosFilaRetirarPA"
-   sodipodi:nodetypes="cccccccccccc"
    id="intAlimentosFilaRetirarPA"
    d="M1506 2152h-20l3 210 465 1 2-58-234-4 4 10-3 9h218l-1 29-437-1z"
    style="fill:none;stroke:none;stroke-width:1.00011;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.00011,2.00023;stroke-dashoffset:0;paint-order:fill markers stroke;stop-color:#000;" />
@@ -2761,7 +2718,6 @@
    d="M1863 2037h289v180h-289z"
    style="fill:red;fill-opacity:.5;stroke:red;stroke-width:3.46644;stroke-linejoin:round" />
           <path
-   inkscape:label="intEvacuacionPrincipalFrenteIzquierda2PA"
    id="intEvacuacionPrincipalFrenteIzquierda2PA"
    d="M2026.2 1969.7h-32.9c-9.9 0-18.1 8.3-18.1 18.1v25.4l12.5-12.5 12.5 12.5v-18.5h26l12.5-12.5zm2.4 0 12.5 12.5-12.5 12.5h57.6l12.5-12.5-12.5-12.5h-32.6zm60.9 0 12.5 12.5-12.5 12.5h57.6l12.5-12.5-12.5-12.5h-32.6zm60.7 0 12.5 12.5-12.5 12.5h57.6l12.5-12.5-12.5-12.5h-32.6zm-162.5 33.4-12.5 12.5v22.2h25v-22.2h-.1.1z"
    style="baseline-shift:baseline;clip-rule:nonzero;overflow:visible;vector-effect:none;fill:red;stroke-linejoin:round;text-rendering:auto;enable-background:accumulate;stop-color:#000;" />
@@ -2774,8 +2730,6 @@
    d="M1859.6 2037H1561l-48.3 48.4v131.2h347z"
    style="fill:#55d400;fill-opacity:.5;stroke:#55d400;stroke-width:3.45071;stroke-linejoin:round" />
           <path
-   inkscape:label="intEvacuacionPrincipalFondoIzquierda2PA"
-   sodipodi:nodetypes="ssccccscccccccccsccccccccccccccccccccccccccccccccccccccccccccccscccccccsscccccccccccccccccccccccccsccccccccccccccccccccccccssc"
    id="intEvacuacionPrincipalFondoIzquierda2PA"
    d="M1415 1914c-9 0-18 3-25 10l-5 5v17l17 1 6-6c2-2 5-3 8-2h3l25 3-11-14 13-11-24-3h-3zm35 4-14 10 11 14 57 8-11-14 14-11zm59 7-13 11 10 14 58 7-11-14 14-11zm-127 6c-12.8 14.2-40 41-40 41v18h18l40-41h-18zm188 1-14 11 11 14 57 7-11-14 14-10zm60 8-14 11 11 14 57 7-11-14 14-11zm60 7-14 11 11 14 10 1c8 1 14 7 14 15v25l12-12 13 12v-25c0-20-16-37-36-40zm-350 28-41 40v18h18l40-41h-17zm383 28-12 13v22h25v-22zm-426 15-18 18-1 1c-4 3-5 8-5 13s2 9 5 13l30 30h18v-18l-26-25 14-14h-18zm31 59v18h-17s18.2 19.1 28 28l-12 13v17h18l12-12c9-10 9-26-1-36z"
    style="baseline-shift:baseline;clip-rule:nonzero;overflow:visible;vector-effect:none;fill:#55d400;stroke-linejoin:round;text-rendering:auto;enable-background:accumulate;stop-color:#000;" />
@@ -2784,7 +2738,6 @@
    inkscape:label="icoEvacuacionPrincipalFrenteDerechaPA"
    id="icoEvacuacionPrincipalFrenteDerechaPA">
           <path
-   inkscape:label="intEvacuacionPrincipalFrenteDerecha2PA"
    id="intEvacuacionPrincipalFrenteDerecha2PA"
    d="M1982.2 2299.8v2c0 9.4 7.7 17.1 17 17.1l29 .1 7.5-7.5-7.5-7.6h-28.9a7.5 7.5 0 0 0-.1 0c-1.2 0-2-.8-2-2.1v-2zm51.5 4.1 7.5 7.6-7.5 7.5h15v-.1.1h39.5l7.5-7.5-7.5-7.6h-39.5v.1-.1zm60.2 0 7.5 7.6-7.5 7.5h55.2v-.1.1l7.5-7.5-7.5-7.6v.1-.1h-40.2zm61 0 7.5 7.6-7.5 7.5h25.8c.7 0 1.4.2 1.9.7.5.6.8 1.2.8 2v34.5l7.5 7.5 7.5-7.5v-34.5a17.7 17.7 0 0 0-17.7-17.7l-10.8-.1z"
    style="baseline-shift:baseline;clip-rule:nonzero;overflow:visible;vector-effect:none;fill:#0cf;stroke-linejoin:round;text-rendering:auto;enable-background:accumulate;stop-color:#000;" />
@@ -2796,12 +2749,10 @@
         <g
    id="icoEvacuacionPrincipalFondoDerechaPA">
           <path
-   inkscape:label="intEvacuacionPrincipalFondoDerecha2PA"
    id="intEvacuacionPrincipalFondoDerecha2PA"
    d="M1684.3 2299.5v28.9l7.5 7.5 7.5-7.5v-28.9zm61.4 0v28.9l7.5 7.5 7.5-7.5v-28.9zm-61.4 34.6v17c0 10.2 8.3 18.6 18.5 18.6h27.5l7.5-7.5-7.5-7.5v.1-.1h-27.5c-2 0-3.5-1.5-3.5-3.6v-17l-7.5 7.5zm61.4 0v17c0 1.3.2 2.5.4 3.6h-10.3l7.5 7.5-7.5 7.5h54.5l7.5-7.5-7.5-7.5h-26a3.5 3.5 0 0 1-3.6-3.6v-17l-7.5 7.5zm68.3 20.6h-18.2l7.5 7.5-7.5 7.5h18.2a2.7 2.7 0 0 1 2.7 2.7v25.4l7.5 7.5 7.5-7.5v-25.3a7.5 7.5 0 0 0 0-.1 17.6 17.6 0 0 0-17.7-17.7zm2.7 48.2v16h-18.3l-7.5 7.5 7.5 7.5h25.5c2.2 0 4.1-.8 5.5-2.3a8.5 8.5 0 0 0 2.3-5.5v-23.2l-7.5 7.5z"
    style="baseline-shift:baseline;clip-rule:nonzero;overflow:visible;vector-effect:none;fill:#f0f;stroke-linejoin:round;text-rendering:auto;enable-background:accumulate;stop-color:#000;" />
           <path
-   inkscape:label="intEvacuacionPrincipalFondoDerechaPA"
    id="intEvacuacionPrincipalFondoDerechaPA"
    d="M1513 2220h348v80h-348z"
    style="fill:#f0f;fill-opacity:.5;stroke:#f0f;stroke-width:2.53751;stroke-linejoin:round" />
@@ -3015,7 +2966,6 @@
    class="icoHighlightArea"
    style="display:none;stroke:#ff8613;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000;" />
           <path
-   inkscape:label="intAuditorioPrincipalPA"
    id="intAuditorioPrincipalPA"
    d="m1565.3 2019.6 638 .3v300l-698.5.3V2079z"
    class="secAreaRestringida"
@@ -3026,7 +2976,6 @@
    id="icoAreaRestringidaPA"
    style="mix-blend-mode:normal;fill:#fff;fill-opacity:0">
           <path
-   inkscape:label="intAreaRestringidaPA"
    id="intAreaRestringidaPA"
    d="M2167.2 2019v108h36v-108zM2007 2146.5v47.3h33v-47.3zm160.2 66.8v83.7h36v-83.7zM1527.3 2321v27.8H1682V2321zm175.2 0v27.8h40.5V2321zm61.3 0v27.8H1944V2321zm200.8 0v27.8h40.5V2321zm61.3 0v27.8h154V2321zm-372.6 54.8v61.7h115.5v-61.7zm116.8 10.8v31h47.1v-31H1785z"
    class="secAreaRestringida"
@@ -3056,14 +3005,12 @@
    y="646.6"
    class="lblEtiqueta"
    style="stroke-width:5.00056"
-   transform="translate(646.1 1352.3)">Vestíbulo</text>
+   transform="translate(646.1, 1352.3)">Vestíbulo</text>
           <path
-   sodipodi:nodetypes="ccccccccccc"
    id="hlVestibuloPA"
    d="M2209.3 1938.5v85.4l-642-.3-56.5 55.3-.2 130.4-99.3-.4v-264.4l-33.3-29.3 36.3-36.2 440.3 59.4z"
    style="display:none;mix-blend-mode:normal;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000;" />
           <path
-   inkscape:label="intVestibuloPA"
    id="intVestibuloPA"
    d="M2203.3 1944.5v75.4l-638-.3-60.5 59.3-1.3 122.2-90.2 3.8v-116.7h32.2v-71.7h-32.2v-72l-29.3-29.3 30.3-30.2 440.3 59.4z"
    style="fill:none;stroke:none;stroke-width:0" />
@@ -3097,7 +3044,7 @@
    x="965.7"
    y="988.9"
    class="lblEtiqueta"
-   transform="translate(646.1 1352.3)">Acomodadores</text>
+   transform="translate(646.1, 1352.3)">Acomodadores</text>
         </g>
         <g
    id="icoGuardaAlimentosPA"
@@ -3128,7 +3075,7 @@
    x="1224.4"
    y="1017.4"
    class="lblEtiqueta"
-   transform="translate(646.1 1381.3)">Guarda de alimentos</text>
+   transform="translate(646.1, 1381.3)">Guarda de alimentos</text>
           <rect
    inkscape:label="intGuardaAlimentosPA"
    id="intGuardaAlimentosPA"
@@ -3145,8 +3092,6 @@
    class="icoBox"
    pointer-events="all">
           <path
-   inkscape:label="hlBañosPA"
-   sodipodi:nodetypes="ccccccc"
    id="hlBañosPA"
    d="M1409.3 2201v241.5h248.6v-71.3h-181.2v-170.3Z"
    pointer-events="auto"
@@ -3172,7 +3117,7 @@
    y="976.4"
    class="lblEtiqueta"
    style="text-align:center;text-anchor:middle;"
-   transform="translate(646.1 1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan54"
      x="796.9"
      y="976.4"
@@ -3200,9 +3145,8 @@
    y="1070.1"
    class="lblEtiqueta"
    style="text-align:center;text-anchor:middle"
-   transform="translate(646.1 1352.3)">Baños hombres</text>
+   transform="translate(646.1, 1352.3)">Baños hombres</text>
           <path
-   inkscape:label="intBañosPA"
    id="intBañosPA"
    d="M1413.3 2205v232.5h240v-61.7h-180.6v-170.9z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000;" />
@@ -3276,7 +3220,7 @@
    x="887.1"
    y="989.3"
    class="lblEtiqueta"
-   transform="translate(646.1 1352.3)">Primeros auxilios</text>
+   transform="translate(646.1, 1352.3)">Primeros auxilios</text>
         </g>
         <g
    id="icoEscalerasPA"
@@ -3306,7 +3250,6 @@
      x="1375.2"
      y="1983.3">Escaleras a planta baja</tspan></text>
           <path
-   inkscape:label="intEscalerasPA"
    id="intEscalerasPA"
    d="m1391.3 1923 22 21.5-88.7 90.8-22-21.5z"
    style="vector-effect:none;fill:none;fill-opacity:0;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000;" />
@@ -3333,7 +3276,7 @@
    x="1562.4"
    y="1016"
    class="lblEtiqueta"
-   transform="translate(646.1 1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan4"
      x="1562.4"
      y="1016">Salida de</tspan><tspan
@@ -3361,7 +3304,7 @@
    y="629"
    class="lblEtiqueta"
    style=""
-   transform="translate(646.1 1352.3)"><tspan
+   transform="translate(646.1, 1352.3)"><tspan
      id="tspan2"
      x="1565"
      y="629">Salida de</tspan><tspan
@@ -3373,14 +3316,10 @@
    inkscape:label="icoSillasTemporalesPA"
    id="icoSillasTemporalesPA">
           <path
-   inkscape:label="hlSillasTemporalesPA"
-   sodipodi:nodetypes="ccccccc"
    id="hlSillasTemporalesPA"
    d="m1565 1938.2 4.4-32 285.2 38.2h290.3l.1 31.4h-294.5z"
    style="display:none;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.00056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke;stop-color:#000;" />
           <path
-   inkscape:label="intSillasTemporalesPA"
-   sodipodi:nodetypes="ccccccc"
    id="intSillasTemporalesPA"
    d="m1565 1938.2 6-32 283.6 38.2H2144l1 30.3-294.5 1z"
    style="vector-effect:none;fill:none;stroke:none;stroke-width:7.19265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.19265,14.3853;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000;" />
@@ -3389,26 +3328,25 @@
    inkscape:label="icoBautismoPA"
    id="icoBautismoPA"
    class="icoBox"
-   style="vector-effect:non-scaling-stroke;fill:#fff;stroke:#0016aa;stroke-width:58.5937;stroke-linecap:square;stroke-linejoin:round;-inkscape-stroke:hairline;paint-order:stroke fill markers"
-   transform="translate(-2.1 -131.5)">
+   style="-inkscape-stroke:hairline;fill:#fff;paint-order:stroke fill markers;stroke:#0016aa;stroke-linecap:square;stroke-linejoin:round;stroke-width:58.5937;vector-effect:non-scaling-stroke">
           <rect
    inkscape:label="hlBautismoPA"
    id="hlBautismoPA"
    width="38.3"
    height="89.1"
-   x="2099.8"
-   y="2258.3"
+   x="2097.7000000000003"
+   y="2126.8"
    ry="5.5"
-   style="display:none;fill:none;fill-opacity:0;stroke:#ff8613;stroke-width:5.27568;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;paint-order:fill markers stroke" />
+   style="display:none;fill:none;fill-opacity:0;paint-order:fill markers stroke;stroke:#ff8613;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-width:5.27568" />
           <rect
    inkscape:label="intBautismoPA"
    id="intBautismoPA"
-   width="45"
+   width="45.0"
    height="77.3"
-   x="2099.8"
-   y="2264.3"
+   x="2097.7000000000003"
+   y="2132.8"
    ry="4.8"
-   style="vector-effect:none;fill:none;stroke:none;stroke-width:5.16146;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:5.16146,10.3229;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000;" />
+   style="-inkscape-stroke:none;fill:none;paint-order:fill markers stroke;stop-color:#000;stroke:none;stroke-dasharray:5.16146,10.3229;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-width:5.16146;vector-effect:none" />
         </g>
       </g>
       <g
@@ -3443,12 +3381,10 @@
    y="2525.6"
    style="fill:none;stroke:#0f0;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke" />
         <path
-   sodipodi:nodetypes="cccc"
    id="path13"
    d="m1658.8 2527.6.7-206.6h540.7v-151"
    style="fill:none;stroke:red;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke" />
         <path
-   sodipodi:nodetypes="cc"
    id="path15"
    d="M2011 2525.6v-205.3"
    style="fill:#0f0;stroke:#0f0;stroke-width:3.00034;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke" />
@@ -3456,10 +3392,10 @@
    id="rect13-2"
    width="72.1"
    height="19.8"
-   x="2345.9"
-   y="-2234.8"
-   style="fill:#f0f;stroke:none;stroke-width:1.00011;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
-   transform="rotate(90)" />
+   x="2188.85"
+   y="2372.05"
+   style="fill:#f0f;paint-order:markers fill stroke;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.00011"
+   transform="matrix(6.12323e-17 1 -1 6.12323e-17 4606.85 157.05)" />
         <path
    id="path24"
    d="M2215 2364.8h-20.1v-45.2"
