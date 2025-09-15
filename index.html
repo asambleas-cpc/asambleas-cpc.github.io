@@ -1330,7 +1330,12 @@
           <!-- Map Header Panel -->
           <div class="map-header-panel px-3 py-2" id="map-header-panel">
             <div id="map-title">
-              <i class="material-symbols-outlined">map</i>
+              <div class="dropdown">
+                <i class="material-symbols-outlined" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">map</i>
+                <ul class="dropdown-menu title-dropdown-menu">
+                  <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" id="print-map"><span class="material-symbols-outlined">print</span>Imprimir</a></li>
+                </ul>
+              </div>
               <div class="map-title-selectors">
                 <div class="dropdown">
                   <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">

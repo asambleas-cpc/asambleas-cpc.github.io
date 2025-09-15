@@ -36,6 +36,10 @@
         "initialElement": "basePB",
         "overviewElement": "patioExterior"
     },
+    "printSettings": {
+        "elementId": "basePB",
+        "zoom": -0.5
+    },
     "definitions": {
         "prefixes": {
             "layer": "lay",

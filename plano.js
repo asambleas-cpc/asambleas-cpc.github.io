@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         mapModal: document.getElementById('mapModal'),
         zoomIn: document.getElementById('zoom-in'),
         zoomOut: document.getElementById('zoom-out'),
+        printMap: document.getElementById('print-map'),
         mainOffcanvasBody: document.getElementById('mainOffcanvasBody'),
         mapHeaderPanel: document.getElementById('map-header-panel')
     };
@@ -174,6 +175,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     function setupEventListeners() {
         dom.zoomIn.addEventListener('click', () => map.zoomIn());
         dom.zoomOut.addEventListener('click', () => map.zoomOut());
+        if (dom.printMap) {
+            dom.printMap.addEventListener('click', (event) => {
+                event.preventDefault();
+                printMap();
+            });
+        }
 
         // map.on('moveend', rerenderSVG);
 
@@ -566,4 +573,62 @@ document.addEventListener('DOMContentLoaded', async () => {
             backdrops.forEach(backdrop => backdrop.remove());
         });
     }
+
+    /**
+     * Prepares the map for printing and triggers the print dialog.
+     */
+    function printMap() {
+        const originalView = {
+            center: map.getCenter(),
+            zoom: map.getZoom()
+        };
+
+        // Define the handler for after printing
+        const afterPrintHandler = () => {
+            document.body.classList.remove('printing-map');
+            // Restore the original view after printing is done
+            map.setView(originalView.center, originalView.zoom, { animate: false });
+            map.invalidateSize(); // Resize back to normal
+            window.removeEventListener('afterprint', afterPrintHandler); // Clean up listener
+        };
+
+        // Listen for the afterprint event
+        window.addEventListener('afterprint', afterPrintHandler);
+
+        // 1. Apply print styles
+        document.body.classList.add('printing-map');
+
+        // 2. Invalidate size to make the map aware of the new full-screen container
+        map.invalidateSize();
+
+        // 3. Center on the print element from config
+        if (config.printSettings && config.printSettings.elementId) {
+            const element = svgElement.querySelector(`#${config.printSettings.elementId}`);
+            if (element) {
+                const bbox = element.getBBox();
+                const svgHeight = svgElement.viewBox.baseVal.height;
+                const southWest = L.latLng(svgHeight - (bbox.y + bbox.height), bbox.x);
+                const northEast = L.latLng(svgHeight - bbox.y, bbox.x + bbox.width);
+                const elementBounds = L.latLngBounds(southWest, northEast);
+                
+                map.fitBounds(elementBounds, { 
+                    animate: false, 
+                    padding: [20, 20]
+                });
+
+                if (config.printSettings.zoom) {
+                    map.setZoom(config.printSettings.zoom, { animate: false });
+                }
+            } else {
+                console.warn(`Print element '${config.printSettings.elementId}' not found.`);
+            }
+        }
+        
+        // 4. Use a timeout to ensure rendering is complete before printing
+        setTimeout(() => {
+            window.print();
+        }, 500); // Increased timeout for stability
+    }
+
+    // Remove the old, separate afterprint listener to avoid duplication
 });
