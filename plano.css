@@ -1,61 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
 
 @media print {
-  /* Ensure the body takes up the whole print page without margins */
   @page {
     size: auto;
     margin: 0;
   }
 
-  body.printing-map {
-    padding: 0 !important;
-    margin: 0 !important;
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
   }
 
-  /* Hide everything on the page by default when printing */
-  body.printing-map > *:not(#mapModal) {
+  /* Hide everything except the print modal */
+  body > *:not(#printModal) {
     display: none !important;
   }
 
-  /* Display the modal and ensure it covers the whole page */
-  body.printing-map #mapModal {
+  /* Make the print modal a non-modal block that fills the page */
+  #printModal {
     display: block !important;
     position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important; /* Use 100% of the page width */
-    height: 100% !important; /* Use 100% of the page height */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden !important;
-    background: white !important;
   }
 
-  body.printing-map #mapModal .modal-dialog,
-  body.printing-map #mapModal .modal-content,
-  body.printing-map #mapModal .modal-body {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
+  #printModal .modal-dialog,
+  #printModal .modal-content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    box-shadow: none;
   }
 
-  /* Hide all UI elements inside the modal */
-  body.printing-map #mapModal .map-header-panel,
-  body.printing-map #mapModal .vertical-toolbar,
-  body.printing-map #mapModal .offcanvas,
-  body.printing-map #mapModal .leaflet-control-container,
-  body.printing-map #mapModal .btn-close {
-    display: none !important;
+  /* Use flexbox to center and contain the SVG */
+  #printModal .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
   }
 
-  /* Ensure the map container itself is visible and fills the space */
-  body.printing-map #mapModal #map {
-    width: 100% !important;
-    height: 100% !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
+  #printModal .modal-body svg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 }

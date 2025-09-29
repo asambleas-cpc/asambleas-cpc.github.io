@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="es" class="fonts-loading">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="Asambleas en el CPC" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Favicons -->
+<link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+<link rel="shortcut icon" href="icons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest?v=1.5" />
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Asambleas en el CPC</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=1.6.4" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body style="background-color: hsl(224, 5%, 90%); font-family: 'Cabin', sans-serif;">
+  <!-- Botón flotante para volver al inicio -->
+  <a href="#inicio" id="backToTopBtn" class="back-to-top" aria-label="Volver al inicio">
+    <i class="material-symbols-outlined">arrow_upward</i>
+  </a>
+
+  <!-- 🔻 Fullscreen Scroll Snap Sections -->
+  <main class="snap-container">
+
+    <!-- 🔻 Sections (same as before) -->
+    <section id="inicio" class="section-inicio snap-section">
+      <div class="container pt-5">
+        <header class="">
+          <div class="header-logo" >
+            <div id="logo-svg-wrapper" class="svg-wrapper" >
+            <svg>
+              <use href="#sketchCPC"/>
+            </svg></div>
+          </div>
+          <h1 class="titulo display-4">Asambleas&nbsp;en&nbsp;el<wbr> <em>Centro&nbsp;Provincial<wbr/> de&nbsp;Convenciones</em></h1>
+        </header>
+        <p class="mb-5" id="intro">En septiembre se celebrará la serie de asambleas regionales <strong>"Adoración
+            pura"</strong> en
+          el <em>Centro Provincial de Convenciones</em> de Paraná. Este sitio contiene información importante para los
+          asistentes.
+        </p>
+
+        <div class="row">
+          <div class="col-lg-6 mb-2 mb-lg-0">
+            <div class="d-flex flex-column">
+              <div class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-bottom-0 flex-grow-1"
+                style="border-color: var(--transporte-color);">
+                <div class="icon-half" style="background-color: var(--transporte-color);">
+                  <i class="material-symbols-outlined">route</i>
+                </div>
+                <div class="card-body d-flex flex-column" style="background-color: var(--transporte-bg);">
+                  <h5 class="card-title">Cómo llegar</h5>
+                  <p class="card-text mb-0">Opciones para transporte y estacionamiento.</p>
+                  <a href="#transporte" class="stretched-link"></a>
+                </div>
+              </div>
+              <div
+                class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-0 border-top-0 flex-grow-1"
+                style="border-color: var(--auditorios-color);">
+                <div class="icon-half" style="background-color: var(--auditorios-color);">
+                  <i class="material-symbols-outlined">airline_seat_recline_normal</i>
+                </div>
+                <div class="card-body d-flex flex-column" style="background-color: var(--auditorios-bg);">
+                  <h5 class="card-title">Dónde ubicarse</h5>
+                  <p class="card-text mb-0">Auditorios, instalaciones y departamentos. Plano del predio.</p>
+                  <a href="#auditorios" class="stretched-link"></a>
+                </div>
+              </div>
+              <div
+                class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-0 border-top-0 flex-grow-1"
+                style="border-color: var(--alimentos-color);">
+                <div class="icon-half" style="background-color: var(--alimentos-color);">
+                  <i class="material-symbols-outlined">fastfood</i>
+                </div>
+                <div class="card-body d-flex flex-column" style="background-color: var(--alimentos-bg);">
+                  <h5 class="card-title">Dónde comer</h5>
+                  <p class="card-text mb-0">Opciones para comer en los intermedios. Dónde guardar los alimentos.</p>
+                  <a href="#alimentos" class="stretched-link"></a>
+                </div>
+              </div>
+              <div
+                class="card d-flex flex-row align-items-stretch card-themed-icon rounded-top-0 border-top-0 flex-grow-1"
+                style="border-color: var(--alojamiento-color);">
+                <div class="icon-half" style="background-color: var(--alojamiento-color);">
+                  <i class="material-symbols-outlined">hotel</i>
+                </div>
+                <div class="card-body d-flex flex-column" style="background-color: var(--alojamiento-bg);">
+                  <h5 class="card-title">Dónde alojarse</h5>
+                  <p class="card-text mb-0">Alojamientos disponibles y cómo ofrecer alojamiento.</p>
+                  <a href="#alojamiento" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="card mb-3 " id="cardAntesDeAsistir" style="background-color: LightYellow;">
+              <div class="card-body">
+                <h5 class="card-title">Antes de asistir</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" style="background-color: LightYellow;">
+                    <input type="checkbox" id="cbTransporte" value="" class="custom-checkbox-input">
+                    <label class="custom-checkbox-label" for="cbTransporte">
+                      <span class="material-symbols-outlined unchecked-icon">check_box_outline_blank</span>
+                      <span class="material-symbols-outlined checked-icon">check</span>
+                      <span>Conozca <a href="#transporte">cómo llegar y dónde estacionar.</a></span>
+                    </label>
+                  </li>
+                  <li class="list-group-item" style="background-color: LightYellow;">
+                    <input type="checkbox" id="cbAlimentos" value="" class="custom-checkbox-input">
+                    <label class="custom-checkbox-label" for="cbAlimentos">
+                      <span class="material-symbols-outlined unchecked-icon">check_box_outline_blank</span>
+                      <span class="material-symbols-outlined checked-icon">check</span>
+                      <span>Prepare los <a href="#alimentos">alimentos.</a></span>
+                    </label>
+                  </li>
+                  <li class="list-group-item" style="background-color: LightYellow;">
+                    <input type="checkbox" id="cbAuditorios" value="" class="custom-checkbox-input">
+                    <label class="custom-checkbox-label" for="cbAuditorios">
+                      <span class="material-symbols-outlined unchecked-icon">check_box_outline_blank</span>
+                      <span class="material-symbols-outlined checked-icon">check</span>
+                      <span>Sepa <a href="#auditorios">a qué auditorio ir.</a></span>
+                    </label>
+                  </li>
+                  <li class="list-group-item" style="background-color: LightYellow;">
+                    <input type="checkbox" id="cbEmergencias" value="" class="custom-checkbox-input">
+                    <label class="custom-checkbox-label" for="cbEmergencias">
+                      <span class="material-symbols-outlined unchecked-icon">check_box_outline_blank</span>
+                      <span class="material-symbols-outlined checked-icon">check</span>
+                      <span>Conozca las <a href="#h3Emergencias">instrucciones de emergencia.</a></span>
+                    </label>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+            
+              <div class="card d-flex flex-row align-items-stretch card-themed-icon mb-3" id="cardVideoInformacion">
+                <div class="icon-half">
+                  <i class="material-symbols-outlined">play_circle</i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Video: Información para asistentes</h5>
+                  <p class="card-text">En este video verá instrucciones para los asistentes.</p>
+                  <a class="btn btn-md btn-primary btn-theme video-link" href="#" role="button" data-bs-toggle="modal"
+              data-bs-target="#videoModal" data-video="videos/Informacion-480p.mp4" data-video-hd="videos/informacion-720p.mp4"><i
+                        class="material-symbols-outlined">play_arrow</i> Reproducir</a> <a class="btn btn-md btn-primary btn-theme"  role="button" href="videos/informacion-720p.mp4" download="Asambleas_en_el_CPC_-_Informacion_para_asistentes.mp4"><i
+                        class="material-symbols-outlined">download</i> Descargar</a>
+
+                </div>
+              </div>
+            
+          
+            <div class="accordion" id="accordionConozcaCPC">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <i class="material-symbols-outlined me-2">info</i>
+                    <span>Conozca el <wbr><em>Centro Provincial <wbr>de Convenciones</em></span>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionConozcaCPC">
+                  <div class="accordion-body">
+                    <p class="card-text">
+                      El CPC se encuentra en el Parque Urquiza, a pocas cuadras del centro cívico y es accesible por
+                      varios medios de transporte.
+                    <ul>
+                      <li>Dos auditorios alfombrados y climatizados para 1800 asistentes.</li>
+                      <li>Vestíbulos amplios y luminosos con vista al parque Urquiza y el río Paraná.</li>
+                      <li>Galería cubierta y patio exterior con acceso al parque.</li>
+                      <li>Servicios y baños modernos.</li>
+                    </ul>
+                    </p><button class="btn btn-md btn-primary btn-theme" onclick="plano(0,'departamentos','basePB',true, true)"><i
+                        class="material-symbols-outlined">map</i> Plano del predio</button>
+                    <div class="btn-group" role="group" aria-label="Ubicación del CPC"><button
+                        class="btn btn-md btn-primary btn-theme"
+                        onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones')" role="button"
+                        target="_blank"><i class="material-symbols-outlined">pin_drop</i> Ubicación</button>
+                      <button class="btn btn-md btn-primary btn-theme"
+                        onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones', true)"
+                        role="button" target="_blank"><i class="material-symbols-outlined">share</i></button>
+                    </div>
+
+                    <h6 class="mt-3">Galería de fotos</h6>
+                    <div class="scroll-wrapper">
+                      <button class="scroll-btn scroll-left material-symbols-outlined">chevron_left</button>
+                      <div class="scroll-inner-container">
+                        <div class="gallery d-flex flex-nowrap g-2">
+                          <a href="images/01.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/01.jpg" class="img-thumbnail"
+                              alt="Foto del frente del Centro Provincial de Convenciones">
+                          </a>
+                          <a href="images/02.jpg" loading="lazy" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/02.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/03.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/03.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/04.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/04.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/05.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/05.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/06.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/06.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/07.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/07.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/08.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/08.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/09.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/09.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/10.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/10.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/11.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/11.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                          <a href="images/12.jpg" data-bs-toggle="lightbox" data-gallery="image-gallery" class="col-4">
+                            <img src="images/thumbs/12.jpg" loading="lazy" class="img-thumbnail">
+                          </a>
+                        </div>
+                      </div>
+                      <button class="scroll-btn scroll-right material-symbols-outlined">chevron_right</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </section>
+
+
+    <section id="transporte" class="section-transporte snap-section">
+      <i class="section-icon material-symbols-outlined">route</i>
+      <div class="container pt-5">
+
+        <header class="section-header">
+          <h2 class="display-5">Cómo llegar</h2>
+        </header>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardGuardarAuto">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">pin_drop</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Centro Provincial de Convenciones</h5>
+                <p class="card-text"><strong>Dirección:</strong><br> Calle San Martín 15, Paraná.</em></p>
+                <p class="card-text">
+                <div class="btn-group" role="group" aria-label="Ubicación del CPC"><button
+                    class="btn btn-md btn-primary btn-theme"
+                    onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones')" role="button"
+                    target="_blank"><i class="material-symbols-outlined">pin_drop</i> Abrir ubicación</button>
+                  <button class="btn btn-md btn-primary btn-theme"
+                    onclick="abrirMapa('-31.721610,-60.52522','Centro Provincial de Convenciones', true)" role="button"
+                    target="_blank"><i class="material-symbols-outlined">share</i></button>
+                </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <h3>Medios de transporte</h3>
+        <div class="accordion" id="accordionTransporte">
+
+          <!-- Auto Particular -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingAuto">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseAuto " aria-expanded="false" aria-controls="collapseAuto">
+                <i class="material-symbols-outlined me-2">directions_car</i> Auto particular
+              </button>
+            </h5>
+            </h2>
+            <div id="collapseAuto" class="accordion-collapse collapse" aria-labelledby="headingAuto"
+              data-bs-parent="#accordionTransporte">
+              <div class="accordion-body">
+
+                <h5 id="estacionamiento">Estacionamiento</h5>
+                <ul>
+                  <li><strong>En las calles.</strong> En los alrededores del CPC hay abundantes lugares para
+                    estacionar
+                    en la calle. Sin embargo, generalmente hay cuidacoches.
+                    <br> <button class="btn btn-md btn-primary btn-theme" onclick="mostrarDatos('estacionamiento')">
+                      Lugares donde estacionar
+                    </button>
+                  </li>
+                  <li><strong>Cocheras. </strong>Tambien hay disponibles estacionamientos pagos.<br> <button
+                      class="btn btn-md btn-primary btn-theme" onclick="mostrarDatos('cocheras')">
+                      Cocheras cercanas
+                    </button></li>
+                  <li><strong>Espacios para asistentes con limitaciones físicas.</strong> Hay un número limitado de
+                    espacios en el <a href="javascript:plano(0,'departamentos','Estacionamiento')"
+                      class="plano-link">estacionamiento interno</a> para personas con limitaciones físicas. Si
+                    considera que califica para solicitarlo, por
+                    favor, contáctese con los ancianos de su congregación. Tenga en cuenta que se van a controlar los
+                    números de patentes en el ingreso.</li>
+                </ul>
+                <h5>Accesos sugeridos</h5>
+                <p>En los accesos <strong>hay barrios muy peligrosos.</strong> Se recomienda que <strong>circule por las
+                    avenidas</strong> y <strong>evite cortar por caminos alternativos.</strong> Los siguientes son
+                  puntos de ingresos que se sugieren para evitar desviarse.</p>
+                <ul>
+                  <li><strong>Desde Santa Fe y norte de Entre Ríos:</strong> 
+                    <ol>
+                      <li><i class="material-symbols-outlined">ramp_left</i>Ingreso por Acceso al Tunel/Acceso Norte a calle A. Crespo hacia el oeste</li>
+                    <li><i class="material-symbols-outlined">turn_left</i>Calle Güemes.</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Av. Moreno</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Gregoria Matorras de San Martín (continuación de Corrientes)</li>
+                    <li><i class="material-symbols-outlined">distance</i>Llegada al CPC</li>
+                    </ol>                  
+                    De alli se puede llegar a los <a  href="#estacionamiento">estacionamientos</a> sugeridos. <br/> <a href="https://maps.app.goo.gl/GGyqzQKFr8Tp8t1DA" class="geo-link" target="_blank">Abrir ruta sugerida en el mapa.</a></li>
+
+                  <li><strong>Desde el sur de Entre Ríos: </strong>
+                    <ol>
+                       <li><i class="material-symbols-outlined">straight</i>Ingreso por Av. Ramírez hacia el norte</li>
+                    <li><i class="material-symbols-outlined">turn_left</i>Calle La Paz</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Salta</li>
+                    <li><i class="material-symbols-outlined">turn_left</i>Av. Moreno</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Gregoria Matorras de San Martín (continuación de Corrientes)</li>
+                    <li><i class="material-symbols-outlined">distance</i>Llegada al CPC</li>
+                    </ol>
+                    A partir de Salta y Nogoyá se puede llegar a los <a
+                      href="#estacionamiento">estacionamientos</a> sugeridos.<br> <a
+                      href="https://maps.app.goo.gl/1Yjp3qoEXEWzFzJW7" class="geo-link" target="_blank">Abrir ruta sugerida en el
+                      mapa.</a></li>
+                </ul>
+
+                <h5>Recomendaciones</h5>
+                <ul>
+                  <li>En las calles generalmente andan cuidacoches.</li>
+                  <li>El parque es muy concurrido los fines de semana.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ómnibus interurbano -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingInterurbano">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseInterurbano" aria-expanded="false" aria-controls="collapseInterurbano">
+                <i class="material-symbols-outlined me-2">directions_bus</i> Ómnibus interurbanos
+              </button>
+              </h2>
+              <div id="collapseInterurbano" class="accordion-collapse collapse" aria-labelledby="headingInterurbano"
+                data-bs-parent="#accordionTransporte">
+                <div class="accordion-body">
+                  <h5>Servicios hasta la terminal de ómnibus</h5>
+                  <ul>
+                    <li><strong>Desde Santa Fe.</strong> Hay servicios aproximadamente cada 30 minutos. <a
+                        href="https://www.paranaonline.com.ar/horarios-fluviales-etacer/" class="ext-link">Ver
+                        horarios.</a></li>
+                    <li><strong>Desde el interior de Entre Ríos.</strong> Hay servicios diarios desde numerosas
+                      localidades. <a href="https://www.centraldepasajes.com.ar/pasaje-micro/terminal-de-parana.html"
+                        class="ext-link">Ver servicios.</a></li>
+                  </ul>
+                  <h5>Traslado desde la terminal hasta el CPC</h5>
+                  <p>El CPC se encuentra a 30 cuadras de la terminal.</p>
+                  <ul>
+                    <li><strong>Taxis, remises y aplicaciones.</strong> Se llega en 10
+                      minutos. Para más detalles <a href="#collapseTaxi" data-bs-toggle="collapse" aria-expanded="false"
+                        aria-controls="collapseTaxi">vea la sección de taxis y apps.</a></li>
+                    <li><strong>Colectivos urbanos.</strong>
+                      Para más detalles <a href="#collapseUrbano" data-bs-toggle="collapse" aria-expanded="false"
+                        aria-controls="collapseUrbano">vea la sección de colectivos urbanos.</a></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+
+          <!-- Colectivo urbano -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingUrbano">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseUrbano" aria-expanded="false" aria-controls="collapseUrbano">
+                <i class="material-symbols-outlined me-2">directions_bus</i> Colectivos urbanos
+              </button>
+              </h2>
+              <div id="collapseUrbano" class="accordion-collapse collapse" aria-labelledby="headingUrbano"
+                data-bs-parent="#accordionTransporte">
+                <div class="accordion-body">
+                  <p>El transporte urbano de Paraná se abona utilizando la tarjeta SUBE. Para conocer los recorridos y
+                    tarifas, visite <a href="https://sube.parana.gob.ar" target="_blank" class="ext-link">el sitio de
+                      SUBE Paraná.</a>
+                  </p>
+
+                  <button class="btn btn-primary btn-theme btn-md mt-2" onclick="mostrarDatos('colectivos')">
+                    Líneas que llegan al CPC
+                  </button>
+                </div>
+              </div>
+          </div>
+
+          <!-- Taxis y Apps -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingTaxi">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTaxi" aria-expanded="false" aria-controls="collapseTaxi">
+                <i class="material-symbols-outlined me-2">local_taxi</i> Taxis, remises y apps
+              </button>
+              </h2>
+              <div id="collapseTaxi" class="accordion-collapse collapse" aria-labelledby="headingTaxi"
+                data-bs-parent="#accordionTransporte">
+                <div class="accordion-body">
+                  <h5>Apps</h5>
+                  <p>En el destino introduzca <strong>Centro Provincial de Convenciones</strong> o <strong>San Martín
+                      15</strong>.</p>
+                  <ul>
+                    <li><a href="https://www.uber.com/ar/es/ride/" target="_blank" class="ext-link">Uber</a></li>
+                    <li><a href="https://web.didiglobal.com/ar/pasajero/" target="_blank" class="ext-link">Didi</a></li>
+                    <li><a href="https://cabify.com/ar/pasajeros" target="_blank" class="ext-link">Cabify</a></li>
+                  </ul>
+                  <h5>Remises y taxis</h5>
+                  <p>Indíquele al conductor que lo lleve al <strong>Centro Provincial de Convenciones</strong> o
+                    <strong>San Martín 15</strong>.</p>
+                  <ul>
+                    <li><a href="https://www.paginasamarillas.com.ar/b/remises/parana-entre-rios" target="_blank"
+                        class="ext-link">Remises en Paraná (Páginas Amarillas)</a></li>
+                    <li><a href="https://maps.app.goo.gl/mDAafwk1keqsoFQr9" target="_blank" class="ext-link">Remises en
+                        Paraná (Google Maps)</a></li>
+                    <li><a href="https://maps.app.goo.gl/WmTXyt4c2c6pUAg5A" target="_blank" class="ext-link">Taxis en
+                        Paraná (Google Maps)</a></li>
+                  </ul>
+
+                </div>
+              </div>
+          </div>
+
+          <!-- Transportes contratados -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingShuttle">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseShuttle" aria-expanded="false" aria-controls="collapseShuttle">
+                <i class="material-symbols-outlined me-2">airport_shuttle</i> Transportes contratados
+              </button>
+              </h2>
+              <div id="collapseShuttle" class="accordion-collapse collapse" aria-labelledby="headingShuttle"
+                data-bs-parent="#accordionTransporte">
+                <div class="accordion-body">
+                  <p>Hay un <strong>punto de descenso de pasajeros</strong> de ómnibus y trafics contratados, por calle
+                    Gregoria Matorras de San Martín (continuación de calle Corrientes), pasando el parque Patito Sirirí.</p>
+                  <div class="btn-group" role="group" aria-label="Ubicación del punto de descenso">
+                    <button class="btn btn-md btn-primary btn-theme"
+                      onclick="abrirMapa('-31.721037,-60.524472','Punto de descenso de pasajeros')" role="button"
+                      target="_blank"><i class="material-symbols-outlined">pin_drop</i> Punto de descenso</button>
+                    <button class="btn btn-md btn-primary btn-theme"
+                      onclick="abrirMapa('-31.721037,-60.524472','Punto de descenso de pasajeros', true)" role="button"
+                      target="_blank"><i class="material-symbols-outlined">share</i></button>
+                  </div>
+                <h5>Rutas de acceso sugeridas</h5>
+                <p>Para vehículos de gran porte recomendamos seguir las siguientes rutas.</p>
+                <ul>
+                  <li><strong>Desde Santa Fe y norte de Entre Ríos:</strong> 
+                    <ol>
+                       <li><i class="material-symbols-outlined">ramp_left</i>Ingreso por Acceso al Tunel/Acceso Norte hacia
+                    Av. Ramírez</li>
+                    <li><i class="material-symbols-outlined">turn_left</i>Av. Ramírez</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Nogoyá</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Salta</li>
+                    <li><i class="material-symbols-outlined">turn_left</i>Av. Moreno</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Gregoria Matorras de San Martín (continuación de Corrientes)</li>
+                    <li><i class="material-symbols-outlined">distance</i>Llegada al punto de descenso</li>
+                    </ol>
+                    <a
+                      href="https://maps.app.goo.gl/jmvkddKNEXp18Lyd9" class="geo-link" target="_blank">Abrir ruta sugerida en el
+                      mapa.</a></li>
+
+                  <li><strong>Desde el sur de Entre Ríos:</strong>             
+                    <ol>
+                       <li><i class="material-symbols-outlined">straight</i>Ingreso por Av. Ramírez hacia el norte</li>
+                    <li><i class="material-symbols-outlined">turn_left</i>Calle La Paz</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Nogoyá</li>
+                    <li><i class="material-symbols-outlined">turn_left</i>Calle Nogoyá</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Salta</li>
+                    <li><i class="material-symbols-outlined">turn_left</i>Av. Moreno</li>
+                    <li><i class="material-symbols-outlined">turn_right</i>Calle Gregoria Matorras de San Martín (continuación de Corrientes)</li>
+                    <li><i class="material-symbols-outlined">distance</i>Llegada al punto de descenso</li>
+                    </ol> <a
+                      href="https://maps.app.goo.gl/v8m3jxk24fY6HSsq5" class="geo-link" target="_blank">Abrir ruta sugerida en el
+                      mapa.</a></li>
+                </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card mt-2 card-themed-icon">
+              <div class="card-body"><small>
+                  <strong>Aclaración:</strong> La información presentada es solamente a modo de referencia y pudiera
+                  estar
+                  sujeta a cambios. La
+                  organización del evento no está relacionada con los servicios presentados, no los promociona ni se
+                  responsabiliza por ellos.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <section id="auditorios" class="section-auditorios snap-section"><i
+        class="section-icon material-symbols-outlined">airline_seat_recline_normal</i>
+      <div class="container pt-5">
+        <h2 class="display-5">Dónde ubicarse</h2>
+        <h3>Auditorios</h3>
+        <p>El CPC tiene dos auditorios cómodos y climatizados. Para las asambleas, cada auditorio se asigna a un público
+          específico.</p>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardAuditorioPrincipal">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">groups</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Auditorio principal: para el público en general</h5>
+                <p class="card-text"></p>Se accede mediante las <strong>escaleras a la izquierda de la
+                  entrada.</strong></p>
+                <button class="btn btn-md btn-primary btn-theme"
+                  onclick="plano(1,'departamentos','AuditorioPrincipal')"><i class="material-symbols-outlined">map</i>
+                  Mostrar en el plano</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardAuditorioAuxiliar">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">assist_walker</i><i class="material-symbols-outlined">pregnancy</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Auditorio auxiliar: para personas con necesidades especiales</h5>
+                <p class="card-text">Invitamos a las <strong>personas mayores, con dificultades, embarazadas o padres
+                    con niños
+                    pequeños</strong> a ubicarse en este auditorio.</p>
+                <p class="card-text"></p>Se accede por el
+                pasillo de la derecha de la entrada. </p>
+                <button class="btn btn-md btn-primary btn-theme"
+                  onclick="plano(0,'departamentos','AuditorioAuxiliar')"><i class="material-symbols-outlined">map</i>
+                  Mostrar en el plano</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp mt-3"
+              id="cardAuditorioCorrespondiente">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">follow_the_signs</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Es importante que nos sentemos en el auditorio que nos corresponde</h5>
+                <p class="card-text">El acceso al auditorio auxiliar es a nivel, mientras que al principal se accede por
+                  escaleras. Ante una evacuación, se perdería tiempo valioso si no estamos donde nos
+                  corresponde.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon mt-3" id="cardClimatizacion">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">bookmark</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Reserva de asientos</h5>
+                <p class="card-text">Le rogamos que <strong>sea considerado con los demás.</strong> Recuerde que puede
+                  reservar asientos únicamente para sus familiares directos, para quienes viajen con usted en el
+                  automóvil, vivan con usted o sean sus estudiantes de la Biblia. No deje objetos en asientos que no
+                  vaya a ocupar.</p>
+                <p class="card-text">Los <strong>asientos en vestíbulos y galerías</strong> son para uso temporal y
+                  <strong>no se deben reservar.</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon mt-3" id="cardClimatizacion">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">mode_cool</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Climatización</h5>
+                <p class="card-text">Los auditorios están climatizados a <strong>24°C en promedio,</strong> pero debido
+                  a la manera en que funciona el equipo, <strong>puede variar</strong> durante el día. Si se sufre el
+                  frío, es recomendable <strong>llevar un abrigo.</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Plano interactivo del CPC</h3>
+        <p>Conozca mejor el predio.</p>
+        <p><button class="btn btn-lg btn-primary btn-theme" onclick="plano()"><i
+              class="material-symbols-outlined">map</i> Plano interactivo</button></p>
+
+        <h3>Instalaciones</h3>
+        <div class="accordion" id="accordionInstalaciones">
+          <!-- Baños -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingBanos">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseBanos" aria-expanded="false" aria-controls="collapseBanos">
+                <i class="material-symbols-outlined me-2">wc</i> Baños
+              </button>
+            </h5>
+            <div id="collapseBanos" class="accordion-collapse collapse" aria-labelledby="headingBanos"
+              data-bs-parent="#accordionInstalaciones">
+              <div class="accordion-body">
+                El CPC cuenta con baños en ambas plantas. Es importante <strong>cuidar el consumo de agua,</strong>
+                porque en eventos de uso intensivo se puede agotar el suministro.
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'departamentos','Baños')"><i
+                      class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button
+                    class="btn btn-sm btn-primary btn-theme" onclick="plano(1,'departamentos','Baños')"><i
+                      class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
+              </div>
+            </div>
+          </div>
+          <!-- Vestíbulos -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingVestibulosInst">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseVestibulosInst" aria-expanded="false" aria-controls="collapseVestibulosInst">
+                <i class="material-symbols-outlined me-2">groups</i> Vestíbulos
+              </button>
+            </h5>
+            <div id="collapseVestibulosInst" class="accordion-collapse collapse" aria-labelledby="headingVestibulosInst"
+              data-bs-parent="#accordionInstalaciones">
+              <div class="accordion-body">
+                <p>Los vestíbulos son amplios y luminosos, con vista al parque Urquiza y el río Paraná. Se pueden
+                usar para comer y conversar durante los intermedios.</p>
+                <p>En planta alta hay <strong>asientos para uso temporal,</strong> por lo que <strong>no se deben
+                    reservar.</strong></p>
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'departamentos','Vestibulo')"><i
+                      class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button
+                    class="btn btn-sm btn-primary btn-theme" onclick="plano(1,'departamentos','Vestibulo')"><i
+                      class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
+              </div>
+            </div>
+          </div>
+          <!-- Ascensores -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingAscensores">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseAscensores" aria-expanded="false" aria-controls="collapseAscensores">
+                <i class="material-symbols-outlined me-2">elevator</i> Ascensores
+              </button>
+            </h5>
+            <div id="collapseAscensores" class="accordion-collapse collapse" aria-labelledby="headingAscensores"
+              data-bs-parent="#accordionInstalaciones">
+              <div class="accordion-body">
+                <p>Hay ascensores disponibles para acceder a la planta alta.</p>
+                <p>Padres, cuiden que sus hijos <strong>no jueguen con con ellos.</strong> Si se usan excesivamente, el
+                  sistema hidráulico se sobrecalienta y dejan de funcionar.</p>
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'departamentos','Ascensores')"><i
+                      class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button
+                    class="btn btn-sm btn-primary btn-theme" onclick="plano(1,'departamentos','Ascensores')"><i
+                      class="material-symbols-outlined">map</i> Mostrar en planta alta</button></p>
+              </div>
+            </div>
+          </div>
+          <!-- Galería cubierta y patios exteriores -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingGaleria">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseGaleria" aria-expanded="false" aria-controls="collapseGaleria">
+                <i class="material-symbols-outlined me-2">sunny</i> Galería cubierta y patios exteriores
+              </button>
+            </h5>
+            <div id="collapseGaleria" class="accordion-collapse collapse" aria-labelledby="headingGaleria"
+              data-bs-parent="#accordionInstalaciones">
+              <div class="accordion-body">
+                <p>La galería cubierta y el patio exterior tienen acceso al parque Urquiza. Son lugares ideales para
+                  comer y conversar durante los intermedios.</p>
+                <p>En la galería hay <strong>asientos para uso temporal,</strong> por lo que <strong>no se deben
+                    reservar.</strong></p>
+                <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'departamentos','Patio')"><i
+                      class="material-symbols-outlined">map</i> Mostrar en el plano</button></p>
+              </div>
+            </div>
+          </div>
+          <!-- Estacionamiento interno -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingEstacionamientoInterno">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseEstacionamientoInterno" aria-expanded="false"
+                aria-controls="collapseEstacionamientoInterno">
+                <i class="material-symbols-outlined me-2">directions_car</i> Estacionamiento interno
+              </button>
+            </h5>
+            <div id="collapseEstacionamientoInterno" class="accordion-collapse collapse"
+              aria-labelledby="headingEstacionamientoInterno" data-bs-parent="#accordionInstalaciones">
+              <div class="accordion-body">
+                <p>Hay un <strong>número limitado de espacios para personas con limitaciones físicas.</strong> Si considera que califica para solicitarlo, por favor, contáctese con los ancianos de su congregación. Tenga en cuenta que <strong>se van a controlar los números de patentes</strong> en el ingreso.</p>
+                <p><button class="btn btn-sm btn-primary btn-theme"
+                    onclick="plano(0,'departamentos','Estacionamiento')"><i
+                      class="material-symbols-outlined">map</i> Mostrar en el plano</button></p>
+              </div>
+            </div>
+          </div>
+          <!-- Bautismo -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingBautismo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseBautismo" aria-expanded="false" aria-controls="collapseBautismo">
+                <i class="material-symbols-outlined me-2">water</i> Bautismo
+              </button>
+            </h5>
+            <div id="collapseBautismo" class="accordion-collapse collapse" aria-labelledby="headingBautismo"
+              data-bs-parent="#accordionInstalaciones">
+              <div class="accordion-body">
+                <p>El bautismo se hará en el <a href="javascript:plano(0,'departamentos','Bautismo')"
+                    class="plano-link">patio cubierto.</a></p>
+                <p>Los candidatos se deben ubicar <a href="javascript:plano(1,'departamentos','Bautismo')"
+                    class="plano-link">en las primeras filas </a>en la sesión del sábado por la mañana.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp mt-3"
+              id="cardPrecauciones">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">footprint</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Seamos precavidos al circular</h5>
+                <p class="card-text">El predio tiene escaleras y otros lugares que pueden ser peligrosos. Se recomienda
+                  <strong>circular con cuidado.</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp mt-3"
+              id="cardCuidadoNinos">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">escalator_warning</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Cuidemos a nuestros hijos</h5>
+                <p class="card-text">El predio y sus alrededores <strong>pueden ser peligrosos.</strong> Además, el
+                  ingreso está <strong>abierto al público en general.</strong> Por favor, cuidemos que los niños
+                  <strong>no jueguen con los ascensores.</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon mt-3" id="cardSilencio">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">voice_over_off</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Guardemos silencio durante el programa</h5>
+                <p class="card-text">Si necesitamos salir del auditorio, <strong>evitemos hablar en voz alta en los
+                    vestíbulos y pasillos.</strong> De esta manera respetaremos a los que están escuchando el programa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Departamentos</h3>
+        <div class="accordion" id="departamentosAccordion">
+          <!-- Acomodadores -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingAcomodadores">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseAcomodadores" aria-expanded="false" aria-controls="collapseAcomodadores">
+                <i class="material-symbols-outlined me-2">face</i> Acomodadores
+              </button>
+              </h2>
+              <div id="collapseAcomodadores" class="accordion-collapse collapse" aria-labelledby="headingAcomodadores"
+                data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+                  <p>Los acomodadores <strong>están para ayudarle.</strong> Coopere con ellos en todo y siga sus
+                    instrucciones sobre el estacionamiento, la circulación por los pasillos, la reserva de asientos y
+                    otros asuntos.</p>
+                  <p>Los encontrará distribuídos en todo el local. Hay un puesto permanente <a
+                      href="javascript:plano(0,'departamentos','Acomodadores')" class="plano-link">en el mostrador de
+                      planta baja</a></p>
+                </div>
+              </div>
+          </div>
+          <!-- Guardarropa y objetos perdidos -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingObjetosPerdidos">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseObjetosPerdidos" aria-expanded="false" aria-controls="collapseObjetosPerdidos">
+                <i class="material-symbols-outlined me-2">checked_bag_question</i> Guardarropa y objetos perdidos
+              </button>
+              </h2>
+              <div id="collapseObjetosPerdidos" class="accordion-collapse collapse"
+                aria-labelledby="headingObjetosPerdidos" data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+
+                  <p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a
+                    ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los <strong>niños
+                      que se hayan perdido.</strong></p>
+                  <p>Se encuentra <a href="javascript:plano(0,'departamentos','ObjetosPerdidos')" class="plano-link">en
+                      planta baja, junto con Guarda de alimentos.</a></p>
+                </div>
+              </div>
+          </div>
+          <!-- Guarda de alimentos -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingGuardaAlimentos">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseGuardaAlimentos" aria-expanded="false" aria-controls="collapseGuardaAlimentos">
+                <i class="material-symbols-outlined me-2">shopping_bag</i> Guarda de alimentos
+              </button>
+              </h2>
+              <div id="collapseGuardaAlimentos" class="accordion-collapse collapse"
+                aria-labelledby="headingGuardaAlimentos" data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+                  <p>Es <a href="#guardaAlimentos">donde se pueden guardar los alimentos</a> durante el programa. Por favor, forme fila siguiendo las instrucciones del plano. Recuerde que <strong>no se debe ingresar a los auditorios con alimentos o bebidas.</strong></p>
+                  <p>Hay un punto <a href="javascript:plano(0,'alimentos')" class="plano-link">en
+                      planta baja</a>
+                    y otro <a href="javascript:plano(1,'alimentos')" class="plano-link">en planta
+                      alta.</a></p>
+                </div>
+              </div>
+          </div>
+          <!-- Primeros auxilios -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingPrimerosAuxilios">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsePrimerosAuxilios" aria-expanded="false"
+                aria-controls="collapsePrimerosAuxilios">
+                <i class="material-symbols-outlined me-2">health_cross</i> Primeros auxilios
+              </button>
+              </h2>
+              <div id="collapsePrimerosAuxilios" class="accordion-collapse collapse"
+                aria-labelledby="headingPrimerosAuxilios" data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+                  <p>Se encuentra <a href="javascript:plano(0,'departamentos','PrimerosAuxilios')" class="plano-link">en
+                      planta baja</a>, junto con el departamento de lactantes, y hay una guardia <a href="javascript:plano(1,'departamentos','PrimerosAuxilios')"
+                      class="plano-link">en el auditorio de planta alta.</a></p>
+                  <p>Tenga en cuenta que este departamento es <em>solo para casos de emergencia.</em></p>
+                </div>
+              </div>
+          </div>
+          <!-- Lactantes -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingLactantes">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseLactantes" aria-expanded="false" aria-controls="collapseLactantes">
+                <i class="material-symbols-outlined me-2">breastfeeding</i> Lactantes
+              </button>
+              </h2>
+              <div id="collapseLactantes" class="accordion-collapse collapse" aria-labelledby="headingLactantes"
+                data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+                  <p>Se encuentra <a href="javascript:plano(0,'departamentos','PrimerosAuxilios')" class="plano-link">en planta
+                      baja, junto al departamento de primeros auxilios.</a></p>
+                </div>
+              </div>
+          </div>
+          <!-- Información y servicio voluntario -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingInformacion">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseInformacion" aria-expanded="false" aria-controls="collapseInformacion">
+                <i class="material-symbols-outlined me-2">info</i> Información y servicio voluntario
+              </button>
+              </h5>
+              <div id="collapseInformacion" class="accordion-collapse collapse" aria-labelledby="headingInformacion"
+                data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+                  <p>Si desea ofrecerse como voluntario para ayudar en los trabajos de la asamblea, preséntese este
+                    departamento</p>
+                  <p>Se encuentra <a href="javascript:plano(0,'departamentos','Informacion')" class="plano-link">en el
+                      mostrador de planta baja.</a></p>
+                  <p>Particularmente, se necesitan voluntarios para los siguientes departamentos:</p>
+                  <ul>
+                    <li>Armado y desarme de Audio y Video</li>
+                    <li>Limpieza</li>
+                  </ul>
+                  <p>Es recomendable ofrecerse <strong>antes de la fecha de la asamblea.</strong> Para hacerlo,
+                    contáctese con los ancianos de su congregación.</p>
+
+                </div>
+              </div>
+          </div>
+          <!-- Punto de información sobre donaciones -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingDonaciones">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseDonaciones" aria-expanded="false" aria-controls="collapseDonaciones">
+                <svg class="accordion-icon me-2" viewBox="0 0 24 24" style="width: 1.2em; height: 1.2em; fill: currentColor;"><use href="#iconDonaciones"></use></svg>
+                Punto de información sobre donaciones
+              </button>
+              </h5>
+              <div id="collapseDonaciones" class="accordion-collapse collapse" aria-labelledby="headingDonaciones"
+                data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+                  <p>Aquí recibirá información sobre los métodos de donación existentes en <a href='https://donate.jw.org' target='_blank' class="ext-link">donate.jw.org</a>. Los hermanos le ayudarán a despejar sus dudas y le darán asesoramiento sobre el uso del sitio para que pueda demostrar su agradecimiento por los eventos teocráticos. </p>
+                  <p>Se encuentra <a href="javascript:plano(0,'departamentos','Donate')" class="plano-link">en el
+                      vestíbulo de planta baja.</a></p>
+                  
+
+                </div>
+              </div>
+          </div>
+          <!-- Limpieza -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingLimpieza">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseLimpieza" aria-expanded="false" aria-controls="collapseLimpieza">
+                <i class="material-symbols-outlined me-2">cleaning_services</i> Limpieza
+              </button>
+              </h2>
+              <div id="collapseLimpieza" class="accordion-collapse collapse" aria-labelledby="headingLimpieza"
+                data-bs-parent="#departamentosAccordion">
+                <div class="accordion-body">
+                  <p>Se necesitan voluntarios para colaborar con la limpieza del local. Para más información, vea la sección de <a href="#collapseInformacion" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseInformacion">Servicio Voluntario.</a></p>
+                  <p>Se encuentra <a href="javascript:plano(0,'departamentos','Limpieza')" class="plano-link">en planta
+                      Baja.</a></p>
+                </div>
+              </div>
+          </div>
+        </div>
+        <h5 class="d-none">Administración</h5>
+        <h5 class="d-none">Alojamiento</h5>
+        <p></p>
+
+        <h3 id="h3Emergencias">En caso de emergencias</h3>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardGuardarAuto">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">health_cross</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Emergencias médicas</h5>
+                <p class="card-text">El departamento de <strong>primeros auxilios</strong> tiene un puesto en cada piso. Tenga en cuenta
+                  que este departamento es <em>solo para casos de emergencia.</em></p>
+                <p class="card-text"> <button class="btn btn-md btn-primary btn-theme m-1"
+                    onclick="plano(0,'departamentos','PrimerosAuxilios')"><i class="material-symbols-outlined">map</i>
+                    Planta baja</button> <button class="btn btn-md btn-primary btn-theme m-1"
+                    onclick="plano(1,'departamentos','PrimerosAuxilios')"><i class="material-symbols-outlined">map</i>
+                    Planta alta</button></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardEvacuacion">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">directions_run</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Si hay que evacuar el local</h5>
+                <ul>
+                <li>Diríjase a la <strong>puerta de salida</strong> más cercana.</li>
+                <li>Siga las instrucciones de los <strong>acomodadores con chaleco flúor.</strong></li>
+                <li><strong>Deje sus pertenencias.</strong> No se vuelva a buscarlas.</li>
+                <li>Camine con prisa pero <strong>no corra.</strong></li>
+                <li><strong>No utilice los ascensores.</strong></li>
+                </ul>
+                <h5 class="card-text">Plan de evacuación</h5>
+                <p class="card-text"> <button class="btn btn-md btn-primary btn-theme m-1"
+                    onclick="plano(0,'evacuacion')"><i class="material-symbols-outlined">map</i> Planta baja</button>
+                  <button class="btn btn-md btn-primary btn-theme m-1" onclick="plano(1,'evacuacion')"><i
+                      class="material-symbols-outlined">map</i> Planta alta</button></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+           
+              <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardVideoEmergencias">
+                <div class="icon-half">
+                  <i class="material-symbols-outlined">play_circle</i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Video: Instrucciones para emergencias</h5>
+                  <p class="card-text">En este video verá instrucciones importantes para situaciones de emergencia.</p>
+                  <a class="btn btn-md btn-primary btn-theme video-link" href="#" role="button" data-bs-toggle="modal"
+              data-bs-target="#videoModal" data-video="videos/emergencias-480p.mp4" data-video-hd="videos/emergencias-720p.mp4"><i
+                        class="material-symbols-outlined">play_arrow</i> Reproducir</a>  <a class="btn btn-md btn-primary btn-theme"  role="button" href="videos/emergencias-720p.mp4" download="Asambleas_en_el_CPC_-_Instrucciones_para_emergencias.mp4"><i
+                        class="material-symbols-outlined">download</i> Descargar</a>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="alimentos" class="section-alimentos snap-section"><i
+        class="section-icon material-symbols-outlined">fastfood</i>
+      <div class="container pt-5">
+        <h2 class="display-5">Dónde comer</h2>
+
+        <p>En el predio y alrededores <strong>hay abundantes lugares disponibles para comer</strong> durante los
+          intermedios.</p>
+        <div class="accordion" id="accordionDondeComer">
+          <!-- Patios exteriores -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingPatios">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsePatios" aria-expanded="false" aria-controls="collapsePatios">
+                <i class="material-symbols-outlined me-2">sunny</i> En los exteriores
+              </button>
+              </h2>
+              <div id="collapsePatios" class="accordion-collapse collapse" aria-labelledby="headingPatios"
+                data-bs-parent="#accordionDondeComer">
+                <div class="accordion-body">
+                  <p>En los patios exteriores y la galería cubierta hay espacios para comer y conversar. Hay sillas para
+                    usar temporalmente, por lo que <strong>no se pueden reservar.</strong></p>
+                </div>
+              </div>
+          </div>
+          <!-- Parque Urquiza -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingParque">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseParque" aria-expanded="false" aria-controls="collapseParque">
+                <i class="material-symbols-outlined me-2">forest</i> En el parque Urquiza
+              </button>
+              </h2>
+              <div id="collapseParque" class="accordion-collapse collapse" aria-labelledby="headingParque"
+                data-bs-parent="#accordionDondeComer">
+                <div class="accordion-body">
+                  <p>En el parque hay abundantes espacios para comer y esparcirse.</p>
+                </div>
+              </div>
+          </div>
+          <!-- En el auto -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingEnElAuto">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseEnElAuto" aria-expanded="false" aria-controls="collapseEnElAuto">
+                <i class="material-symbols-outlined me-2">directions_car</i> En el auto
+              </button>
+              </h2>
+              <div id="collapseEnElAuto" class="accordion-collapse collapse" aria-labelledby="headingEnElAuto"
+                data-bs-parent="#accordionDondeComer">
+                <div class="accordion-body">
+                  <p>Algunos hermanos prefieren guardar la comida en el auto y comerla ahí mismo.</p>
+                </div>
+              </div>
+          </div>
+          <!-- Vestíbulos -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="headingVestibulos">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseVestibulos" aria-expanded="false" aria-controls="collapseVestibulos">
+                <i class="material-symbols-outlined me-2">groups</i> En los vestíbulos
+              </button>
+              </h2>
+              <div id="collapseVestibulos" class="accordion-collapse collapse" aria-labelledby="headingVestibulos"
+                data-bs-parent="#accordionDondeComer">
+                <div class="accordion-body">
+                  <p>Los vestíbulos de ambas plantas están habilitados para comer, pero <strong>no en los
+                      auditorios.</strong> Hay sillas para usar temporalmente, por lo que <strong>no se pueden
+                      reservar.</strong></p>
+                </div>
+              </div>
+          </div>
+        </div>
+        <p></p>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp" id="cardNoComer">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">no_food</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-2">No se debe ingresar comida a los auditorios</h5>
+                <p class="card-text"><strong>No se pueden ingresar ni consumir alimentos ni bebidas (incluído tomar
+                    mate) en
+                    los
+                    auditorios.</strong> </p>
+                <p class="card-text">Es una cláusula del contrato de uso del
+                  predio. Nuestra
+                  obediencia permitirá que siga estando a nuestro alcance celebrar asambleas en el CPC.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <h3 id="guardarAlimentos">Dónde guardar los alimentos</h3>
+        <p>Como <strong>no podemos ingresar a los auditorios con alimentos o bebidas,</strong> veamos qué alternativas
+          tenemos disponibles para guardarlos durante el programa.</p>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardGuardarAuto">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">directions_car</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">En el auto</h5>
+                <p class="card-text">Si viajamos en auto, podemos guardar los alimentos allí y retirarlos en el
+                  intermedio.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon"
+              id="cardGuardarGuardaAlimentos">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">shopping_bag</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Usando el servicio de guarda de alimentos</h5>
+                <p class="card-text">Contamos con un servicio para guardar los alimentos. Hay un punto en cada
+                  piso. Por favor forme fila siguiendo lo indicado en el plano de cada piso:</a></p>
+                <p class="card-text"> <button class="btn btn-md btn-primary btn-theme m-1"
+                    onclick="plano(0,'alimentos')"><i class="material-symbols-outlined">map</i>
+                    Planta baja</button> <button class="btn btn-md btn-primary btn-theme m-1"
+                    onclick="plano(1,'alimentos')"><i class="material-symbols-outlined">map</i>
+                    Planta alta</button></p>
+                <p>A continuación se explica como funciona el servicio.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 id="guardaAlimentos">Cómo funciona la guarda de alimentos</h3>
+
+
+        <div class="scroll-wrapper scroll-full-bleed">
+          <button class="scroll-btn scroll-left material-symbols-outlined">chevron_left</button>
+          <div class="scroll-inner-container">
+            <div class="d-flex flex-nowrap card-scroller">
+
+              <div class="card card-alimentos" style="min-width: 16rem;">
+                <svg class="card-img-top" viewBox="0 0 1024 1024">
+                  <use href="#alimentos01"></use>
+                </svg>
+                <div class="card-body">
+                  <h5 class="card-title">1. Poner los alimentos en una bolsa</h5>
+                  <p class="card-text">Preferentemente una bolsa de tela o friselina.</p>
+                </div>
+              </div>
+              <div class="card card-alimentos" style="min-width: 16rem;">
+                <svg class="card-img-top" viewBox="0 0 1024 1024">
+                  <use href="#alimentos02"></use>
+                </svg>
+                <div class="card-body">
+                  <h5 class="card-title">2. Llevarla al punto de guardado</h5>
+                  <p class="card-text">Hay un punto en cada piso. Forme fila como se muestra en el plano.</p>
+                  <button class="btn btn-sm btn-primary btn-theme m-1"
+                    onclick="plano(0,'alimentos')"><i class="material-symbols-outlined">map</i>
+                    Planta baja</button> <button class="btn btn-sm btn-primary btn-theme m-1"
+                    onclick="plano(1,'alimentos')"><i class="material-symbols-outlined">map</i>
+                    Planta alta</button>
+
+                </div>
+              </div>
+              <div class="card card-alimentos" style="min-width: 16rem;">
+                <svg class="card-img-top" viewBox="0 0 1024 1024">
+                  <use href="#alimentos03"></use>
+                </svg>
+                <div class="card-body">
+                  <h5 class="card-title">3. Conservar el ticket</h5>
+                  <p class="card-text">Sirve para retirar la bolsa en el intermedio.</p>
+                </div>
+              </div>
+              <div class="card card-alimentos" style="min-width: 16rem;">
+                <svg class="card-img-top" viewBox="0 0 1024 1024">
+                  <use href="#alimentos04"></use>
+                </svg>
+                <div class="card-body">
+                  <h5 class="card-title">4. Retirar la bolsa en el intermedio</h5>
+                  <p class="card-text">Los hermanos van a organizar las filas para evitar demoras. Forme fila como se muestra en el plano</p>
+                  <button class="btn btn-sm btn-primary btn-theme m-1"
+                    onclick="plano(0,'alimentos')"><i class="material-symbols-outlined">map</i>
+                    Planta baja</button> <button class="btn btn-sm btn-primary btn-theme m-1"
+                    onclick="plano(1,'alimentos')"><i class="material-symbols-outlined">map</i>
+                    Planta alta</button>
+                </div>
+              </div>
+              <div class="card card-alimentos" style="min-width: 16rem">
+                <svg class="card-img-top" viewBox="0 0 1024 1024">
+                  <use href="#alimentos02"></use>
+                </svg>
+                <div class="card-body">
+                  <h5 class="card-title">5. Volver a guardarla</h5>
+                  <p class="card-text">Se puede volver a guardar la bolsa hasta que termine el programa.</p>
+                </div>
+              </div>
+              <div style="min-width: 4rem"></div>
+            </div>
+          </div>
+          <button class="scroll-btn scroll-right material-symbols-outlined">chevron_right</button>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section id="alojamiento" class="section-alojamiento snap-section"><i
+        class="section-icon material-symbols-outlined">hotel</i>
+      <div class="container pt-5">
+        <h2 class="display-5">Dónde alojarse</h2>
+
+
+        <h3>Hoteles y alquileres temporales</h3>
+        <p>Los siguientes sitios pueden ser útiles para conseguir alojamiento:</p>
+        <ul>
+          <li><a href="https://www.parana.tur.ar/alojamiento" target="_blank" class="ext-link">Secretaría de turismo:
+              listado de
+              alojamientos</a></li>
+          <li><a href="https://www.booking.com/city/ar/parana.es-ar.html" target="_blank"
+              class="ext-link">Booking.com</a></li>
+          <li><a href="https://www.airbnb.com.ar/s/Paran%C3%A1--Entre-R%C3%ADos/homes" target="_blank"
+              class="ext-link">airbnb.com</a>
+          </li>
+          <li><a href="https://www.despegar.com.ar/alojamientos/alojamientos-en-parana/5877" target="_blank"
+              class="ext-link">Despegar.com</a></li>
+        </ul>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon card-comp"
+              id="cardAuditorioCorrespondiente">
+              <div class="icon-half">
+                <i class="material-symbols-outlined">warning</i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Conviene conocer la reputación del alojamiento y la seguridad de la zona
+                </h5>
+                <p class="card-text">Algunos hoteles y alquileres cercanos al predio <strong>pueden ser de mala
+                    reputación.</strong> Además, <strong>algunas
+                    zonas de la ciudad son peligrosas.</strong> Si tenemos alguna duda, conviene consultar a los
+                  ancianos, quienes se
+                  asesorarán con los hermanos de alojamiento.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="card mt-2 card-themed-icon">
+              <div class="card-body"><small>
+                  <strong>Aclaración:</strong> La información presentada es solamente a modo de referencia y pudiera
+                  estar
+                  sujeta a cambios. La
+                  organización del evento no está relacionada con los servicios presentados, no los promociona ni se
+                  responsabiliza por ellos.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Solicitar alojamiento</h3>
+        <p>Si desea solicitar alojamiento en casa de hermanos, por favor, contáctese con los ancianos de su
+          congregación.</p>
+        <h3>Ofrecer alojamiento</h3>
+        <p>Se necesitan lugares para alojar a los hermanos que asisten a las asambleas. Si desea ofrecer alojamiento,
+          por favor, contáctese con los ancianos de su
+          congregación.</p>
+      </div>
+    </section>
+    <section id="conclusion" class="section-inicio snap-section">
+      <div class="container pt-5">
+        <div>
+        <h1 class="display-5">¡Los esperamos!</h1>
+        <h3 class="display-6"><em>Comités de Asamblea<br> Asambleas Regionales <wbr>Paraná 1 y 2</em></h3>
+        </div>
+      </div>
+    </section>
+  </main>
+  <svg width="0" height="0" style="position:absolute; display: none;" id="svgIcons">
+    <defs>
+      <symbol id="iconDonaciones" viewBox="0 0 323.4 257.3">
+        <path d="M12.3-10.3C-3-10.5-2 14.4 13.2 13.2h29.2l-.2 115.3c-11.7.5-23.7-1.2-35.1 1-14.2 5.7-4.9 26.2 8.7 22.5 13.4-.2 27 .3 40.4-.3 11.4-2.6 9.4-15.3 9.5-24.2l.1-114.3H243c19.2 20.8 38.7 41.4 56.7 63.2l-4.5 89.6c-7.9-8.7-28.3-2.2-24.8-17.6-1.2-18.4-1-37-3-55.3-4.8-9.2-16.5-9.9-25-14.3-14-4.6-28.2-15-43.3-8.1-19.3 7.3-27.6 33-15.4 50 11.1 15.5 27.6 26.4 41.1 39.8 10.7 9.7 24.7 20.8 24.1 36.6-7.3 17-25.5.3-34.3-7-17.7-15-34-32-51.7-47-22.6-11-46.8-18.5-70.7-26-17-1.6-16.2 23.7-.7 24.2 19.9 6.9 40.1 13 59.2 22 20.6 18.5 39.7 39.2 62.4 55A53.8 53.8 0 1 0 319 200.2c-3.2-10.7-.1-22.1-.3-33.2l4.8-93.4c-2.6-14-16.2-22.7-24.3-33.8-14.6-16-29-32.4-44.2-47.8-9-4.1-19.3-1.4-28.9-2.2H12.3zm-1 94.7C1 85.2-.3 96.4.5 104.6c-.4 8-.5 19 9.5 21 10.2 2 15.5-9 14-17.5-.1-8.1 2.1-19.3-7.9-23l-2.3-.6h-2.3zM211 92c11.4 4 22.6 8.8 33.9 13.1l2 43.7c-14.1-13.5-29.8-25.4-42.9-39.9-5.6-6.7-1.4-15.8 7-17zm59.1 89.5c21 2.5 34.2 29.3 21 46.6-10 16.2-35.5 18.8-47.4 3.7-6.7-6.6 14-4 17.3-11.6 11.1-9.3 13.8-25.4 9.1-38.7z"/></symbol>  </svg>
+  <svg width="0" height="0" style="position:absolute; display: none;" id="svgCPC">
+    <defs>
+      <symbol id="sketchCPC" viewBox="0 0 1548 866">
+        <g id="frente"><path id="path34" d="m0 866 31-179 30-175 115-47 149-62 212-144 168-114L918 0v866h-70l3-240 3-176 3-168 3-163C679 229 499 341 319 453L88 539l-19 7-27 159-27 161Z" class="f0"/><path id="path35" d="m317 459-26 9-12 91 26-8 12-92zm-28 10-24 9-13 89 25-8 12-90zm-27 10-23 9-12 86 23-7 12-88zm-25 9-23 9-12 84 23-6 12-87zm-24 9-22 8-12 83 21-6 13-85zm-24 9-20 7-13 82 21-7 12-82zm-22 8-20 7-12 80 20-6 12-81zm-21 8-19 7-13 78 19-6 13-79zm-21 7-18 7-12 77 18-6 12-78zm-20 8-17 6-12 75 17-5 12-76zm-18 7-17 6-13 73 17-4 13-75zm218 13-26 7-13 94 27-6 12-95zm-29 8-24 7-13 91 25-5 12-93zm-26 7-24 7-13 89 24-5 13-91zm-26 8-22 6-13 87 22-4 13-89zm-24 7-22 6-13 85 22-4 13-87zm-24 6-20 6-13 84 20-4 13-86zm-22 7-20 5-13 82 20-4 13-83zm-21 6-19 5-13 81 19-4 13-82zm-21 6-18 5-13 79 18-4 13-80zm-20 5-17 5-13 78 17-4 13-79zm-19 6-16 5-13 75 17-3 12-77zm219 35-26 5-13 97 26-3 13-99zm-29 5-25 5-12 95 25-3 12-97zm-27 6-23 4-13 93 24-3 12-94zm-25 5-23 4-13 91 23-3 13-92zm-25 5-21 4-13 89 21-3 13-90zm-23 4-21 5-13 86 21-2 13-89zm-23 5-19 4-14 85 20-3 13-86zm-21 4-19 4-13 83 19-2 13-85zm-21 4-18 4-13 81 18-2 13-83zm-19 4-18 4-13 80 18-2 13-82zm-19 4-17 4-13 78 17-2 13-80zm219 58-27 3-13 101h26l14-104zm-29 4-25 2-13 98h25l13-100zm-27 3-24 2-14 95h25l13-97zm-26 2-23 3-13 92h22l14-95zm-25 3-21 3-13 89h22l12-92zm-23 3-21 2-13 87h21l13-89zm-22 2-20 2-13 85h19l14-87zm-22 3-19 2-13 82h18l14-84zm-21 2-18 2-13 80h18l13-82zm-19 2-17 2-13 78h17l13-80zm-19 2-17 2-12 76h16l13-78z" class="f1"/><path id="path79" d="m855 130-55 33-5 144 56-27zm-60 36-50 30-6 138 51-25zm-54 32-45 28-8 133 46-23zm-49 30-42 26-9 128 43-21zm-46 28-38 24-10 123 39-20zm-41 26-36 21-10 119 36-18zm246 7-56 26-5 155 58-20zm-285 16-33 20-10 115 33-16zm224 13-52 24-6 148 53-18zm-260 9-30 19-11 111 31-15zm204 17-47 22-7 142 48-16zm-237 3-28 18-12 108 29-14zm-31 19-26 17-12 105 27-14zm217 2-42 21-9 136 44-15zm-246 16-25 16-11 102 25-13zm200 7-39 19-10 131 40-14zm-227 10-23 14-12 100 24-12zm184 10-36 18-10 127 37-14zm-209 6-22 13-12 97 22-11zm-24 14-21 13-11 94 20-10zm194 0-33 16-11 122 34-12zm-216 14c-7 4-13 9-20 12l-11 92 19-10zm180 3-31 16-11 118 31-12zm329 11-59 20-4 167 60-13zm-363 6-28 14-12 114 29-11zm-31 15-26 14-12 110 27-10zm331 1-53 18-7 159 55-11zm-360 14-25 13-12 107 26-10zm302 5-48 17-7 152 49-10zm-329 9-23 11-12 104 23-9zm277 9-44 15-8 146 45-9zm-302 3-22 11-12 102 22-9zm-24 12-21 11-12 98 21-8zm279 1-40 15-10 140 41-9zm-302 11-19 10-12 95 19-7zm258 5-36 13-11 135 38-8zm-39 14-34 12-11 130 34-8zm-37 13-32 11-11 125 32-6zm-34 12-29 11-12 121 30-7zm-32 12-27 10-12 116 28-6zm-29 11-25 9-12 113 25-6zm-27 10-24 8-12 110 23-6zm-26 9-22 8-12 106 22-5zm-24 9-21 8-12 103 21-5zm509 4-61 11-4 211h61zm-531 5-20 7-13 100 20-5zm465 7-54 11-7 199h55zm-59 12-49 10-8 188h50zm-53 11-45 9-9 178h46zm-48 10-41 8-10 169h41zm-45 9-37 7-11 161h38zm-40 8-35 7-10 153h33zm-37 8-32 7-13 145h33zm-35 7-29 7-13 138h29zm-32 7-27 6-13 132h28zm-30 7-25 5-13 126h26zm-27 6-24 5-13 120h23zm-26 5-22 5-13 115h21zm-24 6-21 4-13 110h20zm-23 5-19 4-13 105h18z" class="f2"/></g>
+        <g id="costado"><path id="path1" d="M925 2v86l156 41-2-83L925 2zm299 87 5 80 129 34-8-76-126-38zm-299 94v94l162 33-3-90-159-37zm436 22 7 80 118 28-9-76-116-32zm24 254 9 89 123 18-10-86-122-21zm-131 71 6 98 140 15-9-93-137-20zm-329 67v113l175 11-3-107-172-17zm177 18 2 107 159 10-6-102-155-15zm301 30 9 97 128 8-12-92-125-13zm-136 89 9 132h145l-12-122-142-10z" class="f2"/><path id="path6" d="M925 91v90l159 36-2-85-157-41zm304 80 6 82 130 32-7-80-129-34zm-141 50 3 90 147 29-6-85-144-34zm153 122 6 90 135 24-8-86-133-28zm-316 38v102l168 23-3-97-165-28zm173 129 3 102 155 15-5-97-153-20zm162 120 7 102 142 10-9-97-140-15z" class="f0"/><path id="path3" d="m1082 48 3 82 141 38-5-79-139-41zm271 79 8 76 116 32-9-74-115-34zm-268 6 3 85 144 34-6-81-141-38zm150 122 6 86 133 28-9-82-130-32zm-310 25v98l165 28-3-93-162-33zm443 7 9 82 119 25-10-79-118-28zm-277 27 3 93 150 25-6-89-147-29zm286 57 8 86 122 21-11-82-119-25zm-282 39 2 97 154 20-7-92-149-25zm152 25 7 93 137 20-9-89-135-24zm-322 51v108l172 17-4-102-168-23zm469 64 9 93 125 13-11-88-123-18zM925 712v154h180l-5-142-175-12zm180 12 5 142h162l-8-132-159-10zm307 20 12 122h131l-15-114-128-8z" class="f1"/></g>
+      </symbol>
+    </defs>
+  </svg>
+  <svg width="0" height="0" style="position:absolute; display: none;" id="svgAlimentos">
+    <defs>
+      <symbol id="alimentos01" viewBox="0 0 1024 1024">
+ <path d="M0 0h1024v1024H0V0Z" class="drawing-background" /><path d="M0 691v333h1024V691H787l7 171-201 47c-167 40-197 44-217 46l-162-83 16-181z" class="drawing-objects" /><path d="m593 909 201-47c-7-186-16-371-24-556 0-11 2-24-13-21l-54-3c-4-37-10-74-26-107-15-32-41-64-78-70-13-3-28 2-38-8a76 76 0 0 0-86 2c-31 22-48 58-60 93-8 23-12 47-16 71-11 0-29-9-23 10l15 676c0 13 21-1 30 0l172-40zm87-575c-13-11-2-36 16-31 19 1 22 29 5 35-7 4-16 2-21-4zm-220 0c-11-9-5-32 11-32 18-4 25 19 16 31-5 9-20 10-27 1zm183-59c-5-49-16-98-42-140-10-15 17 2 22 7a117 117 0 0 1 37 50c12 26 21 55 23 84 1 6-8 2-12 3-9-1-19 1-28-2zm-93-2-62-4c-5-10 4-25 6-37 9-34 24-70 53-92 11-12 27-9 34 6 22 34 33 74 38 114 5 14-3 19-16 15l-53-2zm-127-10c1-24 5-47 12-69 12-34 33-69 68-81 11-3 28-6 36 2-12 11-25 22-34 36-23 33-34 71-41 110-9 9-27 2-39 2zm-49 688-62-105-94 25c29-15 58-27 87-41 4-185 5-370 10-555-16 1-32-1-47 2-4 25-5 50-8 76l-46 519 162 82c1-1-3-3-2-3zm3-18c-7-220-10-440-17-659 1-9 0-18-10-10l-20 10c-1 130-4 259-6 389l-2 167c-1 10 6 17 9 25l47 97-1-19z" class="drawing-highlight" />
+      </symbol>
+      <symbol id="alimentos02" viewBox="0 0 1024 1024">
+ <path id="fondo" d="M0 0h1024v1024H0V0Z" class="drawing-background" /><path id="bolsa" d="m616 732 75-18-9-206c0-4 0-9-5-8l-20-1c-2-14-4-28-10-40-5-12-15-24-29-26-4-1-10 1-14-3-10-6-23-6-32 1-11 8-18 21-22 34l-6 27c-4 0-11-3-9 3l6 252c0 5 8-1 11 0zm32-214c-4-4 0-13 6-11 7 0 8 10 2 13-3 1-6 0-8-2zm-81 0c-5-3-2-12 4-12 6-1 9 7 6 12-2 3-8 3-10 0zm67-22c-1-18-5-36-15-52-4-5 6 1 8 3 6 4 11 11 14 18 5 10 8 21 8 32 1 2-3 0-4 1l-10-1zm-34-1-23-1c-2-4 1-9 2-14 4-12 9-26 20-34 4-4 10-3 12 2 9 13 13 28 15 43 2 5-2 7-6 5zm-47-3c0-9 2-18 4-26 5-12 12-26 26-30 4-1 10-2 13 1l-13 13c-8 12-12 27-15 41-3 3-10 1-15 1zm-18 256-24-39-34 9c10-6 21-10 32-15l4-207-18 1-3 28-17 193 60 31zm1-7-7-245c1-4 0-7-3-4l-8 4-2 145-1 62c0 3 2 6 4 9l17 36z" class="drawing-highlight" /><path id="hermano" d="m787 525 5-94c-19-1-84-11-103-11-17-11-33-26-54-30-18-6-34 4-51 9-16 2-41 19-17 32 9 2 3 9 11 14 12 12 19 33 39 35 16-7 31-1 47 0 21-10 0 23 17 27 24 5 81 15 106 18z" class="drawing-objects" /><path id="hermano2" d="m859 54-11 1c-26 4-52 15-72 33-15 8-8 22-8 35-12 19-1 39-1 58-4 12-26 40-1 44 6 12 9 28 15 41-1 23 21 32 40 25 19-8 29 18 28 33-14 14-28 30-36 48a599 599 0 0 0-44 181l-6 93c-3 53-2 107-2 160 0 16-6 42 19 38 0 60 2 120 7 180h237V354c5-20-11-32-24-43-16-14-31-28-45-43-16-11-9-24-6-38-1-26 13-50 14-76 4-29-9-59-31-78-21-16-47-23-73-22z" class="drawing-objects" /><path id="ticket" d="m474 332-62 15 10 39 61-15z" class="drawing-highlight" /><path id="mostrador" d="M276 770v23h21v231h396V793h21v-23H276z" class="drawing-objects" /><path id="hermana" d="M167 63c-8 1-15 1-22 3-33 6-61 34-68 66-10 33-4 70-15 104l-9 26c-13 18-25 36-31 58-7 24-12 53 3 75 10 13-3 30 0 45-1 36 7 71 6 107 1 19-1 37-6 55-5 21-15 41-19 62-14 119-6 240-6 360h227c1-75-5-150-9-225l-4-65c14-3 2-24 5-35-1-21-5-41-1-62 3-27 8-54 9-82 13 4 28 3 38-7l91-73c10-9-11-23 0-29 10-14 23-16 39-14 15-6 17-8 26-8l12-9c5-1 10-9 13-22-3-23-17-18-29-27-20-10-30 6-49 18-14 7-26 19-40 26-11-3-18 9-27 14l-54 37c-12-1-17-21-20-32-12-36-38-69-54-104-1-8 14-47 20-53 12 2 41 5 52-4 7-9 6-21 11-31 1-11 3-10 9-12 4-1 7-5 6-10l-11-45c0-12 15-22 11-37-1-24-22-41-42-51-18-13-41-19-62-19Z" class="drawing-objects" />
+      </symbol>
+      <symbol id="alimentos03" viewBox="0 0 1024 1024">
+ <path id="fondo" d="M0 0h1024v1024H0V0Z" class="drawing-background" /><path id="ticket" d="M680 80 235 190l70 286 446-110Z" class="drawing-highlight" /><path id="mano" d="M518 316c-45 0-81 38-92 80-26 73-31 154-77 219-35 60-89 109-106 178-10 38-22 76-27 115-21 11-55-2-63 33-14 25-46 63-46 83 127 0 254 2 382 1 31-2 51-33 77-49 67-51 136-99 202-151 36-30 30-79 19-120-12-68-18-137-31-205-10-41-53-57-81-82-25-31-61-28-93-14-20-20-4-78-49-85l-8-2zm34 165c16 10 58 36 16 29-34 6-23-4-16-29Zm3 129c14 1 10 32-6 14-11-6-45-16-15-14h21z" class="drawing-objects" />
+      </symbol>
+      <symbol id="alimentos04" viewBox="0 0 1024 1024">
+ <path id="fondo" d="M0 0h1024v1024H0V0Z" class="drawing-background" /><path id="ticket" d="m569 369 61 15-9 39-62-15z" class="drawing-highlight" /><path id="hermano-1" d="m796 571 25-91c-18-5-79-29-98-33-14-15-26-33-46-41-16-10-34-4-52-2-16-2-44 9-23 27 8 4 1 10 7 16 10 14 12 36 31 43 17-4 30 6 46 10 22-5-5 22 11 30l99 41z" class="drawing-objects" /><path id="hermano2" d="m859 54-11 1c-26 4-52 15-72 33-15 8-8 22-8 35-12 19-1 39-1 58-4 12-26 40-1 44 6 12 9 28 15 41-1 23 21 32 40 25 19-8 29 18 28 33-14 14-28 30-36 48a599 599 0 0 0-44 181l-6 93c-3 53-2 107-2 160 0 16-6 42 19 38 0 60 2 120 7 180h237V354c5-20-11-32-24-43-16-14-31-28-45-43-16-11-9-24-6-38-1-26 13-50 14-76 4-29-9-59-31-78-21-16-47-23-73-22Z" class="drawing-objects" /><path id="mano2" d="m193 612-10 79a1791 1791 0 0 1 64 19c8 2 16 5 24 4 5-3 6-6 8-11l1-3 3-4 22 18c10 10 19 18 31 24l3 2c9 5 18 11 28 11 5-1 9 1 13 3s6 4 11 4l5-2 5-3 10 1 2-7-1-4 4-1 1-8-17-16a432 432 0 0 1-46-42l9 2c10 3 16 4 26 0l1-6-7-5-2-1a559 559 0 0 0-29-13c-14-7-29-7-44-3l-18 2-1-9c-5-4-5-4-51-17l-45-14z" class="drawing-objects" /><path id="mostrador" d="M276 770v23h21v231h396V793h21v-23H276z" class="drawing-objects" /><path id="bolsa" d="m397 708-75-18 9-206c0-4-1-9 5-8l20-1c1-14 3-28 9-40s16-24 29-26c5-1 11 1 15-3 9-6 22-6 31 1 12 8 18 21 23 34l6 27c4 0 11-3 8 3l-5 252c0 5-8-1-11 0zm-33-214c5-4 1-13-6-12s-8 11-1 14c2 1 5 0 7-2zm82 0c4-3 2-12-4-12-7-1-10 7-6 12 2 3 8 3 10 0zm-68-22c2-18 6-36 16-52 3-5-7 1-8 3-7 4-11 11-14 18-5 10-8 21-9 31 0 3 3 1 5 2l10-1zm35-1 23-1c1-4-2-9-2-14-4-12-9-26-20-34-4-4-10-4-13 2-8 13-12 28-14 43-2 5 1 6 6 5zm47-3c0-9-2-18-5-26-4-13-12-26-25-30-4-1-10-2-13 1 4 4 9 8 12 13 9 12 13 27 16 41 3 3 9 1 14 1zm18 255 23-39 35 10-32-16-4-206 18 1 2 28 17 193-60 31zm-1-6c2-82 3-164 6-245 0-4 0-7 4-4l7 4 3 144v63c1 3-2 6-3 9l-18 36z" class="drawing-highlight" /><path id="hermana" d="M167 63c-8 1-15 1-22 3-33 6-61 34-68 66-10 33-4 70-15 104l-9 26c-13 18-25 36-31 58-7 24-12 53 3 75 10 13-3 30 0 45-1 36 7 71 6 107 1 19-1 37-6 55-5 21-15 41-19 62-14 119-6 240-6 360h227c1-75-5-150-9-225l-4-65c14-3 2-24 5-35-1-21-5-41-1-62 3-27 8-54 9-82 13 4 28 3 38-7l91-73c10-9-11-23 0-29 10-14 23-16 39-14 15-6 17-8 26-8l12-9c5-1 10-9 13-22-3-23-17-18-29-27-20-10-30 6-49 18-14 7-26 19-40 26-11-3-18 9-27 14l-54 37c-12-1-17-21-20-32-12-36-38-69-54-104-1-8 14-47 20-53 12 2 41 5 52-4 7-9 6-21 11-31 1-11 3-10 9-12 4-1 7-5 6-10l-11-45c0-12 15-22 11-37-1-24-22-41-42-51-18-13-41-19-62-19Z" class="drawing-objects" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Fullscreen Modal -->
+  <div class="modal fade plano-modal-styles" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body" style="padding: 0;">
+          <!-- Map Header Panel -->
+          <div class="map-header-panel px-3 py-2" id="map-header-panel">
+            <div id="map-title">
+              <div class="dropdown">
+                <i class="material-symbols-outlined" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">map</i>
+                <ul class="dropdown-menu title-dropdown-menu">
+                  <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" id="print-map"><span class="material-symbols-outlined">print</span>Imprimir</a></li>
+                </ul>
+              </div>
+              <div class="map-title-selectors">
+                <div class="dropdown">
+                  <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                    <h5 id="layer-title" class="mb-0"></h5>
+                    <i class="material-symbols-outlined" style="opacity: 0.7;">arrow_drop_down</i>
+                  </div>
+                  <ul class="dropdown-menu title-dropdown-menu" aria-labelledby="layer-selector-btn">
+                    <!-- Layer options will be populated by JS -->
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <div class="title-dropdown-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                    <small id="floor-subtitle" class="text-muted"></small>
+                    <i class="material-symbols-outlined" style="opacity: 0.7;">arrow_drop_down</i>
+                  </div>
+                  <div id="floor-controls" class="dropdown-menu title-dropdown-menu">
+                    <!-- Floor options will be populated by JS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="btn-close-window" type="button" class="btn-close btn-close-white px-2" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+
+          <!-- Vertical Toolbar -->
+          <div class="vertical-toolbar d-flex flex-column position-fixed top-5 end-0 m-2 gap-2">
+            <!-- Floor Controls (Now in Header) -->
+
+            <!-- Layer Selector (Now in Header) -->
+
+            <!-- Zoom Controls -->
+            <div class="btn-group-vertical" role="group" aria-label="Zoom controls">
+              <button id="zoom-in" type="button" class="btn"><span class="material-symbols-outlined">add</span></button>
+              <button id="zoom-out" type="button" class="btn"><span class="material-symbols-outlined">remove</span></button>
+            </div>
+          </div>
+
+          <div id="map">
+            <!-- Spinner -->
+            <div id="map-loader" class="d-flex justify-content-center align-items-center h-100"
+              style="background-color: #ccc;">
+              <!-- <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div> -->
+            </div>
+          </div>
+
+          <!-- Single Offcanvas -->
+          <div class="offcanvas offcanvas-bottom info-offcanvas" tabindex="-1" id="mainOffcanvas"
+            aria-labelledby="mainOffcanvasLabel" data-bs-backdrop="false">
+            <div class="offcanvas-body text-white" id="mainOffcanvasBody">
+              <h5 class="offcanvas-title" id="mainOffcanvasLabel"></h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+              <!-- Content will be dynamically loaded here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🪟 Modal -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title" id="infoModalLabel">Información</h5>
+            <small id="infoModalSubtitle" class="text-muted">a</small>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="tabla-loading" style="display: none;">Cargando...</div>
+          <div class="table-responsive">
+            <!-- Parking Table -->
+            <table class="table table-sm data-table table-hover" id="tabla-cocheras" style="display:none;">
+              <thead>
+                <tr>
+                  <th>Nombre y dirección <span class="badge text-bg-success">Distancia</span></th>
+                  <th>Observaciones</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-cocheras"></tbody>
+            </table>
+            <!-- Parking Table -->
+            <table class="table table-sn data-table table-hover" id="tabla-estacionamiento" style="display:none;">
+              <thead>
+                <tr>
+                  <th>Dirección <span class="badge text-bg-success">Distancia</span></th>
+                  <th>Observaciones</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-estacionamiento"></tbody>
+            </table>
+            <!-- Bus Table -->
+            <table class="table data-table table-sm table-hover" id="tabla-colectivos" style="display:none;">
+              <thead>
+                <tr>
+                  <th>Línea <span class="badge text-bg-light">Ramal</span></th>
+                  <th>Parada más cercana <span class="badge text-bg-success">Distancia</span></th>
+                </tr>
+              </thead>
+              <tbody id="tbody-colectivos"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 🖥️ Video Modal -->
+
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-body p-0">
+          <video id="customVideo" class="w-100" controls playsinline>
+            <source id="videoSource" src="" type="video/mp4">
+            Su navegador no soporta la reproducción de video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 🧠 Bootstrap + tooltip init -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js?v=1.6.4"></script>
+  <script src="plano.js?v=1.2.4"></script>
+  <script src="hack.js"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="9c22250e-d4b0-470b-9dfc-9f1f7c5badf4"></script>
+</body>
+
+</html>
