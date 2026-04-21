@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+
+@media print {
+  @page {
+    size: auto;
+    margin: 0;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+  /* Hide everything except the print modal */
+  body > *:not(#printModal) {
+    display: none !important;
+  }
+
+  /* Make the print modal a non-modal block that fills the page */
+  #printModal {
+    display: block !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+  }
+
+  #printModal .modal-dialog,
+  #printModal .modal-content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  /* Use flexbox to center and contain the SVG */
+  #printModal .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  #printModal .modal-body svg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}

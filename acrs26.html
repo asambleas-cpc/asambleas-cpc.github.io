@@ -13,7 +13,7 @@
   <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
   <link rel="shortcut icon" href="icons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest?v=1.5" />
+  <link rel="manifest" href="site.webmanifest?v=1.5.1" />
   <meta name="robots" content="noindex, nofollow">
 
   <title>Asambleas en el CPC</title>
@@ -28,7 +28,6 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css?v=1.6.4" />
-  <link rel="stylesheet" href="borrador.css?v=1.6.4" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
@@ -52,15 +51,28 @@
               </svg>
             </div>
           </div>
-          <h1 class="titulo display-4">Asambleas&nbsp;en&nbsp;el<wbr>
-            <em>Centro&nbsp;Provincial<wbr/> de&nbsp;Convenciones</em></h1>
+          <h1 class="titulo display-4">Asambleas&nbsp;en&nbsp;el <wbr>
+            <em>Centro&nbsp;Provincial<wbr/> de&nbsp;Convenciones</em>
+          </h1>
         </header>
-        <p class="mb-5" id="intro">En septiembre se celebrará la serie de asambleas regionales <strong>"Adoración
-            pura"</strong> en
+        <p class="mb-2" id="intro">Hasta el 3 de mayo se celebrará la serie de asambleas de circuito de 2025 y 2026
+          en
           el <em>Centro Provincial de Convenciones</em> de Paraná. Este sitio contiene información importante para los
           asistentes.
-        </p>
 
+        <div class="card d-flex flex-row align-items-stretch h-100 card-themed-icon" id="cardRegional">
+          <div class="icon-half">
+            <i class="material-symbols-outlined">info</i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-2">Asambleas regionales de 2026</h5>
+            <p class="card-text">El contenido de esta página es <strong>sólo para la serie de asambleas de
+                circuito</strong>, que
+              finalizará el 3 de mayo.
+              Más adelante se publicará información sobre la serie de asambleas regionales de 2026.</strong></p>
+          </div>
+        </div>
+        </p>
         <div class="row">
           <div class="col-lg-6 mb-2 mb-lg-0">
             <div class="d-flex flex-column">
@@ -88,7 +100,7 @@
                 </div>
               </div>
               <div
-                class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-0 border-top-0 flex-grow-1"
+                class="card d-flex flex-row align-items-stretch card-themed-icon mb-0 rounded-top-0 border-top-0 flex-grow-1"
                 style="border-color: var(--alimentos-color);">
                 <div class="icon-half" style="background-color: var(--alimentos-color);">
                   <i class="material-symbols-outlined">fastfood</i>
@@ -99,18 +111,7 @@
                   <a href="#alimentos" class="stretched-link"></a>
                 </div>
               </div>
-              <div
-                class="card d-flex flex-row align-items-stretch card-themed-icon rounded-top-0 border-top-0 flex-grow-1"
-                style="border-color: var(--alojamiento-color);">
-                <div class="icon-half" style="background-color: var(--alojamiento-color);">
-                  <i class="material-symbols-outlined">hotel</i>
-                </div>
-                <div class="card-body d-flex flex-column" style="background-color: var(--alojamiento-bg);">
-                  <h5 class="card-title">Dónde alojarse</h5>
-                  <p class="card-text mb-0">Alojamientos disponibles y cómo ofrecer alojamiento.</p>
-                  <a href="#alojamiento" class="stretched-link"></a>
-                </div>
-              </div>
+
             </div>
 
           </div>
@@ -164,7 +165,7 @@
                 <h5 class="card-title">Video: Información para asistentes</h5>
                 <p class="card-text">En este video verá instrucciones para los asistentes.</p>
                 <a class="btn btn-md btn-primary btn-theme video-link" href="#" role="button" data-bs-toggle="modal"
-                  data-bs-target="#videoModal" data-video="videos/Informacion-480p.mp4"
+                  data-bs-target="#videoModal" data-video="videos/informacion-480p.mp4"
                   data-video-hd="videos/informacion-720p.mp4"><i class="material-symbols-outlined">play_arrow</i>
                   Reproducir</a> <a class="btn btn-md btn-primary btn-theme" role="button"
                   href="videos/informacion-720p.mp4" download="Asambleas_en_el_CPC_-_Informacion_para_asistentes.mp4"><i
@@ -338,10 +339,10 @@
                     avenidas</strong> y <strong>evite cortar por caminos alternativos.</strong> Los siguientes son
                   puntos de ingresos que se sugieren para evitar desviarse.</p>
                 <ul>
-                  <li><strong>Desde Santa Fe y norte de Entre Ríos:</strong>
+                  <li><strong>Desde el norte de Entre Ríos:</strong>
                     <ol>
-                      <li><i class="material-symbols-outlined">ramp_left</i>Ingreso por Acceso al Tunel/Acceso Norte a
-                        calle A. Crespo hacia el oeste</li>
+                      <li><i class="material-symbols-outlined">ramp_left</i>Ingreso por Acceso Norte a calle A. Crespo
+                        hacia el oeste</li>
                       <li><i class="material-symbols-outlined">turn_left</i>Calle Güemes.</li>
                       <li><i class="material-symbols-outlined">turn_right</i>Av. Moreno</li>
                       <li><i class="material-symbols-outlined">turn_right</i>Calle Gregoria Matorras de San Martín
@@ -392,9 +393,6 @@
                 <div class="accordion-body">
                   <h5>Servicios hasta la terminal de ómnibus</h5>
                   <ul>
-                    <li><strong>Desde Santa Fe.</strong> Hay servicios aproximadamente cada 30 minutos. <a
-                        href="https://www.paranaonline.com.ar/horarios-fluviales-etacer/" class="ext-link">Ver
-                        horarios.</a></li>
                     <li><strong>Desde el interior de Entre Ríos.</strong> Hay servicios diarios desde numerosas
                       localidades. <a href="https://www.centraldepasajes.com.ar/pasaje-micro/terminal-de-parana.html"
                         class="ext-link">Ver servicios.</a></li>
@@ -497,7 +495,7 @@
                   <h5>Rutas de acceso sugeridas</h5>
                   <p>Para vehículos de gran porte recomendamos seguir las siguientes rutas.</p>
                   <ul>
-                    <li><strong>Desde Santa Fe y norte de Entre Ríos:</strong>
+                    <li><strong>Desde el norte de Entre Ríos:</strong>
                       <ol>
                         <li><i class="material-symbols-outlined">ramp_left</i>Ingreso por Acceso al Tunel/Acceso Norte
                           hacia
@@ -569,8 +567,10 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">Auditorio principal: para el público en general</h5>
-                <p class="card-text"></p>Se accede mediante las <strong>escaleras a la izquierda de la
-                  entrada.</strong></p>
+                <p class="card-text">Se accede mediante las <strong>escaleras a la izquierda de la
+                    entrada.</strong></p>
+                <p class="card-text">Si se le dificulta usar las escaleras, por favor, vaya al
+                  auditorio auxiliar.</p>
                 <button class="btn btn-md btn-primary btn-theme"
                   onclick="plano(1,'departamentos','AuditorioPrincipal')"><i class="material-symbols-outlined">map</i>
                   Mostrar en el plano</button>
@@ -608,6 +608,9 @@
                 <p class="card-text">El acceso al auditorio auxiliar es a nivel, mientras que al principal se accede por
                   escaleras. Ante una evacuación, se perdería tiempo valioso si no estamos donde nos
                   corresponde.</p>
+                <p class="card-text"><strong>Si se nos dificulta usar las escaleras, no vayamos al auditorio
+                    principal.</strong>
+                </p>
               </div>
             </div>
           </div>
@@ -705,6 +708,10 @@
                 <p>Hay ascensores disponibles para acceder a la planta alta.</p>
                 <p>Padres, cuiden que sus hijos <strong>no jueguen con con ellos.</strong> Si se usan excesivamente, el
                   sistema hidráulico se sobrecalienta y dejan de funcionar.</p>
+                <p>Por seguridad, le rogamos que <strong>no use los ascensores si se le dificulta usar las
+                    escaleras.</strong> Cuando
+                  surge una emergencia, dejan de funcionar los ascensores y la única forma de salir es por las
+                  escaleras.</p>
                 <p><button class="btn btn-sm btn-primary btn-theme" onclick="plano(0,'departamentos','Ascensores')"><i
                       class="material-symbols-outlined">map</i> Mostrar en planta baja</button> <button
                     class="btn btn-sm btn-primary btn-theme" onclick="plano(1,'departamentos','Ascensores')"><i
@@ -1266,7 +1273,7 @@
       </div>
     </section>
 
-    <section id="alojamiento" class="section-alojamiento snap-section"><i
+    <section id="alojamiento" class="section-alojamiento snap-section hidden" hidden><i
         class="section-icon material-symbols-outlined">hotel</i>
       <div class="container pt-5">
         <h2 class="display-5">Dónde alojarse</h2>
@@ -1331,7 +1338,6 @@
       <div class="container pt-5">
         <div>
           <h1 class="display-5">¡Los esperamos!</h1>
-          <h3 class="display-6"><em>Comités de Asamblea<br> Asambleas Regionales <wbr>Paraná 1 y 2</em></h3>
         </div>
       </div>
     </section>

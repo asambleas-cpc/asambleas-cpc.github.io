@@ -1,0 +1,227 @@
+{
+    "svgSettings": {
+        "url": "plano.svg",
+        "imageOverlayUrl": "plano.webp",
+        "elementToRotate": "#layBase",
+        "transitionDuration": 500,
+        "style": {
+            "inactiveFloor": "brightness(0.75)"
+        }
+    },
+    
+    "mapSettings": {
+        "initialCenter": [
+            -20000,
+            0
+        ],
+        "initialZoom": -2,
+        "minZoom": -2,
+        "maxZoom": 1,
+        "zoomSnap": 0.1,
+        "panOnlyWhenZoomed": true,
+        "overviewAnimationDelay": 250,
+        "zoom": {
+            "maxScale": 4,
+            "padding": 0.15,
+            "maxZoom": 2,
+            "fitBoundsPadding": [
+                50,
+                50
+            ]
+        }
+    },
+    "defaultView": {
+        "floor": 0,
+        "layer": "departamentos",
+        "initialElement": "basePB",
+        "overviewElement": "patioExterior"
+    },
+    "printSettings": {
+        "elementId": "basePB",
+        "zoom": -0.5
+    },
+    "definitions": {
+        "prefixes": {
+            "layer": "lay",
+            "icon": "ico",
+            "highlight": "hl",
+            "offcanvas": "offcanvas"
+        }
+    },
+    "layers": {
+        "departamentos": {
+            "id": "DepartamentosInstalaciones",
+            "name": "Instalaciones y departamentos",
+            "interactive": true
+        },
+        "alimentos": {
+            "id": "GuardaAlimentos",
+            "name": "Guardado de alimentos",
+            "interactive": true
+        },
+        "evacuacion": {
+            "id": "Evacuacion",
+            "name": "Plan de evacuación",
+            "interactive": true
+        }
+    },
+    "floors": {
+        "0": {
+            "id": "PlantaBaja",
+            "name": "Planta baja",
+            "suffix": "PB",
+            "baseLayerId": "layPlantaBaja"
+        },
+        "1": {
+            "id": "PlantaAlta",
+            "name": "Planta alta",
+            "suffix": "PA",
+            "baseLayerId": "layPlantaAlta"
+        }
+    },
+    "informacion": {
+        "Informacion": {
+            "title": "Información y servicio voluntario",
+            "content": "<p>Si desea ofrecerse como voluntario para ayudar en los trabajos de la asamblea, preséntese este departamento</p><p><a href=\"#headingInformacion\">Más información</a></p>"
+        },
+        "Acomodadores": {
+            "title": "Acomodadores",
+            "content": "<p>Los acomodadores están para ayudarle. Coopere con ellos en todo y siga sus instrucciones sobre el estacionamiento, la circulación por los pasillos, la reserva de asientos y otros asuntos.</p>"
+        },
+        "GuardaAlimentos": {
+            "title": "Punto de guardado de alimentos",
+            "content": "<p>Es <a href='#guardaAlimentos'>donde se pueden guardar los alimentos</a> durante el programa. Recuerde que <strong>no se debe ingresar a los auditorios con alimentos o bebidas.</strong></p><p>Por favor, forme fila de la manera que se indica en los siguientes planos:</p><ul><li><a href=\"javascript:plano(0,'alimentos')\" class=\"plano-link\">Planta baja</a></li><li><a href=\"javascript:plano(1,'alimentos')\" class=\"plano-link\">Planta alta</a></li></ul>"
+        },
+        "Guardaropas": {
+            "title": "Guardarropa y objetos perdidos",
+            "content": "<p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los niños que se hayan perdido.</p>"
+        },
+        "ObjetosPerdidos": {
+            "title": "Guardarropa y objetos perdidos",
+            "content": "<p>Todos los artículos extraviados se deben entregar en este departamento. Si ha perdido algo, vaya a ese lugar para buscar su pertenencia. También se debe llevar a este departamento a los niños que se hayan perdido.</p>"
+        },
+        "Baños": {
+            "title": "Baños",
+            "content": "<p>Es importante <strong>cuidar el consumo de agua,</strong>   porque en eventos de uso intensivo se puede agotar el suministro.</p>"
+        },
+        "Bautismo": {
+            "title": "Piscina de bautismo",
+            "content": "<p>El bautismo se hará en el <a href=\"javascript:plano(0,'departamentos','Bautismo')\" class='plano-link'>patio cubierto.</a></p>    <p>Los candidatos se deben ubicar <a href=\"javascript:plano(1,'departamentos','Bautismo')\" class='plano-link'>en las primeras filas </a>en la sesión del sábado por la mañana.</p>"
+        },
+        "Ascensores": {
+            "title": "Ascensores",
+            "content": "<p>No se debe usar en caso de evacuación.</p><p>Padres, cuiden que sus hijos no jueguen con con ellos. Si se usan excesivamente, el sistema hidráulico se sobrecalienta y dejan de funcionar.</p>"
+        },
+        "PrimerosAuxilios": {
+            "title": "Primeros auxilios y lactantes",
+            "content": "<p>Tenga en cuenta que los primeros auxilios son <strong>solamente para casos de emergencia.</strong></p>"
+        },
+        "Lactantes": {
+            "title": "Lactantes"
+        },
+        "Escaleras": {
+            "title": "Escaleras a planta alta",
+            "content": "<p>Para acceder al auditorio principal</p>"
+        },
+        "Patio": {
+            "title": "Galería cubierta y patios exteriores",
+            "content": "<p>La galería cubierta y los patios exteriores tienen acceso al parque Urquiza. Son lugares ideales para comer y conversar durante los intermedios.</p><p>En la galería hay <strong>asientos para uso temporal,</strong> por lo que <strong>no se deben reservar.</strong></p>"
+        },
+        "AreaRestringida": {
+            "title": "Áreas restringidas",
+            "content": "<p>Estas zonas del predio no están accesibles al público general. En algunos casos pudieran contener elementos peligrosos.</p>"
+        },
+        "Estacionamiento": {
+            "title": "Estacionamiento interno",
+            "content": "<p>Hay un <strong>número limitado de espacios para personas con limitaciones físicas.</strong> Si considera que califica para solicitarlo, por favor, contáctese con los ancianos de su congregación. Tenga en cuenta que <strong>se van a controlar los números de patentes</strong> en el ingreso.</p>"
+        },
+        "Vestibulo": {
+            "title": "Vestíbulo",
+            "content": "<p>Los vestíbulos son amplios y luminosos, con vista al parque Urquiza y el río Paraná. Se pueden usar para comer y conversar durante los intermedios.</p><p>En planta alta hay <strong>asientos para uso temporal,</strong> por lo que <strong>no se deben reservar.</strong></p>"
+        },
+        "AuditorioPrincipal": {
+            "title": "Auditorio principal",
+            "content": "<p>Este auditorio está destinado al público en general. Para personas mayores, con dificultades, embarazadas o con hijos pequeños está asignado el <a href='#cardAuditorioAuxiliar'>auditorio auxiliar.</a></p><p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>"
+        },
+        "Limpieza": {
+            "title": "Departamento de limpieza",
+            "content": "<p>Se necesitan voluntarios para colaborar con la limpieza del local. Para más información, vea la sección de <a href='#collapseInformacion' data-bs-toggle='collapse' aria-expanded='false' aria-controls='collapseInformacion'>Servicio Voluntario.</a></p>"
+        },
+        "AuditorioAuxiliar": {
+            "title": "Auditorio auxiliar",
+            "content": "<p>Este auditorio está destinado a personas mayores, con dificultades, embarazadas o con hijos pequeños. Para el público general está asignado el <a href='#cardAuditorioPrincipal'>auditorio principal.</a></p><p><strong>No se debe ingresar a este auditorio con alimentos, bebidas o mate.</strong></p>"
+        },
+        "Donate": {
+            "title": "Punto de información sobre donaciones",
+            "content": "<p>Aquí recibirá información sobre los métodos de donación existentes en <a href='https://donate.jw.org' target='_blank'>donate.jw.org</a>. Los hermanos le ayudarán a despejar sus dudas y le darán asesoramiento sobre el uso del sitio para que pueda demostrar su agradecimiento por los eventos teocráticos.</p>"
+        },
+        "SillasTemporales": {
+            "title": "Asientos para uso temporal",
+            "content": "<p>Estos asientos se pueden usar para comer en los intermedios. Como son para uso temporal, <strong>no se deben reservar.</strong> Por favor, sea considerado con los demás cuando los use.</p>"
+        },
+        "Salidas": {
+            "title": "Salidas de emergencia",
+            "content": "<p>Estas salidas sirven para evacuar el local ante una emergencia. Están señaladas con carteles luminosos. No las obstruya.</p><p>Ante una emergencia, diríjase a la salida indicada en el <a href='#cardEvacuacion'>plan de evacuación</a> o a la más cercana.</p>"
+        },
+        "EvacuacionPrincipalFrenteIzquierda": {
+            "title": "Sector del frente, lado izquierdo (mirando a la plataforma)",
+            "content": "<p>Se dirigirán al vestíbulo y luego a la derecha hacia la salida de emergencia.</p>"
+        },
+        "EvacuacionPrincipalFrenteDerecha": {
+            "title": "Sector del frente, lado derecho (mirando a la plataforma)",
+            "content": "<p>Se dirigirán al hacia la salida de emergencia que se encuentra a la derecha de la plataforma.</p>"
+        },
+        "EvacuacionPrincipalFondoDerecha": {
+            "title": "Sector del fondo, lado derecho (mirando a la plataforma)",
+            "content": "<p>Se dirigirán hacia la salidas de emergencia que se encuentran a la derecha del auditorio, hacia la escalera de servicio que lleva a la salida al estacionamiento.</p>"
+        },
+        "EvacuacionPrincipalFondoIzquierda": {
+            "title": "Sector del fondo, lado izquierdo (mirando a la plataforma)",
+            "content": "<p>Se dirigirán al vestíbulo y luego a la izquierda hacia la escalera principal, saliendo por la entrada principal</p>"
+        },
+        "EvacuacionSalidas": {
+            "title": "Salidas de emergencia",
+            "content": "<p>Estas salidas sirven para evacuar el local ante una emergencia. Están señaladas con carteles luminosos. No las obstruya.</p><p>Ante una emergencia, diríjase a la salida indicada en el <a href='#cardEvacuacion'>plan de evacuación</a> o a la más cercana.</p>"
+        },
+        "EvacuacionSinSalida": {
+            "title": "Sin salida",
+            "content": "<p>Estos lugares se dirigen a sectores sin salida para evacuar. Ante una emergencia evite ingresar en ellos. No use los ascensores para evacuar porque puede quedar atrapado.</p>"
+        },
+        "EvacuacionAuxiliarFondo": {
+            "title": "Sector del centro y fondo (mirando a la pantalla)",
+            "content": "<p>Se dirigirán hacia la salidas de emergencia que se encuentran a la izquierda del auditorio.</p>"
+        },
+        "EvacuacionAuxiliarFrente": {
+            "title": "Sector del frente (mirando a la pantalla)",
+            "content": "<p>Se dirigirán hacia la puerta que está al frente a la derecha y saldrán hacia la izquierda por la salida de emergencia de la cocina.</p>"
+        },
+        "AlimentosFilaRetirar": {
+            "title": "Fila para retirar alimentos",
+            "content": "<p>Forme fila en el auditorio hacia la puerta de acceso al punto de guardado. Para agilizar el proceso, siga las instrucciones de los hermanos que organizan la fila. No regrese al auditorio con los alimentos.</p>"
+        },
+        "AlimentosFilaGuardar": {
+            "title": "Fila para guardar alimentos",
+            "content": "<p>Forme fila por el pasillo que da al punto de guardado. Para agilizar el proceso, siga las instrucciones de los hermanos que organizan la fila. No ingrese al auditorio con los alimentos.</p>"
+        },
+        "AlimentosHabilitado": {
+            "title": "Área habilitada para consumir alimentos",
+            "content": "<p>En los vestíbulos y exteriores del predio se pueden consumir alimentos. No se pueden ingresar alimentos ni bebidas a los auditorios.</p>"
+        },
+        "AlimentosRestringido": {
+            "title": "Área no habilitada para consumir alimentos",
+            "content": "<p><strong>No se debe ingresar a los auditorios con alimentos ni bebidas (incluído mate).</strong></p>"
+        },
+        "AlimentosPuntoGuarda": {
+            "title": "Punto de guardado de alimentos",
+            "content": "<p>Es <a href='#guardaAlimentos'>donde se pueden guardar los alimentos</a> durante el programa. Recuerde que <strong>no se debe ingresar a los auditorios con alimentos o bebidas.</strong></p><p>Por favor, forme fila de la manera que se indica."
+        }
+    },
+    "zoomSettings": {
+        "desktopZoom": 21,
+        "mobileLargeObjectWidth": 40000,
+        "mobileLargeObjectZoom": 19,
+        "mobileSmallObjectHeight": 300,
+        "mobileSmallObjectZoom": 21,
+        "mobileDefaultZoom": 20
+    }
+}
